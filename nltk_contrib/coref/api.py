@@ -10,9 +10,11 @@ import os
 from nltk.corpus import CorpusReader
 from nltk.tokenize.punkt import PunktWordTokenizer
 from nltk.tag import TaggerI, HiddenMarkovModelTaggerTransformI, \
-                     ClassifierBasedTagger
+                     ClassifierBasedTagger                                          
 from nltk.classify import ClassifierI
 from nltk.util import LazyMap
+
+from nltk.chunk import ChunkParserI, ChunkScore
 
 # Location of coref data outside of NLTK_DATA
 NLTK_COREF_DATA = os.path.dirname(__file__) + '/data'
@@ -158,28 +160,7 @@ class ChunkTaggerI(TaggerI):
     def __init__(self):
         if self.__class__ == ChunkTaggerI:
             raise AssertionError, "Interfaces can't be instantiated"
-    
-    def tag(self, sent):
-        """
-        Returns an IOB tagged sentence.
-        
-        @return: a C{list} of IOB-tagged tokens.
-        @rtype: C{list} or C{tuple}
-        @param sent: a C{list} of tokens
-        @type sent: C{list} of C{str} or C{tuple}
-        """
-        raise AssertionError()
-        
-    def chunk(self, sent):
-        """
-        Returns a chunked sentence.
-        
-        @return: a C{list} of chunked tokens.
-        @rtype: C{list} of C{list} or C{tuple}
-        @param sent: a C{list} of tokens
-        @type sent: C{list} of C{str} or C{tuple}
-        """
-        raise AssertionError()
+
         
       
 class CorefResolverI(object):
@@ -269,7 +250,45 @@ class CorefResolverI(object):
         @type sentences: C{list} of C{list} of C{str} or C{tuple}
         """
         raise AssertionError()
+
+
+class ChunkTaggerI(TaggerI, ChunkParserI):
+    def __init__(self):
+        if self.__class__ == ChunkTaggerI: 
+            raise AssertionError, "Interfaces can't be instantiated"
+
+    def tag(self, sent):
+        """
+        Returns an IOB tagged sentence.
+
+        @return: a C{list} of IOB-tagged tokens.
+        @rtype: C{list} or C{tuple}
+        @param sent: a C{list} of tokens
+        @type sent: C{list} of C{str} or C{tuple}
+        """
+        raise NotImplementedError()
         
+    def parse(self, sent):
+        raise NotImplementedError()    
+
+    def chunk(self, sent):
+        """
+        Returns a chunked sentence.
+
+        @return: a C{list} of chunked tokens.
+        @rtype: C{list} of C{list} or C{tuple}
+        @param sent: a C{list} of tokens
+        @type sent: C{list} of C{str} or C{tuple}
+        """
+        raise NotImplementedError()
+                
+    def test(self, iob_sents):
+        raise NotImplementedError()
+
+    @classmethod
+    def train(cls, iob_sents, **kwargs):
+        raise NotImplementedError()
+
 
 class AbstractClassifierBasedTagger(ClassifierBasedTagger, ClassifierI, 
                                     TrainableI):
@@ -334,6 +353,4 @@ class AbstractClassifierBasedTagger(ClassifierBasedTagger, ClassifierI,
                 kwargs.get('classifier_builder'))
         if test_sequence:
             classifier.test(test_sequence)
-        return classifier    
-        
-            
+        return classifier
