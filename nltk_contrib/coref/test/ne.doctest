@@ -1,0 +1,27 @@
+    >>> from nltk_contrib.coref import muc6
+    >>> from nltk_contrib.coref.chunk import NaiveBayesChunkTagger
+    >>> from nltk_contrib.coref.ne import NERChunkTaggerFeatureDetector, _NE_CHUNK_TYPES
+    >>>
+    >>> iob_train_toks = muc6.iob_sents()[0:500]
+    >>> iob_test_toks = muc6.iob_sents()[500:510]    
+    >>>
+    >>> ner = NaiveBayesChunkTagger.train(iob_train_toks, feature_detector=NERChunkTaggerFeatureDetector, chunk_types=_NE_CHUNK_TYPES)
+    >>> chunkscore = ner.test(iob_test_toks) #doctest: +NORMALIZE_WHITESPACE
+    Precision: 0.40
+    Recall:    0.55
+    Accuracy:  0.91
+    F-measure: 0.46    
+    
+    >>> from nltk_contrib.coref.chunk import MaxentChunkTagger
+    >>>    
+    >>> iob_train_toks = muc6.iob_sents()[0:250]
+    >>> iob_test_toks = muc6.iob_sents()[250:260]
+    >>>    
+    >>> ner = None
+    >>> ner = MaxentChunkTagger.train(iob_train_toks, feature_detector=NERChunkTaggerFeatureDetector, chunk_types=_NE_CHUNK_TYPES)
+    [Found megam: /usr/local/bin/megam.opt]
+    >>> chunkscore = ner.test(iob_test_toks) #doctest: +NORMALIZE_WHITESPACE
+    Precision: 0.67
+    Recall:    0.60
+    Accuracy:  0.95
+    F-measure: 0.63    

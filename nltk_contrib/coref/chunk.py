@@ -78,6 +78,8 @@ class ChunkTaggerFeatureDetector(dict):
 
 
 class AbstractChunkTagger(ChunkTaggerI):
+    chunk_types = None
+    
     def parse(self, sent):
         return self.__iob2tree(self.tag(sent))
         
@@ -91,7 +93,7 @@ class AbstractChunkTagger(ChunkTaggerI):
         return map(self.__tree2chunks, self.batch_parse(sents))
         
     def __iob2tree(self, tagged_sent):
-        return tokens2tree(map(flatten, tagged_sent))
+        return tokens2tree(map(flatten, tagged_sent), self.chunk_types)
         
     def __tree2chunks(self, tree):
         chunks = []
@@ -105,25 +107,33 @@ class AbstractChunkTagger(ChunkTaggerI):
         return chunks    
         
     def test(self, iob_sents, **kwargs):
-        return test_chunk_tagger(self, iob_sents, 
+        return test_chunk_tagger(self, iob_sents,
+            chunk_types=self.chunk_types,
             verbose=kwargs.get('verbose', False))
 
 
 class NaiveBayesChunkTagger(ClassifierBasedTagger, AbstractChunkTagger):
     @classmethod
-    def train(cls, iob_sents, **kwargs):
+    def train(cls, iob_sents, **kwargs):  
+        fd = kwargs.get('feature_detector', ChunkTaggerFeatureDetector)
+        chunk_types = kwargs.get('chunk_types', _DEFAULT_CHUNK_TYPES)        
         train = LazyMap(lambda sent: map(unflatten, sent), iob_sents)
-        fd = ChunkTaggerFeatureDetector
-        return cls(fd, train, NaiveBayesClassifier.train)
+        chunker = cls(fd, train, NaiveBayesClassifier.train)
+        chunker.chunk_types = chunk_types
+        return chunker
         
 
 class MaxentChunkTagger(ClassifierBasedTagger, AbstractChunkTagger):
     @classmethod
     def train(cls, iob_sents, **kwargs):
+        fd = kwargs.get('feature_detector', ChunkTaggerFeatureDetector)        
+        chunk_types = kwargs.get('chunk_types', _DEFAULT_CHUNK_TYPES)
+                
         algorithm = kwargs.get('algorithm', 'megam')
         gaussian_prior_sigma = kwargs.get('gaussian_prior_sigma', 100)
         count_cutoff = kwargs.get('count_cutoff', 1)
-        min_lldelta = kwargs.get('min_lldelta', 1e-7)        
+        min_lldelta = kwargs.get('min_lldelta', 1e-7)
+        
         def __maxent_train(fs):
             return MaxentClassifier.train(fs, 
                 algorithm=algorithm,
@@ -131,8 +141,9 @@ class MaxentChunkTagger(ClassifierBasedTagger, AbstractChunkTagger):
                 count_cutoff=count_cutoff,
                 min_lldelta=min_lldelta)
         train = LazyMap(lambda sent: map(unflatten, sent), iob_sents)
-        fd = ChunkTaggerFeatureDetector
-        return cls(fd, train, __maxent_train)
+        chunker = cls(fd, train, __maxent_train)
+        chunker.chunk_types = chunk_types
+        return chunker
 
 
 class CRFChunkTagger(MalletCRF, AbstractChunkTagger):
@@ -141,6 +152,9 @@ class CRFChunkTagger(MalletCRF, AbstractChunkTagger):
     
     @classmethod
     def train(cls, iob_sents, **kwargs):
+        fd = kwargs.get('feature_detector', ChunkTaggerFeatureDetector)        
+        chunk_types = kwargs.get('chunk_types', _DEFAULT_CHUNK_TYPES)
+                
         gaussian_variance = kwargs.get('gaussian_variance', 10)
         default_label = kwargs.get('default_label', 'O')
         transduction_type = kwargs.get('transduction_type', 'VITERBI_FBEAMKL')
@@ -152,7 +166,6 @@ class CRFChunkTagger(MalletCRF, AbstractChunkTagger):
             trace = 0
         
         train = LazyMap(lambda sent: map(unflatten, sent), iob_sents)
-        fd = ChunkTaggerFeatureDetector
 
         mallet_home = os.environ.get('MALLET_HOME', '/usr/local/mallet-0.4')
         nltk.classify.mallet.config_mallet(mallet_home) 
@@ -163,12 +176,14 @@ class CRFChunkTagger(MalletCRF, AbstractChunkTagger):
             transduction_type=transduction_type, 
             trace=trace)
 
-        return cls(crf.filename, crf.feature_detector)
+        crf = cls(crf.filename, crf.feature_detector)
+        crf.chunk_types = chunk_types
+        return crf
 
-
+_DEFAULT_CHUNK_TYPES = ('NP', 'PP', 'VP')
 # tokens2tree() is almost entirely based on nltk.chunk.util.conllstr2tree()
 # but works for a list of tokens instead of a CoNLL string.
-def tokens2tree(tokens, chunk_types=('NP', 'PP', 'VP'), top_node="S"):
+def tokens2tree(tokens, chunk_types=_DEFAULT_CHUNK_TYPES, top_node='S'):
     stack = [Tree(top_node, [])]
     
     for token in tokens:
@@ -208,12 +223,28 @@ def unflatten(token):
     return (token[:-1], token[-1])
     
 def test_chunk_tagger(chunk_tagger, iob_sents, **kwargs):
-    correct = map(tokens2tree, iob_sents)
+    chunk_types = chunk_tagger.chunk_types
+    correct = map(lambda sent: tokens2tree(sent, chunk_types), iob_sents)
     guesses = chunk_tagger.batch_parse(map(lambda c: c.leaves(), correct))
     
     chunkscore = ChunkScore()    
     for c, g in zip(correct, guesses):
         chunkscore.score(c, g)
+    
+    if kwargs.get('verbose'):
+        guesses = chunk_tagger.batch_tag(map(lambda c: c.leaves(), correct))
+        correct = iob_sents
+        
+        print
+        for c, g in zip(correct, guesses):        
+            for tokc, tokg in zip(map(flatten, c), map(flatten, g)):
+                word = tokc[0]
+                iobc = tokc[-1]
+                iobg = tokg[-1]
+                star = ''
+                if iobg != iobc: star = '*'
+                print '%3s %20s %20s %20s' % (star, word, iobc, iobg)
+            print      
         
     print 'Precision: %.2f' % chunkscore.precision()
     print 'Recall:    %.2f' % chunkscore.recall()
@@ -285,7 +316,7 @@ if __name__ == '__main__':
         else:
             options.numsents = (None, None)
             
-    except ValueError as v:
+    except ValueError, v:
         print 'error: %s' % v.message
         parser.print_help()            
     
@@ -329,11 +360,11 @@ if __name__ == '__main__':
                     chunker = pickle.load(_open(options.model, 'r'))
                 if options.verbose:
                     print 'Model saved as %s' % options.model                    
-            except Exception as e:
+            except Exception, e:
                 print "error: %s" % e
 
         if test:
             if options.verbose:
                 print 'Testing %s on %d sentences' % \
                     (options.trainer, num_test)
-            chunker.test(test)
+            chunker.test(test, verbose=options.verbose)

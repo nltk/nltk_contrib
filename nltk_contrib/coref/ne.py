@@ -7,32 +7,20 @@
 
 import re
 import os
+import sys
 import optparse
 
 import nltk
-
-from nltk.data import load
-from nltk.util import LazyMap, LazyZip, LazyConcatenation, LazyEnumerate
-
-from nltk.chunk.util import ChunkScore
-
+from nltk.util import LazyMap
+from nltk.data import BufferedGzipFile
+from nltk.tree import Tree
+from nltk.classify import NaiveBayesClassifier, MaxentClassifier
+from nltk.tag import ClassifierBasedTagger
+from nltk.tag.crf import MalletCRF
+from nltk.chunk import ChunkScore
 from nltk.corpus import names, gazetteers
-from nltk.corpus.util import LazyCorpusLoader
-from nltk.corpus.reader.conll import ConllCorpusReader
 
-from nltk.tag import TaggerI, ClassifierBasedTagger
-from nltk.classify.maxent import MaxentClassifier, ClassifierI
-
-from nltk_contrib.coref import *
-from nltk_contrib.coref.tag import TreebankTaggerCorpusReader
-from nltk_contrib.coref.train import train_model
-from nltk_contrib.coref.chunk import ChunkTagger, \
-    ChunkTaggerFeatureDetector
-from nltk_contrib.coref.muc import MUCCorpusReader
-
-MUC6_NER = \
-    'nltk:taggers/maxent_muc6_ner/muc6.ner.pickle'
-
+from nltk_contrib.coref.chunk import NaiveBayesChunkTagger
 
 TREEBANK_CLOSED_CATS = set(['CC', 'DT', 'MD', 'POS', 'PP$', 'RP', 'TO', 'WDT',
                             'WP$', 'EX', 'IN', 'PDT', 'PRP', 'WP', 'WRB'])
@@ -67,12 +55,14 @@ COUNTRIES = set([country.lower() for filename in ('isocountries.txt','countries.
 
 # States in North America
 NA_STATES = set([state.lower() for filename in
-                 ('usstates.txt','mexstates.txt','caprovinces.txt') for state in
-                 gazetteers.words(filename)])
+    ('usstates.txt','mexstates.txt','caprovinces.txt') for state in
+    gazetteers.words(filename)])
                      
-US_STATE_ABBREVIATIONS = set([state.lower() for state in gazetteers.words('usstateabbrev.txt')])
+US_STATE_ABBREVIATIONS = set([state.lower() for state in 
+    gazetteers.words('usstateabbrev.txt')])
 
-NATIONALITIES = set([nat.lower() for nat in gazetteers.words('nationalities.txt')])
+NATIONALITIES = set([nat.lower() for nat in 
+    gazetteers.words('nationalities.txt')])
                      
 PERSON_PREFIXES = ['mr', 'mrs', 'ms', 'miss', 'dr', 'rev', 'judge',
                    'justice', 'honorable', 'hon', 'rep', 'sen', 'sec',
@@ -92,7 +82,8 @@ ENGLISH_PRONOUNS = ['i', 'you', 'he', 'she', 'it', 'we', 'you', 'they']
 NUMERIC = r'(\d{1,3}(\,\d{3})*|\d+)(\.\d+)?'
 RE_PUNCT = re.compile(r'[-!"#$%&\'\(\)\*\+,\./:;<=>^\?@\[\]\\\_`{\|}~]')
 RE_NUMERIC = re.compile(NUMERIC)
-RE_NUMBER = re.compile(r'(%s)(\s+(%s))*' % ('|'.join(NUMBERS), '|'.join(NUMBERS)), re.I)
+RE_NUMBER = re.compile(r'(%s)(\s+(%s))*' % ('|'.join(NUMBERS), 
+    '|'.join(NUMBERS)), re.I)
 RE_QUOTE = re.compile(r'[\'"`]', re.I)
 RE_ROMAN = re.compile(r'M?M?M?(CM|CD|D?C?C?C?)(XC|XL|L?X?X?X?)(IX|IV|V?I?I?I?)', re.I)
 RE_INITIAL = re.compile(r'[A-Z]\.', re.I)
@@ -114,11 +105,12 @@ class NERChunkTaggerFeatureDetector(dict):
     def __init__(self, tokens, index=0, history=None, **kwargs):
         dict.__init__(self)
         window = kwargs.get('window', 2)        
-        spelling, pos = tokens[index][:2]
+        #spelling, pos = tokens[index][:2]
+        spelling = tokens[index][0]
 
         self['spelling'] = spelling
         self['word'] = spelling.lower()
-        self['pos'] = pos
+        # self['pos'] = pos
         self['isupper'] = spelling.isupper()
         self['islower'] = spelling.islower()
         self['istitle'] = spelling.istitle()
@@ -126,7 +118,7 @@ class NERChunkTaggerFeatureDetector(dict):
         for i in range(1, 4):
             self['prefix_%d' % i] = spelling[:i]
             self['suffix_%d' % i] = spelling[-i:]
-        self['isclosedcat'] = pos in TREEBANK_CLOSED_CATS        
+        # self['isclosedcat'] = pos in TREEBANK_CLOSED_CATS        
         
         self['ispunct'] = bool(RE_PUNCT.match(spelling))
         self['ispercent'] = bool(RE_PERCENT.match(spelling))
@@ -165,112 +157,129 @@ class NERChunkTaggerFeatureDetector(dict):
                 if not key.startswith('prev_'):
                     self['next_%s' % key] = val        
 
-        if 'prev_pos' in self:
-            self['prev_pos_pair'] = '%s/%s' % \
-                (self.get('prev_pos'), self.get('pos'))
+        # if 'prev_pos' in self:
+        #     self['prev_pos_pair'] = '%s/%s' % \
+        #         (self.get('prev_pos'), self.get('pos'))
 
         if history and index > 0:
-            self['prev_tag'] = history[index - 1]     
+            self['prev_tag'] = history[index - 1]
 
-def maxent_classifier_builder(labeled_featuresets):
-    return MaxentClassifier.train(
-        labeled_featuresets,
-        algorithm='megam',
-        gaussian_prior_sigma=10,
-        count_cutoff=1,
-        min_lldelta=1e-7)
 
-def train_muc6_ner(num_train_sents, num_test_sents, **kwargs):
-    def __zipzip(a, b):
-        return LazyMap(lambda (x, y): zip(x, y), LazyZip(a, b))
-    def __word_pos_iob(iob_sents, tagged_sents):
-        return LazyMap(lambda sent: [y + x[-1:] for x, y in sent], __zipzip(iob_sents, tagged_sents))
-    model_file = kwargs.get('model_file')
-    muc6 = LazyCorpusLoader('muc6/', MUCCorpusReader, r'.*\.ne\..*\.sgm')
-    muc6 = TreebankTaggerCorpusReader(muc6)
-    muc6_iob_sents = muc6.iob_sents()
-    muc6_tagged_sents = muc6.tagged_sents()
-    muc6_sents = __word_pos_iob(muc6_iob_sents, muc6_tagged_sents)
-    max_train_sents = int(len(muc6_sents)*0.9)
-    max_test_sents = len(muc6_sents) - max_train_sents
-    num_train_sents = min((num_train_sents or max_train_sents, max_train_sents))
-    num_test_sents = min((num_test_sents or max_test_sents, max_test_sents))                
-    muc6_train_sequence = \
-        muc6_sents[:num_train_sents]
-    muc6_test_sequence = \
-        muc6_sents[num_train_sents:num_train_sents + num_test_sents]
-    # Import ChunkTagger and ChunkTaggerFeatureDetector because we want 
-    # train_model() and the pickled object to use the full class names.
-    from nltk_contrib.coref.chunk import ChunkTagger   
-    from nltk_contrib.coref.ne import NERChunkTaggerFeatureDetector
-    ner = train_model(ChunkTagger, 
-                      muc6_train_sequence, 
-                      muc6_test_sequence,
-                      model_file,
-                      num_train_sents,
-                      num_test_sents,
-                      feature_detector=NERChunkTaggerFeatureDetector,
-                      classifier_builder=maxent_classifier_builder,
-                      verbose=kwargs.get('verbose'))
-    if kwargs.get('verbose'):
-        ner.show_most_informative_features(25)
-    return ner
+def unittest(verbose=False): 
+    import doctest
+    failed, passed = doctest.testfile('test/ne.doctest', verbose)
+    if not verbose:
+        print '%d passed and %d failed.' % (failed, passed)
+        if failed == 0:
+            print 'Test passed.'
+        else:
+            print '***Test Failed*** %d failures.' % failed
+    return failed, passed
 
-def demo(verbose=False):
-    import nltk
-    from nltk.corpus import treebank    
-    from nltk_contrib.coref import NLTK_COREF_DATA
-    nltk.data.path.insert(0, NLTK_COREF_DATA)
-    from nltk_contrib.coref.ne import MUC6_NER
-    ner = nltk.data.load(MUC6_NER)
-    for sent in treebank.tagged_sents()[:5]:
-        print ner.parse(sent)
-        print
-    
+_NE_CHUNK_TYPES = ('PERSON', 'LOCATION', 'ORGANIZATION', 'MONEY')
+_TRAINERS = ['NaiveBayesChunkTagger.train', 'MaxentChunkTagger.train',
+             'CRFChunkTagger.train']
+_CORPORA = ['nltk_contrib.coref.muc6']
 if __name__ == '__main__':
-    parser = optparse.OptionParser()
-    parser.add_option('-d', '--demo', action='store_true', dest='demo',
-                      default=True, help='run demo')
-    parser.add_option('-t', '--train-chunker', action='store_true',
-                      default=False, dest='train', 
-                      help='train MUC6 named entity recognizer')
-    parser.add_option('-f', '--model-file', metavar='FILE',
-                      dest='model_file', help='save model to FILE')
-    parser.add_option('-e', '--num-test-sents', metavar='NUM_TEST',
-                      dest='num_test_sents', type=int, 
-                      help='number of test sentences')
-    parser.add_option('-r', '--num-train-sents', metavar='NUM_TRAIN',
-                      dest='num_train_sents', type=int, 
-                      help='number of training sentences')
-    parser.add_option('-l', '--local-models', action='store_true',
-                      dest='local_models', default=False,
-                      help='use models from nltk_contrib.coref')
-    parser.add_option('-p', '--psyco', action='store_true',
-                      default=False, dest='psyco',
-                      help='use Psyco JIT, if available')
-    parser.add_option('-v', '--verbose', action='store_true',
-                      default=False, dest='verbose',
-                      help='verbose')
-    (options, args) = parser.parse_args()
-    
-    if options.local_models:
-        nltk.data.path.insert(0, NLTK_COREF_DATA)
-        
-    if options.psyco:
-        try:
-            import psyco
-            psyco.profile(memory=256)
-        except:
-            pass
-    
-    if options.train:
-        chunker = train_muc6_ner(options.num_train_sents, 
-                                 options.num_test_sents,
-                                 model_file=options.model_file, 
-                                 verbose=options.verbose)  
-                       
-    elif options.demo:
-        demo(options.verbose)
+    import optparse
 
-    else:
-        demo(options.verbose)
+    try:
+        import cPickle as pickle
+    except:
+        import pickle    
+
+    import nltk_contrib
+    from nltk_contrib.coref.ne import *
+    from nltk_contrib.coref.chunk import NaiveBayesChunkTagger, \
+        MaxentChunkTagger, CRFChunkTagger
+
+    try:
+        parser = optparse.OptionParser()
+        parser.add_option('-d', '--demo', action='store_true', dest='demo',
+            default=False, help='run demo')
+        parser.add_option('-t', '--trainer', metavar='TRAINER', 
+            dest='trainer',
+            type='choice', choices=_TRAINERS, default=_TRAINERS[0], 
+            help='train model using TRAINER, e.g. %s' % ', '.join(_TRAINERS))
+        parser.add_option('-n', '--num-sents', metavar='TRAIN,TEST',  
+            dest='numsents', type=str, default=None,
+            help='number of TRAIN and TEST sentences to train model with')
+        parser.add_option('-c', '--corpus', metavar='CORPUS', dest='corpus',
+            type=str, default=_CORPORA[0],
+            help='train model using CORPUS, e.g. %s' % ', '.join(_CORPORA))
+        parser.add_option('-m', '--model', metavar='MODEL',
+            dest='model', type='str', default=None,
+            help='save model file to MODEL')
+        parser.add_option('-u', '--unit-test', action='store_true', 
+            default=False, dest='unittest', help='run unit tests')
+        parser.add_option('-v', '--verbose', action='store_true', 
+            default=False, dest='verbose', help='verbose')
+        (options, args) = parser.parse_args()
+
+        if options.numsents:
+            m = re.match('^(?P<train>\d+)\s*(\,\s*(?P<test>\d+))?$', 
+                options.numsents)
+            if m:
+                num_train = int(m.group('train'))
+                num_test = int(m.group('test') or 0)
+                options.numsents = (num_train, num_test)
+            else:
+                raise ValueError, "malformed argument for option -n"
+        else:
+            options.numsents = (None, None)
+
+    except ValueError, v:
+        print 'error: %s' % v.message
+        parser.print_help()            
+
+    if options.unittest:
+        failed, passed = unittest(options.verbose)
+        sys.exit(int(bool(failed)))
+
+    if options.demo:
+        demo()
+        sys.exit(0)
+
+    if options.trainer:
+        corpus = eval(options.corpus).iob_sents()
+
+        num_train, num_test = options.numsents
+        if not num_train and not num_test:
+            num_train = int(len(corpus) * 0.9)
+            num_test = len(corpus) - num_train
+        train = corpus[:num_train]
+        test = corpus[num_train:num_train + num_test]
+
+        trainer = eval(options.trainer)        
+        if options.verbose:
+            print 'Training %s with %d sentences' % \
+                (options.trainer, num_train)
+        ner = trainer(train, 
+            feature_detector=NERChunkTaggerFeatureDetector,
+            chunk_types=_NE_CHUNK_TYPES,
+            verbose=options.verbose)
+
+        if options.model:
+            options.model = os.path.abspath(options.model)
+            try:
+                if ner.__class__ == CRFChunkTagger:
+                    pass
+                else:
+                    if options.model.endswith('.gz'):
+                        _open = BufferedGzipFile
+                    else:
+                        _open = open                    
+                    stream = _open(options.model, 'w')
+                    pickle.dump(ner, stream)
+                    stream.close()                    
+                    ner = pickle.load(_open(options.model, 'r'))
+                if options.verbose:
+                    print 'Model saved as %s' % options.model                    
+            except Exception, e:
+                print "error: %s" % e
+
+        if test:
+            if options.verbose:
+                print 'Testing %s on %d sentences' % \
+                    (options.trainer, num_test)
+            ner.test(test, verbose=options.verbose)
