@@ -1,9 +1,34 @@
+    >>> from nltk_contrib.coref.chunk import flatten, unflatten
+    >>>
+    >>> flatten((('the', 'DT'), 'B-NP'))
+    ('the', 'DT', 'B-NP')
+    >>> unflatten(('the', 'DT', 'B-NP'))
+    (('the', 'DT'), 'B-NP')
+    >>> flatten((('the', ('DT', 'NP/N')), 'B-NP'))
+    ('the', 'DT', 'NP/N', 'B-NP')
+    >>> flatten('the')
+    ('the',)
+    >>> unflatten('the')
+    ('the',)
+    >>> flatten(())
+    ()
+    >>> unflatten(())
+    ()
+    >>> flatten(())
+    ()
+    >>> unflatten(())
+    ()
+    >>> flatten((('the', None), 'B-NP'))
+    ('the', None, 'B-NP')    
+    >>> unflatten((('the', None), 'B-NP'))
+    (('the', None), 'B-NP')
+    
     >>> from nltk.tree import Tree
     >>> from nltk.corpus import conll2000
     >>> from nltk_contrib.coref.chunk import tokens2tree
     >>>
     >>> iob_toks = conll2000.iob_sents()[15]
-    >>> tokens2tree(iob_toks) #doctest: +NORMALIZE_WHITESPACE
+    >>> print tokens2tree(iob_toks) #doctest: +NORMALIZE_WHITESPACE
     Tree('S', [('Meanwhile', 'RB'), (',', ','), Tree('NP', [('overall', 'JJ'), ('evidence', 'NN')]), Tree('PP', [('on', 'IN')]), Tree('NP', [('the', 'DT'), ('economy', 'NN')]), Tree('VP', [('remains', 'VBZ')]), ('fairly', 'RB'), ('clouded', 'VBN'), ('.', '.')])
 
     >>> from nltk_contrib.coref.chunk import NaiveBayesChunkTagger
@@ -13,10 +38,10 @@
     >>>
     >>> chunker = NaiveBayesChunkTagger.train(iob_train_toks)
     >>> chunkscore = chunker.test(iob_test_toks) #doctest: +NORMALIZE_WHITESPACE
-    Precision: 0.71
-    Recall:    0.64
-    Accuracy:  0.76
-    F-measure: 0.67
+    Precision: 0.75
+    Recall:    0.74
+    Accuracy:  0.82
+    F-measure: 0.74
 
     >>> tagged_toks = conll2000.tagged_sents()[15:16]
     >>> chunker.chunk(tagged_toks[0]) #doctest: +NORMALIZE_WHITESPACE    
@@ -48,10 +73,10 @@
     >>> chunker = MaxentChunkTagger.train(iob_train_toks)
     [Found megam: /usr/local/bin/megam.opt]
     >>> chunkscore = chunker.test(iob_test_toks) #doctest: +NORMALIZE_WHITESPACE
-    Precision: 0.74
-    Recall:    0.64
-    Accuracy:  0.81
-    F-measure: 0.69    
+    Precision: 0.80
+    Recall:    0.75
+    Accuracy:  0.85
+    F-measure: 0.78    
     
     >>> chunker.chunk(tagged_toks[0]) #doctest: +NORMALIZE_WHITESPACE
     [('Meanwhile', 'RB'), (',', ','), [('overall', 'JJ'), ('evidence', 'NN')], [('on', 'IN')], [('the', 'DT'), ('economy', 'NN')], [('remains', 'VBZ')], ('fairly', 'RB'), ('clouded', 'VBN'), ('.', '.')]    

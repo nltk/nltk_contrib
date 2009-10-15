@@ -1,0 +1,146 @@
+    >>> import os.path
+    >>> import nltk.data
+    >>>
+    >>> from nltk.corpus import treebank
+    >>>
+    >>> import nltk_contrib.coref
+    >>> from nltk_contrib.coref.chunk import *
+    >>> from nltk_contrib.coref.ne import *    
+    >>>
+    >>> nltk.data.path.insert(0, '%s/data' % os.path.dirname(nltk_contrib.coref.__file__))
+    >>> 
+    >>> test_sent = filter(lambda (w, t): not w.startswith('*'), treebank.tagged_sents()[2])
+    >>> nbc = nltk.data.load('nltk:taggers/conll2000_chunk_taggers/conll2000.nb.chunker.pickle')
+    >>> print nbc.parse(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    (S
+      (NP Rudolph/NNP Agnew/NNP)
+      ,/,
+      (NP 55/CD years/NNS)
+      old/JJ
+      and/CC
+      (NP former/JJ chairman/NN)
+      (PP of/IN)
+      (NP Consolidated/NNP Gold/NNP Fields/NNP PLC/NNP)
+      ,/,
+      (VP was/VBD named/VBN)
+      (NP a/DT nonexecutive/JJ director/NN)
+      (PP of/IN)
+      (NP this/DT British/JJ industrial/JJ conglomerate/NN)
+      ./.)
+    >>> nbc.chunk(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    [[('Rudolph', 'NNP'), ('Agnew', 'NNP')], (',', ','), [('55', 'CD'), ('years', 'NNS')], ('old', 'JJ'), ('and', 'CC'), [('former', 'JJ'), ('chairman', 'NN')], [('of', 'IN')], [('Consolidated', 'NNP'), ('Gold', 'NNP'), ('Fields', 'NNP'), ('PLC', 'NNP')], (',', ','), [('was', 'VBD'), ('named', 'VBN')], [('a', 'DT'), ('nonexecutive', 'JJ'), ('director', 'NN')], [('of', 'IN')], [('this', 'DT'), ('British', 'JJ'), ('industrial', 'JJ'), ('conglomerate', 'NN')], ('.', '.')]
+    
+    >>> mec = nltk.data.load('nltk:taggers/conll2000_chunk_taggers/conll2000.maxent.chunker.pickle')
+    >>> print mec.parse(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    (S
+      (NP Rudolph/NNP Agnew/NNP)
+      ,/,
+      (NP 55/CD years/NNS)
+      old/JJ
+      and/CC
+      (NP former/JJ chairman/NN)
+      (PP of/IN)
+      (NP Consolidated/NNP Gold/NNP Fields/NNP PLC/NNP)
+      ,/,
+      (VP was/VBD named/VBN)
+      (NP a/DT nonexecutive/JJ director/NN)
+      (PP of/IN)
+      (NP this/DT British/JJ industrial/JJ conglomerate/NN)
+      ./.)
+    >>> mec.chunk(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    [[('Rudolph', 'NNP'), ('Agnew', 'NNP')], (',', ','), [('55', 'CD'), ('years', 'NNS')], ('old', 'JJ'), ('and', 'CC'), [('former', 'JJ'), ('chairman', 'NN')], [('of', 'IN')], [('Consolidated', 'NNP'), ('Gold', 'NNP'), ('Fields', 'NNP'), ('PLC', 'NNP')], (',', ','), [('was', 'VBD'), ('named', 'VBN')], [('a', 'DT'), ('nonexecutive', 'JJ'), ('director', 'NN')], [('of', 'IN')], [('this', 'DT'), ('British', 'JJ'), ('industrial', 'JJ'), ('conglomerate', 'NN')], ('.', '.')]
+    
+    >>> nner_pos = nltk.data.load('nltk:taggers/muc6_ner_chunk_taggers/muc6.nb.pos.ner.pickle')
+    >>> print nner_pos.parse(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    (S
+      (PERSON Rudolph/NNP Agnew/NNP)
+      ,/,
+      (MONEY 55/CD years/NNS)
+      old/JJ
+      and/CC
+      former/JJ
+      chairman/NN
+      of/IN
+      (ORGANIZATION Consolidated/NNP Gold/NNP Fields/NNP PLC/NNP)
+      ,/,
+      was/VBD
+      named/VBN
+      a/DT
+      nonexecutive/JJ
+      director/NN
+      of/IN
+      this/DT
+      British/JJ
+      industrial/JJ
+      conglomerate/NN
+      ./.)
+    >>> nner_pos.chunk(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    [[('Rudolph', 'NNP'), ('Agnew', 'NNP')], (',', ','), [('55', 'CD'), ('years', 'NNS')], ('old', 'JJ'), ('and', 'CC'), ('former', 'JJ'), ('chairman', 'NN'), ('of', 'IN'), [('Consolidated', 'NNP'), ('Gold', 'NNP'), ('Fields', 'NNP'), ('PLC', 'NNP')], (',', ','), ('was', 'VBD'), ('named', 'VBN'), ('a', 'DT'), ('nonexecutive', 'JJ'), ('director', 'NN'), ('of', 'IN'), ('this', 'DT'), ('British', 'JJ'), ('industrial', 'JJ'), ('conglomerate', 'NN'), ('.', '.')]    
+              
+    >>> mner_pos = nltk.data.load('nltk:taggers/muc6_ner_chunk_taggers/muc6.maxent.pos.ner.pickle')
+    >>> print mner_pos.parse(test_sent) #doctest: +NORMALIZE_WHITESPACE    
+    (S
+      (PERSON Rudolph/NNP Agnew/NNP)
+      ,/,
+      55/CD
+      years/NNS
+      old/JJ
+      and/CC
+      former/JJ
+      chairman/NN
+      of/IN
+      (ORGANIZATION Consolidated/NNP Gold/NNP Fields/NNP PLC/NNP)
+      ,/,
+      was/VBD
+      named/VBN
+      a/DT
+      nonexecutive/JJ
+      director/NN
+      of/IN
+      this/DT
+      British/JJ
+      industrial/JJ
+      conglomerate/NN
+      ./.)
+    >>> mner_pos.chunk(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    [[('Rudolph', 'NNP'), ('Agnew', 'NNP')], (',', ','), ('55', 'CD'), ('years', 'NNS'), ('old', 'JJ'), ('and', 'CC'), ('former', 'JJ'), ('chairman', 'NN'), ('of', 'IN'), [('Consolidated', 'NNP'), ('Gold', 'NNP'), ('Fields', 'NNP'), ('PLC', 'NNP')], (',', ','), ('was', 'VBD'), ('named', 'VBN'), ('a', 'DT'), ('nonexecutive', 'JJ'), ('director', 'NN'), ('of', 'IN'), ('this', 'DT'), ('British', 'JJ'), ('industrial', 'JJ'), ('conglomerate', 'NN'), ('.', '.')]    
+    
+    >>> test_sent = map(lambda w: (w, None), filter(lambda w: not w.startswith('*'), treebank.sents()[57]))
+    >>> nner_nopos = nltk.data.load('nltk:taggers/muc6_ner_chunk_taggers/muc6.nb.nopos.ner.pickle')
+    >>> print nner_nopos.parse(test_sent) #doctest: +NORMALIZE_WHITESPACE    
+    (S
+      (PERSON Bailey/)
+      (ORGANIZATION Controls/)
+      ,/
+      (LOCATION based/)
+      in/
+      (LOCATION Wickliffe/ ,/)
+      (LOCATION Ohio/ ,/)
+      makes/
+      computerized/
+      industrial/
+      controls/
+      systems/
+      ./)     
+    >>> nner_nopos.chunk(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    [[('Bailey', '')], [('Controls', '')], (',', ''), [('based', '')], ('in', ''), [('Wickliffe', ''), (',', '')], [('Ohio', ''), (',', '')], ('makes', ''), ('computerized', ''), ('industrial', ''), ('controls', ''), ('systems', ''), ('.', '')]    
+
+    >>> mner_nopos = nltk.data.load('nltk:taggers/muc6_ner_chunk_taggers/muc6.maxent.nopos.ner.pickle')
+    >>> print mner_nopos.parse(test_sent) #doctest: +NORMALIZE_WHITESPACE    
+    (S
+      (PERSON Bailey/ Controls/)
+      ,/
+      based/
+      in/
+      (LOCATION Wickliffe/)
+      ,/
+      (LOCATION Ohio/)
+      ,/
+      makes/
+      computerized/
+      industrial/
+      controls/
+      systems/
+      ./)    
+    >>> mner_nopos.chunk(test_sent) #doctest: +NORMALIZE_WHITESPACE
+    [[('Bailey', ''), ('Controls', '')], (',', ''), ('based', ''), ('in', ''), [('Wickliffe', '')], (',', ''), [('Ohio', '')], (',', ''), ('makes', ''), ('computerized', ''), ('industrial', ''), ('controls', ''), ('systems', ''), ('.', '')]    

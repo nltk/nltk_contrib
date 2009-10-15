@@ -18,7 +18,14 @@ from nltk.tag import ClassifierBasedTagger
 from nltk.tag.crf import MalletCRF
 from nltk.chunk import ChunkScore
 
+from nltk.corpus import stopwords
+
 from nltk_contrib.coref import ChunkTaggerI
+
+STOPWORDS = set(stopwords.words())
+
+RE_PUNCT = re.compile(r'[-!"#$%&\'\(\)\*\+,\./:;<=>^\?@\[\]\\\_`{\|}~]')
+RE_NUMERIC = re.compile(r'(\d{1,3}(\,\d{3})*|\d+)(\.\d+)?')
 
 class ChunkTaggerFeatureDetector(dict):
     """
@@ -45,36 +52,44 @@ class ChunkTaggerFeatureDetector(dict):
         
         self['spelling'] = spelling
         self['word'] = spelling.lower()
-        self['pos'] = pos
-        self['isupper'] = spelling.isupper()
-        self['islower'] = spelling.islower()
-        self['istitle'] = spelling.istitle()
-        self['isalnum'] = spelling.isalnum()
-        self['isnumeric'] = \
-            bool(re.match(r'^(\d{1,3}(\,\d{3})*|\d+)(\.\d+)?$', spelling))
-        for i in range(1, 4):
-            self['prefix_%d' % i] = spelling[:i]
-            self['suffix_%d' % i] = spelling[-i:]
+        if pos: self['pos'] = pos
+        self['isupper'] = int(spelling.isupper())
+        self['islower'] = int(spelling.islower())
+        self['istitle'] = int(spelling.istitle())
+        self['isalnum'] = int(spelling.isalnum())
         
+        for i in range(2, 4):
+            self['prefix_%d' % i] = spelling.lower()[:i]
+            self['suffix_%d' % i] = spelling.lower()[-i:]
+        
+        self['ispunct'] = int(bool(RE_PUNCT.match(spelling)))
+        self['isstopword'] = int(spelling.lower() in STOPWORDS)        
+        self['isnumeric'] = int(bool(RE_NUMERIC.match(spelling)))       
+        self['startofsent'] = int(index == 0)         
+        self['endofsent'] = int(index == len(tokens) - 1)
+                    
         if window > 0 and index > 0:
             prev_feats = \
                 self.__class__(tokens, index - 1, history, window=window - 1)
             for key, val in prev_feats.items():
-                if not key.startswith('next_'):
+                if not key.startswith('next_') and key != 'word':
                     self['prev_%s' % key] = val
         
         if window > 0 and index < len(tokens) - 1:
             next_feats = self.__class__(tokens, index + 1, window=window - 1)
             for key, val in next_feats.items():
-                if not key.startswith('prev_'):
+                if not key.startswith('prev_') and key != 'word':
                     self['next_%s' % key] = val
         
         if 'prev_pos' in self:
             self['prev_pos_pair'] = '%s/%s' % \
                 (self.get('prev_pos'), self.get('pos'))
         
-        if history and index > 0:
-            self['prev_tag'] = history[index - 1]
+        if history is not None:
+            if len(history) > 0 and index > 0:
+                self['prev_tag'] = history[index - 1]
+            else:
+                self['prev_tag'] = 'O'
 
 
 class AbstractChunkTagger(ChunkTaggerI):
@@ -133,13 +148,15 @@ class MaxentChunkTagger(ClassifierBasedTagger, AbstractChunkTagger):
         gaussian_prior_sigma = kwargs.get('gaussian_prior_sigma', 100)
         count_cutoff = kwargs.get('count_cutoff', 1)
         min_lldelta = kwargs.get('min_lldelta', 1e-7)
+        trace = int(not kwargs.get('verbose', False) or 3)
         
         def __maxent_train(fs):
             return MaxentClassifier.train(fs, 
                 algorithm=algorithm,
                 gaussian_prior_sigma=gaussian_prior_sigma,
                 count_cutoff=count_cutoff,
-                min_lldelta=min_lldelta)
+                min_lldelta=min_lldelta,
+                trace=trace)
         train = LazyMap(lambda sent: map(unflatten, sent), iob_sents)
         chunker = cls(fd, train, __maxent_train)
         chunker.chunk_types = chunk_types
@@ -187,8 +204,15 @@ def tokens2tree(tokens, chunk_types=_DEFAULT_CHUNK_TYPES, top_node='S'):
     stack = [Tree(top_node, [])]
     
     for token in tokens:
-        word, tag = token[:2]
-        state, chunk_type = re.match(r'([IOB])-?(\S+)?', token[-1]).groups()
+        token, tag = unflatten(token)
+        if isinstance(token, basestring):
+            word = token
+            pos = None
+        elif isinstance(token, tuple):
+            word, pos = token
+        else:
+            ValueError, 'invalid type for variable \'token\': %s' % type(token)
+        state, chunk_type = re.match(r'([IOB])-?(\S+)?', tag).groups()
         
         # If it's a chunk type we don't care about, treat it as O.
         if (chunk_types is not None and
@@ -208,7 +232,7 @@ def tokens2tree(tokens, chunk_types=_DEFAULT_CHUNK_TYPES, top_node='S'):
             stack.append(chunk)
         
         # Add the new word token.
-        stack[-1].append((word, tag))
+        stack[-1].append((word, pos or ''))
     
     return stack[0]
     
@@ -220,6 +244,12 @@ def flatten(tokens):
     return flatten(tokens[0]) + flatten(tokens[1:])
     
 def unflatten(token):
+    if not token:
+        return ()
+    if not getattr(token, '__iter__', False):
+        return (token,)
+    if len(token) == 1 or len(token[:-1]) == 1:
+        return tuple(token)
     return (token[:-1], token[-1])
     
 def test_chunk_tagger(chunk_tagger, iob_sents, **kwargs):
@@ -255,14 +285,14 @@ def test_chunk_tagger(chunk_tagger, iob_sents, **kwargs):
     
 def unittest(verbose=False): 
     import doctest
-    failed, passed = doctest.testfile('test/chunk.doctest', verbose)
+    failed, tested = doctest.testfile('test/chunk.doctest', verbose)
     if not verbose:
-        print '%d passed and %d failed.' % (failed, passed)
+        print '%d passed and %d failed.' % (tested - failed, failed)
         if failed == 0:
             print 'Test passed.'
         else:
             print '***Test Failed*** %d failures.' % failed
-    return failed, passed
+    return (tested - failed), failed
 
 def demo():
     pass
@@ -330,13 +360,12 @@ if __name__ == '__main__':
     
     if options.trainer:
         corpus = eval(options.corpus).iob_sents()
-        
+
         num_train, num_test = options.numsents
-        if not num_train and not num_test:
-            num_train = int(len(corpus) * 0.9)
-            num_test = len(corpus) - num_train
+        num_train = num_train or int(len(corpus) * 0.9)
+        num_test = num_test or (len(corpus) - num_train)
         train = corpus[:num_train]
-        test = corpus[num_train:num_train + num_test]
+        test = corpus[num_train:num_train + num_test]        
 
         trainer = eval(options.trainer)        
         if options.verbose:

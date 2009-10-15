@@ -1,31 +1,17 @@
-# Natural Language Toolkit (NLTK) Coreference Tagging Utilities
-#
-# Copyright (C) 2001-2009 NLTK Project 
-# Author: Joseph Frazee <jfrazee@mail.utexas.edu>
-# URL: <http://www.nltk.org/>
-# For license information, see LICENSE.TXT
-
 import os
 import re
-import optparse
+import subprocess
 
-import numpy
-
-import nltk
+try:
+    from cStringIO import StringIO
+except:
+    from StringIO import StringIO
 
 from nltk.util import LazyMap, LazyConcatenation
-from nltk.corpus.util import LazyCorpusLoader
-from nltk.corpus.reader import BracketParseCorpusReader
+from nltk.internals import find_binary, java
+from nltk.tag import TaggerI
 
-from nltk.data import load, find, ZipFilePathPointer
-from nltk.tag import HiddenMarkovModelTagger
-
-from nltk_contrib.coref import CorpusReaderDecorator, NLTK_COREF_DATA
-from nltk_contrib.coref.train import train_model, LidstoneProbDistFactory
-
-TREEBANK_TAGGER = \
-    'nltk:taggers/hmm_treebank_pos_tagger/treebank.tagger.pickle'           
-
+from nltk_contrib.coref import CorpusReaderDecorator
 
 class TaggerCorpusReader(CorpusReaderDecorator):
     """
@@ -53,108 +39,90 @@ class TaggerCorpusReader(CorpusReaderDecorator):
 
     def tagger(self):
         return self._tagger
-
-
-class TreebankTaggerCorpusReader(TaggerCorpusReader):
-    def __init__(self, reader, **kwargs):
-        kwargs['tagger'] = load_treebank_tagger()
-        TaggerCorpusReader.__init__(self, reader, **kwargs)
-
-
-def load_treebank_tagger():
-    nltk.data.path.insert(0, NLTK_COREF_DATA)
-    return load(TREEBANK_TAGGER)
-
-def train_treebank_tagger(num_train_sents, num_test_sents, **kwargs):
-    model_file = kwargs.get('model_file')
-    treebank = LazyCorpusLoader(
-        'treebank/combined', BracketParseCorpusReader, r'wsj_.*\.mrg')
-    treebank_tagged_sents = treebank.tagged_sents()
-    max_train_sents = int(len(treebank_tagged_sents)*0.9)
-    max_test_sents = len(treebank_tagged_sents) - max_train_sents
-    num_train_sents = min((num_train_sents or max_train_sents, max_train_sents))
-    num_test_sents = min((num_test_sents or max_test_sents, max_test_sents))
-    treebank_train_sequence = \
-        treebank_tagged_sents[:num_train_sents]
-    treebank_test_sequence = \
-        treebank_tagged_sents[num_train_sents:num_train_sents + num_test_sents]
-    # Import HiddenMarkovModelTagger and WittenBellProbDist because we want 
-    # train_model() and the pickled object to use the full class names.
-    from nltk.tag import HiddenMarkovModelTagger
-    from nltk_contrib.coref.train import LidstoneProbDistFactory
-    tagger = train_model(HiddenMarkovModelTagger, 
-                         treebank_train_sequence, 
-                         treebank_test_sequence,
-                         model_file,
-                         num_train_sents,
-                         num_test_sents,
-                         estimator=LidstoneProbDistFactory,
-                         verbose=kwargs.get('verbose'))
-    if kwargs.get('verbose'):
-        tagger.show_most_informative_features(25)
-    return tagger
-
-
-def demo(verbose=False):
-    import nltk
-    from nltk.corpus.util import LazyCorpusLoader    
-    from nltk.corpus.reader import PlaintextCorpusReader
-    from nltk_contrib.coref import NLTK_COREF_DATA
-    from nltk_contrib.coref.tag import TreebankTaggerCorpusReader
-    if nltk.data.path[0] != NLTK_COREF_DATA:
-        nltk.data.path.insert(0, NLTK_COREF_DATA)
-    state_union = LazyCorpusLoader(    
-        'state_union', PlaintextCorpusReader, r'(?!\.svn).*\.txt')
-    state_union = TreebankTaggerCorpusReader(state_union)
-    for sent in state_union.tagged_sents()[:5]:
-        for word in sent:
-           print word
-        print
-
-if __name__ == '__main__':
-    parser = optparse.OptionParser()
-    parser.add_option('-d', '--demo', action='store_true', dest='demo',
-                      default=True, help='run demo')
-    parser.add_option('-t', '--train-chunker', action='store_true',
-                      default=False, dest='train', 
-                      help='train Penn Treebank tagger')
-    parser.add_option('-f', '--model-file', metavar='FILE',
-                      dest='model_file', help='save model to FILE')
-    parser.add_option('-e', '--num-test-sents', metavar='NUM_TEST',
-                      dest='num_test_sents', type=int, 
-                      help='number of test sentences')
-    parser.add_option('-r', '--num-train-sents', metavar='NUM_TRAIN',
-                      dest='num_train_sents', type=int, 
-                      help='number of training sentences')
-    parser.add_option('-l', '--local-models', action='store_true',
-                    dest='local_models', default=False,
-                    help='use models from nltk_contrib.coref')                      
-    parser.add_option('-p', '--psyco', action='store_true',
-                      default=False, dest='psyco',
-                      help='use Psyco JIT, if available')
-    parser.add_option('-v', '--verbose', action='store_true',
-                      default=False, dest='verbose',
-                      help='verbose')
-    (options, args) = parser.parse_args()
-
-    if options.local_models and nltk.data.path[0] != NLTK_COREF_DATA:
-            nltk.data.path.insert(0, NLTK_COREF_DATA)
         
-    if options.psyco:
-        try:
-            import psyco
-            psyco.profile(memory=256)
-        except:
-            pass
+        
+class MXPostTaggerCorpusReader(TaggerCorpusReader):
+    def __init__(self, reader, **kwargs):
+        kwargs['tagger'] = MXPostTagger()
+        TaggerCorpusReader.__init__(self, reader, **kwargs)
+        
+    def tagged_sents(self):
+        sents = self.sents()
+        batch_indices = range(len(sents) / 1024 + 1)
+        return LazyConcatenation(LazyMap(lambda i: 
+                self._tagger.batch_tag(sents[i * 1024: i * 1024 + 1024]),
+            batch_indices))
 
-    if options.train:
-        chunker = train_treebank_tagger(options.num_train_sents, 
-                                        options.num_test_sents,
-                                        model_file=options.model_file, 
-                                        verbose=options.verbose)    
-                     
-    elif options.demo:
-        demo(options.verbose)
 
+class MXPostTagger(TaggerI):
+    def tag(self, tokens):
+        return self.batch_tag([tokens])[0]
+    
+    def batch_tag(self, sents):
+        return mxpost_tag(sents)
+        
+
+_mxpost_home = None
+_mxpost_classpath = None
+def config_mxpost(mxpost_home=None):
+    global _mxpost_classpath, _mxpost_home
+    classpath = os.environ.get('CLASSPATH', '').split(':')
+    mxpost_jar = filter(lambda c: c.endswith('mxpost.jar'), classpath)
+    if mxpost_jar:
+        _mxpost_home = os.path.dirname(mxpost_jar[0])
+        _mxpost_classpath = mxpost_jar[0]
+    elif os.environ.get('MXPOST'):
+        _mxpost_home = os.environ.get('MXPOST')
+        _mxpost_classpath = '%s/mxpost.jar' % os.environ.get('MXPOST')
+    elif os.environ.get('MXPOST_HOME'):
+        _mxpost_home = os.environ.get('MXPOST_HOME')
+        _mxpost_classpath = '%s/mxpost.jar' % os.environ.get('MXPOST_HOME')
+    elif os.path.exists('/usr/local/mxpost/mxpost.jar'):
+        _mxpost_home = '/usr/local/mxpost'
+        _mxpost_classpath = '/usr/local/mxpost/mxpost.jar'
     else:
-        demo(options.verbose)
+        _mxpost_home = None
+        _mxpost_classpath = None
+        raise Exception, "can't find mxpost.jar"
+
+def call_mxpost(classpath=None, stdin=None, stdout=None, stderr=None,
+                blocking=False):
+    if not classpath:
+        config_mxpost()
+    
+    if not classpath:
+        classpath = _mxpost_classpath
+    elif 'mxpost.jar' not in classpath:
+        classpath += ':%s' % _mxpost_classpath
+    
+    cmd = ['tagger.TestTagger', '%s/%s' % (_mxpost_home, 'wsj-02-21.mxpost')]
+    return java(cmd, classpath, stdin, stdout, stderr, blocking)
+
+_MXPOST_OUTPUT_RE = \
+    re.compile(r'^\s*(?P<word>\S+)\_(?P<tag>\S+)\s*$')
+def mxpost_parse_output(mxpost_output):
+    result = []
+    mxpost_output = mxpost_output.strip()
+    for sent in filter(None, mxpost_output.split('\n')):
+        tokens = filter(None, re.split(r'\s+', sent))
+        if tokens:
+            result.append([])
+        for token in tokens:
+            m = _MXPOST_OUTPUT_RE.match(token)
+            if not m:
+                raise Exception, "invalid mxpost tag pattern: %s, %s" % (token, tokens)
+            word = m.group('word')
+            tag = m.group('tag')
+            result[-1].append((word, tag))
+    return result
+
+def mxpost_tag(sents, **kwargs):
+    p = call_mxpost(stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout, stderr = \
+        p.communicate('\n'.join([' '.join(sent) for sent in sents]))
+    rc = p.returncode
+    if rc != 0:
+        raise Exception, 'exited with non-zero status %s' % rc
+    if kwargs.get('verbose'):
+        print 'warning: %s' % stderr
+    return mxpost_parse_output(stdout)
