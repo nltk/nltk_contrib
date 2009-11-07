@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 sort program in windows sometimes behaves strangely
 so we write a small sorting program to be used in testing

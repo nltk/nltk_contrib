@@ -1,5 +1,3 @@
-#!/usr/bin/env  python
-
 from hadooplib.reducer import ReducerBase
 
 class TFReducer(ReducerBase):

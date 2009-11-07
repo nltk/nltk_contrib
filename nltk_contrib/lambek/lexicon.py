@@ -1,4 +1,3 @@
-#!/usr/bin/python
 #
 # lexicon.py
 #

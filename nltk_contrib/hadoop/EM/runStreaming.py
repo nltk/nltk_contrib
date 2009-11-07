@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 this script shows how to iteratively run the MapReduce task
 """

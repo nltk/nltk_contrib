@@ -1,6 +1,6 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*- 
 # Sets the encoding to utf-8 to avoid problems with æøå
+
 import glob
 import re
 import random

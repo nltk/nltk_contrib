@@ -1,6 +1,6 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*- 
 # Sets the encoding to utf-8 to avoid problems with æøå
+
 import nltk.data
 from nltk.tokenize import *
 import syllables_en
@@ -166,11 +166,3 @@ def demo():
     
 if __name__ == "__main__":
     textanalyzer.demo()
-    
-        
-        
-        
-        
-        
-    
-    

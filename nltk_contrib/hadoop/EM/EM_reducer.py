@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from hadooplib.reducer import ReducerBase
 from hadooplib.util import *
 from nltk.tag.hmm import _log_add, _NINF

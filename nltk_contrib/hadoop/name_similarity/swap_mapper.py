@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from hadooplib.mapper import MapperBase
 from hadooplib.inputformat import KeyValueInput
 

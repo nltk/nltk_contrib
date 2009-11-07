@@ -1,5 +1,3 @@
-#!/usr/bin/env  python
-
 from hadooplib.mapper import MapperBase
 
 class TFMapper(MapperBase):

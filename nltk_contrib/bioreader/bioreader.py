@@ -1,4 +1,3 @@
-#!/usr/bin/python
 """
 Classes to read and process MedLine XML record files, for use in processing modules.
 

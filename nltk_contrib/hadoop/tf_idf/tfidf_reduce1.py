@@ -1,4 +1,3 @@
-#!/usr/bin/env  python
 
 from hadooplib.reducer import ReducerBase
 from math import log

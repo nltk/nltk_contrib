@@ -1,4 +1,3 @@
-#!/usr/bin/env python2.5
 from nltk.parse import chart
 from nltk import cfg
 from drawchart import ChartDemo

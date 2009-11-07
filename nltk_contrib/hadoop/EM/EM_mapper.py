@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from nltk import FreqDist, ConditionalFreqDist, ConditionalProbDist, \
     DictionaryProbDist, DictionaryConditionalProbDist, LidstoneProbDist, \
     MutableProbDist, MLEProbDist, UniformProbDist, HiddenMarkovModelTagger
