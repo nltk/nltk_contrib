@@ -1,4 +1,4 @@
-# Natural Language Toolkit: Generating RDF Triples from NL Relations
+### Natural Language Toolkit: Generating RDF Triples from NL Relations
 #
 # Author: Ewan Klein <ewan@inf.ed.ac.uk>
 # URL: <http://www.nltk.org/>
@@ -9,12 +9,12 @@ This code shows how relational information extracted from text
 can be converted into an RDF Graph.
 """
 
-from nltk.sem.relextract import relextract, class_abbrev
+from nltk.sem.relextract import extract_rels, class_abbrev
 from string import join
 import re
 from rdflib import Namespace, ConjunctiveGraph
 
-BASE = "http://nltk.org/terms/"
+BASE = "http://www.nltk.org/terms/"
 RDFNS = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFSNS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
 
@@ -77,18 +77,22 @@ def rels2rdf(ns, verbose=False):
     graph.add((in_uri, RDFSNS.range, loc_uri))
     from nltk.corpus import ieer
     IN = re.compile(r'.*\bin\b(?!\b.+ing\b)')
-    for item in ieer.items:
+    for item in ieer.fileids():
         for doc in ieer.parsed_docs(item):
-            for reldict in relextract('ORG', 'LOC', doc, pattern=IN):
+            for reldict in extract_rels('ORG', 'LOC', doc, corpus='ieer', pattern=IN):
                 graph.add(make_rdf(ns, reldict, relsym='in'))
                 for triple in make_rdfs(ns, reldict):
                     graph.add(triple)
     return graph
 
 def demo():
+    import rdfvizualize
     graph = rels2rdf(BASE)
-    print graph.serialize(format='turtle')
-
+    #print graph.serialize(format='turtle')
+    viz = rdfvizualize.Visualizer(graph)
+    g = viz.graph2dot(filter_edges=True)
+    g.write_png('rdf.png', prog='dot') 
+    
 if __name__ == '__main__':
     demo()
 
