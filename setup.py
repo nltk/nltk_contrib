@@ -32,6 +32,7 @@ setup(
     #############################################
     ## Package List
     packages = ['nltk_contrib',
+                'nltk_contrib.align',
                 'nltk_contrib.bioreader',
                 'nltk_contrib.classifier',
                 'nltk_contrib.classifier.exceptions',
