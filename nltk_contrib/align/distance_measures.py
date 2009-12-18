@@ -1,18 +1,24 @@
 
-
-# Based on Gale & Church 1993, "A Program for Aligning Sentences in Bilingual Corpora"
-# This is a Python version of the C implementation by Mike Riley presented in the appendix
-# of the paper. The documentation in the C program is retained where applicable.
+# Natural Language Toolkit: Gale-Church Aligner Distance Functions
+#
+# Copyright (C) 2001-2009 NLTK Project
+# Author: Chris Crowner <ccrowner@gmail.com>
+# URL: <http://nltk.org/>
+# For license information, see LICENSE.TXT
 
 import math
 
 BIG_DISTANCE = 2500
+
+# Based on Gale & Church 1993, "A Program for Aligning Sentences in Bilingual Corpora"
+# This is a Python version of the C implementation by Mike Riley presented in the appendix
+# of the paper. The documentation in the C program is retained where applicable.
     
 # Local Distance Function
 
 
 def pnorm(z):
-    """
+    """ 
     Returns the area under a normal distribution
     from -inf to z standard deviations 
     
@@ -58,11 +64,14 @@ def match(len1, len2):
     var_per_eng_char = 6.8 	
     
     if (len1==0 and len2==0): 
-        return 0
-        
-    mean = (len1 + len2/foreign_chars_per_eng_char)/2
+        return 0    
     
-    z = (foreign_chars_per_eng_char * len1 - len2)/math.sqrt(var_per_eng_char * mean)
+    try:
+        mean = (len1 + len2/foreign_chars_per_eng_char)/2          
+    
+        z = (foreign_chars_per_eng_char * len1 - len2)/math.sqrt(var_per_eng_char * mean)
+    except ZeroDivisionError:
+        z = float(999999999999999999999)
     
     #/* Need to deal with both sides of the normal distribution */
     if (z < 0):
