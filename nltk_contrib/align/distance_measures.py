@@ -1,7 +1,7 @@
 
 # Natural Language Toolkit: Gale-Church Aligner Distance Functions
 #
-# Copyright (C) 2001-2009 NLTK Project
+# Copyright (C) 2001-2010 NLTK Project
 # Author: Chris Crowner <ccrowner@gmail.com>
 # URL: <http://nltk.org/>
 # For license information, see LICENSE.TXT
