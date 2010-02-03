@@ -1,0 +1,123 @@
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+# CD - Candrabindu: vowel nasalization
+# NUKTA: extending the alphabet to new letters
+
+#Various signs
+0901	(CD)
+0902	(M)	
+0903	(H)
+#Independent vowels
+0904	A
+0905	A
+0906	A:
+0907	i
+0908	i:
+0909	u
+090A	u:
+090B	9r=
+090C	l=
+090D	e
+090E	e
+090F	e
+0910	aI
+0911	o
+0912	o
+0913	o
+0914	aU
+#Consonants
+0915	k A
+0916	kh A
+0917	g A
+0918	gh A
+0919	N A
+091A	c A
+091B	ch A
+091C	J A
+091D	Jh A
+091E	n~ A
+091F	tr A
+0920	tR A
+0921	dr A
+0922	dR A
+0923	nr A
+0924	t[ A
+0925	t[_h A
+0926	d[ A
+0927	d[_h A
+0928	n[ A	
+0929	n A
+092A	p A
+092B	ph A
+092C	b A
+092D	bh A
+092E	m A
+092F	j A
+0930	9r A
+0931	9r A
+0932	l A
+0933	lr A
+0934	l A
+0935	v A
+0936	c} A
+0937	sr A
+0938	s A	
+0939	hv A
+#Various signs
+093C	(NUKTA)
+093D	(AVAGRAHA)
+#Dependent vowel signs
+093E	A:
+093F	i
+0940	i:
+0941	u
+0942	u:
+0943	9r=
+0944	rr=
+0945	e
+0946	e
+0947	e
+0948	aI
+0949	o
+094A	o
+094B	o
+094C	aU
+#Various signs
+094D	(P) 
+0950	(OM)
+0951	(UDATTA)	
+0952	(ADUDATTA)
+0953	(GRAVE ACCENT)
+0954	(ACUTE ACCENT)
+#Additional consonants
+0958	q A
+0959	x A
+095A	G A	
+095B	z A
+095C	rr A
+095D	rrh A
+095E	f A
+095F	j
+#Generic additions
+0960	rr=
+0961	lr=
+0962	l=
+0963	l=
+0964	(*)
+0965	(**)
+#Digits
+0966	(ZERO)
+0967	(ONE)
+0968	(TWO)
+0969	(THREE)
+096A	(FOUR)
+096B	(FIVE)
+096C	(SIX)
+096D	(SEVEN)
+096E	(EIGHT)
+096F	(NINE)
+#Devanagari-specific additions
+0970	(ABBREVIATION)
+#Glottal stop
+097D	?

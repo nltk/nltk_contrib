@@ -1,0 +1,23 @@
+#Tagbanwa
+
+#Independent vowels
+1760	A
+1761	i
+1762	u
+#Consonants
+1763	k A 
+1764	g A
+1765	N A
+1766	t A
+1767	d A
+1768	n A
+1769	p A
+176A	b A
+176B	m A
+176C	j A
+176E	l A
+176F	w A
+1770	s A
+#Dependent vowel signs
+1772	i
+1773	u

@@ -1,0 +1,11315 @@
+# Hangel Syllables
+AC00	k a
+AC01	k a k
+AC02	k a k>
+AC03	k a k sh
+AC04	k a n
+AC05	k a n tS 
+AC06	k a n h
+AC07	k a t
+AC08	k a l
+AC09	k a l k
+AC0A	k a l m
+AC0B	k a l b
+AC0C	k a l sh
+AC0D	k a l th
+AC0E	k a l ph	   
+AC0F	k a l h
+AC10	k a m
+AC11	k a p
+AC12	k a p sh
+AC13	k a sh
+AC14	k a s
+AC15	k a N
+AC16	k a tS
+AC17	k a tSh
+AC18	k a kh
+AC19	k a th
+AC1A	k a ph	   
+AC1B	k a h
+AC1C	k @
+AC1D	k @ k
+AC1E	k @ k>
+AC1F	k @ k sh
+AC20	k @ n
+AC21	k @ n tS
+AC22	k @ n h
+AC23	k @ t
+AC24	k @ l
+AC25	k @ l k
+AC26	k @ l m
+AC27	k @ l p
+AC28	k @ l sh
+AC29	k @ l th
+AC2A	k @ l ph
+AC2B	k @ l h
+AC2C	k @ m
+AC2D	k @ p
+AC2E	k @ p sh
+AC2F	k @ sh
+AC30	k @ s
+AC31	k @ N
+AC32	k @ tS
+AC33	k @ tSh
+AC34	k @ kh
+AC35	k @ th
+AC36	k @ ph
+AC37	k @ h
+AC38	k j a
+AC39	k j a k
+AC3A	k j a k>
+AC3B	k j a k sh
+AC3C	k j a n
+AC3D	k j a n tS
+AC3E	k j a n h
+AC3F	k j a t
+AC40	k j a l
+AC41	k j a l k
+AC42	k j a L M
+AC43	k j a l p
+AC44	k j a l sh
+AC45	k j a l th
+AC46	k j a l ph
+AC47	k j a l h
+AC48	k j a m
+AC49	k j a p
+AC4A	k j a p sh
+AC4B	k j a sh
+AC4C	k j a s
+AC4D	k j a N
+AC4E	k j a tS
+AC4F	k j a tSh
+AC50	k j a kh
+AC51	k j a th
+AC52	k j a ph
+AC53	k j a h
+AC54	k j @
+AC55	k j @ k
+AC56	k j @ k>
+AC57	k j @ k sh
+AC58	k j @ n
+AC59	k j @ n tS
+AC5A	k j @ n h
+AC5B	k j @ t
+AC5C	k j @ l
+AC5D	k j @ l k
+AC5E	k j @ l m
+AC5F	k j @ l p
+AC60	k j @ l sh
+AC61	k j @ l th
+AC62	k j @ l ph
+AC63	k j @ l h
+AC64	k j @ m
+AC65	k j @ p
+AC66	k j @ p sh
+AC67	k j @ sh
+AC68	k j @ s
+AC69	k j @ N
+AC6A	k j @ tS
+AC6B	k j @ tSh
+AC6C	k j @ kh
+AC6D	k j @ th
+AC6E	k j @ ph
+AC6F	k j @ h
+AC70	k ^
+AC71	k ^ k
+AC72	k ^ k>
+AC73	k ^ k sh
+AC74	k ^ n
+AC75	k ^ n tS
+AC76	k ^ n h
+AC77	k ^ t
+AC78	k ^ l
+AC79	k ^ l k
+AC7A	k ^ l m
+AC7B	k ^ l p
+AC7C	k ^ l sh
+AC7D	k ^ l th  
+AC7E	k ^ l ph
+AC7F	k ^ l h
+AC80	k ^ m
+AC81	k ^ p
+AC82	k ^ p sh
+AC83	k ^ sh
+AC84	k ^ s
+AC85	k ^ N
+AC86	k ^ tS
+AC87	k ^ tSh
+AC88	k ^ kh
+AC89	k ^ th
+AC8A	k ^ ph
+AC8B	k ^ h
+AC8C	k e
+AC8D	k e k
+AC8E	k e k>
+AC8F	k e k sh
+AC90	k e n
+AC91	k e n tS
+AC92	k e n h
+AC93	k e t
+AC94	k e l
+AC95	k e l k
+AC96	k e l m
+AC97	k e l p
+AC98	k e l sh
+AC99	k e l th
+AC9A	k e l ph
+AC9B	k e l h
+AC9C	k e m
+AC9D	k e p
+AC9E	k e p sh
+AC9F	k e sh	
+ACA0	k e s
+ACA1	k e N
+ACA2	k e tS
+ACA3	k e tSh
+ACA4	k e kh
+ACA5	k e th
+ACA6	k e ph
+ACA7	k e h
+ACA8	k j ^
+ACA9	k j ^ k
+ACAA	k j ^ k>
+ACAB	k j ^ k sh
+ACAC	k j ^ n
+ACAD	k j ^ n tS
+ACAE	k j ^ n h
+ACAF	k j ^ t
+ACB0	k j ^ l
+ACB1	k j ^ l k
+ACB2	k j ^ l m
+ACB3	k j ^ l p
+ACB4	k j ^ l sh
+ACB5	k j ^ l th
+ACB6	k j ^ l ph
+ACB7	k j ^ l h
+ACB8	k j ^ m
+ACB9	k j ^ p
+ACBA	k j ^ p sh
+ACBB	k j ^ sh
+ACBC	k j ^ s
+ACBD	k j ^ N
+ACBE	k j ^ tS
+ACBF	k j ^ tSh
+ACC1	k j ^ th
+ACC2	k j ^ ph
+ACC3	k j ^ h
+ACC4	k j e
+ACC5	k j e k
+ACC6	k j e k>
+ACC7	k j e k sh
+ACC8	k j e n
+ACC9	k j e n tS
+ACCA	k j e n h
+ACCB	k j e t
+ACCC	k j e l
+ACCD	k j e l k
+ACCE	k j e l m
+ACCF	k j e l p
+ACD1	k j e l sh
+ACD2	k j e l th
+ACD3	k j e l ph
+ACD4	k j e m
+ACD5	k j e p
+ACD6	k j e p sh
+ACD7	k j e sh
+ACD8	k j e s 
+ACD9	k j e N
+ACDA	k j e tS
+ACDB	k j e tSh
+ACDC	k j e kh
+ACDD	k j e th
+ACDE	k j e ph
+ACDF	k j e h
+ACE0	k o
+ACE1	k o k
+ACE2	k o k>
+ACE3	k o k sh
+ACE4	k o n
+ACE5	k o n tS
+ACE6	k o n h
+ACE7	k o t
+ACE8	k o l
+ACE9	k o l k
+ACEA	k o l m
+ACEB	k o l b
+ACEC	k o l sh
+ACED	k o l th
+ACEE	k o l ph
+ACEF	k o l h
+ACF0	k o m
+ACF1	k o p
+ACF2	k o p sh
+ACF3	k o sh
+ACF4	k o s
+ACF5	k o N
+ACF6	k o tS
+ACF7	k o tSh
+ACF8	k o kh
+ACF9	k o th
+ACFA	k o ph
+ACFB	k o h
+ACFC	k w a
+ACFD	k w a k
+ACFE	k w a k>
+ACFF	k w a k sh
+AD00	k w a n
+AD01	k w a n tS
+AD02	k w a n h
+AD03	k w a t
+AD04	k w a l
+AD05	k w a l k
+AD06	k w a l m
+AD07	k w a l p
+AD08	k w a l sh
+AD09	k w a l th
+AD0A	k w a l ph
+AD0B	k w a l h
+AD0C	k w a m
+AD0D	k w a p
+AD0E	k w a p sh
+AD0F	k w a sh
+AD10	k w a s
+AD11	k w a N
+AD12	k w a tS
+AD13	k w a tSh
+AD14	k w a kh
+AD15	k w a th
+AD16	k w a ph
+AD17	k w a h
+AD18	k w @
+AD19	k w @ k
+AD1A	k w @ k>
+AD1B	k w @ k sh
+AD1C	k w @ n
+AD1D	k w @ n tS
+AD1E	k w @ n h
+AD1F	k w @ t
+AD20	k w @ l
+AD21	k w @ l k
+AD22	k w @ l m
+AD23	k w @ l p
+AD24	k w @ l sh
+AD25	k w @ l th
+AD26	k w @ l ph
+AD27	k w @ l h
+AD28	k w @ m
+AD29	k w @ p
+AD2A	k w @ p sh
+AD2B	k w @ sh
+AD2C	k w @ s
+AD2D	k w @ N
+AD2E	k w @ tS
+AD2F	k w @ tSh
+AD30	k w @ kh
+AD31	k w @ th
+AD32	k w @ ph
+AD33	k w @ h
+AD34	k w e
+AD35	k w e k
+AD36	k w e k>
+AD37	k w e k sh
+AD38	k w e n
+AD39	k w e n tS
+AD3A	k w e n h
+AD3B	k w e t
+AD3C	k w e l
+AD3D	k w e l k
+AD3E	k w e l m
+AD3F	k w e l p
+AD40	k w e l sh
+AD41	k w e l th
+AD42	k w e l ph
+AD43	k w e l h
+AD44	k w e m
+AD45	k w e p
+AD46	k w e p sh
+AD47	k w e sh
+AD48	k w e s
+AD49	k w e N
+AD4A	k w e tS
+AD4B	k w e tSh
+AD4C	k w e kh
+AD4D	k w e th
+AD4E	k w e ph
+AD4F	k w e h
+AD50	k j o
+AD51	k j o k
+AD52	k j o k>
+AD53	k j o k sh
+AD54	k j o n
+AD55	k j o n tS
+AD56	k j o n h
+AD57	k j o t
+AD58	k j o l
+AD59	k j o l k
+AD5A	k j o l m
+AD5B	k j o l p
+AD5C	k j o l sh
+AD5D	k j o l th
+AD5E	k j o l ph
+AD5F	k j o l h
+AD60	k j o m
+AD61	k j o p
+AD62	k j o p sh
+AD63	k j o sh
+AD64	k j o s
+AD65	k j o N
+AD66	k j o tS
+AD67	k j o tSh
+AD68	k j o kh
+AD69	k j o th
+AD6A	k j o ph
+AD6B	k j o h
+AD6C	k u
+AD6D	k u k
+AD6E	k u k>
+AD6F	k u k sh
+AD70	k u n
+AD71	k u n tS
+AD72	k u n h
+AD73	k u t
+AD74	k u l
+AD75	k u l k
+AD76	k u l m
+AD77	k u l p
+AD78	k u l sh
+AD79	k u l th
+AD7A	k u l ph
+AD7B	k u l h
+AD7C	k u m
+AD7D	k u p
+AD7E	k u p sh
+AD7F	k u sh
+AD80	k u s
+AD81	k u N
+AD82	k u tS
+AD83	k u tSh
+AD84	k u kh
+AD85	k u th
+AD86	k u ph
+AD87	k u h
+AD88	k w ^
+AD89	k w ^ k
+AD8A	k w ^ k>
+AD8B	k w ^ k sh
+AD8C	k w ^ n
+AD8D	k w ^ n tS
+AD8E	k w ^ n h
+AD8F	k w ^ t
+AD90	k w ^ l
+AD91	k w ^ l k
+AD92	k w ^ l m
+AD93	k w ^ l p
+AD94	k w ^ l sh
+AD95	k w ^ l th
+AD96	k w ^ l ph
+AD97	k w ^ l h
+AD98	k w ^ m
+AD99	k w ^ p
+AD9A	k w ^ p sh
+AD9B	k w ^ sh
+AD9C	k w ^ s 
+AD9D	k w ^ N
+AD9E	k w ^ tS
+AD9F	k w ^ tSh
+ADA0	k w ^ kh
+ADA1	k w ^ th
+ADA2	k w ^ ph
+ADA3	k w ^ h
+ADA4	k w E
+ADA5	k w E k
+ADA6	k w E k>
+ADA7	k w E k sh
+ADA8	k w E n
+ADA9	k w E n tS
+ADAA	k w E n h
+ADAB	k w E t
+ADAC	k w E l
+ADAD	k w E l k
+ADAE	k w E l m
+ADAF	k w E l p 
+ADB0	k w E l sh
+ADB1	k w E l th
+ADB2	k w E l ph
+ADB3	k w E l h
+ADB4	k w E m
+ADB5	k w E p
+ADB6	k w E p sh
+ADB7	k w E sh
+ADB8	k w E s
+ADB9	k w E N
+ADBA	k w E tS
+ADBB	k w E tSh
+ADBC	k w E kh
+ADBD	k w E th
+ADBE	k w E ph
+ADBF	k w E h
+ADC0	k 7
+ADC1	k 7 k
+ADC2	k 7 k>
+ADC3	k 7 k sh
+ADC4	k 7 n
+ADC5	k 7 n tS
+ADC6	k 7 n h
+ADC7	k 7 t
+ADC8	k 7 l
+ADC9	k 7 l k
+ADCA	k 7 l m
+ADCB	k 7 l p
+ADCC	k 7 l sh
+ADCD	k 7 l th
+ADCE	k 7 l ph
+ADCF	k 7 l h
+ADD0	k 7 m
+ADD1	k 7 p
+ADD2	k 7 p sh
+ADD3	k 7 sh
+ADD4	k 7 s
+ADD5	k 7 N
+ADD6	k 7 tS
+ADD7	k 7 tSh
+ADD8	k 7 kh
+ADD9	k 7 th
+ADDA	k 7 ph
+ADDB	k 7 h
+ADDC	k j u
+ADDD	k j u k
+ADDE	k j u k>
+ADDF	k j u k sh
+ADE0	k j u n
+ADE1	k j u n tS
+ADE2	k j u n h
+ADE3	k j u t
+ADE4	k j u l
+ADE5	k j u l k
+ADE6	k j u l m
+ADE7	k j u l p
+ADE8	k j u l sh
+ADE9	k j u l th
+ADEA	k j u l ph
+ADEB	k j u l h
+ADEC	k j u m
+ADED	k j u p
+ADEE	k j u p sh
+ADEF	k j u sh
+ADF0	k j u s
+ADF1	k j u N
+ADF2	k j u tS
+ADF3	k j u tSh
+ADF4	k j u kh
+ADF5	k j u th
+ADF6	k j u ph
+ADF7	k j u h
+ADF8	k 4
+ADF9	k 4 k
+ADFA	k 4 k>
+ADFB	k 4 k sh
+ADFC	k 4 n
+ADFD	k 4 n tS
+ADFE	k 4 n h
+ADFF	k 4 t
+AE00	k 4 l
+AE01	k 4 l k
+AE02	k 4 l m
+AE03	k 4 l p
+AE04	k 4 l sh
+AE05	k 4 l th
+AE06	k 4 l ph
+AE07	k 4 l h
+AE08	k 4 m
+AE09	k 4 p
+AE0A	k 4 p sh
+AE0B	k 4 sh
+AE0C	k 4 s
+AE0D	k 4 N
+AE0E	k 4 tS
+AE0F	k 4 tSh
+AE10	k 4 kh
+AE11	k 4 th
+AE12	k 4 ph
+AE13	k 4 h
+AE14	k 4 j
+AE15	k 4 j k
+AE16	k 4 j k>
+AE17	k 4 j k sh
+AE18	k 4 j n
+AE19	k 4 j n tS
+AE1A	k 4 j n h
+AE1B	k 4 j t
+AE1C	k 4 j l
+AE1D	k 4 j l k
+AE1E	k 4 j l m
+AE1F	k 4 j l p
+AE20	k 4 j l sh
+AE21	k 4 j l th
+AE22	k 4 j l ph
+AE23	k 4 j l h
+AE24	k 4 j m
+AE25	k 4 j p
+AE26	k 4 j p sh
+AE27	k 4 j sh
+AE28	k 4 j s
+AE29	k 4 j N
+AE2A	k 4 j tS
+AE2B	k 4 j tSh
+AE2C	k 4 j kh
+AE2D	k 4 j th
+AE2E	k 4 j ph
+AE2F	k 4 j h
+AE30	k i
+AE31	k i k
+AE32	k i k>
+AE33	k i k sh
+AE34	k i n
+AE35	k i n tS
+AE36	k i n h
+AE37	k i t
+AE38	k i l
+AE39	k i l k
+AE3A	k i l m
+AE3B	k i l p
+AE3C	k i l sh
+AE3D	k i l th
+AE3E	k i l ph
+AE3F	k i l h
+AE40	k i m
+AE41	k i p
+AE42	k i p sh
+AE43	k i sh
+AE44	k i s
+AE45	k i N
+AE46	k i tS
+AE47	k i tSh
+AE48	k i kh
+AE49	k i th
+AE4A	k i ph
+AE4B	k i h
+AE4C	k> a
+AE4D	k> a k
+AE4E	k> a k> 
+AE4F	k> a k ah
+AE50	k> a n
+AE51	k> a n tS
+AE52	k> a n h	
+AE53	k> a t
+AE54	k> a l
+AE55	k> a l k
+AE56	k> a l m
+AE57	k> a l p
+AE58	k> a l sh
+AE59	k> a l th
+AE5A	k> a l ph
+AE5B	k> a l h
+AE5C	k> a m
+AE5D	k> a p
+AE5E	k> a p sh
+AE5F	k> a sh
+AE60	k> a s
+AE61	k> a N
+AE62	k> a tS
+AE63	k> a tSh
+AE64	k> a kh
+AE65	k> a th
+AE66	k> a ph
+AE67	k> a h
+AE68	k> @
+AE69	k> @ k
+AE6A	k> @ k>
+AE6B	k> @ k sh
+AE6C	k> @ n
+AE6D	k> @ n tS
+AE6E	k> @ n h
+AE6F	k> @ t
+AE70	k> @ l
+AE71	k> @ l k
+AE72	k> @ l m
+AE73	k> @ l p
+AE74	k> @ l sh
+AE75	k> @ l th
+AE76	k> @ l ph
+AE77	k> @ l h
+AE78	k> @ m
+AE79	k> @ p
+AE7A	k> @ p sh
+AE7B	k> @ sh
+AE7C	k> @ s
+AE7D	k> @ N
+AE7E	k> @ tS
+AE7F	k> @ tSh
+AE80	k> @ kh
+AE81	k> @ th
+AE82	k> @ ph
+AE83	k> @ h
+AE84	k> j a
+AE85	k> j a k
+AE86	k> j a k> 
+AE87	k> j a k sh
+AE88	k> j a n
+AE89	k> j a n tS
+AE8A	k> j a n h
+AE8B	k> j a t
+AE8C	k> j a l
+AE8D	k> j a l k
+AE8E	k> j a l m
+AE8F	k> j a l p
+AE90	k> j a l sh
+AE91	k> j a l th
+AE92	k> j a l ph
+AE93	k> j a l h
+AE94	k> j a m
+AE95	k> j a p
+AE96	k> j a p sh
+AE97	k> j a sh
+AE98	k> j a s
+AE99	k> j a N
+AE9A	k> j a tS
+AE9B	k> j a tSh
+AE9C	k> j a kh
+AE9D	k> j a th
+AE9E	k> j a ph
+AE9F	k> j a h
+AEA0	k> j @
+AEA1	k> j @ k
+AEA2	k> j @ k>
+AEA3	k> j @ k sh
+AEA4	k> j @ n
+AEA5	k> j @ n tS
+AEA6	k> j @ n h
+AEA7	k> j @ t
+AEA8	k> j @ l
+AEA9	k> j @ l k
+AEAA	k> j @ l m
+AEAB	k> j @ l p
+AEAC	k> j @ l sh
+AEAD	k> j @ l th
+AEAE	k> j @ l ph
+AEAF	k> j @ l h
+AEB0	k> j @ m
+AEB1	k> j @ p
+AEB2	k> j @ p sh
+AEB3	k> j @ sh
+AEB4	k> j @ s
+AEB5	k> j @ N
+AEB6	k> j @ tS
+AEB7	k> j @ tSh
+AEB8	k> j @ kh
+AEB9	k> j @ th
+AEBA	k> j @ ph
+AEBB	k> j @ h
+AEBC	k> ^
+AEBD	k> ^ k
+AEBE	k> ^ k> 
+AEBF	k> ^ k sh
+AEC0	k> ^ n
+AEC1	k> ^ n tS
+AEC2	k> ^ n h
+AEC3	k> ^ t
+AEC4	k> ^ l
+AEC5	k> ^ l k
+AEC6	k> ^ l m
+AEC7	k> ^ l p
+AEC8	k> ^ l sh
+AEC9	k> ^ l th
+AECA	k> ^ l ph
+AECB	k> ^ l h
+AECC	k> ^ m
+AECD	k> ^ p
+AECE	k> ^ p sh
+AECF	k> ^ sh
+AED0	k> ^ s
+AED1	k> ^ N
+AED2	k> ^ tS
+AED3	k> ^ tSh
+AED4	k> ^ kh
+AED5	k> ^ th
+AED6	k> ^ ph
+AED7	k> ^ h
+AED8	k> e
+AED9	k> e k
+AEDA	k> e k> 
+AEDB	k> e k sh
+AEDC	k> e n
+AEDD	k> e n tS
+AEDE	k> e n h
+AEDF	k> e t
+AEE0	k> e l
+AEE1	k> e l k
+AEE2	k> e l m
+AEE3	k> e l p
+AEE4	k> e l sh
+AEE5	k> e l th
+AEE6	k> e l ph
+AEE7	k> e l h
+AEE8	k> e m
+AEE9	k> e p
+AEEA	k> e p sh
+AEEB	k> e sh
+AEEC	k> e s 
+AEED	k> e N
+AEEE	k> e tS
+AEEF	k> e tSh
+AEF0	k> e kh
+AEF1	k> e th
+AEF2	k> e ph
+AEF3	k> e h
+AEF4	k> j ^
+AEF5	k> j ^ k
+AEF6	k> j ^ k>
+AEF7	k> j ^ k sh
+AEF8	k> j ^ n
+AEF9	k> j ^ n tS
+AEFA	k> j ^ n h
+AEFB	k> j ^ t
+AEFC	k> j ^ l
+AEFD	k> j ^ l k
+AEFE	k> j ^ l m
+AEFF	k> j ^ l p
+AF00	k> j ^ l sh
+AF01	k> j ^ l th
+AF02	k> j ^ l ph
+AF03	k> j ^ l h
+AF04	k> j ^ m
+AF05	k> j ^ p
+AF06	k> j ^ p sh
+AF07	k> j ^ sh
+AF08	k> j ^ s
+AF09	k> j ^ N
+AF0A	k> j ^ tS
+AF0B	k> j ^ tSh
+AF0C	k> j ^ kh
+AF0D	k> j ^ th
+AF0E	k> j ^ ph
+AF0F	k> j ^ h
+AF10	k> j e
+AF11	k> j e k
+AF12	k> j e k>
+AF13	k> j e k sh
+AF14	k> j e n
+AF15	k> j e n tS
+AF16	k> j e n h
+AF17	k> j e t
+AF18	k> j e l
+AF19	k> j e l k
+AF1A	k> j e l m
+AF1B	k> j e l p
+AF1C	k> j e l sh
+AF1D	k> j e l th
+AF1E	k> j e l ph
+AF1F	k> j e l h
+AF20	k> j e m
+AF21	k> j e p
+AF22	k> j e p sh
+AF23	k> j e sh
+AF24	k> j e s
+AF25	k> j e N
+AF26	k> j e tS
+AF27	k> j e tSh
+AF28	k> j e kh
+AF29	k> j e th
+AF2A	k> j e ph
+AF2B	k> j e h
+AF2C	k> o
+AF2D	k> o k
+AF2E	k> o k>
+AF2F	k> o k sh
+AF30	k> o n
+AF31	k> o n tS
+AF32	k> o n h
+AF33	k> o t
+AF34	k> o l
+AF35	k> o l k
+AF36	k> o l m
+AF37	k> o l p
+AF38	k> o l sh
+AF39	k> o l th
+AF3A	k> o l ph
+AF3B	k> o l h
+AF3C	k> o m
+AF3D	k> o p
+AF3E	k> o p sh
+AF3F	k> o sh
+AF40	k> o s
+AF41	k> o N
+AF42	k> o tS
+AF43	k> o tSh
+AF44	k> o kh
+AF45	k> o th
+AF46	k> o ph
+AF47	k> o h
+AF48	k> w a
+AF49	k> w a k
+AF4A	k> w a k> 
+AF4B	k> w a k sh
+AF4C	k> w a n
+AF4D	k> w a n tS
+AF4E	k> w a n h
+AF4F	k> w a t
+AF50	k> w a l
+AF51	k> w a l k
+AF52	k> w a l m
+AF53	k> w a l p
+AF54	k> w a l sh
+AF55	k> w a l th
+AF56	k> w a l ph
+AF57	k> w a l h
+AF58	k> w a m
+AF59	k> w a p
+AF5A	k> w a p sh
+AF5B	k> w a sh
+AF5C	k> w a s
+AF5D	k> w a N
+AF5E	k> w a tS
+AF5F	k> w a tSh
+AF60	k> w a kh
+AF61	k> w a th
+AF62	k> w a ph
+AF63	k> w a h
+AF64	k> w @
+AF65	k> w @ k
+AF66	k> w @ k>
+AF67	k> w @ k sh
+AF68	k> w @ n
+AF69	k> w @ n tS
+AF6A	k> w @ n h
+AF6B	k> w @ t
+AF6C	k> w @ l
+AF6D	k> w @ l k
+AF6E	k> w @ l m
+AF6F	k> w @ l p
+AF70	k> w @ l sh
+AF71	k> w @ l th
+AF72	k> w @ l ph
+AF73	k> w @ l h
+AF74	k> w @ m
+AF75	k> w @ p
+AF76	k> w @ p sh
+AF77	k> w @ sh
+AF78	k> w @ s
+AF79	k> w @ N
+AF7A	k> w @ tS
+AF7B	k> w @ tSh
+AF7C	k> w @ kh
+AF7D	k> w @ th
+AF7E	k> w @ ph
+AF7F	k> w @ h
+AF80	k> w e
+AF81	k> w e k
+AF82	k> w e k>
+AF83	k> w e k sh
+AF84	k> w e n
+AF85	k> w e n tS
+AF86	k> w e n h
+AF87	k> w e t
+AF88	k> w e l
+AF89	k> w e l k
+AF8A	k> w e l m
+AF8B	k> w e l p
+AF8C	k> w e l sh
+AF8D	k> w e l th
+AF8E	k> w e l ph
+AF8F	k> w e l h
+AF90	k> w e m
+AF91	k> w e p
+AF92	k> w e p sh
+AF93	k> w e sh
+AF94	k> w e s
+AF95	k> w e N
+AF96	k> w e tS
+AF97	k> w e tSh
+AF98	k> w e kh
+AF99	k> w e th
+AF9A	k> w e ph
+AF9B	k> w e h
+AF9C	k> j o
+AF9D	k> j o k
+AF9E	k> j o k>
+AF9F	k> j o k sh
+AFA0	k> j o n
+AFA1	k> j o n tS
+AFA2	k> j o n h
+AFA3	k> j o t
+AFA4	k> j o l
+AFA5	k> j o l k
+AFA6	k> j o l m
+AFA7	k> j o l p
+AFA8	k> j o l sh
+AFA9	k> j o l th
+AFAA	k> j o l ph
+AFAB	k> j o l h
+AFAC	k> j o m
+AFAD	k> j o p
+AFAE	k> j o p sh
+AFAF	k> j o sh
+AFB0	k> j o s
+AFB1	k> j o N
+AFB2	k> j o tS
+AFB3	k> j o tSh
+AFB4	k> j o kh
+AFB5	k> j o th
+AFB6	k> j o ph
+AFB7	k> j o h
+AFB8	k> u
+AFB9	k> u k
+AFBA	k> u k>
+AFBB	k> u k sh
+AFBC	k> u n
+AFBD	k> u n tS
+AFBE	k> u n h
+AFBF	k> u t
+AFC0	k> u l
+AFC1	k> u l k
+AFC2	k> u l m
+AFC3	k> u l p
+AFC4	k> u l sh
+AFC5	k> u l th
+AFC6	k> u l ph
+AFC7	k> u l h
+AFC8	k> u m
+AFC9	k> u p
+AFCA	k> u p sh
+AFCB	k> u sh
+AFCC	k> u s
+AFCD	k> u d
+AFCE	k> u tS
+AFCF	k> u tSh
+AFD0	k> u kh
+AFD1	k> u th
+AFD2	k> u ph
+AFD3	k> u h
+AFD4	k> w ^
+AFD5	k> w ^ k
+AFD6	k> w ^ k>
+AFD7	k> w ^ k sh
+AFD8	k> w ^ n
+AFD9	k> w ^ n tS
+AFDA	k> w ^ n h
+AFDB	k> w ^ t
+AFDC	k> w ^ l
+AFDD	k> w ^ l k
+AFDE	k> w ^ l m
+AFDF	k> w ^ l p
+AFE0	k> w ^ l sh
+AFE1	k> w ^ l th
+AFE2	k> w ^ l ph
+AFE3	k> w ^ l h
+AFE4	k> w ^ m
+AFE5	k> w ^ p
+AFE6	k> w ^ p sh
+AFE7	k> w ^ sh
+AFE8	k> w ^ s
+AFE9	k> w ^ N
+AFEA	k> w ^ tS
+AFEB	k> w ^ tSh
+AFEC	k> w ^ kh
+AFED	k> w ^ th
+AFEE	k> w ^ ph
+AFEF	k> w ^ h
+AFF0	k> w E
+AFF1	k> w E k
+AFF2	k> w E k>
+AFF3	k> w E k sh
+AFF4	k> w E n
+AFF5	k> w E n tS
+AFF6	k> w E n h
+AFF7	k> w E t
+AFF8	k> w E l
+AFF9	k> w E l k
+AFFA	k> w E l m
+AFFB	k> w E l p
+AFFC	k> w E l sh
+AFFD	k> w E l th
+AFFE	k> w E l ph
+AFFF	k> w E l h
+B000	k> w E m
+B001	k> w E p
+B002	k> w E p sh
+B003	k> w E sh
+B004	k> w E s
+B005	k> w E N
+B006	k> w E tS
+B007	k> w E tSh
+B008	k> w E kh
+B009	k> w E th
+B00A	k> w E ph
+B00B	k> w E h
+B00C	k> 7
+B00D	k> 7 k
+B00E	k> 7 k>
+B00F	k> 7 k sh
+B010	k> 7 n
+B011	k> 7 n tS
+B012	k> 7 n h
+B013	k> 7 t
+B014	k> 7 l
+B015	k> 7 l k
+B016	k> 7 l m
+B017	k> 7 l p
+B018	k> 7 l sh
+B019	k> 7 l th
+B01A	k> 7 l ph
+B01B	k> 7 l h
+B01C	k> 7 m
+B01D	k> 7 p
+B01E	k> 7 p sh
+B01F	k> 7 sh
+B020	k> 7 s
+B021	k> 7 N
+B022	k> 7 tS
+B023	k> 7 tSh
+B024	k> 7 kh
+B025	k> 7 th
+B026	k> 7 ph
+B027	k> 7 h
+B028	k> j u
+B029	k> j u k
+B02A	k> j u k>
+B02B	k> j u k sh
+B02C	k> j u n
+B02D	k> j u n tS
+B02E	k> j u n h
+B02F	k> j u t
+B030	k> j u l
+B031	k> j u l k
+B032	k> j u l m
+B033	k> j u l p
+B034	k> j u l sh
+B035	k> j u l th
+B036	k> j u l ph
+B037	k> j u l h
+B038	k> j u m
+B039	k> j u p
+B03A	k> j u p sh
+B03B	k> j u sh
+B03C	k> j u s
+B03D	k> j u N
+B03E	k> j u tS
+B03F	k> j u tSh
+B040	k> j u kh
+B041	k> j u th
+B042	k> j u ph
+B043	k> j u h
+B044	k> 4
+B045	k> 4 k
+B046	k> 4 k>
+B047	k> 4 k sh
+B048	k> 4 n
+B049	k> 4 n tS
+B04A	k> 4 n h
+B04B	k> 4 t
+B04C	k> 4 l
+B04D	k> 4 l k
+B04E	k> 4 l m
+B04F	k> 4 l p
+B050	k> 4 l sh
+B051	k> 4 l th
+B052	k> 4 l ph
+B053	k> 4 l h
+B054	k> 4 m
+B055	k> 4 p
+B056	k> 4 p sh
+B057	k> 4 sh
+B058	k> 4 s
+B059	k> 4 N
+B05A	k> 4 tS
+B05B	k> 4 tSh
+B05C	k> 4 kh
+B05D	k> 4 th
+B05E	k> 4 ph
+B05F	k> 4 h
+B060	k> 4 j
+B061	k> 4 j k
+B062	k> 4 j k>
+B063	k> 4 j k sh
+B064	k> 4 j n
+B065	k> 4 j n tS
+B066	k> 4 j n h
+B067	k> 4 j t
+B068	k> 4 j l
+B069	k> 4 j l k
+B06A	k> 4 j l m
+B06B	k> 4 j l p
+B06C	k> 4 j l sh
+B06D	k> 4 j l th
+B06E	k> 4 j l ph
+B06F	k> 4 j l h
+B070	k> 4 j m
+B071	k> 4 j p
+B072	k> 4 j p sh
+B073	k> 4 j sh
+B074	k> 4 j s
+B075	k> 4 j N
+B076	k> 4 j tS
+B077	k> 4 j tSh
+B078	k> 4 j kh
+B079	k> 4 j th
+B07A	k> 4 j ph
+B07B	k> 4 j h
+B07C	k> i
+B07D	k> i k
+B07E	k> i k>
+B07F	k> i k sh
+B080	k> i n
+B081	k> i n tS
+B082	k> i n h	
+B083	k> i t
+B084	k> i l
+B085	k> i l k
+B086	k> i l m
+B087	k> i l p
+B088	k> i l sh
+B089	k> i l th
+B08A	k> i l ph
+B08B	k> i l h
+B08C	k> i m
+B08D	k> i p
+B08E	k> i p sh
+B08F 	k> i sh
+B090	k> i s
+B091	k> i N
+B092	k> i tS
+B093	k> i tSh
+B094	k> i kh
+B095	k> i th	
+B096	k> i ph
+B097	k> i h
+B098	n a
+B099	n a k
+B09A	n a k>
+B09B	n a k sh
+B09C	n a n
+B09D	n a n tS
+B09E	n a n h
+B09F	n a t
+B0A0	n a l
+B0A1	n a l k
+B0A2	n a l m
+B0A3	n a l p
+B0A4	n a l sh
+B0A5	n a l th
+B0A6	n a l ph
+B0A7	n a l h
+B0A8	n a m
+B0A9	n a p
+B0AA	n a p sh
+B0AB	n a sh
+B0AC	n a s
+B0AD	n a N
+B0AE	n a tS
+B0AF	n a tSh
+B0B0	n a kh
+B0B1	n a th	
+B0B2	n a ph
+B0B3	n a h
+B0B4	n @
+B0B5	n @ k
+B0B6	n @ k>
+B0B7	n @ k sh
+B0B8	n @ n
+B0B9	n @ n tS
+B0BA	n @ n h
+B0BB	n @ t
+B0BC	n @ l
+B0BD	n @ l k
+B0BE	n @ l m
+B0BF	n @ l p
+B0C0	n @ l sh
+B0C1	n @ l th
+B0C2	n @ l ph
+B0C3	n @ l h
+B0C4	n @ m
+B0C5	n @ p
+B0C6	n @ p sh
+B0C7	n @ sh
+B0C8	n @ s
+B0C9	n @ N
+B0CA	n @ tS
+B0CB	n @ tSh
+B0CC	n @ kh
+B0CD	n @ th
+B0CE	n @ ph
+B0CF	n @ h
+B0D0	n j a
+B0D1	n j a k
+B0D2	n j a k>
+B0D3	n j a k sh
+B0D4	n j a n
+B0D5	n j a n tS
+B0D6	n j a n h
+B0D7	n j a t
+B0D8	n j a l
+B0D9	n j a l k
+B0DA	n j a l m
+B0DB	n j a l p
+B0DC	n j a l sh
+B0DD	n j a l th
+B0DE	n j a l ph
+B0DF	n j a l h
+B0E0	n j a m
+B0E1	n j a p
+B0E2	n j a p sh
+B0E3	n j a sh
+B0E4	n j a s
+B0E5	n j a N
+B0E6	n j a tS
+B0E7	n j a tSh
+B0E8	n j a kh
+B0E9	n j a th
+B0EA	n j a ph
+B0EB	n j a h
+B0EC	n j @
+B0ED	n j @ k
+B0EE	n j @ k>
+B0EF	n j @ k sh
+B0F0	n j @ n
+B0F1	n j @ n tS
+B0F2	n j @ n h	
+B0F3	n j @ t
+B0F4	n j @ l
+B0F5	n j @ l k
+B0F6	n j @ l m
+B0F7	n j @ l p
+B0F8	n j @ l sh
+B0F9	n j @ l th
+B0FA	n j @ l ph
+B0FB	n j @ l h
+B0FC	n j @ m
+B0FD	n j @ p
+B0FE	n j @ p sh
+B0FF	n j @ sh
+B100	n j @ s
+B101	n j @ N	
+B102	n j @ tS
+B103	n j @ tSh
+B104	n j @ kh
+B105	n j @ th
+B106	n j @ ph
+B107	n j @ h
+B108	n ^
+B109	n ^ k
+B10A	n ^ k>
+B10B	n ^ k sh
+B10C	n ^ n
+B10D	n ^ n tS
+B10E	n ^ n h
+B10F	n ^ t
+B110	n ^ l
+B111	n ^ l k
+B112	n ^ l m
+B113	n ^ l p
+B114	n ^ l sh
+B115	n ^ l th
+B116	n ^ l ph
+B117	n ^ l h
+B118	n ^ m
+B119	n ^ p
+B11A	n ^ p sh
+B11B	n ^ sh
+B11C	n ^ s
+B11D	n ^ N
+B11E	n ^ tS
+B11F	n ^ tSh
+B120	n ^ kh
+B121	n ^ th
+B122	n ^ ph
+B123	n ^ h
+B124	n e
+B125	n e k
+B126	n e k>
+B127	n e k sh
+B128	n e n
+B129	n e n tS
+B12A	n e n h
+B12B	n e t
+B12C	n e l
+B12D	n e l k
+B12E	n e l m
+B12F	n e l p
+B130	n e l sh
+B131	n e l th
+B132	n e l ph
+B133	n e l h
+B134	n e m
+B135	n e p
+B136	n e p sh
+B137	n e sh
+B138	n e s
+B139	n e N
+B13A	n e tS
+B13B	n e tSh
+B13C	n e kh
+B13D	n e th
+B13E	n e ph
+B13F	n e h
+B140	n j ^
+B141	n j ^ k
+B142	n j ^ k>
+B143	n j ^ k sh
+B144	n j ^ n
+B145	n j ^ n tS
+B146	n j ^ n h
+B147	n j ^ t
+B148	n j ^ l
+B149	n j ^ l k
+B14A	n j ^ l m
+B14B	n j ^ l p
+B14C	n j ^ l sh
+B14D	n j ^ l th
+B14E	n j ^ l ph
+B14F	n j ^ l h
+B150	n j ^ m
+B151	n j ^ p
+B152	n j ^ p sh
+B153	n j ^ sh
+B154	n j ^ s
+B155	n j ^ N
+B156	n j ^ tS
+B157	n j ^ tSh
+B158	n j ^ kh
+B159	n j ^ th
+B15A	n j ^ ph
+B15B	n j ^ h
+B15C	n j e
+B15D	n j e k
+B15E	n j e k>
+B15F	n j e k sh
+B160	n j e n
+B161	n j e n tS
+B162	n j e n h
+B163	n j e t
+B164	n j e l
+B165	n j e l k
+B166	n j e l m
+B167	n j e l p
+B168	n j e l sh
+B169	n j e l th
+B16A	n j e l ph
+B16B	n j e l h
+B16C	n j e m
+B16D	n j e p
+B16E	n j e p sh
+B16F	n j e sh
+B170	n j e s
+B171	n j e N
+B172	n j e tS
+B173	n j e tSh
+B174	n j e kh
+B175	n j e th
+B176	n j e ph
+B177	n j e h
+B178	n o
+B179	n o k
+B17A	n o k>
+B17B	n o k sh
+B17C	n o n
+B17D	n o n tS
+B17E	n o n h
+B17F	n o t
+B180	n o l
+B181	n o l k
+B182	n o l m
+B183	n o l p
+B184	n o l sh
+B185	n o l th
+B186	n o l ph
+B187	n o l h
+B188	n o m
+B189	n o p
+B18A	n o p sh
+B18B	n o sh
+B18C	n o s
+B18D	n o N
+B18E	n o tS
+B18F	n o tSh
+B190	n o kh
+B191	n o th
+B192	n o ph
+B193	n o h
+B194	n w a
+B195	n w a k
+B196	n w a k>
+B197	n w a k sh
+B198	n w a n
+B199	n w a n tS
+B19A	n w a n h
+B19B	n w a t
+B19C	n w a l
+B19D	n w a l k
+B19E	n w a l m
+B19F	n w a l p
+B1A0	n w a l sh
+B1A1	n w a l th
+B1A2	n w a l ph
+B1A3	n w a l h
+B1A4	n w a m
+B1A5	n w a p
+B1A6	n w a p sh
+B1A7	n w a sh
+B1A8	n w a s
+B1A9	n w a N
+B1AA	n w a tS
+B1AB	n w a tSh
+B1AC	n w a kh
+B1AD	n w a th
+B1AE	n w a ph
+B1AF	n w a h
+B1B0	n w @
+B1B1	n w @ k
+B1B2	n w @ k>
+B1B3	n w @ k sh
+B1B4	n w @ n
+B1B5	n w @ n tS
+B1B6	n w @ n h
+B1B7	n w @ t
+B1B8	n w @ l
+B1B9	n w @ l k
+B1BA	n w @ l m
+B1BB	n w @ l p
+B1BC	n w @ l sh
+B1BD	n w @ l th
+B1BE	n w @ l ph
+B1BF	n w @ l h
+B1C0	n w @ m
+B1C1	n w @ p
+B1C2	n w @ p sh
+B1C3	n w @ sh
+B1C4	n w @ s
+B1C5	n w @ N
+B1C6	n w @ tS
+B1C7	n w @ tSh
+B1C8	n w @ kh
+B1C9	n w @ th
+B1CA	n w @ ph
+B1CB	n w @ h
+B1CC	n w e
+B1CD	n w e k
+B1CE	n w e k>
+B1CF	n w e k sh
+B1D0 	n w e n
+B1D1	n w e n tS
+B1D2	n w e n h
+B1D3	n w e t
+B1D4	n w e l
+B1D5	n w e l k
+B1D6	n w e l m
+B1D7	n w e l p
+B1D8	n w e l sh
+B1D9	n w e l th
+B1DA	n w e l ph
+B1DB	n w e l h
+B1DC	n w e m
+B1DD	n w e p
+B1DE	n w e p sh
+B1DF	n w e sh
+B1E0	n w e s
+B1E1	n w e N
+B1E2	n w e tS
+B1E3	n w e tSh
+B1E4	n w e kh
+B1E5	n w e th
+B1E6	n w e ph
+B1E7	n w e h
+B1E8	n j o
+B1E9	n j o k
+B1EA	n j o k>
+B1EB	n j o k sh
+B1EC	n j o n
+B1ED	n j o n tS
+B1EE	n j o n h
+B1EF	n j o t
+B1F0	n j o l
+B1F1	n j o l k
+B1F2	n j o l m
+B1F3	n j o l p
+B1F4	n j o l sh
+B1F5	n j o l th
+B1F6	n j o l ph
+B1F7	n j o l h
+B1F8	n j o m
+B1F9	n j o p
+B1FA	n j o p sh
+B1FB	n j o sh
+B1FC	n j o s
+B1FD	n j o N
+B1FE	n j o tS
+B1FF	n j o tSh
+B200	n j o kh
+B201	n j o th
+B202	n j o ph
+B203	n j o h
+B204	n u
+B205	n u k
+B206	n u k>
+B207	n u k sh
+B208	n u n
+B209	n u n tS
+B20A	n u n h
+B20B	n u t
+B20C	n u l
+B20D	n u l k
+B20E	n u l m
+B20F	n u l p
+B210	n u l sh
+B211	n u l th
+B212	n u l ph
+B213	n u l h
+B214	n u m
+B215	n u p
+B216	n u p sh
+B217	n u sh
+B218	n u s
+B219	n u N
+B21A	n u tS
+B21B	n u tSh
+B21C	n u kh
+B21D	n u th
+B21E	n u ph
+B21F	n u h
+B220	n w ^
+B221	n w ^ k
+B222	n w ^ k>	
+B223	n w ^ k sh
+B224	n w ^ n
+B225	n w ^ n tS
+B226	n w ^ n h
+B227	n w ^ t
+B228	n w ^ l
+B229	n w ^ l k
+B22A	n w ^ l m
+B22B	n w ^ l p
+B22C	n w ^ l sh
+B22D	n w ^ l th
+B22E	n w ^ l ph
+B22F	n w ^ l h
+B230	n w ^ m
+B231	n w ^ p
+B232	n w ^ p sh
+B233	n w ^ sh
+B234	n w ^ s
+B235	n w ^ N
+B236	n w ^ tS
+B237	n w ^ tSh
+B238	n w ^ kh
+B239	n w ^ th
+B23A	n w ^ ph
+B23B	n w ^ h
+B23C	n w E
+B23D	n w E k
+B23E	n w E k>
+B23F	n w E k sh
+B240	n w E n
+B241	n w E n tS
+B242	n w E n h
+B243	n w E t
+B244	n w E l
+B245	n w E l k
+B246	n w E l m
+B247	n w E l p
+B248	n w E l sh
+B249	n w E l th
+B24A	n w E l ph
+B24B	n w E l h
+B24C	n w E m
+B24D	n w E p
+B24E	n w E p sh
+B24F	n w E sh
+B250	n w E s
+B251	n w E N
+B252	n w E tS
+B253	n w E tSh
+B254	n w E kh
+B255	n w E th
+B256	n w E ph
+B257	n w E h
+B258	n 7
+B259	n 7 k
+B25A	n 7 k>
+B25B	n 7 k sh
+B25C	n 7 n
+B25D	n 7 n tS
+B25E	n 7 n h
+B25F	n 7 t
+B260	n 7 l
+B261	n 7 l k
+B262	n 7 l m
+B263	n 7 l p
+B264	n 7 l sh
+B265	n 7 l th
+B266	n 7 l ph
+B267	n 7 l h
+B268	n 7 m
+B269	n 7 p
+B26A	n 7 p sh
+B26B	n 7 sh
+B26C	n 7 s
+B26D	n 7 N
+B26E	n 7 tS
+B26F	n 7 tSh
+B270	n 7 kh
+B271	n 7 th
+B272	n 7 ph
+B273	n 7 h
+B274	n j u
+B275	n j u k
+B276	n j u k>
+B277	n j u k sh
+B278	n j u n
+B279	n j u n tS
+B27A	n j u n h
+B27B	n j u t
+B27C	n j u l
+B27D	n j u l k
+B27E	n j u l m
+B27F	n j u l p
+B280	n j u l sh
+B281	n j u l th
+B282	n j u l ph
+B283	n j u l h
+B284	n j u m
+B285	n j u p
+B286	n j u p sh
+B287	n j u sh
+B288	n j u s
+B289	n j u N
+B28A	n j u tS
+B28B	n j u tSh
+B28C	n j u kh
+B28D	n j u th
+B28E	n j u ph
+B28F	n j u h
+B290	n 4
+B291	n 4 k
+B292	n 4 k>
+B293	n 4 k sh
+B294	n 4 n
+B295	n 4 n tS
+B296	n 4 nh
+B297	n 4 t
+B298	n 4 l
+B299	n 4 l k
+B29A	n 4 l m
+B29B	n 4 l p
+B29C	n 4 l sh
+B29D	n 4 l th
+B29E	n 4 l ph
+B29F	n 4 l h
+B2A0	n 4 m
+B2A1	n 4 p
+B2A2	n 4 p sh
+B2A3	n 4 sh
+B2A4	n 4 s
+B2A5	n 4 N
+B2A6	n 4 tS
+B2A7	n 4 tSh
+B2A8	n 4 kh
+B2A9	n 4 th
+B2AA	n 4 ph
+B2AB	n 4 h
+B2AC	n 4 j
+B2AD	n 4 j k
+B2AE	n 4 j k>
+B2AF	n 4 j k sh
+B2B0	n 4 j n
+B2B1	n 4 j n tS
+B2B2	n 4 j n h
+B2B3	n 4 j t
+B2B4	n 4 j l
+B2B5	n 4 j l k
+B2B6	n 4 j l m
+B2B7	n 4 j l p
+B2B8	n 4 j l sh
+B2B9	n 4 j l th
+B2BA	n 4 j l ph
+B2BB	n 4 j l h
+B2BC	n 4 j m
+B2BD	n 4 j p
+B2BE	n 4 j p sh
+B2BF	n 4 j sh
+B2C0	n 4 j s
+B2C1	n 4 j N
+B2C2	n 4 j tS
+B2C3	n 4 j tSh
+B2C4	n 4 j kh
+B2C5	n 4 j th
+B2C6	n 4 j ph
+B2C7	n 4 j h
+B2C8	n i	
+B2C9	n i k
+B2CA	n i k>
+B2CB	n i k sh
+B2CC	n i n
+B2CD	n i n tS
+B2CE	n i n h
+B2CF	n i t
+B2D0	n i l
+B2D1	n i l k
+B2D2	n i l m
+B2D3	n i l p
+B2D4	n i l sh
+B2D5	n i l th
+B2D6	n i l ph
+B2D7	n i l h
+B2D8	n i m
+B2D9	n i p
+B2DA	n i p sh
+B2DB	n i sh
+B2DC	n i s
+B2DD	n i N
+B2DE	n i tS
+B2DF	n i tSh
+B2E0	n i kh
+B2E1	n i th
+B2E2	n i ph
+B2E3	n i h
+B2E4	t a	
+B2E5	t a k
+B2E6	t a k>
+B2E7	t a k sh
+B2E8	t a n
+B2E9	t a n tS
+B2EA	t a n h
+B2EB	t a t
+B2EC	t a l
+B2ED	t a l k
+B2EE	t a l m
+B2EF	t a l b
+B2F0	t a l sh
+B2F1	t a l th
+B2F2	t a l ph
+B2F3	t a l h
+B2F4	t a m
+B2F5	t a p
+B2F6	t a p sh
+B2F7	t a sh
+B2F8	t a s
+B2F9	t a N
+B2FA	t a tS
+B2FB	t a tSh
+B2FC	t a kh
+B2FD	t a th
+B2FE	t a ph
+B2FF	t a h
+B300	t @
+B301	t @ k
+B302	t @ k>
+B303	t @ k sh
+B304	t @ n
+B305	t @ n tS
+B306	t @ n h
+B307	t @ t
+B308	t @ l
+B309	t @ l k
+B30A	t @ l m
+B30B	t @ l p
+B30C	t @ l sh
+B30D	t @ l th
+B30E	t @ l ph
+B30F	t @ l h
+B310	t @ m
+B311	t @ p
+B312	t @ p sh
+B313	t @ sh
+B314	t @ s
+B315	t @ N
+B316	t @ tS
+B317	t @ tSh
+B318	t @ kh	
+B319	t @ th
+B31A	t @ ph
+B31B	t @ h
+B31C	t j a
+B31D	t j a k
+B31E	t j a k>
+B31F	t j a k sh
+B320	t j a n
+B321	t j a n tS
+B322	t j a n h
+B323	t j a t
+B324	t j a l
+B325	t j a l k
+B326	t j a l m
+B327	t j a l p
+B328	t j a l sh
+B329	t j a l th
+B32A	t j a l ph
+B32B	t j a l h
+B32C	t j a m
+B32D	t j a p
+B32E	t j a p sh
+B32F	t j a sh
+B330	t j a s
+B331	t j a N
+B332	t j a tS
+B333	t j a tSh
+B334	t j a kh
+B335	t j a th
+B336	t j a ph
+B337	t j a h
+B338	t j @
+B339	t j @ k
+B33A	t j @ k>	
+B33B	t j @ k sh
+B33C	t j @ n
+B33D	t j @ n tS
+B33E	t j @ n h
+B33F	t j @ t
+B340	t j @ l
+B341	t j @ l k
+B342	t j @ l m
+B343	t j @ l p
+B344	t j @ l sh
+B345	t j @ l th
+B346	t j @ l ph
+B347	t j @ l h
+B348	t j @ m
+B349	t j @ p
+B34A	t j @ p sh
+B34B	t j @ sh
+B34C	t j @ s
+B34D	t j @ N
+B34E	t j @ tS
+B34F	t j @ tSh
+B350	t j @ kh
+B351	t j @ th
+B352	t j @ ph
+B353	t j @ h
+B354	t ^
+B355	t ^ k
+B356	t ^ k>
+B357	t ^ k sh
+B358	t ^ n
+B359	t ^ n tS
+B35A	t ^ n h
+B35B	t ^ t
+B35C	t ^ l
+B35D	t ^ l k
+B35E	t ^ l m
+B35F	t ^ l p
+B360	t ^ l sh
+B361	t ^ l th
+B362	t ^ l ph
+B363	t ^ l h
+B364	t ^ m
+B365	t ^ p
+B366	t ^ p sh
+B367	t ^ sh
+B368	t ^ s
+B369	t ^ N
+B36A	t ^ tS
+B36B	t ^ tSh
+B36C	t ^ kh
+B36D	t ^ th
+B36E	t ^ ph
+B36F	t ^ h
+B370	t e
+B371	t e k
+B372	t e k>
+B373	t e k sh
+B374	t e n
+B375	t e n tS
+B376	t e n h
+B377	t e t
+B378	t e l
+B379	t e l k
+B37A	t e l m
+B37B	t e l p
+B37C	t e l sh
+B37D	t e l th
+B37E	t e l ph
+B37F	t e l h
+B380	t e m
+B381	t e p
+B382	t e p sh
+B383	t e sh
+B384	t e s
+B385	t e N
+B386	t e tS
+B387	t e tSh
+B388	t e kh
+B389	t e th
+B38A	t e ph
+B38B	t e h
+B38C	t j ^
+B38D	t j ^ k
+B38E	t j ^ k>
+B38F	t j ^ k sh
+B390	t j ^ n
+B391	t j ^ n tS
+B392	t j ^ n h
+B393	t j ^ t
+B394	t j ^ l
+B395	t j ^ l k
+B396	t j ^ l m
+B397	t j ^ l p
+B398	t j ^ l sh
+B399	t j ^ l th
+B39A	t j ^ l ph
+B39B	t j ^ l h
+B39C	t j ^ m
+B39D	t j ^ p
+B39E	t j ^ p sh
+B39F	t j ^ sh
+B3A0	t j ^ s
+B3A1	t j ^ N
+B3A2	t j ^ tS
+B3A3	t j ^ tSh
+B3A4	t j ^ kh
+B3A5	t j ^ th
+B3A6	t j ^ ph
+B3A7	t j ^ h
+B3A8 	t j e
+B3A9	t j e k
+B3AA	t j e k>
+B3AB	t j e k sh
+B3AC	t j e n
+B3AD	t j e n tS
+B3AE	t j e n h
+B3AF	t j e t
+B3B0	t j e l
+B3B1	t j e l k
+B3B2	t j e l m
+B3B3	t j e l p
+B3B4	t j e l sh
+B3B5	t j e l th
+B3B6	t j e l ph
+B3B7	t j e l h
+B3B8	t j e m
+B3B9	t j e p
+B3BA	t j e p sh
+B3BB	t j e sh
+B3BC	t j e s
+B3BD	t j e N
+B3BE	t j e tS
+B3BF	t j e tSh
+B3C0	t j e kh
+B3C1	t j e th
+B3C2	t j e ph
+B3C3	t j e h
+B3C4	t o
+B3C5	t o k
+B3C6	t o k>
+B3C7	t o k sh
+B3C8	t o n
+B3C9	t o n tS
+B3CA	t o n h
+B3CB	t o t
+B3CC	t o l
+B3CD	t o l k
+B3CE	t o l m
+B3CF	t o l p
+B3D0	t o l sh
+B3D1	t o l th
+B3D2	t o l ph
+B3D3	t o l h
+B3D4	t o m
+B3D5	t o p
+B3D6	t o p sh
+B3D7	t o sh
+B3D8	t o s
+B3D9	t o N
+B3DA	t o tS
+B3DB	t o tSh
+B3DC	t o kh
+B3DD	t o th
+B3DE	t o ph
+B3DF	t o h
+B3E0	t w a
+B3E1	t w a k
+B3E2	t w a k>
+B3E3	t w a k sh
+B3E4	t w a n
+B3E5	t w a n tS
+B3E6	t w a n h
+B3E7	t w a t
+B3E8	t w a l
+B3E9	t w a l k
+B3EA	t w a l m
+B3EB	t w a l p
+B3EC	t w a l sh
+B3ED	t w a l th
+B3EE	t w a l ph
+B3EF	t w a l h
+B3F0	t w a m
+B3F1	t w a p
+B3F2	t w a p sh
+B3F3	t w a sh
+B3F4	t w a s
+B3F5	t w a N
+B3F6	t w a tS
+B3F7	t w a tSh
+B3F8	t w a kh
+B3F9	t w a th
+B3FA	t w a ph
+B3FB	t w a h
+B3FC	t w @
+B3FD	t w @ k
+B3FE	t w @ k>
+B3FF	t w @ k sh
+B400	t w @ n
+B401	t w @ n tS
+B402	t w @ n h
+B403	t w @ t
+B404	t w @ l
+B405	t w @ l k
+B406	t w @ l m
+B407	t w @ l p
+B408	t w @ l sh
+B409	t w @ l th
+B40A	t w @ l ph
+B40B	t w @ l h
+B40C	t w @ m
+B40D	t w @ p
+B40E	t w @ p sh
+B40F	t w @ sh
+B410	t w @ s
+B411	t w @ N
+B412	t w @ tS
+B413	t w @ tSh
+B414	t w @ kh
+B415	t w @ th
+B416	t w @ ph
+B417	t w @ h
+B418	t w e
+B419	t w e k
+B41A	t w e k>
+B41B	t w e k sh
+B41C	t w e n
+B41D	t w e n tS
+B41E	t w e n h
+B41F	t w e t
+B420	t w e l
+B421	t w e l k
+B422	t w e l m
+B423	t w e l p
+B424	t w e l sh
+B425	t w e l th
+B426	t w e l ph
+B427	t w e l h
+B428	t w e m
+B429	t w e p
+B42A	t w e p sh
+B42B	t w e sh
+B42C	t w e s
+B42D	t w e N
+B42E	t w e tS
+B42F	t w e tSh
+B430	t w e kh
+B431	t w e th
+B432	t w e ph
+B433	t w e h
+B434	t j o
+B435	t j o k
+B436	t j o k>
+B437	t j o k sh
+B438	t j o n
+B439	t j o n tS
+B43A	t j o n h
+B43B	t j o t
+B43C	t j o l
+B43D	t j o l k
+B43E	t j o l m
+B43F	t j o l p
+B440	t j o l sh
+B441	t j o l th
+B442	t j o l ph
+B443	t j o l h
+B444	t j o m
+B445	t j o p
+B446	t j o p sh
+B447	t j o sh
+B448	t j o s
+B449	t j o N
+B44A	t j o tS
+B44B	t j o tSh
+B44C	t j o kh
+B44D	t j o th
+B44E	t j o ph
+B44F	t j o h
+B450	t u
+B451	t u k
+B452	t u k>
+B453	t u k sh
+B454	t u n
+B455	t u n tS
+B456	t u n h
+B457	t u t
+B458	t u l
+B459	t u l k
+B45A	t u l m
+B45B	t u l p
+B45C	t u l sh
+B45D	t u l th
+B45E	t u l ph
+B45F	t u l h
+B460	t u m
+B461	t u p
+B462	t u p sh
+B463	t u sh
+B464	t u s
+B465	t u N
+B466	t u tS
+B467	t u tSh
+B468	t u kh
+B469	t u th
+B46A	t u ph
+B46B	t u h
+B46C	t w ^
+B46D	t w ^ k
+B46E	t w ^ k>
+B46F	t w ^ k sh
+B470	t w ^ n
+B471	t w ^ n tS
+B472	t w ^ n h
+B473	t w ^ t
+B474	t w ^ l
+B475	t w ^ l k
+B476	t w ^ l m
+B477	t w ^ l p
+B478	t w ^ l sh
+B479	t w ^ l th
+B47A	t w ^ l ph
+B47B	t w ^ l h
+B47C	t w ^ m
+B47D	t w ^ p
+B47E	t w ^ p sh
+B47F	t w ^ sh
+B480	t w ^ s
+B481	t w ^ N
+B482	t w ^ tS
+B483	t w ^ tSh
+B484	t w ^ kh
+B485	t w ^ th
+B486	t w ^ ph
+B487	t w ^ h
+B488	t w E
+B489	t w E k
+B48A	t w E k>
+B48B	t w E k sh
+B48C	t w E n
+B48D	t w E n tS
+B48E	t w E n h
+B48F	t w E t
+B490	t w E l
+B491	t w E l k
+B492	t w E l m
+B493	t w E l p
+B494	t w E l sh
+B495	t w E l th
+B496	t w E l ph
+B497	t w E l h
+B498	t w E m
+B499	t w E p
+B49A	t w E p sh
+B49B	t w E sh
+B49C	t w E s
+B49D	t w E N
+B49E	t w E tS
+B49F	t w E tSh
+B4A0	t w E kh
+B4A1	t w E th
+B4A2	t w E ph
+B4A3	t w E h
+B4A4	t 7
+B4A5	t 7 k
+B4A6	t 7 k>
+B4A7	t 7 k sh
+B4A8	t 7 n
+B4A9	t 7 n tS
+B4AA	t 7 n h
+B4AB	t 7 t
+B4AC	t 7 l
+B4AD	t 7 l k
+B4AE	t 7 l m
+B4AF	t 7 l p
+B4B0	t 7 l sh
+B4B1	t 7 l th
+B4B2	t 7 l ph
+B4B3	t 7 l h
+B4B4	t 7 m
+B4B5	t 7 p
+B4B6	t 7 p sh
+B4B7	t 7 sh
+B4B8	t 7 s
+B4B9	t 7 N
+B4BA	t 7 tS
+B4BB	t 7 tSh
+B4BC	t 7 kh
+B4BD	t 7 th
+B4BE	t 7 ph
+B4BF	t 7 h
+B4C0	t j u
+B4C1	t j u k
+B4C2	t j u k>
+B4C3	t j u k sh
+B4C4	t j u n
+B4C5	t j u n tS
+B4C6	t j u n h
+B4C7	t j u t
+B4C8	t j u l
+B4C9	t j u l k
+B4CA	t j u l m
+B4CB	t j u l p
+B4CC	t j u l sh
+B4CD	t j u l th
+B4CE	t j u l ph
+B4CF	t j u l h
+B4D0	t j u m
+B4D1	t j u p
+B4D2	t j u p sh
+B4D3	t j u sh
+B4D4	t j u s
+B4D5	t j u N
+B4D6	t j u tS
+B4D7	t j u tSh
+B4D8	t j u kh
+B4D9	t j u th
+B4DA	t j u ph
+B4DB	t j u h
+B4DC	t 4
+B4DD	t 4 k
+B4DE	t 4 k>
+B4DF	t 4 k sh
+B4E0	t 4 n
+B4E1	t 4 n tS
+B4E2	t 4 n h
+B4E3	t 4 t
+B4E4	t 4 l
+B4E5	t 4 l k
+B4E6	t 4 l m
+B4E7	t 4 l p
+B4E8	t 4 l sh
+B4E9	t 4 l th
+B4EA	t 4 l ph
+B4EB	t 4 l h
+B4EC	t 4 m
+B4ED	t 4 p
+B4EE	t 4 p sh
+B4EF	t 4 sh
+B4F0	t 4 s
+B4F1	t 4 N
+B4F2	t 4 tS
+B4F3	t 4 tSh
+B4F4	t 4 kh
+B4F5	t 4 th
+B4F6	t 4 ph
+B4F7	t 4 h
+B4F8	t 4 j
+B4F9	t 4 j k
+B4FA	t 4 j k>
+B4FB	t 4 j k sh
+B4FC	t 4 j n
+B4FD	t 4 j n tS
+B4FE	t 4 j n h
+B4FF	t 4 j t
+B500	t 4 j l
+B501	t 4 j l k
+B502	t 4 j l m
+B503	t 4 j l p
+B504	t 4 j l sh
+B505	t 4 j l th
+B506	t 4 j l ph
+B507	t 4 j l h
+B508	t 4 j m
+B509	t 4 j p
+B50A	t 4 j p sh
+B50B	t 4 j sh
+B50C	t 4 j s
+B50D	t 4 j N
+B50E	t 4 j tS
+B50F	t 4 j tSh
+B510	t 4 j kh
+B511	t 4 j th
+B512	t 4 j ph
+B513	t 4 j h
+B514	t i
+B515	t i k
+B516	t i k>
+B517	t i k sh
+B518	t i n
+B519	t i n tS
+B51A	t i n h
+B51B	t i t
+B51C	t i l
+B51D	t i l k
+B51E	t i l m
+B51F	t i l p
+B520	t i l sh
+B521	t i l th
+B522	t i l ph
+B523	t i l h
+B524	t i m
+B525	t i p
+B526	t i p sh
+B527	t i sh
+B528	t i s
+B529	t i N
+B52A	t i tS
+B52B	t i tSh
+B52C	t i kh
+B52D	t i th
+B52E	t i ph
+B52F	t i h
+B530	t> a
+B531	t> a k
+B532	t> a k>
+B533	t> a k sh
+B534	t> a n
+B535	t> a n tS
+B536	t> a n h
+B537	t> a t
+B538	t> a l
+B539	t> a l k
+B53A	t> a l m
+B53B	t> a l p
+B53C	t> a l sh
+B53D	t> a l th
+B53E	t> a l ph
+B53F	t> a l h
+B540	t> a m
+B541	t> a p
+B542	t> a p sh
+B543	t> a sh
+B544	t> a s
+B545	t> a N
+B546	t> a tS
+B547	t> a tSh
+B548	t> a kh
+B549	t> a th
+B54A	t> a ph
+B54B	t> a h
+B54C	t> @
+B54D	t> @ k
+B54E	t> @ k>
+B54F	t> @ k sh
+B550	t> @ n
+B551	t> @ n tS
+B552	t> @ n h
+B553	t> @ t
+B554	t> @ l
+B555	t> @ l k
+B556	t> @ l m
+B557	t> @ l p
+B558	t> @ l sh
+B559	t> @ l th
+B55A	t> @ l ph
+B55B	t> @ l h
+B55C	t> @ m
+B55D	t> @ p
+B55E	t> @ p sh
+B55F 	t> @ sh
+B560	t> @ s
+B561	t> @ N
+B562	t> @ tS
+B563	t> @ tSh
+B564	t> @ kh
+B565	t> @ th
+B566	t> @ ph
+B567	t> @ h
+B568	t> j a
+B569	t> j a k
+B56A	t> j a k>
+B56B	t> j a k sh
+B56C	t> j a n
+B56D	t> j a n tS
+B56E	t> j a n h
+B56F	t> j a t
+B570	t> j a l
+B571	t> j a l k
+B572	t> j a l m
+B573	t> j a l p
+B574	t> j a l sh
+B575	t> j a l th
+B576	t> j a l ph
+B577	t> j a l h
+B578	t> j a m
+B579	t> j a p
+B57A	t> j a p sh
+B57B	t> j a sh
+B57C	t> j a s
+B57D	t> j a N
+B57E	t> j a tS
+B57F	t> j a tSh
+B580	t> j a kh
+B581	t> j a th
+B582	t> j a ph
+B583	t> j a h
+B584	t> j @
+B585	t> j @ k
+B586	t> j @ k>
+B587	t> j @ k sh
+B588	t> j @ n
+B589	t> j @ n tS
+B58A	t> j @ n h
+B58B	t> j @ t
+B58C	t> j @ l
+B58D	t> j @ l k
+B58E	t> j @ l m
+B58F	t> j @ l p
+B590	t> j @ l sh
+B591	t> j @ l th
+B592	t> j @ l ph
+B593	t> j @ l h
+B594	t> j @ m
+B595	t> j @ p
+B596	t> j @ p sh
+B597	t> j @ sh
+B598	t> j @ s
+B599	t> j @ N
+B59A	t> j @ tS
+B59B	t> j @ tSh
+B59C	t> j @ kh
+B59D	t> j @ th
+B59E	t> j @ ph
+B59F	t> j @ h
+B5A0	t> ^
+B5A1	t> ^ k
+B5A2	t> ^ k>
+B5A3	t> ^ k sh
+B5A4	t> ^ n
+B5A5	t> ^ n tS
+B5A6	t> ^ n h
+B5A7	t> ^ t
+B5A8	t> ^ l
+B5A9	t> ^ l k
+B5AA	t> ^ l m
+B5AB	t> ^ l p
+B5AC	t> ^ l sh
+B5AD	t> ^ l th
+B5AE	t> ^ l ph
+B5AF	t> ^ l h
+B5B0	t> ^ m
+B5B1	t> ^ p
+B5B2	t> ^ p sh
+B5B3	t> ^ sh
+B5B4	t> ^ s
+B5B5	t> ^ N
+B5B6	t> ^ tS
+B5B7	t> ^ tSh
+B5B8	t> ^ kh
+B5B9	t> ^ th
+B5BA	t> ^ ph
+B5BB	t> ^ h
+B5BC	t> e
+B5BD	t> e k
+B5BE	t> e k>
+B5BF	t> e k sh
+B5C0	t> e n
+B5C1	t> e n tS
+B5C2	t> e n h
+B5C3	t> e t
+B5C4	t> e l
+B5C5	t> e l k
+B5C6	t> e l m
+B5C7	t> e l p
+B5C8	t> e l sh
+B5C9	t> e l th
+B5CA	t> e l ph
+B5CB	t> e l h
+B5CC	t> e m
+B5CD	t> e p
+B5CE	t> e p sh
+B5CF	t> e sh
+B5D0	t> e s
+B5D1	t> e N
+B5D2	t> e tS
+B5D3	t> e tSh
+B5D4	t> e kh
+B5D5	t> e th
+B5D6	t> e ph
+B5D7	t> e h
+B5D8	t> j ^
+B5D9	t> j ^ k
+B5DA	t> j ^ k>
+B5DB	t> j ^ k sh
+B5DC	t> j ^ n
+B5DD	t> j ^ n tS
+B5DE	t> j ^ n h
+B5DF	t> j ^ t
+B5E0	t> j ^ l
+B5E1	t> j ^ l k
+B5E2	t> j ^ l m
+B5E3	t> j ^ l p
+B5E4	t> j ^ l sh
+B5E5	t> j ^ l th
+B5E6	t> j ^ l ph
+B5E7	t> j ^ l h
+B5E8	t> j ^ m
+B5E9	t> j ^ p
+B5EA	t> j ^ p sh
+B5EB	t> j ^ sh
+B5EC	t> j ^ s
+B5ED	t> j ^ N
+B5EE	t> j ^ tS
+B5EF	t> j ^ tSh
+B5F0	t> j ^ kh
+B5F1	t> j ^ th
+B5F2	t> j ^ ph
+B5F3	t> j ^ h
+B5F4	t> j e
+B5F5	t> j e k
+B5F6	t> j e k>
+B5F7	t> j e k sh
+B5F8	t> j e n
+B5F9	t> j e n tS
+B5FA	t> j e n h
+B5FB	t> j e t
+B5FC	t> j e l
+B5FD	t> j e l k
+B5FE	t> j e l m
+B5FF	t> j e l p
+B600	t> j e l sh
+B601	t> j e l th
+B602	t> j e l ph
+B603	t> j e lh
+B604	t> j e m
+B605	t> j e p
+B606	t> j e p sh
+B607	t> j e sh
+B608	t> j e s
+B609	t> j e N
+B60A	t> j e tS
+B60B	t> j e tSh
+B60C	t> j e kh
+B60D	t> j e th
+B60E	t> j e ph
+B60F	t> j e h
+B610	t> o
+B611	t> o k
+B612	t> o k>
+B613	t> o k sh
+B614	t> o n
+B615	t> o n tS
+B616	t> o n h
+B617	t> o t
+B618	t> o l
+B619	t> o l k
+B61A	t> o l m
+B61B	t> o l p
+B61C	t> o l sh
+B61D	t> o l th
+B61E	t> o l ph
+B61F	t> o l h
+B620	t> o m
+B621	t> o p
+B622	t> o p sh
+B623	t> o sh
+B624	t> o s
+B625	t> o N
+B626	t> o tS
+B627	t> o tSh
+B628	t> o kh
+B629	t> o th
+B62A	t> o ph
+B62B	t> o h
+B62C	t> w a
+B62D	t> w a k
+B62E	t> w a k>
+B62F	t> w a k sh
+B630	t> w a n
+B631	t> w a n tS
+B632	t> w a nh
+B633	t> w a t
+B634	t> w a l
+B635	t> w a l k
+B636	t> w a l m
+B637	t> w a l p
+B638	t> w a l sh
+B639	t> w a l th
+B63A	t> w a l ph
+B63B	t> w a l h
+B63C	t> w a m
+B63D	t> w a p
+B63E	t> w a p sh
+B63F	t> w a sh
+B640	t> w a s
+B641	t> w a N
+B642	t> w a tS
+B643	t> w a tSh
+B644	t> w a kh
+B645	t> w a th
+B646	t> w a ph
+B647	t> w a h
+B648	t> w @
+B649	t> w @ k
+B64A	t> w @ k>
+B64B	t> w @ k sh
+B64C	t> w @ n
+B64D	t> w @ n tS
+B64E	t> w @ n h
+B64F	t> w @ t
+B650	t> w @ l
+B651	t> w @ l k
+B652	t> w @ l m
+B653	t> w @ l p
+B654	t> w @ l sh
+B655	t> w @ l th
+B656	t> w @ l ph
+B657	t> w @ l h
+B658	t> w @ m
+B659	t> w @ p
+B65A	t> w @ p sh
+B65B	t> w @ sh
+B65C	t> w @ s
+B65D	t> w @ N
+B65E	t> w @ tS
+B65F	t> w @ tSh
+B660	t> w @ kh
+B661	t> w @ th
+B662	t> w @ ph
+B663	t> w @ h
+B664	t> w e
+B665	t> w e k
+B666	t> w e k>
+B667	t> w e k sh
+B668	t> w e n
+B669	t> w e n tS
+B66A	t> w e n h
+B66B	t> w e t
+B66C	t> w e l
+B66D	t> w e l k
+B66E	t> w e l m
+B66F	t> w e l p
+B670	t> w e l sh
+B671	t> w e l th
+B672	t> w e l ph
+B673	t> w e l h
+B674	t> w e m
+B675	t> w e p
+B676	t> w e p sh
+B677	t> w e sh
+B678	t> w e s
+B679	t> w e N
+B67A	t> w e tS
+B67B	t> w e tSh
+B67C	t> w e kh
+B67D	t> w e th
+B67E	t> w e ph
+B67F	t> w e h
+B680	t> j o
+B681	t> j o k
+B682	t> j o k>
+B683	t> j o k sh
+B684	t> j o n
+B685	t> j o n tS
+B686	t> j o n h
+B687	t> j o t
+B688	t> j o l
+B689	t> j o l k
+B68A	t> j o l m
+B68B	t> j o l p
+B68C	t> j o l sh
+B68D	t> j o l th
+B68E	t> j o l ph
+B68F	t> j o l h
+B690	t> j o m
+B691	t> j o p
+B692	t> j o p sh
+B693	t> j o sh
+B694	t> j o s
+B695	t> j o N
+B696	t> j o tS
+B697	t> j o tSh
+B698	t> j o kh
+B699	t> j o th
+B69A	t> j o ph
+B69B	t> j o h
+B69C	t> u
+B69D	t> u k
+B69E	t> u k>
+B69F	t> u k sh
+B6A0	t> u n
+B6A1	t> u n tS
+B6A2	t> u n h
+B6A3	t> u t
+B6A4	t> u l
+B6A5	t> u l k
+B6A6	t> u l m
+B6A7	t> u l p
+B6A8	t> u l sh
+B6A9	t> u l th
+B6AA	t> u l ph
+B6AB	t> u l h
+B6AC	t> u m
+B6AD	t> u p
+B6AE	t> u p sh
+B6AF	t> u sh
+B6B0	t> u s
+B6B1	t> u N
+B6B2	t> u tS
+B6B3	t> u tSh
+B6B4	t> u kh
+B6B5	t> u th
+B6B6	t> u ph
+B6B7	t> u h
+B6B8	t> w ^
+B6B9	t> w ^ k
+B6BA	t> w ^ k>
+B6BB	t> w ^ k sh
+B6BC	t> w ^ n
+B6BD	t> w ^ n tS
+B6BE	t> w ^ n h
+B6BF	t> w ^ t
+B6C0	t> w ^ l
+B6C1	t> w ^ l k
+B6C2	t> w ^ l m
+B6C3	t> w ^ l p
+B6C4	t> w ^ l sh
+B6C5	t> w ^ l th
+B6C6	t> w ^ l ph
+B6C7	t> w ^ l h
+B6C8	t> w ^ m
+B6C9	t> w ^ p
+B6CA	t> w ^ p sh
+B6CB	t> w ^ sh
+B6CC	t> w ^ s
+B6CD 	t> w ^ N
+B6CE	t> w ^ tS
+B6CF	t> w ^ tSh
+B6D0	t> w ^ kh
+B6D1	t> w ^ th
+B6D2	t> w ^ ph
+B6D3	t> w ^ h
+B6D4	t> w E
+B6D5	t> w E k
+B6D6	t> w E k>
+B6D7	t> w E k sh
+B6D8	t> w E n
+B6D9	t> w E n tS
+B6DA	t> w E n h
+B6DB	t> w E t
+B6DC	t> w E l
+B6DD	t> w E l k
+B6DE	t> w E l m
+B6DF	t> w E l p
+B6E0	t> w E l sh
+B6E1	t> w E l th
+B6E2	t> w E l ph
+B6E3	t> w E l h
+B6E4	t> w E m
+B6E5	t> w E p
+B6E6	t> w E p sh
+B6E7	t> w E sh
+B6E8	t> w E s
+B6E9	t> w E N
+B6EA	t> w E tS
+B6EB	t> w E tSh
+B6EC	t> w E kh
+B6ED	t> w E th
+B6EE	t> w E ph
+B6EF	t> w E h
+B6F0	t> 7
+B6F1	t> 7 k
+B6F2	t> 7 k>
+B6F3	t> 7 k sh
+B6F4	t> 7 n
+B6F5	t> 7 n tS
+B6F6	t> 7 n h
+B6F7	t> 7 t
+B6F8	t> 7 l
+B6F9	t> 7 l k
+B6FA	t> 7 l m
+B6FB	t> 7 l p
+B6FC	t> 7 l sh
+B6FD	t> 7 l th
+B6FE	t> 7 l ph
+B6FF	t> 7 lh
+B700	t> 7 m
+B701	t> 7 p
+B702	t> 7 p sh
+B703	t> 7 sh
+B704	t> 7 s
+B705	t> 7 N
+B706	t> 7 tS
+B707	t> 7 tSh
+B708	t> 7 kh
+B709	t> 7 th
+B70A	t> 7 ph
+B70B	t> 7 h
+B70C	t> j u
+B70D	t> j u k
+B70E	t> j u k>
+B70F	t> j u k sh
+B710	t> j u n
+B711	t> j u n tS
+B712	t> j u n h
+B713	t> j u t
+B714	t> j u l
+B715	t> j u l k
+B716	t> j u l m
+B717	t> j u l p
+B718	t> j u l sh
+B719	t> j u l th
+B71A	t> j u l ph
+B71B	t> j u l h
+B71C	t> j u m
+B71D	t> j u p
+B71E	t> j u p sh
+B71F	t> j u sh
+B720	t> j u s
+B721	t> j u N
+B722	t> j u tS
+B723	t> j u tSh
+B724	t> j u kh
+B725	t> j u th
+B726	t> j u ph
+B727	t> j u h
+B728	t> 4
+B729	t> 4 k
+B72A	t> 4 k>
+B72B	t> 4 k sh
+B72C	t> 4 n
+B72D	t> 4 n tS
+B72E	t> 4 n h
+B72F	t> 4 t
+B730	t> 4 l
+B731	t> 4 l k
+B732	t> 4 l m
+B733	t> 4 l p
+B734	t> 4 l sh
+B735	t> 4 l th
+B736	t> 4 l ph
+B737	t> 4 l h
+B738	t> 4 m
+B739	t> 4 p
+B73A	t> 4 p sh
+B73B	t> 4 sh
+B73C	t> 4 s
+B73D	t> 4 N
+B73E	t> 4 tS
+B73F	t> 4 tSh
+B740	t> 4 kh
+B741	t> 4 th
+B742	t> 4 ph
+B743	t> 4 h
+B744	t> 4 j
+B745	t> 4 j k
+B746	t> 4 j k>
+B747	t> 4 j k sh
+B748	t> 4 j n
+B749	t> 4 j n tS
+B74A	t> 4 j n h
+B74B	t> 4 j t
+B74C	t> 4 j l
+B74D	t> 4 j l k
+B74E	t> 4 j l m
+B74F	t> 4 j l p
+B750	t> 4 j l sh
+B751	t> 4 j l th
+B752	t> 4 j l ph
+B753	t> 4 j l h
+B754	t> 4 j m
+B755	t> 4 j p
+B756	t> 4 j p sh
+B757	t> 4 j sh
+B758	t> 4 j s
+B759	t> 4 j N
+B75A	t> 4 j tS
+B75B	t> 4 j tSh
+B75C	t> 4 j kh
+B75D	t> 4 j th
+B75E	t> 4 j ph
+B75F	t> 4 j h
+B760	t> i
+B761	t> i k
+B762	t> i k>
+B763	t> i k sh
+B764	t> i n
+B765	t> i n tS
+B766	t> i n h
+B767	t> i t
+B768	t> i l
+B769	t> i l k
+B76A	t> i l m
+B76B	t> i l p
+B76C	t> i l sh
+B76D	t> i l th
+B76E	t> i l ph
+B76F	t> i l h
+B770	t> i m
+B771	t> i p
+B772	t> i p sh
+B773	t> i sh
+B774	t> i s
+B775	t> i N
+B776	t> i tS
+B777	t> i tSh
+B778	t> i kh
+B779	t> i th
+B77A	t> i ph
+B77B	t> i h
+B77C	r a 
+B77D	r a k
+B77E	r a k>
+B77F	r a k sh
+B780	r a n
+B781	r a n tS
+B782	r a n h
+B783	r a t
+B784	r a l
+B785	r a l k
+B786	r a l m
+B787	r a l p
+B788	r a l sh
+B789	r a l th
+B78A	r a l ph
+B78B	r a l h
+B78C	r a m
+B78D	r a p
+B78E	r a p sh
+B78F	r a sh
+B790	r a s
+B791	r a N
+B792	r a tS
+B793	r a tSh
+B794	r a kh
+B795	r a th
+B796	r a ph
+B797	r a h
+B798	r @
+B799	r @ k
+B79A	r @ k>
+B79B	r @ k sh
+B79C	r @ n
+B79D	r @ n tS
+B79E	r @ n h
+B79F	r @ t
+B7A0	r @ l
+B7A1	r @ l k
+B7A2	r @ l m
+B7A3	r @ l p
+B7A4	r @ l sh
+B7A5	r @ l th
+B7A6	r @ l ph
+B7A7	r @ lh
+B7A8	r @ m
+B7A9	r @ p
+B7AA	r @ p sh
+B7AB	r @ sh
+B7AC	r @ s
+B7AD	r @ N
+B7AE	r @ tS
+B7AF	r @ tSh
+B7B0	r @ kh
+B7B1	r @ th
+B7B2	r @ ph
+B7B3	r @ h
+B7B4	r j a
+B7B5	r j a k
+B7B6	r j a k>
+B7B7	r j a k sh
+B7B8	r j a n
+B7B9	r j a n tS
+B7BA	r j a n h
+B7BB	r j a t
+B7BC	r j a l
+B7BD	r j a l k
+B7BE	r j a l m
+B7BF	r j a l p
+B7C0	r j a l sh
+B7C1	r j a l th
+B7C2	r j a l ph
+B7C3	r j a l h
+B7C4	r j a m
+B7C5	r j a p
+B7C6	r j a p sh
+B7C7	r j a sh
+B7C8	r j a s
+B7C9	r j a N
+B7CA	r j a tS
+B7CB	r j a tSh
+B7CC	r j a kh
+B7CD	r j a th
+B7CE	r j a ph
+B7CF	r j a h
+B7D0	r j @
+B7D1	r j @ k
+B7D2	r j @ k>
+B7D3	r j @ k sh
+B7D4	r j @ n
+B7D5	r j @ n tS
+B7D6	r j @ n h
+B7D7	r j @ t
+B7D8	r j @ l
+B7D9	r j @ l	k
+B7DA	r j @ l m
+B7DB	r j @ l p
+B7DC	r j @ l sh
+B7DD	r j @ l th
+B7DE	r j @ l ph
+B7DF	r j @ l h
+B7E0	r j @ m
+B7E1	r j @ p
+B7E2	r j @ p sh
+B7E3	r j @ sh
+B7E4	r j @ s
+B7E5	r j @ N
+B7E6	r j @ tS
+B7E7	r j @ tSh
+B7E8	r j @ kh
+B7E9	r j @ th
+B7EA	r j @ ph
+B7EB	r j @ h
+B7EC	r ^
+B7ED	r ^ k
+B7EE	r ^ k>
+B7EF	r ^ k sh
+B7F0	r ^ n
+B7F1	r ^ n tS
+B7F2	r ^ n h
+B7F3	r ^ t
+B7F4	r ^ l
+B7F5	r ^ l k
+B7F6	r ^ l m
+B7F7	r ^ l p
+B7F8	r ^ l sh
+B7F9	r ^ l th
+B7FA	r ^ l ph
+B7FB	r ^ l h
+B7FC	r ^ m
+B7FD	r ^ p
+B7FE	r ^ p sh
+B7FF	r ^ sh
+B800	r ^ s
+B801	r ^ N
+B802	r ^ tS
+B803	r ^ tSh
+B804	r ^ kh
+B805	r ^ th
+B806	r ^ ph
+B807	r ^ h
+B808	r e
+B809	r e k
+B80A	r e k>
+B80B	r e k sh
+B80C	r e n
+B80D	r e n tS
+B80E	r e n h
+B80F	r e t
+B810	r e l
+B811	r e l k
+B812	r e l m
+B813	r e l p
+B814	r e l sh
+B815	r e l th
+B816	r e l ph
+B817	r e l h
+B818	r e m
+B819	r e p
+B81A	r e p sh
+B81B	r e sh
+B81C	r e s
+B81D	r e N
+B81E	r e tS
+B81F	r e tSh
+B820	r e kh
+B821	r e th
+B822	r e ph
+B823	r e h
+B824	r j ^
+B825	r j ^ k
+B826	r j ^ k>
+B827	r j ^ k sh	
+B828	r j ^ n
+B829	r j ^ n tS
+B82A	r j ^ n h
+B82B	r j ^ t
+B82C	r j ^ l
+B82D	r j ^ l k
+B82E	r j ^ l m
+B82F	r j ^ l p
+B830	r j ^ l sh
+B831	r j ^ l th
+B832	r j ^ l ph
+B833	r j ^ l h
+B834	r j ^ m
+B835	r j ^ p
+B836	r j ^ p sh
+B837	r j ^ sh
+B838	r j ^ s
+B839	r j ^ N
+B83A	r j ^ tS
+B83B	r j ^ tSh
+B83C	r j ^ kh
+B83D	r j ^ th
+B83E	r j ^ ph
+B83F	r j ^ h
+B840	r j e
+B841	r j e k
+B842	r j e k>
+B843	r j e k sh
+B844	r j e n
+B845	r j e n tS
+B846	r j e n h
+B847	r j e t
+B848	r j e l
+B849	r j e l k
+B84A	r j e l m
+B84B	r j e l p
+B84C	r j e l sh
+B84D	r j e l th
+B84E	r j e l ph
+B84F	r j e l h
+B850	r j e m
+B851	r j e p
+B852	r j e p sh
+B853	r j e sh
+B854	r j e s
+B855	r j e N
+B856	r j e tS
+B857	r j e tSh
+B858	r j e kh
+B859	r j e th
+B85A	r j e ph
+B85B	r j e h
+B85C	r o
+B85D	r o k
+B85E	r o k>
+B85F	r o k sh
+B860	r o n
+B861	r o n tS
+B862	r o n h
+B863	r o t
+B864	r o l
+B865	r o l k
+B866	r o l m
+B867	r o l p
+B868	r o l sh
+B869	r o l th
+B86A	r o l ph
+B86B	r o l h
+B86C	r o m
+B86D	r o p
+B86E	r o p sh
+B86F	r o sh
+B870	r o s
+B871	r o N
+B872	r o tS
+B873	r o tSh
+B874	r o kh
+B875	r o th
+B876	r o ph
+B877	r o h
+B878	r w a
+B879	r w a k
+B87A	r w a k>
+B87B	r w a k sh
+B87C	r w a n
+B87D	r w a n tS
+B87E	r w a n h
+B87F	r w a t
+B880	r w a l
+B881	r w a l k
+B882	r w a l m
+B883	r w a l p
+B884	r w a l sh
+B885	r w a l th
+B886	r w a l ph
+B887	r w a l h
+B888	r w a m
+B889	r w a p
+B88A	r w a p sh
+B88B	r w a sh
+B88C	r w a s
+B88D	r w a N
+B88E	r w a tS
+B88F	r w a tSh
+B890	r w a kh
+B891	r w a th
+B892	r w a ph
+B893	r w a h
+B894	r w @
+B895	r w @ k
+B896	r w @ k>
+B897	r w @ k sh
+B898	r w @ n
+B899	r w @ n tS
+B89A	r w @ n h
+B89B	r w @ t
+B89C	r w @ l
+B89D	r w @ l k
+B89E	r w @ l m
+B89F	r w @ l p
+B8A0	r w @ l sh
+B8A1	r w @ l th
+B8A2	r w @ l ph
+B8A3	r w @ l h
+B8A4	r w @ m
+B8A5	r w @ p
+B8A6	r w @ p sh
+B8A7	r w @ sh
+B8A8	r w @ s
+B8A9	r w @ N
+B8AA	r w @ tS
+B8AB	r w @ tSh
+B8AC	r w @ kh
+B8AD	r w @ th
+B8AE	r w @ ph
+B8AF	r w @ h
+B8B0	r w e
+B8B1	r w e k
+B8B2	r w e k>
+B8B3	r w e k sh
+B8B4	r w e n
+B8B5	r w e n tS
+B8B6	r w e n h
+B8B7	r w e t
+B8B8	r w e l
+B8B9	r w e l k
+B8BA	r w e l m
+B8BB	r w e l p
+B8BC	r w e l sh
+B8BD	r w e l th
+B8BE	r w e l ph
+B8BF	r w e l h
+B8C0	r w e m
+B8C1	r w e p
+B8C2	r w e p sh
+B8C3	r w e sh
+B8C4	r w e s
+B8C5	r w e N
+B8C6	r w e tS
+B8C7	r w e tSh
+B8C8	r w e kh
+B8C9	r w e th
+B8CA	r w e ph
+B8CB	r w e h
+B8CC	r j o
+B8CD	r j o k
+B8CE	r j o k>
+B8CF	r j o k sh
+B8D0	r j o n
+B8D1	r j o n tS
+B8D2	r j o n h
+B8D3	r j o t
+B8D4	r j o l
+B8D5	r j o l k
+B8D6	r j o l m
+B8D7	r j o l p
+B8D8	r j o l sh
+B8D9	r j o l th
+B8DA	r j o l ph
+B8DB	r j o l h
+B8DC	r j o m
+B8DD	r j o p
+B8DE	r j o p sh
+B8DF	r j o sh
+B8E0	r j o s
+B8E1	r j o N
+B8E2	r j o tS
+B8E3	r j o tSh
+B8E4	r j o kh
+B8E5	r j o th
+B8E6	r j o ph
+B8E7	r j o h
+B8E8	r u
+B8E9	r u k
+B8EA	r u k>
+B8EB	r u k sh
+B8EC	r u n
+B8ED	r u n tS
+B8EE	r u n h
+B8EF	r u t
+B8F0	r u l
+B8F1	r u l k
+B8F2	r u l m
+B8F3	r u l p
+B8F4	r u l sh
+B8F5	r u l th
+B8F6	r u l ph
+B8F7	r u l h
+B8F8	r u m
+B8F9	r u p
+B8FA	r u p sh
+B8FB	r u sh
+B8FC	r u s
+B8FD	r u N
+B8FE	r u tS
+B8FF	r u tSh
+B900	r u kh
+B901	r u th
+B902	r u ph
+B903	r u h
+B904	r w ^
+B905	r w ^ k
+B906	r w ^ k>
+B907	r w ^ k sh
+B908	r w ^ n
+B909	r w ^ n tS
+B90A	r w ^ n h
+B90B	r w ^ t
+B90C	r w ^ l
+B90D	r w ^ l k
+B90E	r w ^ l m
+B90F	r w ^ l p
+B910	r w ^ l sh
+B911	r w ^ l th
+B912	r w ^ l ph
+B913	r w ^ l h
+B914	r w ^ m
+B915	r w ^ p
+B916	r w ^ p sh
+B917	r w ^ sh
+B918	r w ^ s
+B919	r w ^ N
+B91A	r w ^ tS
+B91B	r w ^ tSh
+B91C	r w ^ kh
+B91D	r w ^ th
+B91E	r w ^ ph
+B91F	r w ^ h
+B920	r w E
+B921	r w E k
+B922	r w E k>
+B923	r w E k sh
+B924	r w E n
+B925	r w E n tS
+B926	r w E n h
+B927	r w E t
+B928	r w E l
+B929	r w E l k
+B92A	r w E l m
+B92B	r w E l p
+B92C	r w E l sh
+B92D	r w E l th
+B92E	r w E l ph
+B92F	r w E l h
+B930	r w E m
+B931	r w E p
+B932	r w E p sh
+B933	r w E sh
+B934	r w E s
+B935	r w E N
+B936	r w E tS
+B937	r w E tSh
+B938	r w E kh
+B939	r w E th
+B93A	r w E ph
+B93B	r w E h
+B93C	r 7
+B93D	r 7 k
+B93E	r 7 k>
+B93F	r 7 k sh
+B940	r 7 n
+B941	r 7 n tS
+B942	r 7 n h
+B943	r 7 t
+B944	r 7 l
+B945	r 7 l k
+B946	r 7 l m
+B947	r 7 l p
+B948	r 7 l sh
+B949	r 7 l th
+B94A	r 7 l ph
+B94B	r 7 l h
+B94C	r 7 m
+B94D	r 7 p
+B94E	r 7 p sh
+B94F	r 7 sh
+B950	r 7 s
+B951	r 7 N
+B952	r 7 tS
+B953	r 7 tSh
+B954	r 7 kh
+B955	r 7 th
+B956	r 7 ph
+B957	r 7 h
+B958	r j u
+B959	r j u k
+B95A	r j u k>
+B95B	r j u k sh
+B95C	r j u k n
+B95D	r j u n tS
+B95E	r j u n h
+B95F	r j u t
+B960	r j u l
+B961	r j u l k
+B962	r j u l m
+B963	r j u l p
+B964	r j u l sh
+B965	r j u l th
+B966	r j u l ph
+B967	r j u l h
+B968	r j u m
+B969	r j u p
+B96A	r j u p sh
+B96B	r j u sh
+B96C	r j u s
+B96D	r j u N
+B96E	r j u tS
+B96F	r j u tSh
+B970	r j u kh
+B971	r j u th
+B972	r j u ph
+B973	r j u h
+B974	r 4
+B975	r 4 k
+B976	r 4 k>
+B977	r 4 k sh
+B978	r 4 n
+B979	r 4 n tS
+B97A	r 4 n h
+B97B	r 4 t
+B97C	r 4 l
+B97D	r 4 l k
+B97E	r 4 l m
+B97F	r 4 l p
+B980	r 4 l sh
+B981	r 4 l th
+B982	r 4 l ph
+B983	r 4 l h
+B984	r 4 m
+B985	r 4 p
+B986	r 4 p sh
+B987	r 4 sh
+B988	r 4 s
+B989	r 4 N
+B98A	r 4 tS
+B98B	r 4 tSh
+B98C	r 4 kh
+B98D	r 4 th
+B98E	r 4 ph
+B98F	r 4 h
+B990	r 4 j
+B991	r 4 j k
+B992	r 4 j k>
+B993	r 4 j k sh
+B994	r 4 j n
+B995	r 4 j n tS
+B996	r 4 j n h
+B997	r 4 j t
+B998	r 4 j l
+B999	r 4 j l k
+B99A	r 4 j l m
+B99B	r 4 j l p
+B99C	r 4 j l sh
+B99D	r 4 j l th
+B99E	r 4 j l ph
+B99F	r 4 j l h
+B9A0	r 4 j m
+B9A1	r 4 j p
+B9A2	r 4 j p sh
+B9A3	r 4 j sh
+B9A4	r 4 j s
+B9A5	r 4 j N
+B9A6	r 4 j tS
+B9A7	r 4 j tSh
+B9A8	r 4 j kh
+B9A9	r 4 j th
+B9AA	r 4 j ph
+B9AB	r 4 j h
+B9AC	r i
+B9AD	r i k
+B9AE	r i k>
+B9AF	r i k sh
+B9B0	r i n
+B9B1	r i n tS
+B9B2	r i n h
+B9B3	r i t
+B9B4	r i l
+B9B5	r i l k
+B9B6	r i l m
+B9B7	r i l p
+B9B8	r i l sh
+B9B9	r i l th
+B9BA	r i l ph
+B9BB	r i l h
+B9BC	r i m
+B9BD	r i p
+B9BE	r i p sh
+B9BF	r i sh
+B9C0	r i s
+B9C1	r i N
+B9C2	r i tS
+B9C3	r i tSh
+B9C4	r i kh
+B9C5	r i th
+B9C6	r i ph
+B9C7	r i h
+B9C8	m a
+B9C9	m a k
+B9CA	m a k>
+B9CB	m a k sh
+B9CC	m a n
+B9CD	m a n tS
+B9CE	m a n h
+B9CF	m a t
+B9D0	m a l
+B9D1	m a l k
+B9D2	m a l m
+B9D3	m a l p
+B9D4	m a l sh
+B9D5	m a l th
+B9D6	m a l ph
+B9D7	m a l h
+B9D8	m a m
+B9D9	m a p
+B9DA	m a p sh
+B9DB	m a sh
+B9DC	m a s
+B9DD	m a N
+B9DE	m a tS
+B9DF	m a tSh
+B9E0	m a kh
+B9E1	m a th
+B9E2	m a ph
+B9E3	m a h
+B9E4	m @
+B9E5	m @ k
+B9E6	m @ k>
+B9E7	m @ k sh
+B9E8	m @ n
+B9E9	m @ n tS
+B9EA	m @ n h
+B9EB	m @ t
+B9EC	m @ l
+B9ED	m @ l k
+B9EE	m @ l m
+B9EF	m @ l p
+B9F0	m @ l sh
+B9F1	m @ l th
+B9F2	m @ l ph
+B9F3	m @ l h
+B9F4	m @ m
+B9F5	m @ p
+B9F6	m @ p sh
+B9F7	m @ sh
+B9F8	m @ s
+B9F9	m @ N
+B9FA	m @ tS
+B9FB	m @ tSh
+B9FC	m @ kh
+B9FD	m @ th
+B9FE	m @ ph
+B9FF	m @ h
+BA00	m j a
+BA01	m j a k
+BA02	m j a k>
+BA03	m j a k sh
+BA04	m j a n
+BA05	m j a n tS
+BA06	m j a n h
+BA07	m j a t
+BA08	m j a l
+BA09	m j a l k
+BA0A	m j a l m
+BA0B	m j a l p
+BA0C	m j a l sh
+BA0D	m j a l th
+BA0E	m j a l ph
+BA0F	m j a l h
+BA10	m j a m
+BA11	m j a p
+BA12	m j a p sh
+BA13	m j a sh
+BA14	m j a s
+BA15	m j a N
+BA16	m j a tS
+BA17	m j a tSh
+BA18	m j a kh
+BA19	m j a th
+BA1A	m j a ph
+BA1B	m j a h
+BA1C	m j @
+BA1D	m j @ k
+BA1E	m j @ k>
+BA1F	m j @ k sh
+BA20	m j @ n
+BA21	m j @ n tS
+BA22	m j @ n h
+BA23	m j @ t
+BA24	m j @ l
+BA25	m j @ l k
+BA26	m j @ l m
+BA27	m j @ l p
+BA28	m j @ l sh
+BA29	m j @ l th
+BA2A	m j @ l ph
+BA2B	m j @ l h
+BA2C	m j @ m
+BA2D	m j @ p
+BA2E	m j @ p sh
+BA2F	m j @ sh
+BA30	m j @ s
+BA31	m j @ N
+BA32	m j @ tS
+BA33	m j @ tSh
+BA34	m j @ kh
+BA35	m j @ th
+BA36	m j @ ph
+BA37	m j @ h
+BA38	m ^
+BA39	m ^ k
+BA3A	m ^ k>
+BA3B	m ^ k sh
+BA3C	m ^ n
+BA3D	m ^ n tS
+BA3E	m ^ n h
+BA3F	m ^ t
+BA40	m ^ l
+BA41	m ^ l k
+BA42	m ^ l m
+BA43	m ^ l p
+BA44	m ^ l sh
+BA45	m ^ l th
+BA46	m ^ l ph
+BA47	m ^ l h
+BA48	m ^ m
+BA49	m ^ p
+BA4A	m ^ p sh
+BA4B	m ^ sh
+BA4C	m ^ s
+BA4D	m ^ N
+BA4E	m ^ tS
+BA4F	m ^ tSh
+BA50	m ^ kh
+BA51	m ^ th
+BA52	m ^ ph
+BA53	m ^ h
+BA54	m e
+BA55	m e k
+BA56	m e k>
+BA57	m e k sh
+BA58	m e n
+BA59	m e n tS
+BA5A	m e n h
+BA5B	m e t
+BA5C	m e l
+BA5D	m e l k
+BA5E	m e l m
+BA5F	m e l p
+BA60	m e l sh
+BA61	m e l th
+BA62	m e l ph
+BA63	m e l h
+BA64	m e m
+BA65	m e p
+BA66	m e p sh
+BA67	m e sh
+BA68	m e s
+BA69	m e N
+BA6A	m e tS
+BA6B	m e tSh
+BA6C	m e kh
+BA6D	m e th
+BA6E	m e ph
+BA6F	m e h
+BA70	m j ^
+BA71	m j ^ k
+BA72	m j ^ k>
+BA73	m j ^ k sh
+BA74	m j ^ n
+BA75	m j ^ n tS
+BA76	m j ^ n h
+BA77	m j ^ t
+BA78	m j ^ l
+BA79	m j ^ l k
+BA7A	m j ^ l m
+BA7B	m j ^ l p
+BA7C	m j ^ l sh
+BA7D	m j ^ l th
+BA7E	m j ^ l ph
+BA7F	m j ^ l h
+BA80	m j ^ m
+BA81	m j ^ p
+BA82	m j ^ p sh
+BA83	m j ^ sh
+BA84	m j ^ s
+BA85	m j ^ N
+BA86	m j ^ tS
+BA87	m j ^ tSh
+BA88	m j ^ kh
+BA89	m j ^ th
+BA8A	m j ^ ph
+BA8B	m j ^ h
+BA8C	m j e
+BA8D	m j e k
+BA8E	m j e k>
+BA8F	m j e k sh
+BA90	m j e n
+BA91	m j e n tS
+BA92	m j e n h
+BA93	m j e t
+BA94	m j e l
+BA95	m j e l k
+BA96	m j e l m
+BA97	m j e l p
+BA98	m j e l sh
+BA99	m j e l th
+BA9A	m j e l ph
+BA9B	m j e l h
+BA9C	m j e m
+BA9D	m j e p
+BA9E	m j e p sh
+BA9F	m j e sh
+BAA0	m j e s
+BAA1	m j e N
+BAA2	m j e tS
+BAA3	m j e tSh
+BAA4	m j e kh
+BAA5	m j e th
+BAA6	m j e ph
+BAA7	m j e h
+BAA8	m o
+BAA9	m o k
+BAAA	m o k>
+BAAB	m o k sh
+BAAC	m o n
+BAAD	m o n tS
+BAAE	m o n h
+BAAF	m o t
+BAB0	m o l
+BAB1	m o l k
+BAB2	m o l m
+BAB3	m o l p
+BAB4	m o l sh
+BAB5	m o l th
+BAB6	m o l ph
+BAB7	m o l h
+BAB8	m o m
+BAB9	m o p
+BABA	m o p sh
+BABB	m o sh
+BABC	m o s
+BABD	m o N
+BABE	m o tS
+BABF	m o tSh
+BAC0	m o kh
+BAC1	m o th
+BAC2	m o ph
+BAC3	m o h
+BAC4	m w a
+BAC5	m w a k
+BAC6	m w a k>
+BAC7	m w a k sh
+BAC8	m w a n
+BAC9	m w a n tS
+BACA	m w a n h
+BACB	m w a t
+BACC	m w a l
+BACD	m w a l k
+BACE	m w a l m
+BACF	m w a l p
+BAD0	m w a l sh
+BAD1	m w a l th
+BAD2	m w a l ph
+BAD3	m w a l h
+BAD4	m w a m
+BAD5	m w a p
+BAD6	m w a p sh
+BAD7	m w a sh
+BAD8	m w a s
+BAD9	m w a N
+BADA	m w a tS
+BADB	m w a tSh
+BADC	m w a kh
+BADD	m w a th
+BADE	m w a ph
+BADF	m w a h
+BAE0	m w @
+BAE1	m w @ k
+BAE2	m w @ k>
+BAE3	m w @ k sh
+BAE4	m w @ n
+BAE5	m w @ n tS
+BAE6	m w @ n h
+BAE7	m w @ t
+BAE8	m w @ l
+BAE9	m w @ l k
+BAEA	m w @ l m
+BAEB	m w @ l p
+BAEC	m w @ l sh
+BAED	m w @ l th
+BAEE	m w @ l ph
+BAEF	m w @ l h
+BAF0	m w @ m
+BAF1	m w @ p
+BAF2	m w @ p sh
+BAF3	m w @ sh
+BAF4	m w @ s
+BAF5	m w @ N
+BAF6	m w @ tS
+BAF7	m w @ tSh
+BAF8	m w @ kh
+BAF9	m w @ th
+BAFA	m w @ ph
+BAFB	m w @ h
+BAFC	m w e
+BAFD	m w e k
+BAFE	m w e k>
+BAFF	m w e k sh
+BB00	m w e n
+BB01	m w e n tS
+BB02	m w e n h
+BB03	m w e t
+BB04	m w e l
+BB05	m w e l k
+BB06	m w e l m
+BB07	m w e l p
+BB08	m w e l sh
+BB09	m w e l th
+BB0A	m w e l ph
+BB0B	m w e l h
+BB0C	m w e m
+BB0D	m w e p
+BB0E	m w e p sh
+BB0F	m w e sh
+BB10	m w e s
+BB11	m w e N
+BB12	m w e tS
+BB13	m w e tSh
+BB14	m w e kh
+BB15	m w e th
+BB16	m w e ph
+BB17	m w e h
+BB18	m j o
+BB19	m j o k
+BB1A	m j o k>
+BB1B	m j o k sh
+BB1C	m j o n
+BB1D	m j o n tS
+BB1E	m j o n h
+BB1F	m j o t
+BB20	m j o l
+BB21	m j o l k
+BB22	m j o l m
+BB23	m j o l p
+BB24	m j o l sh
+BB25	m j o l th
+BB26	m j o l ph
+BB27	m j o l h
+BB28	m j o m
+BB29	m j o p
+BB2A	m j o p sh
+BB2B	m j o sh
+BB2C	m j o s
+BB2D	m j o N
+BB2E	m j o tS
+BB2F	m j o tSh
+BB30	m j o kh
+BB31	m j o th
+BB32	m j o ph
+BB33	m j o h
+BB34	m u
+BB35	m u k
+BB36	m u k>
+BB37	m u k sh
+BB38	m u n
+BB39	m u n tS
+BB3A	m u n h
+BB3B	m u t
+BB3C	m u l
+BB3D	m u l k
+BB3E	m u l m
+BB3F	m u l p
+BB40	m u l sh
+BB41	m u l th
+BB42	m u l ph
+BB43	m u l h
+BB44	m u m
+BB45	m u p
+BB46	m u p sh
+BB47	m u sh
+BB48	m u s
+BB49	m u N
+BB4A	m u tS
+BB4B	m u tSh
+BB4C	m u kh
+BB4D	m u th
+BB4E	m u ph
+BB4F	m u h
+BB50	m w ^
+BB51	m w ^ k
+BB52	m w ^ k>
+BB53	m w ^ k sh
+BB54	m w ^ n
+BB55	m w ^ n tS
+BB56	m w ^ n h
+BB57	m w ^ t
+BB58	m w ^ l
+BB59	m w ^ l k
+BB5A	m w ^ l m
+BB5B	m w ^ l p
+BB5C	m w ^ l sh
+BB5D	m w ^ l th
+BB5E	m w ^ l ph
+BB5F	m w ^ l h
+BB60	m w ^ m
+BB61	m w ^ p
+BB62	m w ^ p sh
+BB63	m w ^ sh
+BB64	m w ^ s
+BB65	m w ^ N
+BB66	m w ^ tS
+BB67	m w ^ tSh
+BB68	m w ^ kh
+BB69	m w ^ th
+BB6A	m w ^ ph
+BB6B	m w ^ h
+BB6C	m w E
+BB6D	m w E k
+BB6E	m w E k>
+BB6F	m w E k sh
+BB70	m w E n
+BB71	m w E n tS
+BB72	m w E n h
+BB73	m w E t
+BB74	m w E l
+BB75	m w E l k
+BB76	m w E l m
+BB77	m w E l p
+BB78	m w E l sh
+BB79	m w E l th
+BB7A	m w E l ph
+BB7B	m w E l h
+BB7C	m w E m
+BB7D	m w E p
+BB7E	m w E p sh
+BB7F	m w E sh
+BB80	m w E s
+BB81	m w E N
+BB82	m w E tS
+BB83	m w E tSh
+BB84	m w E kh
+BB85	m w E th
+BB86	m w E ph
+BB87	m w E h
+BB88	m 7
+BB89	m 7 k
+BB8A	m 7 k>
+BB8B	m 7 k sh
+BB8C	m 7 n
+BB8D	m 7 n tS
+BB8E	m 7 n h
+BB8F	m 7 t
+BB90	m 7 l
+BB91	m 7 l k
+BB92	m 7 l m
+BB93	m 7 l p
+BB94	m 7 l sh
+BB95	m 7 l th
+BB96	m 7 l ph
+BB97	m 7 l h
+BB98	m 7 m
+BB99	m 7 p
+BB9A	m 7 p sh
+BB9B	m 7 sh
+BB9C	m 7 s
+BB9D	m 7 N
+BB9E	m 7 tS
+BB9F	m 7 tSh
+BBA0	m 7 kh
+BBA1	m 7 th
+BBA2	m 7 ph
+BBA3	m 7 h
+BBA4	m j u
+BBA5	m j u k
+BBA6	m j u k>
+BBA7	m j u k sh
+BBA8	m j u n
+BBA9	m j u n tS
+BBAA	m j u n h
+BBAB	m j u t
+BBAC	m j u l
+BBAD	m j u l k
+BBAE	m j u l m
+BBAF	m j u l p
+BBB0	m j u l sh
+BBB1	m j u l th
+BBB2	m j u l ph
+BBB3	m j u l h
+BBB4	m j u m
+BBB5	m j u p
+BBB6	m j u p sh
+BBB7	m j u sh
+BBB8	m j u s
+BBB9	m j u N
+BBBA	m j u tS
+BBBB	m j u tSh
+BBBC	m j u kh
+BBBD	m j u th
+BBBE	m j u ph
+BBBF	m j u h
+BBC0	m 4
+BBC1	m 4 k
+BBC2	m 4 k>
+BBC3	m 4 k sh
+BBC4	m 4 n
+BBC5	m 4 n tS
+BBC6	m 4 n h
+BBC7	m 4 t
+BBC8	m 4 l
+BBC9	m 4 l k
+BBCA	m 4 l m
+BBCB	m 4 l p
+BBCC	m 4 l sh
+BBCD	m 4 l th
+BBCE	m 4 l ph
+BBCF	m 4 l h
+BBD0	m 4 m
+BBD1	m 4 p
+BBD2	m 4 p sh
+BBD3	m 4 sh
+BBD4	m 4 s
+BBD5	m 4 N
+BBD6	m 4 tS
+BBD7	m 4 tSh
+BBD8	m 4 kh
+BBD9	m 4 th
+BBDA	m 4 ph
+BBDB	m 4 h
+BBDC	m 4 j
+BBDD	m 4 j k
+BBDE	m 4 j k>
+BBDF	m 4 j k sh
+BBE0	m 4 j n
+BBE1	m 4 j n tS
+BBE2	m 4 j n h
+BBE3	m 4 j t
+BBE4	m 4 j l
+BBE5	m 4 j l k
+BBE6	m 4 j l m
+BBE7	m 4 j l p
+BBE8	m 4 j l sh
+BBE9	m 4 j l th
+BBEA	m 4 j l ph
+BBEB	m 4 j l h
+BBEC	m 4 j m
+BBED	m 4 j p
+BBEE	m 4 j p sh
+BBEF	m 4 j sh
+BBF0	m 4 j s
+BBF1	m 4 j N
+BBF2	m 4 j tS
+BBF3	m 4 j tSh
+BBF4	m 4 j kh
+BBF5	m 4 j th
+BBF6	m 4 j ph
+BBF7	m 4 j h
+BBF8	m i
+BBF9	m i k
+BBFA	m i k>
+BBFB	m i k sh
+BBFC	m i n
+BBFD	m i n tS
+BBFE	m i n h
+BBFF	m i t
+BC00	m i l
+BC01	m i l k
+BC02	m i l m
+BC03	m i l p
+BC04	m i l sh
+BC05	m i l th
+BC06	m i l ph
+BC07	m i l h
+BC08	m i m
+BC09	m i p
+BC0A	m i p sh
+BC0B	m i sh
+BC0C	m i s
+BC0D	m i N
+BC0E	m i tS
+BC0F	m i tSh
+BC10	m i kh
+BC11	m i th
+BC12	m i ph
+BC13	m i h
+BC14	p a	
+BC15	p a k
+BC16	p a k>
+BC17	p a k sh
+BC18	p a n
+BC19	p a n tS
+BC1A	p a n h
+BC1B	p a t
+BC1C	p a l
+BC1D	p a l k
+BC1E	p a l m
+BC1F	p a l p
+BC20	p a l sh
+BC21	p a l th
+BC22	p a l ph
+BC23	p a l h
+BC24	p a m
+BC25	p a p
+BC26	p a p sh
+BC27	p a sh
+BC28	p a s
+BC29	p a N
+BC2A	p a tS
+BC2B	p a tSh
+BC2C	p a kh
+BC2D	p a th
+BC2E	p a ph
+BC2F	p a h
+BC30	p @
+BC31	p @ k
+BC32	p @ k>
+BC33	p @ k sh
+BC34	p @ n
+BC35	p @ n tS
+BC36	p @ n h
+BC37	p @ t
+BC38	p @ l
+BC39	p @ l k
+BC3A	p @ l m
+BC3B	p @ l p
+BC3C	p @ l sh
+BC3D	p @ l th
+BC3E	p @ l ph
+BC3F	p @ l h
+BC40	p @ m
+BC41	p @ p
+BC42	p @ p sh
+BC43	p @ sh
+BC44	p @ s
+BC45	p @ N
+BC46	p @ tS
+BC47	p @ tSh
+BC48	p @ kh
+BC49	p @ th
+BC4A	p @ ph
+BC4B	p @ h
+BC4C	p j a
+BC4D	p j a k
+BC4E	p j a k>
+BC4F	p j a k sh
+BC50	p j a n
+BC51	p j a n tS
+BC52	p j a n h
+BC53	p j a t
+BC54	p j a l
+BC55	p j a l k
+BC56	p j a l m
+BC57	p j a l p
+BC58	p j a l sh
+BC59	p j a l th
+BC5A	p j a l ph
+BC5B	p j a lh
+BC5C	p j a m
+BC5D	p j a p
+BC5E	p j a p sh
+BC5F	p j a sh
+BC60	p j a s
+BC61	p j a N
+BC62	p j a tS
+BC63	p j a tSh
+BC64	p j a kh
+BC65	p j a th
+BC66	p j a ph
+BC67	p j a h
+BC68	p j @
+BC69	p j @ k
+BC6A	p j @ k>
+BC6B	p j @ k sh
+BC6C	p j @ n
+BC6D	p j @ n tS
+BC6E	p j @ n h
+BC6F	p j @ t
+BC70	p j @ l
+BC71	p j @ l k
+BC72	p j @ l m
+BC73	p j @ l p
+BC74	p j @ l sh
+BC75	p j @ l th
+BC76	p j @ l ph
+BC77	p j @ l h
+BC78	p j @ m
+BC79	p j @ p
+BC7A	p j @ p sh
+BC7B	p j @ sh
+BC7C	p j @ s
+BC7D	p j @ N
+BC7E	p j @ tS
+BC7F	p j @ tSh
+BC80	p j @ kh
+BC81	p j @ th
+BC82	p j @ ph
+BC83	p j @ h
+BC84	p ^
+BC85	p ^ k
+BC86	p ^ k>
+BC87	p ^ k sh
+BC88	p ^ n
+BC89	p ^ n tS
+BC8A	p ^ n h
+BC8B	p ^ t
+BC8C	p ^ l
+BC8D	p ^ l k
+BC8E	p ^ l m
+BC8F	p ^ l p
+BC90	p ^ l sh
+BC91	p ^ l th
+BC92	p ^ l ph
+BC93	p ^ l h
+BC94	p ^ m
+BC95	p ^ p
+BC96	p ^ p sh
+BC97	p ^ sh
+BC98	p ^ s
+BC99	p ^ N
+BC9A	p ^ tS
+BC9B	p ^ tSh
+BC9C	p ^ kh
+BC9D	p ^ th
+BC9E	p ^ ph
+BC9F	p ^ h
+BCA0	p e
+BCA1	p e k
+BCA2	p e k>
+BCA3	p e k sh
+BCA4	p e n
+BCA5	p e n tS
+BCA6	p e n h
+BCA7	p e t
+BCA8	p e l
+BCA9	p e l k
+BCAA	p e l m
+BCAB	p e l p
+BCAC	p e l sh
+BCAD	p e l th
+BCAE	p e l ph
+BCAF	p e l h
+BCB0	p e m
+BCB1	p e p
+BCB2	p e p sh
+BCB3	p e sh
+BCB4	p e s
+BCB5	p e N
+BCB6	p e tS
+BCB7	p e tSh
+BCB8	p e kh
+BCB9	p e th
+BCBA	p e ph
+BCBB	p e h
+BCBC	p j ^
+BCBD	p j ^ k
+BCBE	p j ^ k>
+BCBF	p j ^ k sh
+BCC0	p j ^ n
+BCC1	p j ^ n tS
+BCC2	p j ^ n h
+BCC3	p j ^ t
+BCC4	p j ^ l
+BCC5	p j ^ l k
+BCC6	p j ^ l m
+BCC7	p j ^ l p
+BCC8	p j ^ l sh
+BCC9	p j ^ l th
+BCCA	p j ^ l ph
+BCCB	p j ^ l h
+BCCC	p j ^ m
+BCCD	p j ^ p
+BCCE	p j ^ p sh
+BCCF	p j ^ sh
+BCD0	p j ^ s
+BCD1	p j ^ N
+BCD2	p j ^ tS
+BCD3	p j ^ tSh
+BCD4	p j ^ kh
+BCD5	p j ^ th
+BCD6	p j ^ ph
+BCD7	p j ^ h
+BCD8	p j e
+BCD9	p j e k
+BCDA	p j e k>
+BCDB	p j e k sh
+BCDC	p j e n
+BCDD	p j e n tS
+BCDE	p j e n h
+BCDF	p j e t
+BCE0	p j e l
+BCE1	p j e l k
+BCE2	p j e l m
+BCE3	p j e l p
+BCE4	p j e l sh
+BCE5	p j e l th
+BCE6	p j e l ph
+BCE7	p j e l h
+BCE8	p j e m
+BCE9	p j e p
+BCEA	p j e p sh
+BCEB	p j e sh
+BCEC	p j e s
+BCED	p j e N
+BCEE	p j e tS
+BCEF	p j e tSh
+BCF0	p j e kh
+BCF1	p j e th
+BCF2	p j e ph
+BCF3	p j e h
+BCF4	p o
+BCF5	p o k
+BCF6	p o k>
+BCF7	p o k sh
+BCF8	p o n
+BCF9	p o n tS
+BCFA	p o n h
+BCFB	p o t
+BCFC	p o l
+BCFD	p o l k
+BCFE	p o l m
+BCFF	p o l p
+BD00	p o l sh
+BD01	p o l th
+BD02	p o l ph
+BD03	p o l h
+BD04	p o m
+BD05	p o p
+BD06	p o p sh
+BD07	p o sh
+BD08	p o s
+BD09	p o N
+BD0A	p o tS
+BD0B	p o tSh
+BD0C	p o kh
+BD0D	p o th
+BD0E	p o ph
+BD0F	p o h
+BD10	p w a
+BD11	p w a k
+BD12	p w a k>
+BD13	p w a k sh
+BD14	p w a n
+BD15	p w a n tS
+BD16	p w a nh
+BD17	p w a t
+BD18	p w a l
+BD19	p w a l k
+BD1A	p w a l m
+BD1B	p w a l p
+BD1C	p w a l sh
+BD1D	p w a l th
+BD1E	p w a l ph
+BD1F	p w a l h
+BD20	p w a m
+BD21	p w a p
+BD22	p w a p sh
+BD23	p w a sh
+BD24	p w a s
+BD25 	p w a N
+BD26	p w a tS
+BD27	p w a tSh
+BD28	p w a kh
+BD29	p w a th
+BD2A	p w a ph
+BD2B	p w a h
+BD2C	p w @
+BD2D	p w @ k
+BD2E	p w @ k>
+BD2F	p w @ k sh
+BD30	p w @ n
+BD31	p w @ n tS
+BD32	p w @ n h
+BD33	p w @ t
+BD34	p w @ l
+BD35	p w @ l k
+BD36	p w @ l m
+BD37	p w @ l p
+BD38	p w @ l sh
+BD39	p w @ l th
+BD3A	p w @ l ph
+BD3B	p w @ l h
+BD3C	p w @ m
+BD3D	p w @ p
+BD3E	p w @ p sh
+BD3F	p w @ sh
+BD40	p w @ s
+BD41	p w @ N
+BD42	p w @ tS
+BD43	p w @ tSh
+BD44	p w @ kh
+BD45	p w @ th
+BD46	p w @ ph
+BD47	p w @ h
+BD48	p w e
+BD49	p w e k
+BD4A	p w e k>
+BD4B	p w e k sh
+BD4C	p w e n
+BD4D	p w e n tS
+BD4E	p w e n h
+BD4F	p w e t
+BD50	p w e l
+BD51	p w e l k
+BD52	p w e l m
+BD53	p w e l p
+BD54	p w e l sh
+BD55	p w e l th
+BD56	p w e l ph
+BD57	p w e l h
+BD58	p w e m
+BD59	p w e p
+BD5A	p w e p sh
+BD5B	p w e sh
+BD5C	p w e s
+BD5D	p w e N
+BD5E	p w e tS
+BD5F	p w e tSh
+BD60	p w e kh
+BD61	p w e th
+BD62	p w e ph
+BD63	p w e h
+BD64	p j o
+BD65	p j o k
+BD66	p j o k>
+BD67	p j o k sh
+BD68	p j o n
+BD69	p j o n tS
+BD6A	p j o n h
+BD6B	p j o t
+BD6C	p j o l
+BD6D	p j o l k
+BD6E	p j o l m
+BD6F	p j o l p
+BD70	p j o l sh
+BD71	p j o l th
+BD72	p j o l ph
+BD73	p j o l h
+BD74	p j o m
+BD75	p j o p
+BD76	p j o p sh
+BD77	p j o sh
+BD78	p j o s
+BD79	p j o N
+BD7A	p j o tS
+BD7B	p j o tSh
+BD7C	p j o kh
+BD7D	p j o th
+BD7E	p j o ph
+BD7F	p j o h
+BD80	p u
+BD81	p u k
+BD82	p u k>
+BD83	p u k sh
+BD84	p u n
+BD85	p u n tS
+BD86	p u n h
+BD87	p u t
+BD88	p u l
+BD89	p u l k
+BD8A	p u l m
+BD8B	p u l p
+BD8C	p u l sh
+BD8D	p u l th
+BD8E	p u l ph
+BD8F	p u l h
+BD90	p u m
+BD91	p u p
+BD92	p u p sh
+BD93	p u sh
+BD94	p u s
+BD95	p u N
+BD96	p u tS
+BD97	p u tSh
+BD98	p u kh
+BD99	p u th
+BD9A	p u ph
+BD9B	p u h
+BD9C	p w ^
+BD9D	p w ^ k
+BD9E	p w ^ k>
+BD9F	p w ^ k sh
+BDA0	p w ^ n
+BDA1	p w ^ n tS
+BDA2	p w ^ n h
+BDA3	p w ^ t
+BDA4	p w ^ l
+BDA5	p w ^ l k
+BDA6	p w ^ l m
+BDA7	p w ^ l p
+BDA8	p w ^ l sh
+BDA9	p w ^ l th
+BDAA	p w ^ l ph
+BDAB	p w ^ l h
+BDAC	p w ^ m
+BDAD	p w ^ p
+BDAE	p w ^ p sh
+BDAF	p w ^ sh
+BDB0	p w ^ s
+BDB1	p w ^ N
+BDB2	p w ^ tS
+BDB3	p w ^ tSh
+BDB4	p w ^ kh
+BDB5	p w ^ th
+BDB6	p w ^ ph
+BDB7	p w ^ h
+BDB8	p w E
+BDB9	p w E k
+BDBA	p w E k>
+BDBB	p w E k sh
+BDBC	p w E n
+BDBD	p w E n tS
+BDBE	p w E n h
+BDBF	p w E t
+BDC0	p w E l
+BDC1	p w E l k
+BDC2	p w E l m
+BDC3	p w E l p
+BDC4	p w E l sh
+BDC5	p w E l th
+BDC6	p w E l ph
+BDC7	p w E l h
+BDC8	p w E m
+BDC9	p w E p
+BDCA	p w E p sh
+BDCB	p w E sh
+BDCC	p w E s
+BDCD	p w E N
+BDCE	p w E tS
+BDCF	p w E tSh
+BDD0	p w E kh
+BDD1	p w E th
+BDD2	p w E ph
+BDD3	p w E h
+BDD4	p 7
+BDD5	p 7 k
+BDD6	p 7 k>
+BDD7	p 7 k sh
+BDD8	p 7 n
+BDD9	p 7 n tS
+BDDA	p 7 n h
+BDDB	p 7 t
+BDDC	p 7 l
+BDDD	p 7 l k
+BDDE	p 7 l m
+BDDF	p 7 l p
+BDE0	p 7 l sh
+BDE1	p 7 l th
+BDE2	p 7 l ph
+BDE3	p 7 l s
+BDE4	p 7 m
+BDE5	p 7 p
+BDE6	p 7 p sh
+BDE7	p 7 sh
+BDE8	p 7 s
+BDE9	p 7 N
+BDEA	p 7 tS
+BDEB	p 7 tSh
+BDEC	p 7 kh
+BDED	p 7 th
+BDEE	p 7 ph
+BDEF	p 7 h
+BDF0	p j u
+BDF1	p j u k
+BDF2	p j u k>
+BDF3	p j u k sh
+BDF4	p j u n
+BDF5	p j u n tS
+BDF6	p j u n h
+BDF7	p j u t
+BDF8	p j u l
+BDF9	p j u l k
+BDFA	p j u l m
+BDFB	p j u l p
+BDFC	p j u l sh
+BDFD	p j u l th
+BDFE	p j u l ph
+BDFF	p j u l h
+BE00	p j u m
+BE01	p j u p
+BE02	p j u p sh
+BE03	p j u sh
+BE04	p j u s
+BE05	p j u N
+BE06	p j u tS
+BE07	p j u tSh
+BE08	p j u kh
+BE09	p j u th
+BE0A	p j u ph
+BE0B	p j u h
+BE0C	p 4
+BE0D	p 4 k
+BE0E	p 4 k>
+BE0F	p 4 k sh
+BE10	p 4 n
+BE11	p 4 n tS
+BE12	p 4 n h
+BE13	p 4 t
+BE14	p 4 l
+BE15	p 4 l k
+BE16	p 4 l m
+BE17	p 4 l p
+BE18	p 4 l sh
+BE19	p 4 l th
+BE1A	p 4 l ph
+BE1B	p 4 l h
+BE1C	p 4 m
+BE1D	p 4 p
+BE1E	p 4 p sh
+BE1F	p 4 sh
+BE20	p 4 s
+BE21	p 4 N
+BE22	p 4 tS
+BE23	p 4 tSh
+BE24	p 4 kh
+BE25	p 4 th
+BE26	p 4 ph
+BE27	p 4 h
+BE28	p 4 j
+BE29	p 4 j k
+BE2A	p 4 j k>
+BE2B	p 4 j k sh
+BE2C	p 4 j n
+BE2D	p 4 j n tS
+BE2E	p 4 j n h
+BE2F	p 4 j t
+BE30	p 4 j l
+BE31	p 4 j l k
+BE32	p 4 j l m
+BE33	p 4 j l p
+BE34	p 4 j l sh
+BE35	p 4 j l th
+BE36	p 4 j l ph
+BE37	p 4 j l h
+BE38	p 4 j m
+BE39	p 4 j p
+BE3A	p 4 j p sh
+BE3B	p 4 j sh
+BE3C	p 4 j s
+BE3D	p 4 j N
+BE3E	p 4 j tS
+BE3F	p 4 j tSh
+BE40	p 4 j kh
+BE41	p 4 j th
+BE42	p 4 j ph
+BE43	p 4 j h
+BE44	p i
+BE45	p i k
+BE46	p i k>
+BE47	p i k sh
+BE48	p i n
+BE49	p i n tS
+BE4A	p i n h
+BE4B	p i t
+BE4C	p i l
+BE4D	p i l k
+BE4E	p i l m
+BE4F	p i l p
+BE50	p i l sh
+BE51	p i l th
+BE52	p i l ph
+BE53	p i l h
+BE54	p i m
+BE55	p i p
+BE56	p i p sh
+BE57	p i sh
+BE58	p i s
+BE59	p i N
+BE5A	p i tS
+BE5B	p i tSh
+BE5C	p i kh
+BE5D	p i th
+BE5E	p i ph
+BE5F	p i h
+BE60	p> a
+BE61	p> a k
+BE62	p> a k>
+BE63	p> a k sh
+BE64	p> a n
+BE65	p> a n tS
+BE66	p> a n h
+BE67	p> a t
+BE68	p> a l
+BE69	p> a l k
+BE6A	p> a l m
+BE6B	p> a l p
+BE6C	p> a l sh
+BE6D	p> a l th
+BE6E	p> a l ph
+BE6F	p> a l h
+BE70	p> a m
+BE71	p> a p
+BE72	p> a p sh
+BE73	p> a sh
+BE74	p> a s
+BE75	p> a N
+BE76	p> a tS
+BE77	p> a tSh
+BE78	p> a kh
+BE79	p> a th
+BE7A	p> a ph
+BE7B	p> a h
+BE7C	p> @
+BE7D	p> @ k
+BE7E	p> @ k>
+BE7F	p> @ k sh
+BE80	p> @ n
+BE81	p> @ n tS
+BE82	p> @ n h
+BE83	p> @ t
+BE84	p> @ l
+BE85	p> @ l k
+BE86	p> @ l m
+BE87	p> @ l p
+BE88	p> @ l sh
+BE89	p> @ l th
+BE8A	p> @ l ph
+BE8B	p> @ l h
+BE8C	p> @ m
+BE8D	p> @ p
+BE8E	p> @ p sh
+BE8F	p> @ sh
+BE90	p> @ s
+BE91	p> @ N
+BE92	p> @ tS
+BE93	p> @ tSh
+BE94	p> @ kh
+BE95	p> @ th
+BE96	p> @ ph
+BE97	p> @ h
+BE98	p> j a
+BE99	p> j a k
+BE9A	p> j a k>
+BE9B	p> j a k sh
+BE9C	p> j a n
+BE9D	p> j a n tS
+BE9E	p> j a n h
+BE9F	p> j a t
+BEA0	p> j a l
+BEA1	p> j a l k
+BEA2	p> j a l m
+BEA3	p> j a l p
+BEA4	p> j a l sh
+BEA5	p> j a l th
+BEA6	p> j a l ph
+BEA7	p> j a l h
+BEA8	p> j a m
+BEA9	p> j a p
+BEAA	p> j a p sh
+BEAB	p> j a sh
+BEAC	p> j a s
+BEAD	p> j a N
+BEAE	p> j a tS
+BEAF	p> j a tSh
+BEB0	p> j a kh
+BEB1	p> j a th
+BEB2	p> j a ph
+BEB3	p> j a h
+BEB4	p> j @
+BEB5	p> j @ k
+BEB6	p> j @ k>
+BEB7	p> j @ k sh
+BEB8	p> j @ n
+BEB9	p> j @ n tS
+BEBA	p> j @ n h
+BEBB	p> j @ t
+BEBC	p> j @ l
+BEBD	p> j @ l k
+BEBE	p> j @ l m
+BEBF	p> j @ l p
+BEC0	p> j @ l sh
+BEC1	p> j @ l th
+BEC2	p> j @ l ph
+BEC3	p> j @ l h
+BEC4	p> j @ m
+BEC5	p> j @ p
+BEC6	p> j @ p sh
+BEC7	p> j @ sh
+BEC8	p> j @ s
+BEC9	p> j @ N
+BECA	p> j @ tS
+BECB	p> j @ tSh
+BECC	p> j @ kh
+BECD	p> j @ th
+BECE	p> j @ ph
+BECF	p> j @ h
+BED0	p> ^
+BED1	p> ^ k
+BED2	p> ^ k>
+BED3	p> ^ k sh
+BED4	p> ^ n
+BED5	p> ^ n tS
+BED6	p> ^ n h
+BED7	p> ^ t
+BED8	p> ^ l
+BED9	p> ^ l k
+BEDA	p> ^ l m
+BEDB	p> ^ l p
+BEDC	p> ^ l sh
+BEDD	p> ^ l th
+BEDE	p> ^ l ph
+BEDF	p> ^ l h
+BEE0	p> ^ m
+BEE1	p> ^ p
+BEE2	p> ^ p sh
+BEE3	p> ^ sh
+BEE4	p> ^ s
+BEE5	p> ^ N
+BEE6	p> ^ tS
+BEE7	p> ^ tSh
+BEE8	p> ^ kh
+BEE9	p> ^ th
+BEEA	p> ^ ph
+BEEB	p> ^ h
+BEEC	p> e
+BEED	p> e k
+BEEE	p> e k>
+BEEF	p> e k sh
+BEF0	p> e n
+BEF1	p> e n tS
+BEF2	p> e n h
+BEF3	p> e t
+BEF4	p> e l
+BEF5	p> e l k
+BEF6	p> e l m
+BEF7	p> e l p
+BEF8	p> e l sh
+BEF9	p> e l th
+BEFA	p> e l ph
+BEFB	p> e l h
+BEFC	p> e m
+BEFD	p> e p
+BEFE	p> e p sh
+BEFF	p> e sh
+BF00	p> e s
+BF01	p> e N
+BF02	p> e tS
+BF03	p> e tSh
+BF04	p> e kh
+BF05	p> e th
+BF06	p> e ph
+BF07	p> e h
+BF08	p> j ^
+BF09	p> j ^ k
+BF0A	p> j ^ k>
+BF0B	p> j ^ k sh
+BF0C	p> j ^ n
+BF0D	p> j ^ n tS
+BF0E	p> j ^ n h
+BF0F	p> j ^ t
+BF10	p> j ^ l
+BF11	p> j ^ l k
+BF12	p> j ^ l m
+BF13	p> j ^ l p
+BF14	p> j ^ l sh
+BF15	p> j ^ l th
+BF16	p> j ^ l ph
+BF17	p> j ^ l h
+BF18	p> j ^ m
+BF19	p> j ^ p
+BF1A	p> j ^ p sh
+BF1B	p> j ^ sh
+BF1C	p> j ^ s
+BF1D	p> j ^ N
+BF1E	p> j ^ tS
+BF1F	p> j ^ tSh
+BF20	p> j ^ kh
+BF21	p> j ^ th
+BF22	p> j ^ ph
+BF23	p> j ^ h
+BF24	p> j e
+BF25	p> j e k
+BF26	p> j e k>
+BF27	p> j e k sh
+BF28	p> j e n
+BF29	p> j e n tS
+BF2A	p> j e n h
+BF2B	p> j e t
+BF2C	p> j e l
+BF2D	p> j e l k
+BF2E	p> j e l m
+BF2F	p> j e l p
+BF30	p> j e l sh
+BF31	p> j e l th
+BF32	p> j e l ph
+BF33	p> j e l h
+BF34	p> j e m
+BF35	p> j e p
+BF36	p> j e p sh
+BF37	p> j e sh
+BF38	p> j e s
+BF39	p> j e N
+BF3A	p> j e tS
+BF3B	p> j e tSh
+BF3C	p> j e kh
+BF3D	p> j e th
+BF3E	p> j e ph
+BF3F	p> j e h
+BF40	p> o
+BF41	p> o k
+BF42	p> o k>
+BF43	p> o k sh
+BF44	p> o n
+BF45	p> o n tS
+BF46	p> o n h
+BF47	p> o t
+BF48	p> o l
+BF49	p> o l k
+BF4A	p> o l m
+BF4B	p> o l p
+BF4C	p> o l sh
+BF4D	p> o l th
+BF4E	p> o l ph
+BF4F	p> o l h
+BF50	p> o m
+BF51	p> o p
+BF52	p> o p sh
+BF53	p> o sh
+BF54	p> o s
+BF55	p> o N
+BF56	p> o tS
+BF57	p> o tSh
+BF58	p> o kh
+BF59	p> o th
+BF5A	p> o ph
+BF5B	p> o h
+BF5C	p> w a
+BF5D	p> w a k
+BF5E	p> w a k>
+BF5F	p> w a k sh
+BF60	p> w a n
+BF61	p> w a n tS
+BF62	p> w a n h
+BF63	p> w a t
+BF64	p> w a l
+BF65	p> w a l k
+BF66	p> w a l m
+BF67	p> w a l p
+BF68	p> w a l sh
+BF69	p> w a l th
+BF6A	p> w a l ph
+BF6B	p> w a l h
+BF6C	p> w a m
+BF6D	p> w a p
+BF6E	p> w a p sh
+BF6F	p> w a sh
+BF70 	p> w a s
+BF71	p> w a N
+BF72	p> w a tS
+BF73	p> w a tSh
+BF74	p> w a kh
+BF75	p> w a th
+BF76	p> w a ph
+BF77	p> w a h
+BF78	p> w @
+BF79	p> w @ k
+BF7A	p> w @ k>
+BF7B	p> w @ k sh
+BF7C	p> w @ n
+BF7D	p> w @ n tS
+BF7E	p> w @ n h
+BF7F	p> w @ t
+BF80	p> w @ l
+BF81	p> w @ l k
+BF82	p> w @ l m
+BF83	p> w @ l p
+BF84	p> w @ l sh
+BF85	p> w @ l th
+BF86	p> w @ l ph
+BF87	p> w @ l h
+BF88	p> w @ m
+BF89	p> w @ p
+BF8A	p> w @ p sh
+BF8B	p> w @ sh
+BF8C	p> w @ s
+BF8D	p> w @ N
+BF8E	p> w @ tS
+BF8F	p> w @ tSh
+BF90	p> w @ kh
+BF91	p> w @ th
+BF92	p> w @ ph
+BF93	p> w @ h
+BF94	p> w e
+BF95	p> w e k
+BF96	p> w e k>
+BF97	p> w e k sh
+BF98	p> w e n
+BF99	p> w e n tS
+BF9A	p> w e n h
+BF9B	p> w e t
+BF9C	p> w e l
+BF9D	p> w e l k
+BF9E	p> w e l m
+BF9F	p> w e l p
+BFA0	p> w e l sh
+BFA1	p> w e l th
+BFA2	p> w e l ph
+BFA3	p> w e l h
+BFA4	p> w e m
+BFA5	p> w e p
+BFA6	p> w e p sh
+BFA7	p> w e sh
+BFA8	p> w e s
+BFA9	p> w e N
+BFAA	p> w e tS
+BFAB	p> w e tSh
+BFAC	p> w e kh
+BFAD	p> w e th
+BFAE	p> w e ph
+BFAF	p> w e h
+BFB0	p> j o
+BFB1	p> j o k
+BFB2	p> j o k>
+BFB3	p> j o k sh
+BFB4	p> j o n
+BFB5	p> j o n tS
+BFB6	p> j o n h
+BFB7	p> j o t
+BFB8	p> j o l
+BFB9	p> j o l k
+BFBA	p> j o l m
+BFBB	p> j o l p
+BFBC	p> j o l sh
+BFBD	p> j o l th
+BFBE	p> j o l ph
+BFBF	p> j o l h
+BFC0	p> j o m
+BFC1	p> j o p
+BFC2	p> j o p sh
+BFC3	p> j o sh
+BFC4	p> j o s
+BFC5	p> j o N
+BFC6	p> j o tS
+BFC7	p> j o tSh
+BFC8	p> j o kh
+BFC9	p> j o th
+BFCA	p> j o ph
+BFCB	p> j o h
+BFCC	p> u
+BFCD	p> u k
+BFCE	p> u k>
+BFCF	p> u k sh
+BFD0	p> u n
+BFD1	p> u n tS
+BFD2	p> u n h
+BFD3	p> u t
+BFD4	p> u l
+BFD5	p> u l k
+BFD6	p> u l m
+BFD7	p> u l p
+BFD8	p> u l sh
+BFD9	p> u l th
+BFDA	p> u l ph
+BFDB	p> u l h
+BFDC	p> u m
+BFDD	p> u p
+BFDE	p> u p sh
+BFDF	p> u sh
+BFE0	p> u s
+BFE1	p> u N
+BFE2	p> u tS
+BFE3	p> u tSh
+BFE4	p> u kh
+BFE5	p> u th
+BFE6	p> u ph
+BFE7	p> u h
+BFE8	p> w ^
+BFE9	p> w ^ k
+BFEA	p> w ^ k>
+BFEB	p> w ^ k sh
+BFEC	p> w ^ n
+BFED	p> w ^ n tS
+BFEE	p> w ^ n h
+BFEF	p> w ^ t
+BFF0	p> w ^ l
+BFF1	p> w ^ l k
+BFF2	p> w ^ l m
+BFF3	p> w ^ l p
+BFF4	p> w ^ l sh
+BFF5	p> w ^ l th
+BFF6	p> w ^ l ph
+BFF7	p> w ^ l h
+BFF8	p> w ^ m
+BFF9	p> w ^ p
+BFFA	p> w ^ p sh
+BFFB	p> w ^ sh
+BFFC	p> w ^ s
+BFFD	p> w ^ N
+BFFE	p> w ^ tS
+BFFF	p> w ^ tSh
+C000	p> w ^ kh
+C001	p> w ^ th
+C002	p> w ^ ph
+C003	p> w ^ h
+C004	p> w E
+C005	p> w E k
+C006	p> w E k>
+C007	p> w E k sh
+C008	p> w E n
+C009	p> w E n tS
+C00A	p> w E n h
+C00B	p> w E t
+C00C	p> w E l
+C00D	p> w E l k
+C00E	p> w E l m
+C00F	p> w E l p
+C010	p> w E l sh
+C011	p> w E l th
+C012	p> w E l ph
+C013	p> w E l h
+C014	p> w E m
+C015	p> w E p
+C016	p> w E p sh
+C017	p> w E sh
+C018	p> w E s
+C019	p> w E N
+C01A	p> w E tS
+C01B	p> w E tSh
+C01C	p> w E kh
+C01D	p> w E th
+C01E	p> w E ph
+C01F	p> w E h
+C020	p> 7
+C021	p> 7 k
+C022	p> 7 k>
+C023	p> 7 k sh
+C024	p> 7 n
+C025	p> 7 n tS
+C026	p> 7 n h
+C027	p> 7 t
+C028	p> 7 l
+C029	p> 7 l k
+C02A	p> 7 l m
+C02B	p> 7 l p
+C02C	p> 7 l sh
+C02D	p> 7 l th
+C02E	p> 7 l ph
+C02F	p> 7 l h
+C030	p> 7 m
+C031	p> 7 p
+C032	p> 7 p sh
+C033	p> 7 sh
+C034	p> 7 s
+C035	p> 7 N
+C036	p> 7 tS
+C037	p> 7 tSh
+C038	p> 7 kh
+C039	p> 7 th
+C03A	p> 7 ph
+C03B	p> 7 h
+C03C	p> j u
+C03D	p> j u k
+C03E	p> j u k>
+C03F	p> j u k sh
+C040	p> j u n
+C041	p> j u n tS
+C042	p> j u n h
+C043	p> j u t
+C044	p> j u l
+C045	p> j u l k
+C046	p> j u l m
+C047	p> j u l p
+C048	p> j u l sh
+C049	p> j u l th
+C04A	p> j u l ph
+C04B	p> j u l h
+C04C	p> j u m
+C04D	p> j u p
+C04E	p> j u p sh
+C04F	p> j u sh
+C050	p> j u s
+C051	p> j u N
+C052	p> j u tS
+C053	p> j u tSh
+C054	p> j u kh
+C055	p> j u th
+C056	p> j u ph
+C057	p> j u h
+C058	p> 4
+C059	p> 4 k
+C05A	p> 4 k>
+C05B	p> 4 k sh
+C05C	p> 4 n
+C05D	p> 4 n tS
+C05E	p> 4 n h
+C05F	p> 4 t
+C060	p> 4 l
+C061	p> 4 l k
+C062	p> 4 l m
+C063	p> 4 l p
+C064	p> 4 l sh
+C065	p> 4 l th
+C066	p> 4 l ph
+C067	p> 4 l h
+C068	p> 4 m
+C069	p> 4 p
+C06A	p> 4 p sh
+C06B	p> 4 sh
+C06C	p> 4 s
+C06D	p> 4 N
+C06E	p> 4 tS
+C06F	p> 4 tSh
+C070	p> 4 kh
+C071	p> 4 th
+C072	p> 4 ph
+C073	p> 4 h
+C074	p> 4 j
+C075	p> 4 j k
+C076	p> 4 j k>
+C077	p> 4 j k sh
+C078	p> 4 j n
+C079	p> 4 j n tS
+C07A	p> 4 j n h
+C07B	p> 4 j t
+C07C	p> 4 j l
+C07D	p> 4 j l k
+C07E	p> 4 j l m
+C07F	p> 4 j l p
+C080	p> 4 j l sh
+C081	p> 4 j l th
+C082	p> 4 j l ph
+C083	p> 4 j l h
+C084	p> 4 j m
+C085	p> 4 j p
+C086	p> 4 j p sh
+C087	p> 4 j sh
+C088	p> 4 j s
+C089	p> 4 j N
+C08A	p> 4 j tS
+C08B	p> 4 j tSh
+C08C	p> 4 j kh
+C08D	p> 4 j th
+C08E	p> 4 j ph
+C08F	p> 4 j h
+C090	p> i
+C091	p> i k
+C092	p> i k>
+C093	p> i k sh
+C094	p> i n
+C095	p> i n tS
+C096	p> i n h
+C097	p> i t
+C098	p> i l
+C099	p> i l k
+C09A	p> i l m
+C09B	p> i l p
+C09C	p> i l sh
+C09D	p> i l th
+C09E	p> i l ph
+C09F	p> i l h
+C0A0	p> i m
+C0A1	p> i p
+C0A2	p> i p sh
+C0A3	p> i sh
+C0A4	p> i s
+C0A5	p> i N
+C0A6	p> i tS
+C0A7	p> i tSh
+C0A8	p> i kh
+C0A9	p> i th
+C0AA	p> i ph
+C0AB	p> i h
+C0AC	sh a
+C0AD	sh a k
+C0AE	sh a k>
+C0AF	sh a k sh
+C0B0	sh a n
+C0B1	sh a n tS
+C0B2	sh a n h
+C0B3	sh a t
+C0B4	sh a l
+C0B5	sh a l k
+C0B6	sh a l m
+C0B7	sh a l p
+C0B8	sh a l sh
+C0B9	sh a l th
+C0BA	sh a l ph
+C0BB	sh a l h
+C0BC	sh a m
+C0BD	sh a p
+C0BE	sh a p sh
+C0BF	sh a sh
+C0C0	sh a s
+C0C1	sh a N
+C0C2	sh a tS
+C0C3	sh a tSh
+C0C4	sh a kh
+C0C5	sh a th
+C0C6	sh a ph
+C0C7	sh a h
+C0C8	sh @
+C0C9	sh @ k
+C0CA	sh @ k>
+C0CB	sh @ k sh
+C0CC	sh @ n
+C0CD	sh @ n tS
+C0CE	sh @ n h
+C0CF	sh @ t
+C0D0	sh @ l
+C0D1	sh @ l k
+C0D2	sh @ l m
+C0D3	sh @ l p
+C0D4	sh @ l sh
+C0D5	sh @ l th
+C0D6	sh @ l ph
+C0D7	sh @ l h
+C0D8	sh @ m
+C0D9	sh @ p
+C0DA	sh @ p sh
+C0DB	sh @ sh
+C0DC	sh @ s
+C0DD	sh @ N
+C0DE	sh @ tS
+C0DF	sh @ tSh
+C0E0	sh @ kh
+C0E1	sh @ th
+C0E2	sh @ ph
+C0E3	sh @ h
+C0E4	sh j a
+C0E5	sh j a k
+C0E6	sh j a k>
+C0E7	sh j a k sh
+C0E8	sh j a n
+C0E9	sh j a n tS
+C0EA	sh j a n h
+C0EB	sh j a t
+C0EC	sh j a l
+C0ED	sh j a l k
+C0EE	sh j a l m
+C0EF	sh j a l p
+C0F0	sh j a l sh
+C0F1	sh j a l th
+C0F2	sh j a l ph
+C0F3	sh j a l h
+C0F4	sh j a m
+C0F5	sh j a p
+C0F6	sh j a p sh
+C0F7	sh j a sh
+C0F8	sh j a s
+C0F9	sh j a N
+C0FA	sh j a tS
+C0FB	sh j a tSh
+C0FC	sh j a kh
+C0FD	sh j a th
+C0FE	sh j a ph
+C0FF	sh j a h
+C100	sh j @
+C101	sh j @ k
+C102	sh j @ k>
+C103	sh j @ k sh
+C104	sh j @ n
+C105	sh j @ n tS
+C106	sh j @ n h
+C107	sh j @ t
+C108	sh j @ l
+C109	sh j @ l k
+C10A	sh j @ l m
+C10B	sh j @ l p
+C10C	sh j @ l sh
+C10D	sh j @ l th
+C10E	sh j @ l ph
+C10F	sh j @ l h
+C110	sh j @ m
+C111	sh j @ p
+C112	sh j @ p sh
+C113	sh j @ sh
+C114	sh j @ s
+C115	sh j @ N
+C116	sh j @ tS
+C117	sh j @ tSh
+C118	sh j @ kh
+C119	sh j @ th
+C11A	sh j @ ph
+C11B	sh j @ h
+C11C	sh ^
+C11D	sh ^ k
+C11E	sh ^ k>
+C11F	sh ^ k sh
+C120	sh ^ n
+C121	sh ^ n tS
+C122	sh ^ n h
+C123	sh ^ t
+C124	sh ^ l
+C125	sh ^ l k
+C126	sh ^ l m
+C127	sh ^ l p
+C128	sh ^ l sh
+C129	sh ^ l th
+C12A	sh ^ l ph
+C12B	sh ^ l h
+C12C	sh ^ m
+C12D	sh ^ p
+C12E	sh ^ p sh
+C12F	sh ^ sh
+C130	sh ^ s
+C131	sh ^ N
+C132	sh ^ tS
+C133	sh ^ tSh
+C134	sh ^ kh
+C135	sh ^ th
+C136	sh ^ ph
+C137	sh ^ h
+C138	sh e
+C139	sh e k
+C13A	sh e k>
+C13B	sh e k sh
+C13C	sh e n
+C13D	sh e n tS
+C13E	sh e n h
+C13F	sh e t
+C140	sh e l
+C141	sh e l k
+C142	sh e l m
+C143	sh e l p
+C144	sh e l sh
+C145	sh e l th
+C146	sh e l ph
+C147	sh e l h
+C148	sh e m
+C149	sh e p
+C14A	sh e p sh
+C14B	sh e sh
+C14C	sh e s
+C14D	sh e N
+C14E	sh e tS
+C14F	sh e tSh
+C150	sh e kh
+C151	sh e th
+C152	sh e ph
+C153	sh e h
+C154	sh j ^
+C155	sh j ^ k
+C156	sh j ^ k>
+C157	sh j ^ k sh
+C158	sh j ^ n
+C159	sh j ^ n tS
+C15A	sh j ^ n h
+C15B	sh j ^ t
+C15C	sh j ^ l
+C15D	sh j ^ l k
+C15E	sh j ^ l m
+C15F	sh j ^ l p
+C160	sh j ^ l sh
+C161	sh j ^ l th
+C162	sh j ^ l ph
+C163	sh j ^ l h
+C164	sh j ^ m
+C165	sh j ^ p
+C166	sh j ^ p sh
+C167	sh j ^ sh
+C168	sh j ^ s
+C169	sh j ^ N
+C16A	sh j ^ tS
+C16B	sh j ^ tSh
+C16C	sh j ^ kh
+C16D	sh j ^ th
+C16E	sh j ^ ph
+C16F	sh j ^ h
+C170	sh j e
+C171	sh j e k
+C172	sh j e k>
+C173	sh j e k sh
+C174	sh j e n
+C175	sh j e n tS
+C176	sh j e n h
+C177	sh j e t
+C178	sh j e l
+C179	sh j e l k
+C17A	sh j e l m
+C17B	sh j e l p
+C17C	sh j e l sh
+C17D	sh j e l th
+C17E	sh j e l ph
+C17F	sh j e l h
+C180	sh j e m
+C181	sh j e p
+C182	sh j e p sh
+C183	sh j e sh
+C184	sh j e s
+C185	sh j e N
+C186	sh j e tS
+C187	sh j e tSh
+C188	sh j e kh
+C189	sh j e th
+C18A	sh j e ph
+C18B	sh j e h
+C18C	sh o
+C18D	sh o k
+C18E	sh o k>
+C18F	sh o k sh
+C190	sh o n
+C191	sh o n tS
+C192	sh o n h
+C193	sh o t
+C194	sh o l
+C195	sh o l k
+C196	sh o l m
+C197	sh o l p
+C198	sh o l sh
+C199	sh o l th
+C19A	sh o l ph
+C19B	sh o l h
+C19C	sh o m
+C19D	sh o p
+C19E	sh o p sh
+C19F	sh o sh
+C1A0	sh o s
+C1A1	sh o N
+C1A2	sh o tS
+C1A3	sh o tSh
+C1A4	sh o kh
+C1A5	sh o th
+C1A6	sh o ph
+C1A7	sh o h
+C1A8	sh w a
+C1A9	sh w a k
+C1AA	sh w a k>
+C1AB	sh w a k sh
+C1AC	sh w a n
+C1AD	sh w a n tS
+C1AE	sh w a n h
+C1AF	sh w a t
+C1B0	sh w a l
+C1B1	sh w a l k
+C1B2	sh w a l m
+C1B3	sh w a l p
+C1B4	sh w a l sh
+C1B5	sh w a l th
+C1B6	sh w a l ph
+C1B7	sh w a l h
+C1B8	sh w a m
+C1B9	sh w a p
+C1BA	sh w a p sh
+C1BB	sh w a sh
+C1BC	sh w a s
+C1BD	sh w a N
+C1BE	sh w a tS
+C1BF	sh w a tSh
+C1C0	sh w a kh
+C1C1	sh w a th
+C1C2	sh w a ph
+C1C3	sh w a h
+C1C4	sh w @
+C1C5	sh w @ k
+C1C6	sh w @ k>
+C1C7	sh w @ k sh
+C1C8	sh w @ n
+C1C9	sh w @ n tS
+C1CA	sh w @ n h
+C1CB	sh w @ t
+C1CC	sh w @ l
+C1CD	sh w @ l k
+C1CE	sh w @ l m
+C1CF	sh w @ l p
+C1D0	sh w @ l sh
+C1D1	sh w @ l th
+C1D2	sh w @ l ph
+C1D3	sh w @ l h
+C1D4	sh w @ m
+C1D5	sh w @ p
+C1D6	sh w @ p sh
+C1D7	sh w @ sh
+C1D8	sh w @ s
+C1D9	sh w @ N
+C1DA	sh w @ tS
+C1DB	sh w @ tSh
+C1DC	sh w @ kh
+C1DD	sh w @ th
+C1DE	sh w @ ph
+C1DF	sh w @ h
+C1E0	sh w e
+C1E1	sh w e k
+C1E2	sh w e k>
+C1E3	sh w e k sh
+C1E4	sh w e n
+C1E5	sh w e n tS
+C1E6	sh w e n h
+C1E7	sh w e t
+C1E8	sh w e l
+C1E9	sh w e l k
+C1EA	sh w e l m
+C1EB	sh w e l p
+C1EC	sh w e l sh
+C1ED	sh w e l th
+C1EE	sh w e l ph
+C1EF	sh w e l h
+C1F0	sh w e m
+C1F1	sh w e p
+C1F2	sh w e p sh
+C1F3	sh w e sh
+C1F4	sh w e s
+C1F5	sh w e N
+C1F6	sh w e tS
+C1F7	sh w e tSh
+C1F8	sh w e kh
+C1F9	sh w e th
+C1FA	sh w e ph
+C1FB	sh w e h
+C1FC	sh j o
+C1FD	sh j o k
+C1FE	sh j o k>
+C1FF	sh j o k sh
+C200	sh j o n
+C201	sh j o n tS
+C202	sh j o n h
+C203	sh j o t
+C204	sh j o l
+C205	sh j o l k
+C206	sh j o l m
+C207	sh j o l p
+C208	sh j o l sh
+C209	sh j o l th
+C20A	sh j o l ph
+C20B	sh j o l h
+C20C	sh j o m
+C20D	sh j o p
+C20E	sh j o p sh
+C20F	sh j o sh
+C210	sh j o s
+C211	sh j o N
+C212	sh j o tS
+C213	sh j o tSh
+C214	sh j o kh
+C215	sh j o th
+C216	sh j o ph
+C217	sh j o h
+C218	sh u
+C219	sh u k
+C21A	sh u k>
+C21B	sh u k sh
+C21C	sh u n
+C21D	sh u n tS
+C21E	sh u n h
+C21F	sh u t
+C220	sh u l
+C221	sh u l k
+C222	sh u l m
+C223	sh u l p
+C224	sh u l sh
+C225	sh u l th
+C226	sh u l ph
+C227	sh u l h
+C228	sh u m
+C229	sh u p
+C22A	sh u p sh
+C22B	sh u sh
+C22C	sh u s
+C22D	sh u N
+C22E	sh u tS
+C22F	sh u tSh
+C230	sh u kh
+C231	sh u th
+C232	sh u ph
+C233	sh u h
+C234	sh w ^
+C235	sh w ^ k
+C236	sh w ^ k>
+C237	sh w ^ k sh
+C238	sh w ^ n
+C239	sh w ^ n tS
+C23A	sh w ^ n h
+C23B	sh w ^ t
+C23C	sh w ^ l
+C23D	sh w ^ l k
+C23E	sh w ^ l m
+C23F	sh w ^ l p
+C240	sh w ^ l sh
+C241	sh w ^ l th
+C242	sh w ^ l ph
+C243	sh w ^ l h
+C244	sh w ^ m
+C245	sh w ^ p
+C246	sh w ^ p sh
+C247	sh w ^ sh
+C248	sh w ^ s
+C249	sh w ^ N
+C24A	sh w ^ tS
+C24B	sh w ^ tSh
+C24C	sh w ^ kh
+C24D	sh w ^ th
+C24E	sh w ^ ph
+C24F	sh w ^ h
+C250	sh w E
+C251	sh w E k
+C252	sh w E k>
+C253	sh w E k sh
+C254	sh w E n
+C255	sh w E n tS
+C256	sh w E n h
+C257	sh w E t
+C258	sh w E l
+C259	sh w E l k
+C25A	sh w E l m
+C25B	sh w E l p
+C25C	sh w E l sh
+C25D	sh w E l th
+C25E	sh w E l ph
+C25F	sh w E l h
+C260	sh w E m
+C261	sh w E p
+C262	sh w E p sh
+C263	sh w E sh
+C264	sh w E s
+C265	sh w E N
+C266	sh w E tS
+C267	sh w E tSh
+C268	sh w E kh
+C269	sh w E th
+C26A	sh w E ph
+C26B	sh w E h
+C26C	sh 7
+C26D	sh 7 k
+C26E	sh 7 k>
+C26F	sh 7 k sh
+C270	sh 7 n
+C271	sh 7 n tS
+C272	sh 7 n h
+C273	sh 7 t
+C274	sh 7 l
+C275	sh 7 l k
+C276	sh 7 l m
+C277	sh 7 l p
+C278	sh 7 l sh
+C279	sh 7 l th
+C27A	sh 7 l ph
+C27B	sh 7 l h
+C27C	sh 7 m
+C27D	sh 7 p
+C27E	sh 7 p sh
+C27F	sh 7 sh
+C280	sh 7 s
+C281	sh 7 N
+C282	sh 7 tS
+C283	sh 7 tSh
+C284	sh 7 kh
+C285	sh 7 th
+C286	sh 7 ph
+C287	sh 7 h
+C288	sh j u
+C289	sh j u k
+C28A	sh j u k>
+C28B	sh j u k sh
+C28C	sh j u n
+C28D	sh j u n tS
+C28E	sh j u n h
+C28F	sh j u t
+C290	sh j u l
+C291	sh j u l k
+C292	sh j u l m
+C293	sh j u l p
+C294	sh j u l sh
+C295	sh j u l th
+C296	sh j u l ph
+C297	sh j u l h
+C298	sh j u m
+C299	sh j u p
+C29A	sh j u p sh
+C29B	sh j u sh
+C29C	sh j u s
+C29D	sh j u N
+C29E	sh j u tS
+C29F	sh j u tSh
+C2A0	sh j u kh
+C2A1	sh j u th
+C2A2	sh j u ph
+C2A3	sh j u h
+C2A4	sh 4
+C2A5	sh 4 k
+C2A6	sh 4 k>
+C2A7	sh 4 k sh
+C2A8	sh 4 n
+C2A9	sh 4 n tS
+C2AA	sh 4 n h
+C2AB	sh 4 t
+C2AC	sh 4 l
+C2AD	sh 4 l k
+C2AE	sh 4 l m
+C2AF	sh 4 l p
+C2B0	sh 4 l sh
+C2B1	sh 4 l th
+C2B2	sh 4 l ph
+C2B3	sh 4 l h
+C2B4	sh 4 m
+C2B5	sh 4 p
+C2B6	sh 4 p sh
+C2B7	sh 4 sh
+C2B8	sh 4 s
+C2B9	sh 4 N
+C2BA	sh 4 tS
+C2BB	sh 4 tSh
+C2BC	sh 4 kh
+C2BD	sh 4 th
+C2BE	sh 4 ph
+C2BF	sh 4 h
+C2C0	sh 4 j
+C2C1	sh 4 j k
+C2C2	sh 4 j k>
+C2C3	sh 4 j k sh
+C2C4	sh 4 j n
+C2C5	sh 4 j n tS
+C2C6	sh 4 j n h
+C2C7	sh 4 j t
+C2C8	sh 4 j l
+C2C9	sh 4 j l k
+C2CA	sh 4 j l m
+C2CB	sh 4 j l p
+C2CC	sh 4 j l sh
+C2CD	sh 4 j l th
+C2CE	sh 4 j l ph
+C2CF	sh 4 j l h
+C2D0	sh 4 j m
+C2D1	sh 4 j p
+C2D2	sh 4 j p sh
+C2D3	sh 4 j sh
+C2D4	sh 4 j s
+C2D5	sh 4 j N
+C2D6	sh 4 j tS
+C2D7	sh 4 j tSh
+C2D8	sh 4 j kh
+C2D9	sh 4 j th
+C2DA	sh 4 j ph
+C2DB	sh 4 j h
+C2DC	sh i
+C2DD	sh i k
+C2DE	sh i k>
+C2DF	sh i k sh
+C2E0	sh i n
+C2E1	sh i n tS
+C2E2	sh i n h
+C2E3	sh i t
+C2E4	sh i l
+C2E5	sh i l k
+C2E6	sh i l m
+C2E7	sh i l p
+C2E8	sh i l sh
+C2E9	sh i l th
+C2EA	sh i l ph
+C2EB	sh i l h
+C2EC	sh i m
+C2ED	sh i p
+C2EE	sh i p sh
+C2EF	sh i sh
+C2F0	sh i s
+C2F1	sh i N
+C2F2	sh i tS
+C2F3	sh i tSh
+C2F4	sh i kh
+C2F5	sh i th
+C2F6	sh i ph
+C2F7	sh i h
+C2F8	s a
+C2F9	s a k
+C2FA	s a k>
+C2FB	s a k sh
+C2FC	s a n
+C2FD	s a n tS
+C2FE	s a n h
+C2FF	s a t
+C300	s a l
+C301	s a l k
+C302	s a l m
+C303	s a l p
+C304	s a l sh
+C305	s a l th
+C306	s a l ph
+C307	s a l h
+C308	s a m
+C309	s a p
+C30A	s a p sh
+C30B	s a sh
+C30C	s a s
+C30D	s a N
+C30E	s a tS
+C30F	s a tSh
+C310	s a kh
+C311	s a th
+C312	s a ph
+C313	s a h
+C314	s @
+C315	s @ k
+C316	s @ k>
+C317	s @ k sh
+C318	s @ n
+C319	s @ n tS
+C31A	s @ n h
+C31B	s @ t
+C31C	s @ l
+C31D	s @ l k
+C31E	s @ l m
+C31F	s @ l p
+C320	s @ l sh
+C321	s @ l th
+C322	s @ l ph
+C323	s @ l h
+C324	s @ m
+C325	s @ p
+C326	s @ p sh
+C327	s @ sh
+C328	s @ s
+C329	s @ N
+C32A	s @ tS
+C32B	s @ tSh
+C32C	s @ kh
+C32D	s @ th
+C32E	s @ ph
+C32F	s @ h
+C330	s j a
+C331	s j a k
+C332	s j a k>
+C333	s j a k sh
+C334	s j a n
+C335	s j a n tS
+C336	s j a n h
+C337	s j a t
+C338	s j a l
+C339	s j a l k
+C33A	s j a l m
+C33B	s j a l p
+C33C	s j a l sh
+C33D	s j a l th
+C33E	s j a l ph
+C33F	s j a l s
+C340	s j a m
+C341	s j a p
+C342	s j a p sh
+C343	s j a sh
+C344	s j a s
+C345	s j a N
+C346	s j a tS
+C347	s j a tSh
+C348	s j a kh
+C349	s j a th
+C34A	s j a ph
+C34B	s j a h
+C34C	s j @
+C34D	s j @ k
+C34E	s j @ k>
+C34F	s j @ k sh
+C350	s j @ n
+C351	s j @ n tS
+C352	s j @ n h
+C353	s j @ t
+C354	s j @ l
+C355	s j @ l k
+C356	s j @ l m
+C357	s j @ l p
+C358	s j @ l sh
+C359	s j @ l th
+C35A	s j @ l ph
+C35B	s j @ l h
+C35C	s j @ m
+C35D	s j @ p
+C35E	s j @ p sh
+C35F	s j @ sh
+C360	s j @ s
+C361	s j @ N
+C362	s j @ tS
+C363	s j @ tSh
+C364	s j @ kh
+C365	s j @ th
+C366	s j @ ph
+C367	s j @ h
+C368	s ^
+C369	s ^ k
+C36A	s ^ k>
+C36B	s ^ k sh
+C36C	s ^ n
+C36D	s ^ n tS
+C36E	s ^ n h
+C36F	s ^ t
+C370	s ^ l
+C371	s ^ l k
+C372	s ^ l m
+C373	s ^ l p
+C374	s ^ l sh
+C375	s ^ l th
+C376	s ^ l ph
+C377	s ^ l h
+C378	s ^ m
+C379	s ^ p
+C37A	s ^ p sh
+C37B	s ^ sh
+C37C	s ^ s
+C37D	s ^ N
+C37E	s ^ tS
+C37F	s ^ tSh
+C380	s ^ kh
+C381	s ^ th
+C382	s ^ ph
+C383	s ^ h
+C384	s e
+C385	s e k
+C386	s e k>
+C387	s e k sh
+C388	s e n
+C389	s e n tS
+C38A	s e n h
+C38B	s e t
+C38C	s e l
+C38D	s e l k
+C38E	s e l m
+C38F	s e l p
+C390	s e l sh
+C391	s e l th
+C392	s e l ph
+C393	s e l h
+C394	s e m
+C395	s e p
+C396	s e p sh
+C397	s e sh
+C398	s e s
+C399	s e N
+C39A	s e tS
+C39B	s e tSh
+C39C	s e kh
+C39D	s e th
+C39E	s e ph
+C39F	s e h
+C3A0	s j ^
+C3A1	s j ^ k
+C3A2	s j ^ k>
+C3A3	s j ^ k sh
+C3A4	s j ^ n
+C3A5	s j ^ n tS
+C3A6	s j ^ nh
+C3A7	s j ^ t
+C3A8	s j ^ l
+C3A9	s j ^ l k
+C3AA	s j ^ l m
+C3AB	s j ^ l p
+C3AC	s j ^ l sh
+C3AD	s j ^ l th
+C3AE	s j ^ l ph
+C3AF	s j ^ l h
+C3B0	s j ^ m
+C3B1	s j ^ p
+C3B2	s j ^ p sh
+C3B3	s j ^ sh
+C3B4	s j ^ s 
+C3B5	s j ^ N
+C3B6	s j ^ tS
+C3B7	s j ^ tSh
+C3B8	s j ^ kh
+C3B9	s j ^ th
+C3BA	s j ^ ph
+C3BB	s j ^ h
+C3BC	s j e
+C3BD	s j e k
+C3BE	s j e k>
+C3BF	s j e k sh
+C3C0	s j e n
+C3C1	s j e n tS
+C3C2	s j e n h
+C3C3	s j e t
+C3C4	s j e l
+C3C5	s j e l k
+C3C6	s j e l m
+C3C7	s j e l p
+C3C8	s j e l sh
+C3C9	s j e l th
+C3CA	s j e l ph
+C3CB	s j e l h
+C3CC	s j e m
+C3CD	s j e p
+C3CE	s j e p sh
+C3CF	s j e sh
+C3D0	s j e s
+C3D1	s j e N
+C3D2	s j e tS
+C3D3	s j e tSh
+C3D4	s j e kh
+C3D5	s j e th
+C3D6	s j e ph
+C3D7	s j e h
+C3D8	s o
+C3D9	s o k
+C3DA	s o k>
+C3DB	s o k sh
+C3DC	s o n
+C3DD	s o n tS
+C3DE	s o n h
+C3DF	s o t
+C3E0	s o l
+C3E1	s o l k
+C3E2	s o l m
+C3E3	s o l p
+C3E4	s o l sh
+C3E5	s o l th
+C3E6	s o l ph
+C3E7	s o l h
+C3E8	s o m
+C3E9	s o p
+C3EA	s o p sh
+C3EB	s o sh
+C3EC	s o s
+C3ED	s o N
+C3EE	s o tS
+C3EF	s o tSh
+C3F0	s o kh
+C3F1	s o th
+C3F2	s o ph
+C3F3	s o h
+C3F4	s w a
+C3F5	s w a k
+C3F6	s w a k>
+C3F7	s w a k sh
+C3F8	s w a n
+C3F9	s w a n tS
+C3FA	s w a n h
+C3FB	s w a t
+C3FC	s w a l
+C3FD	s w a l k
+C3FE	s w a l m
+C3FF	s w a l p
+C400	s w a l sh
+C401	s w a l th
+C402	s w a l ph
+C403	s w a l h
+C404	s w a m
+C405	s w a p
+C406	s w a p sh
+C407	s w a sh
+C408	s w a s
+C409	s w a N
+C40A	s w a tS
+C40B	s w a tSh
+C40C	s w a kh
+C40D	s w a th
+C40E	s w a ph
+C40F	s w a h
+C410	s w @
+C411	s w @ k
+C412	s w @ k>
+C413	s w @ k sh
+C414	s w @ n
+C415	s w @ n tS
+C416	s w @ n h
+C417	s w @ t
+C418	s w @ l
+C419	s w @ l k
+C41A	s w @ l m
+C41B	s w @ l p
+C41C	s w @ l sh
+C41D	s w @ l th
+C41E	s w @ l ph
+C41F	s w @ l h
+C420	s w @ m
+C421	s w @ p
+C422	s w @ p sh
+C423	s w @ sh
+C424	s w @ s
+C425	s w @ N
+C426	s w @ tS
+C427	s w @ tSh
+C428	s w @ kh
+C429	s w @ th
+C42A	s w @ ph
+C42B	s w @ h
+C42C	s w e
+C42D	s w e k
+C42E	s w e k>
+C42F	s w e k sh
+C430	s w e n
+C431	s w e n tS
+C432	s w e nh
+C433	s w e t
+C434	s w e l
+C435	s w e l k
+C436	s w e l m
+C437	s w e l p
+C438	s w e l sh
+C439	s w e l th
+C43A	s w e l ph
+C43B	s w e l h
+C43C	s w e m
+C43D	s w e p
+C43E	s w e p sh
+C43F	s w e sh
+C440	s w e s
+C441	s w e N
+C442	s w e tS
+C443	s w e tSh
+C444	s w e kh
+C445	s w e th
+C446	s w e ph
+C447	s w e h
+C448	s j o
+C449	s j o k
+C44A	s j o k>
+C44B	s j o k sh
+C44C	s j o n
+C44D	s j o n tS
+C44E	s j o n h
+C44F	s j o t
+C450	s j o l
+C451	s j o l k
+C452	s j o l m
+C453	s j o l p
+C454	s j o l sh
+C455	s j o l th
+C456	s j o l ph
+C457	s j o l h
+C458	s j o m
+C459	s j o p
+C45A	s j o p sh
+C45B	s j o sh
+C45C	s j o s
+C45D	s j o N
+C45E	s j o tS
+C45F	s j o tSh
+C460	s j o kh
+C461	s j o th
+C462	s j o ph
+C463	s j o h
+C464	s u
+C465	s u k
+C466	s u k>
+C467	s u k sh
+C468	s u n
+C469	s u n tS
+C46A	s u n h
+C46B	s u t
+C46C	s u l
+C46D	s u l k
+C46E	s u l m
+C46F	s u l p
+C470	s u l sh
+C471	s u l th
+C472	s u l ph
+C473	s u l h
+C474	s u m
+C475	s u p
+C476	s u p sh
+C477	s u sh
+C478	s u s
+C479	s u N
+C47A	s u tS
+C47B	s u tSh
+C47C	s u kh
+C47D	s u th
+C47E	s u ph
+C47F	s u h
+C480	s w ^
+C481	s w ^ k
+C482	s w ^ k>
+C483	s w ^ k sh
+C484	s w ^ n
+C485	s w ^ n tS
+C486	s w ^ n h
+C487	s w ^ t
+C488	s w ^ l
+C489	s w ^ l k
+C48A	s w ^ l m
+C48B	s w ^ l p
+C48C	s w ^ l sh
+C48D	s w ^ l th
+C48E	s w ^ l ph
+C48F	s w ^ l h
+C490	s w ^ m
+C491	s w ^ p
+C492	s w ^ p sh
+C493	s w ^ sh
+C494	s w ^ s
+C495	s w ^ N
+C496	s w ^ tS
+C497	s w ^ tSh
+C498	s w ^ kh
+C499	s w ^ th
+C49A	s w ^ ph
+C49B	s w ^ h
+C49C	s w E
+C49D	s w E k
+C49E	s w E k>
+C49F	s w E k sh
+C4A0	s w E n
+C4A1	s w E n tS
+C4A2	s w E n h
+C4A3	s w E t
+C4A4	s w E l
+C4A5	s w E l k
+C4A6	s w E l m
+C4A7	s w E l p
+C4A8	s w E l sh
+C4A9	s w E l th
+C4AA	s w E l ph
+C4AB	s w E l h
+C4AC	s w E m
+C4AD	s w E p
+C4AE	s w E p sh
+C4AF	s w E sh
+C4B0	s w E s
+C4B1	s w E N
+C4B2	s w E tS
+C4B3	s w E tSh
+C4B4	s w E kh
+C4B5	s w E th
+C4B6	s w E ph
+C4B7	s w E h
+C4B8	s 7
+C4B9	s 7 k
+C4BA	s 7 k>
+C4BB	s 7 k sh
+C4BC	s 7 n
+C4BD	s 7 n tS
+C4BE	s 7 n h
+C4BF	s 7 t
+C4C0	s 7 l
+C4C1	s 7 l k
+C4C2	s 7 l m
+C4C3	s 7 l p
+C4C4	s 7 l sh
+C4C5	s 7 l th
+C4C6	s 7 l ph
+C4C7	s 7 l h
+C4C8	s 7 m
+C4C9	s 7 p
+C4CA	s 7 p sh
+C4CB	s 7 sh
+C4CC	s 7 s
+C4CD	s 7 N
+C4CE	s 7 tS
+C4CF	s 7 tSh
+C4D0	s 7 kh
+C4D1	s 7 th
+C4D2	s 7 ph
+C4D3	s 7 h
+C4D4	s j u
+C4D5	s j u k
+C4D6	s j u k>
+C4D7	s j u k sh
+C4D8	s j u n
+C4D9	s j u n tS
+C4DA	s j u n h
+C4DB	s j u t
+C4DC	s j u l
+C4DD	s j u l	k
+C4DE	s j u l m
+C4DF	s j u l p
+C4E0	s j u l sh
+C4E1	s j u l th
+C4E2	s j u l ph
+C4E3	s j u l h
+C4E4	s j u m
+C4E5	s j u p
+C4E7	s j u sh
+C4E8	s j u s
+C4E9	s j u N
+C4EA	s j u tS
+C4EB	s j u tSh
+C4EC	s j u kh
+C4ED	s j u th
+C4EE	s j u ph
+C4EF	s j u h
+C4F0	s 4
+C4F1	s 4 k
+C4F2	s 4 k>
+C4F3	s 4 k sh
+C4F4	s 4 n
+C4F5	s 4 n tS
+C4F6	s 4 n h
+C4F7	s 4 t
+C4F8	s 4 l
+C4F9	s 4 l k
+C4FA	s 4 l m
+C4FB	s 4 l p
+C4FC	s 4 l sh
+C4FD	s 4 l th
+C4FE	s 4 l ph
+C4FF	s 4 l h
+C500	s 4 m
+C501	s 4 p
+C502	s 4 p sh
+C503	s 4 sh
+C504	s 4 s
+C505	s 4 N
+C506	s 4 tS
+C507	s 4 tSh
+C508	s 4 kh
+C509	s 4 th
+C50A	s 4 ph
+C50B	s 4 h	
+C50C	s 4 j
+C50D	s 4 j k
+C50E	s 4 j k>
+C50F	s 4 j k sh
+C510	s 4 j n
+C511	s 4 j n tS
+C512	s 4 j n h
+C513	s 4 j t
+C514	s 4 j l
+C515	s 4 j l k
+C516	s 4 j l m
+C517	s 4 j l p
+C518	s 4 j l sh
+C519	s 4 j l th
+C51A	s 4 j l ph
+C51B	s 4 j l h
+C51C	s 4 j m
+C51D	s 4 j p
+C51E	s 4 j p sh
+C51F	s 4 j sh
+C520	s 4 j s
+C521	s 4 j N
+C522	s 4 j tS
+C523	s 4 j tSh
+C524	s 4 j kh
+C525	s 4 j th
+C526	s 4 j ph
+C527	s 4 j h
+C528	s i
+C529	s i k
+C52A	s i k>
+C52B	s i k sh
+C52C	s i n
+C52D	s i n tS
+C52E	s i n h
+C52F	s i t
+C530	s i l
+C531	s i l k
+C532	s i l m
+C533	s i l p
+C534	s i l sh
+C535	s i l th
+C536	s i l ph
+C537	s i l h
+C538	s i m
+C539	s i p
+C53A	s i p sh
+C53B	s i sh
+C53C	s i s
+C53D	s i N
+C53E	s i tS
+C53F	s i tSh
+C540	s i kh
+C541	s i th
+C542	s i ph
+C543	s i h
+C544	a
+C545	a k
+C546	a k>
+C547	a k sh
+C548	a n
+C549	a n tS
+C54A	a n h
+C54B	a t
+C54C	a l
+C54D	a l k
+C54E	a l m
+C54F	a l p
+C550	a l sh
+C551	a l th
+C552	a l ph
+C553	a l h
+C554	a m
+C555	a p
+C556	a p sh
+C557	a sh
+C558	a s
+C559	a N
+C55A	a tS
+C55B	a tSh
+C55C	a kh
+C55D	a th
+C55E	a ph
+C55F	a h
+C560	@
+C561	@ k
+C562	@ k>
+C563	@ k sh
+C564	@ n
+C565	@ n tS
+C566	@ n h
+C567	@ t
+C568	@ l
+C569	@ l k
+C56A	@ l m
+C56B	@ l p
+C56C	@ l sh
+C56D	@ l th
+C56E	@ l ph
+C56F	@ l h
+C570	@ m
+C571	@ p
+C572	@ p sh
+C573	@ sh
+C574	@ s
+C575	@ N
+C576	@ tS
+C577	@ tSh
+C578	@ kh
+C579	@ th
+C57A	@ ph
+C57B	@ h
+C57C	j a
+C57D	j a k
+C57E	j a k>
+C57F	j a k sh
+C580	j a n
+C581	j a n tS
+C582	j a n h
+C583	j a t
+C584	j a l
+C585	j a l k
+C586	j a l m
+C587	j a l p
+C588	j a l sh
+C589	j a l th
+C58A	j a l ph
+C58B	j a l h
+C58C	j a m
+C58D	j a p
+C58E	j a p sh
+C58F	j a sh
+C590	j a s
+C591	j a N
+C592	j a tS
+C593	j a tSh
+C594	j a kh
+C595	j a th
+C596	j a ph
+C597	j a h
+C598	j @
+C599	j @ k
+C59A	j @ k>
+C59B	j @ k sh
+C59C	j @ n
+C59D	j @ n tS
+C59E	j @ n h
+C59F	j @ t
+C5A0	j @ l
+C5A1	j @ l k
+C5A2	j @ l m
+C5A3	j @ l p
+C5A4	j @ l sh
+C5A5	j @ l th
+C5A6	j @ l ph
+C5A7	j @ l h
+C5A8	j @ m
+C5A9	j @ p
+C5AA	j @ p sh
+C5AB	j @ sh
+C5AC	j @ s
+C5AD	j @ N
+C5AE	j @ tS
+C5AF	j @ tSh
+C5B0	j @ kh
+C5B1	j @ th
+C5B2	j @ ph
+C5B3	j @ h
+C5B4	^
+C5B5	^ k
+C5B6	^ k>
+C5B7	^ k sh
+C5B8	^ n
+C5B9	^ n tS
+C5BA	^ n h
+C5BB	^ t
+C5BC	^ l
+C5BD	^ l k
+C5BE	^ l m
+C5BF	^ l p
+C5C0	^ l sh
+C5C1	^ l th
+C5C2	^ l ph
+C5C3	^ l h		
+C5C4	^ m
+C5C5	^ p
+C5C6	^ p sh
+C5C7	^ sh
+C5C8	^ s
+C5C9	^ N
+C5CA	^ tS
+C5CB	^ tSh
+C5CC	^ kh
+C5CD	^ th
+C5CE	^ ph
+C5CF	^ h
+C5D0	e
+C5D1	e k
+C5D2	e k>
+C5D3	e k sh
+C5D4	e n
+C5D5	e n tS
+C5D6	e n h
+C5D7	e t
+C5D8	e l
+C5D9	e l k
+C5DA	e l m
+C5DB	e l p
+C5DC	e l sh
+C5DD	e l th
+C5DE	e l ph
+C5DF	e l h
+C5E0	e m
+C5E1	e p
+C5E2	e p sh
+C5E3	e sh
+C5E4	e s
+C5E5	e N
+C5E6	e tS
+C5E7	e tSh
+C5E8	e kh
+C5E9	e th
+C5EA	e ph
+C5EB	e h
+C5EC	j ^
+C5ED	j ^ k
+C5EE	j ^ k>
+C5EF	j ^ k sh
+C5F0	j ^ n
+C5F1	j ^ n tS
+C5F2	j ^ n h
+C5F3	j ^ t
+C5F4	j ^ l
+C5F5	j ^ l k
+C5F6	j ^ l m
+C5F7	j ^ l p
+C5F8	j ^ l sh
+C5F9	j ^ l th
+C5FA	j ^ l ph
+C5FB	j ^ l h
+C5FC	j ^ m
+C5FD	j ^ p
+C5FE	j ^ p sh
+C5FF	j ^ sh
+C600	j ^ s
+C601	j ^ N
+C602	j ^ tS
+C603	j ^ tSh
+C604	j ^ kh
+C605	j ^ th
+C606	j ^ ph
+C607	j ^ h
+C608	j e
+C609	j e k
+C60A	j e k>
+C60B	j e k sh
+C60C	j e n
+C60D	j e n tS
+C60E	j e n h
+C60F	j e t
+C610	j e l
+C611	j e l k
+C612	j e l m
+C613	j e l p
+C614	j e l sh
+C615	j e l th
+C616	j e l ph
+C617	j e l h
+C618	j e m
+C619	j e p
+C61A	j e p sh
+C61B	j e sh
+C61C	j e s
+C61D	j e N
+C61E	j e tS
+C61F	j e tSh
+C620	j e kh
+C621	j e th
+C622	j e ph
+C623	j e h
+C624	o
+C625	o k
+C626	o k>
+C627	o k sh
+C628	o n
+C629	o n tS
+C62A	o n h
+C62B	o t
+C62C	o l
+C62D	o l k
+C62E	o l m
+C62F	o l p
+C630	o l sh
+C631	o l th
+C632	o l ph
+C633	o l h
+C634	o m
+C635	o p
+C636	o p sh
+C637	o sh
+C638	o s
+C639	o N
+C63A	o tS
+C63B	o tSh
+C63C	o kh
+C63D	o th
+C63E	o ph
+C63F	o h
+C640	w a
+C641	w a k
+C642	w a k>
+C643	w a k sh
+C644	w a n
+C645	w a n tS
+C646	w a n h
+C647	w a t
+C648	w a l
+C649	w a l k
+C64A	w a l m
+C64B	w a l p
+C64C	w a l sh
+C64D	w a l th
+C64E	w a l ph
+C64F	w a l h
+C650	w a m
+C651	w a p
+C652	w a p sh
+C653	w a sh
+C654	w a s
+C655	w a N
+C656	w a tS
+C657	w a tSh
+C658	w a kh
+C659	w a th
+C65A	w a ph
+C65B	w a h
+C65C	w @
+C65D	w @ k
+C65E	w @ k>
+C65F	w @ k sh
+C660	w @ n
+C661	w @ n tS
+C662	w @ n h
+C663	w @ t
+C664	w @ l
+C665	w @ l k
+C666	w @ l m
+C667	w @ l p
+C668	w @ l sh
+C669	w @ l th
+C66A	w @ l ph
+C66B	w @ l h
+C66C	w @ m
+C66D	w @ p
+C66E	w @ p sh
+C66F	w @ sh
+C670	w @ s
+C671	w @ N
+C672	w @ tS
+C673	w @ tSh
+C674	w @ kh
+C675	w @ th
+C676	w @ ph
+C677	w @ h
+C678	w e
+C679	w e k
+C67A	w e k>
+C67B	w e k sh
+C67C	w e n
+C67D	w e n tS
+C67E	w e n h
+C67F	w e t
+C680	w e l
+C681	w e l k
+C682	w e l m
+C683	w e l p
+C684	w e l sh
+C685	w e l th
+C686	w e l ph
+C687	w e l h
+C688	w e m
+C689	w e p
+C68A	w e p sh
+C68B	w e sh
+C68C	w e s
+C68D	w e N
+C68E	w e tS
+C68F	w e tSh
+C690	w e kh
+C691	w e th
+C692	w e ph
+C693	w e h
+C694	j o
+C695	j o k
+C696	j o k>
+C697	j o k sh
+C698	j o n
+C699	j o n tS
+C69A	j o n h
+C69B	j o t
+C69C	j o l
+C69D	j o l k
+C69E	j o l m
+C69F	j o l p
+C6A0	j o l sh
+C6A1	j o l th
+C6A2	j o l ph
+C6A3	j o l h
+C6A4	j o m
+C6A5	j o p
+C6A6	j o p sh
+C6A7	j o sh
+C6A8	j o s
+C6A9	j o N
+C6AA	j o tS
+C6AB	j o tSh
+C6AC	j o kh
+C6AD	j o th
+C6AE	j o ph
+C6AF	j o h
+C6B0	u
+C6B1	u k
+C6B2	u k>
+C6B3	u k sh
+C6B4	u n
+C6B5	u n tS
+C6B6	u n h
+C6B7	u t
+C6B8	u l
+C6B9	u l k
+C6BA	u l m
+C6BB	u l p
+C6BC	u l sh
+C6BD	u l th
+C6BE	u l ph
+C6BF	u l h
+C6C0	u m
+C6C1	u p
+C6C2	u p sh
+C6C3	u sh
+C6C4	u s
+C6C5	u N
+C6C6	u tS
+C6C7	u tSh
+C6C8	u kh
+C6C9	u th
+C6CA	u ph
+C6CB	u h
+C6CC	w ^
+C6CD	w ^ k
+C6CE	w ^ k>
+C6CF	w ^ k sh
+C6D0	w ^ n
+C6D1	w ^ n tS
+C6D2	w ^ n h
+C6D3	w ^ t
+C6D4	w ^ l
+C6D5	w ^ l k
+C6D6	w ^ l m
+C6D7	w ^ l p
+C6D8	w ^ l sh
+C6D9	w ^ l th
+C6DA	w ^ l ph
+C6DB	w ^ l h
+C6DC	w ^ m
+C6DD	w ^ p
+C6DE	w ^ p sh
+C6DF	w ^ sh
+C6E0	w ^ s
+C6E1	w ^ N
+C6E2	w ^ tS
+C6E3	w ^ tSh
+C6E4	w ^ kh
+C6E5	w ^ th
+C6E6	w ^ ph
+C6E7	w ^ h
+C6E8	w E
+C6E9	w E k
+C6EA	w E k>
+C6EB	w E k sh
+C6EC	w E n
+C6ED	w E n tS
+C6EE	w E n h
+C6EF	w E t
+C6F0	w E l
+C6F1	w E l k
+C6F2	w E l m
+C6F3	w E l p
+C6F4	w E l sh
+C6F5	w E l th
+C6F6	w E l ph
+C6F7	w E l h
+C6F8	w E m
+C6F9	w E p
+C6FA	w E p sh
+C6FB	w E sh
+C6FC	w E s
+C6FD	w E N
+C6FE	w E tS
+C6FF	w E tSh
+C700	w E kh
+C701	w E th
+C702	w E ph
+C703	w E h
+C704	7
+C705	7 k
+C706	7 k>
+C707	7 k sh
+C708	7 n
+C709	7 n tS
+C70A	7 n h
+C70B	7 t
+C70C	7 l
+C70D	7 l k
+C70E	7 l m
+C70F	7 l p
+C710	7 l sh
+C711	7 l th
+C712	7 l ph
+C713	7 l h
+C714	7 m
+C715	7 p
+C716	7 p sh
+C717	7 sh
+C718	7 s
+C719	7 N
+C71A	7 tS
+C71B	7 tSh
+C71C	7 kh
+C71D	7 th
+C71E	7 ph
+C71F	7 h
+C720	j u
+C721	j u k
+C722	j u k>
+C723	j u k sh
+C724	j u n
+C725	j u n tS
+C726	j u n h
+C727	j u t
+C728	j u l
+C729	j u l k
+C72A	j u l m
+C72B	j u l p
+C72C	j u l sh
+C72D	j u l th
+C72E	j u l ph
+C72F	j u l h
+C730	j u m
+C731	j u p
+C732	j u p sh
+C733	j u sh
+C734	j u s
+C735	j u N
+C736	j u tS
+C737	j u tSh
+C738	j u kh
+C739	j u th
+C73A	j u ph
+C73B	j u h
+C73C	4
+C73D	4 k
+C73E	4 k>
+C73F	4 k sh
+C740	4 n
+C741	4 n tS
+C742	4 nh
+C743	4 t
+C744	4 l
+C745	4 l k
+C746	4 l m
+C747	4 l p
+C748	4 l sh
+C749	4 l th
+C74A	4 l ph
+C74B	4 l h
+C74C	4 m
+C74D	4 p
+C74E	4 p sh
+C74F	4 sh
+C750	4 s
+C751	4 N
+C752	4 tS
+C753	4 tSh
+C754	4 kh
+C755	4 th
+C756	4 ph
+C757	4 h
+C758	4 j
+C759	4 j k
+C75A	4 j k>
+C75B	4 j k sh
+C75C	4 j n
+C75D	4 j n tS
+C75E	4 j n h
+C75F	4 j t
+C760	4 j l
+C761	4 j l k
+C762	4 j l m
+C763	4 j l p
+C764	4 j l sh
+C765	4 j l th
+C766	4 j l ph
+C767	4 j l h
+C768	4 j m
+C769	4 j p
+C76A	4 j p sh
+C76B	4 j sh
+C76C	4 j s
+C76D	4 j N
+C76E	4 j tS
+C76F	4 j tSh
+C770	4 j kh
+C771	4 j th
+C772	4 j ph
+C773	4 j h
+C774	i
+C775	i k	
+C776	i k>
+C777	i k sh
+C778	i n
+C779	i n tS
+C77A	i n h
+C77B	i t
+C77C	i l
+C77D	i l k
+C77E	i l m
+C77F	i l p
+C780	i l sh
+C781	i l th
+C782	i l ph
+C783	i l h
+C784	i m
+C785	i p
+C786	i p sh
+C787	i sh
+C788	i s
+C789	i N
+C78A	i tS
+C78B	i tSh
+C78C	i kh
+C78D	i th
+C78E	i ph
+C78F	i h
+C790	tS a
+C791	tS a k
+C792	tS a k>
+C793	tS a k sh
+C794	tS a n
+C795	tS a n tS
+C796	tS a n h
+C797	tS a t
+C798	tS a l
+C799	tS a l k
+C79A	tS a l m
+C79B	tS a l p
+C79C	tS a l sh
+C79D	tS a l th
+C79E	tS a l ph
+C79F	tS a l h
+C7A0	tS a m
+C7A1	tS a p
+C7A2	tS a p sh
+C7A3	tS a sh
+C7A4	tS a s
+C7A5	tS a N
+C7A6	tS a tS
+C7A7	tS a tSh
+C7A8	tS a kh
+C7A9	tS a th
+C7AA	tS a ph
+C7AB	tS a h
+C7AC	tS @
+C7AD	tS @ k
+C7AE	tS @ k>
+C7AF	tS @ k sh
+C7B0	tS @ n
+C7B1	tS @ n tS
+C7B2	tS @ n h
+C7B3	tS @ t
+C7B4	tS @ l
+C7B5	tS @ l k
+C7B6	tS @ l m
+C7B7	tS @ l p
+C7B8	tS @ l sh
+C7B9	tS @ l th
+C7BA	tS @ l ph
+C7BB	tS @ l h
+C7BC	tS @ m
+C7BD	tS @ p
+C7BE	tS @ p sh
+C7BF	tS @ sh
+C7C0	tS @ s
+C7C1	tS @ N
+C7C2	tS @ tS
+C7C3	tS @ tSh
+C7C4	tS @ kh
+C7C5	tS @ th
+C7C6	tS @ ph
+C7C7	tS @ h
+C7C8	tS j a
+C7C9	tS j a k
+C7CA	tS j a k>
+C7CB	tS j a k sh
+C7CC	tS j a n
+C7CD	tS j a n tS
+C7CE	tS j a n h
+C7CF	tS j a t
+C7D0	tS j a l
+C7D1	tS j a l k
+C7D2	tS j a l m
+C7D3	tS j a l p
+C7D4	tS j a l sh
+C7D5	tS j a l th
+C7D6	tS j a l ph
+C7D7	tS j a l h
+C7D8	tS j a m
+C7D9	tS j a p
+C7DA	tS j a p sh
+C7DB	tS j a sh
+C7DC	tS j a s
+C7DD	tS j a N
+C7DE	tS j a tS
+C7DF	tS j a tSh
+C7E0	tS j a kh
+C7E1	tS j a th
+C7E2	tS j a ph
+C7E3	tS j a h
+C7E4	tS j @
+C7E5	tS j @ k
+C7E6	tS j @ k>
+C7E7	tS j @ k sh
+C7E8	tS j @ n
+C7E9	tS j @ n tS
+C7EA	tS j @ n h
+C7EB	tS j @ t
+C7EC	tS j @ l
+C7ED	tS j @ l k
+C7EE	tS j @ l m
+C7EF	tS j @ l p
+C7F0	tS j @ l sh
+C7F1	tS j @ l th
+C7F2	tS j @ l ph
+C7F3	tS j @ l h
+C7F4	tS j @ m
+C7F5	tS j @ p
+C7F6	tS j @ p sh
+C7F7	tS j @ sh
+C7F8	tS j @ s
+C7F9	tS j @ N
+C7FA	tS j @ tS
+C7FB	tS j @ tSh
+C7FC	tS j @ kh
+C7FD	tS j @ th
+C7FE	tS j @ ph
+C7FF	tS j @ h
+C800	tS ^
+C801	tS ^ k
+C802	tS ^ k>
+C803	tS ^ k sh
+C804	tS ^ n
+C805	tS ^ n tS
+C806	tS ^ n h
+C807	tS ^ t
+C808	tS ^ l
+C809	tS ^ l k
+C80A	tS ^ l m
+C80B	tS ^ l p
+C80C	tS ^ l sh
+C80D	tS ^ l th
+C80E	tS ^ l ph
+C80F	tS ^ l h
+C810	tS ^ m
+C811	tS ^ p
+C812	tS ^ p sh
+C813	tS ^ sh
+C814	tS ^ s
+C815	tS ^ N
+C816	tS ^ tS
+C817	tS ^ tSh
+C818	tS ^ kh
+C819	tS ^ th
+C81A	tS ^ ph
+C81B	tS ^ h
+C81C	tS e
+C81D	tS e k
+C81E	tS e k>
+C81F	tS e k sh
+C820	tS e n
+C821	tS e n tS
+C822	tS e n h
+C823	tS e t
+C824	tS e l
+C825	tS e l k
+C826	tS e l m
+C827	tS e l p
+C828	tS e l sh
+C829	tS e l th
+C82A	tS e l ph
+C82B	tS e l h
+C82C	tS e m
+C82D	tS e p
+C82E	tS e p sh
+C82F	tS e sh
+C830	tS e s
+C831	tS e N
+C832	tS e tS
+C833	tS e tSh
+C834	tS e kh
+C835	tS e th
+C836	tS e ph
+C837	tS e h
+C838	tS j ^
+C839	tS j ^ k
+C83A	tS j ^ k>
+C83B	tS j ^ k sh
+C83C	tS j ^ n
+C83D	tS j ^ n tS
+C83E	tS j ^ n h
+C83F	tS j ^ t
+C840	tS j ^ l
+C841	tS j ^ l k
+C842	tS j ^ l m
+C843	tS j ^ l p
+C844	tS j ^ l sh
+C845	tS j ^ l th
+C846	tS j ^ l ph
+C847	tS j ^ l h
+C848	tS j ^ m
+C849	tS j ^ p
+C84A	tS j ^ p sh
+C84B	tS j ^ sh
+C84C	tS j ^ s
+C84D	tS j ^ N
+C84E	tS j ^ tS
+C84F	tS j ^ tSh
+C850	tS j ^ kh
+C851	tS j ^ th
+C852	tS j ^ ph
+C853	tS j ^ h
+C854	tS j e
+C855	tS j e k
+C856	tS j e k>
+C857	tS j e k sh
+C858	tS j e n
+C859	tS j e n tS
+C85A	tS j e n h
+C85B	tS j e t
+C85C	tS j e l
+C85D	tS j e l k
+C85E	tS j e l m
+C85F	tS j e l p
+C860	tS j e l sh
+C861	tS j e l th
+C862	tS j e l ph
+C863	tS j e l h
+C864	tS j e m
+C865	tS j e p
+C866	tS j e p sh
+C867	tS j e sh
+C868	tS j e s
+C869	tS j e N
+C86A	tS j e tS
+C86B	tS j e tSh
+C86C	tS j e kh
+C86D	tS j e th
+C86E	tS j e ph
+C86F	tS j e h
+C870	tS o
+C871	tS o k
+C872	tS o k>
+C873	tS o k sh
+C874	tS o n
+C875	tS o n tS
+C876	tS o n h
+C877	tS o t
+C878	tS o l
+C879	tS o l k
+C87A	tS o l m
+C87B	tS o l p
+C87C	tS o l sh
+C87D	tS o l th
+C87E	tS o l ph
+C87F	tS o l h
+C880	tS o m
+C881	tS o p
+C882	tS o p sh
+C883	tS o sh
+C884	tS o s
+C885	tS o N
+C886	tS o tS
+C887	tS o tSh
+C888	tS o kh
+C889	tS o th
+C88A	tS o ph
+C88B	tS o h
+C88C	tS w a
+C88D	tS w a k
+C88E	tS w a k>
+C88F	tS w a k sh
+C890	tS w a n
+C891	tS w a n tS
+C892	tS w a n h
+C893	tS w a t
+C894	tS w a l
+C895	tS w a l k
+C896	tS w a l m
+C897	tS w a l p
+C898	tS w a l sh
+C899	tS w a l th
+C89A	tS w a l ph
+C89B	tS w a l h
+C89C	tS w a m
+C89D	tS w a p
+C89E	tS w a p sh
+C89F	tS w a sh
+C8A0	tS w a s
+C8A1	tS w a N
+C8A2	tS w a tS
+C8A3	tS w a tSh
+C8A4	tS w a kh
+C8A5	tS w a th
+C8A6	tS w a ph
+C8A7	tS w a h
+C8A8	tS w @
+C8A9	tS w @ k
+C8AA	tS w @ k>
+C8AB	tS w @ k sh
+C8AC	tS w @ n
+C8AD	tS w @ n tS
+C8AE	tS w @ n h
+C8AF	tS w @ t
+C8B0	tS w @ l
+C8B1	tS w @ l k
+C8B2	tS w @ l m
+C8B3	tS w @ l p
+C8B4	tS w @ l sh
+C8B5	tS w @ l th
+C8B6	tS w @ l ph
+C8B7	tS w @ l h
+C8B8	tS w @ m
+C8B9	tS w @ p
+C8BA	tS w @ p sh
+C8BB	tS w @ sh
+C8BC	tS w @ s
+C8BD	tS w @ N
+C8BE	tS w @ tS
+C8BF	tS w @ tSh
+C8C0	tS w @ kh
+C8C1	tS w @ th
+C8C2	tS w @ ph
+C8C3	tS w @ h
+C8C4	tS w e
+C8C5	tS w e k
+C8C6	tS w e k>
+C8C7	tS w e k sh
+C8C8	tS w e n
+C8C9	tS w e n tS
+C8CA	tS w e n h
+C8CB	tS w e t
+C8CC	tS w e l
+C8CD	tS w e l k
+C8CE	tS w e l m
+C8CF	tS w e l p
+C8D0	tS w e l sh
+C8D1	tS w e l th
+C8D2	tS w e l ph
+C8D3	tS w e l h
+C8D4	tS w e m
+C8D5	tS w e p
+C8D6	tS w e p sh
+C8D7	tS w e sh
+C8D8	tS w e s
+C8D9	tS w e N
+C8DA	tS w e tS
+C8DB	tS w e tSh
+C8DC	tS w e kh
+C8DD	tS w e th
+C8DE	tS w e ph
+C8DF	tS w e h
+C8E0	tS j o
+C8E1	tS j o k
+C8E2	tS j o k>
+C8E3	tS j o k sh
+C8E4	tS j o n
+C8E5	tS j o n tS
+C8E6	tS j o n h
+C8E7	tS j o t
+C8E8	tS j o l
+C8E9	tS j o l k
+C8EA	tS j o l m
+C8EB	tS j o l p
+C8EC	tS j o l sh
+C8ED	tS j o l th
+C8EE	tS j o l ph
+C8EF	tS j o l h
+C8F0	tS j o m
+C8F1	tS j o p
+C8F2	tS j o p sh
+C8F3	tS j o sh
+C8F4	tS j o s
+C8F5	tS j o N
+C8F6	tS j o tS
+C8F7	tS j o tSh
+C8F8	tS j o kh
+C8F9	tS j o th
+C8FA	tS j o ph
+C8FB	tS j o h
+C8FC	tS u
+C8FD	tS u k
+C8FE	tS u k>
+C8FF	tS u k sh
+C900	tS u n
+C901	tS u n tS
+C902	tS u n h
+C903	tS u t
+C904	tS u l
+C905	tS u l k
+C906	tS u l m
+C907	tS u l p
+C908	tS u l sh
+C909	tS u l th
+C90A	tS u l ph
+C90B	tS u l h
+C90C	tS u m
+C90D	tS u p
+C90E	tS u p sh
+C90F	tS u sh
+C910	tS u s
+C911	tS u N
+C912	tS u tS
+C913	tS u tSh
+C914	tS u kh
+C915	tS u th
+C916	tS u ph
+C917	tS u h
+C918	tS w ^
+C919	tS w ^ k
+C91A	tS w ^ k>
+C91B	tS w ^ k sh
+C91C	tS w ^ n
+C91D	tS w ^ n tS
+C91E	tS w ^ n h
+C91F	tS w ^ t
+C920	tS w ^ l
+C921	tS w ^ l k
+C922	tS w ^ l m
+C923	tS w ^ l p
+C924	tS w ^ l sh
+C925	tS w ^ l th
+C926	tS w ^ l ph
+C927	tS w ^ l h
+C928	tS w ^ m
+C929	tS w ^ p
+C92A	tS w ^ p sh
+C92B	tS w ^ sh
+C92C	tS w ^ s
+C92D	tS w ^ N
+C92E	tS w ^ tS
+C92F	tS w ^ tSh
+C930	tS w ^ kh
+C931	tS w ^ th
+C932	tS w ^ ph
+C933	tS w ^ h
+C934	tS w E
+C935	tS w E k
+C936	tS w E k>
+C937	tS w E k sh
+C938	tS w E n
+C939	tS w E n tS
+C93A	tS w E n h
+C93B	tS w E t
+C93C	tS w E l
+C93D	tS w E l k
+C93E	tS w E l m
+C93F	tS w E l p
+C940	tS w E l sh
+C941	tS w E l th
+C942	tS w E l ph
+C943	tS w E l h
+C944	tS w E m
+C945	tS w E p
+C946	tS w E p sh
+C947	tS w E sh
+C948	tS w E s
+C949	tS w E N
+C94A	tS w E tS
+C94B	tS w E tSh
+C94C	tS w E kh
+C94D	tS w E th
+C94E	tS w E ph
+C94F	tS w E h
+C950	tS 7
+C951	tS 7 k
+C952	tS 7 k>
+C953	tS 7 k sh
+C954	tS 7 n
+C955	tS 7 n tS
+C956	tS 7 n h
+C957	tS 7 t
+C958	tS 7 l
+C959	tS 7 l k
+C95A	tS 7 l m
+C95B	tS 7 l p
+C95C	tS 7 l sh
+C95D	tS 7 l th
+C95E	tS 7 l ph
+C95F	tS 7 l h
+C960	tS 7 m
+C961	tS 7 p
+C962	tS 7 p sh
+C963	tS 7 sh
+C964	tS 7 s
+C965	tS 7 N
+C966	tS 7 tS
+C967	tS 7 tSh
+C968	tS 7 kh
+C969	tS 7 th
+C96A	tS 7 ph
+C96B	tS 7 h
+C96C	tS j u
+C96D	tS j u k
+C96E	tS j u k>
+C96F	tS j u k sh
+C970	tS j u n
+C971	tS j u n tS
+C972	tS j u n h
+C973	tS j u t
+C974	tS j u l
+C975	tS j u l k
+C976	tS j u l m
+C977	tS j u l p
+C978	tS j u l sh
+C979	tS j u l th
+C97A	tS j u l ph
+C97B	tS j u l h
+C97C	tS j u m
+C97D	tS j u p
+C97E	tS j u p sh
+C97F	tS j u sh
+C980	tS j u s
+C981	tS j u N
+C982	tS j u tS
+C983	tS j u tSh
+C984	tS j u kh
+C985	tS j u th
+C986	tS j u ph
+C987	tS j u h
+C988	tS 4
+C989	tS 4 k
+C98A	tS 4 k>
+C98B	tS 4 k sh
+C98C	tS 4 n
+C98D	tS 4 n tS
+C98E	tS 4 n h
+C98F	tS 4 t
+C990	tS 4 l
+C991	tS 4 l k
+C992	tS 4 l m
+C993	tS 4 l p
+C994	tS 4 l sh
+C995	tS 4 l th
+C996	tS 4 l ph
+C997	tS 4 l h	
+C998	tS 4 m
+C999	tS 4 p
+C99A	tS 4 p sh
+C99B	tS 4 sh
+C99C	tS 4 s
+C99D	tS 4 N
+C99E	tS 4 tS
+C99F	tS 4 tSh
+C9A0	tS 4 kh
+C9A1	tS 4 th
+C9A2	tS 4 ph
+C9A3	tS 4 h
+C9A4	tS 4 j
+C9A5	tS 4 j k
+C9A6	tS 4 j k>
+C9A7	tS 4 j k sh
+C9A8	tS 4 j n
+C9A9	tS 4 j n tS
+C9AA	tS 4 j n h
+C9AB	tS 4 j t
+C9AC	tS 4 j l
+C9AD	tS 4 j l k
+C9AE	tS 4 j l m
+C9AF	tS 4 j l p
+C9B0	tS 4 j l sh
+C9B1	tS 4 j l th
+C9B2	tS 4 j l ph
+C9B3	tS 4 j l h
+C9B4	tS 4 j m
+C9B5	tS 4 j p
+C9B6	tS 4 j p sh
+C9B7	tS 4 j sh
+C9B8	tS 4 j s
+C9B9	tS 4 j N
+C9BA	tS 4 j tS
+C9BB	tS 4 j tSh
+C9BC	tS 4 j kh
+C9BD	tS 4 j th
+C9BE	tS 4 j ph
+C9BF	tS 4 j h
+C9C0	tS i
+C9C1	tS i k
+C9C2	tS i k>
+C9C3	tS i k sh
+C9C4	tS i n
+C9C5	tS i n tS
+C9C6	tS i n h
+C9C7	tS i t
+C9C8	tS i l
+C9C9	tS i l k
+C9CA	tS i l m
+C9CB	tS i l p
+C9CC	tS i l sh
+C9CD	tS i l th
+C9CE	tS i l ph
+C9CF	tS i l h
+C9D0	tS i m
+C9D1	tS i p
+C9D2	tS i p sh
+C9D3	tS i sh
+C9D4	tS i s
+C9D5	tS i N
+C9D6	tS i tS
+C9D7	tS i tSh
+C9D8	tS i kh
+C9D9	tS i th
+C9DA	tS i ph
+C9DB	tS i h
+C9DC	tS> a
+C9DD	tS> a k
+C9DE	tS> a k>
+C9DF	tS> a k sh
+C9E0	tS> a n
+C9E1	tS> a n tS
+C9E2	tS> a n h
+C9E3	tS> a t
+C9E4	tS> a l
+C9E5	tS> a l k
+C9E6	tS> a l m
+C9E7	tS> a l p
+C9E8	tS> a l sh
+C9E9	tS> a l th
+C9EA	tS> a l ph
+C9EB	tS> a l h
+C9EC	tS> a m
+C9ED	tS> a p
+C9EE	tS> a p sh
+C9EF	tS> a sh
+C9F0	tS> a s
+C9F1	tS> a N
+C9F2	tS> a tS
+C9F3	tS> a tSh
+C9F4	tS> a kh
+C9F5	tS> a th
+C9F6	tS> a ph
+C9F7	tS> a h
+C9F8	tS> @
+C9F9	tS> @ k
+C9FA	tS> @ k>
+C9FB	tS> @ k sh
+C9FC	tS> @ n
+C9FD	tS> @ n tS
+C9FE	tS> @ n h
+C9FF	tS> @ t
+CA00	tS> @ l
+CA01	tS> @ l k
+CA02	tS> @ l m
+CA03	tS> @ l p
+CA04	tS> @ l sh
+CA05	tS> @ l th
+CA06	tS> @ l ph
+CA07	tS> @ l h
+CA08	tS> @ m
+CA09	tS> @ p
+CA0A	tS> @ p sh
+CA0B	tS> @ sh
+CA0C	tS> @ s
+CA0D	tS> @ N
+CA0E	tS> @ tS
+CA0F	tS> @ tSh
+CA10	tS> @ kh
+CA11	tS> @ th
+CA12	tS> @ ph
+CA13	tS> @ h
+CA14	tS> j a
+CA15	tS> j a k
+CA16	tS> j a k>
+CA17	tS> j a k sh
+CA18	tS> j a n
+CA19	tS> j a n tS
+CA1A	tS> j a n h
+CA1B	tS> j a t
+CA1C	tS> j a l
+CA1D	tS> j a l k
+CA1E	tS> j a l m
+CA1F	tS> j a l p
+CA20	tS> j a l sh
+CA21	tS> j a l th
+CA22	tS> j a l ph
+CA23	tS> j a l h
+CA24	tS> j a m
+CA25	tS> j a p
+CA26	tS> j a p sh
+CA27	tS> j a sh
+CA28	tS> j a s
+CA29	tS> j a N
+CA2A	tS> j a tS
+CA2B	tS> j a tSh
+CA2C	tS> j a kh
+CA2D	tS> j a th
+CA2E	tS> j a ph
+CA2F	tS> j a h
+CA30	tS> j @
+CA31	tS> j @ k
+CA32	tS> j @ k>
+CA33	tS> j @ k sh
+CA34	tS> j @ n
+CA35	tS> j @ n tS
+CA36	tS> j @ n h
+CA37	tS> j @ t
+CA38	tS> j @ l
+CA39	tS> j @ l k
+CA3A	tS> j @ l m
+CA3B	tS> j @ l p
+CA3C	tS> j @ l sh
+CA3D	tS> j @ l th
+CA3E	tS> j @ l ph
+CA3F	tS> j @ l h
+CA40	tS> j @ m
+CA41	tS> j @ p
+CA42	tS> j @ p sh
+CA43	tS> j @ sh
+CA44	tS> j @ s
+CA45	tS> j @ N
+CA46	tS> j @ tS
+CA47	tS> j @ tSh
+CA48	tS> j @ kh
+CA49	tS> j @ th
+CA4A	tS> j @ ph
+CA4B	tS> j @ h
+CA4C	tS> ^
+CA4D	tS> ^ k
+CA4E	tS> ^ k>
+CA4F	tS> ^ k sh
+CA50	tS> ^ n
+CA51	tS> ^ n tS
+CA52	tS> ^ n h
+CA53	tS> ^ t
+CA54	tS> ^ l
+CA55	tS> ^ l k
+CA56	tS> ^ l m
+CA57	tS> ^ l p
+CA58	tS> ^ l sh
+CA59	tS> ^ l th
+CA5A	tS> ^ l ph
+CA5B	tS> ^ l h
+CA5C	tS> ^ m
+CA5D	tS> ^ p
+CA5E	tS> ^ p sh
+CA5F	tS> ^ sh
+CA60	tS> ^ s
+CA61	tS> ^ N
+CA62	tS> ^ tS
+CA63	tS> ^ tSh
+CA64	tS> ^ kh
+CA65	tS> ^ th
+CA66	tS> ^ ph
+CA67	tS> ^ h
+CA68	tS> e
+CA69	tS> e k
+CA6A	tS> e k>
+CA6B	tS> e k sh
+CA6C	tS> e n
+CA6D	tS> e n tS
+CA6E	tS> e n h
+CA6F	tS> e t
+CA70	tS> e l
+CA71	tS> e l k
+CA72	tS> e l m
+CA73	tS> e l p
+CA74	tS> e l sh
+CA75	tS> e l th
+CA76	tS> e l ph
+CA77	tS> e l h
+CA78	tS> e m
+CA79	tS> e p
+CA7A	tS> e p sh
+CA7B	tS> e sh
+CA7C	tS> e s
+CA7D	tS> e N
+CA7E	tS> e tS
+CA7F	tS> e tSh
+CA80	tS> e kh
+CA81	tS> e th
+CA82	tS> e ph
+CA83	tS> e h
+CA84	tS> j ^
+CA85	tS> j ^ k
+CA86	tS> j ^ k>
+CA87	tS> j ^ k sh
+CA88	tS> j ^ n
+CA89	tS> j ^ n tS
+CA8A	tS> j ^ n h
+CA8B	tS> j ^ t
+CA8C	tS> j ^ l
+CA8D	tS> j ^ l k
+CA8E	tS> j ^ l m
+CA8F	tS> j ^ l p
+CA90	tS> j ^ l sh
+CA91	tS> j ^ l th
+CA92	tS> j ^ l ph
+CA93	tS> j ^ l h
+CA94	tS> j ^ m
+CA95	tS> j ^ p
+CA96	tS> j ^ p sh
+CA97	tS> j ^ sh
+CA98	tS> j ^ s
+CA99	tS> j ^ N
+CA9A	tS> j ^ tS
+CA9B	tS> j ^ tSh
+CA9C	tS> j ^ kh
+CA9D	tS> j ^ th
+CA9E	tS> j ^ ph
+CA9F	tS> j ^ h
+CAA0	tS> j e
+CAA1	tS> j e k
+CAA2	tS> j e k>
+CAA3	tS> j e k sh
+CAA4	tS> j e n
+CAA5	tS> j e n tS
+CAA6	tS> j e n h
+CAA7	tS> j e t
+CAA8	tS> j e l
+CAA9	tS> j e l k
+CAAA	tS> j e l m
+CAAB	tS> j e l p
+CAAC	tS> j e l sh
+CAAD	tS> j e l th
+CAAE	tS> j e l ph
+CAAF	tS> j e l h
+CAB0	tS> j e m
+CAB1	tS> j e p
+CAB2	tS> j e p sh
+CAB3	tS> j e sh
+CAB4	tS> j e s
+CAB5	tS> j e N
+CAB6	tS> j e tS
+CAB7	tS> j e tSh
+CAB8	tS> j e kh
+CAB9	tS> j e th
+CABA	tS> j e ph
+CABB	tS> j e h
+CABC	tS> o
+CABD	tS> o k
+CABE	tS> o k>
+CABF	tS> o k sh
+CAC0	tS> o n
+CAC1	tS> o n tS
+CAC2	tS> o n h
+CAC3	tS> o t
+CAC4	tS> o l
+CAC5	tS> o l k
+CAC6	tS> o l m
+CAC7	tS> o l p
+CAC8	tS> o l sh
+CAC9	tS> o l th
+CACA	tS> o l ph
+CACB	tS> o l h
+CACC	tS> o m
+CACD	tS> o p
+CACE	tS> o p sh
+CACF	tS> o sh
+CAD0	tS> o s
+CAD1	tS> o N
+CAD2	tS> o tS
+CAD3	tS> o tSh
+CAD4	tS> o kh
+CAD5	tS> o th
+CAD6	tS> o ph
+CAD7	tS> o h
+CAD8	tS> w a
+CAD9	tS> w a k
+CADA	tS> w a k>
+CADB	tS> w a k sh
+CADC	tS> w a n
+CADD	tS> w a n tS
+CADE	tS> w a n h
+CADF	tS> w a t
+CAE0	tS> w a l
+CAE1	tS> w a l k
+CAE2	tS> w a l m
+CAE3	tS> w a l p
+CAE4	tS> w a l sh
+CAE5	tS> w a l th
+CAE6	tS> w a l ph
+CAE7	tS> w a l h
+CAE8	tS> w a m
+CAE9	tS> w a p
+CAEA	tS> w a p sh
+CAEB	tS> w a sh
+CAEC	tS> w a s
+CAED	tS> w a N
+CAEE	tS> w a tS
+CAEF	tS> w a tSh
+CAF0	tS> w a kh
+CAF1	tS> w a th
+CAF2	tS> w a ph
+CAF3	tS> w a h
+CAF4	tS> w @
+CAF5	tS> w @ k
+CAF6	tS> w @ k>
+CAF7	tS> w @ k sh
+CAF8	tS> w @ n
+CAF9	tS> w @ n tS
+CAFA	tS> w @ n h
+CAFB	tS> w @ t
+CAFC	tS> w @ l
+CAFD	tS> w @ l k
+CAFE	tS> w @ l m
+CAFF	tS> w @ l p
+CB00	tS> w @ l sh
+CB01	tS> w @ l th
+CB02	tS> w @ l ph
+CB03	tS> w @ l h
+CB04	tS> w @ m
+CB05	tS> w @ p
+CB06	tS> w @ p sh
+CB07	tS> w @ sh
+CB08	tS> w @ s
+CB09	tS> w @ N
+CB0A	tS> w @ tS
+CB0B	tS> w @ tSh
+CB0C	tS> w @ kh
+CB0D	tS> w @ th
+CB0E	tS> w @ ph
+CB0F	tS> w @ h
+CB10	tS> w e
+CB11	tS> w e k
+CB12	tS> w e k>
+CB13	tS> w e k sh
+CB14	tS> w e n
+CB15	tS> w e n tS
+CB16	tS> w e n h
+CB17	tS> w e t
+CB18	tS> w e l
+CB19	tS> w e l k
+CB1A	tS> w e l m
+CB1B	tS> w e l p
+CB1C	tS> w e l sh
+CB1D	tS> w e l th
+CB1E	tS> w e l ph
+CB1F	tS> w e l h
+CB20	tS> w e m
+CB21	tS> w e p
+CB22	tS> w e p sh
+CB23	tS> w e sh
+CB24	tS> w e s
+CB25	tS> w e N
+CB26	tS> w e tS
+CB27	tS> w e tSh
+CB28	tS> w e kh
+CB29	tS> w e th
+CB2A	tS> w e ph
+CB2B	tS> w e h
+CB2C	tS> j o
+CB2D	tS> j o k
+CB2E	tS> j o k>
+CB2F	tS> j o k sh
+CB30	tS> j o n
+CB31	tS> j o n tS
+CB32	tS> j o n h
+CB33	tS> j o t
+CB34	tS> j o l
+CB35	tS> j o l k
+CB36	tS> j o l m
+CB37	tS> j o l p
+CB38	tS> j o l sh
+CB39	tS> j o l th
+CB3A	tS> j o l ph
+CB3B	tS> j o l h
+CB3C	tS> j o m
+CB3D	tS> j o p
+CB3E	tS> j o p sh
+CB3F	tS> j o sh
+CB40	tS> j o s
+CB41	tS> j o N
+CB42	tS> j o tS
+CB43	tS> j o tSh
+CB44	tS> j o kh
+CB45	tS> j o th
+CB46	tS> j o ph
+CB47	tS> j o h
+CB48	tS> u
+CB49	tS> u k
+CB4A	tS> u k>
+CB4B	tS> u k sh
+CB4C	tS> u n
+CB4D	tS> u n tS
+CB4E	tS> u n h
+CB4F	tS> u t
+CB50	tS> u l
+CB51	tS> u l k
+CB52	tS> u l m
+CB53	tS> u l p
+CB54	tS> u l sh
+CB55	tS> u l th
+CB56	tS> u l ph
+CB57	tS> u l h
+CB58	tS> u m
+CB59	tS> u p
+CB5A	tS> u p sh
+CB5B	tS> u sh
+CB5C	tS> u s
+CB5D	tS> u N
+CB5E	tS> u tS
+CB5F	tS> u tSh
+CB60	tS> u kh
+CB61	tS> u th
+CB62	tS> u ph
+CB63	tS> u h
+CB64	tS> w ^
+CB65	tS> w ^ k
+CB66	tS> w ^ k>
+CB67	tS> w ^ k sh
+CB68	tS> w ^ n
+CB69	tS> w ^ n tS
+CB6A	tS> w ^ n h
+CB6B	tS> w ^ t
+CB6C	tS> w ^ l
+CB6D	tS> w ^ l k
+CB6E	tS> w ^ l m
+CB6F	tS> w ^ l p
+CB70	tS> w ^ l sh
+CB71	tS> w ^ l th
+CB72	tS> w ^ l ph
+CB73	tS> w ^ l h
+CB74	tS> w ^ m
+CB75	tS> w ^ p
+CB76	tS> w ^ p sh
+CB77	tS> w ^ sh
+CB78	tS> w ^ s
+CB79	tS> w ^ N
+CB7A	tS> w ^ tS
+CB7B	tS> w ^ tSh
+CB7C	tS> w ^ kh
+CB7D	tS> w ^ th
+CB7E	tS> w ^ ph
+CB7F	tS> w ^ h
+CB80	tS> w E
+CB81	tS> w E k
+CB82	tS> w E k>
+CB83	tS> w E k sh
+CB84	tS> w E n
+CB85	tS> w E n tS
+CB86	tS> w E n h
+CB87	tS> w E t
+CB88	tS> w E l
+CB89	tS> w E l k
+CB8A	tS> w E l m
+CB8B	tS> w E l p
+CB8C	tS> w E l sh
+CB8D	tS> w E l th
+CB8E	tS> w E l ph
+CB8F	tS> w E l h
+CB90	tS> w E m
+CB91	tS> w E p
+CB92	tS> w E p sh
+CB93	tS> w E sh
+CB94	tS> w E s
+CB95	tS> w E N
+CB96	tS> w E tS
+CB97	tS> w E tSh
+CB98	tS> w E kh
+CB99	tS> w E th
+CB9A	tS> w E ph
+CB9B	tS> w E h
+CB9C	tS> 7
+CB9D	tS> 7 k
+CB9E	tS> 7 k>
+CB9F	tS> 7 k sh
+CBA0	tS> 7 n
+CBA1	tS> 7 n tS
+CBA2	tS> 7 n h
+CBA3	tS> 7 t
+CBA4	tS> 7 l
+CBA5	tS> 7 l k
+CBA6	tS> 7 l m
+CBA7	tS> 7 l p
+CBA8	tS> 7 l sh
+CBA9	tS> 7 l th
+CBAA	tS> 7 l ph
+CBAB	tS> 7 l h
+CBAC	tS> 7 m
+CBAD	tS> 7 p
+CBAE	tS> 7 p sh
+CBAF	tS> 7 sh
+CBB0	tS> 7 s
+CBB1	tS> 7 N
+CBB2	tS> 7 tS
+CBB3	tS> 7 tSh
+CBB4	tS> 7 kh
+CBB5	tS> 7 th
+CBB6	tS> 7 ph
+CBB7	tS> 7 h
+CBB8	tS> j u
+CBB9	tS> j u k
+CBBA	tS> j u k>
+CBBB	tS> j u k sh
+CBBC	tS> j u n
+CBBD	tS> j u n tS
+CBBE	tS> j u n h
+CBBF	tS> j u t
+CBC0	tS> j u l
+CBC1	tS> j u l k
+CBC2	tS> j u l m
+CBC3	tS> j u l p
+CBC4	tS> j u l sh
+CBC5	tS> j u l th
+CBC6	tS> j u l ph
+CBC7	tS> j u l h
+CBC8	tS> j u m
+CBC9	tS> j u p
+CBCA	tS> j u p sh
+CBCB	tS> j u sh
+CBCC	tS> j u s
+CBCD	tS> j u N
+CBCE	tS> j u tS
+CBCF	tS> j u tSh
+CBD0	tS> j u kh
+CBD1	tS> j u th
+CBD2	tS> j u ph
+CBD3	tS> j u h
+CBD4	tS> 4
+CBD5	tS> 4 k
+CBD6	tS> 4 k>
+CBD7	tS> 4 k s
+CBD8	tS> 4 n
+CBD9	tS> 4 n tS
+CBDA	tS> 4 n h
+CBDB	tS> 4 t
+CBDC	tS> 4 l
+CBDD	tS> 4 l k
+CBDE	tS> 4 l m
+CBDF	tS> 4 l p
+CBE0	tS> 4 l sh
+CBE1	tS> 4 l th
+CBE2	tS> 4 l ph
+CBE3	tS> 4 l h
+CBE4	tS> 4 m
+CBE5	tS> 4 p
+CBE6	tS> 4 p sh
+CBE7	tS> 4 sh
+CBE8	tS> 4 s
+CBE9	tS> 4 N
+CBEA	tS> 4 tS
+CBEB	tS> 4 tSh
+CBEC	tS> 4 kh
+CBED	tS> 4 th
+CBEE	tS> 4 ph
+CBEF	tS> 4 h
+CBF0	tS> 4 j
+CBF1	tS> 4 j k
+CBF2	tS> 4 j k>
+CBF3	tS> 4 j k sh
+CBF4	tS> 4 j n
+CBF5	tS> 4 j n tS
+CBF6	tS> 4 j n h
+CBF7	tS> 4 j t
+CBF8	tS> 4 j l
+CBF9	tS> 4 j l k
+CBFA	tS> 4 j l m
+CBFB	tS> 4 j l p
+CBFC	tS> 4 j l sh
+CBFD	tS> 4 j l th
+CBFE	tS> 4 j l ph
+CBFF	tS> 4 j l h
+CC00	tS> 4 j m
+CC01	tS> 4 j p
+CC02	tS> 4 j p sh
+CC03	tS> 4 j sh
+CC04	tS> 4 j s
+CC05	tS> 4 j N
+CC06	tS> 4 j tS
+CC07	tS> 4 j tSh
+CC08	tS> 4 j kh
+CC09	tS> 4 j th
+CC0A	tS> 4 j ph
+CC0B	tS> 4 j h
+CC0C	tS> i
+CC0D	tS> i k
+CC0E	tS> i k>
+CC0F	tS> i k sh
+CC10	tS> i n
+CC11	tS> i n tS
+CC12	tS> i n h
+CC13	tS> i t
+CC14	tS> i l
+CC15	tS> i l k
+CC16	tS> i l m
+CC17	tS> i l p
+CC18	tS> i l sh
+CC19	tS> i l th
+CC1A	tS> i l ph
+CC1B	tS> i l h
+CC1C	tS> i m
+CC1D	tS> i p
+CC1E	tS> i p sh
+CC1F	tS> i sh
+CC20	tS> i s
+CC21	tS> i N
+CC22	tS> i tS
+CC23	tS> i tSh
+CC24	tS> i kh
+CC25	tS> i th
+CC26	tS> i ph
+CC27	tS> i h
+CC28	tSh a
+CC29	tSh a k
+CC2A	tSh a k>
+CC2B	tSh a k sh
+CC2C	tSh a n
+CC2D	tSh a n tS
+CC2E	tSh a n h
+CC2F	tSh a t
+CC30	tSh a l
+CC31	tSh a l k
+CC32	tSh a l m
+CC33	tSh a l p
+CC34	tSh a l sh
+CC35	tSh a l th
+CC36	tSh a l ph
+CC37	tSh a l h
+CC38	tSh a m
+CC39	tSh a p
+CC3A	tSh a p sh
+CC3B	tSh a sh
+CC3C	tSh a s
+CC3D	tSh a N
+CC3E	tSh a tS
+CC3F	tSh a tSh
+CC40	tSh a kh
+CC41	tSh a th
+CC42	tSh a ph
+CC43	tSh a h
+CC44	tSh @
+CC45	tSh @ k
+CC46	tSh @ k>
+CC47	tSh @ k sh
+CC48	tSh @ n
+CC49	tSh @ n tS
+CC4A	tSh @ n h
+CC4B	tSh @ t
+CC4C	tSh @ l
+CC4D	tSh @ l k
+CC4E	tSh @ l m
+CC4F	tSh @ l p
+CC50	tSh @ l sh
+CC51	tSh @ l th
+CC52	tSh @ l ph
+CC53	tSh @ l h
+CC54	tSh @ m
+CC55	tSh @ p
+CC56	tSh @ p sh
+CC57	tSh @ sh
+CC58	tSh @ s
+CC59	tSh @ N
+CC5A	tSh @ tS
+CC5B	tSh @ tSh
+CC5C	tSh @ kh
+CC5D	tSh @ th
+CC5E	tSh @ ph
+CC5F	tSh @ h
+CC60	tSh j a
+CC61	tSh j a k
+CC62	tSh j a k>
+CC63	tSh j a k sh
+CC64	tSh j a n
+CC65	tSh j a n tS
+CC66	tSh j a n h
+CC67	tSh j a t
+CC68	tSh j a l
+CC69	tSh j a l k
+CC6A	tSh j a l m
+CC6B	tSh j a l p
+CC6C	tSh j a l sh
+CC6D	tSh j a l th
+CC6E	tSh j a l ph
+CC6F	tSh j a l h
+CC70	tSh j a m
+CC71	tSh j a p
+CC72	tSh j a p sh
+CC73	tSh j a sh
+CC74	tSh j a s
+CC75	tSh j a N
+CC76	tSh j a tS
+CC77	tSh j a tSh
+CC78	tSh j a kh
+CC79	tSh j a th
+CC7A	tSh j a ph
+CC7B	tSh j a h
+CC7C	tSh j @
+CC7D	tSh j @ k
+CC7E	tSh j @ k>
+CC7F	tSh j @ k sh
+CC80	tSh j @ n
+CC81	tSh j @ n tS
+CC82	tSh j @ n h
+CC83	tSh j @ t
+CC84	tSh j @ l
+CC85	tSh j @ l k
+CC86	tSh j @ l m
+CC87	tSh j @ l p
+CC88	tSh j @ l sh
+CC89	tSh j @ l th
+CC8A	tSh j @ l ph
+CC8B	tSh j @ l h
+CC8C	tSh j @ m
+CC8D	tSh j @ p
+CC8E	tSh j @ p sh
+CC8F	tSh j @ sh
+CC90	tSh j @ s
+CC91	tSh j @ N
+CC92	tSh j @ tS
+CC93	tSh j @ tSh
+CC94	tSh j @ kh
+CC95	tSh j @ th
+CC96	tSh j @ ph
+CC97	tSh j @ h
+CC98	tSh ^
+CC99	tSh ^ k
+CC9A	tSh ^ k>
+CC9B	tSh ^ k sh
+CC9C	tSh ^ n
+CC9D	tSh ^ n tS
+CC9E	tSh ^ n h
+CC9F	tSh ^ t
+CCA0	tSh ^ l
+CCA1	tSh ^ l k
+CCA2	tSh ^ l m
+CCA3	tSh ^ l p
+CCA4	tSh ^ l sh
+CCA5	tSh ^ l th
+CCA6	tSh ^ l ph
+CCA7	tSh ^ l h
+CCA8	tSh ^ m
+CCA9	tSh ^ p
+CCAA	tSh ^ p sh
+CCAB	tSh ^ sh
+CCAC	tSh ^ s
+CCAD	tSh ^ N
+CCAE	tSh ^ tS
+CCAF	tSh ^ tSh
+CCB0	tSh ^ kh
+CCB1	tSh ^ th
+CCB2	tSh ^ ph
+CCB3	tSh ^ h
+CCB4	tSh e
+CCB5	tSh e k
+CCB6	tSh e k>
+CCB7	tSh e k sh
+CCB8	tSh e n
+CCB9	tSh e n tS
+CCBA	tSh e n h
+CCBB	tSh e t
+CCBC	tSh e l
+CCBD	tSh e l k
+CCBE	tSh e l m
+CCBF	tSh e l p
+CCC0	tSh e l sh
+CCC1	tSh e l th
+CCC2	tSh e l ph
+CCC3	tSh e l h
+CCC4	tSh e m
+CCC5	tSh e p
+CCC6	tSh e p sh
+CCC7	tSh e sh
+CCC8	tSh e s
+CCC9	tSh e N
+CCCA	tSh e tS
+CCCB	tSh e tSh
+CCCC	tSh e kh
+CCCD	tSh e th
+CCCE	tSh e ph
+CCCF	tSh e h
+CCD0	tSh j ^
+CCD1	tSh j ^ k
+CCD2	tSh j ^ k>
+CCD3	tSh j ^ k sh
+CCD4	tSh j ^ n
+CCD5	tSh j ^ n tS
+CCD6	tSh j ^ n h
+CCD7	tSh j ^ t
+CCD8	tSh j ^ l
+CCD9	tSh j ^ l k
+CCDA	tSh j ^ l m
+CCDB	tSh j ^ l p
+CCDC	tSh j ^ l sh
+CCDD	tSh j ^ l th
+CCDE	tSh j ^ l ph
+CCDF	tSh j ^ l h
+CCE0	tSh j ^ m
+CCE1	tSh j ^ p
+CCE2	tSh j ^ p sh
+CCE3	tSh j ^ sh
+CCE4	tSh j ^ s
+CCE5	tSh j ^ N
+CCE6	tSh j ^ tS
+CCE7	tSh j ^ tSh
+CCE8	tSh j ^ kh
+CCE9	tSh j ^ th
+CCEA	tSh j ^ ph
+CCEB	tSh j ^ h
+CCEC	tSh j e
+CCED	tSh j e k
+CCEE	tSh j e k>
+CCEF	tSh j e k sh
+CCF0	tSh j e n
+CCF1	tSh j e n tS
+CCF2	tSh j e nh
+CCF3	tSh j e t
+CCF4	tSh j e l
+CCF5	tSh j e l k
+CCF6	tSh j e l m
+CCF7	tSh j e l p
+CCF8	tSh j e l sh
+CCF9	tSh j e l th
+CCFA	tSh j e l ph
+CCFB	tSh j e l h
+CCFC	tSh j e m
+CCFD	tSh j e p
+CCFE	tSh j e p sh
+CCFF	tSh j e sh
+CD00	tSh j e s
+CD01	tSh j e N
+CD02	tSh j e tS
+CD03	tSh j e tSh
+CD04	tSh j e kh
+CD05	tSh j e th
+CD06	tSh j e ph
+CD07	tSh j e h
+CD08	tSh o
+CD09	tSh o k
+CD0A	tSh o k>
+CD0B	tSh o k sh
+CD0C	tSh o n
+CD0D	tSh o n tS
+CD0E	tSh o n h
+CD0F	tSh o t
+CD10	tSh o l
+CD11	tSh o l k
+CD12	tSh o l m
+CD13	tSh o l p
+CD14	tSh o l sh
+CD15	tSh o l th
+CD16	tSh o l ph
+CD17	tSh o l h
+CD18	tSh o m
+CD19	tSh o p
+CD1A	tSh o p sh
+CD1B	tSh o sh
+CD1C	tSh o s
+CD1D	tSh o N
+CD1E	tSh o tS
+CD1F	tSh o tSh
+CD20	tSh o kh
+CD21	tSh o th
+CD22	tSh o ph
+CD23	tSh o h
+CD24	tSh w a
+CD25	tSh w a k
+CD26	tSh w a k>
+CD27	tSh w a k sh
+CD28	tSh w a n
+CD29	tSh w a n tS
+CD2A	tSh w a n h
+CD2B	tSh w a t
+CD2C	tSh w a l
+CD2D	tSh w a l k
+CD2E	tSh w a l m
+CD2F	tSh w a l p
+CD30	tSh w a l sh
+CD31	tSh w a l th
+CD32	tSh w a l ph
+CD33	tSh w a l h
+CD34	tSh w a m
+CD35	tSh w a p
+CD36	tSh w a p sh
+CD37	tSh w a sh
+CD38	tSh w a s
+CD39	tSh w a N
+CD3A	tSh w a tS
+CD3B	tSh w a tSh
+CD3C	tSh w a kh
+CD3D	tSh w a th
+CD3E	tSh w a ph
+CD3F	tSh w a h
+CD40	tSh w @
+CD41	tSh w @ k
+CD42	tSh w @ k>
+CD43	tSh w @ k sh
+CD44	tSh w @ n
+CD45	tSh w @ n tS
+CD46	tSh w @ n h
+CD47	tSh w @ t
+CD48	tSh w @ l
+CD49	tSh w @ l k
+CD4A	tSh w @ l m
+CD4B	tSh w @ l p
+CD4C	tSh w @ l sh
+CD4D	tSh w @ l th
+CD4E	tSh w @ l ph
+CD4F	tSh w @ l h
+CD50	tSh w @ m
+CD51	tSh w @ p
+CD52	tSh w @ p sh
+CD53	tSh w @ sh
+CD54	tSh w @ s
+CD55	tSh w @ N
+CD56	tSh w @ tS
+CD57	tSh w @ tSh
+CD58	tSh w @ kh
+CD59	tSh w @ th
+CD5A	tSh w @ ph
+CD5B	tSh w @ h
+CD5C	tSh w e
+CD5D	tSh w e k
+CD5E	tSh w e k>
+CD5F	tSh w e k sh
+CD60	tSh w e n
+CD61	tSh w e n tS
+CD62	tSh w e n h
+CD63	tSh w e t
+CD64	tSh w e l
+CD65	tSh w e l k
+CD66	tSh w e l m
+CD67	tSh w e l p
+CD68	tSh w e l sh
+CD69	tSh w e l th
+CD6A	tSh w e l ph
+CD6B	tSh w e l h
+CD6C	tSh w e m
+CD6D	tSh w e p
+CD6E	tSh w e p sh
+CD6F	tSh w e sh
+CD70	tSh w e s
+CD71	tSh w e N
+CD72	tSh w e tS
+CD73	tSh w e tSh
+CD74	tSh w e kh
+CD75	tSh w e th
+CD76	tSh w e ph
+CD77	tSh w e h
+CD78	tSh j o
+CD79	tSh j o k
+CD7A	tSh j o k>
+CD7B	tSh j o k sh
+CD7C	tSh j o n
+CD7D	tSh j o n tS
+CD7E	tSh j o n h
+CD7F	tSh j o t
+CD80	tSh j o l
+CD81	tSh j o l k
+CD82	tSh j o l m
+CD83	tSh j o l p
+CD84	tSh j o l sh
+CD85	tSh j o l th
+CD86	tSh j o l ph
+CD87	tSh j o l h
+CD88	tSh j o m
+CD89	tSh j o p
+CD8A	tSh j o p sh
+CD8B	tSh j o sh
+CD8C	tSh j o s
+CD8D	tSh j o N
+CD8E	tSh j o tS
+CD8F	tSh j o tSh
+CD90	tSh j o kh
+CD91	tSh j o th
+CD92	tSh j o ph
+CD93	tSh j o h
+CD94	tSh u
+CD95	tSh u k
+CD96	tSh u k>
+CD97	tSh u k sh
+CD98	tSh u n
+CD99	tSh u n tS
+CD9A	tSh u n h
+CD9B	tSh u t
+CD9C	tSh u l
+CD9D	tSh u l k
+CD9E	tSh u l m
+CD9F	tSh u l p
+CDA0	tSh u l sh
+CDA1	tSh u l th
+CDA2	tSh u l ph
+CDA3	tSh u l h
+CDA4	tSh u m
+CDA5	tSh u p
+CDA6	tSh u p sh
+CDA7	tSh u sh
+CDA8	tSh u s
+CDA9	tSh u N
+CDAA	tSh u tS
+CDAB	tSh u tSh
+CDAC	tSh u kh
+CDAD	tSh u th
+CDAE	tSh u ph
+CDAF	tSh u h
+CDB0	tSh w ^
+CDB1	tSh w ^ k
+CDB2	tSh w ^ k>
+CDB3	tSh w ^ k sh
+CDB4	tSh w ^ n
+CDB5	tSh w ^ n tS
+CDB6	tSh w ^ n h
+CDB7	tSh w ^ t
+CDB8	tSh w ^ l
+CDB9	tSh w ^ l k
+CDBA	tSh w ^ l m
+CDBB	tSh w ^ l p
+CDBC	tSh w ^ l sh
+CDBD	tSh w ^ l th
+CDBE	tSh w ^ l ph
+CDBF	tSh w ^ l h
+CDC0	tSh w ^ m
+CDC1	tSh w ^ p
+CDC2	tSh w ^ p sh
+CDC3	tSh w ^ sh
+CDC4	tSh w ^ s
+CDC5	tSh w ^ N
+CDC6	tSh w ^ tS
+CDC7	tSh w ^ tSh
+CDC8	tSh w ^ kh
+CDC9	tSh w ^ th
+CDCA	tSh w ^ ph
+CDCB	tSh w ^ h
+CDCC	tSh w E
+CDCD	tSh w E k
+CDCE	tSh w E k>
+CDCF	tSh w E k sh
+CDD0	tSh w E n
+CDD1	tSh w E n tS
+CDD2	tSh w E n h
+CDD3	tSh w E t
+CDD4	tSh w E l
+CDD5	tSh w E l k
+CDD6	tSh w E l m
+CDD7	tSh w E l p
+CDD8	tSh w E l sh
+CDD9	tSh w E l th
+CDDA	tSh w E l ph
+CDDB	tSh w E l h
+CDDC	tSh w E m
+CDDD	tSh w E p
+CDDE	tSh w E p sh
+CDDF	tSh w E sh
+CDE0	tSh w E s
+CDE1	tSh w E N
+CDE2	tSh w E tS
+CDE3	tSh w E tSh
+CDE4	tSh w E kh
+CDE5	tSh w E th
+CDE6	tSh w E ph
+CDE7	tSh w E h
+CDE8	tSh 7
+CDE9	tSh 7 k
+CDEA	tSh 7 k>
+CDEB	tSh 7 k sh
+CDEC	tSh 7 n
+CDED	tSh 7 n tS
+CDEE	tSh 7 n h
+CDEF	tSh 7 t
+CDF0	tSh 7 l
+CDF1	tSh 7 l k
+CDF2	tSh 7 l m
+CDF3	tSh 7 l p
+CDF4	tSh 7 l sh
+CDF5	tSh 7 l th
+CDF6	tSh 7 l ph
+CDF7	tSh 7 l h
+CDF8	tSh 7 m
+CDF9	tSh 7 p
+CDFA	tSh 7 p sh
+CDFB	tSh 7 sh
+CDFC	tSh 7 s
+CDFD	tSh 7 N
+CDFE	tSh 7 tS
+CDFF	tSh 7 tSh
+CE00	tSh 7 kh
+CE01	tSh 7 th
+CE02	tSh 7 ph
+CE03	tSh 7 h
+CE04	tSh j u
+CE05	tSh j u k
+CE06	tSh j u k>
+CE07	tSh j u k sh
+CE08	tSh j u n
+CE09	tSh j u n tS
+CE0A	tSh j u n h
+CE0B	tSh j u t
+CE0C	tSh j u l
+CE0D	tSh j u l k
+CE0E	tSh j u l m
+CE0F	tSh j u l p
+CE10	tSh j u l sh
+CE11	tSh j u l th
+CE12	tSh j u l ph
+CE13	tSh j u l h
+CE14	tSh j u m
+CE15	tSh j u p
+CE16	tSh j u p sh
+CE17	tSh j u sh
+CE18	tSh j u s
+CE19	tSh j u N
+CE1A	tSh j u tS
+CE1B	tSh j u tSh
+CE1C	tSh j u kh
+CE1D	tSh j u th
+CE1E	tSh j u ph
+CE1F	tSh j u h
+CE20	tSh 4
+CE21	tSh 4 k
+CE22	tSh 4 k>
+CE23	tSh 4 k sh
+CE24	tSh 4 n
+CE25	tSh 4 n tS
+CE26	tSh 4 n h
+CE27	tSh 4 t
+CE28	tSh 4 l
+CE29	tSh 4 l k
+CE2A	tSh 4 l m
+CE2B	tSh 4 l p
+CE2C	tSh 4 l sh
+CE2D	tSh 4 l th
+CE2E	tSh 4 l ph
+CE2F	tSh 4 l h
+CE30	tSh 4 m
+CE31	tSh 4 p
+CE32	tSh 4 p sh
+CE33	tSh 4 sh
+CE34	tSh 4 s
+CE35	tSh 4 N
+CE36	tSh 4 tS
+CE37	tSh 4 tSh
+CE38	tSh 4 kh
+CE39	tSh 4 th
+CE3A	tSh 4 ph
+CE3B	tSh 4 h
+CE3C	tSh 4 j
+CE3D	tSh 4 j k
+CE3E	tSh 4 j k>
+CE3F	tSh 4 j k sh
+CE40	tSh 4 j n
+CE41	tSh 4 j n tS
+CE42	tSh 4 j n h
+CE43	tSh 4 j t
+CE44	tSh 4 j l
+CE45	tSh 4 j l k
+CE46	tSh 4 j l m
+CE47	tSh 4 j l p
+CE48	tSh 4 j l sh
+CE49	tSh 4 j l th
+CE4A	tSh 4 j l ph
+CE4B	tSh 4 j l h
+CE4C	tSh 4 j m
+CE4D	tSh 4 j p
+CE4E	tSh 4 j p sh
+CE4F	tSh 4 j sh
+CE50	tSh 4 j s
+CE51	tSh 4 j N
+CE52	tSh 4 j tS
+CE53	tSh 4 j tSh
+CE54	tSh 4 j kh
+CE55	tSh 4 j th
+CE56	tSh 4 j ph
+CE57	tSh 4 j h
+CE58	tSh i
+CE59	tSh i k
+CE5A	tSh i k>
+CE5B	tSh i k sh
+CE5C	tSh i n
+CE5D	tSh i n tS
+CE5E	tSh i n h
+CE5F	tSh i t
+CE60	tSh i l
+CE61	tSh i l k
+CE62	tSh i l m
+CE63	tSh i l p
+CE64	tSh i l sh
+CE65	tSh i l th
+CE66	tSh i l ph
+CE67	tSh i l h
+CE68	tSh i m
+CE69	tSh i p
+CE6A	tSh i p sh
+CE6B	tSh i sh
+CE6C	tSh i s
+CE6D	tSh i N
+CE6E	tSh i tS
+CE6F	tSh i tSh
+CE70	tSh i kh
+CE71	tSh i th
+CE72	tSh i ph
+CE73	tSh i h
+CE74	kh a
+CE75	kh a k
+CE76	kh a k>
+CE77	kh a k sh
+CE78	kh a n
+CE79	kh a n tS
+CE7A	kh a n h
+CE7B	kh a t
+CE7C	kh a l
+CE7D	kh a l k
+CE7E	kh a l m
+CE7F	kh a l p
+CE80	kh a l sh
+CE81	kh a l th
+CE82	kh a l ph
+CE83	kh a l h
+CE84	kh a m
+CE85	kh a p
+CE86	kh a p sh
+CE87	kh a sh
+CE88	kh a s
+CE89	kh a N
+CE8A	kh a tS
+CE8B	kh a tSh
+CE8C	kh a kh
+CE8D	kh a th
+CE8E	kh a ph
+CE8F	kh a h
+CE90	kh @
+CE91	kh @ k
+CE92	kh @ k>
+CE93	kh @ k sh
+CE94	kh @ n
+CE95	kh @ n tS
+CE96	kh @ n h
+CE97	kh @ t
+CE98	kh @ l
+CE99	kh @ l k
+CE9A	kh @ l m
+CE9B	kh @ l p
+CE9C	kh @ l sh
+CE9D	kh @ l th
+CE9E	kh @ l ph
+CE9F	kh @ l h
+CEA0	kh @ m
+CEA1	kh @ p
+CEA2	kh @ p sh
+CEA3	kh @ sh
+CEA4	kh @ s
+CEA5	kh @ N
+CEA6	kh @ tS
+CEA7	kh @ tSh
+CEA8	kh @ kh
+CEA9	kh @ th
+CEAA	kh @ ph
+CEAB	kh @ h
+CEAC	kh j a
+CEAD	kh j a k
+CEAE	kh j a k>
+CEAF	kh j a k sh
+CEB0	kh j a n
+CEB1	kh j a n tS
+CEB2	kh j a n h
+CEB3	kh j a t
+CEB4	kh j a l
+CEB5	kh j a l k
+CEB6	kh j a l m
+CEB7	kh j a l p
+CEB8	kh j a l sh
+CEB9	kh j a l th
+CEBA	kh j a l ph
+CEBB	kh j a l h
+CEBC	kh j a m
+CEBD	kh j a p
+CEBE	kh j a p sh
+CEBF	kh j a sh
+CEC0	kh j a s
+CEC1	kh j a N
+CEC2	kh j a tS
+CEC3	kh j a tSh
+CEC4	kh j a kh
+CEC5	kh j a th
+CEC6	kh j a ph
+CEC7	kh j a h
+CEC8	kh j @
+CEC9	kh j @ k
+CECA	kh j @ k>
+CECB	kh j @ k sh
+CECC	kh j @ n
+CECD	kh j @ n tS
+CECE	kh j @ n h
+CECF	kh j @ t
+CED0	kh j @ l
+CED1	kh j @ l k
+CED2	kh j @ l m
+CED3	kh j @ l p
+CED4	kh j @ l sh
+CED5	kh j @ l th
+CED6	kh j @ l ph
+CED7	kh j @ l h
+CED8	kh j @ m
+CED9	kh j @ p
+CEDA	kh j @ p sh
+CEDB	kh j @ sh
+CEDC	kh j @ s
+CEDD	kh j @ N
+CEDE	kh j @ tS
+CEDF	kh j @ tSh
+CEE0	kh j @ kh
+CEE1	kh j @ th
+CEE2	kh j @ ph
+CEE3	kh j @ h
+CEE4	kh ^
+CEE5	kh ^ k
+CEE6	kh ^ k>
+CEE7	kh ^ k sh
+CEE8	kh ^ n
+CEE9	kh ^ n tS
+CEEA	kh ^ n h
+CEEB	kh ^ t
+CEEC	kh ^ l
+CEED	kh ^ l k
+CEEE	kh ^ l m
+CEEF	kh ^ l p
+CEF0	kh ^ l sh
+CEF1	kh ^ l th
+CEF2	kh ^ l ph
+CEF3	kh ^ l h
+CEF4	kh ^ m
+CEF5	kh ^ p
+CEF6	kh ^ p sh
+CEF7	kh ^ sh
+CEF8	kh ^ s
+CEF9	kh ^ N
+CEFA	kh ^ tS
+CEFB	kh ^ tSh
+CEFC	kh ^ kh
+CEFD	kh ^ th
+CEFE	kh ^ ph
+CEFF	kh ^ h
+CF00	kh e
+CF01	kh e k
+CF02	kh e k>
+CF03	kh e k sh
+CF04	kh e n
+CF05	kh e n tS
+CF06	kh e n h
+CF07	kh e t
+CF08	kh e l
+CF09	kh e l k
+CF0A	kh e l m
+CF0B	kh e l p
+CF0C	kh e l sh
+CF0D	kh e l th
+CF0E	kh e l ph
+CF0F	kh e l h
+CF10	kh e m
+CF11	kh e p
+CF12	kh e p sh
+CF13	kh e sh
+CF14	kh e s
+CF15	kh e N
+CF16	kh e tS
+CF17	kh e tSh
+CF18	kh e kh
+CF19	kh e th
+CF1A	kh e ph
+CF1B	kh e h
+CF1C	kh j ^
+CF1D	kh j ^ k
+CF1E	kh j ^ k>
+CF1F	kh j ^ k sh
+CF20	kh j ^ n
+CF21	kh j ^ n tS
+CF22	kh j ^ n h
+CF23	kh j ^ t
+CF24	kh j ^ l
+CF25	kh j ^ l k
+CF26	kh j ^ l m
+CF27	kh j ^ l p
+CF28	kh j ^ l sh
+CF29	kh j ^ l th
+CF2A	kh j ^ l ph
+CF2B	kh j ^ l h
+CF2C	kh j ^ m
+CF2D	kh j ^ p
+CF2E	kh j ^ p sh
+CF2F	kh j ^ sh
+CF30	kh j ^ s
+CF31	kh j ^ N
+CF32	kh j ^ tS
+CF33	kh j ^ tSh
+CF34	kh j ^ kh
+CF35	kh j ^ th
+CF36	kh j ^ ph
+CF37	kh j ^ h
+CF38	kh j e
+CF39	kh j e k
+CF3A	kh j e k>
+CF3B	kh j e k sh
+CF3C	kh j e n
+CF3D	kh j e n tS
+CF3E	kh j e n h
+CF3F	kh j e t
+CF40	kh j e l
+CF41	kh j e l k
+CF42	kh j e l m
+CF43	kh j e l p
+CF44	kh j e l sh
+CF45	kh j e l th
+CF46	kh j e l ph
+CF47	kh j e l h
+CF48	kh j e m
+CF49	kh j e p
+CF4A	kh j e p sh
+CF4B	kh j e sh
+CF4C	kh j e s
+CF4D	kh j e N
+CF4E	kh j e tS
+CF4F	kh j e tSh
+CF50	kh j e kh
+CF51	kh j e th
+CF52	kh j e ph
+CF53	kh j e h
+CF54	kh o
+CF55	kh o k
+CF56	kh o k>
+CF57	kh o k sh
+CF58	kh o n
+CF59	kh o n tS
+CF5A	kh o n h
+CF5B	kh o t
+CF5C	kh o l
+CF5D	kh o l k
+CF5E	kh o l m
+CF5F	kh o l p
+CF60	kh o l sh
+CF61	kh o l th
+CF62	kh o l ph
+CF63	kh o l h
+CF64	kh o m
+CF65	kh o p
+CF66	kh o p sh
+CF67	kh o sh
+CF68	kh o s
+CF69	kh o N
+CF6A	kh o tS
+CF6B	kh o tSh
+CF6C	kh o kh
+CF6D	kh o th
+CF6E	kh o ph
+CF6F	kh o h
+CF70	kh w a
+CF71	kh w a k
+CF72	kh w a k>
+CF73	kh w a k sh
+CF74	kh w a n
+CF75	kh w a n tS
+CF76	kh w a n h
+CF77	kh w a t
+CF78	kh w a l
+CF79	kh w a l k
+CF7A	kh w a l m
+CF7B	kh w a l p
+CF7C	kh w a l sh
+CF7D	kh w a l th
+CF7E	kh w a l ph
+CF7F	kh w a l h
+CF80	kh w a m
+CF81	kh w a p
+CF82	kh w a p sh
+CF83	kh w a sh
+CF84	kh w a s
+CF85	kh w a N
+CF86	kh w a tS
+CF87	kh w a tSh
+CF88	kh w a kh
+CF89	kh w a th
+CF8A	kh w a ph
+CF8B	kh w a h
+CF8C	kh w @
+CF8D	kh w @ k
+CF8E	kh w @ k>
+CF8F	kh w @ k sh
+CF90	kh w @ n
+CF91	kh w @ n tS
+CF92	kh w @ n h
+CF93	kh w @ t
+CF94	kh w @ l
+CF95	kh w @ l k
+CF96	kh w @ l m
+CF97	kh w @ l p
+CF98	kh w @ l sh
+CF99	kh w @ l th
+CF9A	kh w @ l ph
+CF9B	kh w @ l h
+CF9C	kh w @ m
+CF9D	kh w @ p
+CF9E	kh w @ p sh
+CF9F	kh w @ sh
+CFA0	kh w @ s
+CFA1	kh w @ N
+CFA2	kh w @ tS
+CFA3	kh w @ tSh
+CFA4	kh w @ kh
+CFA5	kh w @ th
+CFA6	kh w @ ph
+CFA7	kh w @ h
+CFA8	kh w e
+CFA9	kh w e k
+CFAA	kh w e k>
+CFAB	kh w e k sh
+CFAC	kh w e n
+CFAD	kh w e n tS
+CFAE	kh w e n h
+CFAF	kh w e t
+CFB0	kh w e l
+CFB1	kh w e l k
+CFB2	kh w e l m
+CFB3	kh w e l p
+CFB4	kh w e l sh
+CFB5	kh w e l th
+CFB6	kh w e l ph
+CFB7	kh w e l h
+CFB8	kh w e m
+CFB9	kh w e p
+CFBA	kh w e p sh
+CFBB	kh w e sh
+CFBC	kh w e s
+CFBD	kh w e N
+CFBE	kh w e tS
+CFBF	kh w e tSh
+CFC0	kh w e kh
+CFC1	kh w e th
+CFC2	kh w e ph
+CFC3	kh w e h
+CFC4	kh j o
+CFC5	kh j o k
+CFC6	kh j o k>
+CFC7	kh j o k sh
+CFC8	kh j o n
+CFC9	kh j o n tS
+CFCA	kh j o n h
+CFCB	kh j o t
+CFCC	kh j o l
+CFCD	kh j o l k
+CFCE	kh j o l m
+CFCF	kh j o l p
+CFD0	kh j o l sh
+CFD1	kh j o l th
+CFD2	kh j o l ph
+CFD3	kh j o l h
+CFD4	kh j o m
+CFD5	kh j o p
+CFD6	kh j o p sh
+CFD7	kh j o sh
+CFD8	kh j o s
+CFD9	kh j o N
+CFDA	kh j o tS
+CFDB	kh j o tSh
+CFDC	kh j o kh
+CFDD	kh j o th
+CFDE	kh j o ph
+CFDF	kh j o h
+CFE0	kh u 
+CFE1	kh u k
+CFE2	kh u k>
+CFE3	kh u k sh
+CFE4	kh u n
+CFE5	kh u n tS
+CFE6	kh u n h
+CFE7	kh u t
+CFE8	kh u l
+CFE9	kh u l k
+CFEA	kh u l m
+CFEB	kh u l p
+CFEC	kh u l sh
+CFED	kh u l th
+CFEE	kh u l ph
+CFEF	kh u l h
+CFF0	kh u m
+CFF1	kh u p
+CFF2	kh u p sh
+CFF3	kh u sh
+CFF4	kh u s
+CFF5	kh u N
+CFF6	kh u tS
+CFF7	kh u tSh
+CFF8	kh u kh
+CFF9	kh u th
+CFFA	kh u ph
+CFFB	kh u h
+CFFC	kh w ^
+CFFD	kh w ^ k
+CFFE	kh w ^ k>
+CFFF	kh w ^ k sh
+D000	kh w ^ n
+D001	kh w ^ n tS
+D002	kh w ^ n h
+D003	kh w ^ t
+D004	kh w ^ l
+D005	kh w ^ l k
+D006	kh w ^ l m
+D007	kh w ^ l p
+D008	kh w ^ l sh
+D009	kh w ^ l th
+D00A	kh w ^ l ph
+D00B	kh w ^ l h
+D00C	kh w ^ m
+D00D	kh w ^ p
+D00E	kh w ^ p sh
+D00F	kh w ^ sh
+D010	kh w ^ s
+D011	kh w ^ N
+D012	kh w ^ tS
+D013	kh w ^ tSh
+D014	kh w ^ kh
+D015	kh w ^ th
+D016	kh w ^ ph
+D017	kh w ^ h
+D018	kh w E
+D019	kh w E k
+D01A	kh w E k>
+D01B	kh w E k sh
+D01C	kh w E n
+D01D	kh w E n tS
+D01E	kh w E n h
+D01F	kh w E t
+D020	kh w E l
+D021	kh w E l k
+D022	kh w E l m
+D023	kh w E l p
+D024	kh w E l sh
+D025	kh w E l th
+D026	kh w E l ph
+D027	kh w E l h
+D028	kh w E m
+D029	kh w E p
+D02A	kh w E p sh
+D02B	kh w E sh
+D02C	kh w E s
+D02D	kh w E N
+D02E	kh w E tS
+D02F	kh w E tSh
+D030	kh w E kh
+D031	kh w E th
+D032	kh w E ph
+D033	kh w E h
+D034	kh 7
+D035	kh 7 k
+D036	kh 7 k>
+D037	kh 7 k sh
+D038	kh 7 n
+D039	kh 7 n tS
+D03A	kh 7 n h
+D03B	kh 7 t
+D03C	kh 7 l
+D03D	kh 7 l k
+D03E	kh 7 l m
+D03F	kh 7 l p
+D040	kh 7 l sh
+D041	kh 7 l th
+D042	kh 7 l ph
+D043	kh 7 l h
+D044	kh 7 m
+D045	kh 7 p
+D046	kh 7 p sh
+D047	kh 7 sh
+D048	kh 7 s
+D049	kh 7 N
+D04A	kh 7 tS
+D04B	kh 7 tSh
+D04C	kh 7 kh
+D04D	kh 7 th
+D04E	kh 7 ph
+D04F	kh 7 h
+D050	kh j u
+D051	kh j u k
+D052	kh j u k>
+D053	kh j u k sh
+D054	kh j u n
+D055	kh j u n tS
+D056	kh j u n h
+D057	kh j u t
+D058	kh j u l
+D059	kh j u l k
+D05A	kh j u l m
+D05B	kh j u l p
+D05C	kh j u l sh
+D05D	kh j u l th
+D05E	kh j u l ph
+D05F	kh j u l h
+D060	kh j u m
+D061	kh j u p
+D062	kh j u p sh
+D063	kh j u sh
+D064	kh j u s
+D065	kh j u N
+D066	kh j u tS
+D067	kh j u tSh
+D068	kh j u kh
+D069	kh j u th
+D06A	kh j u ph
+D06B	kh j u h
+D06C	kh 4
+D06D	kh 4 k
+D06E	kh 4 k>
+D06F	kh 4 k sh
+D070	kh 4 n
+D071	kh 4 n tS
+D072	kh 4 n h
+D073	kh 4 t
+D074	kh 4 l
+D075	kh 4 l k
+D076	kh 4 l m
+D077	kh 4 l p
+D078	kh 4 l sh
+D079	kh 4 l th
+D07A	kh 4 l ph
+D07B	kh 4 l h
+D07C	kh 4 m
+D07D	kh 4 p
+D07E	kh 4 p sh
+D07F	kh 4 sh
+D080	kh 4 s
+D081	kh 4 N
+D082	kh 4 tS
+D083	kh 4 tSh
+D084	kh 4 kh
+D085	kh 4 th
+D086	kh 4 ph
+D087	kh 4 h
+D088	kh 4 j
+D089	kh 4 j k
+D08A	kh 4 j k>
+D08B	kh 4 j k sh
+D08C	kh 4 j n
+D08D	kh 4 j n tS
+D08E	kh 4 j n h
+D08F	kh 4 j t
+D090	kh 4 j l
+D091	kh 4 j l k
+D092	kh 4 j l m
+D093	kh 4 j l p
+D094	kh 4 j l sh
+D095	kh 4 j l th
+D096	kh 4 j l ph
+D097	kh 4 j l h
+D098	kh 4 j m
+D099	kh 4 j p
+D09A	kh 4 j p sh
+D09B	kh 4 j sh
+D09C	kh 4 j s
+D09D	kh 4 j N
+D09E	kh 4 j tS
+D09F	kh 4 j tSh
+D0A0	kh 4 j kh
+D0A1	kh 4 j th
+D0A2	kh 4 j ph
+D0A3	kh 4 j h
+D0A4	kh i
+D0A5	kh i k
+D0A6	kh i k>
+D0A7	kh i k sh
+D0A8	kh i n
+D0A9	kh i n tS
+D0AA	kh i n h
+D0AB	kh i t
+D0AC	kh i l
+D0AD	kh i l k
+D0AE	kh i l m
+D0AF	kh i l p
+D0B0	kh i l sh
+D0B1	kh i l th
+D0B2	kh i l ph
+D0B3	kh i l h
+D0B4	kh i m
+D0B5	kh i p
+D0B6	kh i p sh
+D0B7	kh i sh
+D0B8	kh i s
+D0B9	kh i N
+D0BA	kh i tS
+D0BB	kh i tSh
+D0BC	kh i kh
+D0BD	kh i th
+D0BE	kh i ph
+D0BF	kh i h
+D0C0	th a
+D0C1	th a k
+D0C2	th a k>
+D0C3	th a k sh
+D0C4	th a n
+D0C5	th a n tS
+D0C6	th a n h
+D0C7	th a t
+D0C8	th a l
+D0C9	th a l k
+D0CA	th a l m
+D0CB	th a l p
+D0CC	th a l sh
+D0CD	th a l th
+D0CE	th a l ph
+D0CF	th a l h
+D0D0	th a m
+D0D1	th a p
+D0D2	th a p sh
+D0D3	th a sh
+D0D4	th a s
+D0D5	th a N
+D0D6	th a tS
+D0D7	th a tSh
+D0D8	th a kh
+D0D9	th a th
+D0DA	th a ph
+D0DB	th a h
+D0DC	th @
+D0DD	th @ k
+D0DE	th @ k>
+D0DF	th @ k sh
+D0E0	th @ n
+D0E1	th @ n tS
+D0E2	th @ n h
+D0E3	th @ t
+D0E4	th @ l
+D0E5	th @ l k
+D0E6	th @ l m
+D0E7	th @ l p
+D0E8	th @ l sh
+D0E9	th @ l th
+D0EA	th @ l ph
+D0EB	th @ l h
+D0EC	th @ m
+D0ED	th @ p
+D0EE	th @ p sh
+D0EF	th @ sh
+D0F0	th @ s
+D0F1	th @ N
+D0F2	th @ tS
+D0F3	th @ tSh
+D0F4	th @ kh
+D0F5	th @ th
+D0F6	th @ ph
+D0F7	th @ h
+D0F8	th j a
+D0F9	th j a k
+D0FA	th j a k>
+D0FB	th j a k sh
+D0FC	th j a n
+D0FD	th j a n tS
+D0FE	th j a n h
+D0FF	th j a t
+D100	th j a l
+D101	th j a l k
+D102	th j a l m
+D103	th j a l p
+D104	th j a l sh
+D105	th j a l th
+D106	th j a l ph
+D107	th j a l h
+D108	th j a m
+D109	th j a p
+D10A	th j a p sh
+D10B	th j a sh
+D10C	th j a s
+D10D	th j a N
+D10E	th j a tS
+D10F	th j a tSh
+D110	th j a kh
+D111	th j a th
+D112	th j a ph
+D113	th j a h
+D114	th j @
+D115	th j @ k
+D116	th j @ k>
+D117	th j @ k sh
+D118	th j @ n
+D119	th j @ n tS
+D11A	th j @ n h
+D11B	th j @ t
+D11C	th j @ l
+D11D	th j @ l k
+D11E	th j @ l m
+D11F	th j @ l p
+D120	th j @ l sh
+D121	th j @ l th
+D122	th j @ l ph
+D123	th j @ l h
+D124	th j @ m
+D125	th j @ p
+D126	th j @ p sh
+D127	th j @ sh
+D128	th j @ s
+D129	th j @ N
+D12A	th j @ tS
+D12B	th j @ tSh
+D12C	th j @ kh
+D12D	th j @ th
+D12E	th j @ ph
+D12F	th j @ h
+D130	th ^ 
+D131	th ^ k
+D132	th ^ k>
+D133	th ^ k sh
+D134	th ^ n
+D135	th ^ n tS
+D136	th ^ n h
+D137	th ^ t
+D138	th ^ l
+D139	th ^ l k
+D13A	th ^ l m
+D13B	th ^ l p
+D13C	th ^ l sh
+D13D	th ^ l th
+D13E	th ^ l ph
+D13F	th ^ l h
+D140	th ^ m
+D141	th ^ p
+D142	th ^ p sh
+D143	th ^ sh
+D144	th ^ s
+D145	th ^ N
+D146	th ^ tS
+D147	th ^ tSh
+D148	th ^ kh
+D149	th ^ th
+D14A	th ^ ph
+D14B	th ^ h
+D14C	th e
+D14D	th e k
+D14E	th e k>
+D14F	th e k sh
+D150	th e n
+D151	th e n tS
+D152	th e n h
+D153	th e t
+D154	th e l
+D155	th e l k
+D156	th e l m
+D157	th e l p
+D158	th e l sh
+D159	th e l th
+D15A	th e l ph
+D15B	th e l h
+D15C	th e m
+D15D	th e p
+D15E	th e p sh
+D15F	th e sh
+D160	th e s
+D161	th e N
+D162	th e tS
+D163	th e tSh
+D164	th e kh
+D165	th e th
+D166	th e ph
+D167	th e h
+D168	th j ^
+D169	th j ^ k
+D16A	th j ^ k>
+D16B	th j ^ k sh
+D16C	th j ^ n
+D16D	th j ^ n tS
+D16E	th j ^ n h
+D16F	th j ^ t
+D170	th j ^ l
+D171	th j ^ l k
+D172	th j ^ l m
+D173	th j ^ l p
+D174	th j ^ l sh
+D175	th j ^ l th
+D176	th j ^ l ph
+D177	th j ^ l h
+D178	th j ^ m
+D179	th j ^ p
+D17A	th j ^ p sh
+D17B	th j ^ sh
+D17C	th j ^ s
+D17D	th j ^ N
+D17E	th j ^ tS
+D17F	th j ^ tSh
+D180	th j ^ kh
+D181	th j ^ th
+D182	th j ^ ph
+D183	th j ^ h
+D184	th j e
+D185	th j e k
+D186	th j e k>
+D187	th j e k sh
+D188	th j e n
+D189	th j e n tS
+D18A	th j e n h
+D18B	th j e t
+D18C	th j e l
+D18D	th j e l k
+D18E	th j e l m
+D18F	th j e l p
+D190	th j e l sh
+D191	th j e l th
+D192	th j e l ph
+D193	th j e l h
+D194	th j e m
+D195	th j e p
+D196	th j e p sh
+D197	th j e sh
+D198	th j e s
+D199	th j e N
+D19A	th j e tS
+D19B	th j e tSh
+D19C	th j e kh
+D19D	th j e th
+D19E	th j e ph
+D19F	th j e h
+D1A0	th o 
+D1A1	th o k
+D1A2	th o k>
+D1A3	th o k sh
+D1A4	th o n
+D1A5	th o n tS
+D1A6	th o n h
+D1A7	th o t
+D1A8	th o l
+D1A9	th o l k
+D1AA	th o l m
+D1AB	th o l p
+D1AC	th o l sh
+D1AD	th o l th
+D1AE	th o l ph
+D1AF	th o l h
+D1B0	th o m
+D1B1	th o p
+D1B2	th o p sh
+D1B3	th o sh
+D1B4	th o s
+D1B5	th o N
+D1B6	th o tS
+D1B7	th o tSh
+D1B8	th o kh
+D1B9	th o th
+D1BA	th o ph
+D1BB	th o h
+D1BC	th w a
+D1BD	th w a k
+D1BE	th w a k>
+D1BF	th w a k sh
+D1C0	th w a n
+D1C1	th w a n tS
+D1C2	th w a n h
+D1C3	th w a t
+D1C4	th w a l
+D1C5	th w a l k
+D1C6	th w a l m
+D1C7	th w a l p
+D1C8	th w a l sh
+D1C9	th w a l th
+D1CA	th w a l ph
+D1CB	th w a l h
+D1CC	th w a m
+D1CD	th w a p
+D1CE	th w a p sh
+D1CF	th w a sh
+D1D0	th w a s
+D1D1	th w a N
+D1D2	th w a tS
+D1D3	th w a tSh
+D1D4	th w a kh
+D1D5	th w a th
+D1D6	th w a ph
+D1D7	th w a h
+D1D8	th w @
+D1D9	th w @ k
+D1DA	th w @ k>
+D1DB	th w @ k sh
+D1DC	th w @ n
+D1DD	th w @ n tS
+D1DE	th w @ n h
+D1DF	th w @ t
+D1E0	th w @ l
+D1E1	th w @ l k
+D1E2	th w @ l m
+D1E3	th w @ l p
+D1E4	th w @ l sh
+D1E5	th w @ l th
+D1E6	th w @ l ph
+D1E7	th w @ l h
+D1E8	th w @ m
+D1E9	th w @ p
+D1EA	th w @ p sh
+D1EB	th w @ sh
+D1EC	th w @ s
+D1ED	th w @ N
+D1EE	th w @ tS
+D1EF	th w @ tSh
+D1F0	th w @ kh
+D1F1	th w @ th
+D1F2	th w @ ph
+D1F3	th w @ h
+D1F4	th w e
+D1F5	th w e k
+D1F6	th w e k>
+D1F7	th w e k sh
+D1F8	th w e n
+D1F9	th w e n tS
+D1FA	th w e n h
+D1FB	th w e t
+D1FC	th w e l
+D1FD	th w e l k
+D1FE	th w e l m
+D1FF	th w e l p
+D200	th w e l sh
+D201	th w e l th
+D202	th w e l ph
+D203	th w e l h
+D204	th w e m
+D205	th w e p
+D206	th w e p sh
+D207	th w e sh
+D208	th w e s
+D209	th w e N
+D20A	th w e tS
+D20B	th w e tSh
+D20C	th w e kh
+D20D	th w e th
+D20E	th w e ph
+D20F	th w e h
+D210	th j o 
+D211	th j o k
+D212	th j o k>
+D213	th j o k sh
+D214	th j o n
+D215	th j o n tS
+D216	th j o n h
+D217	th j o t
+D218	th j o l
+D219	th j o l k
+D21A	th j o l m
+D21B	th j o l p
+D21C	th j o l sh
+D21D	th j o l th
+D21E	th j o l ph
+D21F	th j o l h
+D220	th j o m
+D221	th j o p
+D222	th j o p sh
+D223	th j o sh
+D224	th j o s
+D225	th j o N
+D226	th j o tS
+D227	th j o tSh
+D228	th j o kh
+D229	th j o th
+D22A	th j o ph
+D22B	th j o h
+D22C	th u
+D22D	th u k
+D22E	th u k>
+D22F	th u k sh
+D230	th u n
+D231	th u n tS
+D232	th u n h
+D233	th u t
+D234	th u l
+D235	th u l k
+D236	th u l m
+D237	th u l p
+D238	th u l sh
+D239	th u l th
+D23A	th u l ph
+D23B	th u l h
+D23C	th u m
+D23D	th u p
+D23E	th u p sh
+D23F	th u sh
+D240	th u s
+D241	th u N
+D242	th u tS
+D243	th u tSh
+D244	th u kh
+D245	th u th
+D246	th u ph
+D247	th u h
+D248	th w ^
+D249	th w ^ k
+D24A	th w ^ k>
+D24B	th w ^ k sh
+D24C	th w ^ n
+D24D	th w ^ n tS
+D24E	th w ^ n h
+D24F	th w ^ t
+D250	th w ^ l
+D251	th w ^ l k
+D252	th w ^ l m
+D253	th w ^ l p
+D254	th w ^ l sh
+D255	th w ^ l th
+D256	th w ^ l ph
+D257	th w ^ l h
+D258	th w ^ m
+D259	th w ^ p
+D25A	th w ^ p sh
+D25B	th w ^ sh
+D25C	th w ^ s
+D25D	th w ^ N
+D25E	th w ^ tS
+D25F	th w ^ tSh
+D260	th w ^ kh
+D261	th w ^ th
+D262	th w ^ ph
+D263	th w ^ h
+D264	th w E
+D265	th w E k
+D266	th w E k>
+D267	th w E k sh
+D268	th w E n
+D269	th w E n tS
+D26A	th w E n h
+D26B	th w E t
+D26C	th w E l
+D26D	th w E l k
+D26E	th w E l m
+D26F	th w E l p
+D270	th w E l sh
+D271	th w E l th
+D272	th w E l ph
+D273	th w E l h
+D274	th w E m
+D275	th w E p
+D276	th w E p sh
+D277	th w E sh
+D278	th w E s
+D279	th w E N
+D27A	th w E tS
+D27B	th w E tSh
+D27C	th w E kh
+D27D	th w E th
+D27E	th w E ph
+D27F	th w E h
+D280	th 7  
+D281	th 7 k
+D282	th 7 k>
+D283	th 7 k sh
+D284	th 7 n
+D285	th 7 n tS
+D286	th 7 n h
+D287	th 7 t
+D288	th 7 l
+D289	th 7 l k
+D28A	th 7 l m
+D28B	th 7 l p
+D28C	th 7 l sh
+D28D	th 7 l th
+D28E	th 7 l ph
+D28F	th 7 l h
+D290	th 7 m
+D291	th 7 p
+D292	th 7 p sh
+D293	th 7 sh
+D294	th 7 s
+D295	th 7 N
+D296	th 7 tS
+D297	th 7 tSh
+D298	th 7 kh
+D299	th 7 th
+D29A	th 7 ph
+D29B	th 7 h
+D29C	th j u
+D29D	th j u k
+D29E	th j u k>
+D29F	th j u k sh
+D2A0	th j u n
+D2A1	th j u n tS
+D2A2	th j u n h
+D2A3	th j u t
+D2A4	th j u l
+D2A5	th j u l k
+D2A6	th j u l m
+D2A7	th j u l p
+D2A8	th j u l sh
+D2A9	th j u l th
+D2AA	th j u l ph
+D2AB	th j u l h
+D2AC	th j u m
+D2AD	th j u p
+D2AE	th j u p sh
+D2AF	th j u sh
+D2B0	th j u s
+D2B1	th j u N
+D2B2	th j u tS
+D2B3	th j u tSh
+D2B4	th j u kh
+D2B5	th j u th
+D2B6	th j u ph
+D2B7	th j u h
+D2B8	th 4 
+D2B9	th 4 k
+D2BA	th 4 k>
+D2BB	th 4 k sh
+D2BC	th 4 n
+D2BD	th 4 n tS
+D2BE	th 4 n h
+D2BF	th 4 t
+D2C0	th 4 l
+D2C1	th 4 l k
+D2C2	th 4 l m
+D2C3	th 4 l p
+D2C4	th 4 l sh
+D2C5	th 4 l th
+D2C6	th 4 l ph
+D2C7	th 4 l h
+D2C8	th 4 m
+D2C9	th 4 p
+D2CA	th 4 p sh
+D2CB	th 4 sh
+D2CC	th 4 s
+D2CD	th 4 N
+D2CE	th 4 tS
+D2CF	th 4 tSh
+D2D0	th 4 kh
+D2D1	th 4 th
+D2D2	th 4 ph
+D2D3	th 4 h
+D2D4	th 4 j
+D2D5	th 4 j k
+D2D6	th 4 j k>
+D2D7	th 4 j k sh
+D2D8	th 4 j n
+D2D9	th 4 j n tS
+D2DA	th 4 j n h
+D2DB	th 4 j t
+D2DC	th 4 j l
+D2DD	th 4 j l k
+D2DE	th 4 j l m
+D2DF	th 4 j l p
+D2E0	th 4 j l sh
+D2E1	th 4 j l th
+D2E2	th 4 j l ph
+D2E3	th 4 j l h
+D2E4	th 4 j m
+D2E5	th 4 j p
+D2E6	th 4 j p sh
+D2E7	th 4 j sh
+D2E8	th 4 j s
+D2E9	th 4 j N
+D2EA	th 4 j tS
+D2EB	th 4 j tSh
+D2EC	th 4 j kh
+D2ED	th 4 j th
+D2EE	th 4 j ph
+D2EF	th 4 j h
+D2F0	th i  
+D2F1	th i k
+D2F2	th i k>
+D2F3	th i k sh
+D2F4	th i n
+D2F5	th i n tS
+D2F6	th i n h
+D2F7	th i t
+D2F8	th i l
+D2F9	th i l k
+D2FA	th i l m
+D2FB	th i l p
+D2FC	th i l sh
+D2FD	th i l th
+D2FE	th i l ph
+D2FF	th i l h
+D300	th i m
+D301	th i p
+D302	th i p sh
+D303	th i sh
+D304	th i s
+D305	th i N
+D306	th i tS
+D307	th i tSh
+D308	th i kh
+D309	th i th
+D30A	th i ph
+D30B	th i h
+D30C	ph a
+D30D	ph a k
+D30E	ph a k>
+D30F	ph a k sh
+D310	ph a n
+D311	ph a n tS
+D312	ph a n h
+D313	ph a t
+D314	ph a l
+D315	ph a l k
+D316	ph a l m
+D317	ph a l p
+D318	ph a l sh
+D319	ph a l th
+D31A	ph a l ph
+D31B	ph a l h
+D31C	ph a m
+D31D	ph a p
+D31E	ph a p sh
+D31F	ph a sh
+D320	ph a s
+D321	ph a N
+D322	ph a tS
+D323	ph a tSh
+D324	ph a kh
+D325	ph a th
+D326	ph a ph
+D327	ph a h
+D328	ph @ 
+D329	ph @ k
+D32A	ph @ k>
+D32B	ph @ k sh
+D32C	ph @ n
+D32D	ph @ n tS
+D32E	ph @ n h
+D32F	ph @ t
+D330	ph @ l
+D331	ph @ l k
+D332	ph @ l m
+D333	ph @ l p
+D334	ph @ l sh
+D335	ph @ l th
+D336	ph @ l ph
+D337	ph @ l h
+D338	ph @ m
+D339	ph @ p
+D33A	ph @ p sh
+D33B	ph @ sh
+D33C	ph @ s
+D33D	ph @ N
+D33E	ph @ tS
+D33F	ph @ tSh
+D340	ph @ kh
+D341	ph @ th
+D342	ph @ ph
+D343	ph @ h
+D344	ph j a
+D345	ph j a k
+D346	ph j a k>
+D347	ph j a k sh
+D348	ph j a n
+D349	ph j a n tS
+D34A	ph j a n h
+D34B	ph j a t
+D34C	ph j a l
+D34D	ph j a l k
+D34E	ph j a l m
+D34F	ph j a l p
+D350	ph j a l sh
+D351	ph j a l th
+D352	ph j a l ph
+D353	ph j a l h
+D354	ph j a m
+D355	ph j a p
+D356	ph j a p sh
+D357	ph j a sh
+D358	ph j a s
+D359	ph j a N
+D35A	ph j a tS
+D35B	ph j a tSh
+D35C	ph j a kh
+D35D	ph j a th
+D35E	ph j a ph
+D35F	ph j a h
+D360	ph j @ 
+D361	ph j @ k
+D362	ph j @ k>
+D363	ph j @ k sh
+D364	ph j @ n
+D365	ph j @ n tS
+D366	ph j @ n h
+D367	ph j @ t
+D368	ph j @ l
+D369	ph j @ l k
+D36A	ph j @ l m
+D36B	ph j @ l p
+D36C	ph j @ l sh
+D36D	ph j @ l th
+D36E	ph j @ l ph
+D36F	ph j @ l h
+D370	ph j @ m
+D371	ph j @ p
+D372	ph j @ p sh
+D373	ph j @ sh
+D374	ph j @ s
+D375	ph j @ N
+D376	ph j @ tS
+D377	ph j @ tSh
+D378	ph j @ kh
+D379	ph j @ th
+D37A	ph j @ ph
+D37B	ph j @ h
+D37C	ph ^
+D37D	ph ^ k
+D37E	ph ^ k>
+D37F	ph ^ k sh
+D380	ph ^ n
+D381	ph ^ n tS
+D382	ph ^ n h
+D383	ph ^ t
+D384	ph ^ l
+D385	ph ^ l k
+D386	ph ^ l m
+D387	ph ^ l p
+D388	ph ^ l sh
+D389	ph ^ l th
+D38A	ph ^ l ph
+D38B	ph ^ l h
+D38C	ph ^ m
+D38D	ph ^ p
+D38E	ph ^ p sh
+D38F	ph ^ sh
+D390	ph ^ s
+D391	ph ^ N
+D392	ph ^ tS
+D393	ph ^ tSh
+D394	ph ^ kh
+D395	ph ^ th
+D396	ph ^ ph
+D397	ph ^ h
+D398	ph e 
+D399	ph e k
+D39A	ph e k>
+D39B	ph e k sh
+D39C	ph e n
+D39D	ph e n tS
+D39E	ph e n h
+D39F	ph e t
+D3A0	ph e l
+D3A1	ph e l k
+D3A2	ph e l m
+D3A3	ph e l p
+D3A4	ph e l sh
+D3A5	ph e l th
+D3A6	ph e l ph
+D3A7	ph e l h
+D3A8	ph e m
+D3A9	ph e p
+D3AA	ph e p sh
+D3AB	ph e sh
+D3AC	ph e s
+D3AD	ph e N
+D3AE	ph e tS
+D3AF	ph e tSh
+D3B0	ph e kh
+D3B1	ph e th
+D3B2	ph e ph
+D3B3	ph e h
+D3B4	ph j ^
+D3B5	ph j ^ k
+D3B6	ph j ^ k>
+D3B7	ph j ^ k sh
+D3B8	ph j ^ n
+D3B9	ph j ^ n tS
+D3BA	ph j ^ n h
+D3BB	ph j ^ t
+D3BC	ph j ^ l
+D3BD	ph j ^ l k
+D3BE	ph j ^ l m
+D3BF	ph j ^ l p
+D3C0	ph j ^ l sh
+D3C1	ph j ^ l th
+D3C2	ph j ^ l ph
+D3C3	ph j ^ l h
+D3C4	ph j ^ m
+D3C5	ph j ^ p
+D3C6	ph j ^ p sh
+D3C7	ph j ^ sh
+D3C8	ph j ^ s
+D3C9	ph j ^ N
+D3CA	ph j ^ tS
+D3CB	ph j ^ tSh
+D3CC	ph j ^ kh
+D3CD	ph j ^ th
+D3CE	ph j ^ ph
+D3CF	ph j ^ h
+D3D0	ph j e 
+D3D1	ph j e k
+D3D2	ph j e k>
+D3D3	ph j e k sh
+D3D4	ph j e n
+D3D5	ph j e n tS
+D3D6	ph j e n h
+D3D7	ph j e t
+D3D8	ph j e l
+D3D9	ph j e l k
+D3DA	ph j e l m
+D3DB	ph j e l p
+D3DC	ph j e l sh
+D3DD	ph j e l th
+D3DE	ph j e l ph
+D3DF	ph j e l h
+D3E0	ph j e m
+D3E1	ph j e p
+D3E2	ph j e p sh
+D3E3	ph j e sh
+D3E4	ph j e s
+D3E5	ph j e N
+D3E6	ph j e tS
+D3E7	ph j e tSh
+D3E8	ph j e kh
+D3E9	ph j e th
+D3EA	ph j e ph
+D3EB	ph j e h
+D3EC	ph o
+D3ED	ph o k
+D3EE	ph o k>
+D3EF	ph o k sh
+D3F0	ph o n
+D3F1	ph o n tS
+D3F2	ph o n h
+D3F3	ph o t
+D3F4	ph o l
+D3F5	ph o l k
+D3F6	ph o l m
+D3F7	ph o l p
+D3F8	ph o l sh
+D3F9	ph o l th
+D3FA	ph o l ph
+D3FB	ph o l h
+D3FC	ph o m
+D3FD	ph o p
+D3FE	ph o p sh
+D3FF	ph o sh
+D400	ph o s
+D401	ph o N
+D402	ph o tS
+D403	ph o tSh
+D404	ph o kh
+D405	ph o th
+D406	ph o ph
+D407	ph o h
+D408	ph w a 
+D409	ph w a k
+D40A	ph w a k>
+D40B	ph w a k sh
+D40C	ph w a n
+D40D	ph w a n tS
+D40E	ph w a n h
+D40F	ph w a t
+D410	ph w a l
+D411	ph w a l k
+D412	ph w a l m
+D413	ph w a l p
+D414	ph w a l sh
+D415	ph w a l th
+D416	ph w a l ph
+D417	ph w a l h
+D418	ph w a m
+D419	ph w a p
+D41A	ph w a p sh
+D41B	ph w a sh
+D41C	ph w a s
+D41D	ph w a N
+D41E	ph w a tS
+D41F	ph w a tSh
+D420	ph w a kh
+D421	ph w a th
+D422	ph w a ph
+D423	ph w a h
+D424	ph w @
+D425	ph w @ k
+D426	ph w @ k>
+D427	ph w @ k sh
+D428	ph w @ n
+D429	ph w @ n tS
+D42A	ph w @ n h
+D42B	ph w @ t
+D42C	ph w @ l
+D42D	ph w @ l k
+D42E	ph w @ l m
+D42F	ph w @ l p
+D430	ph w @ l sh
+D431	ph w @ l th
+D432	ph w @ l ph
+D433	ph w @ l h
+D434	ph w @ m
+D435	ph w @ p
+D436	ph w @ p sh
+D437	ph w @ sh
+D438	ph w @ s
+D439	ph w @ N
+D43A	ph w @ tS
+D43B	ph w @ tSh
+D43C	ph w @ kh
+D43D	ph w @ th
+D43E	ph w @ ph
+D43F	ph w @ h
+D440	ph w e 
+D441	ph w e k
+D442	ph w e k>
+D443	ph w e k sh
+D444	ph w e n
+D445	ph w e n tS
+D446	ph w e n h
+D447	ph w e t
+D448	ph w e l
+D449	ph w e l k
+D44A	ph w e l m
+D44B	ph w e l p
+D44C	ph w e l sh
+D44D	ph w e l th
+D44E	ph w e l ph
+D44F	ph w e l h
+D450	ph w e m
+D451	ph w e p
+D452	ph w e p sh
+D453	ph w e sh
+D454	ph w e s
+D455	ph w e N
+D456	ph w e tS
+D457	ph w e tSh
+D458	ph w e kh
+D459	ph w e th
+D45A	ph w e ph
+D45B	ph w e h
+D45C	ph j o
+D45D	ph j o k
+D45E	ph j o k>
+D45F	ph j o k sh
+D460	ph j o n
+D461	ph j o n tS
+D462	ph j o n h
+D463	ph j o t
+D464	ph j o l
+D465	ph j o l k
+D466	ph j o l m
+D467	ph j o l p
+D468	ph j o l sh
+D469	ph j o l th
+D46A	ph j o l ph
+D46B	ph j o l h
+D46C	ph j o m
+D46D	ph j o p
+D46E	ph j o p sh
+D46F	ph j o sh
+D470	ph j o s
+D471	ph j o N
+D472	ph j o tS
+D473	ph j o tSh
+D474	ph j o kh
+D475	ph j o th
+D476	ph j o ph
+D477	ph j o h
+D478	ph u  
+D479	ph u k
+D47A	ph u k>
+D47B	ph u k sh
+D47C	ph u n
+D47D	ph u n tS
+D47E	ph u n h
+D47F	ph u t
+D480	ph u l
+D481	ph u l k
+D482	ph u l m
+D483	ph u l p
+D484	ph u l sh
+D485	ph u l th
+D486	ph u l ph
+D487	ph u l h
+D488	ph u m
+D489	ph u p
+D48A	ph u p sh
+D48B	ph u sh
+D48C	ph u s
+D48D	ph u N
+D48E	ph u tS
+D48F	ph u tSh
+D490	ph u kh
+D491	ph u th
+D492	ph u ph
+D493	ph u h
+D494	ph w ^
+D495	ph w ^ k
+D496	ph w ^ k>
+D497	ph w ^ k sh
+D498	ph w ^ n
+D499	ph w ^ n tS
+D49A	ph w ^ n h
+D49B	ph w ^ t
+D49C	ph w ^ l
+D49D	ph w ^ l k
+D49E	ph w ^ l m
+D49F	ph w ^ l p
+D4A0	ph w ^ l sh
+D4A1	ph w ^ l th
+D4A2	ph w ^ l ph
+D4A3	ph w ^ l h
+D4A4	ph w ^ m
+D4A5	ph w ^ p
+D4A6	ph w ^ p sh
+D4A7	ph w ^ sh
+D4A8	ph w ^ s
+D4A9	ph w ^ N
+D4AA	ph w ^ tS
+D4AB	ph w ^ tSh
+D4AC	ph w ^ kh
+D4AD	ph w ^ th
+D4AE	ph w ^ ph
+D4AF	ph w ^ h
+D4B0	ph w E 
+D4B1	ph w E k
+D4B2	ph w E k>
+D4B3	ph w E k sh
+D4B4	ph w E n
+D4B5	ph w E n tS
+D4B6	ph w E n h
+D4B7	ph w E t
+D4B8	ph w E l
+D4B9	ph w E l k
+D4BA	ph w E l m
+D4BB	ph w E l p
+D4BC	ph w E l sh
+D4BD	ph w E l th
+D4BE	ph w E l ph
+D4BF	ph w E l h
+D4C0	ph w E m
+D4C1	ph w E p
+D4C2	ph w E p sh
+D4C3	ph w E sh
+D4C4	ph w E s
+D4C5	ph w E N
+D4C6	ph w E tS
+D4C7	ph w E tSh
+D4C8	ph w E kh
+D4C9	ph w E th
+D4CA	ph w E ph
+D4CB	ph w E h
+D4CC	ph 7 
+D4CD	ph 7 k
+D4CE	ph 7 k>
+D4CF	ph 7 k sh
+D4D0	ph 7 n
+D4D1	ph 7 n tS
+D4D2	ph 7 n h
+D4D3	ph 7 t
+D4D4	ph 7 l
+D4D5	ph 7 l k
+D4D6	ph 7 l m
+D4D7	ph 7 l p
+D4D8	ph 7 l sh
+D4D9	ph 7 l th
+D4DA	ph 7 l ph
+D4DB	ph 7 l h
+D4DC	ph 7 m
+D4DD	ph 7 p
+D4DE	ph 7 p sh
+D4DF	ph 7 sh
+D4E0	ph 7 s
+D4E1	ph 7 N
+D4E2	ph 7 tS
+D4E3	ph 7 tSh
+D4E4	ph 7 kh
+D4E5	ph 7 th
+D4E6	ph 7 ph
+D4E7	ph 7 h
+D4E8	ph j u  
+D4E9	ph j u k
+D4EA	ph j u k>
+D4EB	ph j u k sh
+D4EC	ph j u n
+D4ED	ph j u n tS
+D4EE	ph j u n h
+D4EF	ph j u t
+D4F0	ph j u l
+D4F1	ph j u l k
+D4F2	ph j u l m
+D4F3	ph j u l p
+D4F4	ph j u l sh
+D4F5	ph j u l th
+D4F6	ph j u l ph
+D4F7	ph j u l h
+D4F8	ph j u m
+D4F9	ph j u p
+D4FA	ph j u p sh
+D4FB	ph j u sh
+D4FC	ph j u s
+D4FD	ph j u N
+D4FE	ph j u tS
+D4FF	ph j u tSh
+D500	ph j u kh
+D501	ph j u th
+D502	ph j u ph
+D503	ph j u h
+D504	ph 4
+D505	ph 4 k
+D506	ph 4 k>
+D507	ph 4 k sh
+D508	ph 4 n
+D509	ph 4 n tS
+D50A	ph 4 n h
+D50B	ph 4 t
+D50C	ph 4 l
+D50D	ph 4 l k
+D50E	ph 4 l m
+D50F	ph 4 l p
+D510	ph 4 l sh
+D511	ph 4 l th
+D512	ph 4 l ph
+D513	ph 4 l h
+D514	ph 4 m
+D515	ph 4 p
+D516	ph 4 p sh
+D517	ph 4 sh
+D518	ph 4 s
+D519	ph 4 N
+D51A	ph 4 tS
+D51B	ph 4 tSh
+D51C	ph 4 kh
+D51D	ph 4 th
+D51E	ph 4 ph
+D51F	ph 4 h
+D520	ph 4 j 
+D521	ph 4 j k
+D522	ph 4 j k>
+D523	ph 4 j k sh
+D524	ph 4 j n
+D525	ph 4 j n tS
+D526	ph 4 j n h
+D527	ph 4 j t
+D528	ph 4 j l
+D529	ph 4 j l k
+D52A	ph 4 j l m
+D52B	ph 4 j l p
+D52C	ph 4 j l sh
+D52D	ph 4 j l th
+D52E	ph 4 j l ph
+D52F	ph 4 j l h
+D530	ph 4 j m
+D531	ph 4 j p
+D532	ph 4 j p sh
+D533	ph 4 j sh
+D534	ph 4 j s
+D535	ph 4 j N
+D536	ph 4 j tS
+D537	ph 4 j tSh
+D538	ph 4 j kh
+D539	ph 4 j th
+D53A	ph 4 j ph
+D53B	ph 4 j h
+D53C	ph i 
+D53D	ph i k
+D53E	ph i k>
+D53F	ph i k sh
+D540	ph i n
+D541	ph i n tS
+D542	ph i n h
+D543	ph i t
+D544	ph i l
+D545	ph i l k
+D546	ph i l m
+D547	ph i l p
+D548	ph i l sh
+D549	ph i l th
+D54A	ph i l ph
+D54B	ph i l h
+D54C	ph i m
+D54D	ph i p
+D54E	ph i p sh
+D54F	ph i sh
+D550	ph i s
+D551	ph i N
+D552	ph i tS
+D553	ph i tSh
+D554	ph i kh
+D555	ph i th
+D556	ph i ph
+D557	ph i h
+D558	h a  
+D559	h a k
+D55A	h a k>
+D55B	h a k sh
+D55C	h a n
+D55D	h a n tS
+D55E	h a n h
+D55F	h a t
+D560	h a l
+D561	h a l k
+D562	h a l m
+D563	h a l p
+D564	h a l sh
+D565	h a l th
+D566	h a l ph
+D567	h a l h
+D568	h a m
+D569	h a p
+D56A	h a p sh
+D56B	h a sh
+D56C	h a s
+D56D	h a N
+D56E	h a tS
+D56F	h a tSh
+D570	h a kh
+D571	h a th
+D572	h a ph
+D573	h a h
+D574	h @
+D575	h @ k
+D576	h @ k>
+D577	h @ k sh
+D578	h @ n
+D579	h @ n tS
+D57A	h @ n h
+D57B	h @ t
+D57C	h @ l
+D57D	h @ l k
+D57E	h @ l m
+D57F	h @ l p
+D580	h @ l sh
+D581	h @ l th
+D582	h @ l ph
+D583	h @ l h
+D584	h @ m
+D585	h @ p
+D586	h @ p sh
+D587	h @ sh
+D588	h @ s
+D589	h @ N
+D58A	h @ tS
+D58B	h @ tSh
+D58C	h @ kh
+D58D	h @ th
+D58E	h @ ph
+D58F	h @ h
+D590	h j a 
+D591	h j a k
+D592	h j a k>
+D593	h j a k sh
+D594	h j a n
+D595	h j a n tS
+D596	h j a n h
+D597	h j a t
+D598	h j a l
+D599	h j a l k
+D59A	h j a l m
+D59B	h j a l p
+D59C	h j a l sh
+D59D	h j a l th
+D59E	h j a l ph
+D59F	h j a l h
+D5A0	h j a m
+D5A1	h j a p
+D5A2	h j a p sh
+D5A3	h j a sh
+D5A4	h j a s
+D5A5	h j a N
+D5A6	h j a tS
+D5A7	h j a tSh
+D5A8	h j a kh
+D5A9	h j a th
+D5AA	h j a ph
+D5AB	h j a h
+D5AC	h j @ 
+D5AD	h j @ k
+D5AE	h j @ k>
+D5AF	h j @ k sh
+D5B0	h j @ n
+D5B1	h j @ n tS
+D5B2	h j @ n h
+D5B3	h j @ t
+D5B4	h j @ l
+D5B5	h j @ l k
+D5B6	h j @ l m
+D5B7	h j @ l p
+D5B8	h j @ l sh
+D5B9	h j @ l th
+D5BA	h j @ l ph
+D5BB	h j @ l h
+D5BC	h j @ m
+D5BD	h j @ p
+D5BE	h j @ p sh
+D5BF	h j @ sh
+D5C0	h j @ s
+D5C1	h j @ N
+D5C2	h j @ tS
+D5C3	h j @ tSh
+D5C4	h j @ kh
+D5C5	h j @ th
+D5C6	h j @ ph
+D5C7	h j @ h
+D5C8	h ^  
+D5C9	h ^ k
+D5CA	h ^ k>
+D5CB	h ^ k sh
+D5CC	h ^ n
+D5CD	h ^ n tS
+D5CE	h ^ n h
+D5CF	h ^ t
+D5D0	h ^ l
+D5D1	h ^ l k
+D5D2	h ^ l m
+D5D3	h ^ l p
+D5D4	h ^ l sh
+D5D5	h ^ l th
+D5D6	h ^ l ph
+D5D7	h ^ l h
+D5D8	h ^ m
+D5D9	h ^ p
+D5DA	h ^ p sh
+D5DB	h ^ sh
+D5DC	h ^ s
+D5DD	h ^ N
+D5DE	h ^ tS
+D5DF	h ^ tSh
+D5E0	h ^ kh
+D5E1	h ^ th
+D5E2	h ^ ph
+D5E3	h ^ h
+D5E4	h e
+D5E5	h e k
+D5E6	h e k>
+D5E7	h e k sh
+D5E8	h e n
+D5E9	h e n tS
+D5EA	h e n h
+D5EB	h e t
+D5EC	h e l
+D5ED	h e l k
+D5EE	h e l m
+D5EF	h e l p
+D5F0	h e l sh
+D5F1	h e l th
+D5F2	h e l ph
+D5F3	h e l h
+D5F4	h e m
+D5F5	h e p
+D5F6	h e p sh
+D5F7	h e sh
+D5F8	h e s
+D5F9	h e N
+D5FA	h e tS
+D5FB	h e tSh
+D5FC	h e kh
+D5FD	h e th
+D5FE	h e ph
+D5FF	h e h
+D600	h j ^ 
+D601	h j ^ k
+D602	h j ^ k>
+D603	h j ^ k sh
+D604	h j ^ n
+D605	h j ^ n tS
+D606	h j ^ n h
+D607	h j ^ t
+D608	h j ^ l
+D609	h j ^ l k
+D60A	h j ^ l m
+D60B	h j ^ l p
+D60C	h j ^ l sh
+D60D	h j ^ l th
+D60E	h j ^ l ph
+D60F	h j ^ l h
+D610	h j ^ m
+D611	h j ^ p
+D612	h j ^ p sh
+D613	h j ^ sh
+D614	h j ^ s
+D615	h j ^ N
+D616	h j ^ tS
+D617	h j ^ tSh
+D618	h j ^ kh
+D619	h j ^ th
+D61A	h j ^ ph
+D61B	h j ^ h
+D61C	h j e 
+D61D	h j e k
+D61E	h j e k>
+D61F	h j e k sh
+D620	h j e n
+D621	h j e n tS
+D622	h j e n h
+D623	h j e t
+D624	h j e l
+D625	h j e l k
+D626	h j e l m
+D627	h j e l p
+D628	h j e l sh
+D629	h j e l th
+D62A	h j e l ph
+D62B	h j e l h
+D62C	h j e m
+D62D	h j e p
+D62E	h j e p sh
+D62F	h j e sh
+D630	h j e s
+D631	h j e N
+D632	h j e tS
+D633	h j e tSh
+D634	h j e kh
+D635	h j e th
+D636	h j e ph
+D637	h j e h
+D638	h o  
+D639	h o k
+D63A	h o k>
+D63B	h o k sh
+D63C	h o n
+D63D	h o n tS
+D63E	h o n h
+D63F	h o t
+D640	h o l
+D641	h o l k
+D642	h o l m
+D643	h o l p
+D644	h o l sh
+D645	h o l th
+D646	h o l ph
+D647	h o l h
+D648	h o m
+D649	h o p
+D64A	h o p sh
+D64B	h o sh
+D64C	h o s
+D64D	h o N
+D64E	h o tS
+D64F	h o tSh
+D650	h o kh
+D651	h o th
+D652	h o ph
+D653	h o h
+D654	h w a
+D655	h w a k
+D656	h w a k>
+D657	h w a k sh
+D658	h w a n
+D659	h w a n tS
+D65A	h w a n h
+D65B	h w a t
+D65C	h w a l
+D65D	h w a l k
+D65E	h w a l m
+D65F	h w a l p
+D660	h w a l sh
+D661	h w a l th
+D662	h w a l ph
+D663	h w a l h
+D664	h w a m
+D665	h w a p
+D666	h w a p sh
+D667	h w a sh
+D668	h w a s
+D669	h w a N
+D66A	h w a tS
+D66B	h w a tSh
+D66C	h w a kh
+D66D	h w a th
+D66E	h w a ph
+D66F	h w a h
+D670	h w @ 
+D671	h w @ k
+D672	h w @ k>
+D673	h w @ k sh
+D674	h w @ n
+D675	h w @ n tS
+D676	h w @ n h
+D677	h w @ t
+D678	h w @ l
+D679	h w @ l k
+D67A	h w @ l m
+D67B	h w @ l p
+D67C	h w @ l sh
+D67D	h w @ l th
+D67E	h w @ l ph
+D67F	h w @ l h
+D680	h w @ m
+D681	h w @ p
+D682	h w @ p sh
+D683	h w @ sh
+D684	h w @ s
+D685	h w @ N
+D686	h w @ tS
+D687	h w @ tSh
+D688	h w @ kh
+D689	h w @ th
+D68A	h w @ ph
+D68B	h w @ h
+D68C	h w e 
+D68D	h w e k
+D68E	h w e k>
+D68F	h w e k sh
+D690	h w e n
+D691	h w e n tS
+D692	h w e n h
+D693	h w e t
+D694	h w e l
+D695	h w e l k
+D696	h w e l m
+D697	h w e l p
+D698	h w e l sh
+D699	h w e l th
+D69A	h w e l ph
+D69B	h w e l h
+D69C	h w e m
+D69D	h w e p
+D69E	h w e p sh
+D69F	h w e sh
+D6A0	h w e s
+D6A1	h w e N
+D6A2	h w e tS
+D6A3	h w e tSh
+D6A4	h w e kh
+D6A5	h w e th
+D6A6	h w e ph
+D6A7	h w e h
+D6A8	h j o  
+D6A9	h j o k
+D6AA	h j o k>
+D6AB	h j o k sh
+D6AC	h j o n
+D6AD	h j o n tS
+D6AE	h j o n h
+D6AF	h j o t
+D6B0	h j o l
+D6B1	h j o l k
+D6B2	h j o l m
+D6B3	h j o l p
+D6B4	h j o l sh
+D6B5	h j o l th
+D6B6	h j o l ph
+D6B7	h j o l h
+D6B8	h j o m
+D6B9	h j o p
+D6BA	h j o p sh
+D6BB	h j o sh
+D6BC	h j o s
+D6BD	h j o N
+D6BE	h j o tS
+D6BF	h j o tSh
+D6C0	h j o kh
+D6C1	h j o th
+D6C2	h j o ph
+D6C3	h j o h
+D6C4	h u
+D6C5	h u k
+D6C6	h u k>
+D6C7	h u k sh
+D6C8	h u n
+D6C9	h u n tS
+D6CA	h u n h
+D6CB	h u t
+D6CC	h u l
+D6CD	h u l k
+D6CE	h u l m
+D6CF	h u l p
+D6D0	h u l sh
+D6D1	h u l th
+D6D2	h u l ph
+D6D3	h u l h
+D6D4	h u m
+D6D5	h u p
+D6D6	h u p sh
+D6D7	h u sh
+D6D8	h u s
+D6D9	h u N
+D6DA	h u tS
+D6DB	h u tSh
+D6DC	h u kh
+D6DD	h u th
+D6DE	h u ph
+D6DF	h u h
+D6E0	h w ^ 
+D6E1	h w ^ k
+D6E2	h w ^ k>
+D6E3	h w ^ k sh
+D6E4	h w ^ n
+D6E5	h w ^ n tS
+D6E6	h w ^ n h
+D6E7	h w ^ t
+D6E8	h w ^ l
+D6E9	h w ^ l k
+D6EA	h w ^ l m
+D6EB	h w ^ l p
+D6EC	h w ^ l sh
+D6ED	h w ^ l th
+D6EE	h w ^ l ph
+D6EF	h w ^ l h
+D6F0	h w ^ m
+D6F1	h w ^ p
+D6F2	h w ^ p sh
+D6F3	h w ^ sh
+D6F4	h w ^ s
+D6F5	h w ^ N
+D6F6	h w ^ tS
+D6F7	h w ^ tSh
+D6F8	h w ^ kh
+D6F9	h w ^ th
+D6FA	h w ^ ph
+D6FB	h w ^ h
+D6FC	h w E 
+D6FD	h w E k
+D6FE	h w E k>
+D6FF	h w E k sh
+D700	h w E n
+D701	h w E n tS
+D702	h w E n h
+D703	h w E t
+D704	h w E l
+D705	h w E l k
+D706	h w E l m
+D707	h w E l p
+D708	h w E l sh
+D709	h w E l th
+D70A	h w E l ph
+D70B	h w E l h
+D70C	h w E m
+D70D	h w E p
+D70E	h w E p sh
+D70F	h w E sh
+D710	h w E s
+D711	h w E N
+D712	h w E tS
+D713	h w E tSh
+D714	h w E kh
+D715	h w E th
+D716	h w E ph
+D717	h w E h
+D718	h 7 
+D719	h 7 k
+D71A	h 7 k>
+D71B	h 7 k sh
+D71C	h 7 n
+D71D	h 7 n tS
+D71E	h 7 n h
+D71F	h 7 t
+D720	h 7 l
+D721	h 7 l k
+D722	h 7 l m
+D723	h 7 l p
+D724	h 7 l sh
+D725	h 7 l th
+D726	h 7 l ph
+D727	h 7 l h
+D728	h 7 m
+D729	h 7 p
+D72A	h 7 p sh
+D72B	h 7 sh
+D72C	h 7 s
+D72D	h 7 N
+D72E	h 7 tS
+D72F	h 7 tSh
+D730	h 7 kh
+D731	h 7 th
+D732	h 7 ph
+D733	h 7 h
+D734	h j u
+D735	h j u k
+D736	h j u k>
+D737	h j u k sh
+D738	h j u n
+D739	h j u n tS
+D73A	h j u n h
+D73B	h j u t
+D73C	h j u l
+D73D	h j u l k
+D73E	h j u l m
+D73F	h j u l p
+D740	h j u l sh
+D741	h j u l th
+D742	h j u l ph
+D743	h j u l h
+D744	h j u m
+D745	h j u p
+D746	h j u p sh
+D747	h j u sh
+D748	h j u s
+D749	h j u N
+D74A	h j u tS
+D74B	h j u tSh
+D74C	h j u kh
+D74D	h j u th
+D74E	h j u ph
+D74F	h j u h
+D750	h 4 
+D751	h 4 k
+D752	h 4 k>
+D753	h 4 k sh
+D754	h 4 n
+D755	h 4 n tS
+D756	h 4 n h
+D757	h 4 t
+D758	h 4 l
+D759	h 4 l k
+D75A	h 4 l m
+D75B	h 4 l p
+D75C	h 4 l sh
+D75D	h 4 l th
+D75E	h 4 l ph
+D75F	h 4 l h
+D760	h 4 m
+D761	h 4 p
+D762	h 4 p sh
+D763	h 4 sh
+D764	h 4 s
+D765	h 4 N
+D766	h 4 tS
+D767	h 4 tSh
+D768	h 4 kh
+D769	h 4 th
+D76A	h 4 ph
+D76B	h 4 h
+D76C	h 4 j 
+D76D	h 4 j k
+D76E	h 4 j k>
+D76F	h 4 j k sh
+D770	h 4 j n
+D771	h 4 j n tS
+D772	h 4 j n h
+D773	h 4 j t
+D774	h 4 j l
+D775	h 4 j l k
+D776	h 4 j l m
+D777	h 4 j l p
+D778	h 4 j l sh
+D779	h 4 j l th
+D77A	h 4 j l ph
+D77B	h 4 j l h
+D77C	h 4 j m
+D77D	h 4 j p
+D77E	h 4 j p sh
+D77F	h 4 j sh
+D780	h 4 j s
+D781	h 4 j N
+D782	h 4 j tS
+D783	h 4 j tSh
+D784	h 4 j kh
+D785	h 4 j th
+D786	h 4 j ph
+D787	h 4 j h
+D788	h i
+D789	h i k
+D78A	h i k>
+D78B	h i k sh
+D78C	h i n
+D78D	h i n tS
+D78E	h i n h
+D78F	h i t
+D790	h i l
+D791	h i l k
+D792	h i l m
+D793	h i l p
+D794	h i l sh
+D795	h i l th
+D796	h i l ph
+D797	h i l h
+D798	h i m
+D799	h i p
+D79A	h i p sh
+D79B	h i sh
+D79C	h i s
+D79D	h i N
+D79E	h i tS
+D79F	h i tSh
+D7A0	h i kh
+D7A1	h i th
+D7A2	h i ph
+D7A3	h i h
+
+# Hangul Jamo
+
+# Initial Consonants
+1100	k
+1101	k>
+1102	n
+1103	t
+1104	t>
+1105	r
+1106	m
+1107	p
+1108	p>
+1109	sh
+110A	s
+110B	(SILENT)
+110C	tS
+110D	tS>
+110E	tSh
+110F	kh
+1110	th
+1112	h	
+113C	sh
+113D	s
+113E	sh
+113F	s
+114C	(SILENT)
+114E	tS
+114F	tS>
+1150	tS
+1151	tS>
+1154	tSh
+1155	tSh
+115F	(CHOSEONG FILLER)
+
+# Medial Vowels
+1160	(JUNGSEONG FILLER)
+1161	a
+1162	@
+1163	j a
+1164	j @
+1165	^
+1166	e
+1167	j ^
+1168	j e
+1169	o
+116A	w a
+116B	w @
+116C	w e
+116D	j o
+116E	u
+116F	w ^
+1170	w E
+1171	7
+1172	j u
+1173	4
+1174	4 j
+1175	i
+
+# Final consonants
+11A8	k
+11A9	k>
+11AA	k sh
+11AB	n
+11AC	n tS
+11AD	n h
+11AE	t
+11AF	l
+11B0	l k
+11B1	l m
+11B2	l p
+11B3	l sh
+11B4	l th
+11B5	l ph
+11B6	l h
+11B7	m
+11B8	p
+11B9	p sh
+11BA	sh
+11BB	s
+11BC	N
+11BD	tS
+11BE	tSh
+11BF	kh
+11C0	th
+11C1	ph
+11C2	h
+11F0	N
+
+# Hangul Compatibility Jamo
+# Modern letters
+3131	k
+3132	k>
+3133	k sh
+3134	n
+3135	n tS
+3136	n h
+3137	t
+3138	t>
+3139	r
+313A	l k
+313B	l m
+313C	l b
+313D	l sh
+313E	l th
+313F	l ph
+3140	l h
+3141	m
+3142	p
+3143	p>
+3144	b sh
+3145	sh
+3146	s
+3147	(SILENT)	 
+3148	tS
+3149	tS>
+314A	tSh
+314B	kh
+314C	th
+314D	ph
+314E	h
+314F	a
+3150	@
+3151	j a
+3152	J @
+3153	^
+3154	e
+3155	j ^
+3156	j e
+3157	o
+3158	w a
+3159	w @
+315A	w e
+315B	j o
+315C	u
+315D	w ^
+315E	w E
+315F	7
+3160	j u
+3161	4
+3162	4 j
+3163	i
+# Special character
+3164	(HANGUL FILLER)
+

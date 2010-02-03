@@ -1,0 +1,113 @@
+# M - Adak Bindi: postvocalic nasalization (Anusvara)
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+# CD - Bindi: vowel nasalization (Candrabindu)
+# NUKTA: extending the alphabet to new letters
+# TIPPI: nasalization	
+# ADDAK: doubles following consonant
+# IRI: vowel bearer (front)- used when syllble begins with vowel
+# URA: vowel bearer (back)
+
+#Various signs
+0A00	(CD)
+0A01	(R:0A01)
+0A02	(M)
+0A03	(H)
+#Independent vowels
+0A05	&
+0A06	A
+0A07	I	
+0A08	i
+0A09	U
+0A0A	u
+0A0B	(R:0A0B)
+0A0D	(R:0A0D)
+0A0E	(R:0A0E)
+0A0F	e
+0A10	aI
+0A11	(R:0A11)
+0A12	(R:0A12)
+0A13	o	
+0A14	aU
+#Consonants
+0A15	k A
+0A16	kh A
+0A17	g A
+0A18	gh A
+0A19	N A
+0A1A	c A
+0A1B	ch A
+0A1C	J A
+0A1D	Jh A
+0A1E	n~ A
+0A1F	tr A
+0A20	tR A
+0A21	dr A
+0A22	dR A
+0A23	nr A
+0A24	t[ A
+0A25	t[_h A 
+0A26	d[
+0A27	d[_h A
+0A28	n[
+0A29	(R:0A29)
+0A2A	p A
+0A2B	ph A
+0A2C	b A
+0A2D	bh A
+0A2E	m A
+0A2F	j A
+0A30	r A
+0A31	(R:0A31)
+0A32	l A
+0A33	lr A
+0A34	(R:0A34)
+0A35	v A
+0A36	S A
+0A37	(R:0A37)
+0A38	s A
+0A39	hv A
+#Various signs
+0A3C	(NUKTA)
+#Dependent vowel signs
+0A3E	A
+0A3F	I
+0A40	i
+0A41	U
+0A42	u
+0A43	(R:0A43)
+0A45	(R:0A45)
+0A46	(R:0A46)
+0A47	e
+0A48	aI
+0A49	(R:0A49)
+0A4A	(R:0A4A)
+0A4B	o
+0A4C	aU
+#Various signs
+0A4D	(P)
+#Additional consonants
+0A59	x A
+0A5A	G A
+0A5B	z A
+0A5C	rr A
+0A5E	f A
+0A5F	(R:0A5F)
+0A64	(R:0A64)
+#Digits
+0A66	(ZERO)
+0A67	(ONE)
+0A68	(TWO)
+0A69	(THREE)
+0A6A	(FOUR)
+0A6B	(FIVE)
+0A6C	(SIX)
+0A6D	(SEVEN)
+0A6E	(EIGHT)
+0A6F	(NINE)
+#Gurmukhi-specific additions
+0A70	(TIPPI)
+0A71	(ADDAK)
+0A72	(IRI)
+0A73	(URA)
+0A74	(GOD IS ONE)

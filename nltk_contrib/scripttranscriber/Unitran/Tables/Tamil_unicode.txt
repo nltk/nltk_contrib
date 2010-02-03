@@ -1,0 +1,108 @@
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+
+#Various signs
+0B81	(R:0B81)
+0B82	(M)	
+0B83	(H)
+#Independent vowels
+0B85	>
+0B86	A:
+0B87	i
+0B88	i:
+0B89	u
+0B8A	u:
+0B8B	(R:0B8B)
+0B8D	(R:0B8D)
+0B8E	e
+0B8F	e:
+0B90	>I
+0B91	(R:0B91)
+0B92	o
+0B93	o:
+0B94	aU
+#Consonants
+0B95	k A, g A, x A, G A, h A
+0B96	(R:0B96)
+0B97	(R:0B97)
+0B98	(R:0B98)
+0B99	N A
+0B9A	c A, J A, S A, s A
+0B9B	(R:0B9B)
+0B9C	J A
+0B9D	(R:0B9D)
+0B9E	n~ A
+0B9F	tr A, dr A, rr A
+0BA0	(R:0BA0)
+0BA1	(R:0BA1)
+0BA2	(R:0BA2)
+0BA3	nr A
+0BA4	t[ A, d[ A, D A
+0BA5	(R:0BA5)
+0BA6	(R:0BA6)
+0BA7	(R:0BA7)
+0BA8	n[ A
+0BA9	n A
+0BAA	p A, b A, V A
+0BAB	(R:0BAB)
+0BAC	(R:0BAC)
+0BAE	m A
+0BAF	j A
+0BB0	9r[ A
+0BB1	9r A, t A, d A
+0BB2	l A
+0BB3	lr A
+0BB4	l A
+0BB5	v A
+0BB6	S A
+0BB7	sr A
+0BB8	s A
+0BB9	h A
+#Dependent vowel signs
+0BBE	A:
+0BBF	i
+0BC0	i:
+0BC1	u
+0BC2	u:
+0BC3	(R:0BC3)
+0BC5	(R:0BC5)
+0BC6	e
+0BC7	e:
+0BC8	>I
+0BC9	(R:0BC9)
+#Two-part dependent vowel signs
+0BCA	o
+0BCB	o:
+0BCC	aU
+#Various signs
+0BCD	(P)
+0BD7	(>I LENGTH MARK)
+0BDF	(R:0BDF)
+0BE4	(R:0BE4)
+#Digits
+0BE6	(ZERO)
+0BE7	(ONE)
+0BE8	(TWO)
+0BE9	(THREE)
+0BEA	(FOUR)
+0BEB	(FIVE)
+0BEC	(SIX)
+0BED	(SEVEN)
+0BEE	(EIGHT)
+0BEF	(NINE)
+#Tamil numerics
+0BF0	(TEN)
+0BF1	(HUNDREAD)
+0BF2	(THOUSAND)
+#Tamil symbols
+0BF3	(DAY)
+0BF4	(MONTH)
+0BF5	(YEAR)
+0BF6	(DEBIT)
+0BF7	(CREDIT)
+0BF8	(AS ABOVE)
+#Currency symbol	
+0BF9	(RUPEE)
+#Tamil symbol
+0BFA	(NUMBER)

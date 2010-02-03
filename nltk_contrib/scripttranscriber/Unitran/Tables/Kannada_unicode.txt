@@ -1,0 +1,105 @@
+# M - Anusvara
+# H - Visarga
+# P - virama:suppress the inherent vowel of the preceding consonant
+# NUKTA:extending the alphabet to new letters
+
+#Various signs
+0C81	(R:0C81)
+0C82	(M) 		
+0C83	(H) 
+#Independent vowels
+0C85	>
+0C86	>:	
+0C87	i	
+0C88	i:
+0C89	u
+0C8A	u:
+0C8B	9r i, 9r u
+0C8C	l=
+0C8D	(R:0C8D)
+0C8E	e
+0C8F	e:
+0C90	aI
+0C91	(R:0C91)
+0C92	o
+0C93	o:	
+0C94	aU
+#Consonants
+0C95	k A
+0C96	kh A
+0C97	g A
+0C98	gh A
+0C99	N A 	
+0C9A	c A
+0C9B	ch A	
+0C9C	J A
+0C9D	Jh A
+0C9E	n~ A
+0C9F	tr A
+0CA0	tR A
+0CA1	dr A
+0CA2	dR A
+0CA3	nr A
+0CA4	t[ A
+0CA5	t[_h A
+0CA6	d[ A
+0CA7	d[_h A
+0CA8	n[ A
+0CA9	(R:0CA9)
+0CAA	p A 	
+0CAB	ph A
+0CAC	b A
+0CAD	bh A
+0CAE	m A
+0CAF	j A
+0CB0	9r A
+0CB1	rr A
+0CB2	l A
+0CB3	lr A
+0CB4	(R:0CB4)
+0CB5	v A
+0CB6	S A
+0CB7	S A
+0CB8	s A
+0CB9	hv A
+#Various signs
+0CBC	(NUKTA)
+0CBD	(AVAGRAHA)
+#Dependent vowel signs
+0CBE	>:
+0CBF	i
+0CC0	i:
+0CC1	u
+0CC2	u: 
+0CC3	9r=
+0CC4	rr=
+0CC5	(R:0CC5)
+0CC6	e
+0CC7	e:
+0CC8	aI
+0CC9	(R:0CC9)
+0CCA	o
+0CCB	o:
+0CCC	aU
+#Various signs
+0CCD	(P)
+0CD5	(LENGTH MARK)		
+0CD6	(aI LENGTH MARK)
+#Additional consonants
+0CDE	f A
+0CDF	(R:0CDF)
+#Generic additions
+0CE0	rr=
+0CE1	l=
+0CE4	(R:0CE4)
+#Digits
+0CE6	(ZERO)
+0CE7	(ONE)
+0CE8	(TWO)
+0CE9	(THREE)
+0CEA	(FOUR)
+0CEB	(FIVE)
+0CEC	(SIX)
+0CED	(SEVEN)
+0CEE	(EIGHT)
+0CEF	(NINE)

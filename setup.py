@@ -56,6 +56,8 @@ setup(
                 'nltk_contrib.mit.six863.tagging',
                 'nltk_contrib.readability',
                 'nltk_contrib.rte',
+                'nltk_contrib.scripttranscriber',
+                'nltk_contrib.stem',
                 'nltk_contrib.tag',
                 'nltk_contrib.tiger',
                 'nltk_contrib.tiger.indexer',

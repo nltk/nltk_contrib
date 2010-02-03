@@ -1,0 +1,76 @@
+# MUKPHRENG: aspiration
+# KEMPHRENG: length mark
+# P: SA-1: suppress the inherent vowel (Virama)
+
+#Consonants
+1900	(VOWEL CARRIER)
+1901	k A
+1902	kh A
+1903	g A
+1904	gh A
+1905	N A
+1906	c A
+1907	ch A
+1908	J A
+1909	Jh a
+190A	j Ar
+190B	t[ A
+190C	t[_h A
+190D	d[ A
+190E	d[_h A
+190F	n[ A
+1910	p A
+1911	ph A
+1912	b A
+1913	bh A
+1914	m A
+1915	j A
+1916	9r A
+1917	l A
+1918	w A
+1919	S A
+191A	S A
+191B	s A
+191C	h A
+#Dependent vowel signs
+1920	A
+1921	i
+1922	u
+1923	e:
+1924	aI
+1925	o:
+1926	aU
+1927	e
+1928	o
+#Subjoined consonants
+1929	j A
+192A	9r A		
+192B	w A
+#Final consonants
+1930	k A
+1931	N A
+1932	M A
+1933	t[ A
+1934	n[ A
+1935	p A
+1936	m A
+1937	9r A
+1938	l A
+#Various signs
+1939	(MUKPHRENG)
+193A	(KEMPHRENG)
+193B	(P)
+1940	(LOO)
+1944	(EXCLAMATION MARK)	
+1945	(QUESTION MARK)
+#Digits
+1946	(ZERO)
+1947	(ONE)
+1948	(TWO)
+1949	(THREE)
+194A	(FOUR)
+194B	(FIVE)
+194C	(SIX)
+194D	(SEVEN)
+194E	(EIGHT)
+194F	(NINE)

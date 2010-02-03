@@ -1,0 +1,107 @@
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+# CD - Candrabindu: vowel nasalization
+# NUKTA: extending the alphabet to new letters
+
+#Various signs
+0B01	(CD)				
+0B02	(M)	
+0B03	(H)
+#Independent vowels
+0B05	>
+0B06	A
+0B07	i
+0B08	i:
+0B09	u	
+0B0A	u:
+0B0B	9r=
+0B0C	l=
+0B0E	(R:0B0E)
+0B0F	e
+0B10	>I
+0B13	o
+0B14	aU
+#Consonants	
+0B15	k A
+0B16	kh A
+0B17	g A
+0B18	gh A
+0B19	N A
+0B1A	c A
+0B1B	ch A
+0B1C	J A
+0B1D	Jh A
+0B1E	n~ A
+0B1F	tr A
+0B20	tR A
+0B21	dr A
+0B22	dR A
+0B23	nr A
+0B24	t[ A
+0B25	t[_h A
+0B26	d[ A
+0B27	d[_h A
+0B28	n[ A
+0B29	(R:0B29)
+0B2A	p A
+0B2B	ph A
+0B2C	b A
+0B2D	bh A
+0B2E	m A
+0B2F	j A
+0B30	9r A
+0B31	(R:0B31)
+0B32	l A
+0B33	lr A
+0B34	(R:0B34)
+0B35	v A
+0B36	S A
+0B37	sr A
+0B38	s A
+0B39	hv A
+#Various signs
+0B3C	(NUKTA)
+0B3D	(AVAGRAHA)
+#Dependent vowel signs
+0B3E	A	
+0B3F	i
+0B40	i:
+0B41	u
+0B42	u:
+0B43	9r=
+0B45	(R:0B45)
+0B46	(R:0B46)
+0B47	e
+0B48	>I
+0B49	(R:0B49)
+#Two-part dependent vowel signs
+0B4B	o
+0B4C	aU
+#Various signs
+0B4D	(P)
+0B56	(>I LENGTH MARK)
+0B57	(aU LENGTH MARK)
+#Additional consonants
+0B5C	9r: A
+0B5D	9rh A
+0B5F	j A
+#Generic additions
+0B60	rr=
+0B61	lr=
+0B64	(*)
+0B65	(**)
+#Digits
+0B66	(ZERO)
+0B67	(ONE)
+0B68	(TWO)
+0B69	(THREE)
+0B6A	(FOUR)
+0B6B	(FIVE)
+0B6C	(SIX)
+0B6D	(SEVEN)
+0B6E	(EIGHT)
+0B6F	(NINE)
+#Oriya-specific additions
+0B70	(ISSHAR)
+0B71	w A

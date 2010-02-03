@@ -1,0 +1,1225 @@
+#Yi
+
+#Syllables
+A000	i
+A001	i
+A002	i
+A003	i
+A004	e
+A005	e
+A006	e
+A007	e
+A008	A
+A009	A
+A00A	A	
+A00B	A
+A00C	>
+A00D	>
+A00E	>
+A00F	o
+A010	o
+A011	o
+A012	o
+A013	&
+A014	&
+A015	G u
+A016	p i
+A017	p i
+A018	p i 
+A019	p i
+A01A	p e
+A01B	p e
+A01C	p e
+A01D	p e
+A01E	p A
+A01F	p A
+A020	p A
+A021	p A
+A022	p >
+A023	p >
+A024	p >
+A025	p o
+A026	p o	
+A027	p o
+A028	p o
+A029	p &
+A02A	p &
+A02B	p &
+A02C	p u
+A02D	p u
+A02E	p u
+A02F	p u
+A030	p u
+A031	p u
+A032	p l 
+A033	p l	
+A034	p l
+A035	p l
+A036	p i
+A037	p i
+A038	ph i
+A039	ph i
+A03A	ph i
+A03B	ph i
+A03C	ph e
+A03D	ph e
+A03E	ph e
+A03F	ph A	
+A040	ph A	
+A041	ph A
+A042	ph A
+A043	ph >
+A044	ph >
+A045	ph >
+A046	ph o	
+A047	ph o
+A048	ph o
+A049	ph o
+A04A	ph u
+A04B	ph u
+A04C	ph u
+A04D	ph u
+A04E	ph u
+A04F	ph u
+A050	ph l
+A051	ph l
+A052	ph l
+A053	ph l
+A054	ph i
+A055	ph i
+A056	b i	 
+A057	b i
+A058	b i
+A059	b i
+A05A	b e
+A05B	b e
+A05C	b e
+A05D	b e
+A05E	b A
+A05F	b A
+A060	b A
+A061	b A
+A062	b >
+A063	b >
+A064	b >
+A065	b o
+A066	b o
+A067	b o
+A068	b o
+A069	b &
+A06A	b &
+A06B	b &
+A06C	b u
+A06D	b u
+A06E	b u
+A06F	b u
+A070	b u
+A071	b u
+A072	b l
+A073	b l
+A074	b l
+A075	b l
+A076	m b i 
+A077	m b i
+A078	m b i
+A079	m b i
+A07A	m b e
+A07B	m b e	
+A07C	m b e
+A07D	m b A
+A07E	m b A
+A07F	m b A
+A080	m b A
+A081	m b o
+A082	m b o
+A083	m b o
+A084	m b o
+A085	m b u
+A086	m b u
+A087	m b u
+A088	m b u
+A089	m b u
+A08A	m b u
+A08B	m b l
+A08C	m b l
+A08D	m b l
+A08E	m b l
+A08F	m b i
+A090	m b i
+A091	m0 i 
+A092	m0 i 
+A093	m0 i
+A094	m0 i
+A095	m0 e
+A096	m0 e
+A097	m0 e
+A098	m0 A
+A099	m0 A
+A09A	m0 A
+A09B	m0 A
+A09C	m0 >
+A09D	m0 >
+A09E	m0 >
+A09F	m0 o
+A0A0	m0 o
+A0A1	m0 o
+A0A2	m0 o
+A0A3	m0 u
+A0A4	m0 u
+A0A5	m0 u
+A0A6	m0 u
+A0A7	m0 u
+A0A8	m0 u
+A0A9	m0 l
+A0AA	m0 l
+A0AB	m0 l
+A0AC	m0 i
+A0AD	m0 i
+A0AE	m i
+A0AF	m i
+A0B0	m i
+A0B1	m i
+A0B2	m e
+A0B3	m e
+A0B4	m e
+A0B5	m A
+A0B6	m A
+A0B7	m A
+A0B8	m A
+A0B9	m >
+A0BA	m >
+A0BB	m >
+A0BC	m >
+A0BD	m o
+A0BE	m o
+A0BF	m o
+A0C0	m o
+A0C1	m &
+A0C2	m &
+A0C3	m u
+A0C4	m u
+A0C5	m u
+A0C6	m u
+A0C7	m u
+A0C8	m u
+A0C9	m l
+A0CA	m l
+A0CB	m l
+A0CC	m l
+A0CD	f i 
+A0CE	f i
+A0CF	f i
+A0D0	f i
+A0D1	f A
+A0D2	f A
+A0D3	f A
+A0D4	f A
+A0D5	f o
+A0D6	f o	
+A0D7	f o	
+A0D8	f u
+A0D9	f u
+A0DA	f u
+A0DB	f u
+A0DC	f u
+A0DD	f u
+A0DE	f l
+A0DF	f l	
+A0E0	f l
+A0E1	f l
+A0E2	v i 
+A0E3	v i
+A0E4	v i
+A0E5	v i
+A0E6	v e
+A0E7	v e
+A0E8	v e
+A0E9	v e
+A0EA	v A
+A0EB	v A
+A0EC	v A
+A0ED	v A
+A0EE	v o
+A0EF	v o
+A0F0	v o
+A0F1	v o
+A0F2	v &
+A0F3	v & 
+A0F4	v u
+A0F5	v u 
+A0F6	v u
+A0F7	v u
+A0F8	v u
+A0F9	v u
+A0FA	v l 
+A0FB	v l
+A0FC	v l
+A0FD	v l
+A0FE	v i
+A0FF	v i
+A100	t i
+A101	t i
+A102	t i
+A103	t i
+A104	t e 
+A105	t e
+A106	t e
+A107	t A
+A108	t A
+A109	t A
+A10A	t A
+A10B	t >
+A10C	t >
+A10D	t o
+A10E	t o
+A10F	t o
+A110	t o
+A111	t &
+A112	t &
+A113	t &
+A114	t u
+A115	t u
+A116	t u
+A117	t u
+A118	t u
+A119	t u
+A11A	th i  
+A11B	th i
+A11C	th i
+A11D	th i
+A11E	th e
+A11F	th e
+A120	th e
+A121	th A
+A122	th A
+A123	th A
+A124	th A
+A125	th >
+A126	th >
+A127	th >
+A128	th >
+A129	th o
+A12A	th o
+A12B	th o
+A12C	th o
+A12D	th &
+A12E	th &
+A12F	th &
+A130	th u
+A131	th u
+A132	th u
+A133	th u
+A134	th u
+A135	th u
+A136	d i 
+A137	d i
+A138	d i
+A139	d i
+A13A	d e
+A13B	d e
+A13C	d e
+A13D	d A
+A13E	d A
+A13F	d A
+A140	d A
+A141	d >	
+A142	d >
+A143	d > 
+A144	d o	
+A145	d o 
+A146	d o
+A147	d o	
+A148	d &
+A149	d &
+A14A	d &
+A14B	d u
+A14C	d u	
+A14D	d u
+A14E	d u
+A14F	d u
+A150	d u
+A151	n d i 
+A152	n d i
+A153	n d i
+A154	n d i
+A155	n d e
+A156	n d e
+A157	n d A
+A158	n d A
+A159	n d A
+A15A	n d A
+A15B	n d o
+A15C	n d o
+A15D	n d o
+A15E	n d o
+A15F	n d &
+A160	n d &
+A161	n d &
+A162	n d u
+A163	n d u
+A164	n d u
+A165	n d u
+A166	n d u
+A167	n d u
+A168	n0 i
+A169	n0 i
+A16A	n0 i
+A16B	n0 i
+A16C	n0 e
+A16D	n0 e
+A16E	n0 e
+A16F	n0 e
+A170	n0 A
+A171	n0 A
+A172	n0 A
+A173	n0 A
+A174	n0 >	
+A175	n0 >
+A176	n0 o
+A177	n0 o
+A178	n0 o
+A179	n0 &
+A17A	n0 &
+A17B	n0 &
+A17C	n0 u
+A17D	n i
+A17E	n i
+A17F	n i
+A180	n i
+A181	n e
+A182	n e
+A183	n e
+A184	n A
+A185	n A
+A186	n A 
+A187	n >
+A188	n >
+A189	n >
+A18A	n o
+A18B	n o 
+A18C	n o
+A18D	n o
+A18E	n &
+A18F	n &
+A190	n &
+A191	n u
+A192	n u
+A193	n u
+A194	n u
+A195	n u
+A196	n u
+A197	hl i	
+A198	hl i
+A199	hl i
+A19A	hl i
+A19B	hl e
+A19C	hl e
+A19D	hl e
+A19E	hl A
+A19F	hl A
+A1A0	hl A
+A1A1	hl A 
+A1A2	hl >
+A1A3	hl >
+A1A4	hl >
+A1A5	hl o
+A1A6	hl o
+A1A7	hl o
+A1A8	hl &
+A1A9	hl & 
+A1AA	hl &
+A1AB	hl u
+A1AC	hl u
+A1AD	hl u
+A1AE	hl u
+A1AF	hl u
+A1B0	hl u
+A1B1	hl l
+A1B2	hl l
+A1B3	hl l
+A1B4	hl l
+A1B5	hl i
+A1B6	hl i
+A1B7	l i
+A1B8	l i
+A1B9	l i
+A1BA	l i
+A1BB	l e
+A1BC	l e
+A1BD	l e
+A1BE	l e
+A1BF	l A
+A1C0	l A
+A1C1	l A
+A1C2	l A
+A1C3	l >
+A1C4	l >
+A1C5	l >
+A1C6	l >
+A1C7	l o
+A1C8	l o
+A1C9	l o 
+A1CA	l o
+A1CB	l &
+A1CC	l &
+A1CD	l &
+A1CE	l u
+A1CF	l u
+A1D0	l u
+A1D1	l u
+A1D2	l u
+A1D3	l u
+A1D4	l l
+A1D5	l l
+A1D6	l l
+A1D7	l l
+A1D8	l i 
+A1D9	l i
+A1DA	k i
+A1DB	k i
+A1DC	k i
+A1DD	k i
+A1DE	k e
+A1DF	k e
+A1E0	k e
+A1E1	k e
+A1E2	k A
+A1E3	k A
+A1E4	k A
+A1E5	k A
+A1E6	k >
+A1E7	k >
+A1E8	k >
+A1E9	k >
+A1EA	k o
+A1EB	k o
+A1EC	k o
+A1ED	k o
+A1EE	k &
+A1EF	k &
+A1F0	k &
+A1F1	k &
+A1F2	k u
+A1F3	k u
+A1F4	k u
+A1F5	k u
+A1F6	k u
+A1F7	k u
+A1F8	kh i
+A1F9	kh i
+A1FA	kh i
+A1FB	kh i
+A1FC	kh e
+A1FD	kh e
+A1FE	kh e
+A1FF	kh A
+A200	kh A
+A201	kh A
+A202	kh A
+A203	kh >
+A204	kh >
+A205	kh >
+A206	kh o
+A207	kh o
+A208	kh o
+A209	kh o
+A20A	kh &
+A20B	kh &
+A20C	kh &
+A20D	kh &
+A20E	kh u
+A20F	kh u
+A210	kh u
+A211	kh u
+A212	kh u
+A213	kh u
+A214	g i
+A215	g i
+A216	g i
+A217	g e
+A218	g e
+A219	g e
+A21A	g A
+A21B	g A
+A21C	g A
+A21D	g A
+A21E	g >
+A21F	g >
+A220	g >
+A221	g >
+A222	g o
+A223	g o
+A224	g o
+A225	g o
+A226	g &
+A227	g &
+A228	g &
+A229	g &
+A22A	g u
+A22B	g u
+A22C	g u
+A22D	g u
+A22E	g u
+A22F	g u
+A230	N g e 
+A231	N g e
+A232	N g A
+A233	N g A
+A234	N g A 
+A235	N g A  
+A236	N g >
+A237	N g >
+A238	N g >
+A239	N g o
+A23A	N g o
+A23B	N g o
+A23C	N g o
+A23D	N g &
+A23E	N g &
+A23F	N g &
+A240	N g u
+A241	N g u
+A242	N g u
+A243	N g u
+A244	N g u
+A245	N g u
+A246	h i
+A247	h i	
+A248	h i
+A249	h i
+A24A	h e
+A24B	h e
+A24C	h e
+A24D	h e
+A24E	h A
+A24F	h A
+A250	h A
+A251	h A	
+A252	h >
+A253	h >
+A254	h >
+A255	h >
+A256	h o
+A257	h o
+A258	h o
+A259	h o
+A25A	h &
+A25B	h &
+A25C	h &
+A25D	N e
+A25E	N e
+A25F	N e
+A260	N A
+A261	N A 
+A262	N A 
+A263	N A
+A264	N >
+A265	N >
+A266	N >
+A267	N o
+A268	N o
+A269	N o
+A26A	N o
+A26B	N &
+A26C	N &
+A26D	N &
+A26E	x i
+A26F	X e
+A270	x e
+A271	x A
+A272	x A
+A273	x A
+A274	x A
+A275	x >	
+A276	x >
+A277	x >
+A278	x >
+A279	x o	
+A27A	x o
+A27B	x o
+A27C	x o	
+A27D	x &	
+A27E	x &
+A27F	x &
+A280	G A
+A281	G A
+A282	G A 
+A283	G A
+A284	G > 
+A285	G >
+A286	G >
+A287	G o	
+A288	G o
+A289	G o
+A28A	G &
+A28B	G &
+A28C	G &
+A28D	ts i
+A28E	ts i
+A28F	ts i
+A290	ts i
+A291	ts e
+A292	ts e
+A293	ts e
+A294	ts A
+A295	ts A
+A296	ts A
+A297	ts A
+A298	ts >
+A299	ts >
+A29A	ts >
+A29B	ts o
+A29C	ts o
+A29D	ts o
+A29E	ts o
+A29F	ts &
+A2A0	ts &
+A2A1	ts &
+A2A2	ts u
+A2A3	ts u
+A2A4	ts u
+A2A5	ts u
+A2A6	ts u
+A2A7	ts u
+A2A8	ts l	
+A2A9	ts l	
+A2AA	ts l
+A2AB	ts l
+A2AC	ts i
+A2AD	ts i
+A2AE	tsh i
+A2AF	tsh i
+A2B0	tsh i
+A2B1	tsh i
+A2B2	tsh e
+A2B3	tsh e
+A2B4	tsh e
+A2B5	tsh e
+A2B6	tsh A 
+A2B7	tsh A
+A2B8	tsh A
+A2B9	tsh A
+A2BA	tsh > 
+A2BB	tsh >
+A2BC	tsh >
+A2BD	tsh o
+A2BE	tsh o
+A2BF	tsh o
+A2C0	tsh o
+A2C1	tsh &
+A2C2	tsh &
+A2C3	tsh &
+A2C4	tsh u
+A2C5	tsh u
+A2C6	tsh u
+A2C7	tsh u
+A2C8	tsh u
+A2C9	tsh u
+A2CA	tsh l
+A2CB	tsh l
+A2CC	tsh l
+A2CD	tsh l
+A2CE	tsh i
+A2CF	tsh i
+A2D0	dz i
+A2D1	dz i
+A2D2	dz i
+A2D3	dz i
+A2D4	dz e
+A2D5	dz e
+A2D6	dz e
+A2D7	dz e
+A2D8	dz A
+A2D9	dz A
+A2DA	dz A
+A2DB	dz A
+A2DC	dz o
+A2DD	dz o
+A2DE	dz o
+A2DF	dz &
+A2E0	dz &
+A2E1	dz &
+A2E2	dz u
+A2E3	dz u
+A2E4	dz u
+A2E5	dz u
+A2E6	dz u
+A2E7	dz l
+A2E8	dz l
+A2E9	dz l
+A2EA	dz l
+A2EB	dz i
+A2EC	dz i
+A2ED	n dz i 
+A2EE	n dz i
+A2EF	n dz i
+A2F0	n dz i
+A2F1	n dz e
+A2F2	n dz e
+A2F3	n dz e
+A2F4	n dz A
+A2F5	n dz A
+A2F6	n dz A
+A2F7	n dz A
+A2F8	n dz >
+A2F9	n dz >
+A2FA	n dz o
+A2FB	n dz o
+A2FC	n dz &
+A2FD	n dz &
+A2FE	n dz u
+A2FF	n dz u
+A300	n dz u
+A301	n dz u
+A302	n dz u
+A303	n dz l
+A304	n dz l
+A305	n dz l
+A306	n dz l
+A307	n dz i	
+A308	n dz i
+A309	s i 
+A30A	s i
+A30B	s i
+A30C	s i
+A30D	s e
+A30E	s e
+A30F	s e	
+A310	s A	
+A311	s A
+A312	s A
+A313	s A 
+A314	s >
+A315	s >
+A316	s >	
+A317	s o	
+A318	s o
+A319	s o
+A31A	s o	
+A31B	s &
+A31C	s &	
+A31D	s &
+A31E	s u
+A31F	s u
+A320	s u
+A321	s u
+A322	s u
+A323	s u
+A324	s l
+A325	s l
+A326	s l
+A327	s l
+A328	s i
+A329	s i
+A32A 	z i
+A32B	z i
+A32C	z i
+A32D	z i
+A32E	z e
+A32F	z e
+A330	z e
+A331	z A
+A332	z A	
+A333	z A
+A334	z A
+A335	z o	
+A336	z o
+A337	z o	
+A338	z o
+A339	z &
+A33A	z &
+A33B	z &
+A33C	z u
+A33D	z u
+A33E	z u
+A33F	z u
+A340	z l
+A341	z l
+A342	z l	
+A343	z l
+A344	z i
+A345	z i
+A346	ts_r A
+A347	ts_r A
+A348	ts_r A
+A349	ts_r A
+A34A	ts_r >
+A34B	ts_r >
+A34C	ts_r >
+A34D	ts_r o
+A34E	ts_r o
+A34F	ts_r o
+A350	ts_r o
+A351	ts_r &
+A352	ts_r &
+A353	ts_r &
+A354	ts_r &
+A355	ts_r u 
+A356	ts_r u
+A357	ts_r u
+A358	ts_r u
+A359	ts_r u
+A35A	ts_r u
+A35B	ts_r l
+A35C	ts_r l
+A35D	ts_r l
+A35E	ts_r l
+A35F	ts_r i
+A360	ts_r i
+A361	ts_rh A	
+A362	ts_rh A
+A363	ts_rh A
+A364	ts_rh A
+A365	ts_rh >
+A366	ts_rh >
+A367	ts_rh >
+A368	ts_rh >
+A369	ts_rh o
+A36A	ts_rh o
+A36B	ts_rh o
+A36C	ts_rh o
+A36D	ts_rh &
+A36E	ts_rh &
+A36F	ts_rh &
+A370	ts_rh &
+A371	ts_rh u
+A372	ts_rh u
+A373	ts_rh u
+A374	ts_rh u
+A375	ts_rh u
+A376	ts_rh l
+A377	ts_rh l
+A378	ts_rh l
+A379	ts_rh l
+A37A	ts_rh i
+A37B	ts_rh i
+A37C	dzr A
+A37D	dzr A
+A37E	dzr >
+A37F	dzr >
+A380	dzr o
+A381	dzr o
+A382	dzr o
+A383	dzr o
+A384	dzr &
+A385	dzr &
+A386	dzr &
+A387	dzr &
+A388	dzr u
+A389	dzr u
+A38A	dzr u
+A38B	dzr u
+A38C	dzr u
+A38D	dzr u
+A38E	dzr l
+A38F	dzr l
+A390	dzr l
+A391	dzr l	
+A392	dzr i
+A393	dzr i
+A394	n dzr A
+A395	n dzr A	
+A396	n dzr A
+A397	n dzr A	
+A398	n dzr o
+A399	n dzr o
+A39A	n dzr o
+A39B	n dzr &
+A39C	n dzr &
+A39D	n dzr &
+A39E	n dzr &
+A39F	n dzr u
+A3A0	n dzr u
+A3A1	n dzr u
+A3A2	n dzr u
+A3A3	n dzr u
+A3A4	n dzr u
+A3A5	n dzr l
+A3A6	n dzr l
+A3A7	n dzr l
+A3A8	n dzr l
+A3A9	n dzr i
+A3AA	n dzr i
+A3AB	sr A
+A3AC	sr A
+A3AD	sr A
+A3AE	sr A
+A3AF	sr >
+A3B0	sr >
+A3B1	sr >
+A3B2	sr o
+A3B3	sr o
+A3B4	sr o
+A3B5	sr o
+A3B6	sr &
+A3B7	sr &
+A3B8	sr &
+A3B9	sr &
+A3BA	sr u
+A3BB	sr u
+A3BC	sr u
+A3BD	sr u
+A3BE	sr u
+A3BF	sr u
+A3C0	sr l
+A3C1	sr l
+A3C2	sr l
+A3C3	sr l
+A3C4	sr i
+A3C5	sr i
+A3C6	zr A
+A3C7	zr A 
+A3C8	zr A
+A3C9	zr A
+A3CA	zr > 
+A3CB	zr >	
+A3CC	zr >
+A3CD	zr o
+A3CE	zr o 
+A3CF	zr o
+A3D0	zr o
+A3D1	zr &
+A3D2	zr &
+A3D3	zr &
+A3D4	zr u
+A3D5	zr u
+A3D6	zr u
+A3D7	zr u
+A3D8	zr u
+A3D9	zr u
+A3DA	zr l 
+A3DB	zr l
+A3DC	zr l
+A3DD	zr l
+A3DE	zr i
+A3DF	zr i
+A3E0	t c} i
+A3E1	t c} i
+A3E2	t c} i	 
+A3E3	t c} i
+A3E4	t c} e 
+A3E5	t c} e
+A3E6	t c} e
+A3E7	t c} e
+A3E8	t c} >
+A3E9	t c} >
+A3EA	t c} >
+A3EB	t c} >
+A3EC	t c} o
+A3ED	t c} o
+A3EE	t c} o
+A3EF	t c} o
+A3F0	t c} u
+A3F1	t c} u
+A3F2	t c} u
+A3F3	t c} u
+A3F4	t c} u
+A3F5	t c} u
+A3F6	t c} l
+A3F7	t c} l	 
+A3F8	t c} l
+A3F9	t c} l
+A3FA	t c} i
+A3FB	t c} i
+A3FC	t c}h i
+A3FD	t c}h i
+A3FE	t c}h i
+A3FF	t c}h i
+A400	t c}h e
+A401	t c}h e
+A402	t c}h e
+A403	t c}h e
+A404	t c}h >
+A405	t c}h >
+A406	t c}h >
+A407	t c}h >
+A408	t c}h o
+A409	t c}h o
+A40A	t c}h o
+A40B	t c}h o
+A40C	t c}h u
+A40D	t c}h u
+A40E	t c}h u
+A40F	t c}h u
+A410	t c}h u
+A411	t c}h u
+A412	t c}h l
+A413	t c}h l
+A414	t c}h l
+A415	t c}h l
+A416	t c}h i
+A417	t c}h i
+A418	d z} i
+A419	d z} i
+A41A	d z} i
+A41B	d z} i
+A41C	d z} e
+A41D	d z} e
+A41E	d z} e
+A41F	d z} e
+A420	d z} >
+A421	d z} >
+A422	d z} >	
+A423	d z} o
+A424	d z} o
+A425	d z} o
+A426	d z} o
+A427	d z} u
+A428	d z} u
+A429	d z} u
+A42A	d z} u
+A42B	d z} u
+A42C	d z} u
+A42D	d z} l
+A42E	d z} l
+A42F	d z} l
+A430	d z} l
+A431	n d z} i
+A432	n d z} i
+A433	n d z} i
+A434	n d z} i
+A435	n d z} e
+A436	n d z} e
+A437	n d z} e
+A438	n d z} e
+A439	n d z} > 
+A43A	n d z} >
+A43B	n d z} o
+A43C	n d z} o
+A43D	n d z} o
+A43E	n d z} o
+A43F	n d z} u
+A440	n d z} u
+A441	n d z} u
+A442	n d z} u
+A443	n d z} u
+A444	n d z} l
+A445	n d z} l
+A446	n d z} l
+A447	n d z} l
+A448	n d z} i
+A449	n d z} i
+A44A	nr i
+A44B	nr i
+A44C	nr i
+A44D	nr i
+A44E	nr e
+A44F	nr e
+A450	nr e
+A451	nr e
+A452	nr >
+A453	nr >
+A454	nr >
+A455	nr o
+A456	nr o
+A457	nr o
+A458	nr o
+A459	nr u
+A45A	nr u
+A45B	nr u
+A45C	nr u
+A45D	c} i
+A45E	c} i
+A45F	c} i
+A460	c} i
+A461	c} e
+A462	c} e
+A463	c} e
+A464	c} e
+A465	c} >
+A466	c} >
+A467	c} o
+A468	c} o
+A469	c} o
+A46A	c} o
+A46B	c} l
+A46C	c} l
+A46D	c} l
+A46E	c} l
+A46F	c} i
+A470	c} i
+A471	z} i 
+A472	z} i
+A473	z} i
+A474	z} i
+A475	z} e
+A476	z} e
+A477	z} e
+A478	z} e
+A479	z} >
+A47A	z} >
+A47B	z} >
+A47C	z} > 
+A47D	z} o	
+A47E	z} o
+A47F	z} o
+A480	z} o
+A481	z} u
+A482	z} u
+A483	z} u
+A484	z} u
+A485	z} u
+A486	z} u
+A487	z} l 
+A488	z} l
+A489	z} l
+A48A	z} l
+A48B	z} i
+A48C	z} i
+	
+#Yi Radicals
+A490	t c}h o
+A491	l i	
+A492	kh i
+A493	nr i  
+A494	tsh l
+A495	z i 
+A496	g o
+A497	k e
+A498	m i
+A499	h i
+A49A	l l 
+A49B	b u
+A49C	m o
+A49D	z} o
+A49E	ph u
+A49F	h >
+A4A0	th A
+A4A1	k A	
+A4A2	ts u	
+A4A3	tsh l
+A4A4	d u
+A4A5	p u
+A4A6	g u
+A4A7	nr o
+A4A8	th u
+A4A9	o
+A4AA	d z} u
+A4AB	ts o
+A4AC	p l
+A4AD	m0 o
+A4AE	z} i
+A4AF	v u
+A4B0	sr l
+A4B1	v e
+A4B2	ts A
+A4B3	t c} o
+A4B4	n dz u
+A4B5	d z} l
+A4B6	k o
+A4B7	d z} e
+A4B8	G o
+A4B9	t u
+A4BA	sr u
+A4BB	l e
+A4BC	tsh l
+A4BD	tsh >
+A4BE	tsh i
+A4BF	h o
+A4C0	sr A
+A4C1	ts u
+A4C2	sr o		
+A4C3	ts_rh e
+A4C4	dz e
+A4C5	m b e
+A4C6	kh e

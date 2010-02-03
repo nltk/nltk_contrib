@@ -1,0 +1,57 @@
+#Thaana
+
+#Basic consonants
+0780	h
+0781	sr
+0782	n
+0783	r
+0784	b
+0785	lr
+0786	k
+0787	(SILENT)
+#ALIFU(No sound value)
+0788	v
+0789	m
+078A	f
+078B	d
+078C	t
+078D	l
+078E	g
+078F	n~
+0790	s
+0791	dr
+0792	z
+0793	tr	
+0794	j
+0795	p
+0796	j-
+0797	c
+#Extension for Arabic
+0798	T
+0799	D
+079A	HH
+079B	x
+079C	z
+079D	S
+079E	sr
+079F	dr
+07A0	tr
+07A1	zr
+07A2	HH_v
+07A3	G
+07A4	q
+07A5	w
+#Vowels	
+07A6	A
+07A7	A:
+07A8	i
+07A9	i:
+07AA	u
+07AB	u:
+07AC	e
+07AD	e:
+07AE	o
+07AF	o:
+07B0	?
+#Consonant for Addu dialect
+07B1	n

@@ -1,0 +1,155 @@
+# M - Anusvara
+# H - Visarga
+# Y - YUUKALEAPINTU: insert a short inherent vowel with abrupt glottal stop
+# MU - MUUSIKATOAN: changes the second register to the first
+# T - TRIISAP: changes the first register to the second
+
+# Khmer
+1780	k A
+1781	kh A
+1782	k >
+1783	kh >
+1784	N >
+1785	c A
+1786	ch A
+1787	c >
+1788	ch >
+1789	n~ >
+178A	dr A
+178B	th A
+178C	dr >
+178D	th >
+178E	n >
+178F	t A
+1790	th A
+1791	t >
+1792	th >
+1793	n >
+1794	b A
+1795	ph A
+1796	p >
+1797	ph >
+1798	m >
+1799	j >
+179A	r >
+179B	l >
+179C	w >
+179D	sh A	
+179E	sr A
+179F	s A
+17A0	h A
+17A1	l A
+17A2	? A	
+17A3	A
+17A4	a:
+17A5	i
+17A6	i:
+17A7	o
+17A8	& w
+17A9	u:
+17AA	A w
+17AB	r
+17AC	r
+17AD	l
+17AE	l
+17AF	E
+17B0	a j
+17B1	a w
+17B2	o:
+17B3	> w
+17B4	 A
+17B5	a:
+17B6	a:
+17B7	i
+17B8	i:
+17B9	i
+17BA	i:
+17BB	o
+17BC	u:
+17BD	u >
+17BE	>:
+17BF	i >
+17C0	i >
+17C1	e:
+17C2	E:
+17C3	a j
+17C4	o:
+17C5	a w
+17C6	(M)
+17C7	(A)
+17C8	(Y)
+17C9	(MU)
+17CA	(T)
+17CB	
+17CC
+17CD
+17CE
+17CF
+17D0
+17D1
+17D2
+17D3
+17D4
+17D5
+17D6
+17D7
+17D8
+17D9
+17DA
+17DB	(CURRENCY SYMBOL)
+17DC
+17DD
+17E0	(ZERO)
+17E1	(ONE)
+17E2	(TWO)
+17E3	(THREE)
+17E4	(FOUR)
+17E5	(FIVE)
+17E6	(SIX)
+17E7	(SEVEN)
+17E8	(EIGHT)
+17E9	(NINE)
+17F0	(TEN)
+17F1
+17F2
+17F3
+17F4
+17F5
+17F6
+17F7
+17F8
+17F9
+
+# Khmer Symbols
+19E0
+19E1
+19E2
+19E3
+19E4
+19E5
+19E6
+19E7
+19E8
+19E9
+19EA
+19EB
+19EC
+19ED
+19EE
+19EF
+19F0
+19F1
+19F2
+19F3
+19F4
+19F5
+19F6
+19F7
+19F8
+19F9
+19FA
+19FB
+19FC
+19FD
+19FE
+19FF

@@ -1,0 +1,96 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module extractor</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>extractor</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/rws/src/ScriptTranscriber/extractor.py">/Users/rws/src/ScriptTranscriber/extractor.py</a></font></td></tr></table>
+    <p><tt>Token&nbsp;extractor&nbsp;class.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="Utils.html">Utils</a><br>
+</td><td width="25%" valign=top><a href="tokens.html">tokens</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="extractor.html#Extractor">Extractor</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="extractor.html#BasicExtractor">BasicExtractor</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BasicExtractor">class <strong>BasicExtractor</strong></a>(<a href="extractor.html#Extractor">Extractor</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Simple&nbsp;extractor&nbsp;based&nbsp;on&nbsp;capitalization&nbsp;(for&nbsp;scripts&nbsp;that<br>
+support&nbsp;this)&nbsp;or&nbsp;any&nbsp;word&nbsp;(for&nbsp;scripts&nbsp;that&nbsp;do&nbsp;not).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="BasicExtractor-Segment"><strong>Segment</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="extractor.html#Extractor">Extractor</a>:<br>
+<dl><dt><a name="BasicExtractor-InitData"><strong>InitData</strong></a>(self, args<font color="#909090">=[]</font>)</dt></dl>
+
+<dl><dt><a name="BasicExtractor-Tokens"><strong>Tokens</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BasicExtractor-__init__"><strong>__init__</strong></a>(self, text)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Extractor">class <strong>Extractor</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Input&nbsp;is&nbsp;raw&nbsp;UTF-8&nbsp;text.&nbsp;Output&nbsp;is&nbsp;a&nbsp;sequence&nbsp;of&nbsp;"interesting"<br>
+tokens.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Extractor-InitData"><strong>InitData</strong></a>(self, args<font color="#909090">=[]</font>)</dt></dl>
+
+<dl><dt><a name="Extractor-Segment"><strong>Segment</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Extractor-Tokens"><strong>Tokens</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Extractor-__init__"><strong>__init__</strong></a>(self, text)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BASE_</strong> = '/Users/rws/src/ScriptTranscriber'<br>
+<strong>SENTENCE_END_</strong> = ['.', ':', '?', '!']<br>
+<strong>__author__</strong> = '<font color="#c040c0">\n</font>rws@uiuc.edu (Richard Sproat)<font color="#c040c0">\n</font>'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><br>
+rws@uiuc.edu&nbsp;(Richard&nbsp;Sproat)<br>
+</td></tr></table>
+</body></html>

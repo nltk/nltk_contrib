@@ -1,0 +1,26 @@
+#!/bin/bash
+for f in chinese_extractor dochandler extractor filter pronouncer token_comp tokens
+do
+    pydoc -w $f
+done
+scp -p *.html catarina:/var/www/ScriptTranscriber
+####################################################
+cd Utils
+for f in english chinese kunyomi latin script
+do
+    pydoc -w $f
+done
+scp -p *.html catarina:/var/www/ScriptTranscriber/Utils
+cd ..
+####################################################
+cd Unitran
+for f in unitran
+do
+    pydoc -w $f
+done
+scp -p *.html catarina:/var/www/ScriptTranscriber/Unitran
+cd ..
+####################################################
+ls *.html */*.html |
+ ./makeindex.py >index.html
+scp -p index.html catarina:/var/www/ScriptTranscriber

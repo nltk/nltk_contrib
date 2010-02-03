@@ -1,0 +1,95 @@
+# M - Anusvara
+# H - Visarga
+# P - virama:suppress the inherent vowel of the preceding consonant
+
+#Various signs
+0D82	(M)
+0D83	(H)
+#Independnt vowels
+0D85	A, &
+#A-in the first syllable before double consonants; &-word finally and before single consonant  
+0D86	A:, A
+#must represent A: everywhere except word-finally
+0D87	@
+0D88	@:
+0D89	i
+0D8A	i:
+0D8B	u
+0D8C	u:
+0D8D	9r i, 9r u
+0D8E	9r i:, 9r u:	
+0D8F	l=
+0D90	l=
+0D91	e
+0D92	e:
+0D93	aI
+0D94	o
+0D95	o:
+0D96	aU
+#Consonants
+0D9A	k A
+0D9B	kh A
+0D9C	g A
+0D9D	gh A
+0D9E	N A
+0D9F	N A
+0DA0	c A
+0DA1	ch A
+0DA2	J A
+0DA3	Jh A
+0DA4	n~ A
+0DA5	J n~ A
+0DA6	n~ J A
+0DA7	tr A
+0DA8	tR A
+0DA9	dr A
+0DAA	dR A
+0DAB	nr A
+0DAC	nr dr A
+0DAD	t[ A
+0DAE	t[_h A
+0DAF	d[ A
+0DB0	d[_h A
+0DB1	n[ A
+0DB3	n d A
+0DB4	p A
+0DB5	ph A
+0DB6	b A
+0DB7	bh A
+0DB8	m A
+0DB9	m b A
+0DBA	j A
+0DBB	9r A
+0DBD	l A
+0DC0	v A
+0DC1	S A
+0DC2	S A
+0DC3	s A
+0DC4	hv A
+0DC5	lr A
+0DC6	f A
+#Sign
+0DCA	(P)
+#Dependent vowel signs 
+0DCF	A:
+0DD0	@
+0DD1	@:
+0DD2	i
+0DD3	i:
+0DD4	u
+0DD6	u:
+0DD8	9r=
+0DD9	e
+0DDA	e:
+0DDB	aI
+#Two-part dependent vowel signs
+0DDC	o
+0DDD	o:
+0DDE	aU
+#Dependent vowel sign
+0DDF	l=
+#Additional dependent vowel signs
+0DF2	rr=
+0DF3	l=
+#Punctuation
+0DF4	(PUNCTUATION)

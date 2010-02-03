@@ -1,0 +1,59 @@
+#Tifinagh
+
+#Letters
+2D30	a
+2D31	b
+2D32	bh
+2D33	g
+2D34	gh
+2D35	dj
+2D36	dj
+2D37	d
+2D38	dh
+2D39	d d
+2D3A	d dh
+2D3B	e
+2D3C	f
+2D3D	k
+2D3E	k
+2D3F	kh
+2D40	b
+2D41	h
+2D42	h
+2D43	h
+2D44	@
+2D45	kh
+2D46	q
+2D47	q
+2D48	i
+2D49	z
+2D4A	z
+2D4B	z
+2D4C	z
+2D4D	l
+2D4E	m	
+2D4F	n
+2D50	nj
+2D51	N
+2D52	p
+2D53	u
+2D54	r
+2D55	rr
+2D56	gh
+2D57	gh
+2D58	gh
+2D59	s
+2D5A	s s
+2D5B	sh
+2D5C	t
+2D5D	th
+2D5E	ch
+2D5F	t t
+2D60	v
+2D61	w
+2D62	j
+2D63	z
+2D64	z
+2D65	z z
+#Modifier letter
+2D6F	w

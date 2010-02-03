@@ -1,0 +1,105 @@
+After check-in, run
+
+./config.sh 
+
+IN THIS DIRECTORY to set up for your installation.  Then run tests
+with:
+
+./runalltests.sh
+
+If all pass, then the installation is correct.
+
+To regenerate the test data used by the tests if you change things then run
+
+./generate_testdata.sh
+
+######################################################################
+
+- extractor.py 
+  
+  Defines text Extractor class to extract potential terms of interest
+  from text.
+  
+  BasicExtractor looks for capitalized non-initial words in scripts
+  that support capitalization and backs off to all words for other
+  scripts.
+
+- chinese_extractor.py
+
+  ChineseExtractor defines a specialized extractor for foreign words
+  in Chinese.
+
+- tokens.py
+
+  Token represents an extracted term. It includes fields for the term,
+  a morphological decomposition, a count and a set of pronunciations.
+
+  Lang is a set of terms associated with one "document".
+
+  Doc represents one aligned "document" across languages/scripts,
+  where "document" could be an actual n-tuple of translated documents,
+  a single pair of terms known to be transcriptions of each other, or
+  multiple documents in n languages that are roughly time aligned to
+  each other.
+
+  Doclist is a holder for docs. It is assumed these are stored in some
+  sensible sequence (e.g. in temporal order).
+
+  Class definitions include writers that dump in XML.
+
+- dochandler.py
+
+  Defines an xml.sax.handler.ContentHandler for XML documents output
+  by tokens.py
+
+- filter.py
+
+  Defines a class of filters for removing some terms from doclists
+
+- pronouncer.py
+
+  Defines a Pronouncer class. Provided are UnitranPronouncer (produces
+  pronunciation guesses for any utf8 codepoint except for Hanzi and
+  Latin), HanziPronouncer (produces Mandarin and Native Japanese
+  pronunciations for Chinese characters), EnglishPronouncer (which is
+  a table lookup for a huge list of pronunciations extracted from
+  Festival), LatinPronouncer (a fallback pronouncer for extended Latin
+  strings)
+
+- token_comp.py
+
+  Defines a TokenComparator class and a ComparisonResult class. The
+  TokenComparator takes two tokens and returns a result that includes
+  the cost for the comparison. The comparator may be based on any
+  features of the two tokens, but reasonable features are phoneme
+  sequences, grapheme sequences (possibly based on a portion of the
+  morphological decomposition rather than the raw token), combinations
+  of these, or features derived from them.
+
+  Provided is OldPhoneticDistanceComparator, which uses the hand-built
+  phonetic distances and the old minimum edit code.
+
+- For each of these there are unit tests:
+
+  dochandler_unittest.py
+  extractor_unittest.py
+  pronouncer_unittest.py
+  token_comp_unittest.py
+
+- Also see sample.py, which demonstrates the use of the whole system
+  on a fragment of the ISI Chinese/English Found Parallel
+  Sentences. Lines are read, tokens extracted, put into Lang and Doc
+  fields and the entire Doclist is written out as an XML file.
+
+  Then the OldPhoneticDistanceComparator is called on each pair within
+  the same document, the results sorted, and a thresholded list
+  output.
+
+- Note that each directory contains a __init__.py file, which includes
+  the single line:
+
+BASE_ = '/Users/rws/src/ScriptTranscriber'
+
+  This should be modified (in all copies) to be the actual location
+  that you put this code in.
+

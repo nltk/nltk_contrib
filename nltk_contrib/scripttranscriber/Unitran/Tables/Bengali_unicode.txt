@@ -1,0 +1,128 @@
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+# CD - Candrabindu: vowel nasalization
+# NUKTA: extending the alphabet to new letters
+
+#Various signs
+0981	(CD)		
+0982	(M)	
+0983	(H)
+#Independent vowels
+0985	>, o
+0986	A
+0987	i
+0988	i:
+0989	u
+098A	u:
+098B	9r i
+098C	l=
+098D	(R:098D)
+098E	(R:098E)	
+098F	@, e
+# @-following non-high vowel (e,o,@,>,A) ; e-following high vowel(i,u) 
+0990	oI
+0991	(R:0991)
+0992	(R:0992)
+0993	o
+0994	oU
+#Consonants
+0995	k A
+0996	kh A
+0997	g A
+0998	gh A
+0999	N A
+099A	c A
+099B	ch A
+099C	J A
+099D	Jh A
+099E	n~ A
+099F	tr A 
+09A0	tR A
+09A1	dr A
+09A2	dR A
+09A3	nr A
+09A4	t[ A
+09A5	t[_h A
+09A6	d[ A
+09A7	d[_h A
+09A8	n[ A
+09A9	(R:09A9)
+09AA	p A
+09AB	ph A
+09AC	b A
+09AD	bh A
+09AE	m A
+09AF	j A
+09B0	9r A
+09B1	(R:09B1)
+09B2	l A
+09B3	(R:09B3)
+09B4	(R:09B4)
+09B5	(R:09B5)
+09B6	S A
+09B7	S A
+09B8	s A
+09B9	hv A
+#Various signs
+09BA
+09BC	(NUKTA)
+09BD	(AVAGRAHA)
+#Dependent vowel signs
+09BE	A
+09BF	i
+09C0	i:
+09C1	u
+09C2	u:
+09C3	9r=
+09C4	rr=
+09C5	(R:09C5)
+09C6	(R:09C6)
+09C7	e
+09C8	oI
+09C9	(R:09C9)
+#Two-part dependent vowel signs
+09CA	(R:09CA)
+09CB	o
+09CC	oU
+#Sign
+09CD	(P)
+#Additional consonant
+09CE	t A
+#Sign
+09D7	(oU LENGTH MARK)
+#Additional consonant
+09DC	rr A
+09DD	rh A
+09DE	t A
+09DF	jr A
+#Generic additions
+09E0	rr=
+09E1	l=
+09E2	l=
+09E3	l=
+09E4	(*)
+09E5	(**)
+#Digits
+09E6	(ZERO)
+09E7	(ONE)
+09E8	(TWO)
+09E9	(THREE)
+09EA	(FOUR)
+09EB	(FIVE)
+09EC	(SIX)
+09ED	(SEVEN)
+09EE	(EIGHT)
+09EF	(NINE)
+#Bengali-specific additions
+09F0	9r A
+09F1	9r A
+09F2	(RUPEE MARK)
+09F3	(RUPEE SIGN)
+09F4	(CURRENCY NUMERATOR 1)
+09F5	(CURRENCY NUMERATOR 2)
+09F6	(CURRENCY NUMERATOR 3)
+09F7	(CURRENCY NUMERATOR 4)
+09F8	(CURRENCY NUMERATOR 1 LESS THAN THE DENOMINATOR)
+09F9	(CURRENCY NUMERATOR 16)
+09FA	(ISSHAR)

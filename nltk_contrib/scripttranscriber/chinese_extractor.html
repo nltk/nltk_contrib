@@ -1,0 +1,83 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module chinese_extractor</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>chinese_extractor</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/rws/src/ScriptTranscriber/chinese_extractor.py">/Users/rws/src/ScriptTranscriber/chinese_extractor.py</a></font></td></tr></table>
+    <p><tt>Chinese&nbsp;foreign-word-specific&nbsp;token&nbsp;extractor&nbsp;class.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="extractor.html">extractor</a><br>
+</td><td width="25%" valign=top><a href="tokens.html">tokens</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="extractor.html#BasicExtractor">extractor.BasicExtractor</a>(<a href="extractor.html#Extractor">extractor.Extractor</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="chinese_extractor.html#ChineseExtractor">ChineseExtractor</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ChineseExtractor">class <strong>ChineseExtractor</strong></a>(<a href="extractor.html#BasicExtractor">extractor.BasicExtractor</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Chinese&nbsp;extractor&nbsp;for&nbsp;foreign&nbsp;transcriptions.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="chinese_extractor.html#ChineseExtractor">ChineseExtractor</a></dd>
+<dd><a href="extractor.html#BasicExtractor">extractor.BasicExtractor</a></dd>
+<dd><a href="extractor.html#Extractor">extractor.Extractor</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ChineseExtractor-Segment"><strong>Segment</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="extractor.html#Extractor">extractor.Extractor</a>:<br>
+<dl><dt><a name="ChineseExtractor-InitData"><strong>InitData</strong></a>(self, args<font color="#909090">=[]</font>)</dt></dl>
+
+<dl><dt><a name="ChineseExtractor-Tokens"><strong>Tokens</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ChineseExtractor-__init__"><strong>__init__</strong></a>(self, text)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BASE_</strong> = '/Users/rws/src/ScriptTranscriber'<br>
+<strong>FOREIGN_CHARS_</strong> = {'<font color="#c040c0">\xe4\xb8\x81</font>': 1, '<font color="#c040c0">\xe4\xb8\x83</font>': 1, '<font color="#c040c0">\xe4\xb8\x89</font>': 1, '<font color="#c040c0">\xe4\xb8\x8d</font>': 1, '<font color="#c040c0">\xe4\xb8\x98</font>': 1, '<font color="#c040c0">\xe4\xb8\x9d</font>': 1, '<font color="#c040c0">\xe4\xb8\xb9</font>': 1, '<font color="#c040c0">\xe4\xb8\xbd</font>': 1, '<font color="#c040c0">\xe4\xb9\x83</font>': 1, '<font color="#c040c0">\xe4\xb9\x89</font>': 1, ...}<br>
+<strong>MIN_LEN_</strong> = 3<br>
+<strong>__author__</strong> = '<font color="#c040c0">\n</font>rws@uiuc.edu (Richard Sproat)<font color="#c040c0">\n</font>'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><br>
+rws@uiuc.edu&nbsp;(Richard&nbsp;Sproat)<br>
+</td></tr></table>
+</body></html>

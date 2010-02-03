@@ -1,0 +1,103 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module perceptron</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>perceptron</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/clsp/ws08mstd/tqian/ScriptTranscriber/trunk/perceptron.py">/home/clsp/ws08mstd/tqian/ScriptTranscriber/trunk/perceptron.py</a></font></td></tr></table>
+    <p><tt>Definition&nbsp;for&nbsp;a&nbsp;SNoW-based&nbsp;peceptron&nbsp;model.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="shutil.html">shutil</a><br>
+</td><td width="25%" valign=top><a href="snow.html">snow</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="perceptron.html#FeatureMap">FeatureMap</a>
+</font></dt><dt><font face="helvetica, arial"><a href="perceptron.html#Perceptron">Perceptron</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FeatureMap">class <strong>FeatureMap</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;feature&nbsp;definition&nbsp;class,&nbsp;implemented&nbsp;as&nbsp;a&nbsp;hash&nbsp;(dictionary).<br>
+Note:&nbsp;for&nbsp;maximum&nbsp;compatibility,&nbsp;please&nbsp;convert&nbsp;all&nbsp;feature&nbsp;contents&nbsp;(as&nbsp;opposed&nbsp;to&nbsp;feature&nbsp;IDs)<br>
+to&nbsp;strings&nbsp;before&nbsp;hashing.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="FeatureMap-AddFeature"><strong>AddFeature</strong></a>(self, feature)</dt><dd><tt>Add&nbsp;a&nbsp;new&nbsp;feature&nbsp;to&nbsp;the&nbsp;map.<br>
+Return&nbsp;the&nbsp;newly&nbsp;assigned&nbsp;ID&nbsp;of&nbsp;that&nbsp;feature;&nbsp;if&nbsp;the&nbsp;given&nbsp;feature&nbsp;exists,<br>
+return&nbsp;the&nbsp;currently&nbsp;assigned&nbsp;ID.</tt></dd></dl>
+
+<dl><dt><a name="FeatureMap-DumpToFile"><strong>DumpToFile</strong></a>(self, feature_map_file)</dt><dd><tt>Dump&nbsp;the&nbsp;entire&nbsp;feature&nbsp;map&nbsp;to&nbsp;a&nbsp;file&nbsp;whose&nbsp;name&nbsp;is&nbsp;given&nbsp;as&nbsp;the&nbsp;parameter.</tt></dd></dl>
+
+<dl><dt><a name="FeatureMap-GetFeatureDic"><strong>GetFeatureDic</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;hash/dictionary&nbsp;held&nbsp;by&nbsp;a&nbsp;<a href="#FeatureMap">FeatureMap</a>&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="FeatureMap-__init__"><strong>__init__</strong></a>(self, feature_map<font color="#909090">=None</font>)</dt><dd><tt>Constructor,&nbsp;with&nbsp;an&nbsp;optional&nbsp;parameter&nbsp;to&nbsp;load&nbsp;an&nbsp;existing&nbsp;feature&nbsp;map.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Perceptron">class <strong>Perceptron</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;<a href="#Perceptron">Perceptron</a>&nbsp;model<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Perceptron-CleanUp"><strong>CleanUp</strong></a>(self)</dt><dd><tt>Remove&nbsp;network&nbsp;files&nbsp;of&nbsp;the&nbsp;current&nbsp;trained&nbsp;model.</tt></dd></dl>
+
+<dl><dt><a name="Perceptron-IncremLearn"><strong>IncremLearn</strong></a>(self, increm_file)</dt><dd><tt>Learn&nbsp;from&nbsp;additional&nbsp;examples,&nbsp;formatted&nbsp;as&nbsp;SNoW&nbsp;input.<br>
+Return&nbsp;True&nbsp;if&nbsp;the&nbsp;model&nbsp;successfully&nbsp;learns&nbsp;new&nbsp;features.</tt></dd></dl>
+
+<dl><dt><a name="Perceptron-IsTrained"><strong>IsTrained</strong></a>(self)</dt><dd><tt>Return&nbsp;whether&nbsp;a&nbsp;model&nbsp;is&nbsp;trained&nbsp;or&nbsp;not.</tt></dd></dl>
+
+<dl><dt><a name="Perceptron-TestActivation"><strong>TestActivation</strong></a>(self, example)</dt><dd><tt>Test&nbsp;a&nbsp;given&nbsp;example&nbsp;formatted&nbsp;as&nbsp;SNoW&nbsp;input.<br>
+Return&nbsp;a&nbsp;tuple&nbsp;of&nbsp;activated&nbsp;target&nbsp;and&nbsp;activation,&nbsp;in&nbsp;the&nbsp;order&nbsp;as&nbsp;mentioned.</tt></dd></dl>
+
+<dl><dt><a name="Perceptron-TrainFromFile"><strong>TrainFromFile</strong></a>(self, train_file)</dt><dd><tt>Train&nbsp;a&nbsp;perceptron&nbsp;model&nbsp;given&nbsp;input&nbsp;from&nbsp;the&nbsp;file&nbsp;"train_file",&nbsp;which<br>
+should&nbsp;consist&nbsp;of&nbsp;examples&nbsp;formatted&nbsp;as&nbsp;SNoW&nbsp;input&nbsp;(e.g.&nbsp;1,&nbsp;232,&nbsp;421,&nbsp;121).<br>
+Return&nbsp;True&nbsp;if&nbsp;the&nbsp;model&nbsp;is&nbsp;successfully&nbsp;trained.</tt></dd></dl>
+
+<dl><dt><a name="Perceptron-__init__"><strong>__init__</strong></a>(self, network_file<font color="#909090">=None</font>)</dt><dd><tt>Constructor,&nbsp;with&nbsp;an&nbsp;optional&nbsp;parameter&nbsp;accepting&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;network&nbsp;file.<br>
+If&nbsp;the&nbsp;network&nbsp;file&nbsp;exists,&nbsp;a&nbsp;trained&nbsp;perceptron&nbsp;will&nbsp;be&nbsp;constructed,<br>
+and&nbsp;is&nbsp;available&nbsp;for&nbsp;testing.&nbsp;If&nbsp;the&nbsp;file&nbsp;does&nbsp;not&nbsp;exist,&nbsp;network&nbsp;file&nbsp;generated<br>
+during&nbsp;training&nbsp;will&nbsp;be&nbsp;written&nbsp;to&nbsp;its&nbsp;content.</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__author__</strong> = '<font color="#c040c0">\n</font>ting.qian@rochester.edu (Ting Qian)<font color="#c040c0">\n</font>'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><br>
+ting.qian@rochester.edu&nbsp;(Ting&nbsp;Qian)<br>
+</td></tr></table>
+</body></html>

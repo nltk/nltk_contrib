@@ -1,0 +1,98 @@
+# M - Anusvara
+# H - Visarga
+# P - virama:suppress the inherent vowel of the preceding consonant
+# CD - Candrabindu: vowel nasalization
+
+#Various signs
+0C01	(CD)
+0C02	(M) 	
+0C03	(H) 
+#Independent vowels
+0C05	>
+0C06	>:	
+0C07	i
+0C08	i:
+0C09	u
+0C0A	u:
+0C0B	9r i, 9r u
+0C0C	l=
+0C0D	(R:0C0D)
+0C0E	e
+0C0F	e:
+0C10	aI
+0C12	o
+0C13	o:
+0C14	aU
+#Consonants
+0C15	k A
+0C16	kh A
+0C17	g A
+0C18	gh A
+0C19	N A
+0C1A	c A
+0C1B	ch A
+0C1C	J A
+0C1D	Jh A
+0C1E	n~ A
+0C1F	tr A
+0C20	tR A
+0C21	dr A
+0C22	dR A
+0C23	nr A
+0C24	t[ A
+0C25	t[_h A
+0C26	d[ A
+0C27	d[_h A
+0C28	n[ A
+0C29	(R:0C29)
+0C2A	p A
+0C2B	ph A
+0C2C	b A
+0C2D	bh A
+0C2E	m A
+0C2F	j A
+0C30	9r A
+0C31	9r: A
+0C32	l A
+0C33	lr A
+0C34	(R:0C34)
+0C35	v A
+0C36	S A
+0C37	S A
+0C38	s A
+0C39	hv A
+#Dependent vowel signs
+0C3E	>:
+0C3F	i
+0C40	i:
+0C41	u
+0C42	u:	
+0C43	9r=
+0C44	rr=
+0C45	(R:0C45)
+0C46	e
+0C47	e:
+0C48	aI
+0C49	(R:0C49)
+0C4A	o
+0C4B	o:
+0C4C	aU
+#Various signs
+0C4D	(P)
+0C55	(LENGTH MARK)
+0C56	(aI LENGTH MARK)
+0C5F	(R:0C5F)
+#Generic additions
+0C60	rr=
+0C61	lr=
+#Digits
+0C66	(ZERO)
+0C67	(ONE)
+0C68	(TWO)
+0C69	(THREE)
+0C6A	(FOUR)
+0C6B	(FIVE)
+0C6C	(SIX)
+0C6D	(SEVEN)
+0C6E	(EIGHT)
+0C6F	(NINE)

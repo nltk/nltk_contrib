@@ -1,0 +1,30 @@
+高島屋	Takashimaya	2.681818	t A k A i s i m A j a <-> t A: k A: S I m A: j &
+共產黨	공산당	2.000000	k o N tshr a n t a N <-> k o N sh a n t a N
+Kuomintang	國民黨	2.650000	k w o U m I n t @ N <-> k w o m i n t a N
+ᏣᎳᎩ	Cherokee	4.416667	ts A l A k i <-> tS E r & k i:
+niqitsiavaliriniq	ᓂᕿᑦᓯᐊᕙᓕᕆᓂᖅ	2.058824	n i k i t s i a v a l i r i n i k <-> n i q i t s i A v A l i r i n i q
+Bush	Bush	1.000000	Pearson's correlation
+Clinton	Clinton	1.000000	Pearson's correlation
+Clinton	克林頓	1.000000	Pearson's correlation
+Clinton	高島屋	1.000000	Pearson's correlation
+克林頓	Clinton	1.000000	Pearson's correlation
+高島屋	Clinton	1.000000	Pearson's correlation
+克林頓	克林頓	1.000000	Pearson's correlation
+克林頓	高島屋	1.000000	Pearson's correlation
+高島屋	克林頓	1.000000	Pearson's correlation
+高島屋	高島屋	1.000000	Pearson's correlation
+Clinton	Clinton	1.000000	Pearson's correlation
+Bush	Bush	1.000000	Pearson's correlation
+Clinton	كلينتون	1.000000	Pearson's correlation
+كلينتون	Clinton	1.000000	Pearson's correlation
+كلينتون	كلينتون	1.000000	Pearson's correlation
+Bush	Clinton	1.000000	Pearson's correlation
+Clinton	Bush	1.000000	Pearson's correlation
+Bush	克林頓	1.000000	Pearson's correlation
+Bush	高島屋	1.000000	Pearson's correlation
+克林頓	Bush	1.000000	Pearson's correlation
+高島屋	Bush	1.000000	Pearson's correlation
+#<comparator: Bush <-> 克林頓: sucessfully activated one target>
+#<comparator: Bush <-> 高島屋: sucessfully activated one target>
+#<comparator: Clinton <-> 克林頓: sucessfully activated one target>
+#<comparator: Clinton <-> 高島屋: sucessfully activated one target>

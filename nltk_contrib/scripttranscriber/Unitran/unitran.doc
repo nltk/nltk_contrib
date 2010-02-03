@@ -1,0 +1,39 @@
+Help on module unitran:
+
+NAME
+    unitran - UTF-8 to WorldBet/XSampa decoder
+
+FILE
+    /home/rws/Work/DoI/Export/Unitran/unitran.py
+
+FUNCTIONS
+    IndicCV(file)
+        Load Indic-specific CV data
+    
+    IndicTwoPartVowels(file)
+        Load Indic-specific two-part vowel data
+    
+    ProcLine(line)
+        Process individual text line, converting from utf-8 to phonetic
+        encoding.
+    
+    TransFile(infile=None, outfile=None)
+        Top-level function to translate utf-8 file into phonetic transcription
+    
+    UpdateTransTable(table)
+        Update local module's TransTable with data from table.
+    
+    Usage(argv)
+    
+    main(argv)
+
+DATA
+    TransTable = {}
+    __author__ = '\nrws@uiuc.edu (Richard Sproat)\nkkim36@uiuc.edu (Kyoung...
+
+AUTHOR
+    
+    rws@uiuc.edu (Richard Sproat)
+    kkim36@uiuc.edu (Kyoung-young Kim)
+
+

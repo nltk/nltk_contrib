@@ -1,0 +1,143 @@
+#Greek and Coptic
+
+#YPOGEGRAMMENI- /i/ subscript
+#TONOS - acute stress (')
+#DIALYTIKA - pronouce both vowels separately
+#TELEIA - semicolon
+
+0374	(NUMERAL SIGN)
+0375	(LOWER NUMERAL SIGN)
+037A	(YPOGEGRAMMENI)
+037E	(QUESTION MARK)
+0384	(TONOS)
+0385	(DIALYTIKA TONOS)
+0386	A
+0387	(TELEIA)
+0388	e
+0389	E:
+038A	i
+038C	o
+038E	i
+038F	o
+0390	i
+0391	A
+0392	b	
+0393	g
+0394	d
+0395	e
+0396	z
+0397	E:
+0398	th
+0399	i
+039A	k
+039B	l
+039C	m
+039D	n
+039E	k s
+039F	o
+03A0	p	
+03A1	r
+03A3	s
+03A4	t
+03A5	i
+03A6	f
+03A7	X
+03A8	p s
+03A9	o
+03AA	i
+03AB	i 
+03AC	A
+03AD	e
+03AE	E:
+03AF	i
+03B0	i
+03B1	A	
+03B2	b
+03B3	g
+03B4	d
+03B5	e
+03B6	z
+03B7	E:
+03B8	th
+03B9	i
+03BA	k
+03BB	l
+03BC	m
+03BD	n
+03BE	k s
+03BF	o
+03C0	p
+03C1	r
+03C2	s
+03C3	s
+03C4	t
+03C5	i
+03C6	f	
+03C7	X
+03C8	p s
+03C9	o
+03CA	i 
+03CB	i 
+03CC	o
+03CD	i
+03CE	o
+#Variant letterforms
+03D0	b
+03D1	th
+03D2	i
+03D3	i
+03D4	i
+03D5	f
+03D6	p
+03D7	(KAI)
+#Archaic letters
+03D8	q
+03D9	q
+03DA	s
+03DB	s
+03DC	w
+03DD	w
+03DE	q
+03DF	q
+03E0	(NINE HUNDREDS)
+03E1	(NINE HUNDREDS)
+#Copic letters derived from Demotic
+03E2	S
+03E3	S
+03E4	f
+03E5	f
+03E6	h		
+03E7	h
+03E8	h
+03E9	h
+03EA	dZ
+03EB	dZ
+03EC	q
+03ED	q
+03EE	t i
+03EF	t i
+#Variant letterforms
+03F0	k
+03F1	r
+03F2	s
+#Additional letter
+03F3	(YOT)
+#Variant letterforms and symbols
+03F4	th
+03F5	e
+03F6	e
+#Additional archaic letters for Bactrian
+03F7	S	
+03F8	S
+#Variant letterform
+03F9	s
+#Archaic letters
+03FA	(SAN)
+03FB	(SAN)
+#Symbol
+03FC	r
+#Editorial symbols
+03FD	s
+03FE	s
+03FF	s
+

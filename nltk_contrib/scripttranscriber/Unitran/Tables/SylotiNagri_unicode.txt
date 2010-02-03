@@ -1,0 +1,52 @@
+	# DVISVARA: dipthongs with /i/ as the second element
+# HASANTA: suppress the inherent vowel (Virama)
+
+#Independent vowels and dvisvara
+A800	A
+A801	i
+A802	(DVIAVARA)		
+A803	u
+A804	e
+A805	o	
+#Sign
+A806	(HASANTA)
+#Consonants and consonant signs
+A807	k A
+A808	kh A
+A809	g A
+A80A	gh A
+A80B	m A
+A80C	c A
+A80D	ch A
+A80E	J A
+A80F	Jh A
+A810	tr A
+A811	tR A
+A812	dr A
+A813	dR A
+A814	t[ A
+A815	t[_h A
+A816	d[ A
+A817	d[_h A
+A818	n[ A
+A819	p A
+A81A	ph A
+A81B	b A
+A81C	bh A
+A81D	m A
+A81E	9r A
+A81F	l A
+A820	9r: A
+A821	s A
+A822	h A
+#Dependent vowel signs
+A823	A
+A824	i
+A825	u	
+A826	e
+A827	o:
+#Poetry marks
+A828	(POETRY MARK1)
+A829	(POETRY MARK2)
+A82A	(POETRY MARK3)
+A82B	(POETRY MARK4)

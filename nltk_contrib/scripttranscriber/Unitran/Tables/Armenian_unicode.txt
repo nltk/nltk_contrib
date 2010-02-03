@@ -1,0 +1,93 @@
+#Armenian
+#Uppercase letters
+0531	A
+0532	b
+0533	g
+0534	d
+0535	E
+0536	z
+0537	e
+0538	>
+0539	th
+053A	Z
+053B	i
+053C	l
+053D	z
+053E	ts
+053F	k
+0540	h
+0541	dz
+0542	G
+0543	tS
+0544	m
+0545	h, j
+0546	n
+0547	S
+0548	o
+#word initially: vo, all other positions: o
+0549	tSh
+054A	p
+054B	dZ
+054C	r
+054D	s	
+054E	v
+054F	t
+0550	9
+0551	tsh
+0552	v
+0553	ph
+0554	kh
+0555	o
+0556	f
+#Modifier letters	
+0559	(ML)
+055A	(APOSTROPHE)
+055B	(EMPHASIS MARK)
+055C	(EXCLAMATION MARK)
+055D	(COMMA)
+055E	(QUESTION MARK)
+055F	(ABBREVIATION MARK)
+#Lowercase letters
+0561	A
+0562	b
+0563	g
+0564	d
+0565	j E
+0566	z
+0567	e
+0568	>
+0569	th
+056A	Z
+056B	i
+056C	l
+056D	x
+056E	ts
+056F	k
+0570	h
+0571	dz
+0572	G
+0573	tS
+0574	m
+0575	h, j
+0576	n
+0577	S
+0578	o
+#word initially: v o, all other positions: o
+0579	tSh
+057A	p
+057B	dZ
+057C	r
+057D	s
+057E	v
+057F	t
+0580	9
+0581	tsh
+0582	w
+0583	ph
+0584	kh
+0585	o
+0586	f
+0587	E w
+#Punctuation
+0589	(FULL STOP)
+058A	(HYPHEN)

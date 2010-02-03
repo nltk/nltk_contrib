@@ -1,0 +1,194 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module perceptron_trainer</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>perceptron_trainer</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/clsp/ws08mstd/tqian/ScriptTranscriber/trunk/perceptron_trainer.py">/home/clsp/ws08mstd/tqian/ScriptTranscriber/trunk/perceptron_trainer.py</a></font></td></tr></table>
+    <p><tt>A&nbsp;string-based&nbsp;discrinimative&nbsp;model&nbsp;for&nbsp;transcribing&nbsp;between<br>
+pairs&nbsp;of&nbsp;source&nbsp;and&nbsp;target&nbsp;tokens</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="perceptron.html">perceptron</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="tempfile.html">tempfile</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="perceptron_trainer.html#Example">Example</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="perceptron_trainer.html#TRExample">TRExample</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="perceptron_trainer.html#ParallelTrainer">ParallelTrainer</a>
+</font></dt><dt><font face="helvetica, arial"><a href="perceptron_trainer.html#WordShuffler">WordShuffler</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Example">class <strong>Example</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>An&nbsp;example,&nbsp;with&nbsp;a&nbsp;pair&nbsp;of&nbsp;source&nbsp;and&nbsp;target&nbsp;tokens,<br>
+and&nbsp;feature&nbsp;set&nbsp;represented&nbsp;as&nbsp;feature&nbsp;IDs.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Example-AddFeatureID"><strong>AddFeatureID</strong></a>(self, f_id)</dt><dd><tt>Add&nbsp;a&nbsp;feature&nbsp;ID&nbsp;to&nbsp;this&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="Example-BigramSubstr"><strong>BigramSubstr</strong></a>(self, str)</dt><dd><tt>Return&nbsp;all&nbsp;possible&nbsp;letter&nbsp;bigrams&nbsp;for&nbsp;a&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="Example-CoupleSubstrs"><strong>CoupleSubstrs</strong></a>(self, substrs1, substrs2)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;of&nbsp;coupled&nbsp;bigram&nbsp;strings&nbsp;for&nbsp;the&nbsp;current&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="Example-Display"><strong>Display</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="Example-DisplayFeatureID"><strong>DisplayFeatureID</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;example&nbsp;in&nbsp;feature&nbsp;IDs,<br>
+also&nbsp;a&nbsp;line&nbsp;of&nbsp;SNoW&nbsp;input.</tt></dd></dl>
+
+<dl><dt><a name="Example-GenerateCouplings"><strong>GenerateCouplings</strong></a>(self)</dt><dd><tt>Return&nbsp;n-gram&nbsp;couplings&nbsp;for&nbsp;the&nbsp;two&nbsp;tokens&nbsp;in&nbsp;this&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="Example-GetSPron"><strong>GetSPron</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Example-GetTPron"><strong>GetTPron</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Example-__init__"><strong>__init__</strong></a>(self, s_token, t_token)</dt><dd><tt>Constructor.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParallelTrainer">class <strong>ParallelTrainer</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;perceptron&nbsp;class&nbsp;for&nbsp;training&nbsp;a&nbsp;discriminative&nbsp;model&nbsp;from&nbsp;a&nbsp;parallel&nbsp;dictionary.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ParallelTrainer-CleanUp"><strong>CleanUp</strong></a>(self)</dt><dd><tt>Remove&nbsp;generated&nbsp;feature&nbsp;maps&nbsp;and&nbsp;network&nbsp;files&nbsp;(i.e.&nbsp;the&nbsp;current<br>
+trained&nbsp;model)&nbsp;from&nbsp;the&nbsp;current&nbsp;directory.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-DumpFeatureMap"><strong>DumpFeatureMap</strong></a>(self)</dt><dd><tt>Dump&nbsp;the&nbsp;entire&nbsp;feature&nbsp;to&nbsp;the&nbsp;current&nbsp;directory.&nbsp;Helper&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-Evaluate"><strong>Evaluate</strong></a>(self, s_token, t_token)</dt><dd><tt>Evaluate&nbsp;a&nbsp;pair&nbsp;of&nbsp;test&nbsp;case.<br>
+Return:&nbsp;a&nbsp;tuple&nbsp;of&nbsp;activated&nbsp;target&nbsp;and&nbsp;activation,&nbsp;in&nbsp;the&nbsp;order&nbsp;as&nbsp;mentioned.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-IsTrained"><strong>IsTrained</strong></a>(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;an&nbsp;instance&nbsp;is&nbsp;trained,&nbsp;false&nbsp;otherwise.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-LoadFeatureMap"><strong>LoadFeatureMap</strong></a>(self, feature_map_file)</dt><dd><tt>Load&nbsp;a&nbsp;feature&nbsp;map&nbsp;object&nbsp;from&nbsp;a&nbsp;feature&nbsp;map&nbsp;file.&nbsp;Helper&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-NearestNeighbors"><strong>NearestNeighbors</strong></a>(self, positives)</dt><dd><tt>Create&nbsp;a&nbsp;list&nbsp;of&nbsp;negative&nbsp;examples&nbsp;by&nbsp;matching&nbsp;token1&nbsp;in&nbsp;each&nbsp;pair&nbsp;with<br>
+four&nbsp;other&nbsp;token2&nbsp;strings&nbsp;that&nbsp;have&nbsp;shortest&nbsp;editing&nbsp;distance&nbsp;to&nbsp;the&nbsp;original<br>
+token2.&nbsp;Intensive&nbsp;computation.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-Retrain"><strong>Retrain</strong></a>(self, new_positives)</dt><dd><tt>Incrementally&nbsp;learn&nbsp;from&nbsp;new&nbsp;examples&nbsp;(require&nbsp;a&nbsp;trained&nbsp;perceptron)<br>
+Input:&nbsp;a&nbsp;list&nbsp;of&nbsp;positive&nbsp;examples&nbsp;in&nbsp;the&nbsp;form&nbsp;of&nbsp;tuples&nbsp;(token1,&nbsp;token2).<br>
+Output:&nbsp;True&nbsp;if&nbsp;successful,&nbsp;False&nbsp;otherwise.&nbsp;Feature&nbsp;map&nbsp;and&nbsp;network&nbsp;file<br>
+are&nbsp;updated/created.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-ShuffleCharacters"><strong>ShuffleCharacters</strong></a>(self, positives)</dt><dd><tt>Create&nbsp;a&nbsp;list&nbsp;of&nbsp;negative&nbsp;examples&nbsp;by&nbsp;shuffling&nbsp;characters&nbsp;in&nbsp;the&nbsp;second&nbsp;token&nbsp;in&nbsp;each&nbsp;pair.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-ShuffleWords"><strong>ShuffleWords</strong></a>(self, positives)</dt><dd><tt>Create&nbsp;a&nbsp;list&nbsp;of&nbsp;negative&nbsp;examples&nbsp;by&nbsp;mismatching&nbsp;positive&nbsp;ones.&nbsp;Helper&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-Train"><strong>Train</strong></a>(self, pos_examples_list)</dt><dd><tt>Given&nbsp;a&nbsp;list&nbsp;of&nbsp;positive&nbsp;examples,&nbsp;generate&nbsp;random&nbsp;negative&nbsp;examples,<br>
+and&nbsp;train&nbsp;a&nbsp;perceptron&nbsp;model.<br>
+Input:&nbsp;a&nbsp;list&nbsp;of&nbsp;positive&nbsp;examples&nbsp;in&nbsp;the&nbsp;form&nbsp;of&nbsp;tuples&nbsp;(token1,&nbsp;token2).<br>
+Output:&nbsp;True&nbsp;if&nbsp;the&nbsp;process&nbsp;is&nbsp;successful.&nbsp;Feature&nbsp;map&nbsp;and&nbsp;network&nbsp;file&nbsp;are<br>
+dumped&nbsp;to&nbsp;the&nbsp;current&nbsp;directory.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-TrigramSubstr"><strong>TrigramSubstr</strong></a>(self, str)</dt><dd><tt>Return&nbsp;all&nbsp;possible&nbsp;letter&nbsp;trigrams&nbsp;for&nbsp;a&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="ParallelTrainer-__init__"><strong>__init__</strong></a>(self, feature_map_file<font color="#909090">=None</font>, network_file<font color="#909090">=None</font>)</dt><dd><tt>Constructor.&nbsp;Optional&nbsp;arguments&nbsp;are&nbsp;the&nbsp;filenames&nbsp;of&nbsp;the&nbsp;feature&nbsp;map<br>
+and&nbsp;the&nbsp;network&nbsp;file&nbsp;(existing&nbsp;or&nbsp;to&nbsp;be&nbsp;generated).<br>
+If&nbsp;no&nbsp;parameters&nbsp;are&nbsp;given,&nbsp;default&nbsp;names&nbsp;will&nbsp;be&nbsp;used&nbsp;(not&nbsp;recommended).</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TRExample">class <strong>TRExample</strong></a>(<a href="perceptron_trainer.html#Example">Example</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;training&nbsp;example,&nbsp;extending&nbsp;the&nbsp;class&nbsp;<a href="#Example">Example</a>,&nbsp;with&nbsp;the&nbsp;addition&nbsp;of<br>
+category&nbsp;labels<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="TRExample-DisplayFeatureID"><strong>DisplayFeatureID</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;current&nbsp;example&nbsp;in&nbsp;feature&nbsp;IDS,<br>
+with&nbsp;the&nbsp;category&nbsp;label&nbsp;as&nbsp;the&nbsp;starting&nbsp;feature.</tt></dd></dl>
+
+<dl><dt><a name="TRExample-__init__"><strong>__init__</strong></a>(self, s_token, t_token, cate)</dt></dl>
+
+<hr>
+Methods inherited from <a href="perceptron_trainer.html#Example">Example</a>:<br>
+<dl><dt><a name="TRExample-AddFeatureID"><strong>AddFeatureID</strong></a>(self, f_id)</dt><dd><tt>Add&nbsp;a&nbsp;feature&nbsp;ID&nbsp;to&nbsp;this&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="TRExample-BigramSubstr"><strong>BigramSubstr</strong></a>(self, str)</dt><dd><tt>Return&nbsp;all&nbsp;possible&nbsp;letter&nbsp;bigrams&nbsp;for&nbsp;a&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="TRExample-CoupleSubstrs"><strong>CoupleSubstrs</strong></a>(self, substrs1, substrs2)</dt><dd><tt>Return&nbsp;a&nbsp;set&nbsp;of&nbsp;coupled&nbsp;bigram&nbsp;strings&nbsp;for&nbsp;the&nbsp;current&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="TRExample-Display"><strong>Display</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="TRExample-GenerateCouplings"><strong>GenerateCouplings</strong></a>(self)</dt><dd><tt>Return&nbsp;n-gram&nbsp;couplings&nbsp;for&nbsp;the&nbsp;two&nbsp;tokens&nbsp;in&nbsp;this&nbsp;example.</tt></dd></dl>
+
+<dl><dt><a name="TRExample-GetSPron"><strong>GetSPron</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TRExample-GetTPron"><strong>GetTPron</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="WordShuffler">class <strong>WordShuffler</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;helper&nbsp;class&nbsp;for&nbsp;shuffling&nbsp;positive&nbsp;examples&nbsp;between&nbsp;columns.&nbsp;Do&nbsp;not&nbsp;use&nbsp;directly.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="WordShuffler-CreateShuffledList"><strong>CreateShuffledList</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="WordShuffler-GetAlternativeInd"><strong>GetAlternativeInd</strong></a>(self, ind)</dt></dl>
+
+<dl><dt><a name="WordShuffler-__init__"><strong>__init__</strong></a>(self, l)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Distance"><strong>Distance</strong></a>(a, b)</dt><dd><tt>Function&nbsp;that&nbsp;calculates&nbsp;the&nbsp;Levenshtein&nbsp;distance&nbsp;between&nbsp;any&nbsp;two<br>
+indexable&nbsp;objects.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DEBUG_</strong> = False<br>
+<strong>__author__</strong> = '<font color="#c040c0">\n</font>ting.qian@rochester.edu (Ting Qian)<font color="#c040c0">\n</font>'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><br>
+ting.qian@rochester.edu&nbsp;(Ting&nbsp;Qian)<br>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,203 @@
+#Hiragana
+
+#Based on JIS X 0208
+3041	A	
+3042	A
+3043	i
+3044	i
+3045	u
+3046	u
+3047	e
+3048	e
+3049	o
+304A	o
+304B	k A
+304C	g A
+304D	k i
+304E	g i
+304F	k u
+3050	g u
+3051	k e	
+3052	g e
+3053	k o
+3054	g o
+3055	s A
+3056	z A
+3057	s i
+3058	z i 
+3059	s u
+305A	z u
+305B	s e
+305C	z e
+305D	s o
+305E	z o
+305F	t A
+3060	d A
+3061	tS i
+3062	z i
+3063	ts u
+3064	ts u
+3065	z u
+3066	t e
+3067	d e
+3068	t o
+3069	d o
+306A	n A
+306B	n i
+306C	n u
+306D	n e
+306E	n o
+306F	h A
+3070	b A	
+3071	p A
+3072	h i
+3073	b i
+3074	p i
+3075	h u
+3076	b u
+3077	p u
+3078	h e
+3079	b e
+307A	p e
+307B	h o
+307C	b o
+307D	p o
+307E	m A
+307F	m i
+3080	m u
+3081	m e
+3082	m o
+3083	j a
+3084	j a
+3085	yu
+3086	yu
+3087	j o
+3088	j o
+3089	r A
+308A	r i
+308B	r u
+308C	r e
+308D	r o
+308E	w A
+308F	w A	
+3090	w i
+3091	w e
+3092	w o
+3093	N
+3094	v u
+#Small letters
+3095	k A
+3096	k e
+#Voicing Marks
+3099	(VOICED)
+309A	(SEMI VOICED)
+309B	(VOICED)
+309C	(SEMI VOICED)
+#Iteration marks
+309D	(ITERATION MARK)
+309E	(VOICED ITERATION MARK)
+#Vertical form diagraph
+309F	(YORI)
+
+#Katakana
+#Katakana punctuation
+30A0	(EQUAL SIGN)
+#Based on JIS X 0208
+30A1	A	
+30A2	A
+30A3	i
+30A4	i
+30A5	u
+30A6	u
+30A7	e
+30A8	e
+30A9	o
+30AA	o
+30AB	k A
+30AC	g A
+30AD	k i
+30AE	g i
+30AF	k u
+30B0	g u
+30B1	k e	
+30B2	g e
+30B3	k o
+30B4	g o
+30B5	s A
+30B6	z A
+30B7	s i
+30B8	z i
+30B9	s u
+30BA	z u
+30BB	s e
+30BC	z e
+30BD	s o
+30BE	z o
+30BF	t A
+30C0	d A
+30C1	tS i
+30C2	z i
+30C3	ts u
+30C4	ts u
+30C5	z u
+30C6	t e
+30C7	d e
+30C8	t o
+30C9	d o
+30CA	n A
+30CB	n i
+30CC	n u
+30CD	n e
+30CE	n o
+30CF	h A
+30D0	b A	
+30D1	p A
+30D2	h i
+30D3	b i
+30D4	p i
+30D5	h u
+30D6	b u
+30D7	p u
+30D8	h e
+30D9	b e
+30DA	p e
+30DB	h o
+30DC	b o
+30DD	p o
+30DE	m A
+30DF	m i
+30E0	m u
+30E1	m e
+30E2	m o
+30E3	j a
+30E4	j a
+30E5	yu
+30E6	yu
+30E7	j o
+30E8	j o
+30E9	r A
+30EA	r i
+30EB	r u
+30EC	r e
+30ED	r o
+30EE	w A
+30EF	w A	
+30F0	w i
+30F1	w e
+30F2	w o
+30F3	N
+30F4	v u
+30F5	k A
+30F6	k e
+30F7	v A
+30F8	v i
+30F9	v e
+30FA	v o
+#Conjunction and length marks
+30FB	(MIDDLE DOT)
+30FC	(PROLONGED SOUND MARK)
+#Iteration marks
+30FD	(ITERATION MARK)
+30FE	(VOICED ITERATION MARK)
+#Vertical form diagraph
+30FF	(KOTO)

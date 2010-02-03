@@ -1,0 +1,29 @@
+#Buhid
+
+#Independent vowels
+1740	A
+1741	i
+1742	u
+#Consonants
+1743	k A
+1744	g A
+1745	N A
+1746	t A
+1747	d A
+1748	n A
+1749	p A
+174A	b A
+174B	m A
+174C	j A
+174D	r A
+174E	l A
+174F	w A
+1750	s A
+1751	h A
+#Dependent vowel signs
+1752	i
+1753	u
+
+
+
+

@@ -1,0 +1,35 @@
+# P - virama:suppress the inherent vowel of the preceding consonant
+
+#Hanunoo
+
+#Independent vowels
+1720	A
+1721	i
+1722	u
+#Consonants
+1723	k A	
+1724	g A
+1725	N A
+1726	t A
+1727	d A
+1728	n A
+1729	p A
+172A	b A
+172B	m A
+172C	j A
+172D	r A
+172E	l A
+172F	w A
+1730	s A
+1731	h A
+#Dependent vowel signs
+1732	i
+1733	u
+#Virama	
+1734	(P)
+#Generic punctuation for Phillippine scripts
+1735	(SINGLE PUNCTUATION)
+1736	(DOUBLE PUNCTUATION)
+
+
+

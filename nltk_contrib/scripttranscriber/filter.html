@@ -1,0 +1,98 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module filter</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>filter</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/rws/src/ScriptTranscriber/filter.py">/Users/rws/src/ScriptTranscriber/filter.py</a></font></td></tr></table>
+    <p><tt>Class&nbsp;definition&nbsp;for&nbsp;filters&nbsp;for&nbsp;reducing&nbsp;the&nbsp;set&nbsp;of&nbsp;terms&nbsp;to&nbsp;be<br>
+considered&nbsp;in&nbsp;a&nbsp;doclist.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="dochandler.html">dochandler</a><br>
+</td><td width="25%" valign=top><a href="tokens.html">tokens</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="filter.html#Filter">Filter</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="filter.html#FrequencyFilter">FrequencyFilter</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Filter">class <strong>Filter</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;class&nbsp;for&nbsp;filters&nbsp;that&nbsp;take&nbsp;in&nbsp;a&nbsp;document&nbsp;list&nbsp;and&nbsp;return&nbsp;a<br>
+list&nbsp;with&nbsp;some&nbsp;terms&nbsp;removed.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Filter-Doclist"><strong>Doclist</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Filter-Filter"><strong>Filter</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Filter-InitData"><strong>InitData</strong></a>(self, args<font color="#909090">=[]</font>)</dt></dl>
+
+<dl><dt><a name="Filter-__init__"><strong>__init__</strong></a>(self, doclist)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FrequencyFilter">class <strong>FrequencyFilter</strong></a>(<a href="filter.html#Filter">Filter</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Simple&nbsp;filter&nbsp;based&nbsp;on&nbsp;a&nbsp;minimum&nbsp;frequency&nbsp;count&nbsp;for&nbsp;a&nbsp;term.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="FrequencyFilter-Filter"><strong>Filter</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FrequencyFilter-SetMinCount"><strong>SetMinCount</strong></a>(self, min_count)</dt></dl>
+
+<hr>
+Methods inherited from <a href="filter.html#Filter">Filter</a>:<br>
+<dl><dt><a name="FrequencyFilter-Doclist"><strong>Doclist</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FrequencyFilter-InitData"><strong>InitData</strong></a>(self, args<font color="#909090">=[]</font>)</dt></dl>
+
+<dl><dt><a name="FrequencyFilter-__init__"><strong>__init__</strong></a>(self, doclist)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BASE_</strong> = '/Users/rws/src/ScriptTranscriber'<br>
+<strong>MIN_COUNT_</strong> = 3<br>
+<strong>__author__</strong> = '<font color="#c040c0">\n</font>rws@uiuc.edu (Richard Sproat)<font color="#c040c0">\n</font>'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><br>
+rws@uiuc.edu&nbsp;(Richard&nbsp;Sproat)<br>
+</td></tr></table>
+</body></html>

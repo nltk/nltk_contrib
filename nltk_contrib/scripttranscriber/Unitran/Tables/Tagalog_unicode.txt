@@ -1,0 +1,42 @@
+# P - virama:suppress the inherent vowel of the preceding consonant
+
+#Tagalog
+
+#Independent vowels
+1700	A
+1701	e, i
+1702	o, u
+#Consonants
+1703	k A
+1704	g A
+1705	N A
+1706	t A
+1707	d A
+1708	n A
+1709	p A
+170A	b A
+170B	m A
+170C	j A
+170E	l A
+170F	w A
+1710	s A
+1711	n A
+#Dependent vowel signs
+1712	i
+1713	u
+#Virama	
+1714	(P)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

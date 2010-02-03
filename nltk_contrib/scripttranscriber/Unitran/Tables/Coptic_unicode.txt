@@ -1,0 +1,123 @@
+#Coptic
+
+#Bohairic Coptic letters
+2C80	A
+2C81	A
+2C82	v
+2C83	v
+2C84	k
+2C85	k
+2C86	t
+2C87	t
+2C88	e
+2C89	e	
+2C8A	(SIX)
+2C8B	(SIX)
+2C8C	s
+2C8D	s
+2C8E	e:
+2C8F	e:
+2C90	th
+2C91	th
+2C92	i
+2C93	i
+2C94	k
+2C95	k
+2C96	l
+2C97	l
+2C98	m
+2C99	m
+2C9A	n
+2C9B	n
+2C9C	k s
+2C9D	k s
+2C9E	o
+2C9F	o
+2CA0	p
+2CA1	p
+2CA2	r
+2CA3	r
+2CA4	s
+2CA5	s
+2CA6	t
+2CA7	t
+2CA8	u
+2CA9	u
+2CAA	ph
+2CAB	ph
+2CAC	kh
+2CAD	kh
+2CAE	p s 
+2CAF	p s
+2CB0	o:
+2CB1	o:
+#Old Coptic and dialect letters
+2CB2	A
+2CB3	A
+2CB4	i	
+2CB5	i
+2CB6	e
+2CB7	e
+2CB8	k
+2CB9	k
+2CBA	n
+2CBB	n
+2CBC	n
+2CBD	n
+2CBE	o:
+2CBF	o:
+2CC0	s
+2CC1	s
+2CC2	S
+2CC3	S
+2CC4	S
+2CC5	S
+2CC6	s
+2CC7	s
+2CC8	f
+2CC9	f
+2CCA	h
+2CCB	h
+2CCC	h
+2CCD	h
+2CCE	h
+2CCF	h
+2CD0	h
+2CD1	h
+2CD2	ei
+2CD3	ei
+2CD4	h
+2CD5	h
+2CD6	dZ
+2CD7	dZ	
+2CD8	dZ
+2CD9	dZ
+2CDA	s h	
+2CDB	s h
+#Old Nubian letters
+2CDC	s h 	
+2CDD	s h
+2CDE	N i	
+2CDF	N i
+2CE0	nj
+2CE1	nj
+2CE2	w au		
+2CE3	w au
+#Symbols
+2CE4	(KAI)
+2CE5	(MI RO)
+2CE6	(PI RO)
+2CE7	(STAUROS)
+2CE8	(TAU RO)
+2CE9	(KHI RO)
+2CEA	(SHIMA SIMA)
+#Old Nubian Punctuation
+2CF9	(FULL STOP)
+2CFA	(DIRECT QUESTION MARK)
+2CFB	(INDIRECT QUESTION MARK)
+2CFC	(VERSE DIVIDER)
+#Numetic character
+2CFD	(FRACTION ONE HALF)
+#Punctuation	
+2CFE	(FULL STOP)
+2CFF	(MORPHOLOGICAL DIVIDER)

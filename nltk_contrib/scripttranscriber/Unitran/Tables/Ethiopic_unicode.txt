@@ -1,0 +1,476 @@
+#Ethiopic
+
+#Syllables
+1200	h 3	
+1201	h u
+1202	h i
+1203	h A
+1204	h e
+1205	h &, h
+1206	h o
+1207	h o 3	
+1208	l 3
+1209	l u
+120A	l i
+120B	l A
+120C	l e
+120D	l &, l
+120E	l o
+120F	l u 3
+1210	h 3	
+1211	h u
+1212	h i
+1213	h A
+1214	h e
+1215	h &, h
+1216	h o
+1217	h u 3
+1218	m 3
+1219	m u
+121A	m i
+121B	m A
+121C	m e
+121D	m &, m
+121E	m o
+121F	m u 3	
+1220	s 3	
+1221	s u
+1222	s i
+1223	s A
+1224	s e
+1225	s &, s
+1226	s o
+1227	s u 3
+1228	9r 3
+1229	9r u
+122A	9r i
+122B	9r A
+122C	9r e
+122D	9r &, 9r
+122E	9r o
+122F	9r u 3
+1230	s 3
+1231	s u
+1232	s i
+1233	s A
+1234	s e
+1235	s &, s
+1236	s o
+1237	s u 3
+1238	S 3
+1239	S u
+123A	S i
+123B	S A
+123C	S e
+123D	S &, S
+123E	S o
+123F	S u 3
+1240	k> 3
+1241	k> u
+1242	k> i
+1243	k> A
+1244	k> e
+1245	k> &, k>
+1246	k> o
+1247	k> o 3
+1248	k> u 3
+124A	k> ui
+124B	k> ua
+124C	k> u e
+124D	k> u&
+1250	k> h 3
+1251	k> h u
+1252	k> h i
+1253	k> h A
+1254	k> h e
+1255	k> h &, k> h
+1256	k> h o
+125A	k> h ui
+125B	k> h ua
+125C	k> h u e
+125D	k> h u&
+1260	b 3
+1261	b u
+1262	b i
+1263	b A
+1264	b e
+1265	b &, b
+1266	b o
+1267	b u 3
+1268	v 3
+1269	v u
+126A	v i
+126B	v A
+126C	v e
+126D	v &, v
+126E	v o
+126F	v u 3
+1270	t[ 3
+1271	t[ u
+1272	t[ i
+1273	t[ A
+1274	t[ e
+1275	t[ &, t[
+1276	t[ o
+1277	t[ u 3
+1278	tS 3
+1279	tS u
+127A	tS i
+127B	tS A
+127C	tS e
+127D	tS &, tS
+127E	tS o
+127F	tS u 3
+1280	h 3
+1281	h u 
+1282	h i
+1283	h A
+1284	h e
+1285	h &, h
+1286	h o
+1287	h o 3
+1288	h u 3
+128A	h ui
+128B	h ua
+128C	h u e
+128D	h u&
+1290	n 3
+1291	n u
+1292	n i
+1293	n A
+1294	n e
+1295	n &, n
+1296	n o
+1297	n u 3
+1298	n~ 3
+1299	n~ u	
+129A	n~ i
+129B	n~ A
+129C	n~ e
+129D	n~ &, n~
+129E	n~ o	
+129F	n~ u 3
+12A0	? 3
+12A1	? u
+12A2	? i 
+12A3	? A
+12A4	? e 
+12A5	? &, ?
+12A6	? o
+12A7	? u 3
+12A8	k 3
+12A9	k u
+12AA	k i
+12AB	k A
+12AC	k e
+12AD	k &, k
+12AE	k o
+12AF	k o 3
+12B0	k u 3
+12B2	k ui
+12B3	k ua
+12B4	k u e
+12B5	k u&
+12B8	h 3
+12B9	h u
+12BA	h i
+12BB	h A
+12BC	h e
+12BD	h &, h
+12BE	h o
+12C0	h u 3
+12C2	h ui
+12C3	h ua
+12C4	h u e
+12C5	h u&
+12C8	w 3
+12C9	w u
+12CA	w i
+12CB	w A
+12CC	w e
+12CD	w &, w
+12CE	w o
+12CF	w o 3
+12D0	? 3
+12D1	? u
+12D2	? i
+12D3	? A
+12D4	? e
+12D5	? &, ?
+12D6	? o
+12D8	z 3 
+12D9	z u
+12DA	z i
+12DB	z A
+12DC	z e
+12DD	z &, z
+12DE	z o
+12DF	z u 3
+12E0	Z 3
+12E1	Z u
+12E2	Z i
+12E3	Z A
+12E4	Z e
+12E5	Z &, Z
+12E6	Z o
+12E7	Z u 3
+12E8	j 3
+12E9	j u
+12EA	j i
+12EB	j A
+12EC	j e
+12ED	j &, j
+12EE	j o
+12EF	j o 3
+12F0	d 3
+12F1	d[ u
+12F2	d[ i
+12F3	d[ A
+12F4	d[ e
+12F5	d[ &, d[
+12F6	d[ o
+12F7	d[ u 3
+12F8	d d 3	
+12F9	d d u
+12FA	d d i
+12FB	d d A
+12FC	d d e
+12FD	d d &, d d
+12FE	d d o
+12FF	d d u 3
+1300	dZ 3
+1301	dZ u
+1302	dZ i
+1303	dZ A
+1304	dZ e
+1305	dZ &, dZ
+1306	dZ o
+1307	dZ u 3
+1308	g 3
+1309	g u
+130A	g i
+130B	g A
+130C	g e
+130D	g &, g
+130E	g o
+130F	g o 3
+1310	g u 3
+1312	g ui
+1313	g ua
+1314	g u e
+1315	g u&
+1318	g g 3
+1319	g g u
+131A	g g i
+131B	g g A
+131C	g g e
+131D	g g &, g g
+131E	g g o
+131F	g g ua
+1320	t[> 3
+1321	t[> u
+1322	t[> i
+1323	t[> A
+1324	t[> e
+1325	t[> &, t[>
+1326	t[> o
+1327	t[> u 3
+1328	tS> 3
+1329	tS> u
+132A	tS> i
+132B	tS> A
+132C	tS> e
+132D	tS> &, tS>
+132E	tS> o
+132F	tS> u 3
+1330	p> 3
+1331	p> u
+1332	p> i
+1333	p> A
+1334	p> e
+1335	p> &, p>
+1336	p> o
+1337	p> u 3
+1338	ts 3
+1339	ts u
+133A	ts i
+133B	ts A
+133C	ts e
+133D	ts &, ts
+133E	ts o
+133F	ts u 3
+1340	ts 3
+1341	ts u
+1342	ts i
+1343	ts A
+1344	ts e
+1345	ts &, ts
+1346	ts o
+1347	ts u 3
+1348	f 3
+1349	f u
+134A	f i
+134B	f A
+134C	f e
+134D	f &, f
+134E	f o
+134F	f u 3
+1350	p 3
+1351	p u
+1352	p i 
+1353	p A
+1354	p e
+1355	p &, p
+1356	p o
+1357	p u 3
+1358	9rj a
+1359	mj a
+135A	fj a
+#Combining mark
+135F	(GEMINATION MARK)
+#Punctuation
+1360	(SECTION MARK)
+1361	(WORDSPACE)
+1362	(FULL STOP)
+1363	(COMMA)
+1364	(SEMICOLON)
+1365	(COLON)
+1366	(PREFACE COLON)
+1367	(QUESTION MARK)
+1368	(PARAGRAPH SEPARATOR)
+#Digits
+1369	(ONE)
+136A	(TWO)
+136B	(THREE)
+136C	(FOUR)
+136D	(FIVE)
+136E	(SIX)
+136F	(SEVEN)
+1370	(EIGHT)
+1371	(NINE)
+#Numbers
+1372	(TEN)
+1373	(TWENTY)
+1374	(THIRTY)
+1375	(FORTY)
+1376	(FIFTY)
+1377	(SIXTY)
+1378	(SEVENTY)
+1379	(EIGHT)
+137A	(NINETY)
+137B	(HUNDRED)
+137C	(TEN THOUSAND)
+
+#Ethiopic Supplement
+#Syllables for Sebatbeit
+1380	mw 3	
+1381	mw i
+1382	mw 3	
+1383	mw &	
+1384	bw 3
+1385	bw i	
+1386	bw e
+1387	bw &
+1388	fw 3
+1389	fw i
+138A	fw e
+138B	fw &
+138C	pw 3
+138D	pw i
+138E	pw e
+138F	pw &
+#Tonal Marks
+1390	(YIZET)	
+1391	(DERET)
+1392	(RIKRIK)
+1393	(SHORT RIKRIK)
+1394	(DIFAT)
+1395	(KENAT)
+1396	(CHIRET)
+1397	(HIDET)
+1398	(DERET-HIDET)
+1399	(HURT)
+
+#Ethipic Extended
+#Syllables for Me'en
+2D80	l o 3 	
+2D81	m o 3
+2D82	9r o 3
+2D83	s o 3	
+2D84	S o 3
+2D85	b o 3 
+2D86	t[ o 3 
+2D87	tS o 3
+2D88	n o 3
+2D89	n~ o 3 
+2D8A	? o 3 
+2D8B	z o 3
+2D8C	d[ o 3 
+2D8D	dr o 3
+2D8E	j o 3
+2D8F	t> o 3
+2D90	tS> o 3
+2D91	p> o 3
+2D92	p o 3
+#Syllables for Blin
+2D93	gr u 3 
+2D94	gr ui
+2D95	gr u e
+2D96	gr u&
+#Syllables for Sebatbeit
+2DA0	s s 3	
+2DA1	s s u
+2DA2	s s i
+2DA3	s s A
+2DA4	s s e
+2DA5	s s &, s s
+2DA6	s s o
+2DA8	tS tS 3
+2DA9	tS tS u
+2DAA	tS tS i
+2DAB	tS tS A
+2DAC	tS tS e
+2DAD	tS tS &, tS tS
+2DAE	tS tS o
+2DB0	z z 3
+2DB1	z z u
+2DB2	z z i
+2DB3	z z A
+2DB4	z z e
+2DB5	z z &, z z
+2DB6	z z o
+2DB8	tS tSh 3
+2DB9	tS tSh u
+2DBA	tS tSh i
+2DBB	tS tSh A
+2DBC	tS tSh e
+2DBD	tS tSh &, tS tSh 
+2DBE	tS tSh o
+2DC0	k>j 3
+2DC1	k>j u
+2DC2	k>j i
+2DC3	k>j A
+2DC4	k>j e
+2DC5	k>j &, k>j
+2DC6	k>j o
+2DC8	kj 3
+2DC9	kj u
+2DCA	kj i
+2DCB	kj A
+2DCC	kj e
+2DCE	kj &, kj
+2DD0	kj o
+2DD1	sj 3
+2DD2	sj u
+2DD3	sj i
+2DD4	sj A
+2DD5	sj &, sj
+2DD6	sj o
+2DD8	gj 3
+2DD9	gj u
+2DDA	gj i
+2DDB	gj A
+2DDC	gj 3
+2DDD	gj &, gj
+2DDE	gj o
+

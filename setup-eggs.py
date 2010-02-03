@@ -34,8 +34,8 @@ setup(
     #############################################
     ## Package List
     packages = ['nltk_contrib',
+                'nltk_contrib.align',
                 'nltk_contrib.bioreader',
-                'nltk_contrib.ccg',
                 'nltk_contrib.classifier',
                 'nltk_contrib.classifier.exceptions',
                 'nltk_contrib.classifier_tests',
@@ -58,14 +58,14 @@ setup(
                 'nltk_contrib.mit.six863.tagging',
                 'nltk_contrib.readability',
                 'nltk_contrib.rte',
+                'nltk_contrib.scripttranscriber',
                 'nltk_contrib.stem',
                 'nltk_contrib.tag',
                 'nltk_contrib.tiger',
                 'nltk_contrib.tiger.indexer',
                 'nltk_contrib.tiger.query',
                 'nltk_contrib.tiger.utils',
-                'nltk_contrib.toolbox',
-                'nltk_contrib.wordnet',
+                'nltk_contrib.toolbox'
                 ],
     zip_safe=False, # since normal files will be present too?
     install_requires=['setuptools'],

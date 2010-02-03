@@ -1,0 +1,100 @@
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+# L - Length Mark
+
+#Various signs
+0D01	(R:0D01) 
+0D02	(M)	
+0D03	(H)
+#Independent vowels
+0D05	A
+0D06	A:
+0D07	i
+0D08	i:
+0D09	u
+0D0A	u:
+0D0B	9r ix
+0D0C	l=
+0D0D	(R:0D0D)
+0D0E	e
+0D0F	e:
+0D10	aI
+0D11	(R:0D11)
+0D12	o
+0D13	o:
+0D14	aU
+#Consonants
+0D15	k A
+0D16	kh A
+0D17	g A
+0D18	gh A
+0D19	N A
+0D1A	c A
+0D1B	ch A
+0D1C	J A
+0D1D	Jh A
+0D1E	n~ A
+0D1F	tr A
+0D20	tR A
+0D21	dr A
+0D22	dR A
+0D23	nr A
+0D24	t[ A
+0D25	t[_h A
+0D26	d[ A
+0D27	d[_h A
+0D28	n[ A, n A
+# n[ - initial; n - elsewhere
+0D29	(R:0D29)
+0D2A	p A
+0D2B	ph A
+0D2C	b A
+0D2D	bh A
+0D2E	m A
+0D2F	j A
+0D30	9r[ A
+0D31	9r A
+0D32	l A
+0D33	lr A
+0D34	l A
+0D35	v A
+0D36	c} A
+0D37	S A
+0D38	s A
+0D39	hv A
+#Dependent vowel signs
+0D3E	A:
+0D3F	i
+0D40	i:
+0D41	u
+0D42	u:
+0D43	9r=
+0D45	(R:0D45)
+0D46	e
+0D47	e:
+0D48	aI
+0D49	(R:0D49)
+#Two-part dependent vowel signs
+0D4A	o
+0D4B	o:
+0D4C	aU
+#Various signs
+0D4D	(P)
+0D57	(aU LENGTH MARK)
+0D5F	(R:0D5F)
+#Generic additions
+0D60	rr=
+0D61	lr=
+0D64	(R:0D64)
+#Digits
+0D66	(ZERO)
+0D67	(ONE)
+0D68	(TWO)
+0D69	(THREE)
+0D6A	(FOUR)
+0D6B	(FIVE)
+0D6C	(SIX)
+0D6D	(SEVEN)
+0D6E	(EIGHT)
+0D6F	(NINE)

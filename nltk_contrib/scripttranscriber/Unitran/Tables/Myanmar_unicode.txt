@@ -1,0 +1,92 @@
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+
+#Myanmar
+
+#Consonants
+1000	k A 
+1001	kh A
+1002	g A
+1003	g A
+1004	N A
+1005	s A
+1006	sh A
+1007	z A
+1008	z A
+1009	n~ A
+100A	n~ A
+100B	tr A
+100C	trh A
+100D	d A
+100E	d A
+100F	n A
+1010	tr A
+1011	trh A
+1012	d A
+1013	d A
+1014	n A
+1015	p A
+1016	ph A
+1017	b A
+1018	bh A
+1019	m A
+101A	j A
+101B	j A
+101C	l A
+101D	w A 
+101E	T A	
+101F	h A
+1020	l A 
+#Independent vowels
+1021	A, ?
+1023	i
+1024	i
+1025	u
+1026	u
+1027	e
+1029	o
+102A	>
+#Dependent vowel signs
+102C	A
+102D	i
+102E	i
+102F	u
+1030	u
+1031	e
+1032	E
+#Various signs
+1036	(M)
+1037	(TONE MARK)	
+1038	(H)		
+1039	(P)
+#Digits
+1040	(ZERO)
+1041	(ONE)
+1042	(TWO)
+1043	(THREE)
+1044	(FOUR)
+1045	(FIVE)
+1046	(SIX)
+1047	(SEVEN)
+1048	(EIGHT)
+1049	(NINE)
+#Punctuation	
+104A	(DANDA)
+104B	(DOUBLE DANDA)
+#Various signs
+104C	(LOCATIVE)
+104D	(COMPLETED)
+104E	(AFOREMENTIONED)
+104F	(GENETIVE)
+#Pali and Sanskrit extensions 
+1050	sh
+1051	sr
+1052	r=
+1053	rr=
+1054	l=
+1055	l=
+1056	r=
+1057	rr=
+1058	l=
+1059	l=

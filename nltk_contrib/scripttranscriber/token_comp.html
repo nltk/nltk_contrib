@@ -1,0 +1,136 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module token_comp</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>token_comp</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/rws/src/ScriptTranscriber/token_comp.py">/Users/rws/src/ScriptTranscriber/token_comp.py</a></font></td></tr></table>
+    <p><tt>String-based&nbsp;comparator.&nbsp;Takes&nbsp;two&nbsp;tokens&nbsp;and&nbsp;returns&nbsp;a&nbsp;result&nbsp;that<br>
+includes&nbsp;the&nbsp;cost&nbsp;for&nbsp;the&nbsp;comparison.&nbsp;The&nbsp;comparator&nbsp;may&nbsp;be&nbsp;based&nbsp;on<br>
+any&nbsp;features&nbsp;of&nbsp;the&nbsp;two&nbsp;tokens,&nbsp;but&nbsp;reasonable&nbsp;features&nbsp;are&nbsp;phoneme<br>
+sequences,&nbsp;grapheme&nbsp;sequences&nbsp;(possibly&nbsp;based&nbsp;on&nbsp;a&nbsp;portion&nbsp;of&nbsp;the<br>
+morphological&nbsp;decomposition&nbsp;rather&nbsp;than&nbsp;the&nbsp;raw&nbsp;token),&nbsp;combinations<br>
+of&nbsp;these,&nbsp;or&nbsp;features&nbsp;derived&nbsp;from&nbsp;them.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="MinEditDist.html">MinEditDist</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="token.html">token</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="token_comp.html#ComparisonResult">ComparisonResult</a>
+</font></dt><dt><font face="helvetica, arial"><a href="token_comp.html#TokenComparator">TokenComparator</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="token_comp.html#OldPhoneticDistanceComparator">OldPhoneticDistanceComparator</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ComparisonResult">class <strong>ComparisonResult</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Value&nbsp;returned&nbsp;by&nbsp;<a href="#TokenComparator">TokenComparator</a>.&nbsp;Includes&nbsp;the&nbsp;two&nbsp;tokens,&nbsp;the<br>
+comparison&nbsp;cost,&nbsp;and&nbsp;informative&nbsp;string&nbsp;explaining&nbsp;how&nbsp;the&nbsp;cost&nbsp;was<br>
+achieved.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ComparisonResult-Cost"><strong>Cost</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ComparisonResult-Info"><strong>Info</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ComparisonResult-Print"><strong>Print</strong></a>(self, file<font color="#909090">=None</font>, mode<font color="#909090">='w'</font>)</dt></dl>
+
+<dl><dt><a name="ComparisonResult-SetCost"><strong>SetCost</strong></a>(self, cost)</dt></dl>
+
+<dl><dt><a name="ComparisonResult-SetInfo"><strong>SetInfo</strong></a>(self, info)</dt></dl>
+
+<dl><dt><a name="ComparisonResult-__init__"><strong>__init__</strong></a>(self, token1, token2)</dt></dl>
+
+<dl><dt><a name="ComparisonResult-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OldPhoneticDistanceComparator">class <strong>OldPhoneticDistanceComparator</strong></a>(<a href="token_comp.html#TokenComparator">TokenComparator</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Phonetic&nbsp;distance&nbsp;comparator&nbsp;based&nbsp;on&nbsp;hand-derived&nbsp;features&nbsp;and<br>
+old&nbsp;mEdit&nbsp;code.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="OldPhoneticDistanceComparator-ComputeDistance"><strong>ComputeDistance</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OldPhoneticDistanceComparator-InitData"><strong>InitData</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OldPhoneticDistanceComparator-LoadPhones"><strong>LoadPhones</strong></a>(self, file)</dt></dl>
+
+<dl><dt><a name="OldPhoneticDistanceComparator-ProcessStringforMEditDistance"><strong>ProcessStringforMEditDistance</strong></a>(self, string)</dt></dl>
+
+<dl><dt><a name="OldPhoneticDistanceComparator-__init__"><strong>__init__</strong></a>(self, token1, token2)</dt></dl>
+
+<hr>
+Methods inherited from <a href="token_comp.html#TokenComparator">TokenComparator</a>:<br>
+<dl><dt><a name="OldPhoneticDistanceComparator-ComparisonResult"><strong>ComparisonResult</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TokenComparator">class <strong>TokenComparator</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;class&nbsp;for&nbsp;token&nbsp;comparators.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="TokenComparator-ComparisonResult"><strong>ComparisonResult</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TokenComparator-ComputeDistance"><strong>ComputeDistance</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TokenComparator-InitData"><strong>InitData</strong></a>(self, data<font color="#909090">=[]</font>)</dt></dl>
+
+<dl><dt><a name="TokenComparator-__init__"><strong>__init__</strong></a>(self, token1, token2)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BASE_</strong> = '/Users/rws/src/ScriptTranscriber'<br>
+<strong>CDIC_</strong> = None<br>
+<strong>DUMMY_PHONE_</strong> = 'DUM'<br>
+<strong>MEDIT_PATH_</strong> = '/Users/rws/src/ScriptTranscriber/MinEditDist'<br>
+<strong>PFDIC_</strong> = None<br>
+<strong>PHONE_TABLE_</strong> = {}<br>
+<strong>__author__</strong> = '<font color="#c040c0">\n</font>rws@uiuc.edu (Richard Sproat)<font color="#c040c0">\n</font>'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><br>
+rws@uiuc.edu&nbsp;(Richard&nbsp;Sproat)<br>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,159 @@
+#Hebrew
+
+#Cantillation Marks
+0591
+0592
+0593
+0594
+0595
+0596
+0597
+0598
+0599
+059A
+059B
+059C
+059D
+059E
+059F
+05A0
+05A1
+05A2
+05A3
+05A4
+05A5
+05A6
+05A7
+05A8
+05A9
+05AA
+05AB
+05AC
+05AD
+05AE
+05AF
+#Points and Punctuation
+05B0
+05B1
+05B2
+05B3
+05B4
+05B5
+05B6
+05B7
+05B8
+05B9
+05BB
+05BC
+05BD
+05BE
+05BF
+05C0
+05C1
+05C2
+05C3
+#Puncta extraordinaria
+05C4
+05C5
+#Points and punctuation
+05C6
+05C7
+#Alphabet
+05D0	?, 7 
+05D1	b, v
+05D2	g
+05D3	d
+05D4	h
+05D5	v
+05D6	z
+05D7	x
+05D8	t
+05D9	j
+05DA	k, x
+05DB	k, x
+05DC	l
+05DD	m
+05DE	m
+05DF	n
+05E0	n
+05E1	s
+05E2	?, 7
+05E3	p, f
+05E4	p, f
+05E5	ts
+05E6	ts
+05E7	k
+05E8	k
+05E9	s, S	
+05EA	t
+#Yiddish diagraps
+05F0	v
+05F1	>j
+05F2	Ej
+#Additional punctuation
+05F3
+05F4
+
+#Alphabetic Presentation Forms
+#Latin ligatures
+FB00	f f
+FB01	f i
+FB02	f l
+FB03	f f i
+FB04	f f l
+FB05	s t
+FB06	s t
+#Armenian ligatures
+FB13	m n	
+FB14	m h
+FB15	m dZ
+FB16	m n
+FB17	m x
+#Hebrew presentation forms
+FB1D	j
+FB1E	(HEBREW POINT JUDEO-SPANISH VARIKA)
+FB1F	>j
+FB20	?, 7
+FB21	?, 7
+FB22	d
+FB23	h
+FB24	k, x
+FB25	l
+FB26	m
+FB27	k
+FB28	t
+FB29	(ALTERNATIVE PLUS SIGN)
+FB2A	s, S
+FB2B	s, S
+FB2C	s, S
+FB2D	s, S
+FB2E	?, 7
+FB2F	?, 7
+FB30	?, 7
+FB31	b, v
+FB32	g
+FB33	d
+FB34	h
+FB35	v
+FB36	z
+FB38	t
+FB39	j
+FB3A	k, x
+FB3B	k, x	
+FB3C	l
+FB3E	m
+FB40	n
+FB41	s
+FB43	p, f
+FB44	p, f
+FB46	ts
+FB47	k
+FB48	k
+FB49	s, S
+FB4A	t
+FB4B	v
+FB4C	b, v
+FB4D	k, x
+FB4E	p, f
+FB4F	?, 7
+

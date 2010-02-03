@@ -1,0 +1,105 @@
+#P - virama:suppress the inherent vowel of the preceding consonant
+
+#Thai
+
+#Consonants
+# non-final position, final position
+0E01	k
+0E02	kh, k
+0E03	kh
+0E04	kh, k
+0E05	kh
+0E06	kh, k
+0E07	N
+0E08	c, t
+0E09	ch
+0E0A	ch, t
+0E0B	s, t
+0E0C	ch, t
+0E0D	j, n
+0E0E	d, t
+0E0F	t
+0E10	th, t
+0E11	th, t
+0E12	th, t
+0E13	n
+0E14	d, t
+0E15	t
+0E16	th, t
+0E17	th, t
+0E18	th, t
+0E19	n
+0E1A	b, p
+0E1B	p
+0E1C	ph, p
+0E1D	f
+0E1E	ph, p
+0E1F	f, p
+0E20	ph, p
+0E21	m
+0E22	j
+0E23	r, n
+0E24	r 4  
+0E25	l, n
+0E26	l 4	 
+0E27	w
+0E28	s, t
+0E29	s, t
+0E2A	s, t
+0E2B	h
+0E2C	l, n
+0E2D	?
+0E2E	h
+
+#Sign	
+0E2F	(ELLIPSIS, ABBREVIATION)
+
+#Vowels
+0E30	A
+0E31	A
+0E32	A:
+0E33	A m
+0E34	i
+0E35	i:
+0E36	4
+0E37	4:
+0E38	u
+0E39	u:
+0E3A	(P)
+#Currency symbol
+0E3F	(CURRENCY SYMBOL BAHT)
+#Vowels
+0E40	e:
+0E41	@
+0E42	o
+0E43	aI
+0E44	aI
+0E45	(PHINTHU)		
+#Sign
+0E46	(MAIYAMOK)	
+#Vowel
+0E47	(MAITAIKHU)
+#Tone marks
+0E48	(MAI EK)
+0E49	(MAI THO)
+0E4A	(MAI TRI)
+0E4B	(MAI CHATTAWA)
+#Signs
+0E4C	(THANTHAKHAT)
+0E4D	(NIKHHIT)
+0E4E	(YAMAKKAN)
+0E4F	(FONGMAN)
+#Digits	
+0E50	(ZERO)
+0E51	(ONE)
+0E52	(TWO)
+0E53	(THREE)
+0E54	(FOUR)
+0E55	(FIVE)
+0E56	(SIX)
+0E57	(SEVEN)
+0E58	(EIGHT)
+0E59	(NINE)
+#Signs
+0E5A	(ANGKHANKHU)
+0E5B	(KHOMUT)

@@ -1,0 +1,87 @@
+#Syriac
+
+#Syriac punctuation and signs
+0700	
+0701		
+0702	
+0703	
+0704	
+0705	
+0706	
+0707	
+0708	
+0709	
+070A	
+070B	
+070C	
+070D	
+#Syriac format control character
+070F	
+#Syriac letters
+0710	?
+0711	?
+0712	b, v
+0713	g, G
+0714	g, G
+0715	d, D
+0716	d, D
+0717	h
+0718	w
+0719	z
+071A	HH
+071B	t~
+071C	t~	
+071D	j
+071E	j h
+071F	k, x
+0720	l
+0721	m
+0722	n
+0723	s
+0724	s
+0725	HH_v
+0726	p, f
+0727	p, f
+0728	s~
+0729	q
+072A	r
+072B	S
+072C	t
+#Persianletters
+072D	b, v
+072E	g, G
+072F	d, D
+#Syriac points(vowels)
+0730	
+0731
+0732
+0733
+0734
+0735
+0736
+0737
+0738
+0739
+073A
+073B
+073C
+073D
+073E
+073F
+#Syriac marks
+0740
+0741
+0742
+0743
+0744
+0745
+0746
+0747
+0748
+0749
+074A
+#Sogdian letters
+074D	zh
+074E	kh
+074F	f e
+074F

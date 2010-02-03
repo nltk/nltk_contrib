@@ -1,0 +1,219 @@
+#Tibetan
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspiration
+
+0F00	(OM)
+#Head marks
+0F01
+0F02
+0F03
+0F04
+0F05
+0F06
+0F07
+#Marks and signs
+0F08
+0F09
+0F0A
+0F0B
+0F0C
+0F0D
+0F0E
+0F0F
+0F10
+0F11
+0F12
+0F13
+0F14
+#Astrological signs
+0F15
+0F16
+0F17
+0F18
+0F19
+0F1A
+0F1B
+0F1C
+0F1D
+0F1E
+0F1F
+#Digits
+0F20	(ZERO)	
+0F21	(ONE)
+0F22	(TWO)
+0F23	(THREE)
+0F24	(FOUR)
+0F25	(FIVE)	
+0F26	(SIX)
+0F27	(SEVEN)
+0F28	(EIGHT)
+0F29	(NINE)
+0F2A	(HALF ONE)
+0F2B	(HALF TWO)
+0F2C	(HALF THREE)
+0F2D	(HALF FOUR)
+0F2E	(HALF FIVE)
+0F2F	(HALF SIX)
+0F30	(HALF SEVEN)
+0F31	(HALF EIGHT)
+0F32	(HALF NINE)
+0F33	(HALF ZERO)
+#Marks and signs
+0F34
+0F35
+0F36
+0F37
+0F38
+0F39
+#Paired punctuation
+0F3A
+0F3B
+0F3C
+0F3D
+#Astrological signs
+0F3E
+0F3F
+#Consonants
+0F40	k A 
+0F41	kh A
+0F42	k A
+0F43	kh A
+0F44	N A
+0F45	tS A
+0F46	tSh A
+0F47	tS A
+0F49	n~ A
+0F4A	t t A
+0F4B	t th A
+0F4C	t t A
+0F4D	t th A
+0F4E	n n A
+0F4F	t A
+0F50	th A
+0F51	t A
+0F52	th A
+0F53	n A
+0F54	p A
+0F55	ph A
+0F56	p A
+0F57	ph A
+0F58	m A
+0F59	ts A
+0F5A	tsh A	
+0F5B	ts A
+0F5C	tsh A
+0F5D	w A
+0F5E	S A	
+0F5F	s A
+0F60	A
+0F61	j A
+0F62	r A
+0F63	l A
+0F64	S A
+0F65	S S A
+0F66	s A
+0F67	h A	
+0F68	A
+0F69	k S S A
+0F6A	r A
+#Dependent vowel signs
+0F71	A:
+0F72	i
+0F73	i:
+0F74	u
+0F75	u:
+0F76	r=
+0F77	rr=	
+0F78	l=
+0F79	l=
+0F7A	e
+0F7B	e:
+0F7C	o
+0F7D	o:
+#Vocalic Modification
+0F7E	(M)	
+0F7F	(H)
+#Dependent Vowel signs
+0F80	i	
+0F81	i:
+#Marks and signs
+0F82
+0F83
+0F84
+0F85
+0F86
+0F87
+#Translation head letters
+0F88
+0F89
+0F8A
+0F8B
+#Subjoined consonants
+0F90	k A
+0F91	kh A
+0F92	k A
+0F93	kh A
+0F94	N A
+0F95	tS A	
+0F96	tSh A
+0F97	tS A
+0F99	n~ A
+0F9A	t t A	
+0F9B	t th A
+0F9C	t t A
+0F9D	t th A
+0F9E	n n A
+0F9F	t A
+0FA0	th A
+0FA1	t A
+0FA2	th A
+0FA3	n A
+0FA4	p A
+0FA5	ph A
+0FA6	p A
+0FA7	ph A 
+0FA8	m A
+0FA9	ts A
+0FAA	tsh A
+0FAB	ts A
+0FAC	tsh A
+0FAD	w A
+0FAE	S A
+0FAF	s A
+0FB0	A
+0FB1	j A
+0FB2	r A
+0FB3	l A
+0FB4	S A
+0FB5	S S A
+0FB6	s A
+0FB7	h A
+0FB8	A
+0FB9	k S S A
+#Fixed-form subjoined consonants
+0FBA	w A
+0FBB	j A
+0FBC	r A
+#Signs	
+0FBE	(REFRAIN)
+0FBF	(REFERENCE MARK)
+#Cantillation signs
+0FC0	(HEAVY DRUM BEAT)
+0FC1	(LIGHT DRUM BEAT)
+0FC2	(SMALL TIBETAN HAND DRUM)
+0FC3	(TIBETAN CYMBAL)
+#Symbols
+0FC4
+0FC5
+0FC6
+0FC7
+0FC8
+0FC9
+0FCA
+0FCB
+0FCC
+#Astrological sign
+0FCF
+#Marks
+0FD0
+0FD1

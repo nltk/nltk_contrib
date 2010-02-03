@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doclist>
+  <doc>
+    <lang id="zh">
+      <token count="1" morphs="" prons="a i cC i j a ; tS i r i o j o b u DUM">埃及亚</token>
+      <token count="1" morphs="" prons="sr a th &amp; a l a p o ; s u n A DUM g u m A k u d A k u DUM">沙特阿拉伯</token>
+      <token count="1" morphs="" prons="f a x &amp; t &amp; ; n o r i A k A i o s i e">法赫德</token>
+      <token count="1" morphs="" prons="m u p a l a kh &amp; ; j a w A r A g u d o m o e k u d A k u g A ts u">穆巴拉克</token>
+      <token count="1" morphs="" prons="a s a t &amp; ; k u m A DUM o s i e">阿萨德</token>
+    </lang>
+    <lang id="en">
+      <token count="1" morphs="" prons="@ l &amp; g z @ n d r i: &amp;">Alexandria</token>
+      <token count="1" morphs="" prons="&amp; r e I b i: &amp;">Arabia</token>
+      <token count="1" morphs="" prons="&amp; s A: d">Assad</token>
+      <token count="1" morphs="" prons="I dZ I p S &amp; n">Egyptian</token>
+      <token count="1" morphs="" prons="f A: d">Fahd</token>
+      <token count="1" morphs="" prons="h A: f E z">Hafez</token>
+      <token count="1" morphs="" prons="h o U z n i:">Hosni</token>
+      <token count="1" morphs="" prons="m u b A: r I k">Mubarak</token>
+      <token count="1" morphs="" prons="p r E z &amp; d E n t">President</token>
+      <token count="1" morphs="" prons="s &gt; d i:">Saudi</token>
+      <token count="1" morphs="" prons="s I r i: &amp; n">Syrian</token>
+    </lang>
+  </doc>
+</doclist>

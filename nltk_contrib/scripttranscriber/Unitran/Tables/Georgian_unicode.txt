@@ -1,0 +1,132 @@
+#Georgian
+
+#Capital letters
+10A0	A
+10A1	b
+10A2	g
+10A3	d
+10A4	E
+10A5	v
+10A6	z
+10A7	th
+10A8	i
+10A9	k>
+10AA	l
+10AB	m
+10AC	n
+10AD	o
+10AE	p>
+10AF	Z
+10B0	v
+10B1	s
+10B2	t>
+10B3	u
+10B4	ph
+10B5	kh
+10B6	G
+10B7	q>
+10B8	S
+10B9	tS
+10BA	k
+10BB	dz
+10BC	ts>
+10BD	tS>
+10BE	x	
+10BF	dZ
+10C0	h
+10C1	ej
+10C2	j
+10C3	w i
+10C4	q
+10C5	oU
+#Mkhedruli:caseless
+10D0	A
+10D1	b
+10D2	g
+10D3	d
+10D4	E
+10D5	v
+10D6	z
+10D7	th
+10D8	i
+10D9	k>
+10DA	l
+10DB	m
+10DC	n
+10DD	o
+10DE	p>
+10DF	Z
+10E0	v
+10E1	s
+10E2	t>
+10E3	u
+10E4	ph
+10E5	kh
+10E6	G
+10E7	q>
+10E8	S
+10E9	tS
+10EA	k
+10EB	dz
+10EC	ts>
+10ED	tS>
+10EE	x	
+10EF	dZ
+10F0	h
+#Archaic letters
+10F1	ej
+10F2	j
+10F3	w i
+10F4	q
+10F5	oU
+10F6	f
+#Additional letters for Mingrelian and Svan
+10F7	(YN)
+10F8	(ELIFI)
+#Additional letters	
+10F9	(TURNED GAN)
+10FA	(AIN)
+#Punctuation
+10FB	(PARAGRAPH SEPARATOR)
+#Modifier letter
+10FC	(MODIFIER LETTER GEORGIAN NAR)
+
+#Georgian Supplement (Small letters)
+2D00	A
+2D01	b
+2D02	g
+2D03	d
+2D04	E
+2D05	v
+2D06	z
+2D07	th
+2D08	i
+2D09	k>
+2D0A	l
+2D0B	m
+2D0C	n
+2D0D	o
+2D0E	p>
+2D0F	z
+2D10	v
+2D11	s
+2D12	t>
+2D13	u
+2D14	ph
+2D15	kh
+2D16	G
+2D17	q>
+2D18	S
+2D19	tS
+2D1A	k
+2D1B	dz
+2D1C	ts>
+2D1D	tS>
+2D1E	x
+2D1F	dZ
+2D20	h
+2D21	ej
+2D22	j
+2D23	w i
+2D24	q
+2D25	oU

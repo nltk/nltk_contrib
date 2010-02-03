@@ -1,0 +1,88 @@
+#Cherokee
+
+#Syllables
+13A0	A
+13A1	e	
+13A2	i
+13A3	o
+13A4	u
+13A5	&~
+13A6	k A
+13A7	kh A
+13A8	k e
+13A9	k i
+13AA	k o
+13AB	k u
+13AC	k &~
+13AD	h A	
+13AE	h e
+13AF	h i
+13B0	h o
+13B1	h u
+13B2	h &~
+13B3	l A
+13B4	l e 	
+13B5	l i
+13B6	l o
+13B7	l u
+13B8	l &~
+13B9	m A
+13BA	m e
+13BB	m i
+13BC	m o
+13BD	m u
+13BE	n A
+13BF	h n A
+13C0	nh A
+13C1	n e
+13C2	n i 
+13C3	n o
+13C4	n u
+13C5	n &~
+13C6	kw A
+13C7	kw e
+13C8	kw i
+13C9	kw o
+13CA	kw u
+13CB	kw &~
+13CC	s A
+13CD	s
+13CE	s e
+13CF	s i
+13D0	s o
+13D1	s u
+13D2	s &~
+13D3	t A
+13D4	th A
+13D5	t e
+13D6	th e
+13D7	t i
+13D8	th i
+13D9	t o
+13DA	t u 
+13DB	t &~
+13DC	tl A
+13DD	thl A
+13DE	thl e
+13DF	thl i
+13E0	thl o
+13E1	thl u
+13E2	thl &~
+13E3	ts A
+13E4	ts e
+13E5	ts i
+13E6	ts o
+13E7	ts u
+13E8	ts &~
+13E9	w A
+13EA	w e
+13EB	w i
+13EC	w o 
+13ED	w u
+13EE	w &~
+13EF	j A
+13F0	j e
+13F1	j i
+13F2	j o
+13F3	j u
+13F4	j &~

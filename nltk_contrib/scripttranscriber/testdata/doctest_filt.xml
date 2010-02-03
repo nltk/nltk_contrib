@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doclist>
+  <doc>
+    <lang id="eng">
+      <token count="4" morphs="Bush 's" prons="b U S">Bush</token>
+      <token count="3" morphs="Clinton" prons="k l I n t &amp; n ; k l I n t &gt; n">Clinton</token>
+    </lang>
+    <lang id="zho">
+      <token count="3" morphs="克林頓" prons="kh &amp; l i n t u n">克林頓</token>
+    </lang>
+  </doc>
+  <doc>
+    <lang id="eng">
+      <token count="2" morphs="Clinton" prons="k l I n t &amp; n">Clinton</token>
+      <token count="3" morphs="Bush 's" prons="b U S">Bush</token>
+    </lang>
+    <lang id="ara">
+      <token count="3" morphs="كلينتون" prons="k l j n t w n">كلينتون</token>
+    </lang>
+  </doc>
+</doclist>

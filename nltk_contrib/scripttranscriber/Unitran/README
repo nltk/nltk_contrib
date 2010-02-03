@@ -1,0 +1,53 @@
+=======================================================================
+
+This code provides a transliterator from UTF-8 text into a guess for
+the phonetic transcription in WorldBet or X-Sampa. 
+
+Code pages covered are listed in the directory "Tables". The main
+omissions are:
+
+ - ASCII/Latin-1: there are too many languages that use these scripts
+   and too wide a variation in letter-to-sound rules to make any
+   reasonable guesses in many cases.
+
+ - Hanzi/Kanji/Hanja
+
+The main program is "unitran.py", which depends upon two tables,
+"Tables.py" (for WorldBet) and "X_Tables.py" (for X-Sampa).
+
+Sample usages:
+
+  unitran.py Samples/assamese/1.utf
+
+places output in WorldBet in assamese/1.utf.out
+
+  unitran.py -x Samples/assamese/1.utf
+
+places output in X-Sampa in assamese/1.utf.out
+
+Note that there are no spaces between consecutive phones, unless you
+redefine JOINER_. This allows for unambiguous parsing in X-Sampa,
+though not necessarily in WorldBet.
+
+Output: Capital letters in parenthesis '()' are symbols. Symbols for each
+language are described in Unicode-Worldbet mapping Tables for each language.
+'(##)' represents also symbols which usually can be removed in rough
+transcription.
+ 
+Raw tables for the code points are given in the directory Tables.
+
+The directory Samples contains some input-output examples from various
+texts in utf8.
+
+################################################################################
+
+The directory Utils contains:
+
+ - gentable.py, which produces python tables from the raw tables
+
+Usage:
+
+  cat Tables/* | Utils/gentable.py
+
+To create a new X_Tables.py from Tables.py, run mk_sampa_table.py in this
+directory.

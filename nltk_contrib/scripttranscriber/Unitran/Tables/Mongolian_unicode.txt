@@ -1,0 +1,166 @@
+#Mongolian
+
+#Puntuation
+1800	
+1801
+1802
+1803
+1804
+1805
+1806
+1807
+1808
+1809
+180A
+#Format controls
+180B
+180C
+180D
+180E
+#Digits
+1810	(ZERO)	
+1811	(ONE)
+1812	(TWO)
+1813	(THREE)
+1814	(FOUR)
+1815	(FIVE)
+1816	(SIX)
+1817	(SEVEN)
+1818	(EIGHT)
+1819	(NINE)
+#Basic letters
+1820	A
+1821	E
+1822	i
+1823	>
+1824	u
+1825	o
+1826	u
+1827	E:
+1828	n A
+1829	N	
+182A	b A
+182B	p A
+182C	x A
+182D	g A
+182E	m A
+182F	l A
+1830	s A
+1831	S A
+1832	t A
+1833	d A
+1834	tSj A
+1835	Z A
+1836	j A 
+1837	r A
+1838	v A
+1839	f A
+183A	x A
+183B	k A
+183C	ts A
+183D	z A
+183E	x A:
+183F	Z A
+1840	hl A	
+1841	S A
+1842	tS j
+#Todo letters
+1843	(:)
+1844	E
+1845	i
+1846	o
+1847	u
+1848	o
+1849	u
+184A	N
+184B	b A 
+184C	p A
+184D	x A
+184E	g A
+184F	m A
+1850	t A
+1851	d A
+1852	tSj A
+1853	Z A
+1854	ts A
+1855	j A
+1856	w A
+1857	k A		
+1858	g A:
+1859	x A:
+185A	Z A	
+185B	n A
+185C	dz A
+#Sibe letters
+185D	E
+185E	i
+185F	j
+1860	u
+1861	u
+1862	N
+1863	k A
+1864	g A
+1865	x A	
+1866	p A
+1867	S A
+1868	t A	
+1869	d A
+186A	Z A
+186B	f A
+186C	g A:
+186D	x A:	
+186E	ts A
+186F	z A
+1870	r A:	
+1871	tSj A
+1872	S A
+#Manchu letters
+1873	i	
+1874	k A
+1875	f A
+1876	S A
+#Extensions for Sanskrit and Tibetan
+1877	
+1880
+1881
+1882
+1883
+1884
+1885
+1886
+1887	A
+1888	i
+1889	k A
+188A	N A
+188B	tS A
+188C	t t A
+188D	t th A
+188E	t t A
+188F	n n A
+1890	t A
+1891	t A
+1892	p A
+1893	ph A
+1894	S S A	
+1895	S A
+1896	z A
+1897	Ah
+1898	t A
+1899	S A
+189A	Gh A
+189B	N A
+189C	tS A
+189D	zh A
+189E	t t A
+189F	th A
+18A0	t A
+18A1	th A
+18A2	S S A
+18A3	tSj A
+18A4	S A
+18A5	s A
+18A6	u
+18A7	j A
+18A8	(BHA)
+18A9	(DAGALGA)
+

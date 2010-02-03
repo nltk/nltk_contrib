@@ -1,0 +1,80 @@
+# P - virama:suppress the inherent vowel of the preceding consonant
+
+#Lao
+
+#Consonants
+#non-final position, final position
+0E81	k, k
+0E82	kh, k
+0E84	kh, k
+0E87	N, N
+0E88	c, t	
+0E8A	s, t
+0E8D	j, n	
+0E94	d, t	
+0E95	t, t
+0E96	th, t
+0E97	th, t
+0E99	n, n
+0E9A	b, p
+0E9B	p, p
+0E9C	ph, p
+0E9D	f
+0E9E	ph, p
+0E9F	f, p
+0EA1	m, m
+0EA2	n~, j
+0EA3	h, n	
+0EA5	l, n
+0EA7	w, w
+0EAA	s, t
+0EAB	h
+0EAD	(SILENT)
+0EAE	h
+#Sign
+0EAF	(ELLIPSIS)	
+#Vowels
+0EB0	A
+0EB1	A
+0EB2	A:
+0EB3	A m	
+0EB4	i
+0EB5	i:
+0EB6	4
+0EB7	4:
+0EB8	u
+0EB9	u:
+0EBB	(MAI KON)
+#Signs	
+0EBC	(LO)
+0EBD	(NYO)
+#Vowels
+0EC0	e:
+0EC1	@
+0EC2	o
+0EC3	aI
+0EC4	aI
+#Sign
+0EC6	(KO LA)
+#Tone marks
+0EC8	(MAI EK)
+0EC9	(MAI THO)
+0ECA	(MAI TI)
+0ECB	(MAI CATAWA)
+#Signs	
+0ECC	(CANCELLATION MARK)
+0ECD	(NIGGAHITA)
+#Digits	
+0ED0	(ZERO)
+0ED1	(ONE)
+0ED2	(TWO)
+0ED3	(THREE)
+0ED4	(FOUR)
+0ED5	(FIVE)
+0ED6	(SIX)
+0ED7	(SEVEN)
+0ED8	(EIGHT)
+0ED9	(NINE)
+#Diagraphs
+0EDC	h n
+0EDD	h m

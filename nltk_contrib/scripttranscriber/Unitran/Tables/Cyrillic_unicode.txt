@@ -1,0 +1,263 @@
+#Cyrillic
+#HARD SIGN: no palatalization
+#SOFT SIGN: palatalization
+#TITLO: 1)modify letters in order to write down numbers 
+      # 2) over-text abbreviation mark
+#DASIA PNEUMATA: rough breathing mark
+#PSILI PNEUMATA: smooth breathing mark
+
+#Cyrillic extensions 
+0400	ie
+0401	io
+0402	d z}
+0403	d z}
+0404	ie
+0405	dz
+0406	i
+0407	j
+0408	j
+0409	lj
+040A	n~
+040B	tSj
+040C	kj, tSj
+040D	i 
+040E	u(
+040F	dZ
+#Basic Russian alphabet
+0410	A
+0411	b
+0412	v
+0413	g
+0414	d
+0415	ie
+0416	Z
+0417	z
+0418	i
+0419	j
+041A	k
+041B	l
+041C	m
+041D	n
+041E	>
+041F	p
+0420	r
+0421	s
+0422	t
+0423	u
+0424	f
+0425	x
+0426	ts
+0427	tSj	
+0428	S
+0429	Sj tSj
+042A	(HARD SIGN)
+042B	ix
+042C	(SOFT SIGN)
+042D	E
+042E	u
+042F	A
+0430	A
+0431	b
+0432	v
+0433	g
+0434	d
+0435	ie
+0436	Z
+0437	z
+0438	i
+0439	j
+043A	k
+043B	l
+043C	m
+043D	n
+043E	>
+043F	p
+0440	r
+0441	s
+0442	t
+0443	u
+0444	f
+0445	x
+0446	ts
+0447	tSj
+0448	S
+0449	Sj tSj
+044A	(HARD SIGN)
+044B	ix
+044C	(SOFT SIGN)
+044D	E
+044E	u
+044F	A
+#Cyrillic extensions
+0450	E 
+0451	io
+0452	d Z}
+0453	d z}
+0454	ie
+0455	dz
+0456	i
+0457	j
+0458	j
+0459	lj
+045A	n~
+045B	tSj
+045C	kj, tSj
+045D	i 
+045E	u(
+045F	dZ
+#Historical letters
+0460	o	
+0461	o
+0462	@
+0463	@
+0464	E
+0465	E
+0466	E~
+0467	E~
+0468	>~
+0469	>~
+046A	E~
+046B	E~
+046C	>~
+046D	>~
+046E	(INFORMAL ABBREVIATION FOR 1000 PSI)
+046F	(INFORMAL ABBREVIATION FOR 1000 PSI)	
+0470	p s	
+0471	p s	
+0472	f
+0473	f
+0474	i
+0475	i
+0476	i 
+0477	i 
+0478	u
+0479	u
+047A	o
+047B	o
+047C	o 
+047D	o 
+047E	o t[
+047F	o t[
+0480	(NINETY)
+0481	(NINETY)
+#Historical miscellaneous
+0482	(THOUSAND SIGN)
+0483	(TITLO)
+0484	(PALATALIZATION)
+0485	(DASIA PNEUMATA)	
+0486	(PSILI PNEUMATA)
+0488	(HUNDRED THOUSAND SIGN)
+0489	(MILLION SIGN)
+#Extended Cyrillic
+048A	i 
+048B	i 
+048C	(SEMISOFT SIGN)	
+048D	(SEMISOFT SIGN)
+048E	r 
+048F	r 
+0490	g 
+0491	g 
+0492	g 
+0493	g 
+0494	g 
+0495	g 
+0496	Z
+0497	Z
+0498	z 
+0499	z 
+049A	k 
+049B	k 
+049C	k 
+049D	k 
+049E	k 
+049F	k 
+04A0	k 
+04A1	k 
+04A2	n 
+04A3	n 
+04A4	n g
+04A5	n g
+04A6	p 
+04A7	p 
+04A8	x 
+04A9	x 
+04AA	s 
+04AB	s 
+04AC	t 
+04AD	t 
+04AE	u
+04AF	u
+04B0	u 
+04B1	u 
+04B2	x 
+04B3	x 
+04B4	t t s
+04B5	t t s
+04B6	tSj 
+04B7	tSj 
+04B8	tSj 
+04B9	tSj 
+04BA	h
+04BB	h
+04BC	tSj 
+04BD	tSj 
+04BE	tSj 
+04BF	tSj 
+04C0	(ASPIRATION SIGN)
+04C1	Z
+04C2	Z
+04C3	k
+04C4	k
+04C5	l
+04C6	l
+04C7	n	
+04C8	n
+04C9	n
+04CA	n
+04CB	tSj
+04CC	tSj
+04CD	m
+04CE	m
+04D0	A
+04D1	A
+04D2	A
+04D3	A
+04D4	A ie
+04D5	A ie
+04D6	ie
+04D7	ie
+04D8	&
+04D9	&
+04DA	&
+04DB	&
+04DC	Z
+04DD	Z
+04DE	z
+04DF	z
+04E0	dz
+04E1	dz
+04E2	i:
+04E3	i:	
+04E4	i
+04E5	i
+04E6	o
+04E7	o
+04E8	o
+04E9	o
+04EA	o
+04EB	o
+04EC	E
+04ED	E
+04EE	u:
+04EF	u:
+04F0	u
+04F1	u
+04F2	u
+04F3	u
+04F4	tSj
+04F5	tSj
+04F6	g
+04F7	g
+04F8	ix
+04F9	ix
+

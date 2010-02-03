@@ -1,0 +1,99 @@
+# M - Anusvara: postvocalic nasalization
+# H - Visarga: postvocalic aspirate
+# P - virama:suppress the inherent vowel of the preceding consonant
+# CD - Candrabindu: vowel nasalization
+# NUKTA: extending the alphabet to new letters
+
+#Various signs
+0A81	(CD)
+0A82	(M)
+0A83	(H)
+#Independent vowels
+0A85	A
+0A86	A:
+0A87	i
+0A88	i:
+0A89	u
+0A8A	u:
+0A8B	9r u
+0A8C	l=
+0A8D	e
+0A8F	e
+0A90	aI
+0A91	o
+0A93	o
+0A94	aU
+#Consonants
+0A95	k A
+0A96	kh A
+0A97	g A
+0A98	gh A
+0A99	N A
+0A9A	c A
+0A9B	ch A
+0A9C	J A
+0A9D	Jh A
+0A9E	n~ A
+0A9F	tr A
+0AA0	tR A
+0AA1	dr A
+0AA2	dR A
+0AA3	nr A
+0AA4	t[ A
+0AA5	t[_h A
+0AA6	d[ A
+0AA7	d[_h A
+0AA8	n[ A
+0AAA	p A
+0AAB	ph A
+0AAC	b A
+0AAD	bh A
+0AAE	m A
+0AAF	j A
+0AB0	9r A
+0AB2	l A
+0AB3	lr A
+0AB5	v A	
+0AB6	S A
+0AB7	S A
+0AB8	s A
+0AB9	hv A
+#Various signs
+0ABC	(NUKTA)
+0ABD	(AVAGRAHA)
+#Dependent vowel signs
+0ABE	A:
+0ABF	i
+0AC0	i:
+0AC1	u
+0AC2	u:
+0AC3	9r=
+0AC4	rr=
+0AC5	e
+0AC7	e
+0AC8	aI
+0AC9	o
+0ACB	o
+0ACC	aU
+#Various signs
+0ACD	(P)
+0AD0	(OM)
+#Generic addition
+0AE0	rr=
+#Additions for use with Sanskrit text
+0AE1	lr=
+0AE2	l=
+0AE3	lr=
+#Digits
+0AE6	(ZERO)
+0AE7	(ONE)
+0AE8	(TWO)
+0AE9	(THREE)
+0AEA	(FOUR)
+0AEB	(FIVE)
+0AEC	(SIX)
+0AED	(SEVEN)
+0AEE	(EIGHT)
+0AEF	(NINE)
+#Currency sign
+0AF1	(RUPEE)
