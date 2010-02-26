@@ -170,23 +170,8 @@ class GaleChurchAligner(AlignerI):
                 else:
                     d6 = sys.maxint
      
-                dmin = d1
+                dmin = min(d1, d2, d3, d4, d5, d6)
                 
-                if (d2 < dmin):
-                    dmin = d2
-                    
-                if (d3 < dmin):
-                    dmin = d3
-                    
-                if (d4 < dmin):
-                    dmin = d4
-                    
-                if (d5 < dmin):
-                    dmin = d5
-                    
-                if (d6 < dmin):
-                    dmin = d6
-                     
                 if (dmin == sys.maxint):
                     distances[i][j] = 0
                 elif (dmin == d1):
@@ -454,9 +439,9 @@ def demo():
     soft_delimiter = '.EOS'
     
     # demo 1
-    input_file1 = 'turinen.tok'
-    input_file2 = 'turinde.tok'
-    gold_file = 'ground_truth.txt'
+    input_file1 = 'data/turinen.tok'
+    input_file2 = 'data/turinde.tok'
+    gold_file = 'data/ground_truth.txt'
     
     gc = GaleChurchAligner(distance_measures.two_side_distance, 'gc_text_strings')
     
@@ -477,9 +462,9 @@ def demo():
     hard_delimiter = '.EOP'
     soft_delimiter = '.EOS'
     
-    input_file1 = 'bovaryen.tok'
-    input_file2 = 'bovaryfr.tok'
-    gold_file = 'ground_truth_bovary.txt'
+    input_file1 = 'data/bovaryen.tok'
+    input_file2 = 'data/bovaryfr.tok'
+    gold_file = 'data/ground_truth_bovary.txt'
     
     gc = GaleChurchAligner(distance_measures.two_side_distance, 'gc_text_strings')
     
