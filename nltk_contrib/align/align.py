@@ -119,12 +119,7 @@ class GaleChurchAligner(AlignerI):
         path_x = [[0] * second_len for c in range(first_len)]              
         path_y = [[0] * second_len for c in range(first_len)]
                   
-        d1 = sys.maxint
-        d2 = sys.maxint
-        d3 = sys.maxint
-        d4 = sys.maxint
-        d5 = sys.maxint
-        d6 = sys.maxint
+        d1 = d2 = d3 = d4 = d5 = d6 = sys.maxint
         
         for j in range(0, ny + 1):    
             for i in range(0, nx + 1):            

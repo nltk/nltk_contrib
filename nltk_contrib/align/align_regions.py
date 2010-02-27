@@ -5,7 +5,7 @@
 
 import sys
 
-import scores
+from nltk.metrics import scores
 
 import distance_measures
 import alignment_util
