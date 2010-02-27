@@ -61,17 +61,17 @@ class LanguageIndependent(object):
 
 
 def trace(backlinks, source, target):
-    links = set()
+    links = []
     pos = (len(source) - 1, len(target) - 1)
 
     while pos != (-1, -1):
         s, t = backlinks[pos]
         for i in range(s):
             for j in range(t):
-                links.add((pos[0] - i, pos[1] - j))
+                links.append((pos[0] - i, pos[1] - j))
         pos = (pos[0] - s, pos[1] - t)
 
-    return links
+    return links[::-1]
 
 
 def align_probability(i, j, source_sentences, target_sentences, alignment, params):

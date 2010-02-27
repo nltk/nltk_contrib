@@ -7,9 +7,9 @@
 # For license information, see LICENSE.TXT
 
 import sys
-
-import scores
 from itertools import izip
+
+from nltk.metrics import scores
 
 ## --NLTK--
 ## Import the nltk.aligner module, which defines the aligner interface

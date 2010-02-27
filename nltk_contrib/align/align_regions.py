@@ -225,12 +225,7 @@ class Aligner(object):
         path_x = [[0] * second_len for c in range(first_len)]              
         path_y = [[0] * second_len for c in range(first_len)]
                   
-        d1 = sys.maxint
-        d2 = sys.maxint
-        d3 = sys.maxint
-        d4 = sys.maxint
-        d5 = sys.maxint
-        d6 = sys.maxint
+        d1 = d2 = d3 = d4 = d5 = d6 = sys.maxint
         
         for j in range(0, ny + 1):    
             for i in range(0, nx + 1):            
@@ -276,23 +271,8 @@ class Aligner(object):
                 else:
                     d6 = sys.maxint
      
-                dmin = d1
+                dmin = min(d1, d2, d3, d4, d5, d6)
                 
-                if (d2 < dmin):
-                    dmin = d2
-                    
-                if (d3 < dmin):
-                    dmin = d3
-                    
-                if (d4 < dmin):
-                    dmin = d4
-                    
-                if (d5 < dmin):
-                    dmin = d5
-                    
-                if (d6 < dmin):
-                    dmin = d6
-                     
                 if (dmin == sys.maxint):
                     distances[i][j] = 0
                 elif (dmin == d1):
@@ -533,9 +513,9 @@ def demo():
     soft_delimiter = '.EOS'
     
     # demo 1
-    input_file1 = 'turinen.tok'
-    input_file2 = 'turinde.tok'
-    gold_file = 'ground_truth.txt'
+    input_file1 = 'data/turinen.tok'
+    input_file2 = 'data/turinde.tok'
+    gold_file = 'data/ground_truth.txt'
     aligner = Aligner(input_file1, input_file2, hard_delimiter, soft_delimiter)
     
     alignments = aligner.align_regions(distance_measures.two_side_distance)
@@ -543,9 +523,9 @@ def demo():
     demo_eval(alignments, gold_file)    
     
     # demo 2
-    input_file1 = 'bovaryen.tok'
-    input_file2 = 'bovaryfr.tok'
-    gold_file = 'ground_truth_bovary.txt'
+    input_file1 = 'data/bovaryen.tok'
+    input_file2 = 'data/bovaryfr.tok'
+    gold_file = 'data/ground_truth_bovary.txt'
     aligner = Aligner(input_file1, input_file2, hard_delimiter, soft_delimiter)
     
     alignments = aligner.align_regions(distance_measures.two_side_distance)
