@@ -8,6 +8,7 @@
 Visualize RDF Graphs
 """
 from rdflib import ConjunctiveGraph, Literal, BNode
+import pydot
 from Cheetah.Template import Template
 
 
@@ -20,10 +21,10 @@ class Visualizer(object):
         # set the defaults
         self.options['shape'] = 'oval'
         self.options['color'] = 'blue'
-        self.options['label'] = self.graph.namespace_manager.normalizeUri(uri)    
-        self.options['fontname'] = 'Helvetica'
+        self.options['label'] = '"%s"' % self.graph.namespace_manager.normalizeUri(uri)    
+        self.options['fontname'] = 'Arial'
         self.options['fontsize'] = '10'
-        self.options['fontcolor'] = 'white'
+        self.options['fontcolor'] = 'black'
         
         if isinstance(uri, Literal):
             self.options['shape'] = 'box'
@@ -51,8 +52,8 @@ class Visualizer(object):
         @param filter_edges: if True, don't generate any edges which match the URIs in the list FILTER.
         @rtype: C{pydot.Dot}
         """
-        import pydot
-        dot = pydot.Dot(rankdir='LR', bgcolor='black', arrowsize='0.7')
+
+        dot = pydot.Dot(rankdir='LR', bgcolor='white', arrowsize='0.7')
         dot.set_suppress_disconnected(True)
         
         FILTER = ["rdfs:%s" % p for p in ['label', 'comment', 'description', 'isDefinedBy']] 
@@ -80,7 +81,7 @@ class Visualizer(object):
                     if isinstance(uri, BNode):
                         label = "_:bn%03d" % count
                     else:
-                        label = self.graph.namespace_manager.normalizeUri(uri)
+                        label = '"%s"' % self.graph.namespace_manager.normalizeUri(uri)
                     
                     
                     #n = pydot.Node(node_id, shape=shape, fontcolor='white', fontname ='Helvetica', color=color, label=label)
@@ -91,9 +92,9 @@ class Visualizer(object):
                     
         # add edges between subject and object nodes
         for s, p, o in self.graph.triples((None,None,None)):
-            p = self.graph.namespace_manager.normalizeUri(p)
+            p = '"%s"' % self.graph.namespace_manager.normalizeUri(p)
             if filter_edges and p in FILTER: continue
-            e = pydot.Edge(nodes[s], nodes[o], label=p, color='blue', fontcolor='white', fontname='Helvetica', fontsize='10')
+            e = pydot.Edge(nodes[s], nodes[o], label=p, color='blue', fontcolor='black', fontname='Helvetica', fontsize='10')
             dot.add_edge(e)
         return dot
 
@@ -115,20 +116,21 @@ class Visualizer(object):
     #print "Wrote some rdf to '%s'" % FILE
     #f.close()
 
-#def serialize_demo():
-    #try:
-        #store = ConjunctiveGraph()    
-        #store.parse(FILE, format='n3')
-        #print store.serialize(format='xml')
-    #except OSError:
-        #print "Cannot read file '%s'" % FILE
+def serialize_demo():
+    try:
+        store = ConjunctiveGraph()    
+        store.parse(FILE, format='xml')
+        print store.serialize(format='xml')
+    except OSError:
+        print "Cannot read file '%s'" % FILE
 
 def make_dot_demo():
     try:
         store = ConjunctiveGraph()    
-        store.parse(FILE, format='n3')
+        store.parse(FILE, format='xml')
         basename = FILE.split('.')[0]
-        g = graph2dot(store, filter_edges=True)
+        v = Visualizer(store)
+        g = v.graph2dot(filter_edges=True)
         g.write('%s.dot' % basename) 
         print "Wrote '%s.dot'" % basename
         g.write_png('%s.png' % basename, prog='dot') 
@@ -140,7 +142,7 @@ def make_dot_demo():
         
 
 if __name__ == '__main__':    
-    FILE = 'myrdf.n3'
+    FILE = 'alice.rdf'
     
     #print
     #print "Fill up a template and print out the resulting rdf in n3 format"
@@ -152,10 +154,10 @@ if __name__ == '__main__':
     #print '*' * 30
     #write_rdf_demo()
     
-    #print
-    #print "Serialize some rdf in XML format"
-    #print '*' * 30
-    #serialize_demo()
+    print
+    print "Serialize some rdf in XML format"
+    print '*' * 30
+    serialize_demo()
     
     print
     print "Visualise an rdf graph with Graphviz"
