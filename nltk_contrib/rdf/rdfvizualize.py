@@ -1,3 +1,4 @@
+#!/opt/local/bin/python
 # Natural Language Toolkit: Generating RDF Triples from NL Relations
 #
 # Author: Ewan Klein <ewan@inf.ed.ac.uk>
@@ -31,7 +32,7 @@ class Visualizer(object):
             self.options['color'] = 'green'
                         
         if isinstance(uri, BNode):
-            self.options['label'] = "_:bn%03d" % count
+            self.options['label'] = '"_:bn%03d"' % count
             
         
     def graph2dot(self, filter_edges=False):
@@ -124,11 +125,11 @@ def serialize_demo():
     except OSError:
         print "Cannot read file '%s'" % FILE
 
-def make_dot_demo():
+def make_dot_demo(infile):    
     try:
         store = ConjunctiveGraph()    
-        store.parse(FILE, format='xml')
-        basename = FILE.split('.')[0]
+        store.parse(infile, format='xml')
+        basename = infile.split('.')[0]
         v = Visualizer(store)
         g = v.graph2dot(filter_edges=True)
         g.write('%s.dot' % basename) 
@@ -140,10 +141,19 @@ def make_dot_demo():
     except OSError:
         print "Cannot read file '%s'" % FILE
         
-
-if __name__ == '__main__':    
-    FILE = 'alice.rdf'
-    
+        
+def main():
+    import sys
+    from optparse import OptionParser 
+    description = \
+    """
+Turn an RDF file into a viewable graph using Graphviz.
+    """
+    opts = OptionParser(description=description)    
+    (options, args) = opts.parse_args()
+    if len(args) != 1:
+        parser.error("incorrect number of arguments")
+    infile = args[0]
     #print
     #print "Fill up a template and print out the resulting rdf in n3 format"
     #print '*' * 30
@@ -154,15 +164,20 @@ if __name__ == '__main__':
     #print '*' * 30
     #write_rdf_demo()
     
-    print
-    print "Serialize some rdf in XML format"
-    print '*' * 30
-    serialize_demo()
+    #print
+    #print "Serialize some rdf in XML format"
+    #print '*' * 30
+    #serialize_demo()
     
     print
     print "Visualise an rdf graph with Graphviz"
     print '*' * 30
-    make_dot_demo()
+    make_dot_demo(infile)
+    
+if __name__ == '__main__':    
+    main()
+    
+
     
 
     
