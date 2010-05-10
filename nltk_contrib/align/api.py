@@ -55,26 +55,37 @@ class AlignerI(object):
         """
         return [self.align(st, tt) for (st, tt) in izip(source, target)]
     
-    def top_down_align(self, source, target):
+    def recursive_align(self, source, target, alignments):
         """
         Apply L{self.align()} to the elements of the C{source} and C{target}
             texts in a top-down manner
 
         @rtype: C{list} of I{alignments}
         """
-        alignments = []
         standard_alignment = self.align(source, target)
+       
         alignments.append(standard_alignment)
-        for align in standard_alignment:                 
-            at_bottom = False
-            while not(at_bottom):                            
-                source_list = [[item] for item in align[0]]                
-                target_list = [[item] for item in align[1]]                
-                lower_align = self.align(source_list, target_list)
-                alignments.append(lower_align)               
-                if len(lower_align[0][0]) == 1:
-                    at_bottom = True
-      
+                
+        alignment_mapping = None
+        if (self.output_format == 'text_tuples'):            
+            alignment_mapping = standard_alignment
+        
+        import align_util
+        
+        if (self.output_format == 'bead_objects'):
+            (alignment_mapping, alignment_mapping_indices) = align_util.convert_bead_to_tuples(standard_alignment, source, target)
+             
+        for entry in alignment_mapping:                            
+            source_list = [item for item in entry[0]]                
+            target_list = [item for item in entry[1]] 
+            
+            if len(source_list) == 0 or len(target_list) == 0:                
+                break
+            if not(isinstance(source_list[0], list)) or not(isinstance(target_list[0], list)):                
+                break
+                
+            lower_align = self.recursive_align(source_list, target_list, alignments)                        
+            
         return alignments
     
     def textfile_align(self, source_file, target_file):
@@ -121,5 +132,4 @@ class AlignerI(object):
         """
         return [self.prob_classify(fs) for fs in featuresets]
 
- 
 

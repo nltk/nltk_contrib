@@ -112,7 +112,7 @@ def two_side_distance(x1, y1, x2, y2):
     
     penalty01 = 450
     #/* -100 * log([prob of 0-1 match] / [prob of 1-1 match]) */
-    
+        
     if (x2 == 0 and y2 == 0):    
         if (x1 == 0):			
             # /* insertion */
@@ -132,3 +132,82 @@ def two_side_distance(x1, y1, x2, y2):
     else:				
         # /* melding */
         return (match(x1 + x2, y1 + y2) + penalty22)
+    
+        
+def three_side_distance(x1, y1, x2, y2, x3, y3):
+    """
+    Calculate a distance metric .
+    
+    @type x1: C{int}
+    @param x1:
+        
+    @type y1: C{int}
+    @param y1:
+        
+    @type x2: C{int}
+    @param x2:
+        
+    @type y2: C{int}
+    @param y2:    
+    
+    @return: 
+    @rtype: C{int}    
+   
+    """
+    penalty21 = 230		
+    #/* -100 * log([prob of 2-1 match] / [prob of 1-1 match]) */
+    
+    penalty22 = 440
+    #/* -100 * log([prob of 2-2 match] / [prob of 1-1 match]) */
+    
+    penalty01 = 450
+    #/* -100 * log([prob of 0-1 match] / [prob of 1-1 match]) */
+    
+    penalty31 = 230
+    
+    penalty13 = 230
+    
+    penalty32 = 600
+    
+    penalty23 = 600
+    
+    penalty33 = 650
+    
+    if (x3 == 0 and y3 == 0):
+        if (x2 == 0 and y2 == 0):    
+            if (x1 == 0):			
+                # /* insertion */
+                return (match(x1, y1) + penalty01)          
+            elif(y1 == 0):		
+                # /* deletion */
+                return (match(x1, y1) + penalty01)    
+            else: 
+                #/* substitution */
+                return (match(x1, y1))     
+        elif (x2 == 0):		
+            #/* expansion */
+            return (match(x1, y1 + y2) + penalty21)    
+        elif (y2 == 0):		
+            #/* contraction */
+            return (match(x1 + x2, y1) + penalty21)     
+        else:				
+            # /* melding */
+            return (match(x1 + x2, y1 + y2) + penalty22)
+    else:
+        if (x3 == 0):
+            if (x2 == 0):
+                #/* expansion  1-3 */
+                return (match(x1, y1 + y2 + y3) + penalty13)
+            else:
+                #/* expansion  2-3 */
+                return (match(x1 + x2, y1 + y2 + y3) + penalty23)
+        elif (y3 == 0):
+            if (y2 == 0):
+                #/* contraction  3-1 */
+                return (match(x1 + x2 + x3, y1) + penalty31)
+            else:
+                #/* contraction  3-2 */
+                return (match(x1 + x2 + x3, y1 + y2) + penalty32)                 
+        else:				
+            # /* melding */
+            return (match(x1 + x2 + x3, y1 + y2 + y3) + penalty33)
