@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 # -*- coding: utf-8 -*-
 
 """Map between WorldBet and XSampa. This table is still not complete.

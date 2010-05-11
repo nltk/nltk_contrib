@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 # -*- coding: utf-8 -*-
 
 """Loads Tables.py and produces X_Tables.py, mapping to XSampa rather

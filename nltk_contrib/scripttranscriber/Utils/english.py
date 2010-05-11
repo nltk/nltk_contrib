@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """English prons for about 600K strings via Festival
 """
 

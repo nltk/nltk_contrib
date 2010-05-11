@@ -1,6 +1,3 @@
-
-#!/usr/bin/python
-
 """
 Chinese (Mandarin) prons for characters 
 """

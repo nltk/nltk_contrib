@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """
 Native Japanese pronunciations for characters
 """

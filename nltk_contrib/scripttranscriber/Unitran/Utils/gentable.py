@@ -1,4 +1,3 @@
-#!/usr/bin/python
 """Given a list of the form
 
 1401    Ai

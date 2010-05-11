@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """Script classifier, based on
 /usr/share/perl/5.8.8/unicore/Blocks.txt
 

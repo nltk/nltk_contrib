@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """UTF-8 to WorldBet/XSampa decoder
 
 The main complexity here involves Indic systems, which have inherent

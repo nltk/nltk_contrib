@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """Simple table-lookup for pronunciation of extended latin strings.
 """
 

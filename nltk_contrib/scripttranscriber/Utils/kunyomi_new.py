@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """
 Native Japanese pronunciations for characters based on Kunyomi
 pronunciations from Wiktionary. These include guesses on application

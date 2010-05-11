@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 """String edit distance computation for two strings in WorldBet using
 phonetic distance.
 
