@@ -1,4 +1,4 @@
-高島屋	Takashimaya	2.681818	t A k A i s i m A j a <-> t A: k A: S I m A: j &
+高島屋	Takashimaya	2.818182	t A k A i z i m A j a <-> t A: k A: S I m A: j &
 共產黨	공산당	2.000000	k o N tshr a n t a N <-> k o N sh a n t a N
 Kuomintang	國民黨	2.650000	k w o U m I n t @ N <-> k w o m i n t a N
 ᏣᎳᎩ	Cherokee	4.416667	ts A l A k i <-> tS E r & k i:

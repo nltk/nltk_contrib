@@ -13,5 +13,5 @@
 for tst in *_unittest.py
 do
     echo Running $tst
-    $tst
+    python $tst
 done
