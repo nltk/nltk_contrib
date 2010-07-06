@@ -96,7 +96,7 @@ def _normalize_word(word):
     return word.strip().lower()
 
 # Read our syllable override file and stash that info in the cache
-for line in specialSyllables_en:
+for line in specialSyllables_en.splitlines():
     line = line.strip()
     if line:
         toks = line.split()

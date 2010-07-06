@@ -73,7 +73,7 @@ def _stripWord(word):
     return word.strip().lower()
 
 # Read our syllable override file and add to the syllablesInFile list
-for line in specialSyllables_no:
+for line in specialSyllables_no.splitlines():
     line = line.strip()
     if line:
         toks = line.split()
