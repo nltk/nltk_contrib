@@ -55,6 +55,7 @@ setup(
                 'nltk_contrib.mit.six863.semantics',
                 'nltk_contrib.mit.six863.tagging',
                 'nltk_contrib.readability',
+                'nltk_contrib.refexpr',
                 'nltk_contrib.rte',
                 'nltk_contrib.scripttranscriber',
                 'nltk_contrib.tag',
