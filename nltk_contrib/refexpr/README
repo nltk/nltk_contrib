@@ -1,0 +1,51 @@
+About
+-----
+This package contains code for generating referring expressions using Viethen
+and Dale's algorithms. It was implemented by:
+
+Rebecca Ingram <raingram@cs.indiana.edu>
+Michael Hansen <mihansen@cs.indiana.edu>
+Jason Yoder <jasoyode@cs.indiana.edu>
+
+Sample Data
+-----------
+Both drawers.py and gre3d_facts.py contain running code. To run, just type:
+$ python drawers.py
+
+or 
+
+$ python gre3d_facts.py
+
+In drawers.py, we use the fact-set for Viethen and Dale's drawer data [1], and
+run each of the three algorithms to generate a referring expression for all 16
+drawers.
+
+In gre3d_facts.py, we use the fact-set for Viethen and Dale's GRE3D3 data [2],
+and run all three algorithms on each of the 20 trialsets.
+
+Examples
+--------
+
+Additionally, we have provided a static example() method for each algorithm
+class. To see these in action, you may start up a Python REPL and run the following:
+
+from nltk_contrib.refexpr.full_brevity import FullBrevity
+from nltk_contrib.refexpr.incremental import Incremental
+from nltk_contrib.refexpr.relational import Relational
+
+FullBrevity.example()
+Incremental.example()
+Relational.example()
+
+References
+----------
+
+[1] Jette Viethen. Algorithms for generating referring expressions: Do they
+do what people do. In In Proceedings of the 4th International Conference
+on Natural Language Generation, INLG-06, pages 63–70, 2006.
+
+[2] Robert Dale and Jette Viethen. Referring expression generation through
+attribute-based heuristics. In Proceedings of the 12th European Work-
+shop on Natural Language Generation, ENLG ’09, pages 58–65, Strouds-
+burg, PA, USA, 2009. Association for Computational Linguistics.
+
