@@ -2,7 +2,7 @@
 
 # Natural Language Toolkit: Gale-Church Aligner
 #
-# Copyright (C) 2001-2010 NLTK Project
+# Copyright (C) 2001-2011 NLTK Project
 # Author: Torsten Marek <marek@ifi.uzh.ch>
 # URL: <http://nltk.org/>
 # For license information, see LICENSE.TXT

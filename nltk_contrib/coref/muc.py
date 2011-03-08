@@ -1,6 +1,6 @@
 # Natural Language Toolkit (NLTK) MUC Corpus Reader
 #
-# Copyright (C) 2001-2010 NLTK Project 
+# Copyright (C) 2001-2011 NLTK Project 
 # Author: Joseph Frazee <jfrazee@mail.utexas.edu>
 #         Steven Bird <sb@csse.unimelb.edu.au> (original IEER Corpus Reader)
 #         Edward Loper <edloper@gradient.cis.upenn.edu> (original IEER Corpus 
