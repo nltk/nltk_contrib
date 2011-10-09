@@ -138,113 +138,114 @@ optpar.add_option("-x", "--purge", dest="purge", default=False,
 optpar.add_option("-y", "--server-type", dest="servertype",
                   help="server type (=postgresql|oracle)",
                   metavar="STR")
-opts, args = optpar.parse_args()
 
-# check arguments
-if len(args) == 0:
-    optpar.error("required argument is missing")
-elif len(args) > 1:
-    optpar.error("too many arguments")
-tbdir = args[0]
+if __name__ == '__main__':
+    opts, args = optpar.parse_args()
+
+    # check arguments
+    if len(args) == 0:
+        optpar.error("required argument is missing")
+    elif len(args) > 1:
+        optpar.error("too many arguments")
+    tbdir = args[0]
+            
+    # check options
+    if not opts.user:
+        optpar.error("user name is missing")
         
-# check options
-if not opts.user:
-    optpar.error("user name is missing")
-    
-if opts.passwd is None:
-    print "Password:",
-    opts.passwd = getpass()
-else:
-    passwd = opts.passwd
-
-if opts.filter is None:
-    filter = re.compile(".*")
-else:
-    try:
-        filter = re.compile(opts.filter)
-    except:
-        optpar.error("invalid regex for -f (--filter) option")
-
-if opts.servertype is None:
-    optpar.error("you must specify the server type; use -y option")
-elif opts.servertype == 'postgresql':
-    from pyPgSQL import PgSQL
-    DatabaseError = PgSQL.libpq.DatabaseError
-elif opts.servertype == 'oracle':
-    os.environ['NLS_LANG'] = '.UTF8'
-    import cx_Oracle
-    from cx_Oracle import DatabaseError
-elif opts.servertype == 'mysql':
-    import MySQLdb
-    DatabaseError = MySQLdb.DatabaseError
-else:
-    optpar.error("server type should be one of the followins: postgresql, oracle, mysql")
-    
-# try to connect to database
-conn = connectdb(opts)
-cursor = conn.cursor()
-
-print os.path.join('',os.path.dirname(sys.argv[0]))
-
-# check if table exists
-try:
-    sql = limit(opts.servertype, "select * from "+opts.table, 1)
-    cursor.execute(sql)
-except DatabaseError, e:
-    if opts.create:
-        p = os.path.join(os.path.dirname(sys.argv[0]),'lpath-schema.sql')
-        for line in file(p).read().replace("TABLE",opts.table).split(';'):
-            if line.strip():
-                cursor.execute(line)
+    if opts.passwd is None:
+        print "Password:",
+        opts.passwd = getpass()
     else:
-        print "table %s doesn't exist" % `opts.table`
-        sys.exit(1)
+        passwd = opts.passwd
 
-# set correct table name in the insertion SQL
-if opts.servertype in ('postgresql', 'mysql'):
-    SQL1 = "insert into TABLE values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-elif opts.servertype == 'oracle':
-    SQL1 = "insert into TABLE values(:c1,:c2,:c3,:c4,:c5,:c6,:c7,:c8,:c9,:c10)"
-SQL1 = SQL1.replace('TABLE', opts.table)
+    if opts.filter is None:
+        filter = re.compile(".*")
+    else:
+        try:
+            filter = re.compile(opts.filter)
+        except:
+            optpar.error("invalid regex for -f (--filter) option")
 
-# empty the table if necessary
-if opts.purge:
-    cursor.execute("delete from "+opts.table)
-
-# obtain the next sid
-cursor.execute("select max(sid) from "+opts.table)
-r = cursor.fetchone()
-if r[0] is None:
-    sid = 1
-else:
-    sid = r[0] + 1
+    if opts.servertype is None:
+        optpar.error("you must specify the server type; use -y option")
+    elif opts.servertype == 'postgresql':
+        from pyPgSQL import PgSQL
+        DatabaseError = PgSQL.libpq.DatabaseError
+    elif opts.servertype == 'oracle':
+        os.environ['NLS_LANG'] = '.UTF8'
+        import cx_Oracle
+        from cx_Oracle import DatabaseError
+    elif opts.servertype == 'mysql':
+        import MySQLdb
+        DatabaseError = MySQLdb.DatabaseError
+    else:
+        optpar.error("server type should be one of the followins: postgresql, oracle, mysql")
         
-def do(tree):
-    global sid
-    t = tree.children[0]
-    t.prune()
-    tb2tbl(t, sid, 1)
-    sid += 1
+    # try to connect to database
+    conn = connectdb(opts)
+    cursor = conn.cursor()
 
-count = opts.numtree
-reader = codecs.getreader('utf-8')
-if tbdir == '-':
-    for tree in TreeModel.importTreebank(reader(sys.stdin)):
-        print tree
-        do(tree)
-        count -= 1
-        if count == 0: break
-else:
-    for root, dirs, files in os.walk(tbdir):
-        for f in files:
-            print f,
-            if filter.match(f):
-                p = os.path.join(root,f)
-                for tree in TreeModel.importTreebank(reader(file(p))):
-                    do(tree)
-                    count -= 1
-                    if count == 0: sys.exit(0)  # done
-                print sid
-            else:
-                print 'skipped'
-        
+    print os.path.join('',os.path.dirname(sys.argv[0]))
+
+    # check if table exists
+    try:
+        sql = limit(opts.servertype, "select * from "+opts.table, 1)
+        cursor.execute(sql)
+    except DatabaseError, e:
+        if opts.create:
+            p = os.path.join(os.path.dirname(sys.argv[0]),'lpath-schema.sql')
+            for line in file(p).read().replace("TABLE",opts.table).split(';'):
+                if line.strip():
+                    cursor.execute(line)
+        else:
+            print "table %s doesn't exist" % `opts.table`
+            sys.exit(1)
+
+    # set correct table name in the insertion SQL
+    if opts.servertype in ('postgresql', 'mysql'):
+        SQL1 = "insert into TABLE values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    elif opts.servertype == 'oracle':
+        SQL1 = "insert into TABLE values(:c1,:c2,:c3,:c4,:c5,:c6,:c7,:c8,:c9,:c10)"
+    SQL1 = SQL1.replace('TABLE', opts.table)
+
+    # empty the table if necessary
+    if opts.purge:
+        cursor.execute("delete from "+opts.table)
+
+    # obtain the next sid
+    cursor.execute("select max(sid) from "+opts.table)
+    r = cursor.fetchone()
+    if r[0] is None:
+        sid = 1
+    else:
+        sid = r[0] + 1
+            
+    def do(tree):
+        global sid
+        t = tree.children[0]
+        t.prune()
+        tb2tbl(t, sid, 1)
+        sid += 1
+
+    count = opts.numtree
+    reader = codecs.getreader('utf-8')
+    if tbdir == '-':
+        for tree in TreeModel.importTreebank(reader(sys.stdin)):
+            print tree
+            do(tree)
+            count -= 1
+            if count == 0: break
+    else:
+        for root, dirs, files in os.walk(tbdir):
+            for f in files:
+                print f,
+                if filter.match(f):
+                    p = os.path.join(root,f)
+                    for tree in TreeModel.importTreebank(reader(file(p))):
+                        do(tree)
+                        count -= 1
+                        if count == 0: sys.exit(0)  # done
+                    print sid
+                else:
+                    print 'skipped'
