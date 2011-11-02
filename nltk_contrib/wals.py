@@ -86,6 +86,7 @@ class WALS(object):
         def map_fields(vectors, fields):
             for vector in vectors:
                 yield dict(zip(fields, vector))
+
         # Features
         self.features = dict((f['id'], f) for f in
                              map_fields(open_csv('features'),
@@ -98,6 +99,10 @@ class WALS(object):
         self.languages = dict((l['wals_code'], l) for l in
                               map_fields(open_csv('languages'),
                                          language_fields))
+        # convert longitude and latitude to float from string
+        for l in self.languages.values():
+            l['latitude'] = float(l['latitude'])
+            l['longitude'] = float(l['longitude'])
         # The datapoints file is more complicated. There is a column for
         # every feature, and a row for every language. Each cell is either
         # empty or contains a value dependent on the feature.
@@ -200,7 +205,7 @@ class WALS(object):
                            subfamily, and genus.
         """
 
-        value = str(value) # In case it's an int instead of a string
+        if value: value = str(value) # be robust to int values
         supermatch = lambda x: superclass in (x['genus'],
                                               x['subfamily'],
                                               x['family'])
@@ -208,3 +213,40 @@ class WALS(object):
         return [l for l in self.feat_lg_map[feature]
                 if (not value or valmatch(l)) and \
                    (not superclass or supermatch(l))]
+
+def demo(wals_directory=None, dialect='excel-tab', encoding='utf-8'):
+    if not wals_directory:
+        import sys
+        print >>sys.stderr, 'Error: No WALS data directory provided.'
+        print >>sys.stderr, '       You may obtain the database from ' +\
+            'http://wals.info/export'
+        return
+    w = WALS(wals_directory, dialect, encoding)
+    
+    # Basic statistics
+    print 'In database:\n  %d\tlanguages\n  %d\tfeatures ' %\
+        (len(w.languages), len(w.features))
+    # values are a nested dictionary (w.values[feature_id][value_id])
+    num_vals = sum(map(len, w.values.values()))
+    print '  %d\ttotal values (%f avg. number per feature)' %\
+        (num_vals, float(num_vals)/len(w.features))
+    # More statistics
+    print "  %d languages specify feature 81A (order of S, O, and V)" %\
+        (len(w.get_languages_with_feature('81A')))
+    print "  %d langauges have VOS order" %\
+        (len(w.get_languages_with_feature('81A', value='4')))
+
+    # Getting language data
+    print "\nGetting data for languages named 'Irish'"
+    for wals_code in w.get_wals_codes_from_name('Irish'):
+        l = w.languages[wals_code]
+        print '  %s (ISO-639 code: %s WALS code: %s)' %\
+            (l['name'], l['iso_codes'], wals_code)
+    print "\nGetting data for languages with ISO 'isl'"
+    for wals_code in w.get_wals_codes_from_iso('isl'):
+        w.show_language(wals_code)
+    print "\nLocations of dialects for the Min Nan language (ISO 'nan'):"
+    for wals_code in w.get_wals_codes_from_iso('nan'):
+        l = w.languages[wals_code]
+        print "  %s\tlat:%f\tlong:%f" %\
+            (l['name'], l['latitude'], l['longitude'])
