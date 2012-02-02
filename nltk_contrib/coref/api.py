@@ -9,8 +9,8 @@ import os
 
 from nltk.corpus import CorpusReader
 from nltk.tokenize.punkt import PunktWordTokenizer
-from nltk.tag import TaggerI, HiddenMarkovModelTaggerTransformI, \
-                     ClassifierBasedTagger                                          
+from nltk.tag import TaggerI, ClassifierBasedTagger                                          
+from nltk.tag.hmm import HiddenMarkovModelTaggerTransformI
 from nltk.classify import ClassifierI
 from nltk.util import LazyMap
 
