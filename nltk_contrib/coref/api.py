@@ -354,3 +354,4 @@ class AbstractClassifierBasedTagger(ClassifierBasedTagger, ClassifierI,
         if test_sequence:
             classifier.test(test_sequence)
         return classifier
+
