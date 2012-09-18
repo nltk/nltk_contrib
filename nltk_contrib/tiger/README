@@ -21,7 +21,7 @@ Dependencies
 
  * Optional (needed for Python 2.5 only)
 
-  * processing_: Parallel query evaluation
+  * multiprocessing_: Parallel query evaluation
   * pysqlite2_: Newer version of PySqlite2 are considerably faster
 
 

@@ -5,19 +5,15 @@
 """Support module for using the `multiprocessing` module."""
 
 try:
-    import processing as multiprocessing
+    import multiprocessing
     HAS_PROCESSING = True
 except ImportError:
-    try:
-        import multiprocessing
-        HAS_PROCESSING = True
-    except ImportError:
-        HAS_PROCESSING = False    
+    HAS_PROCESSING = False    
 
 __all__ = ["use_parallel_processing"]
 
 if HAS_PROCESSING:
-    CPU_COUNT = multiprocessing.cpuCount()
+    CPU_COUNT = multiprocessing.cpu_count()
 else:
     CPU_COUNT = 1
     multiprocessing = None
