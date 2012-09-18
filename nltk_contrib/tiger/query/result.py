@@ -315,7 +315,7 @@ class ParallelResultBuilder(ResultBuilderBase):
     def evaluate(self):
         self._reset_stats()
         result_queue = multiprocessing.Queue()
-        num_workers = multiprocessing.cpuCount()
+        num_workers = multiprocessing.cpu_count()
         workers = []
         for i in range(num_workers):
             worker = multiprocessing.Process(
