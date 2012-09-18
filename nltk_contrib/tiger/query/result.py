@@ -11,13 +11,13 @@ The algorithm and the interfaces in this module are still subject to heavy chang
 information, see the inline comments.
 """
 import operator
+import multiprocessing
 from functools import partial
 from itertools import count, izip
 from collections import defaultdict
 
 from nltk_contrib.tiger.index import IndexNodeId
 from nltk_contrib.tiger.query.exceptions import MissingFeatureError
-from nltk_contrib.tiger.utils.parallel import multiprocessing
 from nltk_contrib.tiger.query.constraints import Direction
 from nltk_contrib.tiger.query.nodesearcher import NodeSearcher, EqualPartitionsGraphFilter
 
