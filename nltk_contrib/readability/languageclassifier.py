@@ -33,11 +33,11 @@ class NaiveBayes(object):
         self.load(os.path.join("files","lang_data.pickle"))
 
      
-    """
-    load pickled training results
-    picklepath is the local path to your picklefile
-    """        
     def load(self,picklepath):
+        """
+        load pickled training results
+        picklepath is the local path to your picklefile
+        """
         try:
             p = open(picklepath, 'rb')
             data = pickle.load(p)
@@ -50,12 +50,12 @@ class NaiveBayes(object):
             print "Nothing to load here!"
         
         
-    """
-    Train the classifier with data placed 
-    in a folder named as the related language.
-    Example: /path/to/files/eng/file01.txt
-    """    
     def train(self, path):
+        """
+        Train the classifier with data placed
+        in a folder named as the related language.
+        Example: /path/to/files/eng/file01.txt
+        """
         # Setup
         data_files = glob.glob(path + "/*/*")
         random.shuffle(data_files)
@@ -118,13 +118,13 @@ class NaiveBayes(object):
         pickler = pickle.dump(data, output, -1)
         output.close()   
     
-    """
-    Filter out the words we're not interessted in
-    and return a dictionary with all remaining words
-    sorted by language.
-    Example: vocabulary[eng] = {'lazy','fox',...}
-    """
     def __createVocabulary(self, files):
+        """
+        Filter out the words we're not interessted in
+        and return a dictionary with all remaining words
+        sorted by language.
+        Example: vocabulary[eng] = {'lazy','fox',...}
+        """
         # Count number of occurance of each word
         word_count = {}
         for lang in files.keys():
@@ -146,13 +146,13 @@ class NaiveBayes(object):
         return vocabulary
     
     
-    """
-    Test the accuracy of the classifier.
-    Provide test files as list or path.
-    The path must be on the same form as when training.
-    """
     def testAccuracy(self,test_files = ""):
-        
+        """
+        Test the accuracy of the classifier.
+        Provide test files as list or path.
+        The path must be on the same form as when training.
+        """
+
         if test_files == "":
             print "No test files given"
             return
