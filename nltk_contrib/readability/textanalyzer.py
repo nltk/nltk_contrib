@@ -6,6 +6,7 @@ from nltk.tokenize import *
 import syllables_en
 import syllables_no
 from languageclassifier import *
+import logging
 
 class textanalyzer(object):
 
@@ -61,19 +62,20 @@ class textanalyzer(object):
     #getWords = classmethod(getWords)
     
     def getSentences(self, text=''):
-        sentences = []
         tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
         sentences = tokenizer.tokenize(text)
         return sentences
     #getSentences = classmethod(getSentences)
     
-    def countSyllables(self, words = []):
+    def countSyllables(self, words = None):
+        if words is None:
+          words = []
 #        if self.lang == "":
 #            self.lang = NaiveBayes().classifyText(" " .join(words))
             
         if self.lang == "unknown":
-            print "WARNING: Unknown language, using English\n"
-            self.lang = "eng"    
+            logging.warning("Unknown language, using English")
+            self.lang = "eng"
         
         syllableCount = 0
         syllableCounter = {}
@@ -91,10 +93,9 @@ class textanalyzer(object):
     #This often results in that too many complex words are detected.
     def countComplexWords(self, text=''):
         words = self.getWords(text)
-        sentences = len(self.getSentences(text));
-        sentencesList = self.getSentences(text);
+        sentences = self.getSentences(text)
         complexWords = 0
-        found = False;
+        found = False
         #Just for manual checking and debugging.
         cWords = []
         curWord = []
@@ -110,7 +111,7 @@ class textanalyzer(object):
                     complexWords += 1
                     #cWords.append(word)
                 else:
-                    for sentence in sentencesList:
+                    for sentence in sentences:
                         if str(sentence).startswith(word):
                             found = True
                             break

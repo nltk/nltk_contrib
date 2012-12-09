@@ -7,6 +7,7 @@ import random
 import math
 import pickle
 import os
+import logging
 
 from nltk.corpus import stopwords
 
@@ -47,8 +48,8 @@ class NaiveBayes(object):
             self.vocabulary = data["vocabulary"]
         except IOError:
             self.p_word_given_lang = {}
-            print "Nothing to load here!"
-        
+            logging.warning("No pickled language classifier available.")
+
         
     def train(self, path):
         """
@@ -201,8 +202,16 @@ class NaiveBayes(object):
         print "Accuracy: %.3f" % (1.0 - errors/total)
     
     def classifyText(self, text):
+        """
+        If no vocabularies have been provided language should be 'unknown'
+        >>> classifier = NaiveBayes()
+        >>> classifier.classifyText("is this some english text")
+        'unknown'
+        """
         max_lang = 0
         max_p = 1
+        unknown_words = []
+        known_words = []
         for candidate_lang in self.candidate_languages:
             # Calculates P(O | H) * P(H) for candidate group
             p = math.log(self.p_lang[candidate_lang])
@@ -220,8 +229,10 @@ class NaiveBayes(object):
             if p > max_p or max_p == 1:
                 max_p = p
                 max_lang = candidate_lang
-        
-        percent = (float(len(known_words)) / float(len(unknown_words)))
+
+
+        # TODO: this is wrong, it's checking the last one, not the max
+        percent = (float(len(known_words)) / (float(len(unknown_words)) + 0.1))
         # return unknown if the ratio of known words is less or equal to 0.25
         if percent <= 0.25:        
             max_lang = "unknown"
