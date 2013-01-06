@@ -46,7 +46,6 @@ class ReadabilityTool:
                 lang = NaiveBayes().classifyText(text)
                 self.lang = lang
                 t = textanalyzer(lang)
-                t.analyzeText(text)
                 words = t.getWords(text)
                 charCount = t.getCharacterCount(words)
                 wordCount = len(words)
@@ -69,51 +68,81 @@ class ReadabilityTool:
      
     
     def ARI(self, text = ''):
+        """
+        >>> tool = ReadabilityTool()
+        >>> tool.ARI("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        -0.375
+        """
         self.__analyzeText(text)
-        score = 0.0
         analyzedVars = self.analyzedVars
         score = 4.71 * (analyzedVars['charCount'] / analyzedVars['wordCount']) + 0.5 * (analyzedVars['wordCount'] / analyzedVars['sentenceCount']) - 21.43
         return score
     
     def FleschReadingEase(self, text = ''):
+        """
+        >>> tool = ReadabilityTool()
+        >>> tool.FleschReadingEase("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        116.145
+        """
         self.__analyzeText(text)
         score = 0.0
         analyzedVars = self.analyzedVars        
         score = 206.835 - (1.015 * (analyzedVars['averageWordsPerSentence'])) - (84.6 * (analyzedVars['syllableCount']/ analyzedVars['wordCount']))
-        return score
+        return round(score, 4)
     
     def FleschKincaidGradeLevel(self, text = ''):
+        """
+        >>> tool = ReadabilityTool()
+        >>> tool.FleschKincaidGradeLevel("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        -1.45
+        """
         self.__analyzeText(text)
-        score = 0.0
         analyzedVars = self.analyzedVars
         score = 0.39 * (analyzedVars['averageWordsPerSentence']) + 11.8 * (analyzedVars['syllableCount']/ analyzedVars['wordCount']) - 15.59
-        return score
+        return round(score, 4)
     
     def GunningFogIndex(self, text = ''):
+        """
+        >>> tool = ReadabilityTool()
+        >>> tool.GunningFogIndex("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        2.4
+        """
         self.__analyzeText(text)
-        score = 0.0
         analyzedVars = self.analyzedVars
         score = 0.4 * ((analyzedVars['averageWordsPerSentence']) + (100 * (analyzedVars['complexwordCount']/analyzedVars['wordCount'])))
-        return score
+        return round(score, 4)
     
     def SMOGIndex(self, text = ''):
+        """
+        It should work if no training data is provided. It uses the default language of eng.
+        >>> tool = ReadabilityTool()
+        >>> tool.SMOGIndex("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        3.0
+        """
         self.__analyzeText(text)
-        score = 0.0
-        analyzedVars = self.analyzedVars        
+        analyzedVars = self.analyzedVars
         score = (math.sqrt(analyzedVars['complexwordCount']*(30/analyzedVars['sentenceCount'])) + 3)
         return score
     
     def ColemanLiauIndex(self, text = ''):
-        self.__analyzeText(text)
-        score = 0.0
-        analyzedVars = self.analyzedVars        
-        score = (5.89*(analyzedVars['charCount']/analyzedVars['wordCount']))-(30*(analyzedVars['sentenceCount']/analyzedVars['wordCount']))-15.8
-        return score
-    
-    def LIX(self, text = ''):
+        """
+        >>> tool = ReadabilityTool()
+        >>> tool.ColemanLiauIndex("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        1.7783
+        """
         self.__analyzeText(text)
         analyzedVars = self.analyzedVars
-        score = 0.0
+        score = (5.89*(analyzedVars['charCount']/analyzedVars['wordCount']))-(30*(analyzedVars['sentenceCount']/analyzedVars['wordCount']))-15.8
+        return round(score, 4)
+    
+    def LIX(self, text = ''):
+        """
+        >>> tool = ReadabilityTool()
+        >>> tool.LIX("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        6.0
+        """
+        self.__analyzeText(text)
+        analyzedVars = self.analyzedVars
         longwords = 0.0
         for word in analyzedVars['words']:
             if len(word) >= 7:
@@ -122,6 +151,11 @@ class ReadabilityTool:
         return score
     
     def RIX(self, text = ''):
+        """
+        >>> tool = ReadabilityTool()
+        >>> tool.RIX("the cat jumped over the fox. the car jumped over the bus. the tree jumped over the hedge.")
+        0.0
+        """
         self.__analyzeText(text)
         analyzedVars = self.analyzedVars
         score = 0.0
