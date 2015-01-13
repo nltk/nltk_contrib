@@ -47,7 +47,7 @@ class StateMachine(object):
                 new_node(tokens)
                 break 
             elif new_node not in self.nodes:
-                raise RuntimeError("Invalid target %s", new_state)
+                raise RuntimeError("Invalid target %s" % new_state)
             else:
                 node = new_node
 
