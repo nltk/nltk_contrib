@@ -42,7 +42,7 @@ class textanalyzer(object):
         characters = 0
         for word in words:
             word = self._setEncoding(word)
-            characters += len(word.decode("utf-8"))
+            characters += len(word)
         return characters
     #getCharacterCount = classmethod(getCharacterCount)    
         
@@ -112,7 +112,7 @@ class textanalyzer(object):
                     #cWords.append(word)
                 else:
                     for sentence in sentences:
-                        if str(sentence).startswith(word):
+                        if sentence.startswith(word):
                             found = True
                             break
                     
@@ -126,13 +126,14 @@ class textanalyzer(object):
     #countComplexWords = classmethod(countComplexWords)
     
     def _setEncoding(self,text):
-        try:
-            text = unicode(text, "utf8").encode("utf8")
-        except UnicodeError:
+        if not isinstance(text, unicode):
             try:
-                text = unicode(text, "iso8859_1").encode("utf8")
+                text = unicode(text, "utf8")
             except UnicodeError:
-                text = unicode(text, "ascii", "replace").encode("utf8")
+                try:
+                    text = unicode(text, "iso8859_1")
+                except UnicodeError:
+                    text = unicode(text, "ascii", "replace")
         return text
     #_setEncoding = classmethod(_setEncoding)
         
