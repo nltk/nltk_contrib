@@ -114,7 +114,7 @@ class ReentranceLink(object):
     after the parsing and alt structure generation.
 
     First go up C{self.up} levels then follow the 
-    featrue path C{self.down}
+    feature path C{self.down}
     """
 
     def __init__(self, path):
