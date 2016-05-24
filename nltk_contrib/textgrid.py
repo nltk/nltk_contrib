@@ -447,23 +447,23 @@ class Tier(object):
         return self.__repr__() + "\n  " + "\n  ".join(" ".join(row) for row in self.simple_transcript)
 
 def demo_TextGrid(demo_data):
-    print "** Demo of the TextGrid class. **"
+    print("** Demo of the TextGrid class. **")
 
     fid = TextGrid(demo_data)
-    print "Tiers:", fid.size
+    print("Tiers: %s" % (fid.size))
 
     for i, tier in enumerate(fid):
-        print "\n***"
-        print "Tier:", i + 1
-        print tier
+        print("\n***")
+        print("Tier: %s" % (i + 1))
+        print(tier)
 
 def demo():
     # Each demo demonstrates different TextGrid formats.
-    print "Format 1"
+    print("Format 1")
     demo_TextGrid(demo_data1)
-    print "\nFormat 2"
+    print("\nFormat 2")
     demo_TextGrid(demo_data2)
-    print "\nFormat 3"
+    print("\nFormat 3")
     demo_TextGrid(demo_data3)
 
 
