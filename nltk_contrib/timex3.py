@@ -1,19 +1,15 @@
 # Code for tagging temporal expressions in text
 # For details of the TIMEX format, see http://timex2.mitre.org/
+# Converted to Python3 by Brian Hockenmaier in 2019
 
 import re
 import string
 import os
 import sys
+from datetime import datetime, timedelta
 
-# Requires eGenix.com mx Base Distribution
+# Python3 version no longer requires eGenix.com mx Base Distribution
 # http://www.egenix.com/products/python/mxBase/
-try:
-    from mx.DateTime import *
-except ImportError:
-    print """
-Requires eGenix.com mx Base Distribution
-http://www.egenix.com/products/python/mxBase/"""
 
 # Predefined strings.
 numbers = "(^a(?=\s)|one|two|three|four|five|six|seven|eight|nine|ten| \
@@ -81,29 +77,29 @@ def tag(text):
 # Hash function for week days to simplify the grounding task.
 # [Mon..Sun] -> [0..6]
 hashweekdays = {
-    'Monday': 0,
-    'Tuesday': 1,
-    'Wednesday': 2,
-    'Thursday': 3,
-    'Friday': 4,
-    'Saturday': 5,
-    'Sunday': 6}
+    'monday': 0,
+    'tuesday': 1,
+    'wednesday': 2,
+    'thursday': 3,
+    'friday': 4,
+    'saturday': 5,
+    'sunday': 6}
 
 # Hash function for months to simplify the grounding task.
 # [Jan..Dec] -> [1..12]
 hashmonths = {
-    'January': 1,
-    'February': 2,
-    'March': 3,
-    'April': 4,
-    'May': 5,
-    'June': 6,
-    'July': 7,
-    'August': 8,
-    'September': 9,
-    'October': 10,
-    'November': 11,
-    'December': 12}
+    'january': 1,
+    'february': 2,
+    'march': 3,
+    'april': 4,
+    'may': 5,
+    'june': 6,
+    'july': 7,
+    'august': 8,
+    'september': 9,
+    'october': 10,
+    'november': 11,
+    'december': 12}
 
 # Hash number in words into the corresponding integer value
 def hashnum(number):
@@ -175,9 +171,14 @@ def ground(tagged_text, base_date):
     timex_found = timex_regex.findall(tagged_text)
     timex_found = map(lambda timex:re.sub(r'</?TIMEX2.*?>', '', timex), \
                 timex_found)
+    timexList = []
 
     # Calculate the new date accordingly
     for timex in timex_found:
+        # global month
+        month = "(january|february|march|april|may|june|july|august|september| \
+        october|november|december)"
+
         timex_val = 'UNKNOWN' # Default value
 
         timex_ori = timex   # Backup original timex for later substitution
@@ -191,7 +192,7 @@ def ground(tagged_text, base_date):
             unit = split_timex[1]
             num_list = map(lambda s:hashnum(s),re.findall(numbers + '+', \
                                           value, re.IGNORECASE))
-            timex = `sum(num_list)` + ' ' + unit
+            timex = sum(num_list) + ' ' + unit
 
         # If timex matches ISO format, remove 'time' and reorder 'date'
         if re.match(r'\d+[/-]\d+[/-]\d+ \d+:\d+:\d+\.\d+', timex):
@@ -207,43 +208,46 @@ def ground(tagged_text, base_date):
         elif re.match(r'tonight|tonite|today', timex, re.IGNORECASE):
             timex_val = str(base_date)
         elif re.match(r'yesterday', timex, re.IGNORECASE):
-            timex_val = str(base_date + RelativeDateTime(days=-1))
+            timex_val = str(base_date + timedelta(days=-1))
         elif re.match(r'tomorrow', timex, re.IGNORECASE):
-            timex_val = str(base_date + RelativeDateTime(days=+1))
+            timex_val = str(base_date + timedelta(days=+1))
 
         # Weekday in the previous week.
         elif re.match(r'last ' + week_day, timex, re.IGNORECASE):
-            day = hashweekdays[timex.split()[1]]
-            timex_val = str(base_date + RelativeDateTime(weeks=-1, \
-                            weekday=(day,0)))
+            target_day = hashweekdays[timex.split()[1]]
+            monday_of_base_week = base_date - timedelta(days=base_date.weekday())
+            monday_of_target_week = base_date + timedelta(weeks=-1)
+            timex_val = str(monday_of_target_week + timedelta(days=target_day+1))
 
         # Weekday in the current week.
         elif re.match(r'this ' + week_day, timex, re.IGNORECASE):
-            day = hashweekdays[timex.split()[1]]
-            timex_val = str(base_date + RelativeDateTime(weeks=0, \
-                            weekday=(day,0)))
+            target_day = hashweekdays[timex.split()[1]]
+            monday_of_base_week = base_date - timedelta(days=base_date.weekday())
+            monday_of_target_week = base_date + timedelta(weeks=0)
+            timex_val = str(monday_of_target_week + timedelta(days=target_day+1))
 
         # Weekday in the following week.
         elif re.match(r'next ' + week_day, timex, re.IGNORECASE):
-            day = hashweekdays[timex.split()[1]]
-            timex_val = str(base_date + RelativeDateTime(weeks=+1, \
-                              weekday=(day,0)))
+            target_day = hashweekdays[timex.split()[1]]
+            monday_of_base_week = base_date - timedelta(days=base_date.weekday())
+            monday_of_target_week = base_date + timedelta(weeks=+1)
+            timex_val = str(monday_of_target_week + timedelta(days=target_day+1))
 
         # Last, this, next week.
         elif re.match(r'last week', timex, re.IGNORECASE):
-            year = (base_date + RelativeDateTime(weeks=-1)).year
+            year = (base_date + timedelta(weeks=-1)).year
 
             # iso_week returns a triple (year, week, day) hence, retrieve
             # only week value.
-            week = (base_date + RelativeDateTime(weeks=-1)).iso_week[1]
+            week = (base_date + timedelta(weeks=-1)).isocalendar()[1]
             timex_val = str(year) + 'W' + str(week)
         elif re.match(r'this week', timex, re.IGNORECASE):
-            year = (base_date + RelativeDateTime(weeks=0)).year
-            week = (base_date + RelativeDateTime(weeks=0)).iso_week[1]
+            year = (base_date + timedelta(weeks=0)).year
+            week = (base_date + timedelta(weeks=0)).isocalendar()[1]
             timex_val = str(year) + 'W' + str(week)
         elif re.match(r'next week', timex, re.IGNORECASE):
-            year = (base_date + RelativeDateTime(weeks=+1)).year
-            week = (base_date + RelativeDateTime(weeks=+1)).iso_week[1]
+            year = (base_date + timedelta(weeks=+1)).year
+            week = (base_date + timedelta(weeks=+1)).isocalendar()[1]
             timex_val = str(year) + 'W' + str(week)
 
         # Month in the previous year.
@@ -286,20 +290,20 @@ def ground(tagged_text, base_date):
 
             # Calculate the offset by taking '\d+' part from the timex.
             offset = int(re.split(r'\s', timex)[0])
-            timex_val = str(base_date + RelativeDateTime(days=-offset))
+            timex_val = str(base_date + timedelta(days=-offset))
         elif re.match(r'\d+ days? (later|after)', timex, re.IGNORECASE):
             offset = int(re.split(r'\s', timex)[0])
-            timex_val = str(base_date + RelativeDateTime(days=+offset))
+            timex_val = str(base_date + timedelta(days=+offset))
         elif re.match(r'\d+ weeks? (ago|earlier|before)', timex, re.IGNORECASE):
             offset = int(re.split(r'\s', timex)[0])
-            year = (base_date + RelativeDateTime(weeks=-offset)).year
+            year = (base_date + timedelta(weeks=-offset)).year
             week = (base_date + \
-                            RelativeDateTime(weeks=-offset)).iso_week[1]
+                            timedelta(weeks=-offset)).isocalendar()[1]
             timex_val = str(year) + 'W' + str(week)
         elif re.match(r'\d+ weeks? (later|after)', timex, re.IGNORECASE):
             offset = int(re.split(r'\s', timex)[0])
-            year = (base_date + RelativeDateTime(weeks=+offset)).year
-            week = (base_date + RelativeDateTime(weeks=+offset)).iso_week[1]
+            year = (base_date + timedelta(weeks=+offset)).year
+            week = (base_date + timedelta(weeks=+offset)).isocalendar()[1]
             timex_val = str(year) + 'W' + str(week)
         elif re.match(r'\d+ months? (ago|earlier|before)', timex, re.IGNORECASE):
             extra = 0
@@ -343,15 +347,20 @@ def ground(tagged_text, base_date):
         # Substitute tag+timex in the text with grounded tag+timex.
         tagged_text = re.sub('<TIMEX2>' + timex_ori + '</TIMEX2>', '<TIMEX2 val=\"' \
             + timex_val + '\">' + timex_ori + '</TIMEX2>', tagged_text)
+        
+        timexList.append({
+          "text": timex_ori,
+          "value": timex_val
+        })
 
-    return tagged_text
+    return tagged_text, timexList
 
 ####
 
 def demo():
     import nltk
     text = nltk.corpus.abc.raw('rural.txt')[:10000]
-    print tag(text)
+    print(tag(text))
 
 if __name__ == '__main__':
     demo()
