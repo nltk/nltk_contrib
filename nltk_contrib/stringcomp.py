@@ -18,7 +18,7 @@ def stringcomp (fx, fy):
     This is an implementation of the string comparison algorithm (also known
     as "string similarity") published by Qi Xiao Yang, Sung Sam Yuan, Li Zhao,
     Lu Chun and Sun Peng in a paper called "Faster Algorithm of String
-    Comparison" ( http://front.math.ucdavis.edu/0112.6022 ). Please note that,
+    Comparison" ( https://arxiv.org/abs/cs/0112022 ). Please note that,
     however, this implementation presents some relevant differences that
     will lead to different numerical results (read the comments for more
     details).
