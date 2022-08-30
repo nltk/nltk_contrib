@@ -1,5 +1,5 @@
-from StringIO import StringIO
-import at_lite as at
+from io import StringIO
+from . import at_lite as at
 
 __all__ = ["translate", "translate_sub"]
 

@@ -2,17 +2,17 @@ import sys
 import os
 from qt import *
 from qtcanvas import *
-from treecanvas import *
-from treecanvasview import *
-from lpathtree_qt import *
-from axis import *
-from db import *
-from dbdialog import *
-from sqlviewdialog import *
-from overlay import *
-from translator import translate
-from parselpath import parse_lpath
-from lpath import tokenize
+from .treecanvas import *
+from .treecanvasview import *
+from .lpathtree_qt import *
+from .axis import *
+from .db import *
+from .dbdialog import *
+from .sqlviewdialog import *
+from .overlay import *
+from .translator import translate
+from .parselpath import parse_lpath
+from .lpath import tokenize
 
 class QBA(QMainWindow):
     def __init__(self, tree=None):
@@ -171,7 +171,7 @@ class QBA(QMainWindow):
                      "XPM (*.xpm)")
         if d.exec_loop() == QDialog.Rejected: return
         filenam = d.selectedFile()
-        filenam = unicode(filenam)
+        filenam = str(filenam)
         self._saveImageDir = os.path.dirname(filenam)
         if os.path.exists(filenam):
             res = QMessageBox.question(
@@ -262,7 +262,7 @@ def main():
     app.setMainWidget(w)
     if len(sys.argv) == 2:
         generator = LPathTreeModel.importTreebank(file(sys.argv[1]))
-        w.setTree(generator.next())
+        w.setTree(next(generator))
     w.show()
     w.setCaption('LPath QBA')   # this is only necessary on windows
     app.exec_loop()

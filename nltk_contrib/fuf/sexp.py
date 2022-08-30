@@ -6,7 +6,7 @@ import re
 import os
 
 
-from statemachine import PushDownMachine
+from .statemachine import PushDownMachine
 
 class SexpList(list):
     """
@@ -39,7 +39,7 @@ class SexpList(list):
         for i, val in enumerate(self):
             if isinstance(val, SexpList):
                 s += val.pp()
-            elif isinstance(val, basestring):
+            elif isinstance(val, str):
                 s += val
             else:
                 s += repr(val)
@@ -71,8 +71,8 @@ class SexpListParser(object):
 
         # set up the parenthesis
         self.parens = {'(':')', '[':']', '{':'}'}
-        self.lparens = self.parens.keys()
-        self.rparens = self.parens.values()
+        self.lparens = list(self.parens.keys())
+        self.rparens = list(self.parens.values())
         self._build_machine()
         self.machine.stack = [[]]
     
@@ -90,8 +90,8 @@ class SexpListParser(object):
         """
         Return a tokenizer
         """
-        lparen_res = ''.join([re.escape(lparen) for lparen in self.parens.keys()])
-        rparen_res = ''.join([re.escape(rparen) for rparen in self.parens.values()])
+        lparen_res = ''.join([re.escape(lparen) for lparen in list(self.parens.keys())])
+        rparen_res = ''.join([re.escape(rparen) for rparen in list(self.parens.values())])
 
         tok_re = re.compile('[%s]|[%s]|[^%s%s\s]+' %
                             (lparen_res, rparen_res, lparen_res, rparen_res))
@@ -239,16 +239,16 @@ if __name__ == "__main__":
     lines = open('tests/sexp.txt').readlines()
     for test in lines:
         try:
-            print '%s' % test
+            print(('%s' % test))
             l = SexpListParser().parse(test)
-            print '==>', SexpListParser().parse(test)
-            print
-        except Exception, e:
-            print 'Exception:', e
+            print(('==>', SexpListParser().parse(test)))
+            print()
+        except Exception as e:
+            print(('Exception:', e))
     
     # testing the SexpFileParser
     sfp = SexpFileParser('tests/typed_gr4.fuf')
-    print sfp.parse()
+    print((sfp.parse()))
 
 
 

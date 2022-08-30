@@ -1,5 +1,5 @@
 from qt import QListView, QListViewItem, PYSIGNAL
-from myaccel import AccelKeyHandler
+from .myaccel import AccelKeyHandler
 
 __all__ = ['TreeEdit']
            
@@ -91,7 +91,7 @@ class TreeEdit(QListView,AccelKeyHandler):
         if self.data is None: return
         n = self.data.__class__()
         x = [self] + [None] * len(self.col2str)
-        item = apply(TreeEditItem,x)
+        item = TreeEditItem(*x)
         for sig in ("attach","insertLeft","insertRight","prune","splice"):
             n.connect(n,PYSIGNAL(sig),eval("item._%s"%sig))
         self.takeItem(item)
@@ -147,7 +147,7 @@ class TreeEdit(QListView,AccelKeyHandler):
             x = [T[-1],n.data[fields[0][0]]]
             for f,v in fields[1:]:
                 x.append(str(n.data[f]))
-            e = apply(TreeEditItem, x)
+            e = TreeEditItem(*x)
             for sig in ("attach","insertLeft","insertRight","prune","splice"):
                 n.connect(n,PYSIGNAL(sig),eval("e._%s"%sig))
             e.treenode = n
@@ -159,7 +159,7 @@ class TreeEdit(QListView,AccelKeyHandler):
 
     
 if __name__ == "__main__":
-    from tree_qt import TreeModel
+    from .tree_qt import TreeModel
     import qt
 
     class Demo(qt.QVBox):

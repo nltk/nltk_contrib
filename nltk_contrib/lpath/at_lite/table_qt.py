@@ -1,5 +1,5 @@
-import tableproxy
-from table import TableModel
+from . import tableproxy
+from .table import TableModel
 
 __all__ = ['TableModel']
 
@@ -17,24 +17,24 @@ if __name__ == "__main__":
     tab[1][2] = 3
     tab.printTable()
 
-    print
+    print()
 
     tab.insertColumn(1,[("extra",int),10,9])
     tab.printTable()
 
-    print
+    print()
 
     c = tab.takeColumn(1)
     tab.insertColumn(3,c)
     tab.printTable()
 
-    print
+    print()
 
     r = tab.takeRow(0)
     tab.insertRow(1,r)
     tab.printTable()
 
-    print
+    print()
     
     tab.sort(1,2)
     tab.printTable()

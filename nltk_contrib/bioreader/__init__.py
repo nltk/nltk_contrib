@@ -7,7 +7,7 @@
 # For license information, see LICENSE.TXT
 #
 
-from bioreader import *
+from .bioreader import *
 
 __all__ = [
     'Reader',

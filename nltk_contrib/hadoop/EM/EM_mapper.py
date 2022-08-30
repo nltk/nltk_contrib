@@ -63,8 +63,8 @@ class EM_Mapper(MapperBase):
         # get initial state probability p (state)
         Pi = DictionaryProbDist(d)
 
-        A_keys = A.keys()
-        B_keys = B.keys()
+        A_keys = list(A.keys())
+        B_keys = list(B.keys())
         states = set()
         symbols = set()
         for e in A_keys:

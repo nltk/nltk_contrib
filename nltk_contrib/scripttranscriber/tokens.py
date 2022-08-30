@@ -200,7 +200,7 @@ class DocTokenStats:
     except KeyError: return self.InitTokenStats(tok)
 
   def TokenStats(self):
-    return self.tokstats_.values()
+    return list(self.tokstats_.values())
 
   def SetN(self, n):
     self.n_ = n
@@ -288,7 +288,7 @@ class Lang:
       try: map[hash_string].append(token_)
       except KeyError: map[hash_string] = [token_]
     ntokens = []
-    keys = map.keys()
+    keys = list(map.keys())
     keys.sort()
     for k in keys:
       token_ = map[k][0]

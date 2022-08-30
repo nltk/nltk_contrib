@@ -13,8 +13,8 @@ Files have lines of the form:
 
 """
 
-from term import *
-from typedterm import *
+from .term import *
+from .typedterm import *
 
 # Map from word to TypedTerm
 class Lexicon:
@@ -29,16 +29,16 @@ class Lexicon:
                 (word, term, type) = line.split(':')
                 te = TypedTerm(parse_term(term), parse_type(type)) 
             except ValueError:
-                print 'Bad line:', line
+                print(('Bad line:', line))
                 continue
             
             word = word.strip().lower()
-            if self._map.has_key(word):
-                print 'Duplicate definitions for', word
+            if word in self._map:
+                print(('Duplicate definitions for', word))
             self._map[word] = te
 
     def words(self):
-        return self._map.keys()
+        return list(self._map.keys())
             
     def __getitem__(self, word):
         word = word.strip().lower()

@@ -1,8 +1,8 @@
 from itertools import groupby
 from operator import itemgetter
 
-from inputformat import KeyValueInput
-from outputcollector import LineOutput
+from .inputformat import KeyValueInput
+from .outputcollector import LineOutput
 
 class ReducerBase:
     """
@@ -44,7 +44,7 @@ class ReducerBase:
         """
 
         for key, group in  groupby(data, itemgetter(0)):
-            values = map(itemgetter(1), group)
+            values = list(map(itemgetter(1), group))
             yield key, values
 
     def reduce(self, key, values):

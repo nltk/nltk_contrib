@@ -31,7 +31,7 @@ class DidYouMean:
     def test(self, token):
         hashed = self.specialhash(token)
         if hashed in self.learned:
-            words = self.learned[hashed].items()
+            words = list(self.learned[hashed].items())
             sortby(words, 1, reverse=1)
             if token in [i[0] for i in words]:
                 return 'This word seems OK'
@@ -59,7 +59,7 @@ def demo():
     d.learn()
     # choice of words to be relevant related to the brown corpus
     for i in "birdd, oklaoma, emphasise, bird, carot".split(", "):
-        print i, "-", d.test(i)
+        print((i, "-", d.test(i)))
  
 if __name__ == "__main__":
     demo()

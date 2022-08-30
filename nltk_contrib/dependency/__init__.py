@@ -4,4 +4,4 @@
 # URL: <http://www.nltk.org/>
 # For license information, see LICENSE.TXT
 
-from deptree import *
+from .deptree import *

@@ -110,6 +110,6 @@ def classifier_accuracy(classifier, gold):
     return float(correct) / len(gold)
 
 
-from cosine import *
-from naivebayes import *
-from spearman import *
+from .cosine import *
+from .naivebayes import *
+from .spearman import *

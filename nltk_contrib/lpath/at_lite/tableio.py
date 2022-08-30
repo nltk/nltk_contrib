@@ -27,7 +27,7 @@
 
 import codecs
 import re
-from error import *
+from .error import *
 
 __all__ = ['TableIo']
 
@@ -38,7 +38,7 @@ class TableIo:
         size = [len(str(x)) for x,t in self.header]
         for row in self.table:
             for i,c in enumerate(row):
-                if type(c)==str or type(c)==unicode:
+                if type(c)==str or type(c)==str:
                     n = len(c)
                 else:
                     n = len(str(c))
@@ -52,7 +52,7 @@ class TableIo:
                     s += "%%%ds|" % size[i] % str(c)
                 else:
                     s += "%%-%ds|" % size[i] % c
-            print s[:-1] 
+            print((s[:-1])) 
 
         printRow([s for s,t in self.header])
         for row in self.table:
@@ -73,7 +73,7 @@ class TableIo:
             f = writer(file(filename,'w'))
             f.write("\t".join([a[0]+';'+a[1].__name__
                                for a in self.header]) + "\n")
-            for item in self.metadata.items():
+            for item in list(self.metadata.items()):
                 f.write(";;MM %s\t%s\n" % item)
             for row in self.table:
                 for c in row[:-1]:
@@ -81,7 +81,7 @@ class TableIo:
                         f.write("\t")
                     else:
                         t = type(c)
-                        if t==str or t==unicode:
+                        if t==str or t==str:
                             f.write(c+"\t")
                         else:
                             f.write(str(c)+"\t")
@@ -89,18 +89,18 @@ class TableIo:
                     f.write("\n")
                 else:
                     t = type(row[-1])
-                    if t==str or t==unicode:
+                    if t==str or t==str:
                         f.write(row[-1]+"\n")
                     else:
                         f.write(str(row[-1])+"\n")
-        except IOError, e:
+        except IOError as e:
             raise Error(ERR_TDF_EXPORT, str(e))
 
     def importTdf(cls, filename):
         _,_,reader,_ = codecs.lookup('utf-8')
         try:
             f = reader(file(filename))
-        except IOError, e:
+        except IOError as e:
             raise Error(ERR_TDF_IMPORT, e)
         head = []
         for h in f.readline().rstrip("\r\n").split("\t"):
@@ -125,10 +125,10 @@ class TableIo:
                 try:
                     for i,cell in enumerate(l.rstrip("\n").split("\t")):
                         row.append(head[i][1](cell))
-                except ValueError, e:
+                except ValueError as e:
                     raise Error(ERR_TDF_IMPORT,
                                 "[%d:%d] %s" % (lno,i,str(e)))
-                except IndexError, e:
+                except IndexError as e:
                     msg = "record has too many fields"
                     raise Error(ERR_TDF_IMPORT,
                                 "[%d:%d] %s" % (lno,i,msg))

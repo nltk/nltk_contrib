@@ -97,7 +97,7 @@ def generate_phrase(description, attr_prefs, handlers = None):
     # Put the highest priority attributes next to the noun
     for attr in attr_prefs:
         if (attrs.count(attr) > 0):
-            if (handlers != None) and (handlers.has_key(attr)):
+            if (handlers != None) and (attr in handlers):
                 attr_queue.insert(0, handlers[attr](desc_dict[attr]))
             else:
               attr_queue.insert(0, desc_dict[attr])
@@ -138,13 +138,13 @@ def generate_phrase_rel(description, attr_prefs, target_id, handlers = None, top
     # There is a difference between generating the phrases:
     # "the box on the table" and "the table on which the box sits"
     if cur_rel[2] == target_id:
-      if (handlers != None) and (handlers.has_key(rel_desc)):
+      if (handlers != None) and (rel_desc in handlers):
         rel_desc = handlers[rel_desc](True)
 
       other_desc = generate_phrase_rel(other_attrs, attr_prefs, cur_rel[3], handlers, False)
       clauses.append("%s %s %s" % (target_desc, rel_desc, other_desc))
     else:
-      if (handlers != None) and (handlers.has_key(rel_desc)):
+      if (handlers != None) and (rel_desc in handlers):
         rel_desc = handlers[rel_desc](False)
 
       other_desc = generate_phrase_rel(other_attrs, attr_prefs, cur_rel[2], handlers, False)

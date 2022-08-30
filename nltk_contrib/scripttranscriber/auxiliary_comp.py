@@ -72,7 +72,7 @@ def Catenations(pys, result, string=''):
 
 def LookupString(chars, convert=False):
   pys = []
-  for u in unicode(chars, 'utf8'):
+  for u in str(chars, 'utf8'):
     try:
       py = PINYIN_TABLE_[u.encode('utf8')]
       npy = []

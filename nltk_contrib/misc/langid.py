@@ -25,7 +25,7 @@ def run(classifier, training_data, gold_data):
         cls = classifier.get_class(gold_data[lang])
         if cls == lang:
             correct += 1
-    print correct, "in", len(gold_data), "correct"
+    print(correct, "in", len(gold_data), "correct")
 
 # features: character bigrams
 fd = detect.feature({"char-bigrams" : lambda t: [string.join(t)[n:n+2] for n in range(len(t)-1)]})
@@ -36,11 +36,11 @@ for lang in training_data:
     gold_data[lang] = training_data[lang][:50]
     training_data[lang] = training_data[lang][100:200]
 
-print "Cosine classifier: ",
+print("Cosine classifier: ", end=' ')
 run(classify.Cosine(fd), training_data, gold_data)
 
-print "Naivebayes classifier: ",
+print("Naivebayes classifier: ", end=' ')
 run(classify.NaiveBayes(fd), training_data, gold_data)
 
-print "Spearman classifier: ",
+print("Spearman classifier: ", end=' ')
 run(classify.Spearman(fd), training_data, gold_data)

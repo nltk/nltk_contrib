@@ -4,14 +4,14 @@ import sys
 import time
 from qt import *
 from threading import Thread, Lock
-import lpath
-import at_lite as at
+from . import lpath
+from . import at_lite as at
 #from pyPgSQL import PgSQL
 try:
     from sqlite3 import dbapi2 as sqlite
 except ImportError:
     from pysqlite2 import dbapi2 as sqlite
-from lpathtree_qt import *
+from .lpathtree_qt import *
 
 
 __all__ = ["LPathDB", "LPathDbI", "LPathPgSqlDB", "LPathOracleDB", "LPathMySQLDB"]
@@ -89,7 +89,7 @@ class LPathDbI:
     LPATH_TABLE_HEADER = [
         ('sid',int),('tid',int),('id',int),('pid',int),
         ('left',int),('right',int),('depth',int),
-        ('type',unicode),('name',unicode),('value',unicode)
+        ('type',str),('name',str),('value',str)
         ]
 
     EVENT_MORE_TREE = QEvent.User

@@ -226,8 +226,8 @@ class Production(object):
         @param rhs: The right-hand side of the new C{Production}.
         @type rhs: sequence of (C{Nonterminal} and (terminal))
         """
-        if isinstance(rhs, (str, unicode)):
-            raise TypeError, 'production right hand side should be a list, not a string'
+        if isinstance(rhs, str):
+            raise TypeError('production right hand side should be a list, not a string')
         self._lhs = lhs
         self._rhs = tuple(rhs)
         self._hash = hash((self._lhs, self._rhs))
@@ -385,7 +385,7 @@ def parse_production(s):
     """
     # Use _PARSE_RE to check that it's valid.
     if not _PARSE_RE.match(s):
-        raise ValueError, 'Bad production string'
+        raise ValueError('Bad production string')
     # Use _SPLIT_RE to process it.
     pieces = _SPLIT_RE.split(s)
     pieces = [p for i,p in enumerate(pieces) if i%2==1]
@@ -407,9 +407,9 @@ def parse_grammar(s):
         if line.startswith('#') or line=='': continue
         try: productions += parse_production(line)
         except ValueError:
-            raise ValueError, 'Unable to parse line %s' % linenum
+            raise ValueError('Unable to parse line %s' % linenum)
     if len(productions) == 0:
-        raise ValueError, 'No productions found!'
+        raise ValueError('No productions found!')
     start = productions[0].lhs()
     return Grammar(start, productions)
 
@@ -429,11 +429,11 @@ def demo():
     N, V, P, Det = cfg.nonterminals('N, V, P, Det')
     VP_slash_NP = VP/NP
 
-    print 'Some nonterminals:', [S, NP, VP, PP, N, V, P, Det, VP/NP]
-    print '    S.symbol() =>', `S.symbol()`
-    print
+    print('Some nonterminals:', [S, NP, VP, PP, N, V, P, Det, VP/NP])
+    print('    S.symbol() =>', repr(S.symbol()))
+    print()
 
-    print cfg.Production(S, [NP])
+    print(cfg.Production(S, [NP]))
 
     # Create some Grammar Productions
     grammar = cfg.parse_grammar("""
@@ -453,11 +453,11 @@ def demo():
     P -> 'in'
     """)
 
-    print 'A Grammar:', `grammar`
-    print '    grammar.start()       =>', `grammar.start()`
-    print '    grammar.productions() =>',
+    print('A Grammar:', repr(grammar))
+    print('    grammar.start()       =>', repr(grammar.start()))
+    print('    grammar.productions() =>', end=' ')
     # Use string.replace(...) is to line-wrap the output.
-    print `grammar.productions()`.replace(',', ',\n'+' '*25)
-    print
+    print(repr(grammar.productions()).replace(',', ',\n'+' '*25))
+    print()
 
 if __name__ == '__main__': demo()

@@ -92,7 +92,7 @@ class ParallelTrainer:
     """
     # if the peceptron is already trained, warn and abort
     if self.snow_p_.IsTrained():
-      if DEBUG_: print 'Perceptron already trained (use Retrain?)'
+      if DEBUG_: print('Perceptron already trained (use Retrain?)')
       return False
 
     for example in pos_examples_list:
@@ -144,7 +144,7 @@ class ParallelTrainer:
     """
     # if the perceptron has not been trained, warn and abort
     if not self.snow_p_.IsTrained():
-      if DEBUG_: print 'Perceptron is not trained (use Train?)'
+      if DEBUG_: print('Perceptron is not trained (use Train?)')
       return False
     
     for example in new_positives:
@@ -193,7 +193,7 @@ class ParallelTrainer:
     Return: a tuple of activated target and activation, in the order as mentioned.
     """
     if not self.snow_p_.IsTrained():
-      if DEBUG_: print 'Perceptron not trained'
+      if DEBUG_: print('Perceptron not trained')
       return False
     
     test_ex = Example(s_token, t_token)
@@ -257,8 +257,7 @@ class ParallelTrainer:
       candidates = set(candidates)
       candidates = list(candidates)
 
-      distances = map(lambda x:
-                      (x, Distance(x.split(), token2.split())), candidates)
+      distances = [(x, Distance(x.split(), token2.split())) for x in candidates]
       distances = sorted(distances, lambda x,y: x[1] - y[1])
 
       for new_str in distances[1:5]:
@@ -288,7 +287,7 @@ class WordShuffler:
   """
   def __init__(self, l):
     self.l_ = l
-    self.left_els_ = map(lambda x: x[0], self.l_)
+    self.left_els_ = [x[0] for x in self.l_]
 
   def CreateShuffledList(self):
     shuffled_list = []

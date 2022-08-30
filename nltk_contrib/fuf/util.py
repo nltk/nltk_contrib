@@ -37,7 +37,7 @@ def draw(fstruct, filename=None):
     """
     def draw_helper(output, fstruct, pcount, ccount):
         output += 'fs%d [label=" " style="filled" fillcolor="white"];\n' % (pcount)
-        for fs, val in fstruct.items():
+        for fs, val in list(fstruct.items()):
             if isinstance(val, nltk.FeatStruct):
                 output +=  'fs%d -> fs%d [label="%s"];\n' % (pcount, ccount, fs)
                 output, ccount = draw_helper(output, val, ccount,

@@ -432,7 +432,7 @@ def demo():
         wt = word_type(word)
         if len(wt) == 0: wt = None
         if '*' in word: continue
-        print "%-20s\t%s" % (word, wt)
+        print(("%-20s\t%s" % (word, wt)))
         
 if __name__ == '__main__':
     demo()

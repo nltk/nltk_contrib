@@ -66,7 +66,7 @@ class Visualizer(object):
         # add subjects and objects as nodes in the Dot instance
         for s, o in self.graph.subject_objects():
             for uri in s, o:
-                if uri not in nodes.keys():
+                if uri not in list(nodes.keys()):
                     # generate a new node identifier
                     node_id = "n%03d" % count
                     nodes[uri] = node_id
@@ -121,9 +121,9 @@ def serialize_demo():
     try:
         store = ConjunctiveGraph()    
         store.parse(FILE, format='xml')
-        print store.serialize(format='xml')
+        print((store.serialize(format='xml')))
     except OSError:
-        print "Cannot read file '%s'" % FILE
+        print(("Cannot read file '%s'" % FILE))
 
 def make_dot_demo(infile):    
     try:
@@ -133,13 +133,13 @@ def make_dot_demo(infile):
         v = Visualizer(store)
         g = v.graph2dot(filter_edges=True)
         g.write('%s.dot' % basename) 
-        print "Wrote '%s.dot'" % basename
+        print(("Wrote '%s.dot'" % basename))
         g.write_png('%s.png' % basename, prog='dot') 
-        print "Wrote '%s.png'" % basename
+        print(("Wrote '%s.png'" % basename))
         g.write_svg('%s.svg' % basename, prog='dot') 
-        print "Wrote '%s.svg'" % basename
+        print(("Wrote '%s.svg'" % basename))
     except OSError:
-        print "Cannot read file '%s'" % FILE
+        print(("Cannot read file '%s'" % FILE))
         
         
 def main():
@@ -169,9 +169,9 @@ Turn an RDF file into a viewable graph using Graphviz.
     #print '*' * 30
     #serialize_demo()
     
-    print
-    print "Visualise an rdf graph with Graphviz"
-    print '*' * 30
+    print()
+    print("Visualise an rdf graph with Graphviz")
+    print(('*' * 30))
     make_dot_demo(infile)
     
 if __name__ == '__main__':    

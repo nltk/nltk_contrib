@@ -14,8 +14,8 @@ i = 0
 
 # while not converged or not reach maximum iteration number
 while (abs(newlog - oldlog) > diff and i <= iter):
-    print "oldlog", oldlog
-    print "newlog", newlog
+    print(("oldlog", oldlog))
+    print(("newlog", newlog))
 
     i += 1
     oldlog = newlog
@@ -25,7 +25,7 @@ while (abs(newlog - oldlog) > diff and i <= iter):
     userdir = '/home/mxf/nltknew/nltk_contrib/hadoop/EM/'
     p = Popen([userdir + 'runStreaming.sh' ], shell=True, stdout=sys.stdout)
     p.wait()
-    print "returncode", p.returncode
+    print(("returncode", p.returncode))
 
     # open the parameter output from finished iteration
     # and get the new loglikelihood
@@ -36,5 +36,5 @@ while (abs(newlog - oldlog) > diff and i <= iter):
             newlog = float(li[1])
     f.close()
 
-print "oldlog", oldlog
-print "newlog", newlog
+print(("oldlog", oldlog))
+print(("newlog", newlog))

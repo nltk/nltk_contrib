@@ -1,1 +1,1 @@
-from lpath import *
+from .lpath import *

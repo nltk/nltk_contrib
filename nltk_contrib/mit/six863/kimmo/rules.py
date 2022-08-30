@@ -1,7 +1,7 @@
 from nltk.parse import Tree
-from fsa import FSA
+from .fsa import FSA
 from nltk import tokenize
-from pairs import KimmoPair, sort_subsets
+from .pairs import KimmoPair, sort_subsets
 from copy import deepcopy
 import re, yaml
 
@@ -65,13 +65,11 @@ class KimmoFSARule(object):
     def parse_table(name, table, subsets):
         lines = table.split('\n')
         if len(lines) < 4:
-            raise ValueError,\
-            "Rule %s has too few lines to be an FSA table." % name
+            raise ValueError("Rule %s has too few lines to be an FSA table." % name)
         pairs1 = lines[1].strip().split()
         pairs2 = lines[2].strip().split()
         if len(pairs1) != len(pairs2):
-            raise ValueError,\
-            "Rule %s has pair definitions that don't line up." % name
+            raise ValueError("Rule %s has pair definitions that don't line up." % name)
         pairs = [KimmoPair(p1, p2) for p1, p2 in zip(pairs1, pairs2)]
         finals = []
         fsa = FSA()
@@ -80,18 +78,16 @@ class KimmoFSARule(object):
             if not line: continue
             groups = re.match(r'(\w+)(\.|:)\s*(.*)', line)
             if groups is None:
-                raise ValueError,\
-                "Can't parse this line of the state table for rule %s:\n%s"\
-                % (name, line)
+                raise ValueError("Can't parse this line of the state table for rule %s:\n%s"\
+                % (name, line))
             state, char, morestates = groups.groups()
             if fsa.start() == 0: fsa.set_start(state)
             if char == ':': finals.append(state)
             fsa.add_state(state)
             morestates = morestates.split()
             if len(morestates) != len(pairs):
-                raise ValueError,\
-                "Rule %s has a row of the wrong length:\n%s\ngot %d items, should be %d"\
-                % (name, line, len(morestates), len(pairs))
+                raise ValueError("Rule %s has a row of the wrong length:\n%s\ngot %d items, should be %d"\
+                % (name, line, len(morestates), len(pairs)))
             for pair, nextstate in zip(pairs, morestates):
                 fsa.insert_safe(state, pair, nextstate)
         fsa.set_final(finals)
@@ -101,11 +97,11 @@ class KimmoFSARule(object):
     def from_dfa_dict(name, states, subsets):
         fsa = FSA()
         pairs = set([KimmoPair.make('@')])
-        for (statename, trans) in states.items():
+        for (statename, trans) in list(states.items()):
             for label in trans:
                 if label != 'others':
                     pairs.add(KimmoPair.make(label))
-        for (statename, trans) in states.items():
+        for (statename, trans) in list(states.items()):
             parts = statename.split()
             source = parts[-1]
             if not parts[0].startswith('rej'):
@@ -120,7 +116,7 @@ class KimmoFSARule(object):
             for label in trans:
                 if label != 'others':
                     used_pairs.add(KimmoPair.make(label))
-            for label, target in trans.items():
+            for label, target in list(trans.items()):
                 if label.lower() == 'others':
                     fsa.insert_safe(source, KimmoPair.make('@'), target)
                     for pair in pairs.difference(used_pairs):
@@ -366,11 +362,11 @@ class KimmoArrowRule(KimmoFSARule):
 def demo():
     rule = KimmoArrowRule("elision-e", "e:0 <== CN u _ +:@ VO", {'@':
     'aeiouhklmnpw', 'VO': 'aeiou', 'CN': 'hklmnpw'})
-    print rule
-    print rule._left_fsa
-    print rule._right_fsa
-    print
-    print rule._fsa
+    print(rule)
+    print((rule._left_fsa))
+    print((rule._right_fsa))
+    print()
+    print((rule._fsa))
 
 if __name__ == '__main__':
     demo()

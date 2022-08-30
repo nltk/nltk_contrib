@@ -79,13 +79,13 @@ class WALS(object):
         def open_csv(filename, remove_header=True):
             filename = os.path.join(data_dir, filename + '.' + file_ext)
             wals_file = csv.reader(open(filename, 'r'), dialect=self.dialect)
-            if remove_header: wals_file.next()
+            if remove_header: next(wals_file)
             for row in wals_file:
-                yield [unicode(cell, encoding) for cell in row]
+                yield [str(cell, encoding) for cell in row]
 
         def map_fields(vectors, fields):
             for vector in vectors:
-                yield dict(zip(fields, vector))
+                yield dict(list(zip(fields, vector)))
 
         # Features
         self.features = dict((f['id'], f) for f in
@@ -100,14 +100,14 @@ class WALS(object):
                               map_fields(open_csv('languages'),
                                          language_fields))
         # convert longitude and latitude to float from string
-        for l in self.languages.values():
+        for l in list(self.languages.values()):
             l['latitude'] = float(l['latitude'])
             l['longitude'] = float(l['longitude'])
         # The datapoints file is more complicated. There is a column for
         # every feature, and a row for every language. Each cell is either
         # empty or contains a value dependent on the feature.
         rows = open_csv('datapoints', remove_header=False)
-        header = rows.next()
+        header = next(rows)
         self.data = defaultdict(dict)
         self.feat_lg_map = defaultdict(list)
         for row in rows:
@@ -124,7 +124,7 @@ class WALS(object):
 
         self.iso_index = defaultdict(list)
         self.language_name_index = defaultdict(list)
-        for lg in self.languages.values():
+        for lg in list(self.languages.values()):
             for iso in lg['iso_codes'].split():
                 self.iso_index[iso] += [lg]
             name = lg['name'].lower()
@@ -141,7 +141,7 @@ class WALS(object):
         #    family -> genus
         #    family -> subfamily -> genus
         lg_hier = {}
-        for lg in self.languages.values():
+        for lg in list(self.languages.values()):
             family = lg_hier.setdefault(lg['family'],
                                  LHNode(lg['family']))
             family.languages[lg['wals_code']] = lg
@@ -165,12 +165,12 @@ class WALS(object):
         @param wals_code: The WALS code for a language.
         """
 
-        print self.languages[wals_code]['name'], '(%s):' % wals_code
+        print(self.languages[wals_code]['name'], '(%s):' % wals_code)
         data = self.data[wals_code]
         for feat in sorted(data.keys()):
-            print ' ', self.features[feat]['name'], '(%s):' % feat,\
+            print(' ', self.features[feat]['name'], '(%s):' % feat,\
                   self.values[feat][data[feat]]['description'],\
-                  '(%s)' % self.values[feat][data[feat]]['value_id']
+                  '(%s)' % self.values[feat][data[feat]]['value_id'])
 
     def get_wals_codes_from_iso(self, iso_code):
         """
@@ -217,36 +217,36 @@ class WALS(object):
 def demo(wals_directory=None, dialect='excel-tab', encoding='utf-8'):
     if not wals_directory:
         import sys
-        print >>sys.stderr, 'Error: No WALS data directory provided.'
-        print >>sys.stderr, '       You may obtain the database from ' +\
-            'http://wals.info/export'
+        print('Error: No WALS data directory provided.', file=sys.stderr)
+        print('       You may obtain the database from ' +\
+            'http://wals.info/export', file=sys.stderr)
         return
     w = WALS(wals_directory, dialect, encoding)
     
     # Basic statistics
-    print 'In database:\n  %d\tlanguages\n  %d\tfeatures ' %\
-        (len(w.languages), len(w.features))
+    print('In database:\n  %d\tlanguages\n  %d\tfeatures ' %\
+        (len(w.languages), len(w.features)))
     # values are a nested dictionary (w.values[feature_id][value_id])
-    num_vals = sum(map(len, w.values.values()))
-    print '  %d\ttotal values (%f avg. number per feature)' %\
-        (num_vals, float(num_vals)/len(w.features))
+    num_vals = sum(map(len, list(w.values.values())))
+    print('  %d\ttotal values (%f avg. number per feature)' %\
+        (num_vals, float(num_vals)/len(w.features)))
     # More statistics
-    print "  %d languages specify feature 81A (order of S, O, and V)" %\
-        (len(w.get_languages_with_feature('81A')))
-    print "  %d langauges have VOS order" %\
-        (len(w.get_languages_with_feature('81A', value='4')))
+    print("  %d languages specify feature 81A (order of S, O, and V)" %\
+        (len(w.get_languages_with_feature('81A'))))
+    print("  %d langauges have VOS order" %\
+        (len(w.get_languages_with_feature('81A', value='4'))))
 
     # Getting language data
-    print "\nGetting data for languages named 'Irish'"
+    print("\nGetting data for languages named 'Irish'")
     for wals_code in w.get_wals_codes_from_name('Irish'):
         l = w.languages[wals_code]
-        print '  %s (ISO-639 code: %s WALS code: %s)' %\
-            (l['name'], l['iso_codes'], wals_code)
-    print "\nGetting data for languages with ISO 'isl'"
+        print('  %s (ISO-639 code: %s WALS code: %s)' %\
+            (l['name'], l['iso_codes'], wals_code))
+    print("\nGetting data for languages with ISO 'isl'")
     for wals_code in w.get_wals_codes_from_iso('isl'):
         w.show_language(wals_code)
-    print "\nLocations of dialects for the Min Nan language (ISO 'nan'):"
+    print("\nLocations of dialects for the Min Nan language (ISO 'nan'):")
     for wals_code in w.get_wals_codes_from_iso('nan'):
         l = w.languages[wals_code]
-        print "  %s\tlat:%f\tlong:%f" %\
-            (l['name'], l['latitude'], l['longitude'])
+        print("  %s\tlat:%f\tlong:%f" %\
+            (l['name'], l['latitude'], l['longitude']))

@@ -66,7 +66,7 @@ class NameExtractor(Extractor):
     ## Go 'word' by word to make this more robust to unicode decode
     ## errors.
     for w in line.split():
-      try: ulinelist.append(unicode(w, 'utf-8'))
+      try: ulinelist.append(str(w, 'utf-8'))
       except UnicodeDecodeError: pass
     uline = ' '.join(ulinelist)
     clist = []

@@ -243,17 +243,17 @@ def _demo(root, file):
 
     try:
         reader = ACE2CorpusReader(root, file)
-        print 'Sentences for %s:' % (file)
+        print(('Sentences for %s:' % (file)))
         for sent in reader.sents():
-            print '    %s' % (sent)
-        print
-        print 'Words for %s:' % (file)
+            print(('    %s' % (sent)))
+        print()
+        print(('Words for %s:' % (file)))
         for word in reader.words():
-            print '    %s' % (word)
-        print
-    except Exception, e:
-        print 'Error encountered while running demo for %s: %s' % (file, e)
-        print
+            print(('    %s' % (word)))
+        print()
+    except Exception as e:
+        print(('Error encountered while running demo for %s: %s' % (file, e)))
+        print()
 
 def demo():
     """

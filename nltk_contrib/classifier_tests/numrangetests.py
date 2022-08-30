@@ -57,14 +57,14 @@ class RangeTestCase(unittest.TestCase):
         
     def test_split_returns_none_when_lower_eq_upper(self):
         _range = r.Range()
-        self.assertEquals(None, _range.split(2))
+        self.assertEqual(None, _range.split(2))
         
     def test_split_returns_none_if_size_of_each_split_is_less_than_delta(self):
         try:
             _range = r.Range(0, 0.000005)
             _range.split(7)
-        except (se.SystemError), e:
-            self.assertEquals('Splitting of range resulted in elements smaller than delta 1e-06.', e.message)
+        except (se.SystemError) as e:
+            self.assertEqual('Splitting of range resulted in elements smaller than delta 1e-06.', e.message)
         
     def test_split_includes_the_highest_and_lowest(self):
         _range = r.Range()

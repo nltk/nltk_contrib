@@ -30,7 +30,7 @@ class NaiveBayes(Classifier):
         for klass_value in self.klass:
             class_conditional_probability = self.class_conditional_probability(instance, klass_value)
             estimates_using_prob[class_conditional_probability] = klass_value
-        keys = estimates_using_prob.keys()
+        keys = list(estimates_using_prob.keys())
         keys.sort()#find the one with max conditional prob
         return estimates_using_prob[keys[-1]]
     

@@ -1,10 +1,10 @@
 import re
 import os
 import nltk
-from sexp import *
-from link import *
-from specialfs import *
-from fstypes import *
+from .sexp import *
+from .link import *
+from .specialfs import *
+from .fstypes import *
 
 def fuf_to_featstruct(fuf):
     """
@@ -23,7 +23,7 @@ def _convert_fuf_featstruct(sexp):
     assert sexp.lparen == '('
     fs = nltk.FeatStruct()
     for child in sexp:
-        if isinstance(child, basestring):
+        if isinstance(child, str):
             feat, val = _convert_fuf_feature(sexp)
             fs[feat] = val
             break
@@ -55,11 +55,11 @@ def _convert_fuf_feature(sexp):
         del sexp[1]
         result = _list_convert(sexp[1])
         sexp[1] = result
-        print sexp[1]
+        print((sexp[1]))
         feat, val = sexp
     else:
         assert len(sexp) == 2, sexp[1]
-        assert isinstance(sexp[0], basestring), sexp
+        assert isinstance(sexp[0], str), sexp
         feat, val = sexp
 
     # Special handling for pattern feature
@@ -72,7 +72,7 @@ def _convert_fuf_feature(sexp):
         assert isinstance(val, SexpList) and val.lparen == '('
         choices = list()
         for c in val:
-            if isinstance(c, basestring):
+            if isinstance(c, str):
                 choices.append(c)
             else:
                 choices.append(_convert_fuf_featstruct(c))
@@ -124,7 +124,7 @@ def fuf_file_to_featstruct(fuf_filename):
 
     # process the type defs and the grammar
     for sexp in lsexp:
-        if isinstance(sexp[0], basestring) and sexp[0] == 'define-feature-type':
+        if isinstance(sexp[0], str) and sexp[0] == 'define-feature-type':
             assert len(sexp) == 3
             name, children = sexp[1], sexp[2]
             type_table.define_type(name, children)
@@ -166,7 +166,7 @@ if __name__ == '__main__':
 
     #test the alt feature
 
-    print 'START LIST TEST'
+    print('START LIST TEST')
     #listlines = open('tests/list.fuf').readlines()
     #for line in listlines:
         #print 'INPUTS:', line
@@ -198,19 +198,19 @@ if __name__ == '__main__':
 
     # test the example grammars
     grammar_files = [gfile for gfile in os.listdir('tests/') if gfile.startswith('gr')]
-    print grammar_files
+    print(grammar_files)
     for gfile in grammar_files:
-        print "FILE: %s" % gfile
+        print(("FILE: %s" % gfile))
         text = open('tests/%s' % gfile).read()
-        print text
-        print fuf_to_featstruct(text)
-        print
+        print(text)
+        print((fuf_to_featstruct(text)))
+        print()
         1/0
 
     
     type_table, grammar = fuf_file_to_featstruct('tests/typed_gr4.fuf')
-    print type_table
-    print grammar
+    print(type_table)
+    print(grammar)
 
     gr5 = fuf_to_featstruct(open('tests/gr5.fuf').read())
-    print gr5
+    print(gr5)

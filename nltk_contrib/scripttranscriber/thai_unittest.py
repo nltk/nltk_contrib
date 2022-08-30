@@ -85,7 +85,7 @@ def ComputePhoneMatches(doclist, match_file):
           comparator.ComputeDistance()
           result = comparator.ComparisonResult()
           matches[(hash1, hash2)] = result
-  values = matches.values()
+  values = list(matches.values())
   values.sort(lambda x, y: cmp(x.Cost(), y.Cost()))
   p = open(match_file, 'w') ## zero out the file
   p.close()

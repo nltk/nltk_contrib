@@ -1,5 +1,5 @@
-from inputformat import TextLineInput
-from outputcollector import LineOutput
+from .inputformat import TextLineInput
+from .outputcollector import LineOutput
 
 
 class MapperBase:

@@ -49,7 +49,7 @@ def values(file_path, index, sep = " "):
     for line in f:        
         words = line.split(sep)
         if not index < len(words):
-            print "Warning! omitting line " + str(line)
+            print("Warning! omitting line " + str(line))
             continue
         values.add(words[index])
     return ','.join(values)
@@ -65,7 +65,7 @@ def convert(path):
     ind = path.rfind('.')
     if ind == -1: ind = len(path)
     nf = open(path[:ind] + 'conv' + path[ind:], 'w')
-    for l in converted:print >>nf, l
+    for l in converted:print(l, file=nf)
     nf.close()
     
 def convert_log_to_csv(path):
@@ -73,7 +73,7 @@ def convert_log_to_csv(path):
     
     csvf = open(path + '.csv', 'w')
     for each in classifications:
-        print >>csvf, each.algorithm + ',' + each.training + ',' + each.test + ',' + each.gold + ',' + each.accuracy + ',' + each.f_score
+        print(each.algorithm + ',' + each.training + ',' + each.test + ',' + each.gold + ',' + each.accuracy + ',' + each.f_score, file=csvf)
 
 def get_classification_log_entries(path):
     f = open(path)
@@ -215,15 +215,15 @@ def convert_log_to_tex_tables(path):
         
     texf = open(path + '-acc.tex', 'w')
     for table in accuracy_tables:
-        print >>texf, table
+        print(table, file=texf)
     texf = open(path + '-fs.tex', 'w')
     for table in f_score_tables:
-        print >>texf, table
+        print(table, file=texf)
     texf = open(path + '-macc.tex', 'w')
     for table in mean_accuracy_tables:
-        print >>texf, table
+        print(table, file=texf)
     texf = open(path + '-mdatasets.tex', 'w')
-    print >>texf, mean_datasets
+    print(mean_datasets, file=texf)
 
 def get_stat_lists(cols):
     return dict([(each, util.StatList()) for each in cols])        

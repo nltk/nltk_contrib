@@ -283,18 +283,18 @@ class DataContainer:
         elif format.lower() == "pubmed":
             self.rerecord  = re.compile(r'\<PubmedArticle\>'r'(?P<record>.+?)'r'\</PubmedArticle\>',re.DOTALL)
         else:
-            print "Unrecognized format"
+            print("Unrecognized format")
         self.RecordsList = re.findall(self.rerecord,whole)
         whole = ""
         self.RecordsList =  ["<PubmedArticle>"+x.rstrip()+"</PubmedArticle>" for x in self.RecordsList]
         self.dictRecords = self.Createdict()
         self.RecordsList = []
-        self.howmany = len(self.dictRecords.keys())
-        self.keys = self.dictRecords.keys()
+        self.howmany = len(list(self.dictRecords.keys()))
+        self.keys = list(self.dictRecords.keys())
         tfinal = time.time()
         self.repository = None
-        print "finished loading at ",time.ctime(tfinal)
-        print "loaded in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"
+        print(("finished loading at ",time.ctime(tfinal)))
+        print(("loaded in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"))
     def __repr__(self):
         return "<BioReader Data Container Instance: source filename: "+self.file+" \nnumber of files: "+str(self.howmany)+">"
 
@@ -355,7 +355,7 @@ class DataContainer:
         tinicial = time.time()
         resultlist = []
         if where:
-            for cadapmid in self.dictRecords.keys():
+            for cadapmid in list(self.dictRecords.keys()):
                 d = self.Read(cadapmid)
                 if where == 'title':
                     tosearch = d.title
@@ -374,7 +374,7 @@ class DataContainer:
                     if self.repository:
                         pass
                     else:
-                        print "No full text repository has been defined...."
+                        print("No full text repository has been defined....")
                         return None
                 elif where == 'pmid':
                     tosearch = d.pmid
@@ -385,16 +385,16 @@ class DataContainer:
                     pass
             if len(resultlist)!= 0:
                 tfinal = time.time()
-                print "Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"
-                print "Found a total of ",str(len(resultlist))," hits for your query, in the ",where," field"
+                print(("Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"))
+                print(("Found a total of ",str(len(resultlist))," hits for your query, in the ",where," field"))
                 return resultlist
             else:
-                print "Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"
-                print "Query not found"
+                print(("Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"))
+                print("Query not found")
                 return None
         else:
             tosearch = ''
-            for cadapmid in self.dictRecords.keys():
+            for cadapmid in list(self.dictRecords.keys()):
                 tosearch = self.dictRecords[cadapmid]
                 hit = re.search(cadena,tosearch)
                 if hit:
@@ -403,13 +403,13 @@ class DataContainer:
                     pass
         if len(resultlist)!= 0:
             tfinal = time.time()
-            print "Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"
-            print "Found a total of ",str(len(resultlist))," hits for your query, in all fields"
+            print(("Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"))
+            print(("Found a total of ",str(len(resultlist))," hits for your query, in all fields"))
             return resultlist
         else:
             tfinal = time.time()
-            print "Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"
-            print "Query not found"
+            print(("Searched in", tfinal-tinicial," seconds, or",((tfinal-tinicial)/60)," minutes"))
+            print("Query not found")
             return None
                 
 
@@ -432,15 +432,15 @@ class CreateXML:
     """
     def __init__(self):
         #global urllib,time,string,random
-        import urllib,time,string,random
+        import urllib.request, urllib.parse, urllib.error,time,string,random
  
     def getXml(self,s):
-        pedir = urllib.urlopen("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id="+s+"&retmode=xml")
+        pedir = urllib.request.urlopen("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id="+s+"&retmode=xml")
         stringxml = pedir.read()
         self.salida.write(stringxml[:-20]+"\n")
         
     def getXmlString(self,s):
-        pedir = urllib.urlopen("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id="+s+"&retmode=xml")
+        pedir = urllib.request.urlopen("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id="+s+"&retmode=xml")
         stringxml = pedir.read()
         return stringxml[:-20]+"\n"
     
@@ -463,7 +463,7 @@ class CreateXML:
                 cientos = self.listafin[:100]
 
 
-            print "new length self.listacorr", len(self.listafin)
+            print(("new length self.listacorr", len(self.listafin)))
             if len(self.listafin) <= 0:
                 break
             else:
@@ -471,7 +471,7 @@ class CreateXML:
                 nueva = self.listastring(cientos)
                 self.getXml(nueva)
             for c in cientos:
-                print c
+                print(c)
                 self.listafin.remove(c)
         self.salida.close()
 
@@ -489,7 +489,7 @@ class CreateXML:
                 cientos = self.listafin[:100]
 
 
-            print "new length self.listacorr", len(self.listafin)
+            print(("new length self.listacorr", len(self.listafin)))
             if len(self.listafin) <= 0:
                 break
             else:
@@ -498,6 +498,6 @@ class CreateXML:
                 newX = self.getXmlString(nueva)
                 self.AllXML = self.AllXML + newX
             for c in cientos:
-                print c
+                print(c)
                 self.listafin.remove(c)
         return self.AllXML

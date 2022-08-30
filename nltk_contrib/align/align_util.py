@@ -78,132 +78,132 @@ def get_character_lengths(region):
 def print_alignment_text_mapping(alignment_mapping):
     entry_num = 0
     for entry in alignment_mapping:
-        print "--------------------------------"
-        print "Entry: %d" % entry_num
+        print("--------------------------------")
+        print(("Entry: %d" % entry_num))
         entry_num = entry_num + 1
-        print "%s" % str(entry[0])
-        print "%s" % str(entry[1])
+        print(("%s" % str(entry[0])))
+        print(("%s" % str(entry[1])))
         
 def print_alignment_index_mapping(alignment_mapping_indices):
     entry_num = 0
     for entry in alignment_mapping_indices:
-        print "--------------------------------"
-        print "Indices Entry: %d" % entry_num
+        print("--------------------------------")
+        print(("Indices Entry: %d" % entry_num))
         entry_num = entry_num + 1
         source = entry[0]
         target = entry[1]
-        print "%s" % str(source)
-        print "%s" % str(target) 
+        print(("%s" % str(source)))
+        print(("%s" % str(target))) 
         
 def print_alignments(alignments, hard_region1, hard_region2):
     hard1_key = 0
     hard2_key = 0
-    for soft_key in alignments.keys():            
+    for soft_key in list(alignments.keys()):            
         alignment = alignments[soft_key]        
         if (alignment.category == '1 - 1'):
-            print "1-1: %s" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region2[hard2_key]
-            print "--------------------------"                
+            print(("1-1: %s" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region2[hard2_key]))
+            print("--------------------------")                
             hard1_key = hard1_key + 1
             hard2_key = hard2_key + 1
         elif (alignment.category == '1 - 0'):
-            print "1-0: %s" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]                    
-            print "--------------------------"                
+            print(("1-0: %s" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))                    
+            print("--------------------------")                
             hard1_key = hard1_key + 1            
         elif (alignment.category == '0 - 1'):
-            print "0-1: %s" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region2[hard2_key]                    
-            print "--------------------------"                              
+            print(("0-1: %s" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region2[hard2_key]))                    
+            print("--------------------------")                              
             hard2_key = hard2_key + 1
         elif (alignment.category == '2 - 1'):
-            print "2-1: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region1[hard1_key + 1]
-            print "%s" % hard_region2[hard2_key]
-            print "--------------------------"  
+            print(("2-1: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region1[hard1_key + 1]))
+            print(("%s" % hard_region2[hard2_key]))
+            print("--------------------------")  
             hard1_key = hard1_key + 2
             hard2_key = hard2_key + 1
         elif (alignment.category == '1 - 2'):
-            print "1-2: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]                    
-            print "%s" % hard_region2[hard2_key]
-            print "%s" % hard_region2[hard2_key + 1]
-            print "--------------------------" 
+            print(("1-2: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))                    
+            print(("%s" % hard_region2[hard2_key]))
+            print(("%s" % hard_region2[hard2_key + 1]))
+            print("--------------------------") 
             hard1_key = hard1_key + 1
             hard2_key = hard2_key + 2
         elif (alignment.category == '2 - 2'):
-            print "2-2: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region1[hard1_key + 1]
-            print "%s" % hard_region2[hard2_key]
-            print "%s" % hard_region2[hard2_key + 1]
-            print "--------------------------"                    
+            print(("2-2: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region1[hard1_key + 1]))
+            print(("%s" % hard_region2[hard2_key]))
+            print(("%s" % hard_region2[hard2_key + 1]))
+            print("--------------------------")                    
             hard1_key = hard1_key + 2
             hard2_key = hard2_key + 2
         elif (alignment.category == '3 - 1'):
-            print "3-1: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region1[hard1_key + 1]
-            print "%s" % hard_region1[hard1_key + 2]
-            print "%s" % hard_region2[hard2_key]            
-            print "--------------------------"                    
+            print(("3-1: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region1[hard1_key + 1]))
+            print(("%s" % hard_region1[hard1_key + 2]))
+            print(("%s" % hard_region2[hard2_key]))            
+            print("--------------------------")                    
             hard1_key = hard1_key + 3
             hard2_key = hard2_key + 1
         elif (alignment.category == '3 - 2'):
-            print "3-2: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region1[hard1_key + 1]
-            print "%s" % hard_region1[hard1_key + 2]
-            print "%s" % hard_region2[hard2_key]
-            print "%s" % hard_region2[hard2_key + 1]              
-            print "--------------------------"                    
+            print(("3-2: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region1[hard1_key + 1]))
+            print(("%s" % hard_region1[hard1_key + 2]))
+            print(("%s" % hard_region2[hard2_key]))
+            print(("%s" % hard_region2[hard2_key + 1]))              
+            print("--------------------------")                    
             hard1_key = hard1_key + 3
             hard2_key = hard2_key + 2
         elif (alignment.category == '1 - 3'):
-            print "1-3: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region2[hard2_key]
-            print "%s" % hard_region2[hard2_key + 1]
-            print "%s" % hard_region2[hard2_key + 2]                     
-            print "--------------------------"                    
+            print(("1-3: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region2[hard2_key]))
+            print(("%s" % hard_region2[hard2_key + 1]))
+            print(("%s" % hard_region2[hard2_key + 2]))                     
+            print("--------------------------")                    
             hard1_key = hard1_key + 1
             hard2_key = hard2_key + 3
         elif (alignment.category == '2 - 3'):
-            print "2-3: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region1[hard1_key + 1]
-            print "%s" % hard_region2[hard2_key]
-            print "%s" % hard_region2[hard2_key + 1]
-            print "%s" % hard_region2[hard2_key + 2]                     
-            print "--------------------------"                    
+            print(("2-3: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region1[hard1_key + 1]))
+            print(("%s" % hard_region2[hard2_key]))
+            print(("%s" % hard_region2[hard2_key + 1]))
+            print(("%s" % hard_region2[hard2_key + 2]))                     
+            print("--------------------------")                    
             hard1_key = hard1_key + 2
             hard2_key = hard2_key + 3
         elif (alignment.category == '3 - 3'):
-            print "3-3: %.2f" % alignment.d
-            print "--------------------------"
-            print "%s" % hard_region1[hard1_key]
-            print "%s" % hard_region1[hard1_key + 1]
-            print "%s" % hard_region1[hard1_key + 2]
-            print "%s" % hard_region2[hard2_key]
-            print "%s" % hard_region2[hard2_key + 1]
-            print "%s" % hard_region2[hard2_key + 2]                     
-            print "--------------------------"                    
+            print(("3-3: %.2f" % alignment.d))
+            print("--------------------------")
+            print(("%s" % hard_region1[hard1_key]))
+            print(("%s" % hard_region1[hard1_key + 1]))
+            print(("%s" % hard_region1[hard1_key + 2]))
+            print(("%s" % hard_region2[hard2_key]))
+            print(("%s" % hard_region2[hard2_key + 1]))
+            print(("%s" % hard_region2[hard2_key + 2]))                     
+            print("--------------------------")                    
             hard1_key = hard1_key + 3
             hard2_key = hard2_key + 3
         else:
-            print "not supported alignment type"    
+            print("not supported alignment type")    
 
 def list_to_str(input_list):
     return input_list
@@ -214,7 +214,7 @@ def convert_bead_to_tuples(alignments, hard_region1, hard_region2):
     alignment_mapping_indices = []
     hard1_key = 0
     hard2_key = 0
-    for soft_key in alignments.keys():
+    for soft_key in list(alignments.keys()):
         alignment = alignments[soft_key]        
         if (alignment.category == '1 - 1'):            
             align_tuple = (list_to_str(hard_region1[hard1_key]), list_to_str(hard_region2[hard2_key]))
@@ -311,7 +311,7 @@ def convert_bead_to_tuples(alignments, hard_region1, hard_region2):
             hard1_key = hard1_key + 3
             hard2_key = hard2_key + 3
         else:
-            print "not supported alignment type"
+            print("not supported alignment type")
     
     return (alignment_mapping, alignment_mapping_indices)
     
@@ -320,7 +320,7 @@ def get_alignment_links(alignments):
     hard_key = 0
     for hard_list in alignments:        
         for alignment_dict in hard_list:            
-            for align_key in alignment_dict.keys():
+            for align_key in list(alignment_dict.keys()):
                 alignment = alignment_dict[align_key]
     
                 if (alignment.category == '1 - 1'):
@@ -366,15 +366,15 @@ def get_alignment_links(alignments):
                                     align_key)
                     alignment_mappings.append(align_triple)
                 else:
-                    print "not supported alignment type"
+                    print("not supported alignment type")
                 
     return alignment_mappings
     
 def get_test_values(alignments):
     test_values = []
-    for hard_regions_index in alignments.keys():
+    for hard_regions_index in list(alignments.keys()):
         soft_regions_list = []
-        for soft_regions_index in alignments[hard_regions_index].keys():
+        for soft_regions_index in list(alignments[hard_regions_index].keys()):
             soft_regions_list.extend(alignments[hard_regions_index][soft_regions_index].alignment_mappings) 
         soft_regions_list.reverse()
         test_values.extend(soft_regions_list)

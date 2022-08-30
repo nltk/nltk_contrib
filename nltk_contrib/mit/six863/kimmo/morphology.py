@@ -1,6 +1,6 @@
-from fsa import FSA
+from .fsa import FSA
 import yaml
-from featurelite import unify
+from .featurelite import unify
 
 def startswith(stra, strb):
     return stra[:len(strb)] == strb
@@ -44,14 +44,14 @@ class KimmoMorphology(object):
     def fsa(self): return self._fsa
     def valid_lexical(self, state, word, alphabet):
         trans = self.fsa()._transitions[state]
-        for label in trans.keys():
+        for label in list(trans.keys()):
             if label is not None and startswith(label[0], word) and len(label[0]) > len(word):
                 next = label[0][len(word):]
                 for pair in alphabet:
                     if startswith(next, pair.input()): yield pair.input()
     def next_states(self, state, word):
         choices = self.fsa()._transitions[state]
-        for (key, value) in choices.items():
+        for (key, value) in list(choices.items()):
             if key is None:
                 if word == '':
                     for next in value: yield (next, None)
@@ -102,11 +102,11 @@ class KimmoMorphology(object):
                         word = ''
                     fsa.insert_safe(state, (word, features), next)
                 else:
-                    print "Ignoring line in morphology: %r" % line
+                    print(("Ignoring line in morphology: %r" % line))
         return KimmoMorphology(fsa)
 
 def demo():
-    print KimmoMorphology.load('english.lex')
+    print((KimmoMorphology.load('english.lex')))
 
 if __name__ == '__main__':
     demo()

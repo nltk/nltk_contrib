@@ -18,9 +18,9 @@ _VERBOSE = 0
 _VAR_NAMES = 1
 _SHOW_VARMAP = not _VAR_NAMES
 
-from term import *
-from typedterm import *
-from lexicon import *
+from .term import *
+from .typedterm import *
+from .lexicon import *
 import sys, re
 
 class Sequent:
@@ -30,8 +30,8 @@ class Sequent:
     def __init__(self, left, right):
 
         # Check types, because we're paranoid.
-        if type(left) not in [types.ListType, types.TupleType] or \
-           type(right) not in [types.ListType, types.TupleType]:
+        if type(left) not in [list, tuple] or \
+           type(right) not in [list, tuple]:
             raise TypeError('Expected lists of TypedTerms')
         for elt in left+right:
             if not isinstance(elt, TypedTerm):
@@ -41,8 +41,8 @@ class Sequent:
         self.right = right
 
     def __repr__(self):
-        left_str = `self.left`[1:-1]
-        right_str = `self.right`[1:-1]
+        left_str = repr(self.left)[1:-1]
+        right_str = repr(self.right)[1:-1]
         return left_str + ' => ' + right_str
 
     def to_latex(self, pp_varmap=None):
@@ -86,8 +86,8 @@ class Proof:
         self.varmap = varmap
 
     def __repr__(self):
-        return self.rule+' '+`self.assumptions`+' -> '\
-               +`self.conclusion`
+        return self.rule+' '+repr(self.assumptions)+' -> '\
+               +repr(self.conclusion)
 
     def simplify(self, varmap=None):
         if varmap == None:
@@ -157,7 +157,7 @@ class Proof:
         if _VAR_NAMES:
             concl = self.conclusion.pp(pp_varmap)
         else:
-            concl = `self.conclusion`
+            concl = repr(self.conclusion)
 
         # Draw assumptions
         for assumption in self.assumptions:
@@ -175,7 +175,7 @@ class Proof:
 
         if toplevel:
             if _SHOW_VARMAP:
-                return str+'\nVarmap: '+ `self.varmap`+'\n'
+                return str+'\nVarmap: '+ repr(self.varmap)+'\n'
             else:
                 return str
         else:
@@ -225,7 +225,7 @@ def prove(sequent, short_circuit=0):
 
 def _prove(sequent, varmap, short_circuit, depth):
     if _VERBOSE:
-        print ('  '*depth)+'Trying to prove', sequent
+        print(('  '*depth)+'Trying to prove', sequent)
 
     proofs = []
 
@@ -245,7 +245,7 @@ def _prove(sequent, varmap, short_circuit, depth):
         proofs = proofs + dot_r(sequent, varmap, short_circuit, depth+1)
 
     if _VERBOSE:
-        print '  '*depth+'Found '+`len(proofs)`+' proof(s)'
+        print('  '*depth+'Found '+repr(len(proofs))+' proof(s)')
 
     return proofs
 
@@ -506,14 +506,14 @@ def find_proof(left, right, short_circuit=1):
     sq = Sequent(left, right)
     proofs = prove(sq, short_circuit)
     if proofs:
-        print '#'*60
-        print "## Proof(s) for", sq.pp()
+        print('#'*60)
+        print("## Proof(s) for", sq.pp())
         for proof in proofs:
-            print
-            print proof.to_latex()
+            print()
+            print(proof.to_latex())
     else:
-        print '#'*60
-        print "## Can't prove", sq.pp()
+        print('#'*60)
+        print("## Can't prove", sq.pp())
 
 def test_lambek():
     lex = Lexicon()
@@ -573,70 +573,70 @@ def mainloop(input, out, lex, latexmode, shortcircuit):
                 if str.lower().endswith('off'): latexmode = 0
                 elif str.lower().endswith('on'): latexmode = 1
                 else: latexmode = not latexmode
-                if latexmode: print >>out, '% latexmode on'
-                else: print >>out, 'latexmode off'
+                if latexmode: print('% latexmode on', file=out)
+                else: print('latexmode off', file=out)
             elif str.lower().startswith('short'):
                 if str.lower().endswith('off'): shortcircuit = 0
                 elif str.lower().endswith('on'): shortcircuit = 1
                 else: shortcircuit = not shortcircuit
-                if shortcircuit: print >>out, '%shortcircuit on'
-                else: print >>out, '% shortcircuit off'
+                if shortcircuit: print('%shortcircuit on', file=out)
+                else: print('% shortcircuit off', file=out)
             elif str.lower().startswith('lex'):
                 words = lex.words()
-                print >>out, '% Lexicon: '
+                print('% Lexicon: ', file=out)
                 for word in words:
-                    print >>out, '%  ' + word + ':', \
-                          ' '*(14-len(word)) + lex[word].pp() 
+                    print('%  ' + word + ':', \
+                          ' '*(14-len(word)) + lex[word].pp(), file=out) 
             elif str.lower().startswith('q'): return
             elif str.lower().startswith('x'): return
             else:
-                print >>out, HELP
+                print(HELP, file=out)
         else:
             try:
                 (left, right) = str.split('=>')
                 seq = Sequent(lex.parse(left), lex.parse(right))
                 proofs = prove(seq, shortcircuit)
-                print >>out
-                print >>out, '%'*60
+                print(file=out)
+                print('%'*60, file=out)
                 if proofs:
-                    print >>out, "%% Proof(s) for", seq.pp()
+                    print("%% Proof(s) for", seq.pp(), file=out)
                     for proof in proofs:
-                        print >>out
-                        if latexmode: print >>out, proof.to_latex()
-                        else: print >>out, proof.pp()
+                        print(file=out)
+                        if latexmode: print(proof.to_latex(), file=out)
+                        else: print(proof.pp(), file=out)
                 else:
-                    print >>out, "%% Can't prove", seq.pp()
-            except KeyError, e:
-                print 'Mal-formatted sequent'
-                print 'Key error (unknown lexicon entry?)'
-                print e
-            except ValueError, e:
-                print 'Mal-formatted sequent'
-                print e
+                    print("%% Can't prove", seq.pp(), file=out)
+            except KeyError as e:
+                print('Mal-formatted sequent')
+                print('Key error (unknown lexicon entry?)')
+                print(e)
+            except ValueError as e:
+                print('Mal-formatted sequent')
+                print(e)
 
 # Usage: argv[0] lexiconfile
 def main(argv):
     if (len(argv) != 2) and (len(argv) != 4):
-        print 'Usage:', argv[0], '<lexicon_file>'
-        print 'Usage:', argv[0], '<lexicon_file> <input_file> <output file>'
+        print('Usage:', argv[0], '<lexicon_file>')
+        print('Usage:', argv[0], '<lexicon_file> <input_file> <output file>')
         return
     lex = Lexicon()
     try: lex.load(open(argv[1], 'r'))
     except:
-        print "Error loading lexicon file"
+        print("Error loading lexicon file")
         return
 
     if len(argv) == 2:
         mainloop(sys.stdin, sys.stdout, lex, 0, 1)
     else:
         out = open(argv[3], 'w')
-        print >>out, '\documentclass{article}'
-        print >>out, '\usepackage{fullpage}'
-        print >>out, '\\begin{document}'
-        print >>out
+        print('\documentclass{article}', file=out)
+        print('\\usepackage{fullpage}', file=out)
+        print('\\begin{document}', file=out)
+        print(file=out)
         mainloop(open(argv[2], 'r'), out, lex, 1, 1)
-        print >>out
-        print >>out, '\\end{document}'
+        print(file=out)
+        print('\\end{document}', file=out)
 
 if __name__ == '__main__':
     main(sys.argv)

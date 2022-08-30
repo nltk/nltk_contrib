@@ -52,7 +52,7 @@ ALGORITHM_MAPPINGS = {UNSUPERVISED_EQUAL_WIDTH : 'unsupervised_equal_width', \
 
 class Discretise(cl.CommandLineInterface):    
     def __init__(self):
-        cl.CommandLineInterface.__init__(self, ALGORITHM_MAPPINGS.keys(), UNSUPERVISED_EQUAL_WIDTH, a_help, f_help, t_help, T_help, g_help, o_help)
+        cl.CommandLineInterface.__init__(self, list(ALGORITHM_MAPPINGS.keys()), UNSUPERVISED_EQUAL_WIDTH, a_help, f_help, t_help, T_help, g_help, o_help)
         self.add_option("-A", "--attributes", dest="attributes", type="string", help=A_help)
         
     def execute(self):
@@ -185,7 +185,7 @@ def create_and_run(algorithm, path, indices, log_path, options):
         params.extend(['-o', options])
     if log_path is not None:
         params.extend(['-l', log_path])
-    print "Params " + str(params)
+    print(("Params " + str(params)))
     disc.run(params)
     return disc.get_suffix()
 

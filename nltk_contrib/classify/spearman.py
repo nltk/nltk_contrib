@@ -162,7 +162,7 @@ def demo():
     result = classifier.get_class_dict("a")
 
     for cls in result:
-        print cls, ':', result[cls]
+        print((cls, ':', result[cls]))
     """
     expected values:
     class a: 'a' = 1
@@ -190,7 +190,7 @@ def demo2():
     result = classifier.get_class_dict("aaababb")
 
     for cls in result:
-        print cls, ':', result[cls]
+        print((cls, ':', result[cls]))
     """
     expected values:
     class a: 'aa' = 1
@@ -224,7 +224,7 @@ def demo3():
     result = classifier.get_class_dict("aaababb")
 
     for cls in result:
-        print cls, ':', result[cls]
+        print((cls, ':', result[cls]))
 
     """
     expected values:
@@ -268,9 +268,9 @@ def demo4():
 
     result = classifier.get_class_probs(list(islice(genesis.raw("english-kjv"), 150, 200)))
 
-    print 'english-kjv :', result.prob('english-kjv')
-    print 'french :', result.prob('french')
-    print 'finnish :', result.prob('finnish')
+    print(('english-kjv :', result.prob('english-kjv')))
+    print(('french :', result.prob('french')))
+    print(('finnish :', result.prob('finnish')))
 
   
 if __name__ == '__main__':

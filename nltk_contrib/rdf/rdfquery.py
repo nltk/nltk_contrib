@@ -86,7 +86,7 @@ def demo():
     semrep = sem.root_semrep(tree)
     trans = SPARQLTranslator()
     trans.translate(semrep)
-    print trans.query
+    print((trans.query))
     
     
 if __name__ == '__main__':

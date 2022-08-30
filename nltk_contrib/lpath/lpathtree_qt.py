@@ -1,5 +1,5 @@
-from lpathtree import LPathTreeModel as PureLPathTree
-from axis import *
+from .lpathtree import LPathTreeModel as PureLPathTree
+from .axis import *
 from qt import QObject
 
 __all__ = ['LPathTreeModel']
@@ -55,7 +55,7 @@ class LPathTreeModel(PureLPathTree,object):
             self.axis = cls(self.gui.canvas())
             self.axis.target = target
             self.axis.root = root
-            apply(self.axis.setPoints, coords)
+            self.axis.setPoints(*coords)
             if self.getNot():
                 self.axis.setHeadType(Axis.HeadNegation)
             elif not self.lpOnMainTrunk():
@@ -71,7 +71,7 @@ class LPathTreeModel(PureLPathTree,object):
             node.axis.target = node
             #coords = node.gui.connectingLine(self.gui)
             coords = self.gui.connectingLine(node.gui)
-            apply(node.axis.setPoints, coords)
+            node.axis.setPoints(*coords)
             if node.getNot():
                 node.axis.setHeadType(Axis.HeadNegation)
             elif not node.lpOnMainTrunk():

@@ -69,7 +69,7 @@ class AccelKeyHandler:
 
         """
         bindings = {}
-        for keyseq,binding in keyBindings.items():
+        for keyseq,binding in list(keyBindings.items()):
             seq = []
             for subkeyseq in keyseq.split(','):
                 a = []

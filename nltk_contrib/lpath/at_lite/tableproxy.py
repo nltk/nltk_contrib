@@ -19,7 +19,7 @@ class UndoStack:
         else:
             return None
 
-    def next(self):
+    def __next__(self):
         if self._limit > self._top:
             self._top += 1
             return self._stack[self._top]
@@ -149,7 +149,7 @@ class _TableModelProxy(object):
     def redo(self, n=1):
         for m in range(n):
             try:
-                op, arg1, arg2 = self.undoStack.next()
+                op, arg1, arg2 = next(self.undoStack)
                 #print "redo", op, arg1, arg2
                 #print len(self.undoStack._stack)
             except TypeError:

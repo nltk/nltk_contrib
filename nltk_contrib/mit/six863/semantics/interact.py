@@ -1,5 +1,5 @@
-from featurechart import *
-from logic import Counter
+from .featurechart import *
+from .logic import Counter
 import sys
 
 def interact(grammar_filename, trace=2):
@@ -14,10 +14,10 @@ def interact(grammar_filename, trace=2):
         # Read a line and parse it.
         trees = cp.parse(line)
         if len(trees) == 0:
-            print "I don't understand."
+            print("I don't understand.")
             continue
         elif len(trees) > 1:
-            print "That was ambiguous, but I'll guess at what you meant."
+            print("That was ambiguous, but I'll guess at what you meant.")
         
         # Extract semantic information from the parse tree.
         tree = trees[0]
@@ -36,13 +36,13 @@ def interact(grammar_filename, trace=2):
             skolem = skolem.replace_unique(var, counter)
         
         if trace > 0:
-            print tree
-            print 'Semantic value:', skolem
+            print(tree)
+            print(('Semantic value:', skolem))
         clauses = skolem.clauses()
         if trace > 1:
-            print "Got these clauses:"
+            print("Got these clauses:")
             for clause in clauses:
-                print '\t', clause
+                print(('\t', clause))
         
         if pos == 'S':
             # Handle statements
@@ -68,11 +68,11 @@ def interact(grammar_filename, trace=2):
             if success:
                 # answer 
                 answer = bindings.get('wh', 'Yes.')
-                print answer['variable']['name']
+                print((answer['variable']['name']))
             else:
                 # This is an open world without negation, so negative answers
                 # aren't possible.
-                print "I don't know."
+                print("I don't know.")
 
 def demo():
     interact('lab3-slash.cfg', trace=2)

@@ -82,7 +82,8 @@ class NaiveBayes(AbstractClassify):
         self._cls_prob_dist = GoodTuringProbDist(cls_freq_dist, cls_freq_dist.B())
         
         # for features
-        def make_probdist(freqdist, (cls, fname)):
+        def make_probdist(freqdist, xxx_todo_changeme):
+            (cls, fname) = xxx_todo_changeme
             return GoodTuringProbDist(freqdist, len(feature_values[fname]))
         self._feat_prob_dist = ConditionalProbDist(feat_freq_dist, make_probdist, True)
         
@@ -149,7 +150,7 @@ def demo():
     result = classifier.get_class_dict("a")
 
     for cls in result:
-        print cls, ':', result[cls]
+        print((cls, ':', result[cls]))
     
     """
     expected values:
@@ -180,7 +181,7 @@ def demo2():
     result = classifier.get_class_dict("aababb")
 
     for cls in result:
-        print cls, ':', result[cls]
+        print((cls, ':', result[cls]))
     """
     expected values:
     class_probs a = 0.5
@@ -215,7 +216,7 @@ def demo3():
     result = classifier.get_class_dict("aaababb")
 
     for cls in result:
-        print cls, ':', result[cls]
+        print((cls, ':', result[cls]))
 
     """
     expected values:
@@ -260,9 +261,9 @@ def demo4():
 
     result = classifier.get_class_probs(list(islice(genesis.raw("english-kjv"), 150, 200)))
 
-    print 'english-kjv :', result.prob('english-kjv')
-    print 'french :', result.prob('french')
-    print 'finnish :', result.prob('finnish')
+    print(('english-kjv :', result.prob('english-kjv')))
+    print(('french :', result.prob('french')))
+    print(('finnish :', result.prob('finnish')))
 
 if __name__ == '__main__':
     demo2()

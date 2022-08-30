@@ -1,6 +1,6 @@
-from lpath import tokenize
-from lpathtree import LPathTreeModel
-from translator import translate
+from .lpath import tokenize
+from .lpathtree import LPathTreeModel
+from .translator import translate
 
 SCOPE = ['{','}']
 BRANCH = ['[',']']
@@ -129,17 +129,17 @@ if __name__ == "__main__":
 
     def f(t, n):
         if t is not None:
-            print (" "*n) + t.data['label']
+            print(((" "*n) + t.data['label']))
             for c in t.children:
                 f(c, n+4)
         
     def g(t, n):
         if t is not None:
-            print (" "*n) + t.data['label']
+            print(((" "*n) + t.data['label']))
             for c in t.lpChildren:
                 g(c, n+4)
         else:
-            print " "*n + "None"
+            print((" "*n + "None"))
 
     g(t,0)
-    print translate(t)
+    print((translate(t)))

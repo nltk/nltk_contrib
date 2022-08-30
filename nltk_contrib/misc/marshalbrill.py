@@ -187,7 +187,7 @@ class BrillRuleI(object):
             rule.
         @rtype: C{list} of C{int}
         """
-        return self.apply_at(tokens, range(len(tokens)))
+        return self.apply_at(tokens, list(range(len(tokens))))
 
     def apply_at(self, tokens, positions):
         """
@@ -373,7 +373,7 @@ class ProximateTokensRule(BrillRuleI):
         # Needs to include extract_property in order to distinguish subclasses
         # A nicer way would be welcome.
         return hash( (self._original, self._replacement, self._conditions,
-                      self.extract_property.func_code) )
+                      self.extract_property.__code__) )
 
     def __repr__(self):
         conditions = ' and '.join(['%s in %d...%d' % (v,s,e)
@@ -456,7 +456,7 @@ class BrillTemplateI(object):
     C{Brill} training algorithms to generate candidate rules.
     """
     def __init__(self):
-        raise AssertionError, "BrillTemplateI is an abstract interface"
+        raise AssertionError("BrillTemplateI is an abstract interface")
 
     def applicable_rules(self, tokens, i, correctTag):
         """
@@ -478,7 +478,7 @@ class BrillTemplateI(object):
         @type correctTag: (any)
         @rtype: C{list} of L{BrillRuleI}
         """
-        raise AssertionError, "BrillTemplateI is an abstract interface"
+        raise AssertionError("BrillTemplateI is an abstract interface")
     
     def get_neighborhood(self, token, index):
         """
@@ -494,7 +494,7 @@ class BrillTemplateI(object):
         @type index: C{int}
         @rtype: C{Set}
         """
-        raise AssertionError, "BrillTemplateI is an abstract interface"
+        raise AssertionError("BrillTemplateI is an abstract interface")
     
 class ProximateTokensTemplate(BrillTemplateI):
     """
@@ -671,8 +671,8 @@ class BrillTrainer(object):
         @param min_score: The minimum acceptable net error reduction
             that each transformation must produce in the corpus.
         """
-        if self._trace > 0: print ("Training Brill tagger on %d tokens..." %
-                                   len(train_tokens))
+        if self._trace > 0: print(("Training Brill tagger on %d tokens..." %
+                                   len(train_tokens)))
 
         # Create a new copy of the training token, and run the initial
         # tagger on this.  We will progressively update this test
@@ -691,7 +691,7 @@ class BrillTrainer(object):
                                                           train_tokens)
                 if rule is None or score < min_score:
                     if self._trace > 1:
-                        print 'Insufficient improvement; stopping'
+                        print('Insufficient improvement; stopping')
                     break
                 else:
                     # Add the rule to our list of rules.
@@ -746,7 +746,7 @@ class BrillTrainer(object):
             # once for each tag that the rule changes to an incorrect
             # value.
             score = fixscore
-            if correct_indices.has_key(rule.original_tag()):
+            if rule.original_tag() in correct_indices:
                 for i in correct_indices[rule.original_tag()]:
                     if rule.applies(test_tokens, i):
                         score -= 1
@@ -791,7 +791,7 @@ class BrillTrainer(object):
 
         # Convert the dictionary into a list of (rule, score) tuples,
         # sorted in descending order of score.
-        rule_score_items = rule_score_dict.items()
+        rule_score_items = list(rule_score_dict.items())
         temp = [(-score, rule) for (rule, score) in rule_score_items]
         temp.sort()
         return [(rule, -negscore) for (negscore, rule) in temp]
@@ -818,7 +818,7 @@ class BrillTrainer(object):
     #////////////////////////////////////////////////////////////
 
     def _trace_header(self):
-        print """
+        print("""
            B      |     
    S   F   r   O  |        Score = Fixed - Broken
    c   i   o   t  |  R     Fixed = num tags changed incorrect -> correct
@@ -826,13 +826,13 @@ class BrillTrainer(object):
    r   e   e   e  |  l     Other = num tags changed incorrect -> incorrect
    e   d   n   r  |  e
 ------------------+-------------------------------------------------------
-        """.rstrip()
+        """.rstrip())
 
     def _trace_rule(self, rule, score, fixscore, numchanges):
         if self._trace > 2:
-            print ('%4d%4d%4d%4d ' % (score, fixscore, fixscore-score,
-                                      numchanges-fixscore*2+score)), '|',
-        print rule
+            print(('%4d%4d%4d%4d ' % (score, fixscore, fixscore-score,
+                                      numchanges-fixscore*2+score)), '|', end=' ')
+        print(rule)
 
 ######################################################################
 ## Fast Brill Tagger Trainer
@@ -899,7 +899,7 @@ class FastBrillTrainer(object):
 
             # If the rule is already known to apply here, ignore.
             # (This only happens if the position's tag hasn't changed.)
-            if positionsByRule[rule].has_key(i):
+            if i in positionsByRule[rule]:
                 return
 
             if rule.replacement_tag() == train_tokens[i][1]:
@@ -912,7 +912,7 @@ class FastBrillTrainer(object):
             # Update rules in the other dictionaries
             del rulesByScore[ruleScores[rule]][rule]
             ruleScores[rule] += positionsByRule[rule][i]
-            if not rulesByScore.has_key(ruleScores[rule]):
+            if ruleScores[rule] not in rulesByScore:
                 rulesByScore[ruleScores[rule]] = {}
             rulesByScore[ruleScores[rule]][rule] = None
             rulesByPosition[i].add(rule)
@@ -922,7 +922,7 @@ class FastBrillTrainer(object):
         def _updateRuleNotApplies (rule, i):
             del rulesByScore[ruleScores[rule]][rule]
             ruleScores[rule] -= positionsByRule[rule][i]
-            if not rulesByScore.has_key(ruleScores[rule]):
+            if ruleScores[rule] not in rulesByScore:
                 rulesByScore[ruleScores[rule]] = {}
             rulesByScore[ruleScores[rule]][rule] = None
 
@@ -939,22 +939,22 @@ class FastBrillTrainer(object):
             tag = tagged_tokens[i][1]
             if tag != train_tokens[i][1]:
                 errorIndices.append(i)
-            if not tagIndices.has_key(tag):
+            if tag not in tagIndices:
                 tagIndices[tag] = []
             tagIndices[tag].append(i)
 
-        print "Finding useful rules..."
+        print("Finding useful rules...")
         # Collect all rules that fix any errors, with their positive scores.
         for i in errorIndices:
             for template in self._templates:
                 # Find the templated rules that could fix the error.
                 for rule in template.applicable_rules(tagged_tokens, i,
                                                     train_tokens[i][1]):
-                    if not positionsByRule.has_key(rule):
+                    if rule not in positionsByRule:
                         _initRule(rule)
                     _updateRuleApplies(rule, i)
 
-        print "Done initializing %i useful rules." %len(positionsByRule)
+        print("Done initializing %i useful rules." %len(positionsByRule))
 
         if TESTING:
             after = -1 # bug-check only
@@ -973,7 +973,7 @@ class FastBrillTrainer(object):
             # best rule.
 
             bestRule = None
-            bestRules = rulesByScore[maxScore].keys()
+            bestRules = list(rulesByScore[maxScore].keys())
 
             for rule in bestRules:
                 # Find the first relevant index at or following the first
@@ -990,7 +990,7 @@ class FastBrillTrainer(object):
                 # If we checked all remaining indices and found no more errors:
                 if ruleScores[rule] == maxScore:
                     firstUnknownIndex[rule] = len(tagged_tokens) # i.e., we checked them all
-                    print "%i) %s (score: %i)" %(len(rules)+1, rule, maxScore)
+                    print("%i) %s (score: %i)" %(len(rules)+1, rule, maxScore))
                     bestRule = rule
                     break
                 
@@ -1002,29 +1002,29 @@ class FastBrillTrainer(object):
             # bug-check only
             if TESTING:
                 before = len(_errorPositions(tagged_tokens, train_tokens))
-                print "There are %i errors before applying this rule." %before
+                print("There are %i errors before applying this rule." %before)
                 assert after == -1 or before == after, \
                         "after=%i but before=%i" %(after,before)
                         
-            print "Applying best rule at %i locations..." \
-                    %len(positionsByRule[bestRule].keys())
+            print("Applying best rule at %i locations..." \
+                    %len(list(positionsByRule[bestRule].keys())))
             
             # If we reach this point, we've found a new best rule.
             # Apply the rule at the relevant sites.
             # (apply_at is a little inefficient here, since we know the rule applies
             #  and don't actually need to test it again.)
             rules.append(bestRule)
-            bestRule.apply_at(tagged_tokens, positionsByRule[bestRule].keys())
+            bestRule.apply_at(tagged_tokens, list(positionsByRule[bestRule].keys()))
 
             # Update the tag index accordingly.
-            for i in positionsByRule[bestRule].keys(): # where it applied
+            for i in list(positionsByRule[bestRule].keys()): # where it applied
                 # Update positions of tags
                 # First, find and delete the index for i from the old tag.
                 oldIndex = bisect.bisect_left(tagIndices[bestRule.original_tag()], i)
                 del tagIndices[bestRule.original_tag()][oldIndex]
 
                 # Then, insert i into the index list of the new tag.
-                if not tagIndices.has_key(bestRule.replacement_tag()):
+                if bestRule.replacement_tag() not in tagIndices:
                     tagIndices[bestRule.replacement_tag()] = []
                 newIndex = bisect.bisect_left(tagIndices[bestRule.replacement_tag()], i)
                 tagIndices[bestRule.replacement_tag()].insert(newIndex, i)
@@ -1037,11 +1037,11 @@ class FastBrillTrainer(object):
             #
             # If a template now generates a different set of rules, we have
             # to update our indices to reflect that.
-            print "Updating neighborhoods of changed sites.\n" 
+            print("Updating neighborhoods of changed sites.\n") 
 
             # First, collect all the indices that might get new rules.
             neighbors = set()
-            for i in positionsByRule[bestRule].keys(): # sites changed
+            for i in list(positionsByRule[bestRule].keys()): # sites changed
                 for template in self._templates:
                     neighbors.update(template.get_neighborhood(tagged_tokens, i))
 
@@ -1062,21 +1062,21 @@ class FastBrillTrainer(object):
                 # Update rules only now generated by this template
                 for newRule in siteRules - rulesByPosition[i]:
                     d += 1
-                    if not positionsByRule.has_key(newRule):
+                    if newRule not in positionsByRule:
                         e += 1
                         _initRule(newRule) # make a new rule w/score=0
                     _updateRuleApplies(newRule, i) # increment score, etc.
 
             if TESTING:
                 after = before - maxScore
-            print "%i obsolete rule applications, %i new ones, " %(c,d)+ \
-                    "using %i previously-unseen rules." %e        
+            print("%i obsolete rule applications, %i new ones, " %(c,d)+ \
+                    "using %i previously-unseen rules." %e)        
 
             maxScore = max(rulesByScore.keys()) # may have gone up
 
         
-        if self._trace > 0: print ("Training Brill tagger on %d tokens..." %
-                                   len(train_tokens))
+        if self._trace > 0: print(("Training Brill tagger on %d tokens..." %
+                                   len(train_tokens)))
         
         # Maintain a list of the rules that apply at each position.
         rules_by_position = [{} for tok in train_tokens]
@@ -1164,7 +1164,7 @@ def demo(num_sents=100, max_rules=200, min_score=2, error_output = "errors.out",
     # train is the proportion of data used in training; the rest is reserved
     # for testing.
 
-    print "Loading tagged data..."
+    print("Loading tagged data...")
     sents = []
     for item in treebank.items:
         sents.extend(treebank.tagged(item))
@@ -1182,13 +1182,13 @@ def demo(num_sents=100, max_rules=200, min_score=2, error_output = "errors.out",
 
     # Unigram tagger
 
-    print "Training unigram tagger:",
+    print("Training unigram tagger:", end=' ')
     u = tag.Unigram(backoff=NN_CD_tagger)
 
     # NB training and testing are required to use a list-of-lists structure,
     # so we wrap the flattened corpus data with the extra list structure.
     u.train([training_data])
-    print("[accuracy: %f]" % tag.accuracy(u, [gold_data]))
+    print(("[accuracy: %f]" % tag.accuracy(u, [gold_data])))
 
     # Brill tagger
 
@@ -1209,13 +1209,13 @@ def demo(num_sents=100, max_rules=200, min_score=2, error_output = "errors.out",
     trainer = brill.BrillTrainer(u, templates, trace)
     b = trainer.train(training_data, max_rules, min_score)
 
-    print
-    print("Brill accuracy: %f" % tag.accuracy(b, [gold_data]))
+    print()
+    print(("Brill accuracy: %f" % tag.accuracy(b, [gold_data])))
 
     print("\nRules: ")
     printRules = file(rule_output, 'w')
     for rule in b.rules():
-        print(str(rule))
+        print((str(rule)))
         printRules.write(str(rule)+"\n\n")
 
     testing_data = list(b.tag(testing_data))
@@ -1225,7 +1225,7 @@ def demo(num_sents=100, max_rules=200, min_score=2, error_output = "errors.out",
     for e in el:
         errorFile.write(e+"\n\n")
     errorFile.close()
-    print "Done; rules and errors saved to %s and %s." % (rule_output, error_output)
+    print("Done; rules and errors saved to %s and %s." % (rule_output, error_output))
 
 if __name__ == '__main__':
     demo()

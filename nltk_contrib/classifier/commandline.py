@@ -38,7 +38,7 @@ class CommandLineInterface(OptionParser):
         self.add_option("-T", "--test-file", dest=TEST, type="string", help=T_help)
         self.add_option("-g", "--gold-file", dest=GOLD, type="string", help=g_help)
         
-        self.add_option("-D", "--data-format", dest=DATA_FORMAT, type="choice", choices=DATA_FORMAT_MAPPINGS.keys(), \
+        self.add_option("-D", "--data-format", dest=DATA_FORMAT, type="choice", choices=list(DATA_FORMAT_MAPPINGS.keys()), \
                 default=C45_FORMAT, help=D_help)
         self.add_option("-l", "--log-file", dest=LOG_FILE, type="string", help=l_help)
         self.add_option("-o", "--options", dest=OPTIONS, type="string", help=o_help)
@@ -67,8 +67,8 @@ class CommandLineInterface(OptionParser):
         self.log = None
         if log_file is not None:
             self.log = open(log_file, 'a')
-            print >>self.log, '-' * 40
-            print >>self.log, 'DateTime: ' + time.strftime('%c', time.localtime())
+            print('-' * 40, file=self.log)
+            print('DateTime: ' + time.strftime('%c', time.localtime()), file=self.log)
 
     def run(self, args):
         """
@@ -117,22 +117,22 @@ class CommandLineInterface(OptionParser):
     
     def log_common_params(self, name):
         if self.log is not None: 
-            print >>self.log, 'Operation: ' + name
-            print >>self.log, '\nAlgorithm: ' + str(self.algorithm) + '\nTraining: ' + str(self.training_path) + \
-                    '\nTest: ' + str(self.test_path) + '\nGold: ' + str(self.gold_path) + '\nOptions: ' + str(self.options)
+            print('Operation: ' + name, file=self.log)
+            print('\nAlgorithm: ' + str(self.algorithm) + '\nTraining: ' + str(self.training_path) + \
+                    '\nTest: ' + str(self.test_path) + '\nGold: ' + str(self.gold_path) + '\nOptions: ' + str(self.options), file=self.log)
             
             
     def log_created_files(self, files_names, message):
         if self.log is None:
-            print message
+            print(message)
         else:
-            print >>self.log, "NumberOfFilesCreated: " + str(len(files_names))
+            print("NumberOfFilesCreated: " + str(len(files_names)), file=self.log)
         count = 0
         for file_name in files_names:
             if self.log is None:
-                print file_name
+                print(file_name)
             else:
-                print >>self.log, "CreatedFile" + str(count) + ": " + file_name
+                print("CreatedFile" + str(count) + ": " + file_name, file=self.log)
             count += 1
 
 

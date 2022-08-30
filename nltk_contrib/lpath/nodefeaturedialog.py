@@ -1,6 +1,6 @@
 from qt import *
-from at_lite import TableModel, TableEdit
-import lpath
+from .at_lite import TableModel, TableEdit
+from . import lpath
 
 class NodeFeatureDialog(QDialog):
     def __init__(self, node, parent):
@@ -8,7 +8,7 @@ class NodeFeatureDialog(QDialog):
         self.setCaption('Node Attribute Dialog')
         self.resize(320,240)
         
-        tab = TableModel([("Name",unicode),("Value",unicode)])
+        tab = TableModel([("Name",str),("Value",str)])
         tab.insertRow(None, ['label',node.data['label']])
         if '@func' in node.data:
             for v in node.data['@func']:

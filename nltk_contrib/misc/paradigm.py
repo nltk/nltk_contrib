@@ -22,7 +22,7 @@
 #      a.setOutput('term')      # output is sent to terminal
 
 from xml.dom.ext.reader import Sax2
-from paradigmquery import ParadigmQuery
+from .paradigmquery import ParadigmQuery
 import re, os
 
 class Paradigm(object):
@@ -73,9 +73,9 @@ class Paradigm(object):
         s = ""
         while s != "exit":
             s = "exit"
-            try: s = raw_input(">")
+            try: s = input(">")
             except EOFError:
-                print s
+                print(s)
             if s == "exit":
                 return
             if s == "quit":
@@ -93,7 +93,7 @@ class Paradigm(object):
           # parse the query
           parse = ParadigmQuery(p_string)
         except:
-          print "Could not parse query."
+          print("Could not parse query.")
           return
 
         try:  
@@ -103,7 +103,7 @@ class Paradigm(object):
           if result == None:
             raise Error
         except:
-            print "Sorry, no result can be returned"
+            print("Sorry, no result can be returned")
             return
 
         try:  
@@ -111,7 +111,7 @@ class Paradigm(object):
           if self.format == "html":
             output = '<html>\n'
             # Include CSS if we need to
-            if self.css <> None:
+            if self.css != None:
                 output += '<link rel="stylesheet" href="' 
                 output += self.css
                 output += '" type="text/css" media="screen" />\n'
@@ -124,14 +124,14 @@ class Paradigm(object):
             output = result.getText()
         except:
             output = None
-            print "--no output--"
+            print("--no output--")
             return
 
         # Print to terminal if output is set, otherwise to file
         if self.output == "term":
-            print output
+            print(output)
         else:
-            print "Output written to file:", self.output
+            print("Output written to file:", self.output)
             f = open(self.output, 'w')
             f.write(output)
 
@@ -151,9 +151,9 @@ class Paradigm(object):
         elif p_string == "text":
             self.format = "text"
         else:
-            print "Unknown format:", p_string
-            print "Valid formats are: text, html"
-            print "Setting format = text"
+            print("Unknown format:", p_string)
+            print("Valid formats are: text, html")
+            print("Setting format = text")
             self.format = "text"
 
     def setCSS(self, p_string=None):
@@ -161,8 +161,8 @@ class Paradigm(object):
         Set the file location for a Cascading Stylesheet: None or filename
         This allows for simple formatting
         """
-        if p_string <> None:
-            print "Using CSS file:", p_string
+        if p_string != None:
+            print("Using CSS file:", p_string)
         self.output = p_string
 
     def setOutput(self, p_string=None):
@@ -174,9 +174,9 @@ class Paradigm(object):
             p_string = "term"
         # set to term if requested, otherwise filename
         if p_string == "term":
-            print "Directing output to terminal"
+            print("Directing output to terminal")
         else:
-            print "Directing output to file:", p_string
+            print("Directing output to file:", p_string)
         self.output = p_string
 
 
@@ -201,7 +201,7 @@ class Paradigm(object):
             f = open(try_filename)
             p_filename = try_filename
         except IOError:
-            print "Cannot find file"
+            print("Cannot find file")
             return None
         f.close()
 
@@ -241,14 +241,14 @@ class Paradigm(object):
             self.data.append(tmp_dict)
 
         # Talk to the user
-        print "Paradigm information successfully loaded from file:", p_filename
+        print("Paradigm information successfully loaded from file:", p_filename)
         # State the number and print out a list of attributes
-        print " "*4 + str(len(self.attributes)) + " attributes imported:",
+        print(" "*4 + str(len(self.attributes)) + " attributes imported:", end=' ')
         for att in self.attributes:
-            print att,
-        print
+            print(att, end=' ')
+        print()
         # State the number of paradigm objects imported
-        print " "*4 + str(len(self.data)) + " paradigm objects imported."
+        print(" "*4 + str(len(self.data)) + " paradigm objects imported.")
 
         return
 
@@ -360,7 +360,7 @@ class Domain(Sentence):
             self.paradigm.attributes[self.attribute]
         except KeyError:
             self.error = "I couldn't find this attribute: " + self.attribute
-            print self.error
+            print(self.error)
 
     def __getitem__(self, p_index):
         return self.paradigm.attributes[self.attribute][p_index]
@@ -616,10 +616,10 @@ class Table(Sentence):
         vertical_header_rows = vertical_header.split('</tr>')
         cell_rows = str_cells.replace('<tr>','').split('</tr>')
         # Join two lists
-        zipped = zip(vertical_header_rows, cell_rows)
+        zipped = list(zip(vertical_header_rows, cell_rows))
         str_zipped = ""
         for (header,cells) in zipped:
-            if header <> '':
+            if header != '':
                 str_zipped += header + cells + "</tr>\n"
 
         # Return all the elements
@@ -629,22 +629,22 @@ class Table(Sentence):
         """
         Return a horizontal html table (?)
         """
-        print "?: getHorizontalHTML() called on a table."
+        print("?: getHorizontalHTML() called on a table.")
         return None
 
     def getText(self):
         """
         Return text for this table (?)
         """
-        print "?: getText() for a table? HAHAHAHAHA"
-        print "call setFormat('html') if you want to run queries like that"
+        print("?: getText() for a table? HAHAHAHAHA")
+        print("call setFormat('html') if you want to run queries like that")
         return 
     
     def getConditions(self):
         """
         Return conditions for this table (?)
         """
-        print "?: getConditions() called on a table. I don't think so."
+        print("?: getConditions() called on a table. I don't think so.")
         return None
 
     def getMaxWidth(self):
@@ -658,7 +658,7 @@ class Table(Sentence):
         """
         Return span for this table (?)
         """
-        print "WTF: getSpan() called on a table."
+        print("WTF: getSpan() called on a table.")
         return None
 
     def getData(self, p_return, p_attDict):
@@ -676,7 +676,7 @@ class Table(Sentence):
         for datum in self.paradigm.data:
             inc = True
             # For each given attribute requirement
-            for att in p_attDict.keys():
+            for att in list(p_attDict.keys()):
                 # If the data object fails the requirement do not include
                 if datum[att] != p_attDict[att]:
                     inc = False
@@ -704,74 +704,74 @@ def dictJoin(dict1,dict2):
     If there is any key overlap, dict1 wins!
     (just make sure this doesn't happen)
     """
-    for key in dict1.keys():
+    for key in list(dict1.keys()):
         dict2[key] = dict1[key]
     return dict2
 
 def demo():
 
     # Print the query
-    print """
+    print("""
 ================================================================================
 Load: Paradigm(file)
 ================================================================================
-"""
-    print
-    print ">>> a = Paradigm('german.xml')"
-    print 
+""")
+    print()
+    print(">>> a = Paradigm('german.xml')")
+    print() 
     a = Paradigm('german.xml')
-    print 
-    print ">>> a.setOutput('term')"
-    print 
+    print() 
+    print(">>> a.setOutput('term')")
+    print() 
     a.setOutput('term')
-    print 
-    print ">>> a.setFormat('text')"
-    print 
+    print() 
+    print(">>> a.setFormat('text')")
+    print() 
     a.setFormat('text')
 
     # Print a domain
-    print """
+    print("""
 ================================================================================
 Domain: case
 ================================================================================
-"""
-    print 
-    print ">>> a.show('case')"
-    print 
+""")
+    print() 
+    print(">>> a.show('case')")
+    print() 
     a.show('case')
 
     # Print a hierarchy
-    print """
+    print("""
 ================================================================================
 Hierarchy: case/gender
 ================================================================================
-"""
-    print 
-    print ">>> a.show('case/gender')"
-    print 
+""")
+    print() 
+    print(">>> a.show('case/gender')")
+    print() 
     a.show('case/gender')
 
     # Print a table
-    print """
+    print("""
 ================================================================================
 Table: table(case/number,gender,content)
 ================================================================================
-"""
-    print 
-    print ">>> a.setOutput('demo.html')"
-    print 
+""")
+    print() 
+    print(">>> a.setOutput('demo.html')")
+    print() 
     a.setOutput('demo.html')
-    print 
-    print ">>> a.setFormat('html')"
-    print 
+    print() 
+    print(">>> a.setFormat('html')")
+    print() 
     a.setFormat('html')
-    print 
-    print ">>> a.show('table(case/number,gender,content)')"
-    print 
+    print() 
+    print(">>> a.show('table(case/number,gender,content)')")
+    print() 
     a.show('table(case/number,gender,content)')
 
     # Some space
-    print 
+    print() 
 
 if __name__ == '__main__':
     demo()    

@@ -27,7 +27,7 @@ def make_rdf(ns, reldict, relsym=None, verbose=False):
     object = sym2uri(ns, reldict['objclass'], reldict['objsym'])
     triple = (subject, predicate, object)
     if verbose:
-        print triple
+        print(triple)
     return triple
 
 def make_rdfs(ns, reldict):
@@ -47,7 +47,7 @@ def sym2uri(base, rdfclass, sym):
     """
     Build a URI out of a base, a class term, and a symbol.
     """
-    from urllib import quote
+    from urllib.parse import quote
     from rdflib import Namespace
     rdfclass = class_abbrev(rdfclass)
     rdfclass = rdfclass.lower()

@@ -64,7 +64,7 @@ def main(output = False):
           'Token %d differs: %s != %s' %  (i,
                                            all_tokens[i].String(),
                                            GOLDEN_[i])
-    print '%s successful' % sys.argv[0]
+    print(('%s successful' % sys.argv[0]))
 
 
 if __name__ == '__main__':

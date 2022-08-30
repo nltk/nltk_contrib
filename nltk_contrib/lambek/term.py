@@ -25,7 +25,7 @@ class Var(Term):
         Var._max_id += 1
         self.id = Var._max_id
     def __repr__(self):
-        return '?' + `self.id`
+        return '?' + repr(self.id)
     def pp(self, pp_varmap=None):
         if pp_varmap == None: pp_varmap = make_pp_varmap(self)
         return pp_varmap[self]
@@ -40,7 +40,7 @@ class Var(Term):
 
 class Const(Term):
     def __init__(self, name):
-        if type(name) != types.StringType:
+        if type(name) != bytes:
             raise TypeError("Expected a string name")
         self.name = name
     def __repr__(self):
@@ -64,9 +64,9 @@ class Appl(Term):
     def __repr__(self):
         if isinstance(self.func, Appl) or \
            isinstance(self.func, Abstr):
-            return '('+`self.func` + ')(' + `self.arg` + ')'
+            return '('+repr(self.func) + ')(' + repr(self.arg) + ')'
         else:
-            return `self.func` + '(' + `self.arg` + ')'
+            return repr(self.func) + '(' + repr(self.arg) + ')'
     def pp(self, pp_varmap=None):
         if pp_varmap == None: pp_varmap = make_pp_varmap(self)
         if isinstance(self.func, Appl) or \
@@ -101,9 +101,9 @@ class Abstr(Term):
     def __repr__(self):
         if isinstance(self.body, Abstr) or \
            isinstance(self.body, Appl):
-            return '(\\' + `self.var` + '.' + `self.body`+')'
+            return '(\\' + repr(self.var) + '.' + repr(self.body)+')'
         else:
-            return '\\' + `self.var` + '.' + `self.body`
+            return '\\' + repr(self.var) + '.' + repr(self.body)
     def pp(self, pp_varmap=None):
         if pp_varmap == None: pp_varmap = make_pp_varmap(self)
         if isinstance(self.body, Abstr) or \
@@ -136,7 +136,7 @@ class Tuple(Term):
            not isinstance(self.right, Term):
             raise TypeError('Expected Term arguments')
     def __repr__(self):
-        return '<'+`self.left`+', '+`self.right`+'>'
+        return '<'+repr(self.left)+', '+repr(self.right)+'>'
     def pp(self, pp_varmap=None):
         if pp_varmap == None: pp_varmap = make_pp_varmap(self)
         return '<'+self.left.pp(pp_varmap)+', '+\
@@ -160,20 +160,20 @@ def extend_pp_varmap(pp_varmap, term):
 
     # Get the remaining names.
     freenames = [n for n in Term.FREEVAR_NAME \
-                 if n not in pp_varmap.values()]
+                 if n not in list(pp_varmap.values())]
     boundnames = Term.BOUNDVAR_NAME[:]
 
     for fv in free:
-        if not pp_varmap.has_key(fv):
+        if fv not in pp_varmap:
             if freenames == []:
-                pp_varmap[fv] = `fv`
+                pp_varmap[fv] = repr(fv)
             else:
                 pp_varmap[fv] = freenames.pop()
 
     for bv in bound:
-        if not pp_varmap.has_key(bv):
+        if bv not in pp_varmap:
             if boundnames == []:
-                pp_varmap[bv] = `bv`
+                pp_varmap[bv] = repr(bv)
             else:
                 pp_varmap[bv] = boundnames.pop()
 
@@ -183,7 +183,7 @@ class VarMap:
     def __init__(self):
         self._map = {}
     def add(self, var, term):
-        if self._map.has_key(var):
+        if var in self._map:
             if term != None and term != self._map[var]:
                 # Unclear what I should do here -- for now, just pray
                 # for the best. :)
@@ -191,7 +191,7 @@ class VarMap:
         else:
             self._map[var] = term
     def __repr__(self):
-        return `self._map`
+        return repr(self._map)
     def _get(self, var, orig, getNone=1):
         val = self._map[var]
         if not getNone and val == None: return var
@@ -201,17 +201,17 @@ class VarMap:
             # Break the loop at an arbitrary point.
             del(self._map[val])
             return val
-        elif self._map.has_key(val):
+        elif val in self._map:
             return(self._get(val, orig, getNone))
         else:
             return val
     def __getitem__(self, var):
-        if self._map.has_key(var):
+        if var in self._map:
             return self._get(var, var, 1)
         else:
             return var
     def simplify(self, var):
-        if self._map.has_key(var):
+        if var in self._map:
             return self._get(var, var, 0)
         else:
             return var
@@ -221,7 +221,7 @@ class VarMap:
         return result
     def __add__(self, other):
         result = self.copy()
-        for var in other._map.keys():
+        for var in list(other._map.keys()):
             result.add(var, other[var])
         return result
     def copy_from(self, other):
@@ -251,7 +251,7 @@ def simplify(term, varmap):
 _VERBOSE = 0
     
 def unify(term1, term2, varmap=None, depth=0):
-    if _VERBOSE: print '  '*depth+'>> unify', term1, term2, varmap
+    if _VERBOSE: print(('  '*depth+'>> unify', term1, term2, varmap))
     term1 = reduce(term1)
     term2 = reduce(term2)
     if varmap == None: varmap = VarMap()
@@ -260,18 +260,18 @@ def unify(term1, term2, varmap=None, depth=0):
     result = unify_oneway(term1, term2, varmap, depth+1)
     if result:
         if _VERBOSE:
-            print '  '*depth+'<<unify', term1, term2, varmap, '=>', result
+            print(('  '*depth+'<<unify', term1, term2, varmap, '=>', result))
         return result
     varmap.copy_from(old_varmap)
 
     result = unify_oneway(term2, term1, varmap, depth+1)
     if result:
         if _VERBOSE:
-            print '  '*depth+'<<unify', term1, term2, varmap, '=>', result
+            print(('  '*depth+'<<unify', term1, term2, varmap, '=>', result))
         return result
     #raise(ValueError("can't unify", term1, term2, varmap))
     if _VERBOSE:
-        print '  '*depth+'unify', term1, term2, varmap, '=>', None
+        print(('  '*depth+'unify', term1, term2, varmap, '=>', None))
     
     return None
     
@@ -514,7 +514,7 @@ def parse_term(str, varmap=None):
     var = re.match(r'\?(.*)', str)
     if var:
         varname = var.groups()[0]
-        if varmap.has_key(varname):
+        if varname in varmap:
             return varmap[varname]
         else:
             var = Var()
@@ -535,22 +535,22 @@ def test():
     f3 = Abstr(x, Appl(c, x))
     f4 = Abstr(y, Appl(c, y))
     
-    print f1, '=>', reduce(f1)
-    print f2, '=>', reduce(f2)
-    print f3, '=>', reduce(f3)
+    print((f1, '=>', reduce(f1)))
+    print((f2, '=>', reduce(f2)))
+    print((f3, '=>', reduce(f3)))
 
-    print f1.pp()
-    print f2.pp()
-    print f3.pp()
+    print((f1.pp()))
+    print((f2.pp()))
+    print((f3.pp()))
 
-    print
-    print unify(x, y)
-    print unify(x, c)
-    print unify(x, f1)
-    print unify(f3, f4)
-    print unify(Abstr(x,Appl(x,x)), Abstr(y,Appl(y,y)))
+    print()
+    print((unify(x, y)))
+    print((unify(x, c)))
+    print((unify(x, f1)))
+    print((unify(f3, f4)))
+    print((unify(Abstr(x,Appl(x,x)), Abstr(y,Appl(y,y)))))
 
-    print parse_term('<(\?var.<const,const2>(?var))(?other_var),?x>').pp()
+    print((parse_term('<(\?var.<const,const2>(?var))(?other_var),?x>').pp()))
 
     reduce(parse_term('<a,b>'))
     

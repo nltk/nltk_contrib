@@ -1,5 +1,5 @@
-import at_lite as at
-from at_lite.tree import TreeModel as PureTree
+from . import at_lite as at
+from .at_lite.tree import TreeModel as PureTree
 
 __all__ = ['LPathTreeModel']
 
@@ -380,7 +380,7 @@ class LPathTreeModel(PureTree):
         L = []
         if self.lpScope is not None:
             def f(node):
-                if node.lpScope == self.lpScope and filter(node):
+                if node.lpScope == self.lpScope and list(filter(node)):
                     L.append(node)
             self.root.dfs(f)
         return L

@@ -14,10 +14,10 @@ class TreeIo:
                 continue
             c = n.children
             if c:
-                s += ' (' + unicode(n.data[p])
+                s += ' (' + str(n.data[p])
                 L = c + [None] + L[1:]
             else:
-                s += ' ' + unicode(n.data[p])
+                s += ' ' + str(n.data[p])
                 L = L[1:]
         return s[1:]
 
@@ -118,7 +118,7 @@ class TreeIo:
             # Make sure all the node's application-specific attributes are recorded.
             r['attributes'] = []
             if n.data != None:
-                for attr, value in n.data.iteritems():
+                for attr, value in list(n.data.items()):
                     if attr == 'label':
                         r['name'] = value
                     else:

@@ -1,5 +1,5 @@
 from qt import *
-from db import *
+from .db import *
 import os
 try:
     from pyPgSQL import PgSQL
@@ -67,7 +67,7 @@ class PgsqlPanel(QWidget, ConnectionPanelI):
             conn = PgSQL.connect(**conninfo)
             conn2 = PgSQL.connect(**conninfo)
             return LPathPgSqlDB(conn, conn2, conninfo["user"].ascii())
-        except PgSQL.libpq.DatabaseError, e:
+        except PgSQL.libpq.DatabaseError as e:
             try:
                 enc = os.environ['LANG'].split('.')[-1]
                 msg = e.message.decode(enc)
@@ -111,7 +111,7 @@ class OraclePanel(QWidget, ConnectionPanelI):
         try:
             conn = cx_Oracle.connect(user+'/'+pw+service)
             conn2 = cx_Oracle.connect(user+'/'+pw+service)
-        except cx_Oracle.DatabaseError, e:
+        except cx_Oracle.DatabaseError as e:
             try:
                 enc = os.environ['LANG'].split('.')[-1]
                 msg = e.__str__().decode(enc)
@@ -157,7 +157,7 @@ class MySQLPanel(QWidget, ConnectionPanelI):
         try:
             conn = MySQLdb.connect(**conninfo)
             return LPathMySQLDB(conn)
-        except MySQLdb.DatabaseError, e:
+        except MySQLdb.DatabaseError as e:
             try:
                 enc = os.environ['LANG'].split('.')[-1]
                 msg = e.message.decode(enc)
@@ -235,7 +235,7 @@ class DatabaseConnectionDialog(QDialog):
         try:
             self.db = self.wstack.visibleWidget().connect()
             self.accept()
-        except ConnectionError, e:
+        except ConnectionError as e:
             QMessageBox.critical(self, "Connection Error",
                                  "Unable to connect to database:\n" + e.__str__())
 
@@ -276,7 +276,7 @@ class TableSelectionDialog(QDialog):
     def _okClicked(self):
         sel = self.listbox.selectedItem()
         if sel is not None:
-            self.tab = unicode(sel.text())
+            self.tab = str(sel.text())
             self.accept()
         else:
             QMessageBox.critical(self, "Error", "You didn't select a table.")

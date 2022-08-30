@@ -9,11 +9,11 @@
 from nltk_contrib.classifier import instance as ins, item, cfile, confusionmatrix as cm, numrange as r, util
 from nltk_contrib.classifier.exceptions import systemerror as system, invaliddataerror as inv
 from nltk import probability as prob
-import operator, UserList, UserDict, math
+import operator, collections, UserDict, math
 
-class Instances(UserList.UserList):
+class Instances(collections.UserList):
     def __init__(self, instances):
-        UserList.UserList.__init__(self, instances)
+        collections.UserList.__init__(self, instances)
 
     def are_valid(self, klass, attributes):
         for instance in self.data:
@@ -122,7 +122,7 @@ class TrainingInstances(Instances):
                 for klass_value in klass_values:
                     freq_dists[attribute][value].inc(klass_value) #Laplacian smoothing
         stat_list_values = {}
-        cont_attrs = filter(lambda attr: attr.is_continuous(), attributes)
+        cont_attrs = [attr for attr in attributes if attr.is_continuous()]
         if attributes.has_continuous():
             for attribute in cont_attrs:
                 stat_list_values[attribute] = {}
@@ -160,12 +160,12 @@ class GoldInstances(Instances):
             matrix.count(i.klass_value, i.classified_klass)
         return matrix
     
-class SupervisedBreakpoints(UserList.UserList):
+class SupervisedBreakpoints(collections.UserList):
     """
     Used to find breakpoints for discretisation
     """
     def __init__(self, klass_values, attr_values):
-        UserList.UserList.__init__(self, [])
+        collections.UserList.__init__(self, [])
         self.attr_values = attr_values
         self.klass_values = klass_values
         

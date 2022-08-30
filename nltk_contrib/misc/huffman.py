@@ -5,7 +5,7 @@ import nltk
 from operator import itemgetter
 
 def huffman_tree(text):
-    coding = nltk.FreqDist(text).items()
+    coding = list(nltk.FreqDist(text).items())
     coding.sort(key=itemgetter(1))
     while len(coding) > 1:
         a, b = coding[:2]
@@ -67,8 +67,8 @@ def trial(train, texts):
         text_len = len(text)
         comp_len = len(encode(code_tree, text)) / 8.0
         compression = (text_len - comp_len) / text_len
-        print compression,
-    print
+        print(compression, end=' ')
+    print()
 
 trial(train1, [test1, test2, test3])
 trial(train2, [test1, test2, test3])

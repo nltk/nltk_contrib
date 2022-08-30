@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from util import validate_facts, Type, Rel, generate_phrase
+from .util import validate_facts, Type, Rel, generate_phrase
 
 class FullBrevity:
   """
@@ -30,7 +30,7 @@ class FullBrevity:
     """
     self.facts = facts
     self.object_ids = validate_facts(self.facts)
-    assert not any(map(lambda f: f == Rel, self.facts)), "Full Brevity does not support relationships"
+    assert not any([f == Rel for f in self.facts]), "Full Brevity does not support relationships"
 
   def describe(self, target_id):
     """
@@ -55,7 +55,7 @@ class FullBrevity:
       best_prop = None
 
       # Find the property that best constrains the distractors set
-      for prop_key in properties.keys():
+      for prop_key in list(properties.keys()):
         prop_val = properties[prop_key]
         dist_set = [dist for dist in distractors if dist[prop_key][1] == prop_val[1]]
         if (best_set is None) or (len(dist_set) < len(best_set)):
@@ -81,5 +81,5 @@ class FullBrevity:
     # Print English description for each object
     for obj_id in ["obj1", "obj2", "obj3"]:
       obj_type = [f for f in facts if f[0] == Type and f[2] == obj_id] # Include type for clarity
-      print "%s: %s" % (obj_id, generate_phrase(fb.describe(obj_id) + obj_type, ["color", "size"]))
+      print(("%s: %s" % (obj_id, generate_phrase(fb.describe(obj_id) + obj_type, ["color", "size"]))))
 

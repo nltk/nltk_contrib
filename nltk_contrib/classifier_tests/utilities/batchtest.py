@@ -15,7 +15,7 @@ def run(root_path, log_path):
     print('in run')
     for dir_name, dirs, files in os.walk(root_path):
         data = set([])
-        print('Dir name ' + str(dir_name) + ' dirs ' + str(dirs) + ' files ' + str(files))
+        print(('Dir name ' + str(dir_name) + ' dirs ' + str(dirs) + ' files ' + str(files)))
         for file in files:
             index = file.rfind('.')
             if index != -1:
@@ -65,7 +65,7 @@ def process(path, log_path):
         
         for suffix in all:
             params = ['-a', algorithm, '-f', path + suffix, '-l', log_path, '-c', 5]
-            print "Params " + str(params)
+            print(("Params " + str(params)))
             c.Classify().run(params)    
             
 def to_str_array(value, times):
@@ -91,13 +91,13 @@ if __name__ == "__main__":
     resp = 0
     while(resp != 1 and resp != 2):
         try:
-            resp = int(raw_input("Select one of following options:\n1. Run all tests\n2. Delete generated files\n"))
+            resp = int(eval(input("Select one of following options:\n1. Run all tests\n2. Delete generated files\n")))
         except ValueError:
             pass
     if resp == 1:
-        dir_tree_path = raw_input("Enter directory tree path")
-        log_file = raw_input("Enter log file")
+        dir_tree_path = eval(input("Enter directory tree path"))
+        log_file = eval(input("Enter log file"))
         run(dir_tree_path, log_file)
     elif resp == 2:
-        dir_path = raw_input("Enter directory path")
+        dir_path = eval(input("Enter directory path"))
         delete_generated_files(dir_path)

@@ -71,13 +71,13 @@ class ChunkTaggerFeatureDetector(dict):
         if window > 0 and index > 0:
             prev_feats = \
                 self.__class__(tokens, index - 1, history, window=window - 1)
-            for key, val in prev_feats.items():
+            for key, val in list(prev_feats.items()):
                 if not key.startswith('next_') and key != 'word':
                     self['prev_%s' % key] = val
         
         if window > 0 and index < len(tokens) - 1:
             next_feats = self.__class__(tokens, index + 1, window=window - 1)
-            for key, val in next_feats.items():
+            for key, val in list(next_feats.items()):
                 if not key.startswith('prev_') and key != 'word':
                     self['next_%s' % key] = val
         
@@ -99,16 +99,16 @@ class AbstractChunkTagger(ChunkTaggerI):
         return self.__iob2tree(self.tag(sent))
         
     def batch_parse(self, sents):
-        return map(self.__iob2tree, self.batch_tag(sents))
+        return list(map(self.__iob2tree, self.batch_tag(sents)))
     
     def chunk(self, sent):
         return self.__tree2chunks(self.parse(sent))
         
     def batch_chunk(self, sents):
-        return map(self.__tree2chunks, self.batch_parse(sents))
+        return list(map(self.__tree2chunks, self.batch_parse(sents)))
         
     def __iob2tree(self, tagged_sent):
-        return tokens2tree(map(flatten, tagged_sent), self.chunk_types)
+        return tokens2tree(list(map(flatten, tagged_sent)), self.chunk_types)
         
     def __tree2chunks(self, tree):
         chunks = []
@@ -132,7 +132,7 @@ class NaiveBayesChunkTagger(ClassifierBasedTagger, AbstractChunkTagger):
     def train(cls, iob_sents, **kwargs):  
         fd = kwargs.get('feature_detector', ChunkTaggerFeatureDetector)
         chunk_types = kwargs.get('chunk_types', _DEFAULT_CHUNK_TYPES)        
-        train = LazyMap(lambda sent: map(unflatten, sent), iob_sents)
+        train = LazyMap(lambda sent: list(map(unflatten, sent)), iob_sents)
         chunker = cls(fd, train, NaiveBayesClassifier.train)
         chunker.chunk_types = chunk_types
         return chunker
@@ -157,7 +157,7 @@ class MaxentChunkTagger(ClassifierBasedTagger, AbstractChunkTagger):
                 count_cutoff=count_cutoff,
                 min_lldelta=min_lldelta,
                 trace=trace)
-        train = LazyMap(lambda sent: map(unflatten, sent), iob_sents)
+        train = LazyMap(lambda sent: list(map(unflatten, sent)), iob_sents)
         chunker = cls(fd, train, __maxent_train)
         chunker.chunk_types = chunk_types
         return chunker
@@ -182,7 +182,7 @@ class CRFChunkTagger(MalletCRF, AbstractChunkTagger):
         else:
             trace = 0
         
-        train = LazyMap(lambda sent: map(unflatten, sent), iob_sents)
+        train = LazyMap(lambda sent: list(map(unflatten, sent)), iob_sents)
 
         mallet_home = os.environ.get('MALLET_HOME', '/usr/local/mallet-0.4')
         nltk.classify.mallet.config_mallet(mallet_home) 
@@ -205,7 +205,7 @@ def tokens2tree(tokens, chunk_types=_DEFAULT_CHUNK_TYPES, top_node='S'):
     
     for token in tokens:
         token, tag = unflatten(token)
-        if isinstance(token, basestring):
+        if isinstance(token, str):
             word = token
             pos = None
         elif isinstance(token, tuple):
@@ -254,32 +254,32 @@ def unflatten(token):
     
 def test_chunk_tagger(chunk_tagger, iob_sents, **kwargs):
     chunk_types = chunk_tagger.chunk_types
-    correct = map(lambda sent: tokens2tree(sent, chunk_types), iob_sents)
-    guesses = chunk_tagger.batch_parse(map(lambda c: c.leaves(), correct))
+    correct = [tokens2tree(sent, chunk_types) for sent in iob_sents]
+    guesses = chunk_tagger.batch_parse([c.leaves() for c in correct])
     
     chunkscore = ChunkScore()    
     for c, g in zip(correct, guesses):
         chunkscore.score(c, g)
     
     if kwargs.get('verbose'):
-        guesses = chunk_tagger.batch_tag(map(lambda c: c.leaves(), correct))
+        guesses = chunk_tagger.batch_tag([c.leaves() for c in correct])
         correct = iob_sents
         
-        print
+        print()
         for c, g in zip(correct, guesses):        
-            for tokc, tokg in zip(map(flatten, c), map(flatten, g)):
+            for tokc, tokg in zip(list(map(flatten, c)), list(map(flatten, g))):
                 word = tokc[0]
                 iobc = tokc[-1]
                 iobg = tokg[-1]
                 star = ''
                 if iobg != iobc: star = '*'
-                print '%3s %20s %20s %20s' % (star, word, iobc, iobg)
-            print      
+                print(('%3s %20s %20s %20s' % (star, word, iobc, iobg)))
+            print()      
         
-    print 'Precision: %.2f' % chunkscore.precision()
-    print 'Recall:    %.2f' % chunkscore.recall()
-    print 'Accuracy:  %.2f' % chunkscore.accuracy()                
-    print 'F-measure: %.2f' % chunkscore.f_measure()
+    print(('Precision: %.2f' % chunkscore.precision()))
+    print(('Recall:    %.2f' % chunkscore.recall()))
+    print(('Accuracy:  %.2f' % chunkscore.accuracy()))                
+    print(('F-measure: %.2f' % chunkscore.f_measure()))
     
     return chunkscore
     
@@ -287,11 +287,11 @@ def unittest(verbose=False):
     import doctest
     failed, tested = doctest.testfile('test/chunk.doctest', verbose)
     if not verbose:
-        print '%d passed and %d failed.' % (tested - failed, failed)
+        print(('%d passed and %d failed.' % (tested - failed, failed)))
         if failed == 0:
-            print 'Test passed.'
+            print('Test passed.')
         else:
-            print '***Test Failed*** %d failures.' % failed
+            print(('***Test Failed*** %d failures.' % failed))
     return (tested - failed), failed
 
 def demo():
@@ -304,7 +304,7 @@ if __name__ == '__main__':
     import optparse
     
     try:
-        import cPickle as pickle
+        import pickle as pickle
     except:
         import pickle    
     
@@ -342,12 +342,12 @@ if __name__ == '__main__':
                 num_test = int(m.group('test') or 0)
                 options.numsents = (num_train, num_test)
             else:
-                raise ValueError, "malformed argument for option -n"
+                raise ValueError("malformed argument for option -n")
         else:
             options.numsents = (None, None)
             
-    except ValueError, v:
-        print 'error: %s' % v.message
+    except ValueError as v:
+        print(('error: %s' % v.message))
         parser.print_help()            
     
     if options.unittest:
@@ -369,8 +369,8 @@ if __name__ == '__main__':
 
         trainer = eval(options.trainer)        
         if options.verbose:
-            print 'Training %s with %d sentences' % \
-                (options.trainer, num_train)
+            print(('Training %s with %d sentences' % \
+                (options.trainer, num_train)))
         chunker = trainer(train, verbose=options.verbose)
         
         if options.model:
@@ -388,12 +388,12 @@ if __name__ == '__main__':
                     stream.close()                    
                     chunker = pickle.load(_open(options.model, 'r'))
                 if options.verbose:
-                    print 'Model saved as %s' % options.model                    
-            except Exception, e:
-                print "error: %s" % e
+                    print(('Model saved as %s' % options.model))                    
+            except Exception as e:
+                print(("error: %s" % e))
 
         if test:
             if options.verbose:
-                print 'Testing %s on %d sentences' % \
-                    (options.trainer, num_test)
+                print(('Testing %s on %d sentences' % \
+                    (options.trainer, num_test)))
             chunker.test(test, verbose=options.verbose)

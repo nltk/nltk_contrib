@@ -36,7 +36,7 @@ class ZeroR(Classifier):
             
     def __max(self):
         max, klass_value = 0, None
-        for key in self.__klassCount.keys():
+        for key in list(self.__klassCount.keys()):
             value = self.__klassCount[key]
             if value > max:
                 max = value

@@ -170,7 +170,7 @@ def Comparator(doclist,
               result = comparator_.ComparisonResult()
               matches[(hash1, hash2)] = result
     did += 1
-  values = matches.values()
+  values = list(matches.values())
   values.sort(lambda x, y: comp(y.Cost(), x.Cost()))
   if pdump:
     sys.stderr.write('Dumping comparisons to %s...\n' % pdump)

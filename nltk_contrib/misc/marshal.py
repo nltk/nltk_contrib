@@ -56,7 +56,7 @@ class MarshalUnigram (tag.Unigram):
         """
         handler = file(filename, "w")
         
-        for text, tag in self._model.iteritems():
+        for text, tag in list(self._model.items()):
             handler.write("%s:%s\n" % (text, tag))
 
         handler.close()
@@ -97,7 +97,7 @@ class MarshalAffix (tag.Affix):
         handler.write("length %i\n" % self._length)
         handler.write("minlength %i\n" % self._minlength)
         
-        for text, tag in self._model.iteritems():
+        for text, tag in list(self._model.items()):
             handler.write("%s:%s\n" % (text, tag))
 
         handler.close()
@@ -203,4 +203,4 @@ def demo ():
     #tagger.marshal("ngram.test")
 
     tagger.unmarshal("ngram.test")
-    print tagger._model
+    print((tagger._model))

@@ -124,7 +124,7 @@ class Doclist:
 
   def XmlDump(self, file=None, utf8=False):
     if file is None:
-      print '%s\n' % (self.XmlEncode(utf8))
+      print(('%s\n' % (self.XmlEncode(utf8))))
       return
     p = open(file, 'w')
     p.write('%s\n' % self.XmlEncode(utf8))

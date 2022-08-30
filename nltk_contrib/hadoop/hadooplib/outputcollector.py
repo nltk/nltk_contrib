@@ -20,4 +20,4 @@ class LineOutput:
         
         keystr = str(key)
         valuestr = str(value)
-        print '%s%s%s' % (keystr, separator, valuestr)
+        print(('%s%s%s' % (keystr, separator, valuestr)))

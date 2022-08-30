@@ -84,7 +84,7 @@ def isMapping(obj):
 
 class FeatureI(object):
     def __init__(self):
-        raise TypeError, "FeatureI is an abstract interface"
+        raise TypeError("FeatureI is an abstract interface")
 
 class _FORWARD(object):
     """
@@ -95,7 +95,7 @@ class _FORWARD(object):
     instantiated.
     """
     def __init__(self):
-        raise TypeError, "The _FORWARD class is not meant to be instantiated"
+        raise TypeError("The _FORWARD class is not meant to be instantiated")
 
 class Variable(object):
     """
@@ -241,7 +241,7 @@ def show(data):
 
 def variable_representer(dumper, var):
     "Output variables in YAML as ?name."
-    return dumper.represent_scalar(u'!var', u'?%s' % var.name())
+    return dumper.represent_scalar('!var', '?%s' % var.name())
 yaml.add_representer(Variable, variable_representer)
 
 def variable_constructor(loader, node):
@@ -249,8 +249,8 @@ def variable_constructor(loader, node):
     value = loader.construct_scalar(node)
     name = value[1:]
     return Variable(name)
-yaml.add_constructor(u'!var', variable_constructor)
-yaml.add_implicit_resolver(u'!var', re.compile(r'^\?\w+$'))
+yaml.add_constructor('!var', variable_constructor)
+yaml.add_implicit_resolver('!var', re.compile(r'^\?\w+$'))
 
 def _copy_and_bind(feature, bindings, memo=None):
     """
@@ -262,14 +262,14 @@ def _copy_and_bind(feature, bindings, memo=None):
     if memo is None: memo = {}
     if id(feature) in memo: return memo[id(feature)]
     if isinstance(feature, Variable) and bindings is not None:
-        if not bindings.has_key(feature.name()):
+        if feature.name() not in bindings:
             bindings[feature.name()] = feature.copy()
         result = _copy_and_bind(bindings[feature.name()], None, memo)
     else:
         if isMapping(feature):
             # Construct a new object of the same class
             result = feature.__class__()
-            for (key, value) in feature.items():
+            for (key, value) in list(feature.items()):
                 result[key] = _copy_and_bind(value, bindings, memo)
         else: result = feature
     memo[id(feature)] = result
@@ -579,19 +579,19 @@ def unify(feature1, feature2, bindings1=None, bindings2=None, memo=None, fail=No
 
     if memo is None: memo = {}
     copymemo = {}
-    if memo.has_key((id(feature1), id(feature2))):
+    if (id(feature1), id(feature2)) in memo:
         result = memo[id(feature1), id(feature2)]
         if result is UnificationFailure:
             if trace > 2:
-                print '(cached) Unifying: %r + %r --> [fail]' % (feature1, feature2)
+                print('(cached) Unifying: %r + %r --> [fail]' % (feature1, feature2))
             raise result()
         if trace > 2:
-            print '(cached) Unifying: %r + %r --> ' % (feature1, feature2),
-            print repr(result)
+            print('(cached) Unifying: %r + %r --> ' % (feature1, feature2), end=' ')
+            print(repr(result))
         return result
 
     if trace > 1:
-        print 'Unifying: %r + %r --> ' % (feature1, feature2),
+        print('Unifying: %r + %r --> ' % (feature1, feature2), end=' ')
     
     # Make copies of the two structures (since the unification algorithm is
     # destructive). Use the same memo, to preserve reentrance links between
@@ -600,7 +600,7 @@ def unify(feature1, feature2, bindings1=None, bindings2=None, memo=None, fail=No
     copy2 = _copy_and_bind(feature2, bindings2, copymemo)
     # Preserve links between bound variables and the two feature structures.
     for b in (bindings1, bindings2):
-        for (vname, value) in b.items():
+        for (vname, value) in list(b.items()):
             value_id = id(value)
             if value_id in copymemo:
                 b[vname] = copymemo[value_id]
@@ -610,7 +610,7 @@ def unify(feature1, feature2, bindings1=None, bindings2=None, memo=None, fail=No
         unified = _destructively_unify(copy1, copy2, bindings1, bindings2, memo,
         fail)
     except UnificationFailure:
-        if trace > 1: print '[fail]'
+        if trace > 1: print('[fail]')
         memo[id(feature1), id(feature2)] = UnificationFailure
         raise
 
@@ -622,9 +622,9 @@ def unify(feature1, feature2, bindings1=None, bindings2=None, memo=None, fail=No
     _lookup_values(bindings2, {}, remove=True)
 
     if trace > 1:
-        print repr(unified)
+        print(repr(unified))
     elif trace > 0:
-        print 'Unifying: %r + %r --> %r' % (feature1, feature2, repr(unified))
+        print('Unifying: %r + %r --> %r' % (feature1, feature2, repr(unified)))
     
     memo[id(feature1), id(feature2)] = unified
     return unified
@@ -640,11 +640,11 @@ depth=0):
     and C{other} are undefined.
     """
     if depth > 50:
-        print "Infinite recursion in this unification:"
-        print show(dict(feature1=feature1, feature2=feature2,
-        bindings1=bindings1, bindings2=bindings2, memo=memo))
-        raise ValueError, "Infinite recursion in unification"
-    if memo.has_key((id(feature1), id(feature2))):
+        print("Infinite recursion in this unification:")
+        print(show(dict(feature1=feature1, feature2=feature2,
+        bindings1=bindings1, bindings2=bindings2, memo=memo)))
+        raise ValueError("Infinite recursion in unification")
+    if (id(feature1), id(feature2)) in memo:
         result = memo[id(feature1), id(feature2)]
         if result is UnificationFailure: raise result()
     unified = _do_unify(feature1, feature2, bindings1, bindings2, memo, fail,
@@ -687,9 +687,9 @@ def _do_unify(feature1, feature2, bindings1, bindings2, memo, fail, depth=0):
     # At this point, we know they're both mappings.
     # Do the destructive part of unification.
 
-    while feature2.has_key(_FORWARD): feature2 = feature2[_FORWARD]
+    while _FORWARD in feature2: feature2 = feature2[_FORWARD]
     if feature1 is not feature2: feature2[_FORWARD] = feature1
-    for (fname, val2) in feature2.items():
+    for (fname, val2) in list(feature2.items()):
         if fname == _FORWARD: continue
         val1 = feature1.get(fname)
         feature1[fname] = _destructively_unify(val1, val2, bindings1,
@@ -702,12 +702,12 @@ def _apply_forwards(feature, visited):
     the target of its forward pointer (to preserve reentrance).
     """
     if not isMapping(feature): return
-    if visited.has_key(id(feature)): return
+    if id(feature) in visited: return
     visited[id(feature)] = True
 
-    for fname, fval in feature.items():
+    for fname, fval in list(feature.items()):
         if isMapping(fval):
-            while fval.has_key(_FORWARD):
+            while _FORWARD in fval:
                 fval = fval[_FORWARD]
                 feature[fname] = fval
             _apply_forwards(fval, visited)
@@ -739,10 +739,10 @@ def _lookup_values(mapping, visited, remove=False):
         else:
             return var.forwarded_self()
     if not isMapping(mapping): return mapping
-    if visited.has_key(id(mapping)): return mapping
+    if id(mapping) in visited: return mapping
     visited[id(mapping)] = True
 
-    for fname, fval in mapping.items():
+    for fname, fval in list(mapping.items()):
         if isMapping(fval):
             _lookup_values(fval, visited)
         elif isinstance(fval, Variable):
@@ -763,9 +763,9 @@ def _apply_forwards_to_bindings(bindings):
     Replace any feature structures that have been forwarded by their new
     identities.
     """
-    for (key, value) in bindings.items():
-        if isMapping(value) and value.has_key(_FORWARD):
-            while value.has_key(_FORWARD):
+    for (key, value) in list(bindings.items()):
+        if isMapping(value) and _FORWARD in value:
+            while _FORWARD in value:
                 value = value[_FORWARD]
             bindings[key] = value
 

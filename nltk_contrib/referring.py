@@ -221,23 +221,23 @@ def demo():
     Object2 = {"type":"chihuahua", "size":"large", "colour":"white"}
     Object3 = {"type":"siamese-cat", "size":"small", "colour":"black"}
 
-    print "Given an entity defined as: "
+    print("Given an entity defined as: ")
     r = Object1
-    print r
+    print(r)
     preferred_attrs = ["type", "colour", "size"]
-    print "In a set defined as: "
+    print("In a set defined as: ")
     contrast_set = [Object2, Object3]
-    print contrast_set
+    print(contrast_set)
     RE = IncrementalAlgorithm(KB, r, contrast_set, preferred_attrs).RE
-    print "The referring expression created to uniquely identify",
-    print "the referent is: "
-    print RE
+    print("The referring expression created to uniquely identify", end=' ')
+    print("the referent is: ")
+    print(RE)
     RE_string = ""
     for attr, val in RE:
         RE_string = val + " " + RE_string
     RE_string = "The " + RE_string    
-    print "This can be surface-realized as:"
-    print RE_string
+    print("This can be surface-realized as:")
+    print(RE_string)
 
 if __name__ == "__main__":
     demo()

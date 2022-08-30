@@ -2,7 +2,7 @@
 C{fstypes.py} module contains the implementation of feature
 value types as defined in the FUF manual (v5.2)
 """
-from sexp import *
+from .sexp import *
 from nltk.featstruct import CustomFeatureValue, UnificationFailure
 
 class FeatureTypeTable(object):
@@ -28,9 +28,9 @@ class FeatureTypeTable(object):
         @type children: single string or list of strings
         """
 
-        if name not in self.table.keys():
+        if name not in list(self.table.keys()):
             self.table[name] = []
-        if isinstance(children, basestring):
+        if isinstance(children, str):
             children = [children]
         for child in children:
             self.table[name].append(child)
@@ -48,14 +48,14 @@ class FeatureTypeTable(object):
         # quick check if the specialization is the immediate one
         spec = specialization
         if name == spec: return True
-        if not self.table.has_key(name): return False
+        if name not in self.table: return False
         if spec in self.table[name]:
             return True
         return any(self.subsume(item, spec) for item in self.table[name])
 
     def __repr__(self):
         output = ""
-        for key, value in self.table.items():
+        for key, value in list(self.table.items()):
             output += "%s <--- %s\n" % (key, value)
         return output
 
@@ -141,16 +141,16 @@ def assign_types(table, fs):
     """
     def assign_types_helper(fs, type_table, flat_type_table):
         # go through the feature structure and convert the typed values
-        for fkey, fval in fs.items():
+        for fkey, fval in list(fs.items()):
             if isinstance(fval, nltk.FeatStruct):
                 assign_types_helper(fval, type_table, flat_type_table)
-            elif isinstance(fval, basestring) and (fval in flat_type_table):
+            elif isinstance(fval, str) and (fval in flat_type_table):
                 newval = TypedFeatureValue(fval, table)
                 fs[fkey] = newval
 
     # flattten the table 
     flat_type_table = list()
-    for tkey, tvalue in table.table.items():
+    for tkey, tvalue in list(table.table.items()):
         flat_type_table.append(tkey)
         for tval in tvalue:
             flat_type_table.append(tval)
@@ -165,9 +165,9 @@ if __name__ == "__main__":
         sexp = SexpListParser().parse(typedef)
         type_table.define_type(sexp[1], sexp[2])
 
-    print type_table
-    print type_table.subsume('np', 'common')
-    print type_table.subsume('mood', 'imperative')
+    print(type_table)
+    print((type_table.subsume('np', 'common')))
+    print((type_table.subsume('mood', 'imperative')))
 
 
 

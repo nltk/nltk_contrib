@@ -40,13 +40,13 @@ class RTEInferenceTagger(object):
         if text_drs_list:
             text_ex = text_drs_list[0].simplify().toFol()
         else:
-            if verbose: print 'ERROR: No readings were generated for the Text'
+            if verbose: print('ERROR: No readings were generated for the Text')
         
         hyp_drs_list = glueclass.parse_to_meaning(hyp)
         if hyp_drs_list:
             hyp_ex = hyp_drs_list[0].simplify().toFol()
         else:
-            if verbose: print 'ERROR: No readings were generated for the Hypothesis'
+            if verbose: print('ERROR: No readings were generated for the Hypothesis')
 
         #1. proof T -> H
         #2. proof (BK & T) -> H
@@ -56,27 +56,27 @@ class RTEInferenceTagger(object):
         #6. satisfy BK & T & H
             
         result = inference.Prover9().prove(hyp_ex, [text_ex])
-        if verbose: print 'prove: T -> H: %s' % result
+        if verbose: print(('prove: T -> H: %s' % result))
         
         if not result:
             bk = self._generate_BK(text, hyp, verbose)
             bk_exs = [bk_pair[0] for bk_pair in bk]
             
             if verbose: 
-                print 'Generated Background Knowledge:'
+                print('Generated Background Knowledge:')
                 for bk_ex in bk_exs:
-                    print bk_ex
+                    print(bk_ex)
                 
             result = inference.Prover9().prove(hyp_ex, [text_ex]+bk_exs)
-            if verbose: print 'prove: (T & BK) -> H: %s' % result
+            if verbose: print(('prove: (T & BK) -> H: %s' % result))
             
             if not result:
                 consistent = self.check_consistency(bk_exs+[text_ex])                
-                if verbose: print 'consistency check: (BK & T): %s' % consistent
+                if verbose: print(('consistency check: (BK & T): %s' % consistent))
 
                 if consistent:
                     consistent = self.check_consistency(bk_exs+[text_ex, hyp_ex])                
-                    if verbose: print 'consistency check: (BK & T & H): %s' % consistent
+                    if verbose: print(('consistency check: (BK & T & H): %s' % consistent))
                     
         return result
     
@@ -98,8 +98,8 @@ class RTEInferenceTagger(object):
             hypbow = set(word.lower() for word in hyp)
         
         if verbose:
-            print 'textbow: %s' % textbow
-            print 'hypbow: %s' % hypbow
+            print(('textbow: %s' % textbow))
+            print(('hypbow: %s' % hypbow))
         
         if self.stop:
             textbow = textbow - self.stopwords
@@ -225,9 +225,9 @@ def demo_inference_tagger(verbose=False):
     tagger = RTEInferenceTagger()
     
     text = 'John see a car'
-    print 'Text: ', text
+    print(('Text: ', text))
     hyp = 'John watch an auto'
-    print 'Hyp:  ', hyp
+    print(('Hyp:  ', hyp))
 
 #    text_ex = LogicParser().parse('exists e x y.(david(x) & own(e)  & subj(e,x) & obj(e,y) & car(y))')
 #    hyp_ex  = LogicParser().parse('exists e x y.(david(x) & have(e) & subj(e,x) & obj(e,y) & auto(y))')
@@ -237,17 +237,17 @@ def demo_inference_tagger(verbose=False):
     if text_drs_list:
         text_ex = text_drs_list[0].simplify().toFol()
     else:
-        print 'ERROR: No readings were be generated for the Text'
+        print('ERROR: No readings were be generated for the Text')
     
     hyp_drs_list = glueclass.parse_to_meaning(hyp)
     if hyp_drs_list:
         hyp_ex = hyp_drs_list[0].simplify().toFol()
     else:
-        print 'ERROR: No readings were be generated for the Hypothesis'
+        print('ERROR: No readings were be generated for the Hypothesis')
 
-    print 'Text: ', text_ex
-    print 'Hyp:  ', hyp_ex
-    print ''
+    print(('Text: ', text_ex))
+    print(('Hyp:  ', hyp_ex))
+    print('')
 
     #1. proof T -> H
     #2. proof (BK & T) -> H
@@ -257,67 +257,67 @@ def demo_inference_tagger(verbose=False):
     #6. satisfy BK & T & H
         
     result = inference.Prover9().prove(hyp_ex, [text_ex])
-    print 'prove: T -> H: %s' % result
+    print(('prove: T -> H: %s' % result))
     if result:
-        print 'Logical entailment\n'
+        print('Logical entailment\n')
     else:
-        print 'No logical entailment\n'
+        print('No logical entailment\n')
 
     bk = tagger._generate_BK(text, hyp, verbose)
     bk_exs = [bk_pair[0] for bk_pair in bk]
     
-    print 'Generated Background Knowledge:'
+    print('Generated Background Knowledge:')
     for bk_ex in bk_exs:
-        print bk_ex
-    print ''
+        print(bk_ex)
+    print('')
         
     result = inference.Prover9().prove(hyp_ex, [text_ex]+bk_exs)
-    print 'prove: (T & BK) -> H: %s' % result
+    print(('prove: (T & BK) -> H: %s' % result))
     if result:
-        print 'Logical entailment\n'
+        print('Logical entailment\n')
     else:
-        print 'No logical entailment\n'
+        print('No logical entailment\n')
 
     # Check if the background knowledge axioms are inconsistent
     result = inference.Prover9().prove(assumptions=bk_exs+[text_ex]).prove()
-    print 'prove: (BK & T): %s' % result
+    print(('prove: (BK & T): %s' % result))
     if result:
-        print 'Inconsistency -> Entailment unknown\n'
+        print('Inconsistency -> Entailment unknown\n')
     else:
-        print 'No inconsistency\n'
+        print('No inconsistency\n')
 
     result = inference.Prover9().prove(assumptions=bk_exs+[text_ex, hyp_ex])
-    print 'prove: (BK & T & H): %s' % result
+    print(('prove: (BK & T & H): %s' % result))
     if result:
-        print 'Inconsistency -> Entailment unknown\n'
+        print('Inconsistency -> Entailment unknown\n')
     else:
-        print 'No inconsistency\n'
+        print('No inconsistency\n')
 
     result = inference.Mace().build_model(assumptions=bk_exs+[text_ex])
-    print 'satisfy: (BK & T): %s' % result
+    print(('satisfy: (BK & T): %s' % result))
     if result:
-        print 'No inconsistency\n'
+        print('No inconsistency\n')
     else:
-        print 'Inconsistency -> Entailment unknown\n'
+        print('Inconsistency -> Entailment unknown\n')
 
     result = inference.Mace().build_model(assumptions=bk_exs+[text_ex, hyp_ex]).build_model()
-    print 'satisfy: (BK & T & H): %s' % result
+    print(('satisfy: (BK & T & H): %s' % result))
     if result:
-        print 'No inconsistency\n'
+        print('No inconsistency\n')
     else:
-        print 'Inconsistency -> Entailment unknown\n'
+        print('Inconsistency -> Entailment unknown\n')
     
 def test_check_consistency():
     a = LogicParser().parse('man(j)')
     b = LogicParser().parse('-man(j)')
-    print '%s, %s: %s' % (a, b, RTEInferenceTagger().check_consistency([a,b], True))
-    print '%s, %s: %s' % (a, a, RTEInferenceTagger().check_consistency([a,a], True))
+    print(('%s, %s: %s' % (a, b, RTEInferenceTagger().check_consistency([a,b], True))))
+    print(('%s, %s: %s' % (a, a, RTEInferenceTagger().check_consistency([a,a], True))))
 
 def tag(text, hyp):
-    print 'Text: ', text
-    print 'Hyp:  ', hyp
-    print 'Entailment =', RTEInferenceTagger().tag_sentences(text, hyp, True)
-    print ''
+    print(('Text: ', text))
+    print(('Hyp:  ', hyp))
+    print(('Entailment =', RTEInferenceTagger().tag_sentences(text, hyp, True)))
+    print('')
 
 if __name__ == '__main__':
 #    test_check_consistency()

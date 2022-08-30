@@ -1,7 +1,7 @@
 # Natural Language Toolkit: Logic
 from nltk.utilities import Counter
-from featurelite import SubstituteBindingsMixin, FeatureI
-from featurelite import Variable as FeatureVariable
+from .featurelite import SubstituteBindingsMixin, FeatureI
+from .featurelite import Variable as FeatureVariable
 _counter = Counter()
 
 def unique_variable(counter=None):
@@ -137,7 +137,7 @@ class Expression(object):
         raise NotImplementedError
 
     def __hash__(self):
-        raise NotImplementedError, self.__class__
+        raise NotImplementedError(self.__class__)
     
     def normalize(self):
         if hasattr(self, '_normalized'): return self._normalized
@@ -612,7 +612,7 @@ class Parser:
         @returns: a parsed Expression
         """
         self.feed(data)
-        result = self.next()
+        result = next(self)
         return result
 
     def process(self):
@@ -629,7 +629,7 @@ class Parser:
         whether the token will be removed from the buffer; setting it to
         0 gives lookahead capability."""
         if self.buffer == '':
-            raise Error, "end of stream"
+            raise Error("end of stream")
         tok = None
         buffer = self.buffer
         while not tok:
@@ -654,7 +654,7 @@ class Parser:
         TOKENS.extend(Parser.BOOL)
         return token not in TOKENS 
 
-    def next(self):
+    def __next__(self):
         """Parse the next complete expression from the stream and return it."""
         tok = self.token()
         
@@ -678,8 +678,8 @@ class Parser:
             tok = self.token()
 
             if tok != Parser.DOT:
-                raise Error, "parse error, unexpected token: %s" % tok
-            term = self.next()
+                raise Error("parse error, unexpected token: %s" % tok)
+            term = next(self)
             accum = factory(Variable(vars.pop()), term)
             while vars:
                 accum = factory(Variable(vars.pop()), accum)
@@ -687,12 +687,12 @@ class Parser:
             
         elif tok == Parser.OPEN:
             # Expression is an application expression: (M N)
-            first = self.next()
-            second = self.next()
+            first = next(self)
+            second = next(self)
             exps = []
             while self.token(0) != Parser.CLOSE:
                 # Support expressions like: (M N P) == ((M N) P)
-                exps.append(self.next())
+                exps.append(next(self))
             tok = self.token() # swallow the close token
             assert tok == Parser.CLOSE
             if isinstance(second, Operator):
@@ -721,7 +721,7 @@ class Parser:
                 # Expression is a simple variable expression: x
                 return VariableExpression(Variable(tok))
             else:
-                raise Error, "parse error, unexpected token: %s" % tok
+                raise Error("parse error, unexpected token: %s" % tok)
     
     # This is intended to be overridden, so that you can derive a Parser class
     # that constructs expressions using your subclasses.  So far we only need
@@ -762,7 +762,7 @@ def expressions():
             ApplicationExpression(XZ, Y))))
     O = LambdaExpression(x, LambdaExpression(y, XY))
     N = ApplicationExpression(LambdaExpression(x, XA), I)
-    T = Parser('\\x y.(x y z)').next()
+    T = next(Parser('\\x y.(x y z)'))
     return [X, XZ, XYZ, I, K, L, S, B, C, O, N, T]
 
 def demo():
@@ -771,21 +771,21 @@ def demo():
     P = VariableExpression(p)
     Q = VariableExpression(q)
     for l in expressions():
-        print "Expression:", l
-        print "Variables:", l.variables()
-        print "Free:", l.free()
-        print "Subterms:", l.subterms()
-        print "Simplify:",l.simplify()
+        print(("Expression:", l))
+        print(("Variables:", l.variables()))
+        print(("Free:", l.free()))
+        print(("Subterms:", l.subterms()))
+        print(("Simplify:",l.simplify()))
         la = ApplicationExpression(ApplicationExpression(l, P), Q)
         las = la.simplify()
-        print "Apply and simplify: %s -> %s" % (la, las)
-        ll = Parser(str(l)).next()
-        print 'l is:', l
-        print 'll is:', ll
+        print(("Apply and simplify: %s -> %s" % (la, las)))
+        ll = next(Parser(str(l)))
+        print(('l is:', l))
+        print(('ll is:', ll))
         assert l.equals(ll)
-        print "Serialize and reparse: %s -> %s" % (l, ll)
-        print "Variables:", ll.variables()
-        print "Normalize: %s" % ll.normalize()
+        print(("Serialize and reparse: %s -> %s" % (l, ll)))
+        print(("Variables:", ll.variables()))
+        print(("Normalize: %s" % ll.normalize()))
 
 
 if __name__ == '__main__':

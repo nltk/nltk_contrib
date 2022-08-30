@@ -159,13 +159,13 @@ class NERChunkTaggerFeatureDetector(dict):
         if window > 0 and index > 0:
             prev_feats = \
                 self.__class__(tokens, index - 1, history, window=window - 1)
-            for key, val in prev_feats.items():
+            for key, val in list(prev_feats.items()):
                 if not key.startswith('next_') and not key == 'word':
                     self['prev_%s' % key] = val
 
         if window > 0 and index < len(tokens) - 1:
             next_feats = self.__class__(tokens, index + 1, window=window - 1)        
-            for key, val in next_feats.items():
+            for key, val in list(next_feats.items()):
                 if not key.startswith('prev_') and not key == 'word':
                     self['next_%s' % key] = val        
 
@@ -184,11 +184,11 @@ def unittest(verbose=False):
     import doctest
     failed, passed = doctest.testfile('test/ne.doctest', verbose)
     if not verbose:
-        print '%d passed and %d failed.' % (failed, passed)
+        print(('%d passed and %d failed.' % (failed, passed)))
         if failed == 0:
-            print 'Test passed.'
+            print('Test passed.')
         else:
-            print '***Test Failed*** %d failures.' % failed
+            print(('***Test Failed*** %d failures.' % failed))
     return failed, passed
 
 _NE_CHUNK_TYPES = ('PERSON', 'LOCATION', 'ORGANIZATION', 'MONEY')
@@ -199,7 +199,7 @@ if __name__ == '__main__':
     import optparse
 
     try:
-        import cPickle as pickle
+        import pickle as pickle
     except:
         import pickle    
 
@@ -244,7 +244,7 @@ if __name__ == '__main__':
                 num_test = int(m.group('test') or 0)
                 options.numsents = (num_train, num_test)
             else:
-                raise ValueError, "malformed argument for option -n"
+                raise ValueError("malformed argument for option -n")
         else:
             options.numsents = (None, None)
             
@@ -256,10 +256,10 @@ if __name__ == '__main__':
                 file_test = m.group('test')
                 options.extract = (file_train, file_test)
             else:
-                raise ValueError, "malformed argument for option -e"            
+                raise ValueError("malformed argument for option -e")            
 
-    except ValueError, v:
-        print 'error: %s' % v.message
+    except ValueError as v:
+        print(('error: %s' % v.message))
         parser.print_help()            
 
     if options.unittest:
@@ -292,9 +292,9 @@ if __name__ == '__main__':
             for index in range(len(tokens)):
                 tag = tokens[index][-1]                
                 feats = feature_detector(tokens, index, history)    
-                keys.update(feats.keys())                            
+                keys.update(list(feats.keys()))                            
                 stream.write('%s %s\n' % (tag, ' '.join(['%s=%s' % (k, re.escape(str(v)))
-                    for k, v in feats.items()])))
+                    for k, v in list(feats.items())])))
                 history.append(tag)                    
             history = []
         stream.close()
@@ -306,9 +306,9 @@ if __name__ == '__main__':
             for index in range(len(tokens)):
                 tag = tokens[index][-1]
                 feats = feature_detector(tokens, index, history)
-                keys.update(feats.keys())
+                keys.update(list(feats.keys()))
                 stream.write('%s %s\n' % (tag, ' '.join(['%s=%s' % (k, re.escape(str(v)))
-                    for k, v in feats.items()])))
+                    for k, v in list(feats.items())])))
                 history.append(tag)
             history = []                    
         stream.close()
@@ -343,9 +343,9 @@ if __name__ == '__main__':
             reader = MXPostTaggerCorpusReader(eval(options.corpus))
             iob_sents = reader.iob_sents()
             tagged_sents = reader.tagged_sents()
-            corpus = LazyMap(lambda (iob_sent, tagged_sent): 
+            corpus = LazyMap(lambda iob_sent_tagged_sent: 
                     [(iw, tt, iob) for ((iw, iob), (tw, tt))
-                     in zip(iob_sent, tagged_sent)], 
+                     in zip(iob_sent_tagged_sent[0], iob_sent_tagged_sent[1])], 
                  LazyZip(iob_sents, tagged_sents))
         else:
             iob_sents = eval(options.corpus).iob_sents()
@@ -360,8 +360,8 @@ if __name__ == '__main__':
 
         trainer = eval(options.trainer)        
         if options.verbose:
-            print 'Training %s with %d sentences' % \
-                (options.trainer, num_train)
+            print(('Training %s with %d sentences' % \
+                (options.trainer, num_train)))
         ner = trainer(train, 
             feature_detector=NERChunkTaggerFeatureDetector,
             chunk_types=_NE_CHUNK_TYPES,
@@ -382,12 +382,12 @@ if __name__ == '__main__':
                     stream.close()                    
                     ner = pickle.load(_open(options.model, 'r'))
                 if options.verbose:
-                    print 'Model saved as %s' % options.model                    
-            except Exception, e:
-                print "error: %s" % e
+                    print(('Model saved as %s' % options.model))                    
+            except Exception as e:
+                print(("error: %s" % e))
 
         if test:
             if options.verbose:
-                print 'Testing %s on %d sentences' % \
-                    (options.trainer, num_test)
+                print(('Testing %s on %d sentences' % \
+                    (options.trainer, num_test)))
             ner.test(test, verbose=options.verbose)

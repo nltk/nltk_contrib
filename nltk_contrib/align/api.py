@@ -7,7 +7,7 @@ L{AlignerI} is a standard interface for X{bilingual alignment}
 
 """
 from nltk.internals import deprecated, overridden
-from itertools import izip
+
 
 ##//////////////////////////////////////////////////////
 # Alignment Interfaces
@@ -53,7 +53,7 @@ class AlignerI(object):
 
         @rtype: C{list} of I{alignments}
         """
-        return [self.align(st, tt) for (st, tt) in izip(source, target)]
+        return [self.align(st, tt) for (st, tt) in zip(source, target)]
     
     def recursive_align(self, source, target, alignments):
         """
@@ -70,7 +70,7 @@ class AlignerI(object):
         if (self.output_format == 'text_tuples'):            
             alignment_mapping = standard_alignment
         
-        import align_util
+        from . import align_util
         
         if (self.output_format == 'bead_objects'):
             (alignment_mapping, alignment_mapping_indices) = align_util.convert_bead_to_tuples(standard_alignment, source, target)

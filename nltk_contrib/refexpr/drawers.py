@@ -1,8 +1,8 @@
 from random import shuffle
-from full_brevity import *
-from relational import *
-from incremental import *
-from util import generate_phrase, generate_phrase_rel
+from .full_brevity import *
+from .relational import *
+from .incremental import *
+from .util import generate_phrase, generate_phrase_rel
 
 if __name__ == '__main__':
   # This data is based on the drawer pictures from Vienthen and Dale (2006)
@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
   shuffle(facts, lambda: 0.0)
 
-  fb = FullBrevity(filter(lambda f: f[0] != Rel, facts))
+  fb = FullBrevity([f for f in facts if f[0] != Rel])
   rel = Relational(facts)
   #The ordered priority for using attributes, important for incremental algorithm
   ranked_attrs = ["color", "row", "col", "corner"]
@@ -279,19 +279,19 @@ if __name__ == '__main__':
 
   #defines how to turn these rules into English phrases
   handlers = {
-    "col": lambda(desc): "column %s" % desc,
-    "row": lambda(desc): "row %s" % desc,
-    "corner": lambda(desc): "corner",
-    "above": lambda(lr): "above" if lr else "below",
-    "below": lambda(lr): "below" if lr else "above",
-    "right": lambda(lr): "to the right of" if lr else "to the left of",
-    "left": lambda(lr): "to the left of" if lr else "to the right of"
+    "col": lambda desc: "column %s" % desc,
+    "row": lambda desc: "row %s" % desc,
+    "corner": lambda desc: "corner",
+    "above": lambda lr: "above" if lr else "below",
+    "below": lambda lr: "below" if lr else "above",
+    "right": lambda lr: "to the right of" if lr else "to the left of",
+    "left": lambda lr: "to the left of" if lr else "to the right of"
   }
   
   #Generate phrases with each algorithm and print to screen
   for i in range(1, 17):
     obj_id = "d%s" % i
-    print "%#02d,\"Full Brevity\",\"%s\"" % (i, generate_phrase(fb.describe(obj_id), ranked_attrs, handlers))
-    print "%#02d,\"Relational\",\"%s\"" % (i, generate_phrase_rel(rel.describe(obj_id), ranked_attrs, obj_id, handlers))
-    print "%#02d,\"Incremental\",\"%s\"" % (i, generate_phrase(incr.describe(obj_id), ranked_attrs, handlers))
+    print(("%#02d,\"Full Brevity\",\"%s\"" % (i, generate_phrase(fb.describe(obj_id), ranked_attrs, handlers))))
+    print(("%#02d,\"Relational\",\"%s\"" % (i, generate_phrase_rel(rel.describe(obj_id), ranked_attrs, obj_id, handlers))))
+    print(("%#02d,\"Incremental\",\"%s\"" % (i, generate_phrase(incr.describe(obj_id), ranked_attrs, handlers))))
 

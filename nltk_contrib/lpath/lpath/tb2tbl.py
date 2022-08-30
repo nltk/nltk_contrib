@@ -13,7 +13,7 @@ def tb2tbl(tree,a,b):
     #conn.begin()
     #cursor.execute("begin")
     for r in tree.exportLPathTable(TableModel,a,b):
-        print r
+        print(r)
         cursor.execute(SQL1, tuple(r))
     #cursor.execute("commit")
     conn.commit()
@@ -25,8 +25,8 @@ def connectdb(opts):
                 conn = PgSQL.connect(
                     host=opts.host, port=opts.port, database=opts.db,
                     user=opts.user, password=opts.passwd)
-            except PgSQL.libpq.DatabaseError, e:
-                print e
+            except PgSQL.libpq.DatabaseError as e:
+                print(e)
                 sys.exit(1)
             return conn
         elif opts.servertype == 'oracle':
@@ -43,12 +43,12 @@ def connectdb(opts):
             try:
                 conn = MySQLdb.connect(host=opts.host, port=opts.port, db=opts.db,
                                        user=opts.user, passwd=opts.passwd)
-            except DatabaseError, e:
-                print e
+            except DatabaseError as e:
+                print(e)
                 sys.exit(1)
             return conn
-    except ImportError, e:
-        print e
+    except ImportError as e:
+        print(e)
         sys.exit(1)
 
 def limit(servertype, sql, num):
@@ -154,7 +154,7 @@ if __name__ == '__main__':
         optpar.error("user name is missing")
         
     if opts.passwd is None:
-        print "Password:",
+        print("Password:", end=' ')
         opts.passwd = getpass()
     else:
         passwd = opts.passwd
@@ -186,20 +186,20 @@ if __name__ == '__main__':
     conn = connectdb(opts)
     cursor = conn.cursor()
 
-    print os.path.join('',os.path.dirname(sys.argv[0]))
+    print(os.path.join('',os.path.dirname(sys.argv[0])))
 
     # check if table exists
     try:
         sql = limit(opts.servertype, "select * from "+opts.table, 1)
         cursor.execute(sql)
-    except DatabaseError, e:
+    except DatabaseError as e:
         if opts.create:
             p = os.path.join(os.path.dirname(sys.argv[0]),'lpath-schema.sql')
             for line in file(p).read().replace("TABLE",opts.table).split(';'):
                 if line.strip():
                     cursor.execute(line)
         else:
-            print "table %s doesn't exist" % `opts.table`
+            print("table %s doesn't exist" % repr(opts.table))
             sys.exit(1)
 
     # set correct table name in the insertion SQL
@@ -232,20 +232,20 @@ if __name__ == '__main__':
     reader = codecs.getreader('utf-8')
     if tbdir == '-':
         for tree in TreeModel.importTreebank(reader(sys.stdin)):
-            print tree
+            print(tree)
             do(tree)
             count -= 1
             if count == 0: break
     else:
         for root, dirs, files in os.walk(tbdir):
             for f in files:
-                print f,
+                print(f, end=' ')
                 if filter.match(f):
                     p = os.path.join(root,f)
                     for tree in TreeModel.importTreebank(reader(file(p))):
                         do(tree)
                         count -= 1
                         if count == 0: sys.exit(0)  # done
-                    print sid
+                    print(sid)
                 else:
-                    print 'skipped'
+                    print('skipped')

@@ -67,7 +67,7 @@ NAIVE_BAYES = 'NB'
 IB1 = 'IB1'
 
 ALGORITHM_MAPPINGS = {ZERO_R:zeror.ZeroR, ONE_R:oner.OneR, DECISION_TREE:decisiontree.DecisionTree, NAIVE_BAYES:naivebayes.NaiveBayes, IB1:knn.IB1}
-ALL_ALGORITHMS = ALGORITHM_MAPPINGS.keys()
+ALL_ALGORITHMS = list(ALGORITHM_MAPPINGS.keys())
 
 VERIFY='verify'
 ACCURACY='accuracy'
@@ -80,7 +80,7 @@ CROSS_VALIDATION='cross_validation'
 
 class Classify(cl.CommandLineInterface):    
     def __init__(self):
-        cl.CommandLineInterface.__init__(self, ALGORITHM_MAPPINGS.keys(), ONE_R, a_help, f_help, t_help, T_help, g_help, o_help)
+        cl.CommandLineInterface.__init__(self, list(ALGORITHM_MAPPINGS.keys()), ONE_R, a_help, f_help, t_help, T_help, g_help, o_help)
         self.add_option("-v", "--verify", dest=VERIFY, action="store_true", default=False, help=v_help)
         self.add_option("-A", "--accuracy", dest=ACCURACY, action="store_false", default=True, help=A_help)
         self.add_option("-e", "--error", dest=ERROR, action="store_true", default=False, help=e_help)
@@ -103,7 +103,7 @@ class Classify(cl.CommandLineInterface):
             self.error('Invalid arguments. Cannot verify classification for test data.')
         
         file_strategy = get_file_strategy(self.files, self.training_path, self.test_path, self.gold_path, self.get_value(VERIFY))
-        self.training_path, self.test_path, self.gold_path = file_strategy.values()
+        self.training_path, self.test_path, self.gold_path = list(file_strategy.values())
         
         training, attributes, klass, test, gold = self.get_instances(self.training_path, self.test_path, self.gold_path, cross_validation_fold is not None)
         classifier = ALGORITHM_MAPPINGS[self.algorithm](training, attributes, klass)
@@ -165,14 +165,14 @@ class CrossValidationStrategy:
             total = 0
             for each in self.confusion_matrices:
                 total += getattr(each, attribute)()
-            print >>log, str_repn + ': ' + str(float(total)/len(self.confusion_matrices))
+            print(str_repn + ': ' + str(float(total)/len(self.confusion_matrices)), file=log)
         
     def write(self, log, should_write, data_format, suffix):
         if should_write:
             for index in range(len(self.gold_instances)):
                 new_path = self.training_path + str(index + 1) + suffix
                 data_format.write_gold(self.gold_instances[index], new_path)
-                print >>log, 'Gold classification written to ' + new_path + ' file.'
+                print('Gold classification written to ' + new_path + ' file.', file=log)
     
     def train(self):
         #do Nothing
@@ -198,7 +198,7 @@ class TestStrategy:
         Will always write in the case of test files
         """
         data_format.write_test(self.test, self.test_path + suffix)
-        print >>log, 'Test classification written to ' + self.test_path + suffix + ' file.'
+        print('Test classification written to ' + self.test_path + suffix + ' file.', file=log)
         
     def train(self):
         self.classifier.train()
@@ -223,12 +223,12 @@ class VerifyStrategy:
         
     def __print_value(self, log, is_true, attribute, str_repn):
         if is_true: 
-            print >>log, str_repn + ': ' + getattr(self.confusion_matrix, attribute)().__str__()
+            print(str_repn + ': ' + getattr(self.confusion_matrix, attribute)().__str__(), file=log)
             
     def write(self, log, should_write, data_format, suffix):
         if should_write:
             data_format.write_gold(self.gold, self.gold_path + suffix)
-            print >>log, 'Gold classification written to ' + self.gold_path + suffix + ' file.'
+            print('Gold classification written to ' + self.gold_path + suffix + ' file.', file=log)
             
     def train(self):
         self.classifier.train()

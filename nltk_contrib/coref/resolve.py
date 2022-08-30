@@ -10,14 +10,14 @@ import time
 import optparse
 
 try:
-    import cPickle as pickle
+    import pickle as pickle
 except:
     import pickle
     
 try:
-    from cStringIO import StringIO
+    from io import StringIO
 except:
-    from StringIO import StringIO
+    from io import StringIO
 
 from nltk.util import LazyMap, LazyZip, LazyConcatenation, LazyEnumerate
 
@@ -129,23 +129,23 @@ def baseline_coref_resolver_demo():
     resolved_mentions = resolver.resolve_mentions(mentions)
     resolved_discourse = resolver.resolve(sents)
         
-    print 'Baseline coref resolver demo...'
-    print 'Mentions:'
+    print('Baseline coref resolver demo...')
+    print('Mentions:')
     for mention in mentions:
-        print mention
-    print
-    print 'Resolved mentions:'
+        print(mention)
+    print()
+    print('Resolved mentions:')
     for mention in resolved_mentions:
-        print mention
-    print
-    print 'Resolved discourse:'
+        print(mention)
+    print()
+    print('Resolved discourse:')
     for sent in resolved_discourse:
-        print sent
-        print
-    print
+        print(sent)
+        print()
+    print()
     
 def demo():
-    print 'Demo...'
+    print('Demo...')
     baseline_coref_resolver_demo()
     # muc6_test = LazyCorpusLoader(
     #         'muc6', MUC6CorpusReader, 
@@ -184,7 +184,7 @@ def demo():
     #     print
 
 if __name__ == '__main__':
-    print time.ctime(time.time())
+    print((time.ctime(time.time())))
         
     parser = optparse.OptionParser()
     parser.add_option('-d', '--demo', action='store_true', dest='demo',
@@ -322,9 +322,9 @@ if __name__ == '__main__':
             pred_tags = model.tag(words)
             for x, y, z in zip(pred_tags, gold_tags, words):
                 if x == y:
-                    print '  ', (x, y, z)
+                    print(('  ', (x, y, z)))
                 else:
-                    print '* ', (x, y, z)
+                    print(('* ', (x, y, z)))
 
     elif options.train_ner == 'classifier2':
         muc6_train = LazyCorpusLoader(
@@ -352,11 +352,11 @@ if __name__ == '__main__':
             pred_tags = model.tag(words)
             for x, y, z in zip(pred_tags, gold_tags, words):
                 if x == y:
-                    print '  ', (x, y, z)
+                    print(('  ', (x, y, z)))
                 else:
-                    print '* ', (x, y, z)
+                    print(('* ', (x, y, z)))
 
     elif options.demo:
         demo()
 
-    print time.ctime(time.time())
+    print((time.ctime(time.time())))

@@ -58,7 +58,7 @@ MIN_FOLD=2
 
 class FeatureSelect(cl.CommandLineInterface):
     def __init__(self):
-        cl.CommandLineInterface.__init__(self, ALGORITHM_MAPPINGS.keys(), RANK, a_help, f_help, t_help, T_help, g_help, o_help)        
+        cl.CommandLineInterface.__init__(self, list(ALGORITHM_MAPPINGS.keys()), RANK, a_help, f_help, t_help, T_help, g_help, o_help)        
         
     def execute(self):
         cl.CommandLineInterface.execute(self)
@@ -221,7 +221,7 @@ def isfloat(stringval):
     try:
         float(stringval)
         return True
-    except (ValueError, TypeError), e: return False 
+    except (ValueError, TypeError) as e: return False 
                             
 def batch_filter_select(base_path, suffixes, number_of_attributes, log_path, has_continuous):
     filter_suffixes = []
@@ -229,7 +229,7 @@ def batch_filter_select(base_path, suffixes, number_of_attributes, log_path, has
         for selection_criteria in [INFORMATION_GAIN, GAIN_RATIO]:
             feat_sel = FeatureSelect()
             params = ['-a', RANK, '-f', base_path + each, '-o', selection_criteria + ',' + str(number_of_attributes), '-l', log_path]
-            print "Params " + str(params)
+            print(("Params " + str(params)))
             feat_sel.run(params)
             filter_suffixes.append(each + feat_sel.get_suffix())
     return filter_suffixes
@@ -240,7 +240,7 @@ def batch_wrapper_select(base_path, suffixes, classifier, fold, delta, log_path)
         for alg in [FORWARD_SELECTION, BACKWARD_ELIMINATION]:
             feat_sel = FeatureSelect()
             params = ['-a', alg, '-f', base_path + each, '-o', classifier + ',' + str(fold) + ',' + str(delta), '-l', log_path]
-            print "Params " + str(params)
+            print(("Params " + str(params)))
             feat_sel.run(params)
             wrapper_suffixes.append(each + feat_sel.get_suffix())
     return wrapper_suffixes
