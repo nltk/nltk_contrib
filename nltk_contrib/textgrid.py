@@ -266,10 +266,10 @@ class TextGrid(object):
         oo_file = ""
         oo_file += "File type = \"ooTextFile\"\n"
         oo_file += "Object class = \"TextGrid\"\n\n"
-        oo_file += "xmin = ", self.xmin, "\n"
-        oo_file += "xmax = ", self.xmax, "\n"
+        oo_file += "xmin = " + str(self.xmin) + "\n"
+        oo_file += "xmax = " + str(self.xmax) + "\n"
         oo_file += "tiers? <exists>\n"
-        oo_file += "size = ", self.size, "\n"
+        oo_file += "size = " + str(self.size) + "\n"
         oo_file += "item []:\n"
         for i in range(len(self.tiers)):
             oo_file += "%4s%s [%s]" % ("", "item", i + 1)
