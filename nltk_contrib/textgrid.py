@@ -219,7 +219,7 @@ class TextGrid(object):
 
         if self.text_type == "ooTextFile":
             m = OOTEXTFILE
-            header = " +item \["
+            header = " +item ?\[[^]]*\]:"
         elif self.text_type == "ChronTextFile":
             m = CHRONTEXTFILE
             header = "\"\S+\" \".*\" \d+\.?\d* \d+\.?\d*"
