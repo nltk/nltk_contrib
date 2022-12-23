@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import constraint
+from . import constraint
 from copy import copy, deepcopy
-from util import validate_facts, Type, Rel, generate_phrase_rel
+from .util import validate_facts, Type, Rel, generate_phrase_rel
 
 class _RelationalVar:
   """Internal class used to represent relational variables"""
@@ -70,7 +70,7 @@ class Relational:
 
   def __fact_replace(self, fact, to_replace, replace_with):
     """Replaces all occurrences of to_replace in fact with replace_with"""
-    return fact[:2] + map(lambda fact_id: replace_with if (not isinstance(fact_id, _RelationalVar) and fact_id == to_replace) else fact_id, fact[2:])
+    return fact[:2] + [replace_with if (not isinstance(fact_id, _RelationalVar) and fact_id == to_replace) else fact_id for fact_id in fact[2:]]
 
   def __get_context_set(self, constraints, obj_var):
     """Returns a set of objects that fit the given constraints for obj_var"""
@@ -183,11 +183,11 @@ class Relational:
     rel = Relational(facts)
     obj_types = [f for f in facts if f[0] == Type] # Include types in the description for clarity
     handlers = {
-      "on" : lambda(lr): "on" if lr else "on which lies",
-      "in" : lambda(lr): "in" if lr else "in which lies"
+      "on" : lambda lr: "on" if lr else "on which lies",
+      "in" : lambda lr: "in" if lr else "in which lies"
     }
 
     # Generate an English description for each object
     for obj_id in ["c1", "c2", "c3", "b1", "b2", "t1", "t2", "f1"]:
-      print "%s: %s" % (obj_id, generate_phrase_rel(rel.describe(obj_id) + obj_types, ["color"], obj_id, handlers))
+      print(("%s: %s" % (obj_id, generate_phrase_rel(rel.describe(obj_id) + obj_types, ["color"], obj_id, handlers))))
 

@@ -31,7 +31,7 @@ def phon_representer(dumper, data):
         """
         Output 'phon' values in 'stem + affix' notation.
         """
-        return dumper.represent_scalar(u'!phon', u'%s + %s' % \
+        return dumper.represent_scalar('!phon', '%s + %s' % \
                                        (data['stem'], data['affix']))
 
 yaml.add_representer(Phon, phon_representer)
@@ -61,7 +61,7 @@ def phon_constructor(loader, node):
         stem, affix = [normalize(s) for s in value.split('+')]
         return Phon(stem, affix)
 
-yaml.add_constructor(u'!phon', phon_constructor)
+yaml.add_constructor('!phon', phon_constructor)
 
 #following causes YAML to barf for some reason:
 #pattern = re.compile(r'^(\?)?\w+\s*\+\s*(\?)?\w+$')

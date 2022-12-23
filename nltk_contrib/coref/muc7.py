@@ -273,21 +273,21 @@ def _demo(root, file):
 
     try:
         reader = MUC7CorpusReader(root, file)
-        print 'Paragraphs for %s:' % (file)
+        print(('Paragraphs for %s:' % (file)))
         for para in reader.paras():
-            print '    %s' % (para)
-            print
-        print 'Sentences for %s:' % (file)
+            print(('    %s' % (para)))
+            print()
+        print(('Sentences for %s:' % (file)))
         for sent in reader.sents():
-            print '    %s' % (sent)
-        print
-        print 'Words for %s:' % (file)
+            print(('    %s' % (sent)))
+        print()
+        print(('Words for %s:' % (file)))
         for word in reader.words():
-            print '    %s' % (word)
-        print
-    except Exception, e:
-        print 'Error encountered while running demo for %s: %s' % (file, e)
-        print
+            print(('    %s' % (word)))
+        print()
+    except Exception as e:
+        print(('Error encountered while running demo for %s: %s' % (file, e)))
+        print()
 
 def demo():
     """

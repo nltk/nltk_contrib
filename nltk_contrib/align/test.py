@@ -1,7 +1,7 @@
 
-import align_util
-import align
-import distance_measures
+from . import align_util
+from . import align
+from . import distance_measures
 
 import sys
 
@@ -56,7 +56,7 @@ def demo():
     
     gc_alignment = gc.batch_align(regions1, regions2)  
     
-    print "Alignment0: %s" % gc_alignment
+    print(("Alignment0: %s" % gc_alignment))
         
     #demo_eval(gc_alignment, gold_file)    
         
@@ -78,7 +78,7 @@ def demo():
                                                                 
     gc_alignment = gc.batch_align(regions1, regions2)  
     
-    print "Alignment1: %s" % gc_alignment
+    print(("Alignment1: %s" % gc_alignment))
         
     #demo_eval(gc_alignment, gold_file)
     
@@ -97,7 +97,7 @@ def demo():
         
     standard_alignment2 = std.batch_align(s2, t2)
     
-    print "Alignment2: %s" % standard_alignment2
+    print(("Alignment2: %s" % standard_alignment2))
     
     # demo 4
     
@@ -109,14 +109,14 @@ def demo():
     
     standard_alignment3 = std.align(s3, t3)
     
-    print "Alignment3: %s" % standard_alignment3
+    print(("Alignment3: %s" % standard_alignment3))
     
     # demo 5
     
     top_down_alignments = std.recursive_align(s3, t3, [])  
     
     for alignment in top_down_alignments:
-        print "Top down align: %s" % alignment
+        print(("Top down align: %s" % alignment))
 
 def madame_bovary_test(source_file, target_file, source_pickle_file, target_pickle_file):
     

@@ -1,5 +1,5 @@
 from qt import *
-import lpath
+from . import lpath
 
 class SqlViewDialog(QDialog):
     def __init__(self, lpql=None, parent=None, name=None,

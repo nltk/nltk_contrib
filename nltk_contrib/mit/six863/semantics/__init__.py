@@ -131,7 +131,7 @@ class AbstractParse(ParseI):
         """
         # Make sure we're not directly instantiated:
         if self.__class__ == AbstractParse:
-            raise AssertionError, "Abstract classes can't be instantiated"
+            raise AssertionError("Abstract classes can't be instantiated")
 
     def parse(self, sentence):
         return self.get_parse_list(sentence.split())
@@ -155,9 +155,9 @@ class AbstractParse(ParseI):
             line = line.strip()
             if not line: continue 
             if line.startswith('#'):
-                print line
+                print(line)
                 continue
-            print "Sentence:", line
+            print(("Sentence:", line))
             parses = self.parse(line)
-            print "%d parses." % len(parses)
-            for tree in parses: print tree
+            print(("%d parses." % len(parses)))
+            for tree in parses: print(tree)

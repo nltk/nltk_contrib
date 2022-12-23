@@ -52,7 +52,7 @@ FCDic = {
 
 ## List of all features
 
-featList = FCDic.keys()
+featList = list(FCDic.keys())
 
 LClist = ['L', 'C', 'D']
 PClist = ['C', 'D'] 

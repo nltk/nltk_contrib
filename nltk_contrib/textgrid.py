@@ -150,7 +150,7 @@ class TextGrid(object):
         for tier in self.tiers:
             yield tier
 
-    def next(self):
+    def __next__(self):
         if self.idx == (self.size - 1):
             raise StopIteration
         self.idx += 1
@@ -450,11 +450,11 @@ def demo_TextGrid(demo_data):
     print("** Demo of the TextGrid class. **")
 
     fid = TextGrid(demo_data)
-    print("Tiers: %s" % (fid.size))
+    print(("Tiers: %s" % (fid.size)))
 
     for i, tier in enumerate(fid):
         print("\n***")
-        print("Tier: %s" % (i + 1))
+        print(("Tier: %s" % (i + 1)))
         print(tier)
 
 def demo():

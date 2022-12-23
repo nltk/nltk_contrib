@@ -1,10 +1,10 @@
 from qt import *
 from qtcanvas import *
-from treecanvasnode import *
-from nodefeaturedialog import *
-from translator import translate
-from axis import *
-import lpath
+from .treecanvasnode import *
+from .nodefeaturedialog import *
+from .translator import translate
+from .axis import *
+from . import lpath
 import math
 
 class FilterExpressionPopup(QLabel):
@@ -59,7 +59,7 @@ class FilterExpressionPopup(QLabel):
         s,ans = QInputDialog.getText('Edit Filter Expression','Enter new filter expression',
                                      QLineEdit.Normal,self.text(),self)
         if ans:
-            s = unicode(s).strip()
+            s = str(s).strip()
             if s:
                 self.node.filterExpression = s
             else:
@@ -132,7 +132,7 @@ class TreeCanvasView(QCanvasView):
                 s,ans = QInputDialog.getText('New Filter Expression','Enter filter expression',
                                              QLineEdit.Normal,s,self)
                 if ans:
-                    s = unicode(s).strip()
+                    s = str(s).strip()
                     if s:
                         if lpath.translate("//A[%s]"%s) is None:
                             QMessageBox.critical(self,"Error","Invalid filter expression.")
@@ -147,7 +147,7 @@ class TreeCanvasView(QCanvasView):
             s,ans = QInputDialog.getText('Edit Label','Enter new label',
                                          QLineEdit.Normal,item.node.label,self)
             if ans:
-                s = unicode(s).strip()
+                s = str(s).strip()
                 if s:
                     if 'originalLabel' not in item.node.data:
                         item.node.data['originalLabel'] = item.node.label

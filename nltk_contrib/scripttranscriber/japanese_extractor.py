@@ -31,7 +31,7 @@ class KatakanaExtractor(chinese_extractor.EastAsianExtractor):
   """
 
   def LineSegment(self, line):
-    try: utext = unicode(line.strip(), 'utf-8')
+    try: utext = str(line.strip(), 'utf-8')
     except TypeError: utext = line.strip()
     word = []
     for u in utext:

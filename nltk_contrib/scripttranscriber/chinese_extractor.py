@@ -1305,7 +1305,7 @@ class ChineseExtractor(EastAsianExtractor):
   """
 
   def LineSegment(self, line):
-    try: utext = unicode(line.strip(), 'utf-8')
+    try: utext = str(line.strip(), 'utf-8')
     except TypeError: utext = line.strip()
     word = []
     for u in utext:
@@ -1331,7 +1331,7 @@ class ChinesePersonalNameExtractor(EastAsianExtractor):
   """
 
   def LineSegment(self, line):
-    try: utext = unicode(line.strip(), 'utf-8')
+    try: utext = str(line.strip(), 'utf-8')
     except TypeError: utext = line.strip()
     for i in range(len(utext)):
       for k in [4, 3, 2]:

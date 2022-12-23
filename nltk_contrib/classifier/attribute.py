@@ -8,7 +8,7 @@
 from nltk_contrib.classifier.exceptions import systemerror as se
 from nltk_contrib.classifier import autoclass as ac, cfile, decisionstump as ds
 from nltk import probability as prob
-import UserList
+import collections
 
 CONTINUOUS = 'continuous'
 DISCRETE = 'discrete'
@@ -58,7 +58,7 @@ class Attribute:
     def __hash__(self):
         return hash(self.name) + hash(self.index)        
             
-class Attributes(UserList.UserList):
+class Attributes(collections.UserList):
     def __init__(self, attributes = []):
         self.data = attributes
 
@@ -84,7 +84,7 @@ class Attributes(UserList.UserList):
             self.data[disc_attr.index] = disc_attr
             
     def empty_decision_stumps(self, ignore_attributes, klass):
-        filtered = filter(lambda attribute: attribute not in ignore_attributes, self.data)
+        filtered = [attribute for attribute in self.data if attribute not in ignore_attributes]
         return [ds.DecisionStump(attribute, klass) for attribute in filtered]
 
     def remove_attributes(self, attributes):

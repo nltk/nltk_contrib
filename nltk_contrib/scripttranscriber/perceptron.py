@@ -170,7 +170,7 @@ class FeatureMap:
     """Dump the entire feature map to a file whose name is given as the parameter.
     """
     fm_fp = open(feature_map_file, 'w')
-    for k, v in self.feature_dic_.iteritems():
+    for k, v in list(self.feature_dic_.items()):
       fm_fp.write(k + '\t' + str(v) + '\n')
     fm_fp.close()
     return True

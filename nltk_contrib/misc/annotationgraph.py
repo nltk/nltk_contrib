@@ -12,7 +12,7 @@ class AnnotationGraph(object):
     def __init__(self, t):
         self._edges = []
         self._len = len(t.leaves())
-        self._nodes = range(self._len)
+        self._nodes = list(range(self._len))
         self._convert(t, 0)
         self._index = Index((start, (end, label)) for (start, end, label) in self._edges)
     
@@ -75,7 +75,7 @@ def demo():
     t = Tree(s)
     ag = AnnotationGraph(t)
     for p in ag.pas2([]):
-        print p
+        print(p)
 
 if __name__ == '__main__':
     demo()

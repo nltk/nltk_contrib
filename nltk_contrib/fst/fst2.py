@@ -965,8 +965,8 @@ class FST(object):
                     uniqueArcs[(src,dst)] += [(in_str,out_str)]
                 else:
                     uniqueArcs[(src,dst)] = [(in_str,out_str)]
-            ratio = float(len(uniqueArcs.keys())) / float(stateCount)
-            for src,dst in uniqueArcs.keys():
+            ratio = float(len(list(uniqueArcs.keys()))) / float(stateCount)
+            for src,dst in list(uniqueArcs.keys()):
                 uniqueArcs[(src,dst)].sort()
                 sortedArcs = FST.mergeRuns(uniqueArcs[(src,dst)],minRun)
                 label = ""
@@ -1467,7 +1467,7 @@ class FSTDemo:
         if self.stepper is None: return
 
         # Perform one step.
-        try: result, val = self.stepper.next()
+        try: result, val = next(self.stepper)
         except StopIteration: return
 
         if result == 'fail':
@@ -1481,7 +1481,7 @@ class FSTDemo:
             self.out_text.insert('end', ' (Finished!)')
         elif result == 'backtrack':
             self.out_text.insert('end', ' (Backtrack)')
-            for state, widget in self.graph.state_widgets.items():
+            for state, widget in list(self.graph.state_widgets.items()):
                 if state == val: self.graph.mark_state(state, '#f0b0b0')
                 else: self.graph.unmark_state(state)
         else:
@@ -1512,7 +1512,7 @@ class FSTDemo:
             self.state_descr.insert('end', state_descr or '')
 
             # Highlight the new dst state.
-            for state, widget in self.graph.state_widgets.items():
+            for state, widget in list(self.graph.state_widgets.items()):
                 if state == fst.dst(arc):
                     self.graph.mark_state(state, '#00ff00')
                 elif state == fst.src(arc):
@@ -1520,7 +1520,7 @@ class FSTDemo:
                 else: self.graph.unmark_state(state)
         
             # Highlight the new arc.
-            for a, widget in self.graph.arc_widgets.items():
+            for a, widget in list(self.graph.arc_widgets.items()):
                 if a == arc: self.graph.mark_arc(a)
                 else: self.graph.unmark_arc(a)
 
@@ -1571,11 +1571,11 @@ if __name__ == '__main__':
         end ->
         """)
 
-    print "john eats the bread ->"
-    print '  '+ ' '.join(fst.transduce("john eats the bread".split()))
+    print("john eats the bread ->")
+    print(('  '+ ' '.join(fst.transduce("john eats the bread".split()))))
     rev = fst.inverted()
-    print "la vache mange de l'herbe ->"
-    print '  '+' '.join(rev.transduce("la vache mange de l'herbe".split()))
+    print("la vache mange de l'herbe ->")
+    print(('  '+' '.join(rev.transduce("la vache mange de l'herbe".split()))))
 
     demo = FSTDemo(fst)
     demo.transduce("the cow eats the bread".split())

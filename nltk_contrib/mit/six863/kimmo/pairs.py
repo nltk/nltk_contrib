@@ -66,5 +66,5 @@ class KimmoPair(object):
         parts = text.split(':')
         if len(parts) == 1: return KimmoPair(text, text)
         elif len(parts) == 2: return KimmoPair(parts[0], parts[1])
-        else: raise ValueError, "Bad format for pair: %s" % text
+        else: raise ValueError("Bad format for pair: %s" % text)
 

@@ -1,4 +1,4 @@
-from textanalyzer import *
+from .textanalyzer import *
 import math
 
 class ReadabilityTool:
@@ -196,17 +196,17 @@ class ReadabilityTool:
 #        print ' RIX : %.1f' % rix
 #        print '*' * 70
         
-        print "=" * 100
-        print "Recommended tests for lang: %s" % self.lang 
-        print "=" * 100
-        for testname in self.tests_given_lang[self.lang].keys():
-            print testname + " : %.2f" % self.tests_given_lang[self.lang][testname](text)
-        print "=" * 100
-        print "Other tests: (Warning! Use with care)"
-        print "=" * 100 
-        for testname in self.tests_given_lang["all"].keys():
-            if not self.tests_given_lang[self.lang].has_key(testname):
-                print testname + " : %.2f" % self.tests_given_lang["all"][testname](text) 
+        print(("=" * 100))
+        print(("Recommended tests for lang: %s" % self.lang)) 
+        print(("=" * 100))
+        for testname in list(self.tests_given_lang[self.lang].keys()):
+            print((testname + " : %.2f" % self.tests_given_lang[self.lang][testname](text)))
+        print(("=" * 100))
+        print("Other tests: (Warning! Use with care)")
+        print(("=" * 100)) 
+        for testname in list(self.tests_given_lang["all"].keys()):
+            if testname not in self.tests_given_lang[self.lang]:
+                print((testname + " : %.2f" % self.tests_given_lang["all"][testname](text))) 
             
  
     def demo(self):

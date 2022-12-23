@@ -13,13 +13,13 @@
 
 import sys
 
-print '<html>'
-print '<head>'
-print '<title>Pydoc for ScriptTranscriber</title>'
-print '</head>'
-print '<body>'
+print('<html>')
+print('<head>')
+print('<title>Pydoc for ScriptTranscriber</title>')
+print('</head>')
+print('<body>')
 for line in sys.stdin.readlines():
   html = line.strip()
-  print '<a href="%s">%s</a><br>' % (html, html)
-print '</body>'
-print '</html>'
+  print(('<a href="%s">%s</a><br>' % (html, html)))
+print('</body>')
+print('</html>')

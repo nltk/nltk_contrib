@@ -105,7 +105,7 @@ def ComputePhoneMatches(doclist):
           comparator.ComputeDistance()
           result = comparator.ComparisonResult()
           matches[(hash1, hash2)] = result
-  values = matches.values()
+  values = list(matches.values())
   values.sort(lambda x, y: cmp(x.Cost(), y.Cost()))
   p = open(MATCH_FILE_, 'w') ## zero out the file
   p.close()
@@ -130,7 +130,7 @@ def ComputeTimeCorrelation(doclist):
           comparator.ComputeDistance()
           result = comparator.ComparisonResult()
           correlates[(hash1, hash2)] = result
-  values = correlates.values()
+  values = list(correlates.values())
   values.sort(lambda x, y: cmp(x.Cost(), y.Cost()))
   p = open(CORR_FILE_, 'w') ## zero out the file
   p.close()

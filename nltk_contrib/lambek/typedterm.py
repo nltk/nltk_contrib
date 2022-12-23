@@ -9,7 +9,7 @@
 """CG-style types"""
 
 import types
-from term import *
+from .term import *
 
 #####################################
 # TYPEDTERM
@@ -26,14 +26,14 @@ class TypedTerm:
         self.type = type
 
     def __repr__(self):
-        return `self.term`+': '+`self.type`
+        return repr(self.term)+': '+repr(self.type)
 
     def pp(self, pp_varmap=None):
-        return self.term.pp(pp_varmap)+': '+`self.type`
+        return self.term.pp(pp_varmap)+': '+repr(self.type)
 
     def to_latex(self, pp_varmap=None):
         term = self.term.to_latex(pp_varmap)
-        type = `self.type`
+        type = repr(self.type)
         type = re.sub(r'\\', r'$\\backslash$', type)
         type = re.sub(r'\*', r'$\\cdot$', type)
         return term+': \\textrm{'+type+'}'
@@ -72,11 +72,11 @@ class LSlash(Type):
     def __repr__(self):
         if isinstance(self.result, RSlash) or \
            isinstance(self.result, LSlash):
-            right = '('+`self.result`+')'
-        else: right = `self.result`
+            right = '('+repr(self.result)+')'
+        else: right = repr(self.result)
         if isinstance(self.arg, RSlash):
-            left = '('+`self.arg`+')'
-        else: left = `self.arg`
+            left = '('+repr(self.arg)+')'
+        else: left = repr(self.arg)
         return left + '\\' + right
     def __cmp__(self, other):
         if isinstance(other, LSlash) and  self.arg == other.arg and \
@@ -95,15 +95,15 @@ class RSlash(Type):
             raise TypeError('Expected Type arguments')
     def __repr__(self):
         if isinstance(self.result, RSlash):
-            left = '('+`self.result`+')'
-        else: left = `self.result`
-        return left + '/' + `self.arg`
+            left = '('+repr(self.result)+')'
+        else: left = repr(self.result)
+        return left + '/' + repr(self.arg)
     
         #return '('+`self.result`+'/'+`self.arg`+')'
         if isinstance(self.arg, LSlash):
-            return `self.result`+'/('+`self.arg`+')'
+            return repr(self.result)+'/('+repr(self.arg)+')'
         else:
-            return `self.result`+'/'+`self.arg`
+            return repr(self.result)+'/'+repr(self.arg)
     def __cmp__(self, other):
         if isinstance(other, RSlash) and  self.arg == other.arg and \
            self.result == other.result:
@@ -113,7 +113,7 @@ class RSlash(Type):
             
 class BaseType(Type):
     def __init__(self, name):
-        if type(name) != types.StringType:
+        if type(name) != bytes:
             raise TypeError("Expected a string name")
         self.name = name
     def __repr__(self):
@@ -131,7 +131,7 @@ class Dot(Type):
         if not isinstance(right, Type) or not isinstance(left, Type):
             raise TypeError('Expected Type arguments')
     def __repr__(self):
-        return '('+`self.left`+'*'+`self.right`+')'
+        return '('+repr(self.left)+'*'+repr(self.right)+')'
     def __cmp__(self, other):
         if isinstance(other, Dot) and  self.left == other.left and \
            self.right == other.right:
@@ -205,7 +205,7 @@ def parse_type(str):
         else: i += 1
 
     if len(segments) != 1:
-        print 'Ouch!!', segments, ops
+        print(('Ouch!!', segments, ops))
 
     return segments[0]
         
@@ -219,16 +219,16 @@ def test():
     vp = LSlash(np, s)
     v2 = RSlash(vp, np)
     AB = Dot(A, B)
-    print v2
-    print AB
-    print LSlash(AB, v2)
-    print Dot(v2, AB)
+    print(v2)
+    print(AB)
+    print((LSlash(AB, v2)))
+    print((Dot(v2, AB)))
 
-    print parse_type('A / B')
-    print parse_type('A \\ B')
-    print parse_type('A / B / C')
-    print parse_type('A * B')
-    print parse_type('A \\ B \\ C')
-    print parse_type('A \\ (B / C)')
-    print parse_type('(A / B) \\ C')
-    print parse_type('(A / B) \\ C')
+    print((parse_type('A / B')))
+    print((parse_type('A \\ B')))
+    print((parse_type('A / B / C')))
+    print((parse_type('A * B')))
+    print((parse_type('A \\ B \\ C')))
+    print((parse_type('A \\ (B / C)')))
+    print((parse_type('(A / B) \\ C')))
+    print((parse_type('(A / B) \\ C')))

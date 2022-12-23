@@ -78,10 +78,10 @@ for line in specialSyllables_no.splitlines():
     if line:
         toks = line.split()
         assert len(toks) == 2
-        syllablesInFile[_stripWord(unicode(toks[0],"latin-1").encode("utf-8"))] = int(toks[1])
+        syllablesInFile[_stripWord(str(toks[0],"latin-1").encode("utf-8"))] = int(toks[1])
 
 def count(word):
-    word = unicode(word,"utf-8").encode("utf-8")
+    word = str(word,"utf-8").encode("utf-8")
     word = _stripWord(word)
 
     if not word:
@@ -96,7 +96,7 @@ def count(word):
     # Count vowel groups
     count = 0
     prev_was_vowel = 0
-    vowels = [u"a", u"e", u"i", u"o", u"u", u"y", u"æ", u"ø", u"å"]
+    vowels = ["a", "e", "i", "o", "u", "y", "æ", "ø", "å"]
     #for vow in vowels:
         #vow = vow.decode("utf-8")
     for c in word.decode("utf-8"):

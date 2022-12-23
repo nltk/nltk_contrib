@@ -1,1 +1,1 @@
-from kimmo import *
+from .kimmo import *

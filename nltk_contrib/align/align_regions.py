@@ -7,8 +7,8 @@ import sys
 
 from nltk.metrics import scores
 
-import distance_measures
-import alignment_util
+from . import distance_measures
+from . import alignment_util
 
 ##//////////////////////////////////////////////////////
 ##  Alignment
@@ -81,7 +81,7 @@ class Alignment(object):
                             self.soft_regions_index)
             self.alignment_mappings.append(align_triple)
         else:
-            print "not supported alignment type"
+            print("not supported alignment type")
 
 ##//////////////////////////////////////////////////////
 ##  Aligner
@@ -132,10 +132,10 @@ class Aligner(object):
         (hard_regions2, number_of_hard_regions2) = tmp.find_sub_regions(self.hard_delimiter)        
         
         if (number_of_hard_regions1 != number_of_hard_regions2):
-            print "align_regions: input files do not contain the same number of hard regions" + '\n'
-            print "%s" % hard_delimiter + '\n'
-            print "%s has %d and %s has %d" % (self.input_file1, number_of_hard_regions1, \
-                                               self.input_file2, number_of_hard_regions2) + '\n'
+            print(("align_regions: input files do not contain the same number of hard regions" + '\n'))
+            print(("%s" % hard_delimiter + '\n'))
+            print(("%s has %d and %s has %d" % (self.input_file1, number_of_hard_regions1, \
+                                               self.input_file2, number_of_hard_regions2) + '\n'))
             
             return
         
@@ -225,7 +225,7 @@ class Aligner(object):
         path_x = [[0] * second_len for c in range(first_len)]              
         path_y = [[0] * second_len for c in range(first_len)]
                   
-        d1 = d2 = d3 = d4 = d5 = d6 = sys.maxint
+        d1 = d2 = d3 = d4 = d5 = d6 = sys.maxsize
         
         for j in range(0, ny + 1):    
             for i in range(0, nx + 1):            
@@ -234,46 +234,46 @@ class Aligner(object):
                     d1 = distances[i-1][j-1] + \
                         dist_funct(x[i-1], y[j-1], 0, 0)
                 else:
-                    d1 = sys.maxint
+                    d1 = sys.maxsize
                     
                 if (i > 0):	
                     #/* deletion */
                     d2 = distances[i-1][j] + \
                         dist_funct(x[i-1], 0, 0, 0)
                 else:
-                    d2 = sys.maxint
+                    d2 = sys.maxsize
                     
                 if (j > 0):		
                     #/* insertion */
                     d3 = distances[i][j-1] + \
                         dist_funct(0, y[j-1], 0, 0)
                 else:
-                    d3 = sys.maxint
+                    d3 = sys.maxsize
                     
                 if (i > 1 and j > 0):		
                     #/* contraction */
                     d4 = distances[i-2][j-1] + \
                         dist_funct(x[i-2], y[j-1], x[i-1], 0)
                 else:
-                    d4 = sys.maxint
+                    d4 = sys.maxsize
                     
                 if (i > 0 and j > 1):		
                     #/* expansion */
                     d5 = distances[i-1][j-2] + \
                         dist_funct(x[i-1], y[j-2], 0, y[j-1])
                 else:
-                    d5 = sys.maxint
+                    d5 = sys.maxsize
                     
                 if (i > 1 and j > 1):		
                     #/* melding */
                     d6 = distances[i-2][j-2] + \
                         dist_funct(x[i-2], y[j-2], x[i-1], y[j-1])
                 else:
-                    d6 = sys.maxint
+                    d6 = sys.maxsize
      
                 dmin = min(d1, d2, d3, d4, d5, d6)
                 
-                if (dmin == sys.maxint):
+                if (dmin == sys.maxsize):
                     distances[i][j] = 0
                 elif (dmin == d1):
                     distances[i][j] = d1                
@@ -502,7 +502,7 @@ def demo_eval(alignments, gold_file):
          
     accuracy = scores.accuracy(reference_values, test_values)
     
-    print "accuracy: %.2f" % accuracy   
+    print(("accuracy: %.2f" % accuracy))   
                 
 def demo():
     """

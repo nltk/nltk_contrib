@@ -10,11 +10,11 @@
 #
 # $Id: category.py 4162 2007-03-01 00:46:05Z stevenbird $
 
-import logic
+from . import logic
 from nltk.cfg import *
 #from kimmo import kimmo
 
-from featurelite import *
+from .featurelite import *
 from copy import deepcopy
 import yaml
 # import nltk.yamltags
@@ -123,16 +123,16 @@ class Category(Nonterminal, FeatureI, SubstituteBindingsI):
         self._features[key] = value
 
     def items(self):
-        return self._features.items()
+        return list(self._features.items())
 
     def keys(self):
-        return self._features.keys()
+        return list(self._features.keys())
 
     def values(self):
-        return self._features.values()
+        return list(self._features.values())
 
     def has_key(self, key):
-        return self._features.has_key(key)
+        return key in self._features
     
     def symbol(self):
         """
@@ -161,7 +161,7 @@ class Category(Nonterminal, FeatureI, SubstituteBindingsI):
         """
         @return: a list of all features that have values.
         """
-        return self._features.keys()
+        return list(self._features.keys())
     
     has_feature = has_key
 
@@ -179,7 +179,7 @@ class Category(Nonterminal, FeatureI, SubstituteBindingsI):
     
     @staticmethod
     def _remove_unbound_vars(obj):
-        for (key, value) in obj.items():
+        for (key, value) in list(obj.items()):
             if isinstance(value, Variable):
                 del obj[key]
             elif isinstance(value, (Category, dict)):
@@ -206,7 +206,7 @@ class Category(Nonterminal, FeatureI, SubstituteBindingsI):
     def _str(cls, obj, reentrances, reentrance_ids, normalize=False):
         segments = []
 
-        keys = obj.keys()
+        keys = list(obj.keys())
         keys.sort()
         for fname in keys:
             if fname == cls.headname: continue
@@ -389,14 +389,14 @@ class Category(Nonterminal, FeatureI, SubstituteBindingsI):
         # Semantic value of the form <app(?x, ?y) >'; return an ApplicationExpression
         match = _PARSE_RE['application'].match(s, position)
         if match is not None:
-            fun = ParserSubstitute(match.group(2)).next()
-            arg = ParserSubstitute(match.group(3)).next()
+            fun = next(ParserSubstitute(match.group(2)))
+            arg = next(ParserSubstitute(match.group(3)))
             return logic.ApplicationExpressionSubst(fun, arg), match.end()       
 
         # other semantic value enclosed by '< >'; return value given by the lambda expr parser
         match = _PARSE_RE['semantics'].match(s, position)
         if match is not None:
-            return ParserSubstitute(match.group(1)).next(), match.end()
+            return next(ParserSubstitute(match.group(1))), match.end()
         
         # String value
         if s[position] in "'\"":
@@ -455,11 +455,11 @@ class Category(Nonterminal, FeatureI, SubstituteBindingsI):
         try:
             lhs, position = cls.inner_parse(s, position)
             lhs = cls(lhs)
-        except ValueError, e:
+        except ValueError as e:
             estr = ('Error parsing field structure\n\n\t' +
                     s + '\n\t' + ' '*e.args[1] + '^ ' +
                     'Expected %s\n' % e.args[0])
-            raise ValueError, estr
+            raise ValueError(estr)
         lhs.freeze()
 
         match = _PARSE_RE['arrow'].match(s, position)
@@ -473,11 +473,11 @@ class Category(Nonterminal, FeatureI, SubstituteBindingsI):
                 try:
                     val, position = cls.inner_parse(s, position, {})
                     if isinstance(val, dict): val = cls(val)
-                except ValueError, e:
+                except ValueError as e:
                     estr = ('Error parsing field structure\n\n\t' +
                         s + '\n\t' + ' '*e.args[1] + '^ ' +
                         'Expected %s\n' % e.args[0])
-                    raise ValueError, estr
+                    raise ValueError(estr)
                 if isinstance(val, Category): val.freeze()
                 rhs.append(val)
                 position = _PARSE_RE['whitespace'].match(s, position).end()
@@ -519,7 +519,7 @@ class GrammarCategory(Category):
     def _str(cls, obj, reentrances, reentrance_ids, normalize=False):
         segments = []
 
-        keys = obj.keys()
+        keys = list(obj.keys())
         keys.sort()
         for fname in keys:
             if fname == cls.headname: continue
@@ -576,9 +576,9 @@ class GrammarCategory(Category):
         if slash_match is not None:
             position = slash_match.end()
             slash, position = GrammarCategory._parseval(s, position, reentrances)
-            if isinstance(slash, basestring): slash = {'pos': slash}
+            if isinstance(slash, str): slash = {'pos': slash}
             body['/'] = unify(body.get('/'), slash)
-        elif not body.has_key('/'):
+        elif '/' not in body:
             body['/'] = False
         return cls(body), position
     
@@ -632,7 +632,7 @@ class GrammarFile(object):
         return lookup
 
     def earley_parser(self, trace=1):
-        from featurechart import FeatureEarleyChartParse
+        from .featurechart import FeatureEarleyChartParse
         if self.kimmo is None: lexicon = self.earley_lexicon()
         else: lexicon = self.kimmo_lexicon()
         
@@ -686,28 +686,28 @@ yaml.add_representer(Category, Category.to_yaml)
 yaml.add_representer(GrammarCategory, GrammarCategory.to_yaml)
 
 def demo():
-    print "Category(pos='n', agr=dict(number='pl', gender='f')):"
-    print
-    print Category(pos='n', agr=dict(number='pl', gender='f'))
-    print repr(Category(pos='n', agr=dict(number='pl', gender='f')))
-    print
-    print "GrammarCategory.parse('NP[sem=<bob>/NP'):"
-    print
-    print GrammarCategory.parse(r'NP[sem=<bob>]/NP')
-    print repr(GrammarCategory.parse(r'NP[sem=<bob>]/NP'))
-    print
-    print "GrammarCategory.parse('?x/?x'):"
-    print
-    print GrammarCategory.parse('?x/?x')
-    print repr(GrammarCategory.parse('?x/?x'))
-    print
-    print "GrammarCategory.parse('VP[+fin, agr=?x, tense=past]/NP[+pl, agr=?x]'):"
-    print
-    print GrammarCategory.parse('VP[+fin, agr=?x, tense=past]/NP[+pl, agr=?x]')
-    print repr(GrammarCategory.parse('VP[+fin, agr=?x, tense=past]/NP[+pl, agr=?x]'))
-    print
+    print("Category(pos='n', agr=dict(number='pl', gender='f')):")
+    print()
+    print((Category(pos='n', agr=dict(number='pl', gender='f'))))
+    print((repr(Category(pos='n', agr=dict(number='pl', gender='f')))))
+    print()
+    print("GrammarCategory.parse('NP[sem=<bob>/NP'):")
+    print()
+    print((GrammarCategory.parse(r'NP[sem=<bob>]/NP')))
+    print((repr(GrammarCategory.parse(r'NP[sem=<bob>]/NP'))))
+    print()
+    print("GrammarCategory.parse('?x/?x'):")
+    print()
+    print((GrammarCategory.parse('?x/?x')))
+    print((repr(GrammarCategory.parse('?x/?x'))))
+    print()
+    print("GrammarCategory.parse('VP[+fin, agr=?x, tense=past]/NP[+pl, agr=?x]'):")
+    print()
+    print((GrammarCategory.parse('VP[+fin, agr=?x, tense=past]/NP[+pl, agr=?x]')))
+    print((repr(GrammarCategory.parse('VP[+fin, agr=?x, tense=past]/NP[+pl, agr=?x]'))))
+    print()
     g = GrammarFile.read_file("speer.cfg")
-    print g.grammar()
+    print((g.grammar()))
     
 if __name__ == '__main__':
     demo()

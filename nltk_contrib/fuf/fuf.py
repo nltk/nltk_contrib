@@ -1,10 +1,10 @@
 import os
 import nltk
 
-from fufconvert import *
-from link import *
-from linearizer import *
-from util import output_html, flatten
+from .fufconvert import *
+from .link import *
+from .linearizer import *
+from .util import output_html, flatten
 
 
 class GrammarPathResolver(object):
@@ -41,7 +41,7 @@ class GrammarPathResolver(object):
 
         alts = list()
         fs = nltk.FeatStruct()
-        for gkey, gvalue in grammar.items():
+        for gkey, gvalue in list(grammar.items()):
             if gkey != "alt" and not gkey.startswith("alt_"):
                 #if isinstance(gvalue, basestring):
                 fs[gkey] = gvalue
@@ -63,7 +63,7 @@ class GrammarPathResolver(object):
 
         @return: list
         """
-        altkeys = fs[altname].keys()
+        altkeys = list(fs[altname].keys())
         altkeys = sorted([int(key) for key in altkeys if key != "_index_"], cmp)
         altkeys = [str(key) for key in altkeys]
 
@@ -107,7 +107,7 @@ class GrammarPathResolver(object):
         """
         if isinstance(pack, list):
             for subpack in pack:
-                for fkey, fvalue in fs.items():
+                for fkey, fvalue in list(fs.items()):
                     if (fkey in subpack) and \
                        GrammarPathResolver._is_subsumed_val(table, fs, fkey, subpack):
                         pass
@@ -120,7 +120,7 @@ class GrammarPathResolver(object):
                         subpack[fkey] = fvalue
         else:
             assert isinstance(pack, nltk.FeatStruct)
-            for fkey, fvalue in fs.items():
+            for fkey, fvalue in list(fs.items()):
                 if (fkey in pack) and \
                    GrammarPathResolver._is_subsumed_val(table, fs, fkey, pack):
                     pass
@@ -138,7 +138,7 @@ class GrammarPathResolver(object):
         path through the alternations.
         """
 
-        if isinstance(fstruct, basestring):
+        if isinstance(fstruct, str):
             return fstruct
         fs, alts = GrammarPathResolver.filter_for_alt(fstruct)
 
@@ -148,7 +148,7 @@ class GrammarPathResolver(object):
                 toplevel_pack =  GrammarPathResolver.alt_to_list(fstruct, altname)
                 subpack = list()
                 for item in toplevel_pack:
-                    if isinstance(item, nltk.FeatStruct) and len(item.keys()) == 0:
+                    if isinstance(item, nltk.FeatStruct) and len(list(item.keys())) == 0:
                         # empty feature - result of having opts
                         pass
                     elif isinstance(item, nltk.FeatStruct):
@@ -162,7 +162,7 @@ class GrammarPathResolver(object):
             return result
         else:
             total_packs = list()
-            for fkey, fvalue in fstruct.items():
+            for fkey, fvalue in list(fstruct.items()):
                 if isinstance(fvalue, nltk.FeatStruct):
                     subpack = list()
                     fs, alts = GrammarPathResolver.filter_for_alt(fvalue)
@@ -170,7 +170,7 @@ class GrammarPathResolver(object):
                         for item in self.resolve(fvalue):
                             newfs = nltk.FeatStruct()
                             newfs[fkey] = item
-                            for key, value in fvalue.items():
+                            for key, value in list(fvalue.items()):
                                 if not ('alt' in value):
                                     newfs[key] = value
                             subpack.append(newfs)
@@ -319,7 +319,7 @@ class Unifier(object):
             return True
 
         if ('pattern' in fstruct):
-            for fkey in subfs_val.keys():
+            for fkey in list(subfs_val.keys()):
                 if fkey in fstruct['pattern']:
                     return True
         return False
@@ -332,7 +332,7 @@ class Unifier(object):
             unifs = fs.unify(gr)
             if unifs:
                 resolver.resolve(unifs)
-                for fname, fval in unifs.items():
+                for fname, fval in list(unifs.items()):
                     if Unifier._isconstituent(unifs, fname, fval):
                         newval = Unifier._unify(fval, grs, resolver)
                         if newval:
@@ -366,24 +366,24 @@ if __name__ == "__main__":
     input_files = ['ir2.fuf']
     for ifile, gfile in zip(input_files, grammar_files):
         if ifile == 'ir3.fuf' and gfile == 'gr3.fuf':
-            print 'gr3.fuf doesn\'t work because of the (* focus) s-expression in the feature structure'
+            print('gr3.fuf doesn\'t work because of the (* focus) s-expression in the feature structure')
             continue
         # input files contain more than one definition of input
         output = None
         result = None
-        print "\nINPUT FILE: %s, GRAMMAR FILE: %s" % (ifile, gfile)
+        print(("\nINPUT FILE: %s, GRAMMAR FILE: %s" % (ifile, gfile)))
         gfs = fuf_to_featstruct(open('tests/%s' % gfile).read())
         for i, iline in enumerate(open('tests/%s' % ifile).readlines()):
             try:
                 ifs = fuf_to_featstruct(iline)
-            except Exception, e:
-                print 'Failed to convert %s to nltk.FeatStruct' % iline
+            except Exception as e:
+                print(('Failed to convert %s to nltk.FeatStruct' % iline))
                 exit()
             fuf = Unifier(ifs, gfs)
             result = fuf.unify()
             if result:
                 output = " ".join(linearize(result))
-                print output_html([ifs, gfs, result, output])
-                print i, "result:", output
+                print((output_html([ifs, gfs, result, output])))
+                print((i, "result:", output))
             else:
-                print i, 'result: failed'
+                print((i, 'result: failed'))

@@ -225,16 +225,16 @@ class IndexConcordance(object):
         reg = re.compile(middleRegexp)
 
         if verbose:
-            print "Matching the following target words:"
+            print("Matching the following target words:")
         wordLocs = []
         # get list of (sentence, word) pairs to get context for
-        for item in self.index.getIndex().iteritems():
+        for item in list(self.index.getIndex().items()):
             if reg.match("/".join([item[0][0].lower(), item[0][1]])):
                 if verbose:
-                    print "/".join(item[0])
+                    print(("/".join(item[0])))
                 wordLocs.append(item[1])
                 
-        print ""
+        print("")
 
         items = []
         # if context lengths are specified in words:
@@ -358,24 +358,24 @@ class IndexConcordance(object):
                     items.append((left, target, right, sentenceNum))
 
         if verbose:
-            print "Found %d matches for target word..." % len(items)
+            print(("Found %d matches for target word..." % len(items)))
 
         # sort the concordance
         if sort == self.SORT_WORD:
             if verbose:
-                print "Sorting by target word..."
+                print("Sorting by target word...")
             items.sort(key=lambda i:i[1][0].lower())
         elif sort == self.SORT_POS:
             if verbose:
-                print "Sorting by target word POS tag..."
+                print("Sorting by target word POS tag...")
             items.sort(key=lambda i:i[1][1].lower())
         elif sort == self.SORT_NUM:
             if verbose:
-                print "Sorting by sentence number..."
+                print("Sorting by sentence number...")
             items.sort(key=lambda i:i[3])
         elif sort == self.SORT_RIGHT_CONTEXT:
             if verbose:
-                print "Sorting by first word of right context..."
+                print("Sorting by first word of right context...")
             items.sort(key=lambda i:i[2][0][0])
 
         # if any regular expressions have been given for the context, filter
@@ -390,11 +390,11 @@ class IndexConcordance(object):
             rightRe=None
             if leftRegexp != None:
                 if verbose:
-                    print "Filtering on left context..."
+                    print("Filtering on left context...")
                 leftRe = re.compile(leftRegexp)
             if rightRegexp != None:
                 if verbose:
-                    print "Filtering on right context..."
+                    print("Filtering on right context...")
                 rightRe = re.compile(rightRegexp)
             
             for item in items:
@@ -515,11 +515,11 @@ class IndexConcordance(object):
             rPad = int(floor(max(maxMiddleLength - len(middle), 0) / 2.0))
             middle = " "*lPad + middle + " "*rPad
             
-            print left + "| " + middle + " | " + right + " "
+            print((left + "| " + middle + " | " + right + " "))
             count += 1
         
         if verbose:    
-            print "\n" + repr(count) + " lines"
+            print(("\n" + repr(count) + " lines"))
 
     def _matches(self, item, leftRe, rightRe):
         """ Private method that runs the given regexps over a raw concordance
@@ -798,10 +798,10 @@ class Aggregator(object):
             x = 0
             other = 0
             total = 0
-            print name
-            print "-"*(maxKeyLength + 7)
+            print(name)
+            print(("-"*(maxKeyLength + 7)))
             # for each key:
-            for key in dist.keys():
+            for key in list(dist.keys()):
                 # keep track of how many samples shown, if using the showFirstX
                 # option
                 #if showFirstX > 0 and x >= showFirstX:
@@ -823,7 +823,7 @@ class Aggregator(object):
                 if count < threshold or (showFirstX > 0 and x >= showFirstX):
                     other += count
                 else:
-                    print key + " "*(maxKeyLength - len(key) + 1) + countString
+                    print((key + " "*(maxKeyLength - len(key) + 1) + countString))
                 x += 1
 
             if countOther:
@@ -833,7 +833,7 @@ class Aggregator(object):
                 else:
                     count = other
                     countString = str(count)
-                print self._OTHER_TEXT + " "*(maxKeyLength - len(self._OTHER_TEXT) + 1) + countString
+                print((self._OTHER_TEXT + " "*(maxKeyLength - len(self._OTHER_TEXT) + 1) + countString))
             if showTotal:
                 if normalise:
                     count = 1.0 * total
@@ -841,21 +841,21 @@ class Aggregator(object):
                 else:
                     count = total
                     countString = str(count)
-                print self._TOTAL_TEXT + " "*(maxKeyLength - len(self._TOTAL_TEXT) + 1) + countString
-            print ""
+                print((self._TOTAL_TEXT + " "*(maxKeyLength - len(self._TOTAL_TEXT) + 1) + countString))
+            print("")
             
 def demo():
     """
     Demonstrates how to use IndexConcordance and Aggregator.
     """
-    print "Reading Brown Corpus into memory..."
+    print("Reading Brown Corpus into memory...")
     corpus = brown.tagged_sents('a')
-    print "Generating index..."
+    print("Generating index...")
     ic = IndexConcordance(corpus)
-    print "Showing all occurences of 'plasma' in the Brown Corpus..."
+    print("Showing all occurences of 'plasma' in the Brown Corpus...")
     ic.formatted(middleRegexp="^plasma/.*", verbose=True)
 
-    print "Investigating the collocates of 'deal' and derivatives..."
+    print("Investigating the collocates of 'deal' and derivatives...")
     agg = Aggregator()
     agg.add(ic.raw(middleRegexp="^deal", leftContextLength=1, rightContextLength=0,
     leftRegexp="^(\w|\s|/)*$"), "Brown Corpus 'deal' left collocates")

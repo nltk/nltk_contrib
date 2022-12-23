@@ -1,7 +1,7 @@
 import string
 
 from copy import copy, deepcopy
-from util import validate_facts, Type, Rel, generate_phrase
+from .util import validate_facts, Type, Rel, generate_phrase
 
 class Incremental:
     """
@@ -181,7 +181,7 @@ class Incremental:
         # Print English description for each object
         for obj_id in ["obj1", "obj2", "obj3"]:
             obj_type = [f for f in facts if f[0] == Type and f[2] == obj_id] # Include type for clarity
-            print "%s: %s" % (obj_id, generate_phrase(incr.describe(obj_id) + obj_type, ["color", "size"]))
+            print(("%s: %s" % (obj_id, generate_phrase(incr.describe(obj_id) + obj_type, ["color", "size"]))))
 
 
 class Taxonomy:

@@ -25,9 +25,9 @@ class AutoClassTestCase(unittest.TestCase):
     
     def test_next(self):
         a = autoclass.FIRST
-        b = a.next()
+        b = next(a)
         self.assertEqual('b', str(b))    
-        self.assertEqual('c', str(b.next()))    
+        self.assertEqual('c', str(next(b)))    
         self.assertEqual('z', self.next('y'))    
         self.assertEqual('ba', self.next('z'))    
         self.assertEqual('bb', self.next('ba'))
@@ -36,4 +36,4 @@ class AutoClassTestCase(unittest.TestCase):
         self.assertEqual('baa', self.next('zz'))
         
     def next(self, current):
-        return str(autoclass.AutoClass(current).next())
+        return str(next(autoclass.AutoClass(current)))

@@ -47,28 +47,28 @@ def main():
   # train the perceptron
   pt.Train(dict[0:1000])
   first_run = EvaluateExamples(pt)
-  print first_run
+  print(first_run)
 
   # results here should be the same
   second_run = EvaluateExamples(pt)
-  print second_run
+  print(second_run)
   
   # learn from new examples
   # produce new results
   pt.Retrain(dict[1001:3000])
   third_run = EvaluateExamples(pt)
-  print third_run
+  print(third_run)
 
   # this result should be the same as the third run
   fourth_run = EvaluateExamples(pt)
-  print fourth_run
+  print(fourth_run)
 
   # test
   if first_run == second_run and first_run != third_run \
          and third_run == fourth_run:
-    print 'unittest successful'
+    print('unittest successful')
   else:
-    print 'unsuccessful'
+    print('unsuccessful')
 
   # clean up
   pt.CleanUp()

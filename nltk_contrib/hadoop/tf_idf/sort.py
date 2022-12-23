@@ -11,4 +11,4 @@ for line in sys.stdin:
 
 li.sort()
 for e in li:
-    print e,
+    print(e, end=' ')

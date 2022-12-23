@@ -7,16 +7,16 @@
 # For license information, see LICENSE.TXT
 
 import sys
-from itertools import izip
+
 
 from nltk.metrics import scores
 
 ## --NLTK--
 ## Import the nltk.aligner module, which defines the aligner interface
-from api import *
+from .api import *
 
-import distance_measures
-import align_util
+from . import distance_measures
+from . import align_util
 
 # Based on Gale & Church 1993, "A Program for Aligning Sentences in Bilingual Corpora"
 # This is a Python version of the C implementation by Mike Riley presented in the appendix
@@ -82,10 +82,10 @@ class GaleChurchAligner(AlignerI):
             hard_regions2 = align_util.get_paragraphs_sentences(lines2, hard_delimiter, soft_delimiter)
                 
         if (len(hard_regions1) != len(hard_regions2)):
-            print "align_regions: input files do not contain the same number of hard regions" + '\n'
-            print "%s" % hard_delimiter + '\n'
-            print "%s has %d and %s has %d" % (input_file1, len(hard_regions1), \
-                                               input_file2, len(hard_regions2) + '\n')
+            print(("align_regions: input files do not contain the same number of hard regions" + '\n'))
+            print(("%s" % hard_delimiter + '\n'))
+            print(("%s has %d and %s has %d" % (input_file1, len(hard_regions1), \
+                                               input_file2, len(hard_regions2) + '\n')))
             return ([],[])            
         
         return (hard_regions1, hard_regions2)        
@@ -154,7 +154,7 @@ class GaleChurchAligner(AlignerI):
         path_x = [[0] * second_len for c in range(first_len)]              
         path_y = [[0] * second_len for c in range(first_len)]
                   
-        d1 = d2 = d3 = d4 = d5 = d6 = sys.maxint
+        d1 = d2 = d3 = d4 = d5 = d6 = sys.maxsize
         
         for j in range(0, ny + 1):    
             for i in range(0, nx + 1):            
@@ -163,46 +163,46 @@ class GaleChurchAligner(AlignerI):
                     d1 = distances[i-1][j-1] + \
                         self.dist_funct(x[i-1], y[j-1], 0, 0)
                 else:
-                    d1 = sys.maxint
+                    d1 = sys.maxsize
                     
                 if (i > 0):	
                     #/* deletion */
                     d2 = distances[i-1][j] + \
                         self.dist_funct(x[i-1], 0, 0, 0)
                 else:
-                    d2 = sys.maxint
+                    d2 = sys.maxsize
                     
                 if (j > 0):		
                     #/* insertion */
                     d3 = distances[i][j-1] + \
                         self.dist_funct(0, y[j-1], 0, 0)
                 else:
-                    d3 = sys.maxint
+                    d3 = sys.maxsize
                     
                 if (i > 1 and j > 0):		
                     #/* contraction */
                     d4 = distances[i-2][j-1] + \
                         self.dist_funct(x[i-2], y[j-1], x[i-1], 0)
                 else:
-                    d4 = sys.maxint
+                    d4 = sys.maxsize
                     
                 if (i > 0 and j > 1):		
                     #/* expansion */
                     d5 = distances[i-1][j-2] + \
                         self.dist_funct(x[i-1], y[j-2], 0, y[j-1])
                 else:
-                    d5 = sys.maxint
+                    d5 = sys.maxsize
                     
                 if (i > 1 and j > 1):		
                     #/* melding */
                     d6 = distances[i-2][j-2] + \
                         self.dist_funct(x[i-2], y[j-2], x[i-1], y[j-1])
                 else:
-                    d6 = sys.maxint
+                    d6 = sys.maxsize
      
                 dmin = min(d1, d2, d3, d4, d5, d6)
                 
-                if (dmin == sys.maxint):
+                if (dmin == sys.maxsize):
                     distances[i][j] = 0
                 elif (dmin == d1):
                     distances[i][j] = d1                
@@ -341,7 +341,7 @@ class GaleChurchAligner(AlignerI):
         path_x = [[0] * second_len for c in range(first_len)]              
         path_y = [[0] * second_len for c in range(first_len)]
                   
-        d1 = d2 = d3 = d4 = d5 = d6 = d7 = d8 = d9 = d10 = d11 = sys.maxint
+        d1 = d2 = d3 = d4 = d5 = d6 = d7 = d8 = d9 = d10 = d11 = sys.maxsize
         
         for j in range(0, ny + 1):    
             for i in range(0, nx + 1):            
@@ -350,81 +350,81 @@ class GaleChurchAligner(AlignerI):
                     d1 = distances[i-1][j-1] + \
                         self.dist_funct(x[i-1], y[j-1], 0, 0, 0, 0)
                 else:
-                    d1 = sys.maxint
+                    d1 = sys.maxsize
                     
                 if (i > 0):	
                     #/* deletion */              /* 1-0 */
                     d2 = distances[i-1][j] + \
                         self.dist_funct(x[i-1], 0, 0, 0, 0, 0)
                 else:
-                    d2 = sys.maxint
+                    d2 = sys.maxsize
                     
                 if (j > 0):		
                     #/* insertion */             /* 0-1 */
                     d3 = distances[i][j-1] + \
                         self.dist_funct(0, y[j-1], 0, 0, 0, 0)
                 else:
-                    d3 = sys.maxint
+                    d3 = sys.maxsize
                     
                 if (i > 1 and j > 0):		
                     #/* contraction */           /* 2-1 */
                     d4 = distances[i-2][j-1] + \
                         self.dist_funct(x[i-2], y[j-1], x[i-1], 0, 0, 0)
                 else:
-                    d4 = sys.maxint
+                    d4 = sys.maxsize
                     
                 if (i > 0 and j > 1):		     
                     #/* expansion */             /* 1-2 */
                     d5 = distances[i-1][j-2] + \
                         self.dist_funct(x[i-1], y[j-2], 0, y[j-1], 0, 0)
                 else:
-                    d5 = sys.maxint
+                    d5 = sys.maxsize
                     
                 if (i > 1 and j > 1):		
                     #/* melding */               /* 2-2 */
                     d6 = distances[i-2][j-2] + \
                         self.dist_funct(x[i-2], y[j-2], x[i-1], y[j-1], 0, 0)
                 else:
-                    d6 = sys.maxint
+                    d6 = sys.maxsize
                     
                 if (i > 2 and j > 0):		
                     #/* contraction */           /* 3-1 */
                     d7 = distances[i-3][j-1] + \
                         self.dist_funct(x[i-3], y[j-1], x[i-2], 0, x[i-1], 0)
                 else:
-                    d7 = sys.maxint
+                    d7 = sys.maxsize
                     
                 if (i > 2 and j > 1):		
                     #/* contraction */           /* 3-2 */
                     d8 = distances[i-3][j-2] + \
                         self.dist_funct(x[i-3], y[j-1], x[i-2], y[j-2], x[i-1], 0)
                 else:
-                    d8 = sys.maxint
+                    d8 = sys.maxsize
                     
                 if (i > 0 and j > 2):		
                     #/* expansion */             /* 1-3 */
                     d9 = distances[i-1][j-3] + \
                         self.dist_funct(x[i-1], y[j-3], 0, y[j-2], 0, y[j-1])
                 else:
-                    d9 = sys.maxint
+                    d9 = sys.maxsize
                     
                 if (i > 1 and j > 2):		
                     #/* expansion */             /* 2-3 */
                     d10 = distances[i-2][j-3] + \
                         self.dist_funct(x[i-3], y[j-3], x[i-2], y[j-2], 0, y[j-1])
                 else:
-                    d10 = sys.maxint
+                    d10 = sys.maxsize
                                                         
                 if (i > 2 and j > 2):		
                     #/* melding */               /* 3-3 */
                     d11 = distances[i-3][j-3] + \
                         self.dist_funct(x[i-3], y[j-3], x[i-2], y[j-2], x[i-1], y[j-1])
                 else:
-                    d11 = sys.maxint
+                    d11 = sys.maxsize
      
                 dmin = min(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11)
                 
-                if (dmin == sys.maxint):
+                if (dmin == sys.maxsize):
                     distances[i][j] = 0
                 elif (dmin == d1):
                     distances[i][j] = d1                
@@ -619,13 +619,13 @@ def demo_eval(alignments, gold_file):
     """
     alignment_mappings = align_util2.get_alignment_links(alignments)
     
-    print "Alignment mappings: %s" % alignment_mappings
+    print(("Alignment mappings: %s" % alignment_mappings))
     
     #test_values = align_util.get_test_values(alignments)
     
     reference_values = align_util2.get_reference_values(gold_file)
     
-    print "Reference values: %s" % reference_values
+    print(("Reference values: %s" % reference_values))
          
     #accuracy = scores.accuracy(reference_values, test_values)
     
@@ -653,7 +653,7 @@ def demo():
     
     gc_alignment = gc.batch_align(regions1, regions2)  
     
-    print "Alignment0: %s" % gc_alignment
+    print(("Alignment0: %s" % gc_alignment))
    
     demo_eval(gc_alignment, gold_file)    
         
@@ -675,7 +675,7 @@ def demo():
                                                                 
     gc_alignment = gc.batch_align(regions1, regions2)  
     
-    print "Alignment1: %s" % gc_alignment
+    print(("Alignment1: %s" % gc_alignment))
  
     demo_eval(gc_alignment, gold_file)
     
@@ -694,7 +694,7 @@ def demo():
         
     standard_alignment2 = std.batch_align(s2, t2)
     
-    print "Alignment2: %s" % standard_alignment2
+    print(("Alignment2: %s" % standard_alignment2))
     
     # demo 4
     
@@ -703,14 +703,14 @@ def demo():
     
     standard_alignment3 = std.align(s3, t3)
     
-    print "Alignment3: %s" % standard_alignment3
+    print(("Alignment3: %s" % standard_alignment3))
     
     # demo 5
     
     top_down_alignments = std.recursive_align(s3, t3)  
     
     for alignment in top_down_alignments:
-        print "Top down align: %s" % alignment
+        print(("Top down align: %s" % alignment))
     
 if __name__=='__main__':
     demo()

@@ -96,7 +96,7 @@ class CombinedTagger (SequentialBackoff):
                 self._brill = Brill(self._tagger[-1], [])
                 self._brill.unmarshal(tagger_file)
             else:
-                 print "error, tagger type not recognized."
+                 print("error, tagger type not recognized.")
 
     def exemple_train (self, train_sents, verbose=False):
         self._append_default("N")
@@ -124,8 +124,8 @@ def create_tagger (train_sents):
     ct.unmarshal("tresoldi")
     
     tokens = "Mauro viu o livro sobre a mesa".split()
-    print list(ct.tag(tokens))
+    print((list(ct.tag(tokens))))
 
     # tests
     acc = tag.accuracy(ct, [train_sents])
-    print 'Accuracy = %4.2f%%' % (100 * acc)
+    print(('Accuracy = %4.2f%%' % (100 * acc)))

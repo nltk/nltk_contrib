@@ -137,7 +137,7 @@ class Axis(QCanvasPolygonalItem):
             self._drawNegationHead(painter)
             
     def drawShape(self, painter):
-        apply(painter.drawLine, self.points)
+        painter.drawLine(*self.points)
         self.drawLineHead(painter)
         
     def toggleHeadType(self):

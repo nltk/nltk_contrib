@@ -18,7 +18,7 @@ from parse import *
 #from category import *
 from nltk import cfg
 
-from featurelite import *
+from .featurelite import *
 
 def load_earley(filename, trace=1):
     """
@@ -112,7 +112,7 @@ class FeatureTreeEdge(TreeEdge):
         @return: the value of the left-hand side with variables set.
         @rtype: C{Category}
         """
-        return apply(TreeEdge.lhs(self), self._vars)
+        return TreeEdge.lhs(self)(*self._vars)
     
     def orig_lhs(self):
         """
@@ -126,7 +126,7 @@ class FeatureTreeEdge(TreeEdge):
         @return: the value of the right-hand side with variables set.
         @rtype: C{Category}
         """
-        return tuple(apply(x, self._vars) for x in TreeEdge.rhs(self))
+        return tuple(x(*self._vars) for x in TreeEdge.rhs(self))
     
     def orig_rhs(self):
         """
@@ -161,7 +161,7 @@ class FeatureFundamentalRule(FundamentalRule):
         left_bindings = left_edge.vars().copy()
         right_bindings = right_edge.vars().copy()
         try:
-            unified = unify(left_edge.next(), right_edge.lhs(), left_bindings,
+            unified = unify(next(left_edge), right_edge.lhs(), left_bindings,
             right_bindings, memo=self.unify_memo, trace=self.trace-2)
             if isinstance(unified, Category): unified.freeze()
         except UnificationFailure: return
@@ -211,7 +211,7 @@ class FeatureTopDownExpandRule(TopDownExpandRule):
         for prod in grammar.productions():
             bindings = edge.vars().copy()
             try:
-                unified = unify(edge.next(), prod.lhs(), bindings, {},
+                unified = unify(next(edge), prod.lhs(), bindings, {},
                 memo=self.unify_memo, trace=self.trace-2)
                 if isinstance(unified, Category): unified.freeze()
             except UnificationFailure:
@@ -256,7 +256,7 @@ class FeatureEarleyChartParse(EarleyChartParse):
         # Width, for printing trace edges.
         #w = 40/(chart.num_leaves()+1)
         w = 2
-        if self._trace > 0: print ' '*9, chart.pp_leaves(w)
+        if self._trace > 0: print((' '*9, chart.pp_leaves(w)))
 
         # Initialize the chart with a special "starter" edge.
         root = GrammarCategory(pos='[INIT]')
@@ -270,7 +270,7 @@ class FeatureEarleyChartParse(EarleyChartParse):
         #scanner = FeatureScannerRule(self._lexicon)
 
         for end in range(chart.num_leaves()+1):
-            if self._trace > 1: print 'Processing queue %d' % end
+            if self._trace > 1: print(('Processing queue %d' % end))
             
             # Scanner rule substitute, i.e. this is being used in place
             # of a proper FeatureScannerRule at the moment.
@@ -283,14 +283,14 @@ class FeatureEarleyChartParse(EarleyChartParse):
                         {})
                     chart.insert(new_pos_edge, (new_leaf_edge,))
                     if self._trace > 0:
-                        print  'Scanner  ', chart.pp_edge(new_pos_edge,w)
+                        print(('Scanner  ', chart.pp_edge(new_pos_edge,w)))
             
             
             for edge in chart.select(end=end):
                 if edge.is_incomplete():
                     for e in predictor.apply(chart, grammar, edge):
                         if self._trace > 1:
-                            print 'Predictor', chart.pp_edge(e,w)
+                            print(('Predictor', chart.pp_edge(e,w)))
                 #if edge.is_incomplete():
                 #    for e in scanner.apply(chart, grammar, edge):
                 #        if self._trace > 0:
@@ -298,7 +298,7 @@ class FeatureEarleyChartParse(EarleyChartParse):
                 if edge.is_complete():
                     for e in completer.apply(chart, grammar, edge):
                         if self._trace > 0:
-                            print 'Completer', chart.pp_edge(e,w)
+                            print(('Completer', chart.pp_edge(e,w)))
 
         # Output a list of complete parses.
         return chart.parses(root)
@@ -346,14 +346,14 @@ def demo():
         return earley_lexicon.get(word.upper(), [])
 
     sent = 'I saw John with a dog with my cookie'
-    print "Sentence:\n", sent
+    print(("Sentence:\n", sent))
     from nltk import tokenize
     tokens = list(tokenize.whitespace(sent))
     t = time.time()
     cp = FeatureEarleyChartParse(earley_grammar, lexicon, trace=1)
     trees = cp.get_parse_list(tokens)
-    print "Time: %s" % (time.time() - t)
-    for tree in trees: print tree
+    print(("Time: %s" % (time.time() - t)))
+    for tree in trees: print(tree)
 
 def run_profile():
     import profile

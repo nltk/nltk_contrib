@@ -68,12 +68,12 @@ def ReadCostMatrix(matfile, symbols):
     row_label, costs = line.split(None,1)
     if genSymbols: symbols.append(row_label)
     if row_label not in symbols:
-      print "Error: label (%s) not in defined symbols list" % row_label
+      print("Error: label (%s) not in defined symbols list" % row_label)
       sys.exit(1)
     rows.append(row_label)
     costs = costs.split()
     if len(costs) != len(cols):
-      print 'Error: wrong number of costs on line %s' % line
+      print('Error: wrong number of costs on line %s' % line)
       sys.exit(1)
     for c in range(len(costs)):
       if costs[c] in ('inf', 'Inf', 'INF'): costs[c] = INF_
@@ -247,7 +247,7 @@ def main(matrixfile, symfile=None, infile=None):
     aln1, aln2, cost = AlignFSTs(binph1, binph2, binmatrix, syms)
     #aln1 = aln1.replace(EPSILON_, SHORT_EPS_)
     #aln2 = aln2.replace(EPSILON_, SHORT_EPS_)
-    print '%s\t%s\t%.6f' % (aln1, aln2, cost)
+    print('%s\t%s\t%.6f' % (aln1, aln2, cost))
   ret = os.system('rm -f %s' % (binmatrix))
   if ret != 0:
     sys.stderr.write('Error in rm\'ing matrix\n')
@@ -255,8 +255,8 @@ def main(matrixfile, symfile=None, infile=None):
   if infile is not None: infp.close()
 
 def usage(called):
-  print '%s -m <matrix-file> [-s <symbols-file>]' % (called),
-  print '[-i <phone-pairs-file>]'
+  print('%s -m <matrix-file> [-s <symbols-file>]' % (called), end=' ')
+  print('[-i <phone-pairs-file>]')
 
 if __name__ == '__main__':
   try:
@@ -282,6 +282,6 @@ if __name__ == '__main__':
       infile = a
   if matfile is None:
     usage(sys.argv[0])
-    print "Error: must provide a cost-matrix file."
+    print("Error: must provide a cost-matrix file.")
     sys.exit(2)
   main(matfile, symfile, infile)

@@ -41,4 +41,4 @@ def CompareOutputFiles(gold_file, test_file):
 
 def TestUnitOutputs(unitname, gold_file, test_file):
   CompareOutputFiles(gold_file, test_file)
-  print '%s successful' % unitname
+  print(('%s successful' % unitname))

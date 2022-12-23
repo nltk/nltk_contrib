@@ -89,20 +89,20 @@ def stringcomp (fx, fy):
 
 
 def demo ():
-    print "Comparison between 'python' and 'python': %.2f" % stringcomp("python", "python")
-    print "Comparison between 'python' and 'Python': %.2f" % stringcomp("python", "Python")
-    print "Comparison between 'NLTK' and 'NTLK': %.2f" % stringcomp("NLTK", "NTLK")
-    print "Comparison between 'abc' and 'def': %.2f" % stringcomp("abc", "def")
+    print(("Comparison between 'python' and 'python': %.2f" % stringcomp("python", "python")))
+    print(("Comparison between 'python' and 'Python': %.2f" % stringcomp("python", "Python")))
+    print(("Comparison between 'NLTK' and 'NTLK': %.2f" % stringcomp("NLTK", "NTLK")))
+    print(("Comparison between 'abc' and 'def': %.2f" % stringcomp("abc", "def")))
   
-    print "Word most similar to 'australia' in list ['canada', 'brazil', 'egypt', 'thailand', 'austria']:"
+    print("Word most similar to 'australia' in list ['canada', 'brazil', 'egypt', 'thailand', 'austria']:")
     max_score = 0.0 ; best_match = None
     for country in ["canada", "brazil", "egypt", "thailand", "austria"]:
         score = stringcomp("australia", country)
         if score > max_score:
             best_match = country
             max_score = score
-        print "(comparison between 'australia' and '%s': %.2f)" % (country, score)
-    print "Word most similar to 'australia' is '%s' (score: %.2f)" % (best_match, max_score)
+        print(("(comparison between 'australia' and '%s': %.2f)" % (country, score)))
+    print(("Word most similar to 'australia' is '%s' (score: %.2f)" % (best_match, max_score)))
   
 if __name__ == "__main__":
     demo()

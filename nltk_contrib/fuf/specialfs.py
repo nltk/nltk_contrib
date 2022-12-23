@@ -2,7 +2,7 @@
 Handling for special feature names during parsing
 """
 
-from sexp import *
+from .sexp import *
 
 def parse_alt(sexpl):
     """
@@ -17,7 +17,7 @@ def parse_alt(sexpl):
     feat, name, index, val = ('', '', '', '')
 
     # named alt
-    if isinstance(sexpl[1], basestring):
+    if isinstance(sexpl[1], str):
         # alt with index
         if len(sexpl) == 4:
             feat, name, index, val = sexpl

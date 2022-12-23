@@ -64,8 +64,8 @@ class FSA(yaml.YAMLObject):
         A generator that yields each transition arrow in the FSA in the form
         (source, label, target).
         """
-        for (state, map) in self._transitions.items():
-            for (symbol, targets) in map.items():
+        for (state, map) in list(self._transitions.items()):
+            for (symbol, targets) in list(map.items()):
                 for target in targets:
                     yield (state, symbol, target)
 
@@ -74,7 +74,7 @@ class FSA(yaml.YAMLObject):
         A generator for all possible labels taking state s1 to state s2.
         """
         map = self._transitions.get(s1, {})
-        for (symbol, targets) in map.items():
+        for (symbol, targets) in list(map.items()):
             if s2 in targets: yield symbol
     
     def sigma(self):
@@ -127,7 +127,7 @@ class FSA(yaml.YAMLObject):
         @returns: a list of all states in the FSA.
         @rtype: list
         """
-        return self._transitions.keys()
+        return list(self._transitions.keys())
     
     def add_final(self, state):
         """
@@ -177,9 +177,9 @@ class FSA(yaml.YAMLObject):
         @param s2: the destination of the transition
         """
         if s1 not in self.states():
-            raise ValueError, "State %s does not exist" % s1
+            raise ValueError("State %s does not exist" % s1)
         if s2 not in self.states():
-            raise ValueError, "State %s does not exist" % s1
+            raise ValueError("State %s does not exist" % s1)
         self._add_transition(self._transitions, s1, label, s2)
         self._add_transition(self._reverse, s2, label, s1)
 
@@ -203,16 +203,16 @@ class FSA(yaml.YAMLObject):
         @param s2: the destination of the transition
         """
         if s1 not in self.states():
-            raise ValueError, "State %s does not exist" % s1
+            raise ValueError("State %s does not exist" % s1)
         if s2 not in self.states():
-            raise ValueError, "State %s does not exist" % s1
+            raise ValueError("State %s does not exist" % s1)
         self._del_transition(self._transitions, s1, label, s2)
         self._del_transition(self._reverse, s2, label, s1)
 
     def delete_state(self, state):
         "Removes a state and all its transitions from the FSA."
         if state not in self.states():
-            raise ValueError, "State %s does not exist" % state
+            raise ValueError("State %s does not exist" % state)
         for (s1, label, s2) in self.incident_transitions(state):
             self.delete(s1, label, s2)
         del self._transitions[state]
@@ -226,10 +226,10 @@ class FSA(yaml.YAMLObject):
         result = set()
         forward = self._transitions[state]
         backward = self._reverse[state]
-        for label, targets in forward.items():
+        for label, targets in list(forward.items()):
             for target in targets:
                 result.add((state, label, target))
-        for label, targets in backward.items():
+        for label, targets in list(backward.items()):
             for target in targets:
                 result.add((target, label, state))
         return result
@@ -239,9 +239,9 @@ class FSA(yaml.YAMLObject):
         Assigns a state a new identifier.
         """
         if old not in self.states():
-            raise ValueError, "State %s does not exist" % old
+            raise ValueError("State %s does not exist" % old)
         if new in self.states():
-            raise ValueError, "State %s already exists" % new
+            raise ValueError("State %s already exists" % new)
         changes = []
         for (s1, symbol, s2) in self.generate_transitions():
             if s1 == old and s2 == old:
@@ -274,8 +274,8 @@ class FSA(yaml.YAMLObject):
         Return whether this is a DFA
         (every symbol leads from a state to at most one target state).
         """
-        for map in self._transitions.values():
-            for targets in map.values():
+        for map in list(self._transitions.values()):
+            for targets in list(map.values()):
                 if len(targets) > 1: return False
         return True
     
@@ -287,14 +287,14 @@ class FSA(yaml.YAMLObject):
         """
         next = self.next(state, symbol)
         if len(next) > 1:
-            raise ValueError, "This FSA is nondeterministic -- use nextStates instead."
+            raise ValueError("This FSA is nondeterministic -- use nextStates instead.")
         elif len(next) == 1: return list(next)[0]
         else: return None
 
     def forward_traverse(self, state):
         "All states reachable by following transitions from a given state."
         result = set()
-        for (symbol, targets) in self._transitions[state].items():
+        for (symbol, targets) in list(self._transitions[state].items()):
             result = result.union(targets)
         return result
 
@@ -302,7 +302,7 @@ class FSA(yaml.YAMLObject):
         """All states from which a given state is reachable by following
         transitions."""
         result = set()
-        for (symbol, targets) in self._reverse[state].items():
+        for (symbol, targets) in list(self._reverse[state].items()):
             result = result.union(targets)
         return result
     
@@ -334,7 +334,7 @@ class FSA(yaml.YAMLObject):
                 self._clean_map(self._reverse[state])
 
     def _clean_map(self, map):
-        for (key, value) in map.items():
+        for (key, value) in list(map.items()):
             if len(value) == 0:
                 del map[key]
 
@@ -396,7 +396,7 @@ class FSA(yaml.YAMLObject):
             for label in self.sigma():
                 nfa_next = tuple(self.e_closure(self.move(map[dfa_state],
                 label)))
-                if map.has_key(nfa_next):
+                if nfa_next in map:
                     dfa_next = map[nfa_next]
                 else:
                     dfa_next = dfa.new_state()
@@ -412,7 +412,7 @@ class FSA(yaml.YAMLObject):
         "Generate all accepting sequences of length at most maxlen."
         if maxlen > 0:
             if state in self._finals:
-                print prefix
+                print(prefix)
             for (s1, labels, s2) in self.outgoing_transitions(state):
                 for label in labels():
                     self.generate(maxlen-1, s2, prefix+label)
@@ -421,14 +421,14 @@ class FSA(yaml.YAMLObject):
         """
         Print a representation of this FSA (in human-readable YAML format).
         """
-        print yaml.dump(self)
+        print((yaml.dump(self)))
     
     @classmethod
     def from_yaml(cls, loader, node):
         map = loader.construct_mapping(node)
         result = cls(map.get('sigma', []), {}, map.get('finals', []))
-        for (s1, map1) in map['transitions'].items():
-            for (symbol, targets) in map1.items():
+        for (s1, map1) in list(map['transitions'].items()):
+            for (symbol, targets) in list(map1.items()):
                 for s2 in targets:
                     result.insert(s1, symbol, s2)
         return result
@@ -551,19 +551,19 @@ def demo():
     
     # Use a regular expression to initialize the FSA.
     re = 'abcd'
-    print 'Regular Expression:', re
+    print(('Regular Expression:', re))
     re2nfa(fsa, re)
-    print "NFA:"
+    print("NFA:")
     fsa.pp()
 
     # Convert the (nondeterministic) FSA to a deterministic FSA.
     dfa = fsa.dfa()
-    print "DFA:"
+    print("DFA:")
     dfa.pp()
 
     # Prune the DFA
     dfa.prune()
-    print "PRUNED DFA:"
+    print("PRUNED DFA:")
     dfa.pp()
 
     # Use the FSA to generate all strings of length less than 3

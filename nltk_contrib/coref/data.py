@@ -9,14 +9,14 @@ from zlib import Z_SYNC_FLUSH
 from gzip import GzipFile, READ as GZ_READ, WRITE as GZ_WRITE
 
 try:
-    import cPickle as pickle
+    import pickle as pickle
 except:
     import pickle
     
 try:
-    from cStringIO import StringIO
+    from io import StringIO
 except:
-    from StringIO import StringIO
+    from io import StringIO
 
 class BufferedGzipFile(GzipFile):
     """

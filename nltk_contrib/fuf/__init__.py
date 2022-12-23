@@ -49,12 +49,12 @@ FUF grammar files from their original s-expression
 syntax to C{nltk.featstruct.FeatStruct}.
 """
 
-from fufconvert import *
-from fuf import *
-from linearizer import *
-from fstypes import *
-from link import *
-from util import *
+from .fufconvert import *
+from .fuf import *
+from .linearizer import *
+from .fstypes import *
+from .link import *
+from .util import *
 
 __all__ = [
     # Unifier

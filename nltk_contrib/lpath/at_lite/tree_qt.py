@@ -1,5 +1,5 @@
 from qt import QObject, PYSIGNAL
-from tree import TreeModel as PureTree
+from .tree import TreeModel as PureTree
 
 __all__ = ['TreeModel']
 

@@ -3,11 +3,11 @@
 #
 # URL: <http://www.nltk.org/>
 # This software is distributed under GPL, for license information see LICENSE.TXT
-import UserList, math
+import collections, math
 
-class StatList(UserList.UserList):
+class StatList(collections.UserList):
     def __init__(self, values=None):
-        UserList.UserList.__init__(self, values)
+        collections.UserList.__init__(self, values)
         
     def mean(self):
         if len(self.data) == 0: return 0

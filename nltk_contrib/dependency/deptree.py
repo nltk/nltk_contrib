@@ -35,7 +35,7 @@ class DepGraph(object):
 
     def __str__(self):
 #        return '\n'.join([str(n) for n in self.nodelist])
-        return '\n'.join([', '.join(['%s: %15s'%item for item in n.iteritems()]) for n in self.nodelist])
+        return '\n'.join([', '.join(['%s: %15s'%item for item in list(n.items())]) for n in self.nodelist])
                         
     def load(self, file):
         """
@@ -151,7 +151,7 @@ class DepGraph(object):
         labeled directed graph.
         @rtype: C{XDigraph}
         """
-        nx_nodelist = range(1, len(self.nodelist))
+        nx_nodelist = list(range(1, len(self.nodelist)))
         nx_edgelist = [(n, self._hd(n), self._rel(n)) 
                         for n in nx_nodelist if self._hd(n)]
         self.nx_labels = {}
@@ -191,7 +191,7 @@ Nov.    NNP     9       VMOD
 .       .       9       VMOD
 """)
     tree = dg.deptree()
-    print tree.pprint()
+    print((tree.pprint()))
     if nx:
         #currently doesn't work
         try:

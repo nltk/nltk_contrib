@@ -80,7 +80,7 @@ class LinkResolver(object):
 
         def resolve_helper(fs, ancestors):
             # start looking for links
-            for feat, val in fs.items():
+            for feat, val in list(fs.items()):
                 # add to path and recurse
                 if isinstance(val, nltk.FeatStruct):
                     ancestors.append(val)
@@ -144,8 +144,8 @@ class ReentranceLink(object):
 if __name__ == '__main__':
     # testing the link resolution using gr0.fuf grammar and ir0.fuf inputs
     import os
-    from fufconvert import *
-    from fuf import *
+    from .fufconvert import *
+    from .fuf import *
 
     gfs = fuf_to_featstruct(open('tests/gr0.fuf').read())
     itext = open('tests/ir0.fuf').readlines()[2]
@@ -153,4 +153,4 @@ if __name__ == '__main__':
     ifs = fuf_to_featstruct(itext)
     result = unify_with_grammar(ifs, gfs)
 
-    print output_html([ifs, gfs, result])
+    print((output_html([ifs, gfs, result])))

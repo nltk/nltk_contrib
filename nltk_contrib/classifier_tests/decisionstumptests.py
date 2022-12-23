@@ -112,7 +112,7 @@ class DecisionStumpTestCase(unittest.TestCase):
         values = ds.dictionary_of_values(phoney);
         self.assertEqual(3, len(values))
         for i in ['a', 'b', 'c']:
-            self.assertTrue(values.has_key(i))
+            self.assertTrue(i in values)
             self.assertEqual(0, values[i])
             
     def test_gain_ratio(self):

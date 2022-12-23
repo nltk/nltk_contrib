@@ -7,8 +7,8 @@ class TableEdit(QTable):
         self.data = None
 
     def setData(self, data):
-        self.removeColumns(range(self.numCols()))
-        self.removeRows(range(self.numRows()))
+        self.removeColumns(list(range(self.numCols())))
+        self.removeRows(list(range(self.numRows())))
 
         self.setNumCols(len(data.header))
         for j,(h,t) in enumerate(data.header):
@@ -17,7 +17,7 @@ class TableEdit(QTable):
         for i,row in enumerate(data):
             for j,h in enumerate(row):
                 if h is not None:
-                    if type(h)==str or type(h)==unicode:
+                    if type(h)==str or type(h)==str:
                         self.setText(i,j,h)
                     else:
                         self.setText(i,j,str(h))
@@ -36,7 +36,7 @@ class TableEdit(QTable):
         if val is None:
             val = ''
         self.disconnect(self,SIGNAL("valueChanged(int,int)"),self.__cellChanged)
-        self.setText(i,j,unicode(val))
+        self.setText(i,j,str(val))
         self.connect(self,SIGNAL("valueChanged(int,int)"),self.__cellChanged)
 
     def _insertRow(self, i, row):
@@ -70,7 +70,7 @@ class TableEdit(QTable):
         
 if __name__ == '__main__':
     import qt
-    from table_qt import TableModel
+    from .table_qt import TableModel
 
     class Demo(qt.QVBox):
         def __init__(self):

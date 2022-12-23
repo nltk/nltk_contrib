@@ -14,7 +14,7 @@ class DiscretisedAttribute(attribute.Attribute):
         self.values, klass_value = [], autoclass.FIRST
         for i in range(len(ranges)):
             self.values.append(klass_value.name)
-            klass_value = klass_value.next()
+            klass_value = next(klass_value)
         self.index = index
         self.type = attribute.DISCRETE
         self.ranges = ranges

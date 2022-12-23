@@ -99,10 +99,10 @@ class MUCDocument:
     # def __init__(self, text, docno=None, dateline=None, headline=''):
     def __init__(self, **text):
         self.text = None
-        if isinstance(text, basestring):
+        if isinstance(text, str):
             self.text = text
         elif isinstance(text, dict):
-            for key, val in text.items():
+            for key, val in list(text.items()):
                 setattr(self, key, val)
         else:
             raise
@@ -154,7 +154,7 @@ class MUCCorpusReader(CorpusReader):
         """
         if fileids is None:
             fileids = self._fileids
-        elif isinstance(fileids, basestring): 
+        elif isinstance(fileids, str): 
             fileids = [fileids]
         return concat([self.open(f).read() for f in fileids])
 
@@ -221,7 +221,7 @@ class MUCCorpusReader(CorpusReader):
                     chunks.append([(word, None) for word in token[0]])
                 # If the token's contents is a string, append it as a 
                 # word/tag tuple.
-                elif isinstance(token[0], basestring):
+                elif isinstance(token[0], str):
                     chunks.append((token[0], None))
                 # Something bad happened.
                 else:
@@ -416,7 +416,7 @@ class MUCCorpusReader(CorpusReader):
     def _read_parsed_block(self, stream):
         # TODO: LazyMap but StreamBackedCorpusView doesn't support
         # AbstractLazySequence currently.
-        return map(self._parse, self._read_block(stream))
+        return list(map(self._parse, self._read_block(stream)))
   
     def _parse(self, doc):
         """
@@ -488,7 +488,7 @@ def tree2tuple(tree):
         # Get the leaves.
         s = (tree.leaves(),)
         # Get the label
-        if isinstance(tree.node, basestring):
+        if isinstance(tree.node, str):
             node = (tree.node,)
         elif isinstance(tree.node, tuple):
             node = tree.node
@@ -497,7 +497,7 @@ def tree2tuple(tree):
         # Merge the leaves and the label.
         return s + node
     # If the tree is a string just convert it to a tuple.
-    elif isinstance(tree, basestring):
+    elif isinstance(tree, str):
         return (tree, None)
     # Something bad happened.
     else:
@@ -513,7 +513,7 @@ def _muc_read_text(s, top_node):
                 sents[index] += sents[index + next]
                 sents[index + next] = ''
                 next += 1
-        sents = filter(None, sents)
+        sents = [_f for _f in sents if _f]
         return sents
     if s:
         tree = Tree(top_node, [])        
@@ -554,7 +554,7 @@ def _muc_read_words(s, top_node):
         else:
             stack[-1].extend(_WORD_TOKENIZER.tokenize(word))
     if len(stack) != 1:
-        print stack
+        print(stack)
     assert len(stack) == 1
     return stack[0]
 
@@ -567,25 +567,25 @@ def demo(**kwargs):
     muc6 = LazyCorpusLoader('muc6/', MUCCorpusReader, muc6_documents)
     for sent in muc6.iob_sents()[:]:
         for word in sent:
-            print word
-        print
-    print
+            print(word)
+        print()
+    print()
     for sent in muc6.mentions(depth=None):
         for mention in sent:
-            print mention
-        if sent: print
-    print
+            print(mention)
+        if sent: print()
+    print()
     muc7 = LazyCorpusLoader('muc7/', MUCCorpusReader, muc7_documents)
     for sent in muc7.iob_sents()[:]:
         for word in sent:
-            print word
-        print
-    print
+            print(word)
+        print()
+    print()
     for sent in muc7.mentions(depth=None):
         for mention in sent:
-            print mention
-        if sent: print
-    print
+            print(mention)
+        if sent: print()
+    print()
     
 if __name__ == '__main__':
     demo()

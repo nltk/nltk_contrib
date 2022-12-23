@@ -63,7 +63,7 @@ class FeatureMap:
       return None
 
   def Dump(self, file):
-    keys = self.table_.keys()
+    keys = list(self.table_.keys())
     keys.sort(lambda x, y: cmp(self.table_[x], self.table_[y]))
     p = open(file, 'w')
     for k in keys:
@@ -90,7 +90,7 @@ def Listify(text):
   extraction.
   """
   list = []
-  for u in unicode(text, 'utf8'):
+  for u in str(text, 'utf8'):
     list.append(u.encode('utf8'))
   return list
 
@@ -179,7 +179,7 @@ class ThaiExtractor(extractor.Extractor):
                         }
       self.snow_session_ = snow.SnowSession(snow.MODE_SERVER,
                                             snow_test_args)
-    try: utext = unicode(line.strip(), 'utf-8')
+    try: utext = str(line.strip(), 'utf-8')
     except TypeError: utext = line.strip()
     segments = utext.split()
     for segment in segments:
@@ -189,9 +189,8 @@ class ThaiExtractor(extractor.Extractor):
       seglist = Listify(segment.encode('utf8'))
       features = []
       for i in range(len(seglist)):
-        feats = ', '.join(map(lambda x: str(x),
-                              FeatureExtract(i, seglist,
-                                             self.feature_map_))) + ':\n'
+        feats = ', '.join([str(x) for x in FeatureExtract(i, seglist,
+                                             self.feature_map_)]) + ':\n'
         result = self.snow_session_.evaluateExample(feats)
         target, a, b, activation = result.split('\n')[1].split()
         target = int(target[:-1]) ## remove ':'

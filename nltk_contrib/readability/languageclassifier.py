@@ -11,7 +11,7 @@ import logging
 
 from nltk.corpus import stopwords
 
-from urlextracter import URLextracter
+from .urlextracter import URLextracter
 from sgmllib import *
 
 class NaiveBayes(object):
@@ -72,12 +72,12 @@ class NaiveBayes(object):
             values = file.split('/')
             lang = values[-2]
         
-            if not self.p_lang.has_key(lang):
+            if lang not in self.p_lang:
                 self.p_lang[lang] = 0.0
             
             self.p_lang[lang] += 1.0
             
-            if not self.files.has_key(lang):
+            if lang not in self.files:
                 self.files[lang] = []
             
             f = open(file, 'r')
@@ -85,35 +85,35 @@ class NaiveBayes(object):
             f.close()
             
         # Calculate probabilities
-        for lang in self.p_lang.keys():
+        for lang in list(self.p_lang.keys()):
             self.p_lang[lang] /= len(self.training_files)
             
         self.vocabulary = self.__createVocabulary(self.files)
         
         # Calculate P(O | H) 
         p_word_given_lang = self.p_word_given_lang
-        for lang in self.files.keys():
+        for lang in list(self.files.keys()):
             p_word_given_lang[lang] = {}
             
-            for word in self.vocabulary[lang].keys():
+            for word in list(self.vocabulary[lang].keys()):
                 p_word_given_lang[lang][word] = 1.0
             
             for word in self.files[lang]:
-                if self.vocabulary[lang].has_key(word):
+                if word in self.vocabulary[lang]:
                     p_word_given_lang[lang][word] += 1.0
                     
-            for word in self.vocabulary[lang].keys():
+            for word in list(self.vocabulary[lang].keys()):
                 p_word_given_lang[lang][word] /= len(self.files[lang]) + len(self.vocabulary[lang])
                 
-        print "Training finished...(training-set of size %d)" % len(self.training_files)
+        print(("Training finished...(training-set of size %d)" % len(self.training_files)))
         self.p_word_given_lang = p_word_given_lang
-        self.candidate_languages = self.files.keys()
+        self.candidate_languages = list(self.files.keys())
         
         # Save result as a file
         output = open(os.path.join("files","lang_data.pickle"),'wb')
         data = {}
         data["p_word_given_lang"] = p_word_given_lang
-        data["canidate_languages"] = self.files.keys()
+        data["canidate_languages"] = list(self.files.keys())
         data["p_lang"] = self.p_lang
         data["vocabulary"] = self.vocabulary
         pickler = pickle.dump(data, output, -1)
@@ -128,16 +128,16 @@ class NaiveBayes(object):
         """
         # Count number of occurance of each word
         word_count = {}
-        for lang in files.keys():
+        for lang in list(files.keys()):
             for word in files[lang]:
-                if not word_count.has_key(word):
+                if word not in word_count:
                     word_count[word] = 0
                 word_count[word] += 1
         
         vocabulary = {}
         vocabulary['eng'] = {}
         vocabulary['no'] = {}
-        for word in word_count.keys():
+        for word in list(word_count.keys()):
             if word_count[word] > 2:
                 if word != '':
                     if not word in self.nor_stopwords:
@@ -155,7 +155,7 @@ class NaiveBayes(object):
         """
 
         if test_files == "":
-            print "No test files given"
+            print("No test files given")
             return
         elif os.path.isdir(str(test_files)):
             self.test_files = glob.glob(test_files + "/*/*")
@@ -186,7 +186,7 @@ class NaiveBayes(object):
                 # Calculates P(O | H) * P(H) for candidate group
                 p = math.log(self.p_lang[candidate_lang])
                 for word in file_to_be_classified:
-                    if self.vocabulary[candidate_lang].has_key(word):
+                    if word in self.vocabulary[candidate_lang]:
                         p += math.log(self.p_word_given_lang[candidate_lang][word])
         
                 if p > max_p or max_p == 1:
@@ -196,10 +196,10 @@ class NaiveBayes(object):
             total += 1.0
             if true_lang != max_lang:
                 errors += 1.0
-        print "Classifying finished...(test-set of size %d)" % len(self.test_files)
-        print "Errors %d" % errors
-        print "Total %d" % total
-        print "Accuracy: %.3f" % (1.0 - errors/total)
+        print(("Classifying finished...(test-set of size %d)" % len(self.test_files)))
+        print(("Errors %d" % errors))
+        print(("Total %d" % total))
+        print(("Accuracy: %.3f" % (1.0 - errors/total)))
     
     def classifyText(self, text):
         """
@@ -219,7 +219,7 @@ class NaiveBayes(object):
             unknown_words = []
             known_words = []
             for word in words:
-                if self.vocabulary[candidate_lang].has_key(word):
+                if word in self.vocabulary[candidate_lang]:
                     p += math.log(self.p_word_given_lang[candidate_lang][word])
                     if word not in known_words:
                         known_words.append(word)
@@ -241,7 +241,7 @@ class NaiveBayes(object):
     
     def classifyURL(self, url):
         ue = URLextracter(url)
-        print 'Classifying %s' % url
+        print(('Classifying %s' % url))
         content = ue.output() 
         content = re.sub(r"[^a-zA-ZæøåÆØÅ]", " ", content)
         content = content.strip()
@@ -254,46 +254,46 @@ class NaiveBayes(object):
         pass
     
     def demo(self):
-        print "Demo of language classifier"
-        print "=" * 40
+        print("Demo of language classifier")
+        print(("=" * 40))
         nb = NaiveBayes()
         nb.load(os.path.join("files","lang_data.pickle"))
         
-        print "Classifying plain text(10 first sentences from \"nltk.corpus.abc.sents\")"
-        print "=" * 40
+        print("Classifying plain text(10 first sentences from \"nltk.corpus.abc.sents\")")
+        print(("=" * 40))
         text = ""
         import nltk.corpus
         sents = nltk.corpus.abc.sents()
         for words in sents[0:10]:
             text+= " ".join(words) + "\n"
-        print text
-        print "=" * 40
-        print "Languages is: %s" % nb.classifyText(text)
+        print(text)
+        print(("=" * 40))
+        print(("Languages is: %s" % nb.classifyText(text)))
         
-        print "\n"
-        print "Classifying 10 URLs"
-        print "=" * 40
+        print("\n")
+        print("Classifying 10 URLs")
+        print(("=" * 40))
         
         lang = nb.classifyURL("http://harvardscience.harvard.edu/")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://vg.no")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://bbc.co.uk")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://startsiden.no")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://news.com")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://www.munimadrid.es")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://www.welt.de/")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://www.news.pl/")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://www.ekstrabladet.dk/")
-        print "-->language: %s \n" % lang
+        print(("-->language: %s \n" % lang))
         lang = nb.classifyURL("http://www.gazzetta.it/")
-        print "-->language: %s \n" % lang      
+        print(("-->language: %s \n" % lang))      
     demo = classmethod(demo)
     
 def demo():

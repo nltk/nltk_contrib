@@ -133,7 +133,9 @@ class GraphEdgeWidget(CanvasWidget):
             labely = (y1+y2)*0.5 - (x2-x1)*(self._curve/2 + 8/r)
             return (int(labelx), int(labely))
     
-    def _line_coords(self, (startx, starty), (endx, endy)):
+    def _line_coords(self, xxx_todo_changeme, xxx_todo_changeme1):
+        (startx, starty) = xxx_todo_changeme
+        (endx, endy) = xxx_todo_changeme1
         (x1, y1) = int(startx), int(starty)
         (x2, y2) = int(endx), int(endy)
         radius1 = 0
@@ -253,7 +255,7 @@ class GraphWidget(CanvasWidget):
         Remove an edge from the graph (but don't destroy it).
         @type edge: L{GraphEdgeWidget}
         """
-        print 'remove', edge
+        print(('remove', edge))
         # Get the edge's start & end nodes.
         start, end = self._startnode[edge], self._endnode[edge]
 
@@ -315,9 +317,9 @@ class GraphWidget(CanvasWidget):
         """
         Remove a node from the graph, and destroy the node.
         """
-        print 'removing', node
+        print(('removing', node))
         for widget in self.remove_node(node):
-            print 'destroying', widget
+            print(('destroying', widget))
             widget.destroy()
 
     def _tags(self): return []
@@ -467,7 +469,7 @@ class GraphWidget(CanvasWidget):
         while len(nodes) > 0:
             best = (None, None, -1) # node, position, score.
             for pos in range(len(scores)):
-                for (node, score) in scores[pos].items():
+                for (node, score) in list(scores[pos].items()):
                     if (score > best[2] and level[pos] is None and
                         node in nodes):
                         best = (node, pos, score)
@@ -526,9 +528,9 @@ class GraphWidget(CanvasWidget):
         """
         How many *unexpanded* nodes can be reached from the given node?
         """
-        if self._nodelevel.has_key(node): return 0
+        if node in self._nodelevel: return 0
         if reached is None: reached = {}
-        if not reached.has_key(node):
+        if node not in reached:
             reached[node] = 1
             for edge in self._outedges.get(node, []):
                 self._reachable(self._endnode[edge], reached)
@@ -551,14 +553,14 @@ class GraphWidget(CanvasWidget):
         if levelnum >= len(self._levels): self._levels.append([])
         for parent_node in parent_level:
             # Add the parent node
-            if not self._nodelevel.has_key(parent_node):
+            if parent_node not in self._nodelevel:
                 self._levels[levelnum-1].append(parent_node)
                 self._nodelevel[parent_node] = levelnum-1
 
             # Recurse to its children
             child_nodes = [self._endnode[edge]
                            for edge in self._outedges.get(parent_node, [])
-                           if not self._nodelevel.has_key(self._endnode[edge])]
+                           if self._endnode[edge] not in self._nodelevel]
             if len(child_nodes) > 0:
                 self._add_descendants_dfs(child_nodes, levelnum+1)
 
@@ -569,7 +571,7 @@ class GraphWidget(CanvasWidget):
             child_nodes = [self._endnode[edge]
                            for edge in self._outedges.get(parent_node, [])]
             for node in child_nodes:
-                if not self._nodelevel.has_key(node):
+                if node not in self._nodelevel:
                     self._levels[levelnum].append(node)
                     self._nodelevel[node] = levelnum
                     frontier_nodes.append(node)
@@ -585,7 +587,7 @@ class GraphWidget(CanvasWidget):
             child_nodes += [self._startnode[edge]
                            for edge in self._inedges.get(parent_node, [])]
             for node in child_nodes:
-                if not self._nodelevel.has_key(node):
+                if node not in self._nodelevel:
                     self._levels[levelnum].append(node)
                     self._nodelevel[node] = levelnum
                     frontier_nodes.append(node)

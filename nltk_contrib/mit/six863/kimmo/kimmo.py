@@ -2,15 +2,15 @@
 # by Rob Speer (rspeer@mit.edu)
 # based on code from Carl de Marcken, Beracah Yankama, and Rob Speer
 
-from rules import KimmoArrowRule, KimmoFSARule
-from pairs import KimmoPair, sort_subsets
-from morphology import *
-from fsa import FSA
+from .rules import KimmoArrowRule, KimmoFSARule
+from .pairs import KimmoPair, sort_subsets
+from .morphology import *
+from .fsa import FSA
 import yaml
 
 def _pairify(state):
     newstate = {}
-    for label, targets in state.items():
+    for label, targets in list(state.items()):
         newstate[KimmoPair.make(label)] = targets
     return newstate
 
@@ -191,7 +191,7 @@ class KimmoRuleSet(yaml.YAMLObject):
 
     def _advance_rule(self, rule, state, pair):
         trans = rule.fsa()._transitions[state]
-        expected_pairs = sort_subsets(trans.keys(), self._subsets)
+        expected_pairs = sort_subsets(list(trans.keys()), self._subsets)
         for comppair in expected_pairs:
             if comppair.includes(pair, self._subsets):
                 return rule.fsa().nextState(state, comppair)
@@ -200,16 +200,16 @@ class KimmoRuleSet(yaml.YAMLObject):
     def _test_case(self, input, outputs, arrow, method):
         outputs.sort()
         if arrow == '<=':
-            print '%s %s %s' % (', '.join(outputs), arrow, input)
+            print('%s %s %s' % (', '.join(outputs), arrow, input))
         else:
-            print '%s %s %s' % (input, arrow, ', '.join(outputs))
+            print('%s %s %s' % (input, arrow, ', '.join(outputs)))
         value = method(input)
         if len(value) and isinstance(value[0], tuple):
             results = [v[0] for v in value]
         else: results = value
         results.sort()
         if outputs != results:
-            print '  Failed: got %s' % (', '.join(results) or 'no results')
+            print('  Failed: got %s' % (', '.join(results) or 'no results'))
             return False
         else: return True
     
@@ -244,7 +244,7 @@ class KimmoRuleSet(yaml.YAMLObject):
                         arrow = arrow_to_try
                         break
                 if arrow is None:
-                    raise ValueError, "Can't find arrow in line: %s" % line
+                    raise ValueError("Can't find arrow in line: %s" % line)
                 lexicals = lexicals.strip().split(', ')
                 surfaces = surfaces.strip().split(', ')
                 if lexicals == ['']: lexicals = []
@@ -348,28 +348,28 @@ class KimmoRuleSet(yaml.YAMLObject):
         if lexicon:
             lexicon = KimmoMorphology.load(lexicon)
         subsets = map['subsets']
-        for key, value in subsets.items():
-            if isinstance(value, basestring):
+        for key, value in list(subsets.items()):
+            if isinstance(value, str):
                 subsets[key] = value.split()
         defaults = map['defaults']
-        if isinstance(defaults, basestring):
+        if isinstance(defaults, str):
             defaults = defaults.split()
         defaults = [KimmoPair.make(text) for text in defaults]
         ruledic = map['rules']
         rules = []
-        for (name, rule) in ruledic.items():
+        for (name, rule) in list(ruledic.items()):
             if isinstance(rule, dict):
                 rules.append(KimmoFSARule.from_dfa_dict(name, rule, subsets))
-            elif isinstance(rule, basestring):
+            elif isinstance(rule, str):
                 if rule.strip().startswith('FSA'):
                     rules.append(KimmoFSARule.parse_table(name, rule, subsets))
                 else: rules.append(KimmoArrowRule(name, rule, subsets))
             else:
-                raise ValueError, "Can't recognize the data structure in '%s' as a rule: %s" % (name, rule)
+                raise ValueError("Can't recognize the data structure in '%s' as a rule: %s" % (name, rule))
         return cls(subsets, defaults, rules, lexicon)
     
     def gui(self, startTk=True):
-        import draw
+        from . import draw
         return draw.KimmoGUI(self, startTk)
     draw_graphs = gui
 
@@ -392,50 +392,50 @@ class TextTrace(object):
         surface = ''.join(p.output() for p in pairs)
         indent = ' '*len(lexical)
         if self.verbosity > 2:
-            print '%s%s<%s>' % (indent, lexical, curr.input())
-            print '%s%s<%s>' % (indent, surface, curr.output())
+            print('%s%s<%s>' % (indent, lexical, curr.input()))
+            print('%s%s<%s>' % (indent, surface, curr.output()))
             for rule, state1, state2 in zip(rules, prev_states, states):
-                print '%s%s: %s => %s' % (indent, rule.name(), state1, state2)
+                print('%s%s: %s => %s' % (indent, rule.name(), state1, state2))
             if morphology_state:
-                print '%sMorphology: %r => %s' % (indent, word, morphology_state)
-            print
+                print('%sMorphology: %r => %s' % (indent, word, morphology_state))
+            print()
         elif self.verbosity > 1:
-            print '%s%s<%s>' % (indent, lexical, curr.input())
-            print '%s%s<%s>' % (indent, surface, curr.output())
-            z = zip(prev_states, states)
+            print('%s%s<%s>' % (indent, lexical, curr.input()))
+            print('%s%s<%s>' % (indent, surface, curr.output()))
+            z = list(zip(prev_states, states))
             if morphology_state:
                 z.append((word, morphology_state))
-            print indent + (" ".join('%s>%s' % (old, new) for old, new in z))
+            print(indent + (" ".join('%s>%s' % (old, new) for old, new in z)))
             blocked = []
             for rule, state in zip(rules, states):
                 if str(state).lower() in ['0', 'reject']:
                     blocked.append(rule.name())
             if blocked:
-                print '%s[blocked by %s]' % (indent, ", ".join(blocked))
-            print
+                print('%s[blocked by %s]' % (indent, ", ".join(blocked)))
+            print()
         else:
-            print '%s%s<%s> | %s<%s>' % (indent, lexical, curr.input(),
-              surface, curr.output()),
+            print('%s%s<%s> | %s<%s>' % (indent, lexical, curr.input(),
+              surface, curr.output()), end=' ')
             if morphology_state:
-                print '\t%r => %s' % (word, morphology_state),
+                print('\t%r => %s' % (word, morphology_state), end=' ')
             blocked = []
             for rule, state in zip(rules, states):
                 if str(state).lower() in ['0', 'reject']:
                     blocked.append(rule.name())
             if blocked:
-                print ' [blocked by %s]' % (", ".join(blocked)),
-            print
+                print(' [blocked by %s]' % (", ".join(blocked)), end=' ')
+            print()
 
     def succeed(self, pairs):
         lexical = ''.join(p.input() for p in pairs)
         surface = ''.join(p.output() for p in pairs)
         indent = ' '*len(lexical)
 
-        print '%s%s' % (indent, lexical)
-        print '%s%s' % (indent, surface)
-        print '%sSUCCESS: %s <=> %s' % (indent, lexical, surface)
-        print
-        print
+        print('%s%s' % (indent, lexical))
+        print('%s%s' % (indent, surface))
+        print('%sSUCCESS: %s <=> %s' % (indent, lexical, surface))
+        print()
+        print()
 
 def load(filename):
     """

@@ -41,9 +41,9 @@ def get_test_values(alignments):
     
     """
     test_values = []
-    for hard_regions_index in alignments.keys():
+    for hard_regions_index in list(alignments.keys()):
         soft_regions_list = []
-        for soft_regions_index in alignments[hard_regions_index].keys():
+        for soft_regions_index in list(alignments[hard_regions_index].keys()):
             soft_regions_list.extend(alignments[hard_regions_index][soft_regions_index].alignment_mappings) 
         soft_regions_list.reverse()
         test_values.extend(soft_regions_list)

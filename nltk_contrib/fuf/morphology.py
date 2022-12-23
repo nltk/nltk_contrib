@@ -4,7 +4,7 @@ Two functions are not yet implemented
     - morph_numeric: integer number to text
 """
 
-import lexicon
+from . import lexicon
 
 def _is_vowel(char):
     return char in ['o', 'e', 'i', 'a', 'y']
@@ -24,7 +24,7 @@ def pluralize(word):
     """
 
     assert word
-    assert isinstance(word, basestring)
+    assert isinstance(word, str)
     assert len(word) > 0
 
     second_last = word[-2]
@@ -90,7 +90,7 @@ def form_past(word):
 
     last = word[-1]
     assert word
-    assert isinstance(word, basestring)
+    assert isinstance(word, str)
 
     if last == 'e':
         return word + 'd'
@@ -132,7 +132,7 @@ def form_present_verb(word, number, person):
     Forms the suffix for the present tense of the verb WORD
     """
     assert word
-    assert isinstance(word, basestring)
+    assert isinstance(word, str)
     if _is_first_person(person) or _is_second_person(person):
         return word
     elif _is_third_person(person):
@@ -253,7 +253,7 @@ def morph_pronoun(lex, pronoun_type, case, gender, number, distance, animate,
     """
     Returns the correct pronoun given the features
     """
-    if lex and isinstance(lex, basestring) and not (lex in ['none', 'nil']):
+    if lex and isinstance(lex, str) and not (lex in ['none', 'nil']):
         return lex
     if pronoun_type == 'personal':
         # start with the 'he' then augmen by person, then, by number, 

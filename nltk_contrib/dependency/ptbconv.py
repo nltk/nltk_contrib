@@ -18,6 +18,7 @@ import subprocess
 import math
 from nltk.internals import find_binary
 import os
+from functools import reduce
 
 OUTPUT_FORMAT = '%s\t%s\t_\t%s\t_\t_\t%s\t%s\t_\t_\n'
 
@@ -84,7 +85,7 @@ def _run_ptbconv(num, format='D', verbose=False):
     (stdout, stderr) = p.communicate()
     
     if verbose:
-        print stderr.strip()
+        print(stderr.strip())
         
     return stdout
 
@@ -94,10 +95,10 @@ def _treebank_path():
                   [os.environ['NLTK_DATA'], 'corpora', 'treebank'])
 
 def convert_all():
-    for i in xrange(199):
-        print '%s:' % (i+1),
+    for i in range(199):
+        print('%s:' % (i+1), end=' ')
         convert(i+1, 'D', True, True)
 
 if __name__ == '__main__':
-    print convert(1, 'D')
+    print(convert(1, 'D'))
     

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 # Sets the encoding to utf-8 to avoid problems with æøå
-import urllib
-import htmlentitydefs
+import urllib.request, urllib.parse, urllib.error
+import html.entities
 from sgmllib import *
 import re
 
@@ -16,12 +16,12 @@ class URLextracter(SGMLParser):
     def __init__(self, url='http://python.org'):
         self.reset()
         try:
-            self.sock = urllib.urlopen(url)
+            self.sock = urllib.request.urlopen(url)
             self.feed(self.sock.read())
             self.sock.close()
             self.close()
         except IOError:
-            print "Could not connect, or the markup has (too) bad structure"
+            print("Could not connect, or the markup has (too) bad structure")
             raise SGMLParseError
         
     def start_style(self,attr):
@@ -98,24 +98,24 @@ class URLextracter(SGMLParser):
         
     def _setEncoding(self,text):
         try:
-            text = unicode(text, "utf8").encode("utf8")
+            text = str(text, "utf8").encode("utf8")
         except UnicodeError:
             try:
-                text = unicode(text, "iso8859_1").encode("utf8")
+                text = str(text, "iso8859_1").encode("utf8")
             except UnicodeError:
-                text = unicode(text, "ascii", "replace").encode("utf8")
+                text = str(text, "ascii", "replace").encode("utf8")
         return text
     
     def demo(self):
-        print 'This class takes an URL, and extracts the text it contains.'
-        print 'It also removes special characters and numbers,'
-        print 'and sentences must consist of at least'
-        print '3 words to not be ignored.'
+        print('This class takes an URL, and extracts the text it contains.')
+        print('It also removes special characters and numbers,')
+        print('and sentences must consist of at least')
+        print('3 words to not be ignored.')
         
-        print '\nFetching text from www.python.org'
+        print('\nFetching text from www.python.org')
         u = URLextracter()
-        print "=" * 40
-        print u.output()
+        print(("=" * 40))
+        print((u.output()))
     demo = classmethod(demo)
 
 def demo():

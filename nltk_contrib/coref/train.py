@@ -19,22 +19,22 @@ except:
     from nltk_contrib.coref.data import BufferedGzipFile
 
 try:
-    import cPickle as pickle
+    import pickle as pickle
 except:
     import pickle
     
 try:
-    from cStringIO import StringIO
+    from io import StringIO
 except:
-    from StringIO import StringIO
+    from io import StringIO
     
     
 class LidstoneProbDistFactory(LidstoneProbDist):
     def __init__(self, fd, *args, **kwargs):
         LidstoneProbDist.__init__(self, fd, 0.01, args[-1])
         samples = fd.samples()
-        self._probs = dict(zip([0]*len(samples), samples))
-        self._logprobs = dict(zip([0]*len(samples), samples))        
+        self._probs = dict(list(zip([0]*len(samples), samples)))
+        self._logprobs = dict(list(zip([0]*len(samples), samples)))        
         for sample in samples:
             self._logprobs[sample] = LidstoneProbDist.logprob(self, sample)
             self._probs[sample] = LidstoneProbDist.prob(self, sample)
@@ -84,7 +84,7 @@ class MegamMaxentClassifier(MaxentClassifier):
         untagged_sequence = LazyMap(__untag, LazyMap(__featurize, test_sequence))
         predicted_tags = LazyMap(self.classify, untagged_sequence)
         acc = accuracy(correct_tags, predicted_tags)
-        print 'accuracy over %d tokens: %.2f' % (count, acc)
+        print(('accuracy over %d tokens: %.2f' % (count, acc)))
         
         
 class MaxentClassifierFactory(object):
@@ -125,37 +125,37 @@ def train_model(train_class, labeled_sequence, test_sequence, pickle_file,
         verbose or include printed output.
     @type verbose: C{bool}
     """
-    print 'Training ', train_class
-    print 'Loading training data (supervised)...'
+    print(('Training ', train_class))
+    print('Loading training data (supervised)...')
 
     labeled_sequence = labeled_sequence[:num_train_sents]
     sent_count = len(labeled_sequence)
     word_count = sum([len(sent) for sent in labeled_sequence])
 
-    print '%s sentences' % (sent_count)
-    print '%s words' % (word_count)
+    print(('%s sentences' % (sent_count)))
+    print(('%s words' % (word_count)))
 
-    print 'Training...'
+    print('Training...')
 
     start = time.time()
     model = train_class.train(labeled_sequence, **kwargs)
     end = time.time()
 
-    print 'Training time: %.3fs' % (end - start)
-    print 'Training time per sentence: %.3fs' % (float(end - start) / sent_count)    
-    print 'Training time per word: %.3fs' % (float(end - start) / word_count)
+    print(('Training time: %.3fs' % (end - start)))
+    print(('Training time per sentence: %.3fs' % (float(end - start) / sent_count)))    
+    print(('Training time per word: %.3fs' % (float(end - start) / word_count)))
 
-    print 'Loading test data...'
+    print('Loading test data...')
 
     test_sequence = test_sequence[:num_test_sents]
     sent_count = len(test_sequence)
     word_count = sum([len(sent) for sent in test_sequence])
 
-    print '%s sentences' % (sent_count)
-    print '%s words' % (word_count)
+    print(('%s sentences' % (sent_count)))
+    print(('%s words' % (word_count)))
 
     try:
-        print 'Saving model...'        
+        print('Saving model...')        
         if isinstance(pickle_file, str):
             if pickle_file.endswith('.gz'):
                  _open = BufferedGzipFile
@@ -165,23 +165,23 @@ def train_model(train_class, labeled_sequence, test_sequence, pickle_file,
             pickle.dump(model, stream)
             stream.close()
             model = pickle.load(_open(pickle_file, 'rb'))
-            print 'Model saved as %s' % pickle_file
+            print(('Model saved as %s' % pickle_file))
         else:
             stream = StringIO()
             pickle.dump(model, stream)
             stream = StringIO(stream.getvalue())
             model = pickle.load(stream)
-    except Exception, e:
-        print 'Error saving model, %s' % str(e)
+    except Exception as e:
+        print(('Error saving model, %s' % str(e)))
 
-    print 'Testing...'
+    print('Testing...')
 
     start = time.time()
     model.test(test_sequence, **kwargs)
     end = time.time()    
 
-    print 'Test time: %.3fs' % (end - start)
-    print 'Test time per sentence: %.3fs' % (float(end - start) / sent_count)    
-    print 'Test time per word: %.3fs' % (float(end - start) / word_count)
+    print(('Test time: %.3fs' % (end - start)))
+    print(('Test time per sentence: %.3fs' % (float(end - start) / sent_count)))    
+    print(('Test time per word: %.3fs' % (float(end - start) / word_count)))
 
     return model

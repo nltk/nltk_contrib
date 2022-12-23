@@ -1,10 +1,10 @@
-import Tkinter as tk
-from morphology import KimmoMorphology
-from fsa import FSA
+import tkinter as tk
+from .morphology import KimmoMorphology
+from .fsa import FSA
 
 class KimmoGUI(object):
     def __init__(self, ruleset, startTk=False):
-        import Tkinter as tk
+        import tkinter as tk
         if startTk: self._root = tk.Tk()
         else: self._root = tk.Toplevel()
         
@@ -131,7 +131,7 @@ class KimmoGUI(object):
     def highlight_states(self, states, morph):
         select = self.listbox.curselection() or 0
         self.listbox.delete(0, tk.END)
-        for (index, stored) in self.widget_store.items():
+        for (index, stored) in list(self.widget_store.items()):
             graph, widget = stored
             if index == -1: state = morph
             else: state = states[index]

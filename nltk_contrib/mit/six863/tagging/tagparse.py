@@ -1,6 +1,6 @@
 from nltk.parse import chart
 from nltk import cfg
-from drawchart import ChartDemo
+from .drawchart import ChartDemo
 from nltk.tokenize.regexp import wordpunct
 #from nltk_contrib.mit.six863.kimmo import *
 import re, pickle
@@ -27,7 +27,7 @@ def chart_kimmo(kimmorules):
                 match = re.match(r"PREFIX\('.*?'\)(.*?)\(.*", feat)
                 if match: pos = match.groups()[0]
                 else: pos = feat.split('(')[0]
-                print surface, pos
+                print((surface, pos))
                 leafedge = chart.LeafEdge(word, i)
                 thechart.insert(chart.TreeEdge((i, i+1),
                   cfg.Nonterminal(pos), [word], dot=1), [leafedge])

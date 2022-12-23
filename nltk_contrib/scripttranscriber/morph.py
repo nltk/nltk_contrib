@@ -86,7 +86,7 @@ class PrefixAnalyzer(MorphAnalyzer):
   
   def Morphs(self, string):
     try: return self.morphs_[string]
-    except AttributeError, KeyError: return ''
+    except AttributeError as KeyError: return ''
 
   def LabelDoclist(self):
     assert self.initialized_ == True, 'Must Initialize() the analyzer!'

@@ -19,7 +19,7 @@ class SequentialClassifier(object):
 
     def classify(self, featuresets):
         if self.size() == 0:
-            raise ValueError, 'Tagger is not trained'
+            raise ValueError('Tagger is not trained')
         
         for i, featureset in enumerate(featuresets):
 
@@ -91,7 +91,7 @@ class SequentialClassifier(object):
          
         stream = open(filename,'w')
         yaml.dump_all(training_data, stream)
-        print "Saving features to %s" % os.path.abspath(filename)        
+        print(("Saving features to %s" % os.path.abspath(filename)))        
         stream.close()
 
     
@@ -100,7 +100,7 @@ class SequentialClassifier(object):
         dict_corpus = tabular2dict(training_corpus, KEYS)
         contexts = self.contexts(dict_corpus)
         
-        print "Detecting features"
+        print("Detecting features")
         training_data = [(self.detect_features(c), c[1]['label']) for c in contexts]
         
         if save:
@@ -118,11 +118,11 @@ class SequentialClassifier(object):
         Train a classifier.
         """
         if self.size() != 0:
-            raise ValueError, 'Classifier is already trained'
+            raise ValueError('Classifier is already trained')
         
         training_data = self.corpus2training_data(training_corpus)
         
-        print "Training classifier"
+        print("Training classifier")
         self._model = iis(training_data)
             
             

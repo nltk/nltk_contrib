@@ -16,7 +16,7 @@ also .rul compatible with old pckimmo.
 
 # TODO: remove Unix dependencies
 
-import Tkinter
+import tkinter
 import os, re, sys, types, string, glob, time, md5
 
 from nltk_contrib.fsa import *
@@ -37,7 +37,7 @@ we want to "show" the rules that fire.
 and we want batch mode, big file, or big input test with output.
 """
 ###########################################################################
-from ScrolledText import ScrolledText
+from tkinter.scrolledtext import ScrolledText
 
 class KimmoGUI:
     def __init__(self, grammar, text, title='Kimmo Interface v1.78'):
@@ -58,46 +58,46 @@ class KimmoGUI:
 
             self.helpFilename = 'kimmo.help'
 
-            self._root = Tkinter.Tk()
+            self._root = tkinter.Tk()
             self._root.title(title)
 
-            ctlbuttons = Tkinter.Frame(self._root)
+            ctlbuttons = tkinter.Frame(self._root)
             ctlbuttons.pack(side='top', fill='x')
-            level1 = Tkinter.Frame(self._root)
+            level1 = tkinter.Frame(self._root)
             level1.pack(side='top', fill='none')
-            Tkinter.Frame(self._root).pack(side='top', fill='none')
-            level2 = Tkinter.Frame(self._root)
+            tkinter.Frame(self._root).pack(side='top', fill='none')
+            level2 = tkinter.Frame(self._root)
             level2.pack(side='top', fill='x')
-            buttons = Tkinter.Frame(self._root)
+            buttons = tkinter.Frame(self._root)
             buttons.pack(side='top', fill='none')
-            batchFrame = Tkinter.Frame(self._root)
+            batchFrame = tkinter.Frame(self._root)
             batchFrame.pack(side='top', fill='x')
 
-            self.batchpath = Tkinter.StringVar()
-            Tkinter.Label(batchFrame, text="Batch File:").pack(side='left')
-            Tkinter.Entry(batchFrame, background='white', foreground='black',
+            self.batchpath = tkinter.StringVar()
+            tkinter.Label(batchFrame, text="Batch File:").pack(side='left')
+            tkinter.Entry(batchFrame, background='white', foreground='black',
                           width=30, textvariable=self.batchpath).pack(side='left')
-            Tkinter.Button(batchFrame, text='Go!',
+            tkinter.Button(batchFrame, text='Go!',
                            background='#a0c0c0', foreground='black',
                            command=self.batch).pack(side='left')
 
-            self.debugWin = Tkinter.StringVar() # change to a window and field eventually.
-            Tkinter.Entry(batchFrame, background='grey', foreground='red',
+            self.debugWin = tkinter.StringVar() # change to a window and field eventually.
+            tkinter.Entry(batchFrame, background='grey', foreground='red',
                           width=30, textvariable=self.debugWin).pack(side='right')
 
-            self.wordIn = Tkinter.StringVar()
-            Tkinter.Label(level2, text="Generate or Recognize:").pack(side='left')
-            Tkinter.Entry(level2, background='white', foreground='black',
+            self.wordIn = tkinter.StringVar()
+            tkinter.Label(level2, text="Generate or Recognize:").pack(side='left')
+            tkinter.Entry(level2, background='white', foreground='black',
                           width=30, textvariable=self.wordIn).pack(side='left')
 
-            lexiconFrame = Tkinter.Frame(level1)
-            Tkinter.Label(lexiconFrame, text="Lexicon & Alternations").pack(side='top',
+            lexiconFrame = tkinter.Frame(level1)
+            tkinter.Label(lexiconFrame, text="Lexicon & Alternations").pack(side='top',
                                                               fill='x')
             self.lexicon = ScrolledText(lexiconFrame, background='white',
                                               foreground='black', width=50, height=36, wrap='none')
 
             # setup the scrollbar
-            scroll = Tkinter.Scrollbar(lexiconFrame, orient='horizontal',command=self.lexicon.xview)
+            scroll = tkinter.Scrollbar(lexiconFrame, orient='horizontal',command=self.lexicon.xview)
 
             scroll.pack(side='bottom', fill='x')
             self.lexicon.configure(xscrollcommand = scroll.set)
@@ -105,36 +105,36 @@ class KimmoGUI:
             self.lexicon.pack(side='top')
 
 
-            midFrame = Tkinter.Frame(level1)
-            rulesFrame = Tkinter.Frame(midFrame)
+            midFrame = tkinter.Frame(level1)
+            rulesFrame = tkinter.Frame(midFrame)
             rulesFrame.pack(side='top', fill='x')
-            Tkinter.Label(rulesFrame, text="Rules/Subsets").pack(side='top',
+            tkinter.Label(rulesFrame, text="Rules/Subsets").pack(side='top',
                                                               fill='x')
             self.rules = ScrolledText(rulesFrame, background='white',
                                               foreground='black', width=60, height=19, wrap='none')
             # setup the scrollbar
-            scroll = Tkinter.Scrollbar(rulesFrame, orient='horizontal',command=self.rules.xview)
+            scroll = tkinter.Scrollbar(rulesFrame, orient='horizontal',command=self.rules.xview)
             scroll.pack(side='bottom', fill='x')
             self.rules.configure(xscrollcommand = scroll.set)
 
             self.rules.pack(side='top')
 
-            midbetweenFrame = Tkinter.Frame(midFrame)
+            midbetweenFrame = tkinter.Frame(midFrame)
             midbetweenFrame.pack(side='top', fill='x')
 
-            Tkinter.Button(midbetweenFrame, text='clear',
+            tkinter.Button(midbetweenFrame, text='clear',
                            background='#f0f0f0', foreground='black',
-                           command= lambda start=1.0, end=Tkinter.END : self.results.delete(start,end)
+                           command= lambda start=1.0, end=tkinter.END : self.results.delete(start,end)
                            ).pack(side='right')
 
-            Tkinter.Label(midbetweenFrame,
+            tkinter.Label(midbetweenFrame,
                           text="Results           ").pack(side='right')
 
             self.results = ScrolledText(midFrame, background='white',
                                               foreground='black', width=60, height=13, wrap='none')
 
             # setup the scrollbar
-            scroll = Tkinter.Scrollbar(midFrame, orient='horizontal',command=self.results.xview)
+            scroll = tkinter.Scrollbar(midFrame, orient='horizontal',command=self.results.xview)
             scroll.pack(side='bottom', fill='x')
             self.results.configure(xscrollcommand = scroll.set)
 
@@ -151,13 +151,13 @@ class KimmoGUI:
             self.alternation.pack(side='top')
             """
 
-            Tkinter.Button(ctlbuttons, text='Quit',
+            tkinter.Button(ctlbuttons, text='Quit',
                            background='#a0c0c0', foreground='black',
                            command=self.destroy).pack(side='left')
 
-            self.loadMenuButton = Tkinter.Menubutton(ctlbuttons, text='Load', background='#a0c0c0', foreground='black', relief='raised')
+            self.loadMenuButton = tkinter.Menubutton(ctlbuttons, text='Load', background='#a0c0c0', foreground='black', relief='raised')
             self.loadMenuButton.pack(side='left')
-            self.loadMenu=Tkinter.Menu(self.loadMenuButton,tearoff=0)
+            self.loadMenu=tkinter.Menu(self.loadMenuButton,tearoff=0)
 
             self.loadMenu.add_command(label='Load Lexicon', underline=0,command = lambda filetype='.lex', targetWindow = self.lexicon, tf = 'l' : self.loadTypetoTarget(filetype, targetWindow, tf))
             self.loadMenu.add_command(label='Load Rules', underline=0,command = lambda filetype='.rul', targetWindow = self.rules, tf = 'r' : self.loadTypetoTarget(filetype, targetWindow, tf))
@@ -166,9 +166,9 @@ class KimmoGUI:
 
 #
 
-            self.saveMenuButton = Tkinter.Menubutton(ctlbuttons, text='Save',background='#a0c0c0', foreground='black', relief='raised')
+            self.saveMenuButton = tkinter.Menubutton(ctlbuttons, text='Save',background='#a0c0c0', foreground='black', relief='raised')
             self.saveMenuButton.pack(side='left')
-            self.saveMenu=Tkinter.Menu(self.saveMenuButton,tearoff=0)
+            self.saveMenu=tkinter.Menu(self.saveMenuButton,tearoff=0)
             self.saveMenu.add_command(label='Save Lexicon', underline=0,command = lambda filename=self.lexfilename, sourceWindow = self.lexicon : self.writeToFilefromWindow(filename, sourceWindow,'w',0,'l'))
             self.saveMenu.add_command(label='Save Rules', underline=0,command = lambda filename=self.rulfilename, sourceWindow = self.rules : self.writeToFilefromWindow(filename, sourceWindow,'w',0,'r'))
             self.saveMenu.add_command(label='Save Results', underline=0,command = lambda filename='.results', sourceWindow = self.results : self.writeToFilefromWindow(filename, sourceWindow,'w',0))
@@ -176,12 +176,12 @@ class KimmoGUI:
             self.saveMenuButton["menu"]=self.saveMenu
 
 
-            Tkinter.Label(ctlbuttons, text="       Preset:").pack(side='left')
+            tkinter.Label(ctlbuttons, text="       Preset:").pack(side='left')
 
-            self.configValue = Tkinter.StringVar()
-            self.configsMenuButton = Tkinter.Menubutton(ctlbuttons, text='Configs', background='#a0c0c0', foreground='black', relief='raised')
+            self.configValue = tkinter.StringVar()
+            self.configsMenuButton = tkinter.Menubutton(ctlbuttons, text='Configs', background='#a0c0c0', foreground='black', relief='raised')
             self.configsMenuButton.pack(side='left')
-            self.configsMenu=Tkinter.Menu(self.configsMenuButton,tearoff=0)
+            self.configsMenu=tkinter.Menu(self.configsMenuButton,tearoff=0)
             # read the directory for cfgs, add them to the menu
             # add path expander, to expand ~ & given home dirs.
 
@@ -210,21 +210,21 @@ class KimmoGUI:
 #                           background='#b0f0d0', foreground='#008b45',
 #                           command=self.generate).pack(side='right')
 
-            self.tracingbtn = Tkinter.Button(ctlbuttons, text='Tracing',
+            self.tracingbtn = tkinter.Button(ctlbuttons, text='Tracing',
                            background='#fff0f0', foreground='black',
                            command=lambda : self.create_destroyDebugTracing()).pack(side='right')
 
 
-            self.graphMenuButton = Tkinter.Menubutton(ctlbuttons, text='Graph', background='#d0d0e8', foreground='black', relief='raised')
+            self.graphMenuButton = tkinter.Menubutton(ctlbuttons, text='Graph', background='#d0d0e8', foreground='black', relief='raised')
             self.graphMenuButton.pack(side='right')
-            self.graphMenu=Tkinter.Menu(self.graphMenuButton,tearoff=0)
+            self.graphMenu=tkinter.Menu(self.graphMenuButton,tearoff=0)
 
             self.graphMenu.add_command(label='Graph Lexicon', underline=0,command = lambda which = 'l' : self.graph(which))
             self.graphMenu.add_command(label='Graph FSA Rules', underline=0,command = lambda which = 'r' : self.graph(which))
             # self.loadMenu.add_command(label='Load Lexicon', underline=0,command = lambda filetype='.lex', targetWindow = self.lexicon : loadTypetoTarget(self, filetype, targetWindow))
             self.graphMenuButton["menu"]=self.graphMenu
 
-            self.helpbtn = Tkinter.Button(ctlbuttons, text='Help',
+            self.helpbtn = tkinter.Button(ctlbuttons, text='Help',
                            background='#f0fff0', foreground='black',
                            command=self.kimmoHelp).pack(side='right')
 
@@ -233,10 +233,10 @@ class KimmoGUI:
             midFrame.pack(side='left')
             # alternationFrame.pack(side='left')
 
-            Tkinter.Button(level2, text='Generate',
+            tkinter.Button(level2, text='Generate',
                            background='#a0c0c0', foreground='black',
                            command=self.generate).pack(side='left')
-            Tkinter.Button(level2, text='Recognize',
+            tkinter.Button(level2, text='Recognize',
                            background='#a0c0c0', foreground='black',
                            command=self.recognize).pack(side='left')
 
@@ -267,16 +267,16 @@ class KimmoGUI:
 
 
             # Enter mainloop.
-            Tkinter.mainloop()
+            tkinter.mainloop()
         except:
-            print 'Error creating Tree View'
+            print('Error creating Tree View')
             self.destroy()
             raise
 
     def init_menubar(self):
-        menubar = Tkinter.Menu(self._root)
+        menubar = tkinter.Menu(self._root)
 
-        filemenu = Tkinter.Menu(menubar, tearoff=0)
+        filemenu = tkinter.Menu(menubar, tearoff=0)
         filemenu.add_command(label='Save Rules', underline=0,
                              command=self.save, accelerator='Ctrl-s')
         self._root.bind('<Control-s>', self.save)
@@ -308,26 +308,26 @@ class KimmoGUI:
         else:
                 try:
                     # have in its own special di decial class
-                    self.dbgTracing = Tkinter.Toplevel()
+                    self.dbgTracing = tkinter.Toplevel()
                     self.dbgTracing.title("Tracing/Debug")
-                    dbgTraceFrame2 = Tkinter.Frame(self.dbgTracing)
+                    dbgTraceFrame2 = tkinter.Frame(self.dbgTracing)
                     dbgTraceFrame2.pack(side='top', fill='x')
-                    dbgTraceFrame = Tkinter.Frame(self.dbgTracing)
+                    dbgTraceFrame = tkinter.Frame(self.dbgTracing)
                     dbgTraceFrame.pack(side='top', fill='x',expand='yes')
                     self.traceWindow = ScrolledText(dbgTraceFrame, background='#f4f4f4',
                                                       foreground='#aa0000', width=45, height=24, wrap='none')
         
-                    Tkinter.Button(dbgTraceFrame2, text='clear',
+                    tkinter.Button(dbgTraceFrame2, text='clear',
                                    background='#a0c0c0', foreground='black',
-                                   command= lambda start=1.0, end=Tkinter.END : self.traceWindow.delete(start,end)
+                                   command= lambda start=1.0, end=tkinter.END : self.traceWindow.delete(start,end)
                                    ).pack(side='right')
-                    Tkinter.Button(dbgTraceFrame2, text='Save',
+                    tkinter.Button(dbgTraceFrame2, text='Save',
                                    background='#a0c0c0', foreground='black',
                                    command= lambda file=self.kimmoResultFile,windowName=self.traceWindow,mode='w',auto=0 : self.writeToFilefromWindow(file,windowName,mode,auto)
                                    ).pack(side='left')
         
         
-                    scroll = Tkinter.Scrollbar(dbgTraceFrame, orient='horizontal',command=self.traceWindow.xview)
+                    scroll = tkinter.Scrollbar(dbgTraceFrame, orient='horizontal',command=self.traceWindow.xview)
                     scroll.pack(side='bottom', fill='x')
         
                     self.traceWindow.configure(xscrollcommand = scroll.set)
@@ -340,7 +340,7 @@ class KimmoGUI:
                     self.dbgTracing.protocol("WM_DELETE_WINDOW", self.create_destroyDebugTracing)
         
                 except:
-                    print 'Error creating Tree View'
+                    print('Error creating Tree View')
                     self.dbgTracing.destroy()
                     self.dbgTracing = None
                     self.debug = False
@@ -355,7 +355,7 @@ class KimmoGUI:
 
         if not (auto and windowName and filename):
                 
-                from tkFileDialog import asksaveasfilename
+                from tkinter.filedialog import asksaveasfilename
                 ftypes = [('Text file', '.txt'),('Rule file', '.rul'),('Lexicon file', '.lex'),('Alternations file', '.alt'),
                           ('All files', '*')]
                 filename = asksaveasfilename(filetypes=ftypes,
@@ -365,7 +365,7 @@ class KimmoGUI:
                 self.guiError('Need File Name')
                 return
         f = open(filename, 'w')
-        f.write(windowName.get(1.0,Tkinter.END))
+        f.write(windowName.get(1.0,tkinter.END))
         f.close()
 
         if filename:
@@ -401,7 +401,7 @@ class KimmoGUI:
     """
 
     def configLoader(self,*args):
-        print args[0]
+        print(args[0])
         filename = args[0]
 
         # if arg is a valid file, load by line.
@@ -471,7 +471,7 @@ class KimmoGUI:
                 text.append(line)
 
             # empty the window now that the file was valid
-            windowField.delete(1.0, Tkinter.END)
+            windowField.delete(1.0, tkinter.END)
     
             windowField.insert(1.0, '\n'.join(text))
     
@@ -483,7 +483,7 @@ class KimmoGUI:
         
         if not (fileType and targetWindow): return
         
-        from tkFileDialog import askopenfilename
+        from tkinter.filedialog import askopenfilename
         ftypes = [(fileType, fileType)]
 
         filename = askopenfilename(filetypes=ftypes, defaultextension=fileType)
@@ -502,7 +502,7 @@ class KimmoGUI:
         # graphical interface to file loading.
         
         "Load rule/lexicon set from a text file"
-        from tkFileDialog import askopenfilename
+        from tkinter.filedialog import askopenfilename
         ftypes = [('Text file', '.txt'),
                   ('All files', '*')]
         # filename = askopenfilename(filetypes=ftypes, defaultextension='.txt')
@@ -556,10 +556,10 @@ class KimmoGUI:
 
     def clear(self, *args):
         "Clears the grammar and lexical and sentence inputs"
-        self.lexicon.delete(1.0, Tkinter.END)
-        self.rules.delete(1.0, Tkinter.END)
+        self.lexicon.delete(1.0, tkinter.END)
+        self.rules.delete(1.0, tkinter.END)
         # self.alternation.delete(1.0, Tkinter.END)
-        self.results.delete(1.0, Tkinter.END)
+        self.results.delete(1.0, tkinter.END)
 
     def destroy(self, *args):
         if self._root is None: return
@@ -570,10 +570,10 @@ class KimmoGUI:
 # for single stepping through a trace.
 # need to make the kimmo class capable of being interrupted & resumed.
     def step(self, *args):
-        print 'a'
+        print('a')
 
     def singlestep(self, *args):
-        print 'a'
+        print('a')
 
     def batch(self, *args):
         filename = self.batchpath.get()
@@ -704,10 +704,10 @@ class KimmoGUI:
         # check & set path, if necessary, need read and write access to path
         path = ''
         pathstatus = os.stat('./')      # 0600 is r/w, binary evaluation
-        if not ((pathstatus[0] & 0600) == 0600):
+        if not ((pathstatus[0] & 0o600) == 0o600):
                 path = '/tmp/' + str(os.environ.get("USER")) + '/' # need terminating /
                 if not os.path.exists(path):
-                        os.mkdir(path,0777)
+                        os.mkdir(path,0o777)
         
         pathre = re.compile(r"^.*\/")
         
@@ -779,7 +779,7 @@ class KimmoGUI:
         matchIdx = '1.0'
         matchRight = '1.0'
         while matchIdx != '':
-                matchIdx = window.search(word,matchRight,count=1,stopindex=Tkinter.END)
+                matchIdx = window.search(word,matchRight,count=1,stopindex=tkinter.END)
                 if matchIdx == '': break
                 
                 strptr = matchIdx.split(".")
@@ -799,11 +799,11 @@ class KimmoGUI:
                 or recognize.  (i.e. loading all rules, lexicon, and alternations
                 """
                 # only initialize Kimmo if the contents of the *rules* have changed
-                tmprmd5 = md5.new(self.rules.get(1.0, Tkinter.END))
-                tmplmd5 = md5.new(self.lexicon.get(1.0, Tkinter.END))
+                tmprmd5 = md5.new(self.rules.get(1.0, tkinter.END))
+                tmplmd5 = md5.new(self.lexicon.get(1.0, tkinter.END))
                 if (not self.kimmoinstance) or (self.rulemd5 != tmprmd5) or (self.lexmd5 != tmplmd5):
                         self.guiError("Creating new Kimmo instance")
-                        self.kimmoinstance = KimmoControl(self.lexicon.get(1.0, Tkinter.END),self.rules.get(1.0, Tkinter.END),'','',self.debug)
+                        self.kimmoinstance = KimmoControl(self.lexicon.get(1.0, tkinter.END),self.rules.get(1.0, tkinter.END),'','',self.debug)
                         self.guiError("")
                         self.rulemd5 = tmprmd5
                         self.lexmd5 = tmplmd5
@@ -820,7 +820,7 @@ class KimmoGUI:
 
     def refresh(self, *args):
         if self._root is None: return
-        print self.wordIn.get()
+        print(self.wordIn.get())
 
 
 # CAPTURE PYTHON-KIMMO OUTPUT
@@ -830,8 +830,8 @@ class KimmoGUI:
         
         # if there is a trace/debug window
         if self.dbgTracing:
-                self.traceWindow.insert(Tkinter.END, string.join(args," "))
-                self.traceWindow.see(Tkinter.END)
+                self.traceWindow.insert(tkinter.END, string.join(args," "))
+                self.traceWindow.see(tkinter.END)
                 
         
         # otherwise, just drop the output.
@@ -858,7 +858,7 @@ class KimmoGUI:
         # helpText = Tkinter.StringVar()
         helpText = ''
         try: f = open(self.helpFilename, 'r')
-        except IOError, e:
+        except IOError as e:
                 self.guiError("HelpFile not loaded")
                 return
                 
@@ -873,7 +873,7 @@ class KimmoGUI:
         helpText = re.sub("\r","",helpText)
 
         
-        helpWindow = Tkinter.Toplevel()
+        helpWindow = tkinter.Toplevel()
         helpWindow.title("PyKimmo Documentation & Help")
         
         # help = Tkinter.Label(helpWindow,textvariable=helpText, justify='left' ) #
@@ -884,14 +884,14 @@ class KimmoGUI:
         help.pack(side='top')
         help.insert(1.0, helpText)
         # setup the scrollbar
-        scroll = Tkinter.Scrollbar(helpWindow, orient='horizontal',command=help.xview)
+        scroll = tkinter.Scrollbar(helpWindow, orient='horizontal',command=help.xview)
         scroll.pack(side='bottom', fill='x')
         help.configure(xscrollcommand = scroll.set)
 
         # now highlight up the file
-        matchIdx = Tkinter.END
-        matchRight = Tkinter.END
-        matchLen = Tkinter.IntVar()
+        matchIdx = tkinter.END
+        matchRight = tkinter.END
+        matchLen = tkinter.IntVar()
         tagId = 1
         while 1:
                 matchIdx = help.search(r"::[^\n]*::",matchIdx, stopindex=1.0, backwards=True, regexp=True, count=matchLen  )
@@ -900,7 +900,7 @@ class KimmoGUI:
                 matchIdxFields = matchIdx.split(".")
                 matchLenStr = matchIdxFields[0] + "." + str(string.atoi(matchIdxFields[1],10) + matchLen.get())
 
-                print (matchIdx, matchLenStr)
+                print((matchIdx, matchLenStr))
                 help.tag_add(tagId, matchIdx, matchLenStr )
                 help.tag_configure(tagId, background='aquamarine', foreground='blue', underline=True)
                 tagId += 1
@@ -974,11 +974,11 @@ class PrintHook:
 
 class tkImageView:
         def __init__(self, imagefileName, title):
-                self._root = Tkinter.Toplevel()
+                self._root = tkinter.Toplevel()
                 self._root.title(title + ' (' + imagefileName + ')')
-                self.image = Tkinter.PhotoImage("LGraph",file=imagefileName)
+                self.image = tkinter.PhotoImage("LGraph",file=imagefileName)
 
-                Tkinter.Label(self._root, image=self.image).pack(side='top',fill='x')
+                tkinter.Label(self._root, image=self.image).pack(side='top',fill='x')
                 # self._root.mainloop()
                 
         def destroy(self, *args):
@@ -989,11 +989,11 @@ class tkImageView:
                 
         
 ######################### Dialog Boxes ##############################
-class ListDialog(Tkinter.Toplevel):
+class ListDialog(tkinter.Toplevel):
 
     def __init__(self, parent, listOptions, title = None):
 
-        Tkinter.Toplevel.__init__(self, parent)
+        tkinter.Toplevel.__init__(self, parent)
         self.transient(parent)
 
         if title:
@@ -1003,13 +1003,13 @@ class ListDialog(Tkinter.Toplevel):
 
         self.result = None
 
-        body = Tkinter.Frame(self)
+        body = tkinter.Frame(self)
 
         self.initial_focus = self.body(body)
         body.pack(padx=5, pady=5)
 
-        box = Tkinter.Frame(self)
-        Tkinter.Label(box,text="Select an FSA to graph").pack(side='top',fill='x')
+        box = tkinter.Frame(self)
+        tkinter.Label(box,text="Select an FSA to graph").pack(side='top',fill='x')
         box.pack()
 
 
@@ -1043,13 +1043,13 @@ class ListDialog(Tkinter.Toplevel):
 
 
     def listbox(self, listOptions):
-        box = Tkinter.Frame(self)
-        self.lb = Tkinter.Listbox(box,height=len(listOptions),width=30,background='#f0f0ff', selectbackground='#c0e0ff'
+        box = tkinter.Frame(self)
+        self.lb = tkinter.Listbox(box,height=len(listOptions),width=30,background='#f0f0ff', selectbackground='#c0e0ff'
                 ,selectmode='single')
         self.lb.pack()
         
         for x in listOptions:
-                self.lb.insert(Tkinter.END,x)
+                self.lb.insert(tkinter.END,x)
         
         box.pack()
 
@@ -1057,11 +1057,11 @@ class ListDialog(Tkinter.Toplevel):
         # add standard button box. override if you don't want the
         # standard buttons
 
-        box = Tkinter.Frame(self)
+        box = tkinter.Frame(self)
 
-        w = Tkinter.Button(box, text="OK", width=10, command=self.ok, default="active")
+        w = tkinter.Button(box, text="OK", width=10, command=self.ok, default="active")
         w.pack(side="left", padx=5, pady=5)
-        w = Tkinter.Button(box, text="Cancel", width=10, command=self.cancel)
+        w = tkinter.Button(box, text="Cancel", width=10, command=self.cancel)
         w.pack(side="left", padx=5, pady=5)
 
         self.bind("&lt;Return&gt;", self.ok)
@@ -1245,15 +1245,15 @@ class KimmoControl:
                 self.s = KimmoRuleSet(self.ksubsets, self.kdefaults, self.krules)
                 self.s.debug = debug
                 self.ok = 1
-        except RuntimeError, e:
+        except RuntimeError as e:
                 self.errors = ('Caught:' + str(e) + ' ' + self.errors)
-                print 'Caught:', e
-                print "Setup of the kimmoinstance failed.  Most likely cause"
-                print "is infinite recursion due to self-referential lexicon"
-                print "For instance:"
-                print "Begin: Begin Noun End"
-                print "Begin is pointing to itself.  Simple example, but check"
-                print "to insure no directed loops"
+                print('Caught:', e)
+                print("Setup of the kimmoinstance failed.  Most likely cause")
+                print("is infinite recursion due to self-referential lexicon")
+                print("For instance:")
+                print("Begin: Begin Noun End")
+                print("Begin is pointing to itself.  Simple example, but check")
+                print("to insure no directed loops")
                 self.ok = 0
         
         
@@ -1313,8 +1313,8 @@ class KimmoControl:
                                 results_string += (batch_result_str)
                         
                 # place a separator between results
-                print '----- '+ time.strftime("%a, %d %b %Y %I:%M %p", time.gmtime()) +' -----\n'
-                print results_string
+                print('----- '+ time.strftime("%a, %d %b %Y %I:%M %p", time.gmtime()) +' -----\n')
+                print(results_string)
 
 
 
@@ -2213,7 +2213,7 @@ class KimmoFSARule:
     def name(self): return self._name
     def pairs(self): return self._pairs
     def start(self): return self._state_descriptions[0][0]
-    def is_state(self, index): return self.transitions.has_key(index)
+    def is_state(self, index): return index in self.transitions
 
 
     def contains_final(self, indices):
@@ -2283,7 +2283,7 @@ class KimmoFSARule:
                         # print 'any state match'
                         # {col num, next state num (0 if fail), is final state}
                         # if transition row is valid
-                        if self.transitions.has_key(self.transitions[index][i]): ft = self.is_final[self.transitions[index][i]]
+                        if self.transitions[index][i] in self.transitions: ft = self.is_final[self.transitions[index][i]]
                         else : ft = ''
                         any_next_states_ary.append([ i, self.transitions[index][i], ft, pair.__repr__() ] )
                         if not any_next_state:
@@ -2297,7 +2297,7 @@ class KimmoFSARule:
                             # times?  (i.e. our state is already in next_state
                             next_state_isset = 1
                             next_state = self.transitions[index][i]
-                            if self.transitions.has_key(next_state):
+                            if next_state in self.transitions:
                                 if not(next_state in next_states):
                                     next_states.append(next_state)
         
@@ -2349,12 +2349,12 @@ class KimmoLexicon:
         for w in words:
             if len(w.letters()) <= word_position: continue
             fc = w.letters()[word_position]
-            if first_chars.has_key(fc):
+            if fc in first_chars:
                 first_chars[fc].append(w)
             else:
                 first_chars[fc] = [ w ]
         sub_tries = []
-        for c, sub_words in first_chars.items():
+        for c, sub_words in list(first_chars.items()):
             sub_tries.append( (c, self.build_trie(sub_words, word_position+1)) )
         return ( [w for w in words if len(w.letters()) == word_position], sub_tries )
 
@@ -2410,12 +2410,12 @@ class KimmoMorphology:
         # print 'current alternation: ' + name
         if name == None:
             return []
-        elif self.alternations.has_key(name):
+        elif name in self.alternations:
             result = []
             for ln in self.alternations[name].lexicon_names():
                 result.extend(self._collect(ln))
             return result
-        elif self.lexicons.has_key(name):
+        elif name in self.lexicons:
             return [ self.lexicons[name] ]
         else:
             # raise ValueError('no lexicon or alternation named ' + name)
@@ -2502,21 +2502,21 @@ class KimmoRuleSet:
             padstring = ''
             for x in range(position): padstring = padstring + ' '
 
-            print '%s%d  %s:%s \n' % (padstring, position, this_input, this_output),
-            print '%s%d: Input:  ' % (padstring, position,),
+            print('%s%d  %s:%s \n' % (padstring, position, this_input, this_output), end=' ')
+            print('%s%d: Input:  ' % (padstring, position,), end=' ')
             for i in input:
-                print ' ' + i + ' ',
+                print(' ' + i + ' ', end=' ')
             if this_input:
-                print '[' + this_input + ']...',
-            print
+                print('[' + this_input + ']...', end=' ')
+            print()
 
 
-            print '%s%d> Output: ' % (padstring, position,),
+            print('%s%d> Output: ' % (padstring, position,), end=' ')
             for o in output:
-                print ' ' + o + ' ',
+                print(' ' + o + ' ', end=' ')
             if this_output:
-                print '<' + this_output + '>...',
-            print
+                print('<' + this_output + '>...', end=' ')
+            print()
 
 
             # for (start, rule, fsa_states, required_truth_value) in rule_states:
@@ -2524,7 +2524,7 @@ class KimmoRuleSet:
 
 
             if False: # morphological_state:
-                print '    possible input chars = %s' % invert.possible_next_characters(morphological_state)
+                print('    possible input chars = %s' % invert.possible_next_characters(morphological_state))
                 # print morphological_state
 
 
@@ -2548,7 +2548,7 @@ class KimmoRuleSet:
                 
         if ((position >= len(input_tokens)) ): # and (not morphological_state)
 
-            if (self.debug) : print '      AT END OF WORD'
+            if (self.debug) : print('      AT END OF WORD')
                 # FOR RECOGNIZER
                 # this will yield some words twice, not all
                 # also, recognizer is failing to put on the added information like "+genetive"
@@ -2596,16 +2596,16 @@ class KimmoRuleSet:
         
                         if (required_truth_value != truth_value):
                             if (self.debug):
-                                print '    BLOCKED by rule {%d %s %s}' % (start, rule, required_truth_value)
-                                print fsa_states
+                                print('    BLOCKED by rule {%d %s %s}' % (start, rule, required_truth_value))
+                                print(fsa_states)
                             break
                         else:
                             if 0: # (self.debug):
-                                print '    passed rule {%d %s %s}' % (start, rule, required_truth_value)
+                                print('    passed rule {%d %s %s}' % (start, rule, required_truth_value))
         
                     else:
                         if (self.debug):
-                            print '   SUCCESS!'
+                            print('   SUCCESS!')
                         yield result_str, result_words
         else:
             if morphological_state: # recognizer; get the next possible surface chars that can result in
@@ -2666,7 +2666,7 @@ class KimmoRuleSet:
                             break
                         else:
                             if (0): # (self.debug):
-                                print '    passed rule {%d %s %s}' % (start, rule, required_truth_value)
+                                print('    passed rule {%d %s %s}' % (start, rule, required_truth_value))
                     elif (len(next_fsa_state_set) == 0):
                         # if it isn't true, then it will have to fail, bcs we are at
                         # the end of the state set.
@@ -2676,15 +2676,15 @@ class KimmoRuleSet:
                             break
                         else:
                             if (0): # (self.debug):
-                                print '    passed rule {%d %s %s}' % (start, rule, required_truth_value)
+                                print('    passed rule {%d %s %s}' % (start, rule, required_truth_value))
                     else:
                         next_rule_states.append( (start, rule, next_fsa_state_set, required_truth_value) )
 
-                if (self.debug) : print rule_state_debug
+                if (self.debug) : print(rule_state_debug)
 
                 if (fail):
                     if (self.debug):
-                        print '    BLOCKED by rule %s' % (fail,)
+                        print('    BLOCKED by rule %s' % (fail,))
                     continue
 
 
@@ -2703,7 +2703,7 @@ class KimmoRuleSet:
 
                     if (rule.rightFSA()):
                         if (self.debug):
-                            print '    adding rule {%d %s %s}' % (position, rule, required_truth_value)
+                            print('    adding rule {%d %s %s}' % (position, rule, required_truth_value))
                         next_rule_states.append( (position, rule, [ rule.rightFSA().start() ], required_truth_value) )
                     else:
                         if (required_truth_value == False):
@@ -2711,7 +2711,7 @@ class KimmoRuleSet:
                             continue
                         else:
                             if (0): # (self.debug):
-                                print '    passed rule ' + str(rule)
+                                print('    passed rule ' + str(rule))
 
                 # if did not fail, call recursively on next chars
                 if (fail == None):
@@ -2748,7 +2748,7 @@ class KimmoRuleSet:
                             yield o
                 else:
                     if (self.debug):
-                        print '    BLOCKED by rule ' + str(fail)
+                        print('    BLOCKED by rule ' + str(fail))
 
     def _initial_rule_states(self):
         return [ (0, rule, [ rule.start() ], True) for rule in self.rules() if isinstance(rule, KimmoFSARule)]
@@ -2771,9 +2771,9 @@ class KimmoRuleSet:
 
 
         if not morphology_state:
-            print "Bad Morphological State, failing recognition"
+            print("Bad Morphological State, failing recognition")
             return              
-        if (self.debug) : print 'recognize: ' + input_tokens
+        if (self.debug) : print('recognize: ' + input_tokens)
 #        print output_words
         for o in self._generate(input_tokens, 0, self._initial_rule_states(), morphology_state, [], [], '',
                                 output_words, invert):
@@ -2828,18 +2828,18 @@ def read_kimmo_file(filename, gui=None):
     path = os.path.expanduser(filename)
     try:
         f = open(path, 'r')
-    except IOError, e:
+    except IOError as e:
         path = find_corpus_file("kimmo", filename)
         try:
             f = open(path, 'r')
-        except IOError, e:
+        except IOError as e:
             if gui:
                 gui.guiError(str(e))
             else:
-                print str(e)
-            print "FAILURE"
+                print(str(e))
+            print("FAILURE")
             return ""
-    print "Loaded:", path
+    print("Loaded:", path)
     return f
 
 # MAIN
@@ -2866,20 +2866,20 @@ if __name__ == '__main__':
                 elif x == "debug": console_debug = 1
                 
 
-        print 'Tips:'
-        print 'kimmo.cfg is loaded by default, so if you name your project that, '
-        print "it will be loaded at startup\n"
+        print('Tips:')
+        print('kimmo.cfg is loaded by default, so if you name your project that, ')
+        print("it will be loaded at startup\n")
         
-        print 'For commandline operation:'
-        print '         (for instance if you want to use a different editor)'
-        print "To Recognize:"
-        print " % python kimmo.py english.lex english.rul -r:cats"
-        print "To Generate:"
-        print " % python kimmo.py english.lex english.rul -g:cat+s"
-        print "To Batch Test:"
-        print " % python kimmo.py english.lex english.rul english.batch_test"
-        print "With Debug and Tracing:"
-        print " % python kimmo.py english.lex english.rul -r:cats debug\n"
+        print('For commandline operation:')
+        print('         (for instance if you want to use a different editor)')
+        print("To Recognize:")
+        print(" % python kimmo.py english.lex english.rul -r:cats")
+        print("To Generate:")
+        print(" % python kimmo.py english.lex english.rul -g:cat+s")
+        print("To Batch Test:")
+        print(" % python kimmo.py english.lex english.rul english.batch_test")
+        print("With Debug and Tracing:")
+        print(" % python kimmo.py english.lex english.rul -r:cats debug\n")
 
         
         # print filename_lex    
@@ -2894,17 +2894,17 @@ if __name__ == '__main__':
                 
                 # creation failed, stop
                 if not kimmoinstance.ok :
-                        print kimmoinstance.errors
+                        print(kimmoinstance.errors)
                         sys.exit()
 
                 
                 if recognize_string:
                         recognize_results = kimmoinstance.recognize(recognize_string)
-                        print recognize_results
+                        print(recognize_results)
                 
                 if generate_string:
                         generate_results = kimmoinstance.generate(generate_string)
-                        print generate_results  # remember to format
+                        print(generate_results)  # remember to format
                         
                 if filename_batch_test:         # run a batch
                         kimmoinstance.batch(filename_batch_test)

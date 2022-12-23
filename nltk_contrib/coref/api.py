@@ -27,7 +27,7 @@ class TrainableI(object):
     """
     def __init__(self):
         if self.__class__ == TrainableI:
-            raise AssertionError, "Interfaces can't be instantiated" 
+            raise AssertionError("Interfaces can't be instantiated") 
 
     def train(self, labeled_sequence, test_sequence=None, 
               unlabeled_sequence=None, **kwargs):
@@ -54,7 +54,7 @@ class HiddenMarkovModelChunkTaggerTransformI(HiddenMarkovModelTaggerTransformI):
     # Inherit the superclass documentation.
     def __init__(self):
         if self.__class__ == HiddenMarkovModelChunkTaggerTransformI:
-            raise AssertionError, "Interfaces can't be instantiated"
+            raise AssertionError("Interfaces can't be instantiated")
     
     def path2tags(self, path):
         """
@@ -78,7 +78,7 @@ class CorpusReaderDecoratorI(CorpusReader):
     """
     def __init__(self):
         if self.__class__ == CorpusReaderDecorator:
-            raise AssertionError, "Interfaces can't be instantiated"
+            raise AssertionError("Interfaces can't be instantiated")
 
     def reader(self):
         """
@@ -115,7 +115,7 @@ class NamedEntityI(str):
             
     def __init__(self, s, **kwargs):
         if self.__class__ == NamedEntityI:
-            raise AssertionError, "Interfaces can't be instantiated"
+            raise AssertionError("Interfaces can't be instantiated")
         self._iob_tag = kwargs.get('iob_tag', self.BEGINS)
     
     def iob_in(self):
@@ -159,7 +159,7 @@ class ChunkTaggerI(TaggerI):
     """
     def __init__(self):
         if self.__class__ == ChunkTaggerI:
-            raise AssertionError, "Interfaces can't be instantiated"
+            raise AssertionError("Interfaces can't be instantiated")
 
         
       
@@ -172,7 +172,7 @@ class CorefResolverI(object):
     """
     def __init__(self):
         if self.__class__ == CorefResolverI:
-            raise AssertionError, "Interfaces can't be instantiated"
+            raise AssertionError("Interfaces can't be instantiated")
     
     def mentions(self, sentences):
         """
@@ -255,7 +255,7 @@ class CorefResolverI(object):
 class ChunkTaggerI(TaggerI, ChunkParserI):
     def __init__(self):
         if self.__class__ == ChunkTaggerI: 
-            raise AssertionError, "Interfaces can't be instantiated"
+            raise AssertionError("Interfaces can't be instantiated")
 
     def tag(self, sent):
         """
@@ -310,7 +310,7 @@ class AbstractClassifierBasedTagger(ClassifierBasedTagger, ClassifierI,
         @type classifier_builder: C{function}
         """
         if self.__class__ == AbstractClassifierBasedTagger:
-            raise AssertionError, "Interfaces can't be instantiated"
+            raise AssertionError("Interfaces can't be instantiated")
         ClassifierBasedTagger.__init__(self, feature_detector, 
                                        labeled_sequence, classifier_builder)
     

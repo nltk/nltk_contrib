@@ -1,4 +1,4 @@
-import Tkinter
+import tkinter
 from nltk.draw import TreeWidget
 from nltk.draw import CanvasFrame
 
@@ -7,32 +7,32 @@ from nltk.draw import CanvasFrame
 class TreeView:
     def __init__(self, trees, root=None):
         if len(trees) == 0:
-            print "No trees to display."
+            print("No trees to display.")
             return
 
         newroot = False
         if root is None:
-            root = Tkinter.Tk()
+            root = tkinter.Tk()
             window = root
             newroot = True
         else:
-            window = Tkinter.Toplevel(root)
+            window = tkinter.Toplevel(root)
         
         window.title("Parse Tree")
         window.geometry("600x400")
         self.cf = CanvasFrame(window)
         self.cf.pack(side='top', expand=1, fill='both')
-        buttons = Tkinter.Frame(window)
+        buttons = tkinter.Frame(window)
         buttons.pack(side='bottom', fill='x')
 
-        self.spin = Tkinter.Spinbox(buttons, from_=1, to=len(trees),
+        self.spin = tkinter.Spinbox(buttons, from_=1, to=len(trees),
             command=self.showtree, width=3)
         if len(trees) > 1: self.spin.pack(side='left')
-        self.label = Tkinter.Label(buttons, text="of %d" % len(trees))
+        self.label = tkinter.Label(buttons, text="of %d" % len(trees))
         if len(trees) > 1: self.label.pack(side='left')
-        self.done = Tkinter.Button(buttons, text="Done", command=window.destroy)
+        self.done = tkinter.Button(buttons, text="Done", command=window.destroy)
         self.done.pack(side='right')
-        self.printps = Tkinter.Button(buttons, text="Print to Postscript", command=self.cf.print_to_file)
+        self.printps = tkinter.Button(buttons, text="Print to Postscript", command=self.cf.print_to_file)
         self.printps.pack(side='right')
         
         self.trees = trees

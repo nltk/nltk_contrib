@@ -1,4 +1,4 @@
-from treeio import TreeIo
+from .treeio import TreeIo
 
 __all__ = ['TreeModel']
 
@@ -149,4 +149,4 @@ if __name__ == "__main__":
     s = "(S (NP (N I)) (VP (VP (V saw) (NP (DT the) (N man))) (PP (P with) (NP (DT a) (N telescope)))))"
     t = bracket_parse(s)
     root = TreeModel.importNltkLiteTree(t)
-    print root.treebankString("label")
+    print((root.treebankString("label")))

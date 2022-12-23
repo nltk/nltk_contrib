@@ -31,7 +31,7 @@ def tuple2str(t, separator = ' '):
 
         return s
     else:
-        raise ValueError, "The first parameter must be a tuple"
+        raise ValueError("The first parameter must be a tuple")
 
 def str2tuple(s, separator = ' '):
     """
@@ -55,7 +55,7 @@ def str2tuple(s, separator = ' '):
         t = s.strip().split(separator)
         return tuple(t)
     else:
-        raise ValueError, "the first parameter must be a string"
+        raise ValueError("the first parameter must be a string")
 
 
 if __name__ == "__main__":

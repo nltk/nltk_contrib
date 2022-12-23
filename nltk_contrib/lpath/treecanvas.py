@@ -1,6 +1,6 @@
 from qtcanvas import *
 from qt import *
-from treecanvasnode import *
+from .treecanvasnode import *
 
 __all__ = ["TreeCanvas"]
 
@@ -105,7 +105,7 @@ class TreeCanvas(QCanvas):
             item = node.gui
             item2 = node.parent.gui
             coords = item.connectingLine(item2)
-            apply(node.line.setPoints, coords)
+            node.line.setPoints(*coords)
             node.show()
             
         self.collapse(self._data)
@@ -143,7 +143,7 @@ class TreeCanvas(QCanvas):
             line = QCanvasLine(self)
             line.setPen(pen)
             node.line = line
-            apply(line.setPoints, coords)
+            line.setPoints(*coords)
             node.show()
             
         self._w = self._width[self._data]

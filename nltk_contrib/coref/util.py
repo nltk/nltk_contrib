@@ -8,14 +8,14 @@
 import time
 
 try:
-    import cPickle as pickle
+    import pickle as pickle
 except:
     import pickle
     
 try:
-    from cStringIO import StringIO
+    from io import StringIO
 except:
-    from StringIO import StringIO
+    from io import StringIO
 
 from nltk.data import load, find
 from nltk.corpus import CorpusReader, BracketParseCorpusReader
@@ -114,7 +114,7 @@ class MUC6NamedEntityChunkTaggerCorpusReader(ChunkTaggerCorpusReader):
 
 	
 def zipzip(*lists):
-    return LazyMap(lambda lst: zip(*lst), LazyZip(*lists))
+    return LazyMap(lambda lst: list(zip(*lst)), LazyZip(*lists))
 
 def load_treebank(sections):
     treebank_path = os.environ.get('NLTK_TREEBANK', 'treebank/combined')
@@ -133,16 +133,16 @@ def treebank_tagger_demo():
         'state_union', PlaintextCorpusReader, r'(?!\.svn).*\.txt')
     state_union = TreebankTaggerCorpusReader(state_union)
     
-    print 'Treebank tagger demo...'
-    print 'Tagged sentences:'
+    print('Treebank tagger demo...')
+    print('Tagged sentences:')
     for sent in state_union.tagged_sents()[500:505]:
-        print sent
-        print
-    print
-    print 'Tagged words:'
+        print(sent)
+        print()
+    print()
+    print('Tagged words:')
     for word in state_union.tagged_words()[500:505]:
-        print word
-    print
+        print(word)
+    print()
 
 def treebank_chunk_tagger_demo():
     from nltk.corpus.util import LazyCorpusLoader    
@@ -153,17 +153,17 @@ def treebank_chunk_tagger_demo():
         'state_union', PlaintextCorpusReader, r'(?!\.svn).*\.txt')
     state_union = TreebankChunkTaggerCorpusReader(state_union)
 
-    print 'Treebank chunker demo...'
-    print 'Chunked sentences:'
+    print('Treebank chunker demo...')
+    print('Chunked sentences:')
     for sent in state_union.chunked_sents()[500:505]:
-        print sent
-        print
-    print
-    print 'Parsed sentences:'
+        print(sent)
+        print()
+    print()
+    print('Parsed sentences:')
     for tree in state_union.parsed_sents()[500:505]:
-        print tree
-        print
-    print
+        print(tree)
+        print()
+    print()
     
 def muc6_chunk_tagger_demo():
     from nltk.corpus.util import LazyCorpusLoader
@@ -172,12 +172,12 @@ def muc6_chunk_tagger_demo():
      
     treebank = MUC6NamedEntityChunkTaggerCorpusReader(load_treebank('0[12]'))
     
-    print 'MUC6 named entity chunker demo...'
-    print 'Chunked sentences:'
+    print('MUC6 named entity chunker demo...')
+    print('Chunked sentences:')
     for sent in treebank.chunked_sents()[:10]:
-        print sent
-        print      
-    print
+        print(sent)
+        print()      
+    print()
 
 def baseline_chunk_tagger_demo():
     from nltk.corpus.util import LazyCorpusLoader
@@ -186,16 +186,16 @@ def baseline_chunk_tagger_demo():
     chunker = BaselineNamedEntityChunkTagger()
     treebank = load_treebank('0[12]')
     
-    print 'Baseline named entity chunker demo...'
-    print 'Chunked sentences:'
+    print('Baseline named entity chunker demo...')
+    print('Chunked sentences:')
     for sent in treebank.sents()[:10]:
-        print chunker.chunk(sent)
-        print
-    print 'IOB-tagged sentences:'
+        print((chunker.chunk(sent)))
+        print()
+    print('IOB-tagged sentences:')
     for sent in treebank.sents()[:10]:
-        print chunker.tag(sent)
-        print
-    print
+        print((chunker.tag(sent)))
+        print()
+    print()
 
 def demo():
     from nltk_contrib.coref.util import treebank_tagger_demo, \

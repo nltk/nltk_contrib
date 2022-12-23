@@ -9,8 +9,8 @@
 Classes and interfaces for aligning text.
 """
 
-from api import *
-from gale_church import *
+from .api import *
+from .gale_church import *
 
 __all__ = []
 

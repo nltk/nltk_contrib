@@ -1,6 +1,6 @@
 from qt import *
 from qtcanvas import *
-from lpathtree_qt import *
+from .lpathtree_qt import *
 
 class Point:
     def __init__(self, *args):

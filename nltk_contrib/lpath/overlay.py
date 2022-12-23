@@ -1,5 +1,5 @@
 import re
-from translator import translate_sub
+from .translator import translate_sub
 
 __all__ = ["find_overlays", "Overlay"];
 
@@ -138,7 +138,7 @@ def find_overlays(sql, localdb, oldTree, newTree):
     
     M = []
     for match in TAB:
-        m = match.items()
+        m = list(match.items())
         m.sort()
         L = []
         for sym,tup in m:

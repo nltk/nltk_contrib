@@ -32,11 +32,11 @@ import token_comp
 import auxiliary_comp
 from __init__ import BASE_
 
-PAIRS_ = [(u'高島屋', u'Takashimaya'),
-          (u'共產黨', u'공산당'),
-          (u'Kuomintang', u'國民黨'),
-          (u'ᏣᎳᎩ', u'Cherokee'),
-          (u'niqitsiavaliriniq', u'ᓂᕿᑦᓯᐊᕙᓕᕆᓂᖅ')
+PAIRS_ = [('高島屋', 'Takashimaya'),
+          ('共產黨', '공산당'),
+          ('Kuomintang', '國民黨'),
+          ('ᏣᎳᎩ', 'Cherokee'),
+          ('niqitsiavaliriniq', 'ᓂᕿᑦᓯᐊᕙᓕᕆᓂᖅ')
           ]
 
 GOLDEN_FILE_ =  '%s/testdata/token_comp_test.txt' % BASE_ 
@@ -67,12 +67,12 @@ def CreateDoclist():
   doc.AddLang(lang)
   lang = tokens.Lang()
   lang.SetId('zho')
-  token_ = tokens.Token(u'克林頓')
+  token_ = tokens.Token('克林頓')
   token_.SetCount(3)
   token_.AddPronunciation('kh & l i n t u n')
-  token_.SetMorphs([u'克林頓'])
+  token_.SetMorphs(['克林頓'])
   lang.AddToken(token_)
-  token_ = tokens.Token(u'高島屋')
+  token_ = tokens.Token('高島屋')
   token_.SetCount(1)
   token_.AddPronunciation('k a u t a u u')
   token_.AddPronunciation('t A k A s i m A j a')
@@ -95,10 +95,10 @@ def CreateDoclist():
   doc.AddLang(lang)
   lang = tokens.Lang()
   lang.SetId('ara')
-  token_ = tokens.Token(u'كلينتون')
+  token_ = tokens.Token('كلينتون')
   token_.SetCount(3)
   token_.AddPronunciation('k l j n t w n')
-  token_.SetMorphs([u'كلينتون'])
+  token_.SetMorphs(['كلينتون'])
   lang.AddToken(token_)
   doc.AddLang(lang)
   doclist.AddDoc(doc)
@@ -193,7 +193,7 @@ def TestAuxiliaryComparators(unitname):
   comparator.ComputeDistance()
   assert comparator.ComparisonResult().Cost() == auxiliary_comp.NO_MATCH_, \
       '%s should not match %s' % (t2.String(), t2py.String())
-  print '%s (auxiliary tests) successful' % unitname
+  print(('%s (auxiliary tests) successful' % unitname))
 
 
 def main(output = False):

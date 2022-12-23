@@ -1,4 +1,4 @@
-from tableio import TableIo
+from .tableio import TableIo
 import bisect
 
 __all__ = ['TableModel']
@@ -177,7 +177,7 @@ class TableModel(TableIo):
         """
         if type(col) != int:
             col = self.str2col[col]
-        return bisect.bisect_left(map(lambda x:x[col],self.table),val)
+        return bisect.bisect_left([x[col] for x in self.table],val)
 
     def bisect_right(self, col, val):
         """
@@ -185,7 +185,7 @@ class TableModel(TableIo):
         """
         if type(col) != int:
             col = self.str2col[col]
-        return bisect.bisect_right(map(lambda x:x[col],self.table),val)
+        return bisect.bisect_right([x[col] for x in self.table],val)
 
     def setMetadata(self, nam, val):
         if type(val) != str:
@@ -210,24 +210,24 @@ if __name__ == "__main__":
     tab[1][2] = 3
     tab.printTable()
 
-    print
+    print()
 
     tab.insertColumn(1,["extra",10,9])
     tab.printTable()
 
-    print
+    print()
 
     c = tab.takeColumn(1)
     tab.insertColumn(3,c)
     tab.printTable()
 
-    print
+    print()
 
     r = tab.takeRow(0)
     tab.insertRow(1,r)
     tab.printTable()
 
-    print
+    print()
     
     tab.sort(2,3)
     tab.printTable()

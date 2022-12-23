@@ -41,7 +41,7 @@ class InstanceDistances:
             self.distances[value] = [instance]
             
     def minimum_distance_instances(self):
-        keys = self.distances.keys()
+        keys = list(self.distances.keys())
         keys.sort()
         return self.distances[keys[0]]
     

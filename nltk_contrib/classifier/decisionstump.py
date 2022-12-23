@@ -37,10 +37,10 @@ class DecisionStump:
         self.root[instance.klass_value] += 1
     
     def error(self):
-        count_for_each_attr_value = self.counts.values()
+        count_for_each_attr_value = list(self.counts.values())
         total, errors = 0, 0
         for class_count in count_for_each_attr_value:
-            subtotal, counts = 0, class_count.values()
+            subtotal, counts = 0, list(class_count.values())
             counts.sort()
             for count in counts: subtotal += count
             errors += (subtotal - counts[-1])
@@ -56,7 +56,7 @@ class DecisionStump:
     def majority_klass(self, attr_value):
         klass_values_with_count = self.counts[attr_value]
         _max, klass_value = 0, self.safe_default() # will consider safe default because at times the test will have an attribute value not present in the stump(can happen in cross validation as well)
-        for klass, count in klass_values_with_count.items():
+        for klass, count in list(klass_values_with_count.items()):
             if count > _max:
                 _max, klass_value = count, klass
         return klass_value
@@ -67,7 +67,7 @@ class DecisionStump:
         """
         if self.__safe_default == None:
             max_occurance, klass = -1, None
-            for klass_element in self.root.keys():
+            for klass_element in list(self.root.keys()):
                 if self.root[klass_element] > max_occurance:
                     max_occurance = self.root[klass_element]
                     klass = klass_element
@@ -110,14 +110,14 @@ class DecisionStump:
     
     def __str__(self):
         _str = 'Decision stump for attribute ' + self.attribute.name
-        for key, value in self.counts.items():
+        for key, value in list(self.counts.items()):
             _str += '\nAttr value: ' + key + '; counts: ' + value.__str__()
         for child in self.children:
             _str += child.__str__()
         return _str
         
 def total_counts(dictionary_of_klass_freq):
-    return sum([count for count in dictionary_of_klass_freq.values()])
+    return sum([count for count in list(dictionary_of_klass_freq.values())])
         
 def dictionary_of_values(klass):
     return dict([(value, 0) for value in klass])

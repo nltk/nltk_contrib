@@ -10,7 +10,7 @@ class AutoClass:
     def __init__(self, name):
         self.name = name
         
-    def next(self):
+    def __next__(self):
         base26 = self.base26()
         base26 += 1
         return AutoClass(string(base26))

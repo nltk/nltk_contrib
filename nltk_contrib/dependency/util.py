@@ -5,7 +5,7 @@ input to Nivre's MaltParser.
 from nltk import tokenize
 from itertools import islice
 import os
-from deptree import DepGraph
+from .deptree import DepGraph
 from nltk.stem.wordnet import WordNetLemmatizer 
 
 def tag2tab(s, sep='/'):
@@ -60,8 +60,8 @@ def conll_to_depgraph(input_str, stem=False, verbose=False):
     assert depgraph_input, 'depgraph_input is empty'
 
     if verbose:
-        print 'Begin DepGraph creation'
-        print 'depgraph_input=\n%s' % depgraph_input
+        print('Begin DepGraph creation')
+        print('depgraph_input=\n%s' % depgraph_input)
     
     return DepGraph().read(depgraph_input)
 
@@ -79,7 +79,7 @@ def demo():
     #s = ''
     for sent in islice(tabtagged(), 3):
         for line in sent:
-            print line,
+            print(line, end=' ')
             #s += ''.join(sent)
     #print >>f, s
     #f.close()

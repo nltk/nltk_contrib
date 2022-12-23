@@ -57,9 +57,9 @@ def LoadGolden():
   for line in p:
     line = line.strip()
     word, pron = line.split('\t')
-    try: word = unicode(word, 'utf-8')
+    try: word = str(word, 'utf-8')
     except TypeError: pass
-    try: pron = unicode(pron, 'utf-8')
+    try: pron = str(pron, 'utf-8')
     except TypeError: pass
     try:
       GOLDEN_[word].AddPronunciation(pron)
@@ -73,7 +73,7 @@ def main(output = False):
   if output: file = open(GOLDEN_FILE_, 'w')
   else: LoadGolden()
   for w in WORDS_:
-    try: w = unicode(w.strip(), 'utf-8')
+    try: w = str(w.strip(), 'utf-8')
     except TypeError: pass
     token_ = tokens.Token(w)
     pronouncer_ = pronouncer.UnitranPronouncer(token_)
@@ -89,7 +89,7 @@ def main(output = False):
         file.write('%s\t%s\n' % (pronouncer_.Token().String(), p))
     else:
       try:
-        string = unicode(pronouncer_.Token().String(), 'utf-8')
+        string = str(pronouncer_.Token().String(), 'utf-8')
       except TypeError:
         string = pronouncer_.Token().String()
       assert string in GOLDEN_, \
@@ -107,10 +107,10 @@ def main(output = False):
                                                  nprons[i],
                                                  gprons[i])
   if output:
-    print 'generated %s' % GOLDEN_FILE_
+    print(('generated %s' % GOLDEN_FILE_))
     file.close()
   else:
-    print '%s successful' % sys.argv[0]
+    print(('%s successful' % sys.argv[0]))
 
 
 if __name__ == '__main__':

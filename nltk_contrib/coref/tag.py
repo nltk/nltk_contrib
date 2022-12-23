@@ -3,9 +3,9 @@ import re
 import subprocess
 
 try:
-    from cStringIO import StringIO
+    from io import StringIO
 except:
-    from StringIO import StringIO
+    from io import StringIO
 
 from nltk.util import LazyMap, LazyConcatenation
 from nltk.internals import find_binary, java
@@ -48,7 +48,7 @@ class MXPostTaggerCorpusReader(TaggerCorpusReader):
         
     def tagged_sents(self):
         sents = self.sents()
-        batch_indices = range(len(sents) / 1024 + 1)
+        batch_indices = list(range(len(sents) / 1024 + 1))
         return LazyConcatenation(LazyMap(lambda i: 
                 self._tagger.batch_tag(sents[i * 1024: i * 1024 + 1024]),
             batch_indices))
@@ -67,7 +67,7 @@ _mxpost_classpath = None
 def config_mxpost(mxpost_home=None):
     global _mxpost_classpath, _mxpost_home
     classpath = os.environ.get('CLASSPATH', '').split(':')
-    mxpost_jar = filter(lambda c: c.endswith('mxpost.jar'), classpath)
+    mxpost_jar = [c for c in classpath if c.endswith('mxpost.jar')]
     if mxpost_jar:
         _mxpost_home = os.path.dirname(mxpost_jar[0])
         _mxpost_classpath = mxpost_jar[0]
@@ -83,7 +83,7 @@ def config_mxpost(mxpost_home=None):
     else:
         _mxpost_home = None
         _mxpost_classpath = None
-        raise Exception, "can't find mxpost.jar"
+        raise Exception("can't find mxpost.jar")
 
 def call_mxpost(classpath=None, stdin=None, stdout=None, stderr=None,
                 blocking=False):
@@ -103,14 +103,14 @@ _MXPOST_OUTPUT_RE = \
 def mxpost_parse_output(mxpost_output):
     result = []
     mxpost_output = mxpost_output.strip()
-    for sent in filter(None, mxpost_output.split('\n')):
-        tokens = filter(None, re.split(r'\s+', sent))
+    for sent in [_f for _f in mxpost_output.split('\n') if _f]:
+        tokens = [_f for _f in re.split(r'\s+', sent) if _f]
         if tokens:
             result.append([])
         for token in tokens:
             m = _MXPOST_OUTPUT_RE.match(token)
             if not m:
-                raise Exception, "invalid mxpost tag pattern: %s, %s" % (token, tokens)
+                raise Exception("invalid mxpost tag pattern: %s, %s" % (token, tokens))
             word = m.group('word')
             tag = m.group('tag')
             result[-1].append((word, tag))
@@ -122,7 +122,7 @@ def mxpost_tag(sents, **kwargs):
         p.communicate('\n'.join([' '.join(sent) for sent in sents]))
     rc = p.returncode
     if rc != 0:
-        raise Exception, 'exited with non-zero status %s' % rc
+        raise Exception('exited with non-zero status %s' % rc)
     if kwargs.get('verbose'):
-        print 'warning: %s' % stderr
+        print(('warning: %s' % stderr))
     return mxpost_parse_output(stdout)
