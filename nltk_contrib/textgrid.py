@@ -383,10 +383,10 @@ class Tier(object):
             trans_xmax = " (\S+)[\r\n]+"
             trans_text = "\"([\S\s]*?)\""
         elif self.text_type == "ooTextFile":
-            trans_head = " +\S+ \[\d+\]: *[\r\n]+"
-            trans_xmin = " +\S+ = (\S+) *[\r\n]+"
-            trans_xmax = " +\S+ = (\S+) *[\r\n]+"
-            trans_text = " +\S+ = \"([^\"]*?)\""
+            trans_head = "[ \t]+\S+ \[\d+\]:[ \t]*[\r\n]+"
+            trans_xmin = "[ \t]+\S+ = (\S+)[ \t]*[\r\n]+"
+            trans_xmax = "[ \t]+\S+ = (\S+)[ \t]*[\r\n]+"
+            trans_text = "[ \t]+\S+ = \"([^\"]*?)\""
         elif self.text_type == "OldooTextFile":
             trans_head = ""
             trans_xmin = "(.*)[\r\n]+"
