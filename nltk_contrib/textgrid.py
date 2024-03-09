@@ -219,7 +219,7 @@ class TextGrid(object):
 
         if self.text_type == "ooTextFile":
             m = OOTEXTFILE
-            header = " +item ?\[[^]]*\]:"
+            header = "[ \t]+item ?\[[^]]*\]:"
         elif self.text_type == "ChronTextFile":
             m = CHRONTEXTFILE
             header = "\"\S+\" \".*\" \d+\.?\d* \d+\.?\d*"
@@ -351,11 +351,11 @@ class Tier(object):
             self.size = None
             size = ""
         elif self.text_type == "ooTextFile":
-            classid = " +class = \"(.*)\" *[\r\n]+"
-            nameid = " +name = \"(.*)\" *[\r\n]+"
-            xmin = " +xmin = (\d+\.?\d*) *[\r\n]+"
-            xmax = " +xmax = (\d+\.?\d*) *[\r\n]+"
-            size = " +\S+: size = (\d+) *[\r\n]+"
+            classid = "[ \t]+class = \"(.*)\" *[\r\n]+"
+            nameid = "[ \t]+name = \"(.*)\" *[\r\n]+"
+            xmin = "[ \t]+xmin = (\d+\.?\d*) *[\r\n]+"
+            xmax = "[ \t]+xmax = (\d+\.?\d*) *[\r\n]+"
+            size = "[ \t]+\S+: size = (\d+) *[\r\n]+"
         elif self.text_type == "OldooTextFile":
             classid = "\"(.*)\" *[\r\n]+"
             nameid = "\"(.*)\" *[\r\n]+"
